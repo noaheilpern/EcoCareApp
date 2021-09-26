@@ -17,6 +17,7 @@ namespace EcoCareApp.Services
 {
     class EcoCareAPIProxy
     {
+        //change this to my url
         private const string CLOUD_URL = "TBD"; //API url when going on the cloud
         private const string CLOUD_PHOTOS_URL = "TBD";
         private const string DEV_ANDROID_EMULATOR_URL = "http://10.0.2.2:21604/contactsAPI"; //API url when using emulator on android
