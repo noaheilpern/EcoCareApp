@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -30,12 +31,14 @@ namespace EcoCareApp.ViewModels
         }
 
         //example
-        //public async Task<string> GetTheString()
-        //{
-        //    CarpoolAPIProxy proxy = CarpoolAPIProxy.CreateProxy();
-        //    this.Email = await proxy.GetStringAsync();
-        //    return this.Email;
-        //}
+        /*
+        public async Task<string> GetTheString()
+        {
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+            this.Email = await proxy.GetStringAsync();
+            return this.Email;
+        }
+        */
 
         public ICommand GetString => new Command(GetS);
         public async void GetS()
