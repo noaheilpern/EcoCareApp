@@ -4,12 +4,15 @@
              x:Class="EcoCareApp.Views.LogIn">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Please enter your email:"></Label>
+            <Entry x:Name="mail" Text="{Binding Email}"/>
 
-            <Label Text="{Binding Email}" FontSize="Large" FontAttributes="Bold"></Label>
-            <Button Text="Show" FontSize="Large" FontAttributes="Bold" BackgroundColor="#CAAFEA" Command="{Binding GetString}"></Button>
+            <Label Text="Please enter your password:"/>
+            <Entry x:Name="pass" Text="{Binding Password}" IsPassword="True"/>
+            <Label Text="{Binding Label}"></Label>
+
+            <Button Text="Log In" Command="{Binding LogIn}"></Button>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

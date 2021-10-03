@@ -1,4 +1,5 @@
-﻿using EcoCareApp.Views;
+﻿using EcoCareApp.ViewModels;
+using EcoCareApp.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,10 +18,11 @@ namespace EcoCareApp
         public App()
         {
             InitializeComponent();
-            Page p = new Views.LogIn();
-            p.Title = "Log in";
-            MainPage = new NavigationPage(p) { BarBackgroundColor = Color.FromHex("#81cfe0") };
-            //MainPage = new LogIn();
+            
+            MainPage = new NavigationPage(new LogIn());
+            InitializeComponent();
+
+
         }
 
         protected override void OnStart()

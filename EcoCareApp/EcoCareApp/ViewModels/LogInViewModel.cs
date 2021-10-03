@@ -1,4 +1,5 @@
-﻿using EcoCareApp.Services;
+﻿using EcoCareApp.Models;
+using EcoCareApp.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,72 @@ namespace EcoCareApp.ViewModels
             }
         }
 
+        private string l;
+        public string Label
+        {
+            get
+            {
+                return this.l;
+            }
+            set
+            {
+                this.l = value;
+                OnPropertyChanged("Label");
+            }
+        }
+
+        private string pass;
+        public string Password
+        {
+            get
+            {
+                return this.pass;
+            }
+            set
+            {
+                this.pass = value;
+                OnPropertyChanged("Password");
+            }
+        }
+        public Page NextPage { get; set; }
+
+        public ICommand LogIn => new Command(Log);
+        public LogInViewModel()
+        {
+
+        }
+        public LogInViewModel(string email, string password)
+        {
+            Email = email;
+            Password = password;
+            Log();
+        }
+
+        async void Log()
+        {
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+            User u = await proxy.LoginAsync(Email, Password);
+
+            if (u != null)
+            {
+                
+                
+                Application.Current.Properties["IsLoggedIn"] = Boolean.TrueString;
+
+
+                Page p = null;
+              
+
+
+                if (NavigateToPageEvent != null)
+                    NavigateToPageEvent(p);
+            }
+            else
+            {
+                Label = "Email or password is incorrect. Please try again";
+            }
+        }
+        public Action<Page> NavigateToPageEvent;
         //example
         /*
         public async Task<string> GetTheString()

@@ -144,145 +144,33 @@ namespace EcoCareApp.Services
                 return null;
             }
         }
-        /*
-        //Get the list of phone types
-        public async Task<List<PhoneType>> GetPhoneTypesAsync()
-        {
-            try
-            {
 
-                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetPhoneTypes");
-                if (response.IsSuccessStatusCode)
-                {
-                    JsonSerializerOptions options = new JsonSerializerOptions
-                    {
-                        ReferenceHandler = ReferenceHandler.Preserve,
-                        PropertyNameCaseInsensitive = true
-                    };
-                    string content = await response.Content.ReadAsStringAsync();
-                    List<PhoneType> eList = JsonSerializer.Deserialize<List<PhoneType>>(content, options);
-                    return eList;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return null;
-            }
-        }
-
-        public async Task<UserContact> UpdateContact(UserContact uc)
+        //This method register a new user into the server database. A previous login is NOT required! The nick name and email must be uniqe!
+        //it returns true is succeeded or false otherwise
+        //questions are ignored upon registering a user and shoul dbe added seperatly.
+        //if succeeded - the user is automatically logged in on the server
+        public async Task<bool> RegisterUser(User u)
         {
             try
             {
                 JsonSerializerOptions options = new JsonSerializerOptions
                 {
-                    ReferenceHandler = ReferenceHandler.Preserve,
-                    Encoder = JavaScriptEncoder.Create(UnicodeRanges.Hebrew, UnicodeRanges.BasicLatin),
                     PropertyNameCaseInsensitive = true
                 };
-                string jsonObject = JsonSerializer.Serialize<UserContact>(uc, options);
-                StringContent content = new StringContent(jsonObject, Encoding.UTF8, "application/json");
-
-                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/UpdateContact", content);
+                string json = JsonSerializer.Serialize<User>(u, options);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/RegisterUser", content);
                 if (response.IsSuccessStatusCode)
                 {
+
                     string jsonContent = await response.Content.ReadAsStringAsync();
-                    UserContact ret = JsonSerializer.Deserialize<UserContact>(jsonContent, options);
-
-                    return ret;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            catch (Exception ee)
-            {
-                Console.WriteLine(ee.Message);
-                return null;
-            }
-        }
-
-        public async Task<bool> RemoveContact(UserContact uc)
-        {
-            try
-            {
-                JsonSerializerOptions options = new JsonSerializerOptions
-                {
-                    ReferenceHandler = ReferenceHandler.Preserve,
-                    Encoder = JavaScriptEncoder.Create(UnicodeRanges.Hebrew, UnicodeRanges.BasicLatin),
-                    PropertyNameCaseInsensitive = true
-                };
-                string jsonObject = JsonSerializer.Serialize<UserContact>(uc, options);
-                StringContent content = new StringContent(jsonObject, Encoding.UTF8, "application/json");
-
-                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/RemoveContact", content);
-                if (response.IsSuccessStatusCode)
-                {
-                    return true;
+                    bool b = JsonSerializer.Deserialize<bool>(jsonContent, options);
+                    return b;
                 }
                 else
                 {
                     return false;
                 }
-            }
-            catch (Exception ee)
-            {
-                Console.WriteLine(ee.Message);
-                return false;
-            }
-        }
-
-        public async Task<bool> RemoveContactPhone(Models.ContactPhone cp)
-        {
-            try
-            {
-                JsonSerializerOptions options = new JsonSerializerOptions
-                {
-                    ReferenceHandler = ReferenceHandler.Preserve,
-                    Encoder = JavaScriptEncoder.Create(UnicodeRanges.Hebrew, UnicodeRanges.BasicLatin),
-                    PropertyNameCaseInsensitive = true
-                };
-                string jsonObject = JsonSerializer.Serialize<Models.ContactPhone>(cp, options);
-                StringContent content = new StringContent(jsonObject, Encoding.UTF8, "application/json");
-
-                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/RemoveContactPhone", content);
-                if (response.IsSuccessStatusCode)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch (Exception ee)
-            {
-                Console.WriteLine(ee.Message);
-                return false;
-            }
-        }
-
-        //Upload file to server (only images!)
-        public async Task<bool> UploadImage(Models.FileInfo fileInfo, string targetFileName)
-        {
-            try
-            {
-                var multipartFormDataContent = new MultipartFormDataContent();
-                var fileContent = new ByteArrayContent(File.ReadAllBytes(fileInfo.Name));
-                multipartFormDataContent.Add(fileContent, "file", targetFileName);
-                HttpResponseMessage response = await client.PostAsync($"{this.baseUri}/UploadImage", multipartFormDataContent);
-                if (response.IsSuccessStatusCode)
-                {
-                    return true;
-                }
-                else
-                    return false;
             }
             catch (Exception e)
             {
@@ -290,6 +178,6 @@ namespace EcoCareApp.Services
                 return false;
             }
         }
-        */
+        
     }
 }
