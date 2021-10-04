@@ -111,7 +111,7 @@ namespace EcoCareApp.ViewModels
         public async void GetS()
         {
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-            this.Email = await proxy.GetStringAsync();
+            this.Email = await proxy.TestAsync();
         }
     }
 }

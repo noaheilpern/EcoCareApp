@@ -18,9 +18,9 @@ namespace EcoCareApp
         public App()
         {
             InitializeComponent();
+            Page p = new StartPage(); 
+            MainPage = new NavigationPage(new StartPage());
             
-            MainPage = new NavigationPage(new LogIn());
-            InitializeComponent();
 
 
         }

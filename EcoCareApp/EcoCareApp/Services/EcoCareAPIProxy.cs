@@ -20,11 +20,11 @@ namespace EcoCareApp.Services
         //change this to my url
         private const string CLOUD_URL = "TBD"; //API url when going on the cloud
         private const string CLOUD_PHOTOS_URL = "TBD";
-        private const string DEV_ANDROID_EMULATOR_URL = "http://localhost:5000/EcoCareAPI"; //API url when using emulator on android
-        private const string DEV_ANDROID_PHYSICAL_URL = "http://localhost:5000/EcoCareAPI"; //API url when using physucal device on android
-        private const string DEV_WINDOWS_URL = "http://localhost:5000/EcoCareAPI"; //API url when using windoes on development
-        private const string DEV_ANDROID_EMULATOR_PHOTOS_URL = "http://localhost:5000/Images/"; //API url when using emulator on android
-        private const string DEV_ANDROID_PHYSICAL_PHOTOS_URL = "http://localhost:5000/Images/"; //API url when using physucal device on android
+        private const string DEV_ANDROID_EMULATOR_URL = "http://10.0.2.2:60653/EcoCareAPI"; //API url when using emulator on android
+        private const string DEV_ANDROID_PHYSICAL_URL = "http://10.58.55.25:60653/EcoCareAPI"; //API url when using physucal device on android
+        private const string DEV_WINDOWS_URL = "http://localhost:60653/EcoCareAPI"; //API url when using windoes on development
+        private const string DEV_ANDROID_EMULATOR_PHOTOS_URL = "http://10.0.2.2:5000/Images/"; //API url when using emulator on android
+        private const string DEV_ANDROID_PHYSICAL_PHOTOS_URL = "http://10.58.55.25:5000/Images/"; //API url when using physucal device on android
         private const string DEV_WINDOWS_PHOTOS_URL = "https://localhost:5001/Images/"; //API url when using windoes on development
 
         private HttpClient client;
@@ -80,11 +80,11 @@ namespace EcoCareApp.Services
             this.baseUri = baseUri;
             this.basePhotosUri = basePhotosUri;
         }
-        public async Task<string> GetStringAsync()
+        public async Task<string> TestAsync()
         {
             try
             {
-                string s = $"{this.baseUri}/GetString";
+                string s = $"{this.baseUri}/Test";
                 //System.Net.ServicePointManager.SecurityProtocol =
                 //    System.Net.SecurityProtocolType.Tls12 |
                 //    System.Net.SecurityProtocolType.Tls11 |
