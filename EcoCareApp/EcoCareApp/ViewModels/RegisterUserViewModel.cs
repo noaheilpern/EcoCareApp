@@ -12,9 +12,11 @@ namespace EcoCareApp.ViewModels
     {
         public const string REQUIRED_FIELD = "Something's missing. Please check and try again.";
         public const string BAD_EMAIL = "Email isn't valid";
-        public const string BAD_USERNAME = "This username is already exist. Please try another one:)"; 
+        public const string BAD_USERNAME = "This username is already exist. Please try another one:)";
+        public const string GENERAL_ERROR = "Something went bad. Please try again";
+        public const string BAD_PASSWORD = "Password has to be 6 charechters minimum";
     }
-    class RegisterUserViewModel: INotifyPropertyChanged
+    class RegisterUserViewModel : INotifyPropertyChanged
     {
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
@@ -23,44 +25,46 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+
         #region UserName
-        private bool showUserNameError; 
+        private bool showUserNameError;
 
         public bool ShowUserNameError
         {
-            get => showUserNameError; 
+            get => showUserNameError;
             set
             {
-                showUserNameError = value; 
-                OnPropertyChanged("ShowserNameError"); 
+                showUserNameError = value;
+                OnPropertyChanged("ShowserNameError");
             }
         }
         private string userName;
         public string UserName
         {
-            get => userName; 
+            get => userName;
             set
             {
                 userName = value;
-                ValidateUserName();
+                ValidateUserNameAsync();
                 OnPropertyChanged("UserName");
             }
         }
-        private string userNameError; 
-        
+        private string userNameError;
+
         public string UserNameError
         {
 
-           get => userNameError;
-           set
-           {
+            get => userNameError;
+            set
+            {
                 userNameError = value;
                 OnPropertyChanged("UserNameError");
-           }
+            }
 
-        
+
         }
-        private async void ValidateUserName()
+
+        private async void ValidateUserNameAsync()
         {
             this.ShowUserNameError = string.IsNullOrEmpty(UserName);
             if (!this.ShowUserNameError)
@@ -70,19 +74,23 @@ namespace EcoCareApp.ViewModels
                     EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
                     Task<bool> t = proxy.IsUserNameExistAsync(UserName);
                     bool b = await t;
-                    return b; 
+                    if (b)
+                    {
+                        this.ShowUserNameError = true;
+                        this.UserNameError = ERROR_MESSAGES.BAD_USERNAME;
+                    }
 
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     this.ShowUserNameError = true;
-                    this.UserNameError = ERROR_MESSAGES.BAD_USERNAME;
+                    this.UserNameError = ERROR_MESSAGES.GENERAL_ERROR;
                 }
             }
             else
                 this.UserNameError = ERROR_MESSAGES.REQUIRED_FIELD;
-        
-    }
+        }
+        #endregion
 
         #region Email
         private bool showEmailError;
@@ -137,5 +145,59 @@ namespace EcoCareApp.ViewModels
                 this.EmailError = ERROR_MESSAGES.REQUIRED_FIELD;
         }
         #endregion
+        #region Password 
+        public const int MIN_PASS_CHARS = 6;
+
+        private bool showPasswordError; 
+
+        public bool ShowPasswordError
+        {
+            get => showPasswordError; 
+            set
+            { 
+                showPasswordError = value;
+                OnPropertyChanged("ShowPasswordError");
+            }
+        }
+        private string password; 
+        public string Password
+        {
+            get => password; 
+            set
+            {
+                password = value;
+                ValidatePassword();
+                OnPropertyChanged("Password");
+
+            }
+        }
+        private string passwordError;
+        public string PasswordError
+        {
+            get => passwordError; 
+            set
+            {
+                passwordError = value; 
+                OnPropertyChanged("PasswordError");
+
+            }
+        }
+        private void ValidatePassword()
+        {
+            this.ShowPasswordError = string.IsNullOrEmpty(Password);
+            if (!this.ShowPasswordError)
+            {
+                if (Password.Length < MIN_PASS_CHARS)
+                {
+                    this.ShowPasswordError = true;
+                    this.PasswordError = ERROR_MESSAGES.BAD_PASSWORD;
+                }
+            }
+            else
+                this.PasswordError = ERROR_MESSAGES.REQUIRED_FIELD;
+        }
+        #endregion
+
     }
 }
+

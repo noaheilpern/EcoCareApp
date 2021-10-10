@@ -18,22 +18,23 @@ namespace EcoCareApp.ViewModels
         }
         #endregion
 
-        public Action<Page> NavigateToPageEvent;
 
         public ICommand ToRegisterOwner => new Command(ToRegisterO);
-        void ToRegisterO()
+        public async void ToRegisterO()
         {
-            Page p = new RegisterOwner();
-            if (NavigateToPageEvent != null)
-                NavigateToPageEvent(p);
+            App a = (App)App.Current;
+            RegisterOwner ro = new RegisterOwner();
+            ro.Title = "Register for a business owner";
+            await App.Current.MainPage.Navigation.PushAsync(ro);
         }
         
         public ICommand ToRegisterUser => new Command(ToRegisterU);
-        void ToRegisterU()
+        async void ToRegisterU()
         {
-            Page p = new RegisterUser();
-            if (NavigateToPageEvent != null)
-                NavigateToPageEvent(p);
+            App a = (App)App.Current;
+            RegisterUser ru = new RegisterUser();
+            ru.Title = "Register for a user";
+            await App.Current.MainPage.Navigation.PushAsync(ru);
         }
 
     }

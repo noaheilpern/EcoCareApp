@@ -113,7 +113,7 @@ namespace EcoCareApp.Services
             }
         }
 
-        public async bool IsUserNameExistAsync(string userName)
+        public async Task<bool> IsUserNameExistAsync(string userName)
         {
             try
             {

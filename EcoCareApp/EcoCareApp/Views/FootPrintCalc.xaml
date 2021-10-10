@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCareApp.Views.FootPrintCalc">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Calculate your current foot print"/>
+            <Entry x:Name="meat" Text="{Binding MeatMeals}" Placeholder="Meat meals per week"/>
+            <Entry x:Name="electricitypayment" Text="{Binding ElectricityPaid}" Placeholder="Please type the electricity amount you used during
+                   the last month(kWm)"/>
+            <Entry x:Name="workdis" Text="{Binding WorkDistance}" Placeholder="The distance from you home to 
+                   work(km)"/>
+            <
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
