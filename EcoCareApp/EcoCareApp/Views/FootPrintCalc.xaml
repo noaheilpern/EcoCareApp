@@ -6,11 +6,16 @@
         <StackLayout>
             <Label Text="Calculate your current foot print"/>
             <Entry x:Name="meat" Text="{Binding MeatMeals}" Placeholder="Meat meals per week"/>
+            <Label Text="Are you Vegetarain?"/>
+            <Switch IsToggled="{Binding Vegetarian}"/>
+            <Label Text="Are you vegan/eat only rare meat?" />
+            <Switch IsTogged="{Binding Vegan}"/>
             <Entry x:Name="electricitypayment" Text="{Binding ElectricityPaid}" Placeholder="Please type the electricity amount you used during
                    the last month(kWm)"/>
             <Entry x:Name="workdis" Text="{Binding WorkDistance}" Placeholder="The distance from you home to 
                    work(km)"/>
-            <
+            <Entry x:Name="PeopleAtHouse" Text="{Binding PeopleAtHouse}" Placeholder="The number of people 
+                   who live in your house"/>
 
         </StackLayout>
     </ContentPage.Content>
