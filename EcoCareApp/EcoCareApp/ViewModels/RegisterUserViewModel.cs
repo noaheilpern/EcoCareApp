@@ -49,7 +49,7 @@ namespace EcoCareApp.ViewModels
         public string UserNameError
         {
 
-            get => userNameError;
+           get => userNameError;
            set
            {
                 userNameError = value;
