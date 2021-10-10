@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using EcoCareApp.Services;
 
 namespace EcoCareApp.ViewModels
 {
@@ -58,12 +60,20 @@ namespace EcoCareApp.ViewModels
 
         
         }
-        private void ValidateUserName()
+        private async void ValidateUserName()
         {
             this.ShowUserNameError = string.IsNullOrEmpty(UserName);
             if (!this.ShowUserNameError)
             {
-                if (UserName.)
+                try
+                {
+                    EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                    Task<bool> t = proxy.IsUserNameExistAsync(UserName);
+                    bool b = await t;
+                    return b; 
+
+                }
+                catch(Exception e)
                 {
                     this.ShowUserNameError = true;
                     this.UserNameError = ERROR_MESSAGES.BAD_USERNAME;
