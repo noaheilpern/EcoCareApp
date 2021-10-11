@@ -15,6 +15,7 @@ namespace EcoCareApp.ViewModels
         public const string BAD_USERNAME = "This username is already exist. Please try another one:)";
         public const string GENERAL_ERROR = "Something went bad. Please try again";
         public const string BAD_PASSWORD = "Password has to be 6 charechters minimum";
+        public const string BAD_DATE = "You must be older than today years old to use this app!";
     }
     class RegisterUserViewModel : INotifyPropertyChanged
     {
@@ -113,7 +114,7 @@ namespace EcoCareApp.ViewModels
             set
             {
                 email = value;
-                ValidateEmail();
+                ValidateEmailAsync();
                 OnPropertyChanged("Email");
             }
         }
@@ -130,8 +131,12 @@ namespace EcoCareApp.ViewModels
             }
         }
 
-        private void ValidateEmail()
+        private async void ValidateEmailAsync()
         {
+            if (!this.ShowUserNameError)
+            {
+                
+            }
             this.ShowEmailError = string.IsNullOrEmpty(Email);
             if (!this.ShowEmailError)
             {
@@ -140,13 +145,80 @@ namespace EcoCareApp.ViewModels
                     this.ShowEmailError = true;
                     this.EmailError = ERROR_MESSAGES.BAD_EMAIL;
                 }
+                else
+                {
+                    try
+                    {
+                        EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                        Task<bool> t = proxy.IsUserNameExistAsync(UserName);
+                        bool b = await t;
+                        if (b)
+                        {
+                            this.ShowUserNameError = true;
+                            this.UserNameError = ERROR_MESSAGES.BAD_USERNAME;
+                        }
+
+                    }
+                    catch (Exception e)
+                    {
+                        this.ShowUserNameError = true;
+                        this.UserNameError = ERROR_MESSAGES.GENERAL_ERROR;
+                    }
+                }
             }
             else
                 this.EmailError = ERROR_MESSAGES.REQUIRED_FIELD;
         }
         #endregion
+
+        #region Birthday
+        private bool showBirthdayError;
+
+        public bool ShowBirthdayError
+        {
+            get => showBirthdayError;
+            set
+            {
+                showBirthdayError = value;
+                OnPropertyChanged("ShowBirthdayError");
+            }
+        }
+        private DateTime birthday;
+        public DateTime Birthday
+        {
+            get => birthday;
+            set
+            {
+                birthday = value;
+                ValidatePassword();
+                OnPropertyChanged("Birthday");
+
+            }
+        }
+        private string birthdayError;
+        public string BirthdayError
+        {
+            get => birthdayError;
+            set
+            {
+                birthdayError = value;
+                OnPropertyChanged("BirthdayError");
+
+            }
+        }
+        private void ValidateBirthday()
+        {
+            
+            if (Birthday.CompareTo(DateTime.Today)>=0)
+            {
+                    this.ShowBirthdayError = true;
+                    this.BirthdayError = ERROR_MESSAGES.BAD_DATE;
+            }
+            
+        }
+        #endregion
         #region Password 
-        public const int MIN_PASS_CHARS = 6;
+        private const int MIN_PASS_CHARS = 6;
 
         private bool showPasswordError; 
 
@@ -197,6 +269,11 @@ namespace EcoCareApp.ViewModels
                 this.PasswordError = ERROR_MESSAGES.REQUIRED_FIELD;
         }
         #endregion
+
+        
+
+
+
 
     }
 }
