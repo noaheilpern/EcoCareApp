@@ -14,8 +14,8 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-        private string meatMeals;
-        public string MeatMeals
+        private int meatMeals;
+        public int MeatMeals
         {
             get
             {

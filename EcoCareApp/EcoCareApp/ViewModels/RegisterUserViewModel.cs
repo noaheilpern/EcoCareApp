@@ -217,6 +217,7 @@ namespace EcoCareApp.ViewModels
             
         }
         #endregion
+
         #region Password 
         private const int MIN_PASS_CHARS = 6;
 
@@ -269,9 +270,6 @@ namespace EcoCareApp.ViewModels
                 this.PasswordError = ERROR_MESSAGES.REQUIRED_FIELD;
         }
         #endregion
-
-        
-
 
 
 
