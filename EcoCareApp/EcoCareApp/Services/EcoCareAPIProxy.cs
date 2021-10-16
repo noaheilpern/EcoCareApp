@@ -142,6 +142,36 @@ namespace EcoCareApp.Services
                 return false;
             }
         }
+        public async Task<bool> IsEmailExistAsync(string email)
+        {
+            try
+            {
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/IsEmailExist");
+
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    PropertyNameCaseInsensitive = true
+                };
+                string content = await response.Content.ReadAsStringAsync();
+                bool b = JsonSerializer.Deserialize<bool>(content, options);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return b;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return false;
+            }
+        }
+
 
         public string GetBasePhotoUri() { return this.basePhotosUri; }
 

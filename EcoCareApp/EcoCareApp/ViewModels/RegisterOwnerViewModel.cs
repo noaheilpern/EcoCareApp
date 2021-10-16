@@ -1,7 +1,10 @@
-﻿using System;
+﻿using EcoCareApp.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace EcoCareApp.ViewModels
 {

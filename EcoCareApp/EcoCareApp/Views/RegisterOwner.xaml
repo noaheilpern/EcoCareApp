@@ -7,6 +7,17 @@
             <Label Text="Register owner"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="un" Text="{Binding UserName}" Placeholder="Choose a user name"/>
+            <Entry x:Name="pass" Text="{Binding Password}" IsPassword="True" Placeholder="Password"/>
+            <Entry x:Name="mail" Text="{Binding Email}" Placeholder="Email"/>
+            <DatePicker x:Name="startDatePicker"
+                    Format="D"
+                    Date="{Binding BirthDate}" />
+            <Entry x:Name="country" Text="{Binding Country}" Placeholder="Country"/>
+
+
+            <Label Text="{Binding Label}"></Label>
+            <Button Text="Sign Up" Command="{Binding Register}"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

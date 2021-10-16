@@ -14,6 +14,21 @@
                    the last month(kWm)"/>
             <Entry x:Name="workdis" Text="{Binding WorkDistance}" Placeholder="The distance from you home to 
                    work(km)"/>
+           
+            <Picker x:Name="transportation"
+        Title="I arrive to work by:"
+        TitleColor="Red" SelectedItem="{Binding Transportation}" >
+                <Picker.ItemsSource >
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Vehicle</x:String>
+                        <x:String>Bus</x:String>
+                        <x:String>Metro</x:String>
+                        <x:String>Taxi</x:String>
+                        <x:String>Rail</x:String>
+                        
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
             <Entry x:Name="PeopleAtHouse" Text="{Binding PeopleAtHouse}" Placeholder="The number of people 
                    who live in your house"/>
 
