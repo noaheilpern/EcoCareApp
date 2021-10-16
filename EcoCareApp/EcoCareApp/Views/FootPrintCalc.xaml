@@ -9,7 +9,7 @@
             <Label Text="Are you Vegetarain?"/>
             <Switch IsToggled="{Binding Vegetarian}"/>
             <Label Text="Are you vegan/eat only rare meat?" />
-            <Switch IsTogged="{Binding Vegan}"/>
+            <Switch IsToggled="{Binding Vegan}"/>
             <Entry x:Name="electricitypayment" Text="{Binding ElectricityPaid}" Placeholder="Please type the electricity amount you used during
                    the last month(kWm)"/>
             <Entry x:Name="workdis" Text="{Binding WorkDistance}" Placeholder="The distance from you home to 

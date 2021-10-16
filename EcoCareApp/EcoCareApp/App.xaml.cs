@@ -18,11 +18,11 @@ namespace EcoCareApp
         public App()
         {
             InitializeComponent();
-            Page p = new StartPage(); 
-            MainPage = new NavigationPage(new StartPage());
-            
 
 
+            Page p = new Views.RegisterUser();
+            p.Title = "Start Page";
+            MainPage = new NavigationPage(p) { BarBackgroundColor = Color.FromHex("#81cfe0") };
         }
 
         protected override void OnStart()

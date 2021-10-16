@@ -1,5 +1,6 @@
 ﻿using EcoCareApp.Models;
 using EcoCareApp.Services;
+using EcoCareApp.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,24 +80,19 @@ namespace EcoCareApp.ViewModels
 
             if (u != null)
             {
-                
-                
-                Application.Current.Properties["IsLoggedIn"] = Boolean.TrueString;
-
-
-                Page p = null;
               
-
-
-                if (NavigateToPageEvent != null)
-                    NavigateToPageEvent(p);
+                //Application.Current.Properties["IsLoggedIn"] = Boolean.TrueString;
+                App a = (App)App.Current;
+                Home h = new Home();
+                h.Title = "Home";
+                await App.Current.MainPage.Navigation.PushAsync(h);
             }
             else
             {
                 Label = "Email or password is incorrect. Please try again";
             }
         }
-        public Action<Page> NavigateToPageEvent;
+        //public Action<Page> NavigateToPageEvent;
         //example
         /*
         public async Task<string> GetTheString()

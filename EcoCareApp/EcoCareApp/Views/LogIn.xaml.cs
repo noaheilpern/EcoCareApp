@@ -17,7 +17,6 @@ namespace EcoCareApp.Views
         {
             LogInViewModel context = new LogInViewModel();
             //Register to the event so the view model will be able to navigate to the monkeypage
-            context.NavigateToPageEvent += NavigateToAsync;
             this.BindingContext = context;
 
             InitializeComponent();
