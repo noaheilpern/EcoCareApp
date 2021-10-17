@@ -97,7 +97,7 @@ namespace EcoCareApp.ViewModels
         }
 
         private string email;
-
+        
         public string Email
         {
             get => email;
