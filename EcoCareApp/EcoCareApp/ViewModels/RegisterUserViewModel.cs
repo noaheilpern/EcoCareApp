@@ -4,7 +4,11 @@ using System.ComponentModel;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using EcoCareApp.Models;
 using EcoCareApp.Services;
+using EcoCareApp.Views;
+using Xamarin.Forms;
 
 namespace EcoCareApp.ViewModels
 {
@@ -36,7 +40,7 @@ namespace EcoCareApp.ViewModels
             set
             {
                 showUserNameError = value;
-                OnPropertyChanged("ShowserNameError");
+                OnPropertyChanged("ShowUserNameError");
             }
         }
         private string userName;
@@ -183,9 +187,10 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("ShowBirthdayError");
             }
         }
-        private DateTime birthday;
+        private DateTime birthday = DateTime.Today;
         public DateTime Birthday
         {
+            
             get => birthday;
             set
             {
@@ -272,7 +277,137 @@ namespace EcoCareApp.ViewModels
         }
         #endregion
 
-        IComm
+        #region FirstName
+        private bool showFirstNameError;
+
+        public bool ShowFirstNameError
+        {
+            get => showFirstNameError;
+            set
+            {
+                showFirstNameError = value;
+                OnPropertyChanged("ShowFirstNameError");
+            }
+        }
+        private string firstNameError;
+
+        public string FirstNameError
+        {
+
+            get => firstNameError;
+            set
+            {
+                firstNameError = value;
+                OnPropertyChanged("FirstNameError");
+            }
+
+        }
+
+
+        private string firstName;
+        public string FirstName
+        {
+            get => firstName;
+            set
+            {
+                firstName = value;
+
+                this.ShowFirstNameError = string.IsNullOrEmpty(UserName);
+                this.FirstNameError = ERROR_MESSAGES.REQUIRED_FIELD;
+                OnPropertyChanged("FirstName");
+            }
+        }
+        
+
+
+        #endregion
+
+        #region LastName
+        private bool showLastNameError;
+
+        public bool ShowLastNameError
+        {
+            get => showLastNameError;
+            set
+            {
+                showLastNameError = value;
+                OnPropertyChanged("ShowFirstNameError");
+            }
+        }
+        private string lastName;
+        public string LastName
+        {
+            get => lastName;
+            set
+            {
+                lastName = value;
+
+                this.ShowLastNameError = string.IsNullOrEmpty(UserName);
+                this.LastNameError = ERROR_MESSAGES.REQUIRED_FIELD;
+                OnPropertyChanged("LastName");
+            }
+        }
+        private string lastNameError;
+
+        public string LastNameError
+        {
+
+            get => lastNameError;
+            set
+            {
+                lastNameError = value;
+                OnPropertyChanged("FirstNameError");
+            }
+
+
+        }
+
+
+        #endregion
+
+
+        private string country;
+        public string Country
+        {
+            get
+            {
+                return this.country;
+            }
+            set
+            {
+                this.country = value;
+                OnPropertyChanged("Country");
+            }
+        }
+        
+        public ICommand ResigterUser => new Command(RegiUserAsync);
+        private async void RegiUserAsync()
+        {
+            User u = new User
+            {
+                Email = this.Email,
+                FirstName = this.FirstName,
+                LastName = this.LastName,
+                Pass = this.Password,
+                UserName = this.UserName,
+                IsAdmin = false,
+                
+            };
+            RegularUser ru = new RegularUser
+            {
+                //UserNameNavigation 
+                Birthday = this.Birthday,
+                Country = this.Country,
+
+            };
+            App a = (App)App.Current;
+            FootPrintCalc fp = new FootPrintCalc(ru);
+            fp.Title = "Calculate your foot print";
+            await App.Current.MainPage.Navigation.PushAsync(fp);
+
+        }
+
+
 
 
 

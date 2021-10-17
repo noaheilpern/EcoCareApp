@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EcoCareApp.Models;
+using EcoCareApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,8 +14,9 @@ namespace EcoCareApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FootPrintCalc : ContentPage
     {
-        public FootPrintCalc()
+        public FootPrintCalc(RegularUser ru)
         {
+            this.BindingContext = new FootPrintCalcViewModel(ru); 
             InitializeComponent();
         }
     }

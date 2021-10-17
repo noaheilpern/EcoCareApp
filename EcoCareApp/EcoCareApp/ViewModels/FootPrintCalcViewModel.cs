@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EcoCareApp.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -7,6 +8,7 @@ namespace EcoCareApp.ViewModels
 {
     class FootPrintCalcViewModel: INotifyPropertyChanged
     {
+
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
@@ -14,6 +16,24 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+        private RegularUser regularUser;
+        public RegularUser RegularUser
+        {
+            get
+            {
+                return this.regularUser;
+            }
+            set
+            {
+                this.regularUser = value;
+                OnPropertyChanged("RegularUser");
+            }
+        }
+        public FootPrintCalcViewModel(RegularUser ru)
+        {
+            regularUser = ru;
+        }
+        
         private int meatMeals;
         public int MeatMeals
         {

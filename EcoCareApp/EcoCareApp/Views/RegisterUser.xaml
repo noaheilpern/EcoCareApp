@@ -4,15 +4,49 @@
              x:Class="EcoCareApp.Views.RegisterUser">
     <ContentPage.Content>
         <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="First Name" Grid.Column="0" Style="{StaticResource labelNameStyle}"/>
+                <Label Text="{Binding FirstNameError}" IsVisible="{Binding ShowUserNameError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+            </Grid>
+            <Entry Placeholder="Enter your first name" Text="{Binding FirstName}" Style="{StaticResource entryStyle}"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <Entry x:Name="un" Text="{Binding UserName}" Placeholder="Choose a user name"/>
             <Label Text="{Binding UserNameError}"></Label>
-
+            
+            <Entry x:Name="first" Text="{Binding FirstName}" Placeholder="Enter your first name"/>
+            <Label Text="{Binding FirstNameError}"></Label>
+            
+            <Entry x:Name="last" Text="{Binding LastName}" Placeholder="Enter your last name"/>
+            <Label Text="{Binding LastNameError}"></Label>
+            
             <Entry x:Name="pass" Text="{Binding Password}" IsPassword="True" Placeholder="Password"/>
             <Entry x:Name="mail" Text="{Binding Email}" Placeholder="Email"/>
             <Label Text="{Binding EmailError}"/>
             <Entry x:Name="country" Text="{Binding Country}" Placeholder="Country"/>
-            <Entry x:Name="city" Text="{Binding City}" Placeholder="City"/>
-            <Entry x:Name="address" Text="{Binding Street}" Placeholder="Adress"/>
             <DatePicker x:Name="startDatePicker"
                     Format="D"
                     Date="{Binding Birthday}" />
@@ -20,7 +54,7 @@
 
 
             <Label Text="{Binding Label}"></Label>
-            <Button Text="Sign Up" Command="{Binding Register}"></Button>
+            <Button Text="Sign Up" Command="{Binding RegisterUser}"></Button>
 
         </StackLayout>
     </ContentPage.Content>
