@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using EcoCareApp.ViewModels;
 
 namespace EcoCareApp.Views
 {
@@ -14,6 +15,7 @@ namespace EcoCareApp.Views
     {
         public StartPage()
         {
+            this.BindingContext = new StartPageViewModel();
             InitializeComponent();
 
         }

@@ -190,7 +190,7 @@ namespace EcoCareApp.ViewModels
             set
             {
                 birthday = value;
-                ValidatePassword();
+                ValidateBirthday();
                 OnPropertyChanged("Birthday");
 
             }
@@ -202,6 +202,7 @@ namespace EcoCareApp.ViewModels
             set
             {
                 birthdayError = value;
+                
                 OnPropertyChanged("BirthdayError");
 
             }
@@ -270,6 +271,8 @@ namespace EcoCareApp.ViewModels
                 this.PasswordError = ERROR_MESSAGES.REQUIRED_FIELD;
         }
         #endregion
+
+        IComm
 
 
 

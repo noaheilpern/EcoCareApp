@@ -29,5 +29,7 @@ namespace EcoCareApp.Models
         public virtual List<int> Goals { get; set; }
         public virtual List<Sale> Sales { get; set; }
         public virtual List<UserData> UsersData { get; set; }
+        public virtual User UserNameNavigation { get; set; }
+
     }
 }

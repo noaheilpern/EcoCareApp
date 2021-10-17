@@ -20,7 +20,7 @@ namespace EcoCareApp
             InitializeComponent();
 
 
-            Page p = new Views.RegisterUser();
+            Page p = new Views.StartPage(); 
             p.Title = "Start Page";
             MainPage = new NavigationPage(p) { BarBackgroundColor = Color.FromHex("#81cfe0") };
         }

@@ -12,7 +12,7 @@
             <Entry x:Name="mail" Text="{Binding Email}" Placeholder="Email"/>
             <DatePicker x:Name="startDatePicker"
                     Format="D"
-                    Date="{Binding BirthDate}" />
+                    Date="{Binding Birthday}" />
             <Entry x:Name="country" Text="{Binding Country}" Placeholder="Country"/>
 
 
