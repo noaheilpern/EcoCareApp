@@ -2,6 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoCareApp.Views.RegisterUser">
+    <ContentPage.Resources>
+        <Style TargetType="StackLayout" x:Key="LoginStack">
+            <Setter Property="Orientation" Value="Vertical"/>
+            <Setter Property="Padding" Value="30"/>
+            <Setter Property="Spacing" Value="40"/>
+            <Setter Property="FlowDirection" Value="RightToLeft"/>
+        </Style>
+        <Style TargetType="Label" x:Key="FormTitle">
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+        <Style TargetType="Entry" x:Key="LoginEntry">
+            <Setter Property="PlaceholderColor" Value="White"/>
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+        <Style TargetType="Button" x:Key="LoginButton">
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="BackgroundColor" Value="#088da5"/>
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
             <Grid>
@@ -12,48 +37,113 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Label Text="First Name" Grid.Column="0" Style="{StaticResource labelNameStyle}"/>
-                <Label Text="{Binding FirstNameError}" IsVisible="{Binding ShowUserNameError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+                <Label Text="First Name" Grid.Column="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding FirstNameTyped}"/>
+                <Label Text="{Binding FirstNameError}" IsVisible="{Binding ShowFirstNameError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
             </Grid>
             <Entry Placeholder="Enter your first name" Text="{Binding FirstName}" Style="{StaticResource entryStyle}"/>
 
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Last Name" Grid.Column="0" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding LastNameTyped}"/>
+                <Label Text="{Binding LastNameError}" IsVisible="{Binding ShowLastNameError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+            </Grid>
+            <Entry Placeholder="Enter your last name" Text="{Binding LastName}" Style="{StaticResource entryStyle}"/>
+
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="User Name" Grid.Column="0" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding UserNameTyped}"/>
+                <Label Text="{Binding UserNameError}" IsVisible="{Binding ShowUserNameError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+            </Grid>
+            <Entry Placeholder="Type a usrname" Text="{Binding UserName}" Style="{StaticResource entryStyle}"/>
 
 
 
 
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Password" Grid.Column="0" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding PasswordTyped}"/>
+                <Label Text="{Binding PasswordError}" IsVisible="{Binding ShowError}"
+                       Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+            </Grid>
+            <Entry Placeholder="Enter a password" Text="{Binding Password}" Style="{StaticResource entryStyle}"/>
 
 
 
 
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Email" Grid.Column="0" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding EmailTyped}"/>
+                <Label Text="{Binding EmailError}" IsVisible="{Binding ShowError}"
+                       Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+            </Grid>
+            <Entry Placeholder="Enter your email" Text="{Binding Email}" Style="{StaticResource entryStyle}"/>
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Country" Grid.Column="0" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding CountryTyped}"/>
+            </Grid>
+            <Entry Placeholder="Enter your country" Text="{Binding Country}" Style="{StaticResource entryStyle}"/>
 
 
 
 
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Date of Birth" Grid.Column="0" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding BirthdayTyped}"/>
+                <Label Text="{Binding BirthdayError}" IsVisible="{Binding ShowError}"
+                       Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+            </Grid>
 
-
-
-
-
-            <Entry x:Name="un" Text="{Binding UserName}" Placeholder="Choose a user name"/>
-            <Label Text="{Binding UserNameError}"></Label>
-            
-            <Entry x:Name="first" Text="{Binding FirstName}" Placeholder="Enter your first name"/>
-            <Label Text="{Binding FirstNameError}"></Label>
-            
-            <Entry x:Name="last" Text="{Binding LastName}" Placeholder="Enter your last name"/>
-            <Label Text="{Binding LastNameError}"></Label>
-            
-            <Entry x:Name="pass" Text="{Binding Password}" IsPassword="True" Placeholder="Password"/>
-            <Entry x:Name="mail" Text="{Binding Email}" Placeholder="Email"/>
-            <Label Text="{Binding EmailError}"/>
-            <Entry x:Name="country" Text="{Binding Country}" Placeholder="Country"/>
             <DatePicker x:Name="startDatePicker"
                     Format="D"
                     Date="{Binding Birthday}" />
-            <Label Text="{Binding BirthdayError}"/>
+            
 
 
-            <Label Text="{Binding Label}"></Label>
             <Button Text="Sign Up" Command="{Binding RegisterUser}"></Button>
 
         </StackLayout>

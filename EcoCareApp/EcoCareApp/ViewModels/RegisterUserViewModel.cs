@@ -43,6 +43,17 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("ShowUserNameError");
             }
         }
+        public bool userNameTyped;
+        public bool UserNameTyped
+        {
+            get => userNameTyped;
+            set
+            {
+                userNameTyped = value;
+                OnPropertyChanged("UserNameTyped");
+            }
+        }
+
         private string userName;
         public string UserName
         {
@@ -50,6 +61,10 @@ namespace EcoCareApp.ViewModels
             set
             {
                 userName = value;
+                if (string.IsNullOrEmpty(userName))
+                    userNameTyped = false;
+                else
+                    userNameTyped = true; 
                 ValidateUserNameAsync();
                 OnPropertyChanged("UserName");
             }
@@ -110,6 +125,17 @@ namespace EcoCareApp.ViewModels
             }
         }
 
+        public bool emailTyped;
+        public bool EmailTyped
+        {
+            get => emailTyped;
+            set
+            {
+                emailTyped = value;
+                OnPropertyChanged("EmailTyped");
+            }
+        }
+
         private string email;
 
         public string Email
@@ -118,6 +144,10 @@ namespace EcoCareApp.ViewModels
             set
             {
                 email = value;
+                if (string.IsNullOrEmpty(email))
+                    emailTyped = false;
+                else
+                    emailTyped = true; 
                 ValidateEmailAsync();
                 OnPropertyChanged("Email");
             }
@@ -238,6 +268,16 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("ShowPasswordError");
             }
         }
+        public bool PasswordTyped
+        {
+            get => passwordTyped;
+            set
+            {
+                passwordTyped = value;
+                OnPropertyChanged("ShowPasswordError");
+            }
+        }
+
         private string password; 
         public string Password
         {
@@ -245,6 +285,10 @@ namespace EcoCareApp.ViewModels
             set
             {
                 password = value;
+                if (string.IsNullOrEmpty(Password))
+                    passwordTyped = false;
+                else
+                    passwordTyped = true;
                 ValidatePassword();
                 OnPropertyChanged("Password");
 
@@ -266,15 +310,32 @@ namespace EcoCareApp.ViewModels
             this.ShowPasswordError = string.IsNullOrEmpty(Password);
             if (!this.ShowPasswordError)
             {
+                this.PasswordTyped = true;
+
                 if (Password.Length < MIN_PASS_CHARS)
                 {
                     this.ShowPasswordError = true;
+
                     this.PasswordError = ERROR_MESSAGES.BAD_PASSWORD;
                 }
             }
             else
+            {
                 this.PasswordError = ERROR_MESSAGES.REQUIRED_FIELD;
+                PasswordTyped = false; 
+            }
         }
+        private bool passwordTyped;
+        public bool PasswordTyped
+        {
+            get => passwordTyped;
+            set
+            {
+                passwordTyped = value; 
+                OnPropertyChanged("PasswordTyped");
+            }
+        }
+
         #endregion
 
         #region FirstName
@@ -381,6 +442,8 @@ namespace EcoCareApp.ViewModels
         }
         
         public ICommand ResigterUser => new Command(RegiUserAsync);
+
+
         private async void RegiUserAsync()
         {
             User u = new User
@@ -395,7 +458,7 @@ namespace EcoCareApp.ViewModels
             };
             RegularUser ru = new RegularUser
             {
-                //UserNameNavigation 
+                UserNameNavigation = u, 
                 Birthday = this.Birthday,
                 Country = this.Country,
 
