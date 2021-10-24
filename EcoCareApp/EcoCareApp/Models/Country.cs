@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EcoCareApp.Models
 {
-    class Country
+    public class Country
     {
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EcoCareApp.Models
 {
-    class Seller
+    public class Seller
     {
         public string UserName { get; set; }
         public string PhoneNum { get; set; }

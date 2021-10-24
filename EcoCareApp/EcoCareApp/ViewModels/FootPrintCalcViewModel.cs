@@ -33,7 +33,13 @@ namespace EcoCareApp.ViewModels
         {
             regularUser = ru;
         }
-        
+
+        public FootPrintCalcViewModel()
+        {
+            regularUser = null;
+        }
+
+
         private int meatMeals;
         public int MeatMeals
         {

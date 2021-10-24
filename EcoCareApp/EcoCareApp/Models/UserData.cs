@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EcoCareApp.Models
 {
-    class UserData
+    public class UserData
     {
         public double DistanceToWork { get; set; }
         public double ElecticityUsagePerWeek { get; set; }

@@ -16,7 +16,12 @@ namespace EcoCareApp.Views
     {
         public FootPrintCalc(RegularUser ru)
         {
-            this.BindingContext = new FootPrintCalcViewModel(ru); 
+            this.BindingContext = new FootPrintCalcViewModel(ru);
+            InitializeComponent();
+        }
+        public FootPrintCalc()
+        {
+            this.BindingContext = new FootPrintCalcViewModel();
             InitializeComponent();
         }
     }

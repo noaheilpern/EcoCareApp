@@ -16,6 +16,8 @@ namespace EcoCareApp.ViewModels
     {
         public const string REQUIRED_FIELD = "Something's missing. Please check and try again.";
         public const string BAD_EMAIL = "Email isn't valid";
+        public const string EMAIL_EXIST = "Email is already exist";
+
         public const string BAD_USERNAME = "This username is already exist. Please try another one:)";
         public const string GENERAL_ERROR = "Something went bad. Please try again";
         public const string BAD_PASSWORD = "Password has to be 6 charechters minimum";
@@ -65,7 +67,7 @@ namespace EcoCareApp.ViewModels
                     userNameTyped = false;
                 else
                     userNameTyped = true; 
-                ValidateUserNameAsync();
+                ValidateUserName();
                 OnPropertyChanged("UserName");
             }
         }
@@ -84,31 +86,21 @@ namespace EcoCareApp.ViewModels
 
         }
 
-        private async void ValidateUserNameAsync()
+        private bool ValidateUserName()
         {
             this.ShowUserNameError = string.IsNullOrEmpty(UserName);
             if (!this.ShowUserNameError)
             {
-                try
-                {
-                    EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                    Task<bool> t = proxy.IsUserNameExistAsync(UserName);
-                    bool b = await t;
-                    if (b)
-                    {
-                        this.ShowUserNameError = true;
-                        this.UserNameError = ERROR_MESSAGES.BAD_USERNAME;
-                    }
 
-                }
-                catch (Exception e)
-                {
-                    this.ShowUserNameError = true;
-                    this.UserNameError = ERROR_MESSAGES.GENERAL_ERROR;
-                }
+                this.ShowUserNameError = false;
+                return true;
+                
             }
             else
+            {
                 this.UserNameError = ERROR_MESSAGES.REQUIRED_FIELD;
+                return false; 
+            }
         }
         #endregion
 
@@ -125,7 +117,7 @@ namespace EcoCareApp.ViewModels
             }
         }
 
-        public bool emailTyped;
+        private bool emailTyped;
         public bool EmailTyped
         {
             get => emailTyped;
@@ -148,7 +140,7 @@ namespace EcoCareApp.ViewModels
                     emailTyped = false;
                 else
                     emailTyped = true; 
-                ValidateEmailAsync();
+                ValidateEmail();
                 OnPropertyChanged("Email");
             }
         }
@@ -165,12 +157,9 @@ namespace EcoCareApp.ViewModels
             }
         }
 
-        private async void ValidateEmailAsync()
+        private bool ValidateEmail()
         {
-            if (!this.ShowUserNameError)
-            {
-                
-            }
+           
             this.ShowEmailError = string.IsNullOrEmpty(Email);
             if (!this.ShowEmailError)
             {
@@ -178,34 +167,34 @@ namespace EcoCareApp.ViewModels
                 {
                     this.ShowEmailError = true;
                     this.EmailError = ERROR_MESSAGES.BAD_EMAIL;
+                    return false;
                 }
                 else
                 {
-                    try
-                    {
-                        EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                        Task<bool> t = proxy.IsUserNameExistAsync(UserName);
-                        bool b = await t;
-                        if (b)
-                        {
-                            this.ShowUserNameError = true;
-                            this.UserNameError = ERROR_MESSAGES.BAD_USERNAME;
-                        }
-
-                    }
-                    catch (Exception e)
-                    {
-                        this.ShowUserNameError = true;
-                        this.UserNameError = ERROR_MESSAGES.GENERAL_ERROR;
-                    }
+                    this.ShowEmailError = false;
+                    return true;
                 }
             }
             else
+            {
                 this.EmailError = ERROR_MESSAGES.REQUIRED_FIELD;
+                return false;
+            }
         }
         #endregion
 
         #region Birthday
+        private bool birthdayTyped; 
+        public bool BirthdayTyped
+        {
+            get => birthdayTyped;
+            set
+            {
+                birthdayTyped = value;   
+                OnPropertyChanged("BirthdayTyped");
+            }
+        }
+    
         private bool showBirthdayError;
 
         public bool ShowBirthdayError
@@ -242,14 +231,16 @@ namespace EcoCareApp.ViewModels
 
             }
         }
-        private void ValidateBirthday()
+        private bool ValidateBirthday()
         {
             
             if (Birthday.CompareTo(DateTime.Today)>=0)
             {
                     this.ShowBirthdayError = true;
                     this.BirthdayError = ERROR_MESSAGES.BAD_DATE;
+                return false; 
             }
+            return true;
             
         }
         #endregion
@@ -268,13 +259,14 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("ShowPasswordError");
             }
         }
+        private bool passwordTyped;
         public bool PasswordTyped
         {
             get => passwordTyped;
             set
             {
                 passwordTyped = value;
-                OnPropertyChanged("ShowPasswordError");
+                OnPropertyChanged("PasswordTyped");
             }
         }
 
@@ -305,7 +297,7 @@ namespace EcoCareApp.ViewModels
 
             }
         }
-        private void ValidatePassword()
+        private bool ValidatePassword()
         {
             this.ShowPasswordError = string.IsNullOrEmpty(Password);
             if (!this.ShowPasswordError)
@@ -315,26 +307,19 @@ namespace EcoCareApp.ViewModels
                 if (Password.Length < MIN_PASS_CHARS)
                 {
                     this.ShowPasswordError = true;
-
                     this.PasswordError = ERROR_MESSAGES.BAD_PASSWORD;
+                    return false;
                 }
             }
             else
             {
                 this.PasswordError = ERROR_MESSAGES.REQUIRED_FIELD;
-                PasswordTyped = false; 
+                PasswordTyped = false;
+                return false;
             }
+            return true; 
         }
-        private bool passwordTyped;
-        public bool PasswordTyped
-        {
-            get => passwordTyped;
-            set
-            {
-                passwordTyped = value; 
-                OnPropertyChanged("PasswordTyped");
-            }
-        }
+      
 
         #endregion
 
@@ -442,31 +427,86 @@ namespace EcoCareApp.ViewModels
         }
         
         public ICommand ResigterUser => new Command(RegiUserAsync);
+        public bool Valid { get; set; }
+        private async void ValidateAsync()
+        {
+            bool c = true;
+            try
+            {
+                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                Task<bool> t = proxy.IsEmailExistAsync(Email);
+                bool b = await t;
+                if (b)
+                {
+                    this.ShowEmailError = true;
+                    this.EmailError = ERROR_MESSAGES.EMAIL_EXIST;
+                }
 
+            }
+            catch (Exception e)
+            {
+                this.ShowEmailError = true;
+                this.EmailError = ERROR_MESSAGES.GENERAL_ERROR;
+                c = false;
+            }
+            try
+            {
+                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                Task<bool> t = proxy.IsUserNameExistAsync(UserName);
+                bool b = await t;
+                if (b)
+                {
+                    this.ShowUserNameError = true;
+                    this.UserNameError = ERROR_MESSAGES.BAD_USERNAME;
+                }
+
+            }
+            catch (Exception e)
+            {
+                this.ShowUserNameError = true;
+                this.UserNameError = ERROR_MESSAGES.GENERAL_ERROR;
+                c = false;
+            }
+            Valid = c;
+        }
+        private bool Validate()
+        {
+            
+            return ValidateBirthday() && ValidateEmail() && ValidatePassword() && ValidateUserName() && Valid; 
+        }
 
         private async void RegiUserAsync()
         {
-            User u = new User
+            ValidateAsync();
+            if(Validate())
             {
-                Email = this.Email,
-                FirstName = this.FirstName,
-                LastName = this.LastName,
-                Pass = this.Password,
-                UserName = this.UserName,
-                IsAdmin = false,
-                
-            };
-            RegularUser ru = new RegularUser
-            {
-                UserNameNavigation = u, 
-                Birthday = this.Birthday,
-                Country = this.Country,
+                User u = new User
+                {
+                    Email = this.Email,
+                    FirstName = this.FirstName,
+                    LastName = this.LastName,
+                    Pass = this.Password,
+                    UserName = this.UserName,
+                    IsAdmin = false,
 
-            };
-            App a = (App)App.Current;
-            FootPrintCalc fp = new FootPrintCalc(ru);
-            fp.Title = "Calculate your foot print";
-            await App.Current.MainPage.Navigation.PushAsync(fp);
+                };
+                RegularUser ru = new RegularUser
+                {
+                    UserNameNavigation = u,
+                    Birthday = this.Birthday,
+                    Country = this.Country,
+
+                };
+                App a = (App)App.Current;
+                FootPrintCalc fp = new FootPrintCalc(ru);
+                fp.Title = "Calculate your foot print";
+                await App.Current.MainPage.Navigation.PushAsync(fp);
+            }
+            else
+            {
+
+            }
+           
 
         }
 
