@@ -1,31 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:EcoCareApp.ViewModels"
              x:Class="EcoCareApp.Views.RegisterUser">
     <ContentPage.Resources>
-        <Style TargetType="StackLayout" x:Key="LoginStack">
-            <Setter Property="Orientation" Value="Vertical"/>
-            <Setter Property="Padding" Value="30"/>
-            <Setter Property="Spacing" Value="40"/>
-            <Setter Property="FlowDirection" Value="RightToLeft"/>
-        </Style>
-        <Style TargetType="Label" x:Key="FormTitle">
-            <Setter Property="HorizontalOptions" Value="Center"/>
-            <Setter Property="FontSize" Value="Large"/>
-            <Setter Property="FontAttributes" Value="Bold"/>
-        </Style>
-        <Style TargetType="Entry" x:Key="LoginEntry">
-            <Setter Property="PlaceholderColor" Value="White"/>
-            <Setter Property="HeightRequest" Value="40"/>
-            <Setter Property="TextColor" Value="White"/>
-        </Style>
-        <Style TargetType="Button" x:Key="LoginButton">
-            <Setter Property="FontAttributes" Value="Bold"/>
-            <Setter Property="FontSize" Value="Large"/>
-            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
-            <Setter Property="TextColor" Value="White"/>
-            <Setter Property="BackgroundColor" Value="#088da5"/>
-        </Style>
+       
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
@@ -72,10 +50,26 @@
             </Grid>
             <Entry Placeholder="Type a usrname" Text="{Binding UserName}" Style="{StaticResource entryStyle}"/>
 
-
-
-
             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Email" Grid.Column="0" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding EmailTyped}"/>
+                <Label Text="{Binding EmailError}" IsVisible="{Binding ShowEmailError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+            </Grid>
+            <Entry Placeholder="Type an email" Text="{Binding Email}" Style="{StaticResource entryStyle}"/>
+
+
+
+
+
+
+            <!--<Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -88,25 +82,30 @@
                 <Label Text="{Binding PasswordError}" IsVisible="{Binding ShowError}"
                        Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
             </Grid>
-            <Entry Placeholder="Enter a password" Text="{Binding Password}" Style="{StaticResource entryStyle}"/>
-
-
+            <Entry Placeholder="Enter a password" Text="{Binding Password}" Style="{StaticResource entryStyle}"/>-->
 
 
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Label Text="Email" Grid.Column="0" Style="{StaticResource labelNameStyle}"
-                       IsVisible="{Binding EmailTyped}"/>
-                <Label Text="{Binding EmailError}" IsVisible="{Binding ShowError}"
-                       Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+                <Entry Placeholder="Password"
+                IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" 
+                       Text="{Binding Password}" Style="{StaticResource entryStyle}"/>
+
+                <ImageButton VerticalOptions="Center"
+                      Margin="0,0,10,0"
+                     HeightRequest="20"
+                     HorizontalOptions="End"
+                     Source="images/ic_eye_hide.png">
+                    <ImageButton.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <local:ShowPasswordTriggerAction ShowIcon="ic_eye.png"
+                                                                    HideIcon="ic_eye_hide.png"
+                                                                    x:Name="ShowPasswordActualTrigger"/>
+                        </EventTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
             </Grid>
-            <Entry Placeholder="Enter your email" Text="{Binding Email}" Style="{StaticResource entryStyle}"/>
+
+
 
 
             <Grid>

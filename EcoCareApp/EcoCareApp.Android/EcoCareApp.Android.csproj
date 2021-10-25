@@ -90,13 +90,19 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
+    <AndroidResource Include="Resources\drawable\ic_eye.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EcoCareApp\EcoCareApp.csproj">
       <Project>{DD9EE50B-1BFB-4736-BE1D-2A136376FAA8}</Project>
       <Name>EcoCareApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_eye_hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\images\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

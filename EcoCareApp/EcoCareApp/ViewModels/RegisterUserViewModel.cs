@@ -23,6 +23,36 @@ namespace EcoCareApp.ViewModels
         public const string BAD_PASSWORD = "Password has to be 6 charechters minimum";
         public const string BAD_DATE = "You must be older than today years old to use this app!";
     }
+    public class ShowPasswordTriggerAction : TriggerAction<ImageButton>, INotifyPropertyChanged
+    {
+        public string ShowIcon { get; set; }
+        public string HideIcon { get; set; }
+
+        bool _hidePassword = true;
+
+        public bool HidePassword
+        {
+            set
+            {
+                if (_hidePassword != value)
+                {
+                    _hidePassword = value;
+
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(HidePassword)));
+                }
+            }
+            get => _hidePassword;
+        }
+
+        protected override void Invoke(ImageButton sender)
+        {
+            sender.Source = HidePassword ? ShowIcon : HideIcon;
+            HidePassword = !HidePassword;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+    }
     class RegisterUserViewModel : INotifyPropertyChanged
     {
         #region INotifyPropertyChanged
@@ -240,6 +270,10 @@ namespace EcoCareApp.ViewModels
                     this.BirthdayError = ERROR_MESSAGES.BAD_DATE;
                 return false; 
             }
+            else
+            {
+                this.ShowBirthdayError = false;
+            }
             return true;
             
         }
@@ -358,9 +392,17 @@ namespace EcoCareApp.ViewModels
             {
                 firstName = value;
 
-                this.ShowFirstNameError = string.IsNullOrEmpty(UserName);
-                this.FirstNameError = ERROR_MESSAGES.REQUIRED_FIELD;
-                OnPropertyChanged("FirstName");
+                this.ShowFirstNameError = string.IsNullOrEmpty(FirstName);
+                if(ShowFirstNameError)
+                {
+                    this.FirstNameError = ERROR_MESSAGES.REQUIRED_FIELD;
+                    OnPropertyChanged("FirstName");
+                }
+                else
+                {
+                    this.showFirstNameError = false; 
+                }
+                
             }
         }
         
@@ -377,7 +419,7 @@ namespace EcoCareApp.ViewModels
             set
             {
                 showLastNameError = value;
-                OnPropertyChanged("ShowFirstNameError");
+                OnPropertyChanged("ShowLastNameError");
             }
         }
         private string lastName;
@@ -388,9 +430,18 @@ namespace EcoCareApp.ViewModels
             {
                 lastName = value;
 
-                this.ShowLastNameError = string.IsNullOrEmpty(UserName);
-                this.LastNameError = ERROR_MESSAGES.REQUIRED_FIELD;
-                OnPropertyChanged("LastName");
+                this.ShowLastNameError = string.IsNullOrEmpty(LastName);
+                if(ShowFirstNameError)
+                {
+                    this.LastNameError = ERROR_MESSAGES.REQUIRED_FIELD;
+                    OnPropertyChanged("LastName");
+                }
+                else
+                {
+                    this.ShowLastNameError = false;
+                    OnPropertyChanged("LastName");
+
+                }
             }
         }
         private string lastNameError;
@@ -428,7 +479,7 @@ namespace EcoCareApp.ViewModels
         
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }
-        private async void ValidateAsync()
+        private async void ValidateEmailAndUserNameAsync()
         {
             bool c = true;
             try
@@ -477,7 +528,7 @@ namespace EcoCareApp.ViewModels
 
         private async void RegiUserAsync()
         {
-            ValidateAsync();
+            ValidateEmailAndUserNameAsync();
             if(Validate())
             {
                 User u = new User
@@ -504,7 +555,7 @@ namespace EcoCareApp.ViewModels
             }
             else
             {
-
+                //error message: register failed
             }
            
 

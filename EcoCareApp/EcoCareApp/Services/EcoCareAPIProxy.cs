@@ -208,7 +208,7 @@ namespace EcoCareApp.Services
         //it returns true is succeeded or false otherwise
         //questions are ignored upon registering a user and shoul dbe added seperatly.
         //if succeeded - the user is automatically logged in on the server
-        public async Task<bool> RegisterUser(User u)
+        public async Task<bool> RegisterRegularUser(RegularUser u)
         {
             try
             {
@@ -216,7 +216,8 @@ namespace EcoCareApp.Services
                 {
                     PropertyNameCaseInsensitive = true
                 };
-                string json = JsonSerializer.Serialize<User>(u, options);
+                
+                string json = JsonSerializer.Serialize<RegularUser>(u, options);
                 StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/RegisterUser", content);
                 if (response.IsSuccessStatusCode)
@@ -237,6 +238,35 @@ namespace EcoCareApp.Services
                 return false;
             }
         }
-        
+        public async Task<bool> RegisterBusinessOwner(Seller u)
+        {
+            try
+            {
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+                string json = JsonSerializer.Serialize<Seller>(u, options);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/RegisterBusinessOwner", content);
+                if (response.IsSuccessStatusCode)
+                {
+
+                    string jsonContent = await response.Content.ReadAsStringAsync();
+                    bool b = JsonSerializer.Deserialize<bool>(jsonContent, options);
+                    return b;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
     }
 }
