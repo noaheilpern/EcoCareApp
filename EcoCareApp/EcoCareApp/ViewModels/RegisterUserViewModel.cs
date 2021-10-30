@@ -94,9 +94,15 @@ namespace EcoCareApp.ViewModels
             {
                 userName = value;
                 if (string.IsNullOrEmpty(userName))
-                    userNameTyped = false;
+                {
+                    this.UserNameTyped = false;
+                }
+
                 else
-                    userNameTyped = true; 
+                {
+                    UserNameTyped = true;
+                    OnPropertyChanged("UserNameTyped");
+                }
                 ValidateUserName();
                 OnPropertyChanged("UserName");
             }
@@ -167,9 +173,9 @@ namespace EcoCareApp.ViewModels
             {
                 email = value;
                 if (string.IsNullOrEmpty(email))
-                    emailTyped = false;
+                    EmailTyped = false;
                 else
-                    emailTyped = true; 
+                    EmailTyped = true; 
                 ValidateEmail();
                 OnPropertyChanged("Email");
             }
@@ -312,9 +318,9 @@ namespace EcoCareApp.ViewModels
             {
                 password = value;
                 if (string.IsNullOrEmpty(Password))
-                    passwordTyped = false;
+                    PasswordTyped = false;
                 else
-                    passwordTyped = true;
+                    PasswordTyped = true;
                 ValidatePassword();
                 OnPropertyChanged("Password");
 
@@ -369,6 +375,17 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("ShowFirstNameError");
             }
         }
+
+        public bool firstNameTyped;
+        public bool FirstNameTyped
+        {
+            get => firstNameTyped;
+            set
+            {
+                firstNameTyped = value;
+                OnPropertyChanged("FirstNameTyped");
+            }
+        }
         private string firstNameError;
 
         public string FirstNameError
@@ -395,12 +412,14 @@ namespace EcoCareApp.ViewModels
                 this.ShowFirstNameError = string.IsNullOrEmpty(FirstName);
                 if(ShowFirstNameError)
                 {
+                    this.FirstNameTyped = false;
                     this.FirstNameError = ERROR_MESSAGES.REQUIRED_FIELD;
                     OnPropertyChanged("FirstName");
                 }
                 else
                 {
-                    this.showFirstNameError = false; 
+                    this.FirstNameTyped = true;
+                    this.ShowFirstNameError = false; 
                 }
                 
             }
@@ -422,6 +441,18 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("ShowLastNameError");
             }
         }
+
+        public bool lastNameTyped;
+        public bool LastNameTyped
+        {
+            get => lastNameTyped;
+            set
+            {
+                lastNameTyped = value;
+                OnPropertyChanged("LastNameTyped");
+            }
+        }
+
         private string lastName;
         public string LastName
         {
@@ -431,13 +462,15 @@ namespace EcoCareApp.ViewModels
                 lastName = value;
 
                 this.ShowLastNameError = string.IsNullOrEmpty(LastName);
-                if(ShowFirstNameError)
+                if(ShowLastNameError)
                 {
+                    LastNameTyped = false;
                     this.LastNameError = ERROR_MESSAGES.REQUIRED_FIELD;
                     OnPropertyChanged("LastName");
                 }
                 else
                 {
+                    LastNameTyped = true; 
                     this.ShowLastNameError = false;
                     OnPropertyChanged("LastName");
 
@@ -462,6 +495,8 @@ namespace EcoCareApp.ViewModels
 
         #endregion
 
+        #region country 
+        
 
         private string country;
         public string Country
@@ -476,7 +511,7 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("Country");
             }
         }
-        
+        #endregion
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }
         private async void ValidateEmailAndUserNameAsync()
