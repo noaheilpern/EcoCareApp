@@ -318,9 +318,9 @@ namespace EcoCareApp.ViewModels
             {
                 password = value;
                 if (string.IsNullOrEmpty(Password))
-                    PasswordTyped = false;
+                    this.PasswordTyped = false;
                 else
-                    PasswordTyped = true;
+                    this.PasswordTyped = true;
                 ValidatePassword();
                 OnPropertyChanged("Password");
 
@@ -464,13 +464,13 @@ namespace EcoCareApp.ViewModels
                 this.ShowLastNameError = string.IsNullOrEmpty(LastName);
                 if(ShowLastNameError)
                 {
-                    LastNameTyped = false;
+                    this.LastNameTyped = false;
                     this.LastNameError = ERROR_MESSAGES.REQUIRED_FIELD;
                     OnPropertyChanged("LastName");
                 }
                 else
                 {
-                    LastNameTyped = true; 
+                    this.LastNameTyped = true; 
                     this.ShowLastNameError = false;
                     OnPropertyChanged("LastName");
 
@@ -486,7 +486,7 @@ namespace EcoCareApp.ViewModels
             set
             {
                 lastNameError = value;
-                OnPropertyChanged("FirstNameError");
+                OnPropertyChanged("LastNameError");
             }
 
 

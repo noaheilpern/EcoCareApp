@@ -69,7 +69,7 @@
 
 
 
-            <!--<Grid>
+            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -82,7 +82,6 @@
                 <Label Text="{Binding PasswordError}" IsVisible="{Binding ShowError}"
                        Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
             </Grid>
-            <Entry Placeholder="Enter a password" Text="{Binding Password}" Style="{StaticResource entryStyle}"/>-->
 
 
             <Grid>
@@ -140,7 +139,6 @@
             <DatePicker x:Name="startDatePicker"
                     Format="D"
                     Date="{Binding Birthday}" />
-            
 
 
             <Button Text="Sign Up" Command="{Binding RegisterUser}"></Button>
