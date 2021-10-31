@@ -350,6 +350,11 @@ namespace EcoCareApp.ViewModels
                     this.PasswordError = ERROR_MESSAGES.BAD_PASSWORD;
                     return false;
                 }
+                else
+                {
+                    this.ShowPasswordError = false;
+                    return true;
+                }
             }
             else
             {
@@ -357,7 +362,7 @@ namespace EcoCareApp.ViewModels
                 PasswordTyped = false;
                 return false;
             }
-            return true; 
+
         }
       
 

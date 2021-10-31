@@ -89,7 +89,7 @@ namespace EcoCareApp.ViewModels
             }
             else
             {
-                Label = "Email or password is incorrect. Please try again";
+                Label = "Email or password are incorrect. Please try again";
             }
         }
         //public Action<Page> NavigateToPageEvent;
