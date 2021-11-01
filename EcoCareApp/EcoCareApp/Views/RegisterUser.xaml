@@ -32,7 +32,7 @@
                        IsVisible="{Binding LastNameTyped}"/>
                 <Label Text="{Binding LastNameError}" IsVisible="{Binding ShowLastNameError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
             </Grid>
-            <Entry Placeholder="Enter your last name" Text="{Binding LastName}" Style="{StaticResource entryStyle}"/>
+            <Entry Placeholder="Enter your last name" Text="{Binding LastName}" Style="{StaticResource entry}"/>
 
 
 
@@ -48,7 +48,7 @@
                        IsVisible="{Binding UserNameTyped}"/>
                 <Label Text="{Binding UserNameError}" IsVisible="{Binding ShowUserNameError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
             </Grid>
-            <Entry Placeholder="Type a usrname" Text="{Binding UserName}" Style="{StaticResource entryStyle}"/>
+            <Entry Placeholder="Type a usrname" Text="{Binding UserName}" Style="{StaticResource entry}"/>
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -62,7 +62,7 @@
                        IsVisible="{Binding EmailTyped}"/>
                 <Label Text="{Binding EmailError}" IsVisible="{Binding ShowEmailError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
             </Grid>
-            <Entry Placeholder="Type an email" Text="{Binding Email}" Style="{StaticResource entryStyle}"/>
+            <Entry Placeholder="Type an email" Text="{Binding Email}" Style="{StaticResource entry}"/>
 
 
 
@@ -87,7 +87,7 @@
             <Grid>
                 <Entry Placeholder="Password"
                 IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" 
-                       Text="{Binding Password}" Style="{StaticResource entryStyle}"/>
+                       Text="{Binding Password}" Style="{StaticResource entry}"/>
 
                 <ImageButton VerticalOptions="Center"
                       Margin="0,0,10,0"
@@ -117,7 +117,7 @@
                 <Label Text="Country" Grid.Column="0" Style="{StaticResource labelNameStyle}"
                        IsVisible="{Binding CountryTyped}"/>
             </Grid>
-            <Entry Placeholder="Enter your country" Text="{Binding Country}" Style="{StaticResource entryStyle}"/>
+            <Entry Placeholder="Enter your country" Text="{Binding Country}" Style="{StaticResource entry}"/>
 
 
 

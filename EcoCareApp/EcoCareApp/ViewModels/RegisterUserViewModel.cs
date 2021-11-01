@@ -516,6 +516,7 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("Country");
             }
         }
+
         #endregion
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }

@@ -12,6 +12,7 @@ using Xamarin.Essentials;
 using System.IO;
 using EcoCareApp;
 using EcoCareApp.Models;
+using System.Linq;
 
 namespace EcoCareApp.Services
 {
@@ -113,6 +114,35 @@ namespace EcoCareApp.Services
             }
         }
 
+        public async Task<List<Country>> GetCountriesAsync()
+        {
+            try
+            {
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetCountries");
+                if (response.IsSuccessStatusCode)
+                {
+                    JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve,
+                        PropertyNameCaseInsensitive = true
+                    };
+                    string content = await response.Content.ReadAsStringAsync();
+                    List<Country> l = JsonSerializer.Deserialize<List<Country>>(content, options);
+                    l.OrderBy(c => c.Country1);                     
+               
+                    return l;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return null;
+            }
+        }
         public async Task<bool> IsUserNameExistAsync(string userName)
         {
             try

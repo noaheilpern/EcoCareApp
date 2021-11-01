@@ -6,5 +6,8 @@ namespace EcoCareApp.Models
 {
     public class Country
     {
+        
+        public string Country1 { get; set; }
+        public double Ef { get; set; }
     }
 }
