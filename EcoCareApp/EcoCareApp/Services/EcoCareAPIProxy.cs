@@ -128,7 +128,7 @@ namespace EcoCareApp.Services
                     };
                     string content = await response.Content.ReadAsStringAsync();
                     List<Country> l = JsonSerializer.Deserialize<List<Country>>(content, options);
-                    l.OrderBy(c => c.Country1);                     
+                    l.OrderBy(c => c.CountryName);                     
                
                     return l;
                 }

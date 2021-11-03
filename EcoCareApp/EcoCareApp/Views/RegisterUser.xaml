@@ -18,7 +18,7 @@
                 <Label Text="First Name" Grid.Column="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding FirstNameTyped}"/>
                 <Label Text="{Binding FirstNameError}" IsVisible="{Binding ShowFirstNameError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
             </Grid>
-            <Entry Placeholder="Enter your first name" Text="{Binding FirstName}" Style="{StaticResource entryStyle}"/>
+            <Entry Placeholder="Enter your first name" Text="{Binding FirstName}" Style="{StaticResource entry}"/>
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -79,7 +79,7 @@
                 </Grid.RowDefinitions>
                 <Label Text="Password" Grid.Column="0" Style="{StaticResource labelNameStyle}"
                        IsVisible="{Binding PasswordTyped}"/>
-                <Label Text="{Binding PasswordError}" IsVisible="{Binding ShowError}"
+                <Label Text="{Binding PasswordError}" IsVisible="{Binding ShowPasswordError}"
                        Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
             </Grid>
 
@@ -117,8 +117,12 @@
                 <Label Text="Country" Grid.Column="0" Style="{StaticResource labelNameStyle}"
                        IsVisible="{Binding CountryTyped}"/>
             </Grid>
-            <Entry Placeholder="Enter your country" Text="{Binding Country}" Style="{StaticResource entry}"/>
-
+            <Picker Title="Select your country"
+        TitleColor="Blue"
+        ItemsSource="{Binding CountriesList}"
+        ItemDisplayBinding="{Binding CountryName}"
+                    SelectedItem="{Binding Country}"
+                    />
 
 
 
@@ -141,7 +145,7 @@
                     Date="{Binding Birthday}" />
 
 
-            <Button Text="Sign Up" Command="{Binding RegisterUser}"></Button>
+            <Button Text="Sign Up" Command="{Binding ResigterUser}"></Button>
 
         </StackLayout>
     </ContentPage.Content>

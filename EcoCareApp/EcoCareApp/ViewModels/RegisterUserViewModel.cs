@@ -516,6 +516,14 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("Country");
             }
         }
+        public List<Country> CountriesList
+        {
+            get
+            {
+                App a = (App)App.Current;
+                return a.CountriesList;
+            }
+        }
 
         #endregion
         public ICommand ResigterUser => new Command(RegiUserAsync);
