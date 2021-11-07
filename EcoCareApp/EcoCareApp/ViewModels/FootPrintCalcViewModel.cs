@@ -33,27 +33,90 @@ namespace EcoCareApp.ViewModels
         {
             regularUser = ru;
         }
+        #region MeatMeals
+        private const int MIN_MEAT_MEALS = 0;
 
-        public FootPrintCalcViewModel()
+        private bool showMeatMealsError;
+
+        public bool ShowMeatMealsError
         {
-            regularUser = null;
-        }
-
-
-        private int meatMeals;
-        public int MeatMeals
-        {
-            get
-            {
-                return this.meatMeals;
-            }
+            get => showMeatMealsError;
             set
             {
-                this.meatMeals = value;
-                OnPropertyChanged("MeatMeals");
+                showMeatMealsError = value;
+                OnPropertyChanged("ShowMeatMealsError");
             }
         }
+        private bool meatMealsTyped;
+        public bool MeatMealsTyped
+        {
+            get => meatMealsTyped;
+            set
+            {
+                MeatMealsTyped = value;
+                OnPropertyChanged("MeatMealsTyped");
+            }
+        }
+        private string meatMeals;
+        public string MeatMeals
+        {
+            get => meatMeals;
+            set
+            {
+                MeatMeals = value;
+                if (string.IsNullOrEmpty(MeatMeals))
+                    this.MeatMealsTyped = false;
+                else
+                    this.MeatMealsTyped = true;
+                ValidateMeatMeals();
+                OnPropertyChanged("MeatMeals");
 
+            }
+        }
+        private string meatMealsError;
+        public string MeatMealsError
+        {
+            get => meatMealsError;
+            set
+            {
+                MeatMealsError = value;
+                OnPropertyChanged("MeatMealsError");
+
+            }
+        }
+        private bool ValidateMeatMeals()
+        {
+            this.ShowMeatMealsError = string.IsNullOrEmpty(MeatMeals.ToString());
+            if (!this.ShowMeatMealsError)
+            {
+                this.MeatMealsTyped = true;
+
+                if (MeatMeals.Length < MIN_MEAT_MEALS)
+                {
+                    this.ShowMeatMealsError = true;
+                    this.MeatMealsError = ERROR_MESSAGES.BAD_MEATMEALS;
+                    return false;
+                }
+                else
+                {
+                    this.ShowMeatMealsError = false;
+                    return true;
+                }
+            }
+            else
+            {
+                this.MeatMealsError = ERROR_MESSAGES.REQUIRED_FIELD;
+                MeatMealsTyped = false;
+                return false;
+            }
+
+        }
+
+
+
+
+
+        #region Vegetarian
         private bool vegetarian;
         public bool Vegetarian
         {
@@ -67,7 +130,9 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("Vegetarian");
             }
         }
+        #endregion
 
+        #region Vegan
         private bool vegan; 
         public bool Vegan
         {
@@ -81,6 +146,7 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("Vegan");
             }
         }
+        #endregion
 
         private double electricityPaid; 
         public double ElectricityPaid

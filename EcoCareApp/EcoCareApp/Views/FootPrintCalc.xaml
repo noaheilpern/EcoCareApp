@@ -4,7 +4,20 @@
              x:Class="EcoCareApp.Views.FootPrintCalc">
     <ContentPage.Content>
         <StackLayout>
+            
+            <Entry Placeholder="Enter your first name" Text="{Binding FirstName}" Style="{StaticResource entry}"/>
             <Label Text="Calculate your current foot print"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="First Name" Grid.Column="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding MeatMealsTyped}"/>
+                <Label Text="{Binding FirstNameError}" IsVisible="{Binding ShowMeatMealsError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+            </Grid>
             <Entry x:Name="meat" Text="{Binding MeatMeals}" Placeholder="Meat meals per week"/>
             <Label Text="Are you Vegetarain?"/>
             <Switch IsToggled="{Binding Vegetarian}"/>
