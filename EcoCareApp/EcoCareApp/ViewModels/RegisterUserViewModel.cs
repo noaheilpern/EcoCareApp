@@ -12,7 +12,7 @@ using Xamarin.Forms;
 
 namespace EcoCareApp.ViewModels
 {
-    public static class ERROR_MESSAGES
+    public static partial class ERROR_MESSAGES
     {
         public const string REQUIRED_FIELD = "Something's missing. Please check and try again.";
         public const string BAD_EMAIL = "Email isn't valid";
