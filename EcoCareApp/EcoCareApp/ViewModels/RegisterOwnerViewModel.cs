@@ -485,6 +485,70 @@ namespace EcoCareApp.ViewModels
 
         #endregion
 
+
+        #region PhoneNum
+        private bool showPhoneNumError;
+
+        public bool ShowPhoneNumError
+        {
+            get => showPhoneNumError;
+            set
+            {
+                showPhoneNumError = value;
+                OnPropertyChanged("ShowPhoneNumError");
+            }
+        }
+
+        private string phoneNum;
+
+        public string PhoneNum
+        {
+            get => phoneNum;
+            set
+            {
+                phoneNum = value;
+                ValidatePhoneNum();
+                OnPropertyChanged("PhoneNum");
+            }
+        }
+
+        private string phoneNumError;
+
+        public string PhoneNumError
+        {
+            get => phoneNumError;
+            set
+            {
+                phoneNumError = value;
+                OnPropertyChanged("PhoneNumError");
+            }
+        }
+        public bool phoneNumTyped;
+        public bool PhoneNumTyped
+        {
+            get => phoneNumTyped;
+            set
+            {
+                phoneNumTyped = value;
+                OnPropertyChanged("PhoneNumTyped");
+            }
+        }
+
+        private void ValidatePhoneNum()
+        {
+            this.ShowPhoneNumError = string.IsNullOrEmpty(PhoneNum);
+            if (!this.ShowPhoneNumError)
+            {
+                if (!Regex.IsMatch(this.PhoneNum, @"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"))
+                {
+                    this.ShowPhoneNumError = true;
+                    this.PhoneNumError = ERROR_MESSAGES.BAD_PHONE;
+                }
+            }
+            else
+                this.PhoneNumError = ERROR_MESSAGES.REQUIRED_FIELD;
+        }
+        #endregion
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }
         private async void ValidateEmailAndUserNameAsync()
@@ -553,14 +617,14 @@ namespace EcoCareApp.ViewModels
                 {
                     UserNameNavigation = u,
                     Country = this.Country,
-                    //phone number
+                    PhoneNum = this.phoneNum,
 
                 };
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
                 App a = (App)App.Current;
-                Loading l = new Loading();
-                l.Title = "Loading";
-                await App.Current.MainPage.Navigation.PushAsync(l);
+                //Loading l = new Loading();
+                //l.Title = "Loading";
+                //await App.Current.MainPage.Navigation.PushAsync(l);
                 try
                 {
                     Task<bool> t = proxy.RegisterBusinessOwner(s);

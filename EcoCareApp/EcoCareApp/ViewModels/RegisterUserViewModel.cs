@@ -17,7 +17,7 @@ namespace EcoCareApp.ViewModels
         public const string REQUIRED_FIELD = "Something's missing. Please check and try again.";
         public const string BAD_EMAIL = "Email isn't valid";
         public const string EMAIL_EXIST = "Email is already exist";
-
+        public const string BAD_PHONE = "Phone number is not valid";
         public const string BAD_USERNAME = "This username is already exist. Please try another one:)";
         public const string GENERAL_ERROR = "Something went bad. Please try again";
         public const string BAD_PASSWORD = "Password has to be 6 charechters minimum";

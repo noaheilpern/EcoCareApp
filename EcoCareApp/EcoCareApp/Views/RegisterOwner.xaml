@@ -117,6 +117,20 @@
                 </ImageButton>
             </Grid>
 
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Phone number" Grid.Column="0" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding PhoneNumTyped}"/>
+                <Label Text="{Binding PhoneNumError}" IsVisible="{Binding ShowPhoneNumError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+            </Grid>
+            <Entry Placeholder="Type your phone number" Text="{Binding PhoneNum}" Style="{StaticResource entry}" Keyboard="Numeric"/>
+
 
 
 
