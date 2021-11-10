@@ -12,6 +12,7 @@ namespace EcoCareApp.ViewModels
         public const string BAD_ELECTRICITY_PAID = "You can't pay less than 0" +
             " dollars to the electricity company";
         public const string BAD_WORKDISTANCE = "Thw work distance cna't be less than 0";
+        public const string BAD_PEOPLEATTHESAMEHOUSEHOLD = "You can't be less than 1 in the same household";
     }
         class FootPrintCalcViewModel: INotifyPropertyChanged
     {
@@ -23,6 +24,7 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+        
         private RegularUser regularUser;
         public RegularUser RegularUser
         {
@@ -39,6 +41,8 @@ namespace EcoCareApp.ViewModels
         public FootPrintCalcViewModel(RegularUser ru)
         {
             regularUser = ru;
+            
+
         }
         #region MeatMeals
         private const int MIN_MEAT_MEALS = 0;
@@ -64,10 +68,11 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("MeatMealsTyped");
             }
         }
-        private int meatMeals;
-        public int MeatMeals
+        private int? meatMeals;
+        public int? MeatMeals
         {
             get => meatMeals;
+            
             set
             {
                 meatMeals = value;
@@ -155,80 +160,80 @@ namespace EcoCareApp.ViewModels
         }
         #endregion
 
-        #region ElectricityPaid 
+        #region ElectricityAmount 
 
-        private bool showElectricityPaidError;
+        private bool showElectricityAmountError;
 
-        public bool ShowElectricityPaidError
+        public bool ShowElectricityAmountError
         {
-            get => showElectricityPaidError;
+            get => showElectricityAmountError;
             set
             {
-                showElectricityPaidError = value;
-                OnPropertyChanged("ShowElectricityPaidError");
+                showElectricityAmountError = value;
+                OnPropertyChanged("ShowElectricityAmountError");
             }
         }
-        private bool electricityPaidTyped;
-        public bool ElectricityPaidTyped
+        private bool electricityAmountTyped;
+        public bool ElectricityAmountTyped
         {
-            get => electricityPaidTyped;
+            get => electricityAmountTyped;
             set
             {
-                electricityPaidTyped = value;
-                OnPropertyChanged("ElectricityPaidTyped");
+                electricityAmountTyped = value;
+                OnPropertyChanged("ElectricityAmountTyped");
             }
         }
 
-        private double electricityPaid;
-        public double ElectricityPaid
+        private double? electricityAmount;
+        public double? ElectricityAmount
         {
-            get => electricityPaid;
+            get => electricityAmount;
             set
             {
-                electricityPaid = value;
-                if (string.IsNullOrEmpty(ElectricityPaid.ToString()))
-                    this.ElectricityPaidTyped = false;
+                electricityAmount = value;
+                if (electricityAmount == null)
+                    this.ElectricityAmountTyped = false;
                 else
-                    this.ElectricityPaidTyped = true;
-                ValidateElectricityPaid();
-                OnPropertyChanged("ElectricityPaid");
+                    this.ElectricityAmountTyped = true;
+                ValidateElectricityAmount();
+                OnPropertyChanged("ElectricityAmount");
 
             }
         }
-        private string electricityPaidError;
-        public string ElectricityPaidError
+        private string electricityAmountError;
+        public string ElectricityAmountError
         {
-            get => electricityPaidError;
+            get => electricityAmountError;
             set
             {
-                electricityPaidError = value;
-                OnPropertyChanged("ElectricityPaidError");
+                electricityAmountError = value;
+                OnPropertyChanged("ElectricityAmountError");
 
             }
         }
-        private bool ValidateElectricityPaid()
+        private bool ValidateElectricityAmount()
         {
-            this.ShowElectricityPaidError = string.IsNullOrEmpty(ElectricityPaid.ToString());
-            if (!this.ShowElectricityPaidError)
+            this.ShowElectricityAmountError = string.IsNullOrEmpty(ElectricityAmount.ToString());
+            if (!this.ShowElectricityAmountError)
             {
-                this.ElectricityPaidTyped = true;
+                this.ElectricityAmountTyped = true;
 
-                if (electricityPaid < 0)
+                if (ElectricityAmount < 0)
                 {
-                    this.ShowElectricityPaidError = true;
-                    this.ElectricityPaidError = ERROR_MESSAGES.BAD_ELECTRICITY_PAID;
+                    this.ShowElectricityAmountError = true;
+                    this.ElectricityAmountError = ERROR_MESSAGES.BAD_ELECTRICITY_PAID;
                     return false;
                 }
                 else
                 {
-                    this.ShowElectricityPaidError = false;
+                    this.ShowElectricityAmountError = false;
                     return true;
                 }
             }
             else
             {
-                this.ElectricityPaidError = ERROR_MESSAGES.REQUIRED_FIELD;
-                ElectricityPaidTyped = false;
+                this.ElectricityAmountError = ERROR_MESSAGES.REQUIRED_FIELD;
+                ElectricityAmountTyped = false;
                 return false;
             }
 
@@ -266,8 +271,8 @@ namespace EcoCareApp.ViewModels
             }
         }
 
-        private double workDistance;
-        public double WorkDistance
+        private double? workDistance;
+        public double? WorkDistance
         {
             get => workDistance;
             set
@@ -340,5 +345,88 @@ namespace EcoCareApp.ViewModels
             }
         }
         #endregion
+
+        #region PeopleAtTheSameHouseHold 
+
+        private bool showPeopleAtTheSameHouseHoldError;
+
+        public bool ShowPeopleAtTheSameHouseHoldError
+        {
+            get => showPeopleAtTheSameHouseHoldError;
+            set
+            {
+                showPeopleAtTheSameHouseHoldError = value;
+                OnPropertyChanged("ShowPeopleAtTheSameHouseHoldError");
+            }
+        }
+        private bool peopleAtTheSameHouseHoldTyped;
+        public bool PeopleAtTheSameHouseHoldTyped
+        {
+            get => peopleAtTheSameHouseHoldTyped;
+            set
+            {
+                peopleAtTheSameHouseHoldTyped = value;
+                OnPropertyChanged("PeopleAtTheSameHouseHoldTyped");
+            }
+        }
+
+        private int? peopleAtTheSameHouseHold;
+        public int? PeopleAtTheSameHouseHold
+        {
+            get => peopleAtTheSameHouseHold;
+            set
+            {
+                peopleAtTheSameHouseHold = value;
+                if (string.IsNullOrEmpty(PeopleAtTheSameHouseHold.ToString()))
+                    this.PeopleAtTheSameHouseHoldTyped = false;
+                else
+                    this.PeopleAtTheSameHouseHoldTyped = true;
+                ValidatePeopleAtTheSameHouseHold();
+                OnPropertyChanged("PeopleAtTheSameHouseHold");
+
+            }
+        }
+        private string peopleAtTheSameHouseHoldError;
+        public string PeopleAtTheSameHouseHoldError
+        {
+            get => peopleAtTheSameHouseHoldError;
+            set
+            {
+                peopleAtTheSameHouseHoldError = value;
+                OnPropertyChanged("PeopleAtTheSameHouseHoldError");
+
+            }
+        }
+        private bool ValidatePeopleAtTheSameHouseHold()
+        {
+            this.ShowPeopleAtTheSameHouseHoldError = string.IsNullOrEmpty(PeopleAtTheSameHouseHold.ToString());
+            if (!this.ShowPeopleAtTheSameHouseHoldError)
+            {
+                this.PeopleAtTheSameHouseHoldTyped = true;
+
+                if (PeopleAtTheSameHouseHold < 1)
+                {
+                    this.ShowPeopleAtTheSameHouseHoldError = true;
+                    this.PeopleAtTheSameHouseHoldError = ERROR_MESSAGES.BAD_PEOPLEATTHESAMEHOUSEHOLD;
+                    return false;
+                }
+                else
+                {
+                    this.ShowPeopleAtTheSameHouseHoldError = false;
+                    return true;
+                }
+            }
+            else
+            {
+                this.PeopleAtTheSameHouseHoldError = ERROR_MESSAGES.REQUIRED_FIELD;
+                PeopleAtTheSameHouseHoldTyped = false;
+                return false;
+            }
+
+        }
+
+
+        #endregion
+
     }
 }

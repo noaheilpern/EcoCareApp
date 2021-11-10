@@ -5,7 +5,6 @@
     <ContentPage.Content>
         <StackLayout>
             
-            <Entry Placeholder="Enter your first name" Text="{Binding FirstName}" Style="{StaticResource entry}"/>
             <Label Text="Calculate your current foot print"/>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -15,18 +14,45 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Label Text="First Name" Grid.Column="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding MeatMealsTyped}"/>
-                <Label Text="{Binding FirstNameError}" IsVisible="{Binding ShowMeatMealsError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+                <Label Text="Meat Meals" Grid.Column="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding MeatMealsTyped}"/>
+                <Label Text="{Binding MeatMealsError}" IsVisible="{Binding ShowMeatMealsError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
             </Grid>
-            <Entry x:Name="meat" Text="{Binding MeatMeals}" Placeholder="Meat meals per week"/>
+            <Entry x:Name="meat" Text="{Binding MeatMeals}" Placeholder="Meat meals per week" Keyboard="Numeric"/>
+            
+            
             <Label Text="Are you Vegetarain?"/>
             <Switch IsToggled="{Binding Vegetarian}"/>
+            
             <Label Text="Are you vegan/eat only rare meat?" />
             <Switch IsToggled="{Binding Vegan}"/>
-            <Entry x:Name="electricitypayment" Text="{Binding ElectricityPaid}" Placeholder="Please type the electricity amount you used during
-                   the last month(kWm)"/>
-            <Entry x:Name="workdis" Text="{Binding WorkDistance}" Placeholder="The distance from you home to 
-                   work(km)"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Electriciy amount per hour (kWh)" Grid.Column="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding ElectricityAmountTyped}"/>
+                <Label Text="{Binding ElectricityAmountError}" IsVisible="{Binding ShowElectricityAmountError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+            </Grid>
+            <Entry x:Name="electricitypayment" Text="{Binding ElectricityAmount}" Placeholder="Please type the electricity amount you use in an hour
+                   (kWh)" Keyboard="Numeric"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="The distance between your home and your work" Grid.Column="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding WorkDistanceTyped}"/>
+                <Label Text="{Binding WorkDistanceError}" IsVisible="{Binding ShowWorkDistanceError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+            </Grid>
+            <Entry x:Name="workdis" Text="{Binding WorkDistance}"
+                   Placeholder="The distance from you home to work(km)" Keyboard="Numeric"/>
            
             <Picker x:Name="transportation"
         Title="I arrive to work by:"
@@ -42,8 +68,21 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-            <Entry x:Name="PeopleAtHouse" Text="{Binding PeopleAtHouse}" Placeholder="The number of people 
-                   who live in your house"/>
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="The number of peole in your house hold" Grid.Column="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding PeopleAtTheSameHouseHoldTyped}"/>
+                <Label Text="{Binding PeopleAtTheSameHouseHoldError}" IsVisible="{Binding ShowPeopleAtTheSameHouseHoldError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+            </Grid>
+            <Entry x:Name="PeopleAtHouse" Text="{Binding PeopleAtTheSameHouseHold}" 
+                   Placeholder="The number of people who live in your house" Keyboard="Numeric"/>
 
         </StackLayout>
     </ContentPage.Content>

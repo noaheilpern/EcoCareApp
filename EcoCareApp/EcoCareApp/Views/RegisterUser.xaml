@@ -136,7 +136,7 @@
                 </Grid.RowDefinitions>
                 <Label Text="Date of Birth" Grid.Column="0" Style="{StaticResource labelNameStyle}"
                        IsVisible="{Binding BirthdayTyped}"/>
-                <Label Text="{Binding BirthdayError}" IsVisible="{Binding ShowError}"
+                <Label Text="{Binding BirthdayError}" IsVisible="{Binding ShowBirthdayError}"
                        Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
             </Grid>
 

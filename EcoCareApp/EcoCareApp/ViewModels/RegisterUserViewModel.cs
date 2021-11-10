@@ -528,19 +528,19 @@ namespace EcoCareApp.ViewModels
         #endregion
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }
-        private async void ValidateEmailAndUserNameAsync()
+        private async Task<bool> ValidateEmailAndUserNameAsync()
         {
             bool c = true;
             try
             {
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                Task<bool> t = proxy.IsEmailExistAsync(Email);
-                bool b = await t;
-                if (b)
+                bool t = await proxy.IsEmailExistAsync(Email);
+                if (t)
                 {
                     this.ShowEmailError = true;
                     this.EmailError = ERROR_MESSAGES.EMAIL_EXIST;
                 }
+                
 
             }
             catch (Exception e)
@@ -552,9 +552,8 @@ namespace EcoCareApp.ViewModels
             try
             {
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                Task<bool> t = proxy.IsUserNameExistAsync(UserName);
-                bool b = await t;
-                if (b)
+                bool t = await proxy.IsUserNameExistAsync(UserName);
+                if (t)
                 {
                     this.ShowUserNameError = true;
                     this.UserNameError = ERROR_MESSAGES.BAD_USERNAME;
@@ -568,6 +567,7 @@ namespace EcoCareApp.ViewModels
                 c = false;
             }
             Valid = c;
+            return c;
         }
         private bool Validate()
         {
@@ -577,8 +577,8 @@ namespace EcoCareApp.ViewModels
 
         private async void RegiUserAsync()
         {
-            ValidateEmailAndUserNameAsync();
-            if(Validate())
+            bool success = await ValidateEmailAndUserNameAsync();
+            if(Validate() && success)
             {
                 User u = new User
                 {

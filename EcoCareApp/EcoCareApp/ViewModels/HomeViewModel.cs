@@ -6,5 +6,6 @@ namespace EcoCareApp.ViewModels
 {
     class HomeViewModel
     {
+        
     }
 }

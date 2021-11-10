@@ -551,14 +551,14 @@ namespace EcoCareApp.ViewModels
         #endregion
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }
-        private async void ValidateEmailAndUserNameAsync()
+        private async Task<bool> ValidateEmailAndUserNameAsync()
         {
             bool c = true;
             try
             {
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                Task<bool> t = proxy.IsEmailExistAsync(Email);
-                bool b = await t;
+                bool b =await proxy.IsEmailExistAsync(Email);
+                
                 if (b)
                 {
                     this.ShowEmailError = true;
@@ -575,8 +575,7 @@ namespace EcoCareApp.ViewModels
             try
             {
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                Task<bool> t = proxy.IsUserNameExistAsync(UserName);
-                bool b = await t;
+                bool b = await proxy.IsUserNameExistAsync(UserName);
                 if (b)
                 {
                     this.ShowUserNameError = true;
@@ -590,18 +589,18 @@ namespace EcoCareApp.ViewModels
                 this.UserNameError = ERROR_MESSAGES.GENERAL_ERROR;
                 c = false;
             }
-            Valid = c;
+            return c;
         }
         private bool Validate()
         {
 
-            return ValidateEmail() && ValidatePassword() && ValidateUserName() && Valid;
+            return ValidateEmail() && ValidatePassword() && ValidateUserName();
         }
 
         private async void RegiUserAsync()
         {
-            ValidateEmailAndUserNameAsync();
-            if (Validate())
+            bool success = await ValidateEmailAndUserNameAsync();
+            if (Validate() && success)
             {
                 User u = new User
                 {
@@ -627,8 +626,7 @@ namespace EcoCareApp.ViewModels
                 //await App.Current.MainPage.Navigation.PushAsync(l);
                 try
                 {
-                    Task<bool> t = proxy.RegisterBusinessOwner(s);
-                    t.Wait();
+                    bool registerSucceed = await proxy.RegisterBusinessOwner(s);
                     Home h = new Home();
                     h.Title = "Home";
                     await App.Current.MainPage.Navigation.PushAsync(h);
