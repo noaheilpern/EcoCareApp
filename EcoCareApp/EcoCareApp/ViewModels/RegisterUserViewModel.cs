@@ -14,7 +14,7 @@ namespace EcoCareApp.ViewModels
 {
     public static partial class ERROR_MESSAGES
     {
-        public const string REQUIRED_FIELD = "Something's missing. Please check and try again.";
+        public const string REQUIRED_FIELD = "This is a required field. Please fill it.";
         public const string BAD_EMAIL = "Email isn't valid";
         public const string EMAIL_EXIST = "Email is already exist";
         public const string BAD_PHONE = "Phone number is not valid";

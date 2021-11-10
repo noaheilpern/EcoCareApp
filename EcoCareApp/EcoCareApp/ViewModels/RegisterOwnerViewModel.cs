@@ -627,6 +627,10 @@ namespace EcoCareApp.ViewModels
                 try
                 {
                     bool registerSucceed = await proxy.RegisterBusinessOwner(s);
+                    if(!registerSucceed)
+                    {
+
+                    }
                     Home h = new Home();
                     h.Title = "Home";
                     await App.Current.MainPage.Navigation.PushAsync(h);
