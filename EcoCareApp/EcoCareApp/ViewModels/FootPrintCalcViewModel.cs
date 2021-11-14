@@ -1,9 +1,12 @@
 ﻿using EcoCareApp.Models;
+using EcoCareApp.Services;
+using EcoCareApp.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace EcoCareApp.ViewModels
 {
@@ -244,10 +247,6 @@ namespace EcoCareApp.ViewModels
         #endregion
 
 
-
-
-
-
         #region WorkDistance 
 
         private bool showWorkDistanceError;
@@ -428,6 +427,60 @@ namespace EcoCareApp.ViewModels
 
 
         #endregion
+
+        private bool Validate()
+        {
+
+            return ValidateMeatMeals() && ValidateElectricityAmount() && ValidateWorkDistance() && ValidatePeopleAtTheSameHouseHold();
+        }
+        public ICommand CalcFp => new Command(CalcFpAsync);
+        private async void CalcFpAsync()
+        {
+            if (Validate())
+            {
+                
+                RegularUser.DistanceToWork = (double)this.WorkDistance;
+                RegularUser.InitialMeatsMeals = (int)this.MeatMeals;
+                RegularUser.LastElectricityBill = (double)this.ElectricityAmount;
+                RegularUser.PeopleAtTheHousehold = (int)this.PeopleAtTheSameHouseHold;
+                RegularUser.Transportation = this.Transportation;
+                RegularUser.Vegetarian = this.Vegetarian;
+                RegularUser.VeganRareMeat = this.Vegan;
+
+               
+                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                App a = (App)App.Current;
+                //Loading l = new Loading();
+                //l.Title = "Loading";
+                //await App.Current.MainPage.Navigation.PushAsync(l);
+                try
+                {
+                    bool registerSucceed = await proxy.RegisterRegularUser(RegularUser);
+                    if (!registerSucceed)
+                    {
+                        await App.Current.MainPage.DisplayAlert("Error","Registeration failed. Please check fields are filled as needed", "OK");
+                    }
+                    else
+                    {
+                        Home h = new Home();
+                        h.Title = "Home";
+                        await App.Current.MainPage.Navigation.PushAsync(h);
+                    }
+                    
+
+                }
+                catch (Exception e)
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
+
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
+            }
+
+        }
 
 
     }

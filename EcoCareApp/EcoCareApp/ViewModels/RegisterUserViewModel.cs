@@ -503,8 +503,8 @@ namespace EcoCareApp.ViewModels
         #region country 
         
 
-        private string country;
-        public string Country
+        private Country country;
+        public Country Country
         {
             get
             {
@@ -592,9 +592,10 @@ namespace EcoCareApp.ViewModels
                 };
                 RegularUser ru = new RegularUser
                 {
+                    UserName = this.UserName,
                     UserNameNavigation = u,
                     Birthday = this.Birthday,
-                    Country = this.Country,
+                    Country = this.Country.CountryName,
 
                 };
                 App a = (App)App.Current;
@@ -604,9 +605,9 @@ namespace EcoCareApp.ViewModels
             }
             else
             {
-                //error message: register failed
+                await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
             }
-           
+
 
         }
 

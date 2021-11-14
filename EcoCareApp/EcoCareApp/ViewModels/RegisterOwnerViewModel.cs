@@ -461,8 +461,8 @@ namespace EcoCareApp.ViewModels
         #region country 
 
 
-        private string country;
-        public string Country
+        private Country country;
+        public Country Country
         {
             get
             {
@@ -614,8 +614,9 @@ namespace EcoCareApp.ViewModels
                 };
                 Seller s = new Seller
                 {
+                    UserName = this.UserName,
                     UserNameNavigation = u,
-                    Country = this.Country,
+                    Country = this.Country.CountryName,
                     PhoneNum = this.phoneNum,
 
                 };
@@ -629,22 +630,28 @@ namespace EcoCareApp.ViewModels
                     bool registerSucceed = await proxy.RegisterBusinessOwner(s);
                     if(!registerSucceed)
                     {
+                        await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
 
                     }
-                    Home h = new Home();
-                    h.Title = "Home";
-                    await App.Current.MainPage.Navigation.PushAsync(h);
+                    else
+                    {
+
+                        Home h = new Home();
+                        h.Title = "Home";
+                        await App.Current.MainPage.Navigation.PushAsync(h);
+                    }
 
                 }
                 catch(Exception e)
                 {
-                    //error message: register failed
+                    await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
+
 
                 }
             }
             else
             {
-                //error message: register failed
+                await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
             }
 
 

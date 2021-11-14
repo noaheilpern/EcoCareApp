@@ -147,7 +147,7 @@ namespace EcoCareApp.Services
         {
             try
             {
-                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/IsUserNameExist");
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/IsUserNameExist?username={userName}");
 
                 JsonSerializerOptions options = new JsonSerializerOptions
                 {
@@ -176,7 +176,7 @@ namespace EcoCareApp.Services
         {
             try
             {
-                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/IsEmailExist");
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/IsEmailExist?email={email}");
 
                 JsonSerializerOptions options = new JsonSerializerOptions
                 {
@@ -244,6 +244,7 @@ namespace EcoCareApp.Services
             {
                 JsonSerializerOptions options = new JsonSerializerOptions
                 {
+                    ReferenceHandler = ReferenceHandler.Preserve,
                     PropertyNameCaseInsensitive = true
                 };
                 
@@ -254,8 +255,8 @@ namespace EcoCareApp.Services
                 {
 
                     string jsonContent = await response.Content.ReadAsStringAsync();
-                    bool b = JsonSerializer.Deserialize<bool>(jsonContent, options);
-                    return b;
+                    RegularUser b = JsonSerializer.Deserialize<RegularUser>(jsonContent, options);
+                    return true;
                 }
                 else
                 {
@@ -274,6 +275,7 @@ namespace EcoCareApp.Services
             {
                 JsonSerializerOptions options = new JsonSerializerOptions
                 {
+                    ReferenceHandler = ReferenceHandler.Preserve,
                     PropertyNameCaseInsensitive = true
                 };
                 string json = JsonSerializer.Serialize<Seller>(u, options);
@@ -283,8 +285,8 @@ namespace EcoCareApp.Services
                 {
 
                     string jsonContent = await response.Content.ReadAsStringAsync();
-                    bool b = JsonSerializer.Deserialize<bool>(jsonContent, options);
-                    return b;
+                    Seller b = JsonSerializer.Deserialize<Seller>(jsonContent, options);
+                    return true;
                 }
                 else
                 {

@@ -121,8 +121,7 @@
         TitleColor="Blue"
         ItemsSource="{Binding CountriesList}"
         ItemDisplayBinding="{Binding CountryName}"
-                    SelectedItem="{Binding Country}"
-                    />
+        SelectedItem="{Binding Country}"/>
 
 
 

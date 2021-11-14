@@ -9,8 +9,7 @@ namespace EcoCareApp.Models
         public string UserName { get; set; }
         public string PhoneNum { get; set; }
         public string Country { get; set; }
-        public string City { get; set; }
-        public string Street { get; set; }
+
 
         public virtual User UserNameNavigation { get; set; }
 

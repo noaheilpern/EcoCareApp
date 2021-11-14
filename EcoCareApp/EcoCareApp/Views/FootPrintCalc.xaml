@@ -84,6 +84,8 @@
             <Entry x:Name="PeopleAtHouse" Text="{Binding PeopleAtTheSameHouseHold}" 
                    Placeholder="The number of people who live in your house" Keyboard="Numeric"/>
 
+            <Button Text="Sign Up" Command="{Binding CalcFp}"></Button>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
