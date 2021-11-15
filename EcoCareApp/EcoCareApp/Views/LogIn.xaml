@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:EcoCareApp.ViewModels"
+
              x:Class="EcoCareApp.Views.LogIn">
     <ContentPage.Content>
         <StackLayout>
@@ -8,7 +9,26 @@
             <Entry x:Name="mail" Text="{Binding Email}"/>
 
             <Label Text="Please enter your password:"/>
-            <Entry x:Name="pass" Text="{Binding Password}" IsPassword="True"/>
+            <Grid>
+                <Entry Placeholder="Password"
+                IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" 
+                       Text="{Binding Password}" Style="{StaticResource entry}"/>
+
+                <ImageButton VerticalOptions="Center"
+                      Margin="0,0,10,0"
+                     HeightRequest="20"
+                     HorizontalOptions="End"
+                     Source="images/ic_eye_hide.png">
+                    <ImageButton.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <local:ShowPasswordTriggerAction ShowIcon="ic_eye.png"
+                                                                    HideIcon="ic_eye_hide.png"
+                                                                    x:Name="ShowPasswordActualTrigger"/>
+                        </EventTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
+            </Grid>
+
             <Label Text="{Binding Label}"></Label>
 
             <Button Text="Log In" Command="{Binding LogIn}"></Button>

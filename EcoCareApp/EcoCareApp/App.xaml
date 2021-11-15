@@ -7,25 +7,100 @@
     <Application.Resources>
 
         <ResourceDictionary>
-          
-           
+
             <Style x:Key="title" TargetType="Label">
                 <Setter Property="FontFamily" Value="Amatic"></Setter>
-                <Setter Property="FontSize" Value="32"></Setter>
-                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="FontSize" Value="27"></Setter>
             </Style>
-
+            <Style x:Key="HelloUserName" TargetType="Label">
+                <Setter Property="FontFamily" Value="Amatic"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"></Setter>
+            </Style>
+            <Style x:Key="OrderTitle" TargetType="Label">
+                <Setter Property="FontFamily" Value="Raleway-ExtraLight"></Setter>
+                <Setter Property="FontSize" Value="24"></Setter>
+                <Setter Property="TextColor" Value="#000C29"></Setter>
+            </Style>
+            <Style x:Key="OrderStack" TargetType="StackLayout">
+                <Setter Property="Padding" Value="10,5,10,5"></Setter>
+                <Setter Property="BackgroundColor" Value="#B9C6CB"></Setter>
+            </Style>
             <Style x:Key="smallerTitle" TargetType="Label">
                 <Setter Property="FontFamily" Value="Amatic"></Setter>
-                <Setter Property="FontSize" Value="28"></Setter>
-                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="FontSize" Value="24"></Setter>
+                <Setter Property="HorizontalOptions"  Value="Center"></Setter>
             </Style>
-
             <Style x:Key="entry" TargetType="Entry">
-                <Setter Property="FontFamily" Value="Fill"></Setter>
-                <Setter Property="FontSize" Value="14"></Setter>
+                <Setter Property="FontFamily" Value="Epilogue-ExtraLight"></Setter>
+                <Setter Property="FontSize" Value="16"></Setter>
+            </Style>
+            <Style x:Key="logInSignUp" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#B9C6CB"></Setter>
+                <Setter Property="HasShadow" Value="True"></Setter>
+                <Setter Property="CornerRadius" Value="25"></Setter>
+            </Style>
+            <Style x:Key="linkPartA" TargetType="Span">
+                <Setter Property="FontFamily" Value="Raleway-ExtraLight"></Setter>
+                <Setter Property="FontSize" Value="18"></Setter>
+            </Style>
+            <Style x:Key="linkPartB" TargetType="Span">
+                <Setter Property="FontFamily" Value="Sweet-N-Sticky"></Setter>
+                <Setter Property="FontSize" Value="21"></Setter>
+            </Style>
+            <Style x:Key="link" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"></Setter>
+            </Style>
+            <Style x:Key="logInG" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="#0D171B"></Setter>
+                <Setter Property="Padding" Value="20,0,20,20"></Setter>
+            </Style>
+            <Style x:Key="SignUpG" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="#0D171B"></Setter>
+                <Setter Property="Padding" Value="0"></Setter>
+            </Style>
+            <Style x:Key="logInSignUpDivG" TargetType="Grid">
+                <Setter Property="Padding" Value="40,0,40,0"></Setter>
+                <Setter Property="Margin" Value="-20,-750,-20,-280"></Setter>
+            </Style>
+            <Style x:Key="UserPageDiv" TargetType="Grid">
+                <Setter Property="Padding" Value="40,0,40,0"></Setter>
+                <Setter Property="Margin" Value="-20,-500,-20,-300"></Setter>
+            </Style>
+            <Style x:Key="ForgetPassBG" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#4C6B56"></Setter>
+                <Setter Property="Padding" Value="40,0,40,0"></Setter>
+            </Style>
+            <Style x:Key="ForgetPassDiv" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#B9C6CB"></Setter>
+                <Setter Property="HasShadow" Value="True"></Setter>
+                <Setter Property="CornerRadius" Value="25"></Setter>
+                <Setter Property="Margin" Value="20,260,20,0"></Setter>
+            </Style>
+            <Style x:Key="UserPageButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#CFE9C3"></Setter>
+                <Setter Property="CornerRadius" Value="25"></Setter>
+                <Setter Property="Margin" Value="8"></Setter>
+                <Setter Property="TextColor" Value="#0D171B"></Setter>
+                <Setter Property="FontFamily" Value="Epilogue"></Setter>
             </Style>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+           
             <Style x:Key="Link" TargetType="Label">
                 <Setter Property="FontFamily" Value="Fill"></Setter>
                 <Setter Property="FontSize" Value="14"></Setter>
@@ -33,11 +108,7 @@
                 <Setter Property="TextDecorations" Value="Underline"></Setter>
             </Style>
 
-            <Style x:Key="logInSignUp" TargetType="Frame">
-                <Setter Property="BackgroundColor" Value="#dfe7fd"></Setter>
-                <Setter Property="HasShadow" Value="true"></Setter>
-                <Setter Property="CornerRadius" Value="10"></Setter>
-            </Style>
+         
 
             <Style x:Key="labelNameStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="Small" />

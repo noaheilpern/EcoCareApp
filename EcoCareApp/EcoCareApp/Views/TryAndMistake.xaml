@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCareApp.Views.TryAndMistake">
+    <ContentPage.Content>
+        <StackLayout>
+            
+                            <!--Go to logIn-->
+                            <Entry Placeholder="First Name" Grid.Row="2" Style="{StaticResource entry}" Text="{Binding FirstName}" Keyboard="Text"/>
+                            <!--First Name-->
+                            <Entry Placeholder="Last Name" Grid.Row="2" Grid.Column="1" Style="{StaticResource entry}" Text="{Binding LastName}" Keyboard="Text"/>
+                            <!--Last Name-->
+                            <Entry Placeholder="UserName" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource entry}" Text="{Binding UserName}"/>
+                            <!--UserName-->
+                            <Entry Placeholder="Password" Grid.Row="4" Grid.ColumnSpan="2" IsPassword="True" Style="{StaticResource entry}" Text="{Binding Pass}"/>
+                            <!--Password-->
+                            <Entry Placeholder="Mail" Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource entry}" Text="{Binding UserMail}" Keyboard="Email"/>
+                            <!--User Mail-->
+                            <Button Text="Continue" Grid.Row="6" Grid.ColumnSpan="2" Command="{Binding ContinueToAdvancedSignUp}"/>
+                            <!--To Advanced Sign Up - Button-->
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
