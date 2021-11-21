@@ -6,10 +6,7 @@
        
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-
-
-            <Grid Style="{StaticResource SignUpG}" >
+           <Grid Style="{StaticResource SignUpG}" >
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <!--Image-->
@@ -213,6 +210,6 @@
                 </Grid>
                 </ScrollView>
             </Grid>
-        </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

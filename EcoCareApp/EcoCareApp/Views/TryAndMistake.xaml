@@ -18,10 +18,7 @@
                             <!--User Mail-->
                             <Button Text="Continue" Grid.Row="6" Grid.ColumnSpan="2" Command="{Binding ContinueToAdvancedSignUp}"/>
                             <!--To Advanced Sign Up - Button-->
-                        </Grid>
-                    </Frame>
-                </Grid>
-            </Grid>
+                
 
         </StackLayout>
     </ContentPage.Content>
