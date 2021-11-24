@@ -134,6 +134,8 @@
     <Content Include="images\ic_eye.png" />
     <Content Include="images\ic_eye_hide.png" />
     <Content Include="images\calc_footprint.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\log_in.jpg" />
     <Content Include="images\sign_up.jpg" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>

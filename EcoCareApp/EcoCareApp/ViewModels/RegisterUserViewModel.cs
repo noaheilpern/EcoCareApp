@@ -526,6 +526,77 @@ namespace EcoCareApp.ViewModels
         }
 
         #endregion
+        #region Search
+
+        private List<Country> filteredCountries;
+        public List<Country> FilteredCountries
+        {
+            get
+            {
+                return this.filteredCountries;
+            }
+            set
+            {
+                if (this.filteredCountries != value)
+                {
+
+                    this.filteredCountries = value;
+                    OnPropertyChanged("FilteredCountries");
+                }
+            }
+        }
+
+        private string searchTerm;
+        public string SearchTerm
+        {
+            get
+            {
+                return this.searchTerm;
+            }
+            set
+            {
+                if (this.searchTerm != value)
+                {
+
+                    this.searchTerm = value;
+                    OnTextChanged(value);
+                    OnPropertyChanged("SearchTerm");
+                }
+            }
+        }
+
+
+        public void OnTextChanged(string search)
+        {
+            //Filter the list of contacts based on the search term
+            if (this.CountriesList == null)
+                return;
+            if (String.IsNullOrWhiteSpace(search) || String.IsNullOrEmpty(search))
+            {
+                foreach (Country c in this.CountriesList)
+                {
+                    if (!this.FilteredCountries.Contains(c))
+                        this.FilteredCountries.Add(c);
+                }
+            }
+            else
+            {
+                foreach (Country c in this.CountriesList)
+                {
+                    string contactString = country.CountryName; /*$"{uc.FirstName}|{uc.LastName}|{uc.Email}";*/
+
+                    if (!this.FilteredCountries.Contains(country) &&
+                        contactString.Contains(search))
+                        this.FilteredCountries.Add(country);
+                    else if (this.FilteredCountries.Contains(country) &&
+                        !contactString.Contains(search))
+                        this.FilteredCountries.Remove(country);
+                }
+            }
+
+            this.FilteredCountries = new List<Country>(this.FilteredCountries);
+        }
+        #endregion
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }
         private async Task<bool> ValidateEmailAndUserNameAsync()

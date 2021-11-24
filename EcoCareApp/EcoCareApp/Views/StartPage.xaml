@@ -13,12 +13,14 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
 
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"></Image>
                 <Label Text="Save The Earth and Enjoy Gifts" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0"/>
@@ -32,9 +34,21 @@
                 <Label Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="6">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Have a business?" TextColor="Red" TextDecorations="Underline">
+                            <Span Text="Have a business?" Style="{StaticResource link}">
                                 <Span.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding ToRegisterOwner}" />
+
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="7">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Have an account?" Style="{StaticResource link}">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ToLogIn}" />
 
                                 </Span.GestureRecognizers>
                             </Span>

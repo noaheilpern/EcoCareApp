@@ -37,5 +37,14 @@ namespace EcoCareApp.ViewModels
             await App.Current.MainPage.Navigation.PushAsync(ru);
         }
 
+        
+         public ICommand ToLogIn => new Command(TOLogIn);
+        async void TOLogIn()
+        {
+            App a = (App)App.Current;
+            LogIn li = new LogIn();
+            await App.Current.MainPage.Navigation.PushAsync(li);
+        }
+
     }
 }

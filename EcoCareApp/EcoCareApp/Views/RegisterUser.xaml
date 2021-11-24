@@ -6,6 +6,7 @@
        
     </ContentPage.Resources>
     <ContentPage.Content>
+        <ScrollView>
            <Grid Style="{StaticResource SignUpG}" >
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
@@ -17,7 +18,7 @@
                     <Image Source="images/sign_up.jpg" Aspect="AspectFill" />
                     <!--Image-->
                 </Grid>
-                <ScrollView>
+                
                 <Grid Style="{StaticResource logInSignUpDivG}" >
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
@@ -208,8 +209,8 @@
                         </Grid>
                     </Frame>
                 </Grid>
-                </ScrollView>
+                
             </Grid>
-        
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

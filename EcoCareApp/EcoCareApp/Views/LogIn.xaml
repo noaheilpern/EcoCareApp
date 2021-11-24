@@ -4,35 +4,74 @@
 
              x:Class="EcoCareApp.Views.LogIn">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Please enter your email:"></Label>
-            <Entry x:Name="mail" Text="{Binding Email}"/>
+ 
 
-            <Label Text="Please enter your password:"/>
-            <Grid>
-                <Entry Placeholder="Password"
+        <Grid Style="{StaticResource logInG}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"></RowDefinition>
+                <!--Image-->
+                <RowDefinition></RowDefinition>
+                <!--Div-->
+            </Grid.RowDefinitions>
+            <Image Source="logo.png" />
+            <!--Image-->
+            <Frame Grid.Row="1" Style="{StaticResource logInSignUp}">
+                <!--Div/Box-->
+                <Grid Padding="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Text="Welcome To Eco Care, Let's start save the world!" Style="{StaticResource title}"/>
+                    <!--Title-->
+
+                    <Label Text="Please enter your email:" Grid.Row="1"></Label>
+                    <Entry x:Name="mail" Text="{Binding Email}" Grid.Row="2"/>
+
+                    <Label Text="Please enter your password:" Grid.Row="3"/>
+                    <Grid Grid.Row="4">
+                        <Entry Placeholder="Password"
                 IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" 
                        Text="{Binding Password}" Style="{StaticResource entry}"/>
 
-                <ImageButton VerticalOptions="Center"
+                        <ImageButton VerticalOptions="Center"
                       Margin="0,0,10,0"
                      HeightRequest="20"
                      HorizontalOptions="End"
                      Source="images/ic_eye_hide.png">
-                    <ImageButton.Triggers>
-                        <EventTrigger Event="Clicked">
-                            <local:ShowPasswordTriggerAction ShowIcon="ic_eye.png"
+                            <ImageButton.Triggers>
+                                <EventTrigger Event="Clicked">
+                                    <local:ShowPasswordTriggerAction ShowIcon="ic_eye.png"
                                                                     HideIcon="ic_eye_hide.png"
                                                                     x:Name="ShowPasswordActualTrigger"/>
-                        </EventTrigger>
-                    </ImageButton.Triggers>
-                </ImageButton>
-            </Grid>
+                                </EventTrigger>
+                            </ImageButton.Triggers>
+                        </ImageButton>
+                    </Grid>
 
-            <Label Text="{Binding Label}"></Label>
+                    <Label Text="{Binding Label}" Grid.Row="5"></Label>
 
-            <Button Text="Log In" Command="{Binding LogIn}"></Button>
-
-        </StackLayout>
+                    
+                    <Label Grid.Row="6">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Doesn't Have An Account? " Style="{StaticResource linkPartA}" ></Span>
+                                <Span Text="Sign Up" Style="{StaticResource linkPartB}">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding MoveToSignUp}"></TapGestureRecognizer>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <!--ForgetPassword-->
+                    <Button Text="Log In" Command="{Binding LogIn}" Grid.Row="7"></Button>
+                    <!--LogIn Button-->
+                </Grid>
+            </Frame>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

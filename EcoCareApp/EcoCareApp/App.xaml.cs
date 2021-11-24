@@ -25,11 +25,9 @@ namespace EcoCareApp
         public App()
         {
             InitializeComponent();
+            Page p = new Views.Loading();
+            MainPage = p;
 
-
-            Page p = new Views.RegisterUser();  
-            p.Title = "Start Page";
-            MainPage = new NavigationPage(p) { BarBackgroundColor = Color.FromHex("#81cfe0") };
         }
         
         protected async override void OnStart()
@@ -37,7 +35,7 @@ namespace EcoCareApp
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
             CountriesList = await proxy.GetCountriesAsync();
             Page p = new Views.StartPage(); 
-            p.Title = "Start Page";
+            //p.Title = "Start Page";
             MainPage = new NavigationPage(p) { BarBackgroundColor = Color.FromHex("#81cfe0") };
         }
 
