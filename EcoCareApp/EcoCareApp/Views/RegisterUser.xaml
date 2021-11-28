@@ -6,7 +6,7 @@
        
     </ContentPage.Resources>
     <ContentPage.Content>
-        <ScrollView>
+        <StackLayout>
            <Grid Style="{StaticResource SignUpG}" >
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
@@ -23,37 +23,13 @@
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <Frame Grid.Row="2" Style="{StaticResource logInSignUp}" >
+                    <Frame Style="{StaticResource logInSignUp}" >
                         <!--Div/Box-->
-                        
-                        <Grid Padding="0" >
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-
-
-                                <!--Back Button-->
-                            </Grid.RowDefinitions>
+                        <ScrollView>  
+                        <StackLayout Padding="0" >
                             <Label Text="Welcome To Eco Care App, Let the fun begin" Grid.ColumnSpan="2" Style="{StaticResource smallerTitle}"/>
                             <!--Title-->
-                            <Label Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource link}">
+                            <Label Style="{StaticResource link}">
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <Span Text="Already One Of Us? " Style="{StaticResource linkPartA}"></Span>
@@ -97,8 +73,8 @@
 
 
 
-                            <Grid Grid.Row="4">
-                                <Grid.ColumnDefinitions>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
@@ -130,7 +106,7 @@
 
 
 
-                            <Grid Grid.Row="8" Grid.ColumnSpan="2">
+                            <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
@@ -178,11 +154,11 @@
                                 <Label Text="Country" Grid.Column="0" Style="{StaticResource labelNameStyle}"
                        IsVisible="{Binding CountryTyped}"/>
                             </Grid>
-                            <Picker Grid.Row="11" Grid.ColumnSpan="2" Title="Select your country"
-        TitleColor="Blue"
-        ItemsSource="{Binding CountriesList}"
-        ItemDisplayBinding="{Binding CountryName}"
-        SelectedItem="{Binding Country}"/>
+                                <Entry Grid.ColumnSpan="2" Placeholder="Select your country" />
+                                <CollectionView EmptyView="no countries found"  x:Name="collectionName" ItemsSource="{Binding FilteredCountries}" SelectedItem="{Binding Country}"  SelectionMode="Single"
+                                   IsVisible="{Binding ShowCountries}"  SelectionChangedCommand="{Binding Source={x:Reference collectionName}, Path=BindingContext.SelectedCountry}" SelectionChangedCommandParameter="{Binding Source={x:Reference collectionName}, Path=SelectedItem}"></CollectionView>
+
+                               
 
 
 
@@ -206,11 +182,13 @@
 
 
                             <Button Grid.Row="14" Grid.ColumnSpan="2" Text="Sign Up" Command="{Binding ResigterUser}"></Button>
-                        </Grid>
+                        </StackLayout>
+                        </ScrollView>
+
                     </Frame>
                 </Grid>
-                
             </Grid>
-        </ScrollView>
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

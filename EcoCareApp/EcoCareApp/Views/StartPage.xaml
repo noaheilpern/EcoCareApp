@@ -31,10 +31,10 @@
                 <Label Grid.Column="2" Grid.Row="4" Text="I purchase gifts I want"/>
 
                 <Button Text="Next" x:Name="Next" Command="{Binding ToRegisterUser}" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="5" ></Button>
-                <Label Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="6">
+                <Label Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="6" Style="{StaticResource link}">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Have a business?" Style="{StaticResource link}">
+                            <Span Text="Have a business?" >
                                 <Span.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding ToRegisterOwner}" />
 
@@ -43,10 +43,10 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="7">
+                <Label Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="7" Style="{StaticResource link}">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Have an account?" Style="{StaticResource link}">
+                            <Span Text="Have an account?" >
                                 <Span.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding ToLogIn}" />
 

@@ -503,27 +503,27 @@ namespace EcoCareApp.ViewModels
         #region country 
         
 
-        private Country country;
-        public Country Country
-        {
-            get
-            {
-                return this.country;
-            }
-            set
-            {
-                this.country = value;
-                OnPropertyChanged("Country");
-            }
-        }
-        public List<Country> CountriesList
-        {
-            get
-            {
-                App a = (App)App.Current;
-                return a.CountriesList;
-            }
-        }
+        //private Country selectedCountry;
+        //public Country SelectedCountry
+        //{
+        //    get
+        //    {
+        //        return this.selectedCountry;
+        //    }
+        //    set
+        //    {
+        //        this.selectedCountry = value;
+        //        OnPropertyChanged("SelectedCountry");
+        //    }
+        //}
+        //public List<Country> CountriesList
+        //{
+        //    get
+        //    {
+        //        App a = (App)App.Current;
+        //        return a.CountriesList;
+        //    }
+        //}
 
         #endregion
         #region Search
@@ -533,7 +533,14 @@ namespace EcoCareApp.ViewModels
         {
             get
             {
-                return this.filteredCountries;
+
+                App theApp = (App)App.Current;
+                List<Country> countries = new List<Country>();
+                foreach (Country c in theApp.CountriesList)
+                {
+                    countries.Add(c);
+                }
+                return countries;
             }
             set
             {
@@ -569,30 +576,30 @@ namespace EcoCareApp.ViewModels
         public void OnTextChanged(string search)
         {
             //Filter the list of contacts based on the search term
-            if (this.CountriesList == null)
-                return;
-            if (String.IsNullOrWhiteSpace(search) || String.IsNullOrEmpty(search))
-            {
-                foreach (Country c in this.CountriesList)
-                {
-                    if (!this.FilteredCountries.Contains(c))
-                        this.FilteredCountries.Add(c);
-                }
-            }
-            else
-            {
-                foreach (Country c in this.CountriesList)
-                {
-                    string contactString = country.CountryName; /*$"{uc.FirstName}|{uc.LastName}|{uc.Email}";*/
+            //if (this.CountriesList == null)
+            //    return;
+            //if (String.IsNullOrWhiteSpace(search) || String.IsNullOrEmpty(search))
+            //{
+            //    foreach (Country c in this.CountriesList)
+            //    {
+            //        if (!this.FilteredCountries.Contains(c))
+            //            this.FilteredCountries.Add(c);
+            //    }
+            //}
+            //else
+            //{
+            //    foreach (Country c in this.CountriesList)
+            //    {
+            //        string contactString = country.CountryName; /*$"{uc.FirstName}|{uc.LastName}|{uc.Email}";*/
 
-                    if (!this.FilteredCountries.Contains(country) &&
-                        contactString.Contains(search))
-                        this.FilteredCountries.Add(country);
-                    else if (this.FilteredCountries.Contains(country) &&
-                        !contactString.Contains(search))
-                        this.FilteredCountries.Remove(country);
-                }
-            }
+            //        if (!this.FilteredCountries.Contains(country) &&
+            //            contactString.Contains(search))
+            //            this.FilteredCountries.Add(country);
+            //        else if (this.FilteredCountries.Contains(country) &&
+            //            !contactString.Contains(search))
+            //            this.FilteredCountries.Remove(country);
+            //    }
+            //}
 
             this.FilteredCountries = new List<Country>(this.FilteredCountries);
         }
@@ -666,7 +673,7 @@ namespace EcoCareApp.ViewModels
                     UserName = this.UserName,
                     UserNameNavigation = u,
                     Birthday = this.Birthday,
-                    Country = this.Country.CountryName,
+                    //Country = this.Country.CountryName,
 
                 };
                 App a = (App)App.Current;

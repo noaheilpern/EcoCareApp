@@ -101,14 +101,7 @@
            
 
            
-            <Style x:Key="Link" TargetType="Label">
-                <Setter Property="FontFamily" Value="Fill"></Setter>
-                <Setter Property="FontSize" Value="14"></Setter>
-                <Setter Property="TextColor" Value="Blue"></Setter>
-                <Setter Property="TextDecorations" Value="Underline"></Setter>
-            </Style>
-
-         
+          
 
             <Style x:Key="labelNameStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="Small" />
