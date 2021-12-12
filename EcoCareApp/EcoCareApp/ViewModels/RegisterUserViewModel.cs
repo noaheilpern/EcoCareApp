@@ -604,6 +604,12 @@ namespace EcoCareApp.ViewModels
             this.FilteredCountries = new List<Country>(this.FilteredCountries);
         }
         #endregion
+
+        public ICommand PopUpCountriesClicked => new Command(OpenPopUpCountries);
+        public void OpenPopUpCountries()
+        {
+            PopUpNavigation.Instance.PushAsync(new CountryPopUp());
+        }
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }
         private async Task<bool> ValidateEmailAndUserNameAsync()

@@ -155,28 +155,7 @@
                        IsVisible="{Binding CountryTyped}"/>
                                 </Grid>
                                 <Entry Grid.ColumnSpan="2" Placeholder="Select your country" />
-                                <CollectionView EmptyView="no countries found"  x:Name="collectionName" ItemsSource="{Binding FilteredCountries}" SelectedItem="{Binding Country}"  SelectionMode="Single"
-                                   IsVisible="{Binding ShowCountries}"  SelectionChangedCommand="{Binding Source={x:Reference collectionName}, Path=BindingContext.SelectedCountry}" SelectionChangedCommandParameter="{Binding Source={x:Reference collectionName}, Path=SelectedItem}"></CollectionView>
-                            
-                            <CollectionView.ItemTemplate>
-                                    <DataTemplate>
-                                        <SwipeView>
-                                            <Grid Margin="7">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="*" />
-                                                </Grid.ColumnDefinitions>
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="50"/>
-                                                </Grid.RowDefinitions>
-                                                <Label Text="{Binding Path=AllergyName, StringFormat='{0}'}" HorizontalTextAlignment="Start" FontSize="20" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
-                                            </Grid>
-
-                                        </SwipeView>
-                                    </DataTemplate>
-                                </CollectionView.ItemTemplate>
-
-
-
+                               <Button Command="{Binding PopUpCountriesClicked}"
 
                                 <Grid Grid.Row="12" Grid.ColumnSpan="2">
                                 <Grid.ColumnDefinitions>

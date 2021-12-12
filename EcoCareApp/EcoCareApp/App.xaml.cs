@@ -33,6 +33,8 @@ namespace EcoCareApp
         protected async override void OnStart()
         {
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+            base.oncreate(bandle);
+            Rg.Plugins.Popup.Popup.Init(this, bundle);
             CountriesList = await proxy.GetCountriesAsync();
             Page p = new Views.StartPage(); 
             //p.Title = "Start Page";
