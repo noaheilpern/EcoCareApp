@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCareApp.Views.CountryPopUp">
+    <pages:PopupPage.Animation>
+        <pages:ScaleAnimation DurationIn="400"
+                                   DurationOut="300"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinIn"
+                                   HasBackgroundAnimation="True"
+                                   PositionIn="Center"
+                                   PositionOut="Center"
+                                   ScaleIn="1.2"
+                                   ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+    <ContentPage.Content>
+        <StackLayout Margin="60"
+                 Padding="25"
+                 BackgroundColor="White"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+            <SearchBar x:Name="searchBar" 
+                       Placeholder="Type a Search Term" 
+                       Text="{Binding SearchTerm}"
+                       />
+            <RefreshView x:Name="refreshView"
+             Command="{Binding RefreshCommand}"
+             IsRefreshing="{Binding IsRefreshing}">
+                <CollectionView EmptyView="אין אלרגיה בשם זה" x:Name="collectionName" ItemsSource="{Binding FilteredAllergies}" SelectionMode="Multiple" SelectedItems="{Binding SelectedAllergies}" BackgroundColor="White"
+                                SelectionChangedCommand="{Binding UpdateAllergy}" SelectionChangedCommandParameter="{Binding  Source={x:Reference collectionName}, Path=SelectedItem}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Span="1" Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <SwipeView>
+                                <Grid Margin="7">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="{Binding Path=AllergyName, StringFormat='{0}'}" HorizontalTextAlignment="Start" FontSize="20" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
+                                </Grid>
+
+                            </SwipeView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+            <Button Text="שמור אלרגיות" Command="{Binding SaveAllergies}"></Button>
+            <Entry Placeholder="רשום אלרגיה חדשה שתרצה להוסיף" MaxLength="30" Text="{Binding NewAllergy}" Style="{StaticResource entry}"></Entry>
+            <Button Text=" הוסף אלרגיה לרשימה" Command="{Binding AddAllergy}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

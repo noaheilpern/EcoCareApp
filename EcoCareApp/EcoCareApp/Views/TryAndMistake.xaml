@@ -18,8 +18,10 @@
                             <!--User Mail-->
                             <Button Text="Continue" Grid.Row="6" Grid.ColumnSpan="2" Command="{Binding ContinueToAdvancedSignUp}"/>
                             <!--To Advanced Sign Up - Button-->
-                
 
+
+            <Label Text="אלרגיות" HorizontalTextAlignment="Start" Style="{StaticResource labelNameStyle}"/>
+            <Button Text="רשימת אלרגיות" Clicked="Allergy_Clicked" BackgroundColor="#bee9e8" FontSize="16" CornerRadius="10"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
