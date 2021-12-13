@@ -605,6 +605,12 @@ namespace EcoCareApp.ViewModels
         }
         #endregion
 
+        public ICommand SaveCountryClicked => new Command(SaveCountry);
+        public void SaveCountry()
+        {
+            PopUpNavigation.Instance.PopAsync(true);
+        }
+
         public ICommand PopUpCountriesClicked => new Command(OpenPopUpCountries);
         public void OpenPopUpCountries()
         {

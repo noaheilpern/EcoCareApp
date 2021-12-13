@@ -37,6 +37,7 @@
                 </SwipeView>
             </DataTemplate>
         </CollectionView.ItemTemplate>
+        <Button text="Save" Command="{Binding SaveCountryClicked}" ></Button>
 
         
 
