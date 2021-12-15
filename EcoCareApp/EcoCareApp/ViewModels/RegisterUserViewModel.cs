@@ -8,6 +8,7 @@ using System.Windows.Input;
 using EcoCareApp.Models;
 using EcoCareApp.Services;
 using EcoCareApp.Views;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
 namespace EcoCareApp.ViewModels
@@ -608,7 +609,7 @@ namespace EcoCareApp.ViewModels
         public ICommand SaveCountryClicked => new Command(SaveCountry);
         public void SaveCountry()
         {
-            //PopUpNavigation.Instance.PopAsync(true);
+            PopupNavigation.Instance.PopAsync(true);
         }
 
         public ICommand PopUpCountriesClicked => new Command(OpenPopUpCountries);

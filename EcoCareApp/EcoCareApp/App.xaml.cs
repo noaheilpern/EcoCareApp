@@ -6,6 +6,7 @@ using Xamarin.Forms.Xaml;
 using EcoCareApp.Models;
 using System.Collections.Generic;
 using EcoCareApp.Services;
+using Rg.Plugins.Popup;
 
 namespace EcoCareApp
 {
@@ -33,8 +34,7 @@ namespace EcoCareApp
         protected async override void OnStart()
         {
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-            //base.oncreate(bandle);
-            //Rg.Plugins.Popup.Popup.Init(this, bundle);
+           
             CountriesList = await proxy.GetCountriesAsync();
             Page p = new Views.StartPage(); 
             //p.Title = "Start Page";

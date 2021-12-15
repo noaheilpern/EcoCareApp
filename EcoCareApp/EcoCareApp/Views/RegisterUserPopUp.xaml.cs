@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EcoCareApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +11,11 @@ using Xamarin.Forms.Xaml;
 namespace EcoCareApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CountryPopUp : ContentPage
+    public partial class RegisterUserPopUp : ContentPage
     {
-        public CountryPopUp()
+        public RegisterUserPopUp()
         {
+            this.BindingContext = new RegisterUserViewModel();
             //InitializeComponent();
         }
     }

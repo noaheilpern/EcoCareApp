@@ -157,21 +157,21 @@
                                 <Entry Grid.ColumnSpan="2" Placeholder="Select your country" />
                                 <Button Command="{Binding PopUpCountriesClicked}"/>
 
-                                <!--<Grid Grid.Row="12" Grid.ColumnSpan="2">-->
-                               <!-- <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
-                                <Label Text="Date of Birth" Grid.Column="0" Style="{StaticResource labelNameStyle}"
+                                <Grid Grid.Row="12" Grid.ColumnSpan="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Date of Birth" Grid.Column="0" Style="{StaticResource labelNameStyle}"
                        IsVisible="{Binding BirthdayTyped}"/>
-                                <Label Text="{Binding BirthdayError}" IsVisible="{Binding ShowBirthdayError}"
+                                    <Label Text="{Binding BirthdayError}" IsVisible="{Binding ShowBirthdayError}"
                        Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
-                            </Grid>-->
+                                </Grid>
 
-                            <DatePicker Grid.Row="13" Grid.ColumnSpan="2" x:Name="startDatePicker"
+                                <DatePicker Grid.Row="13" Grid.ColumnSpan="2" x:Name="startDatePicker"
                     Format="D"
                     Date="{Binding Birthday}" />
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<pages:PopupPage x:Class="PopupApp.CountryPopUp"
+<pages:PopupPage x:Class="EcoCareApp.RegisterUserPopUp"
                  xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
@@ -19,25 +19,26 @@
                  HorizontalOptions="Center"
                  VerticalOptions="Center">
         <CollectionView EmptyView="no countries found"  x:Name="collectionName" ItemsSource="{Binding FilteredCountries}" SelectedItem="{Binding Country}"  SelectionMode="Single"
-                                   IsVisible="{Binding ShowCountries}"  SelectionChangedCommand="{Binding Source={x:Reference collectionName}, Path=BindingContext.SelectedCountry}" SelectionChangedCommandParameter="{Binding Source={x:Reference collectionName}, Path=SelectedItem}"></CollectionView>
+                                   IsVisible="{Binding ShowCountries}"  SelectionChangedCommand="{Binding Source={x:Reference collectionName}, Path=BindingContext.SelectedCountry}" SelectionChangedCommandParameter="{Binding Source={x:Reference collectionName}, Path=SelectedItem}">
 
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <SwipeView>
-                    <Grid Margin="7">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="50"/>
-                        </Grid.RowDefinitions>
-                        <Label Text="{Binding Path=AllergyName, StringFormat='{0}'}" HorizontalTextAlignment="Start" FontSize="20" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
-                    </Grid>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <Grid Margin="7">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="{Binding Path=AllergyName, StringFormat='{0}'}" HorizontalTextAlignment="Start" FontSize="20" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
+                        </Grid>
 
-                </SwipeView>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-        <Button Command="{Binding SaveCountryClicked}" ></Button>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="Save" Command="{Binding SaveCountryClicked}" ></Button>
 
 
 
