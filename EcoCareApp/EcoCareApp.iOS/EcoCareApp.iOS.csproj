@@ -130,9 +130,9 @@
       <Version>2.0.0.14</Version>
     </PackageReference>
     <PackageReference Include="System.Text.Json">
-      <Version>5.0.2</Version>
+      <Version>6.0.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2125" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

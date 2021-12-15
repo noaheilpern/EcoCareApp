@@ -37,9 +37,9 @@
                 </SwipeView>
             </DataTemplate>
         </CollectionView.ItemTemplate>
-        <Button text="Save" Command="{Binding SaveCountryClicked}" ></Button>
+        <Button Command="{Binding SaveCountryClicked}" ></Button>
 
-        
+
 
     </StackLayout>
 </pages:PopupPage>

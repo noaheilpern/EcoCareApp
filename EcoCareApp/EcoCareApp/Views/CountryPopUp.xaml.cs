@@ -14,7 +14,7 @@ namespace EcoCareApp.Views
     {
         public CountryPopUp()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }
