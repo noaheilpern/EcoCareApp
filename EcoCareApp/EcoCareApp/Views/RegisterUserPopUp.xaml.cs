@@ -11,12 +11,12 @@ using Xamarin.Forms.Xaml;
 namespace EcoCareApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RegisterUserPopUp : ContentPage
+    public partial class RegisterUserPopUp : Rg.Plugins.Popup.Pages.PopupPage
     {
         public RegisterUserPopUp()
         {
             this.BindingContext = new RegisterUserViewModel();
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }
