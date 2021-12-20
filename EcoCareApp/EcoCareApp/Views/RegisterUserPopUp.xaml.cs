@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Rg.Plugins.Popup.Pages;
 using Xamarin.Forms.Xaml;
 
 namespace EcoCareApp.Views
@@ -15,7 +16,6 @@ namespace EcoCareApp.Views
     {
         public RegisterUserPopUp()
         {
-            this.BindingContext = new RegisterUserViewModel();
             InitializeComponent();
         }
     }

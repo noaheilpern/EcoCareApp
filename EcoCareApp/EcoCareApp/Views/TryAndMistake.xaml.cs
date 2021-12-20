@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace EcoCareApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TryAndMistake : ContentPage
+    public partial class TryAndMistake : Rg.Plugins.Popup.Pages.PopupPage
     {
         public TryAndMistake()
         {
