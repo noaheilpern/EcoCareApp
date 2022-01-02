@@ -14,7 +14,7 @@ namespace EcoCareApp.Views
     {
         public TryAndMistake()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }

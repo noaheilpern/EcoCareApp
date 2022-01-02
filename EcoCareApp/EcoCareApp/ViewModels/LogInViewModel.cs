@@ -60,6 +60,13 @@ namespace EcoCareApp.ViewModels
             }
         }
         public Page NextPage { get; set; }
+        public ICommand MoveToSignUp => new Command(SignUp);
+        async void SignUp()
+        {
+            RegisterUser ru = new RegisterUser(); 
+            
+            await App.Current.MainPage.Navigation.PushAsync(ru);
+        }
 
         public ICommand LogIn => new Command(Log);
         public LogInViewModel()
@@ -92,6 +99,7 @@ namespace EcoCareApp.ViewModels
                 Label = "Email or password are incorrect. Please try again";
             }
         }
+
         //public Action<Page> NavigateToPageEvent;
         //example
         /*
