@@ -20,11 +20,11 @@
                 <ScrollView>
                 <Grid Padding="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="80"></RowDefinition>
                         <RowDefinition Height="40"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="2*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Label Text="Welcome To Eco Care, Let's start save the world!" Style="{StaticResource title}"/>
                     <!--Title-->
