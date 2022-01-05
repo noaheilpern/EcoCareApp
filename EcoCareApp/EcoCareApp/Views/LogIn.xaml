@@ -8,32 +8,43 @@
 
         <Grid Style="{StaticResource logInG}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="300"></RowDefinition>
+                <RowDefinition Height="250"></RowDefinition>
                 <!--Image-->
                 <RowDefinition></RowDefinition>
                 <!--Div-->
             </Grid.RowDefinitions>
-            <Image Source="logo.png" />
+            <Image Source="my_logo.png" />
             <!--Image-->
-            <Frame Grid.Row="1" Style="{StaticResource logInSignUp}">
+
+                <Frame Grid.Row="1" Style="{StaticResource logInSignUp}" HorizontalOptions="FillAndExpand">
                 <!--Div/Box-->
-                <ScrollView>
-                <Grid Padding="0">
+
+                    <Grid Padding="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="40"></RowDefinition>
-                        <RowDefinition Height="40"></RowDefinition>
-                        <RowDefinition Height="40"></RowDefinition>
-                        <RowDefinition Height="40"></RowDefinition>
-                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="60"></RowDefinition>
+
+
+
+
                     </Grid.RowDefinitions>
-                    <Label Text="Welcome To Eco Care, Let's start save the world!" Style="{StaticResource title}"/>
+                    <Label Text="Welcome To Eco Care"  Style="{StaticResource title}" HorizontalOptions="CenterAndExpand" Grid.Row="0"/>
+                    <Label Text="Let's start save the world!" HorizontalOptions="CenterAndExpand" FontSize="20" Grid.Row="1"/>
                     <!--Title-->
 
-                    <Label Text="Please enter your email:" Grid.Row="1"></Label>
-                    <Entry x:Name="mail" Text="{Binding Email}" Grid.Row="2"/>
+                    <Label Text="email:" Grid.Row="2" Style="{StaticResource entry}"></Label>
+                    <Entry x:Name="mail" Text="{Binding Email}" Grid.Row="3"/>
 
-                    <Label Text="Please enter your password:" Grid.Row="3"/>
-                    <Grid Grid.Row="4">
+                    <Label Text="password:" Grid.Row="4"/>
+                    <Grid Grid.Row="5">
                         <Entry Placeholder="Password"
                 IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" 
                        Text="{Binding Password}" Style="{StaticResource entry}"/>
@@ -53,13 +64,13 @@
                         </ImageButton>
                     </Grid>
 
-                    <Label Text="{Binding Label}" Grid.Row="5"></Label>
+                    <Label Text="{Binding Label}" Grid.Row="6"></Label>
 
                     
-                    <Label Grid.Row="6">
+                    <Label Grid.Row="7">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Doesn't Have An Account? " Style="{StaticResource linkPartA}" ></Span>
+                                <Span Text="Don't Have An Account? " Style="{StaticResource linkPartA}" ></Span>
                                 <Span Text="Sign Up" Style="{StaticResource linkPartB}">
                                     <Span.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding MoveToSignUp}"></TapGestureRecognizer>
@@ -69,10 +80,9 @@
                         </Label.FormattedText>
                     </Label>
                     <!--ForgetPassword-->
-                    <Button Text="Log In" Command="{Binding LogIn}" Grid.Row="7"></Button>
+                    <Button Text="Log In" Command="{Binding LogIn}" Grid.Row="8"></Button>
                     <!--LogIn Button-->
                 </Grid>
-                </ScrollView>
             </Frame>
         </Grid>
     </ContentPage.Content>

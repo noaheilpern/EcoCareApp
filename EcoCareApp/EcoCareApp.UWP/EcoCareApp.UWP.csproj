@@ -134,9 +134,12 @@
     <Content Include="images\ic_eye.png" />
     <Content Include="images\ic_eye_hide.png" />
     <Content Include="images\calc_footprint.png" />
+    <Content Include="images\loading_gif.gif" />
     <Content Include="images\logo.png" />
     <Content Include="images\log_in.jpg" />
+    <Content Include="images\my_logo.png" />
     <Content Include="images\sign_up.jpg" />
+    <Content Include="images\start_page.jpg" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +155,9 @@
   <ItemGroup>
     <PackageReference Include="Rg.Plugins.Popup">
       <Version>2.0.0.14</Version>
+    </PackageReference>
+    <PackageReference Include="WpfAnimatedGif">
+      <Version>2.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.CommunityToolkit">
       <Version>1.3.1</Version>

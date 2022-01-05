@@ -4,6 +4,7 @@
              x:Class="EcoCareApp.Views.StartPage">
     <ContentPage.Content>
         <StackLayout>
+            <!--<StackLayout>
             <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -21,45 +22,41 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"></Image>
-                <Label Text="Save The Earth and Enjoy Gifts" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0"/>
-                <Label Text="Achieve cotums goals to get special gifts! " Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="0"/>
-                <Image Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"></Image>
-                <Label Grid.Column="0" Grid.Row="4" Text="I save the enviorment"/>
-                <Label Grid.Column="1" Grid.Row="4" Text="I get stars"/>
-                <Label Grid.Column="2" Grid.Row="4" Text="I purchase gifts I want"/>
-
-                <Button Text="Next" x:Name="Next" Command="{Binding ToRegisterUser}" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="5" ></Button>
-                <Label Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="6" Style="{StaticResource link}">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Have a business?" >
-                                <Span.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding ToRegisterOwner}" />
-
-                                </Span.GestureRecognizers>
-                            </Span>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="7" Style="{StaticResource link}">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Have an account?" >
-                                <Span.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding ToLogIn}" />
-
-                                </Span.GestureRecognizers>
-                            </Span>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+                </Grid.ColumnDefinitions>-->
+            <Frame>
+            <Image Source="start_page.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                       Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"></Image>
 
 
+            </Frame>
+            <Button Text="Next" x:Name="Next" Command="{Binding ToRegisterUser}" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="5" ></Button>
+            <Label Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="6" Style="{StaticResource link}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Have a business?" >
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ToRegisterOwner}" />
+
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="7" Style="{StaticResource link}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Have an account?" >
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ToLogIn}" />
+
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
 
-            </Grid>
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
