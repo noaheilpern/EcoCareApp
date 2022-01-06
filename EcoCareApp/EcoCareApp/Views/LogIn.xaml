@@ -13,7 +13,7 @@
                 <RowDefinition></RowDefinition>
                 <!--Div-->
             </Grid.RowDefinitions>
-            <Image Source="my_logo.png" />
+            <Image Source="logo.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
             <!--Image-->
 
                 <Frame Grid.Row="1" Style="{StaticResource logInSignUp}" HorizontalOptions="FillAndExpand">
@@ -27,8 +27,8 @@
                         <RowDefinition Height="20"></RowDefinition>
                         <RowDefinition Height="20"></RowDefinition>
                         <RowDefinition Height="20"></RowDefinition>
-                        <RowDefinition Height="20"></RowDefinition>
-                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
                         <RowDefinition Height="30"></RowDefinition>
                         <RowDefinition Height="60"></RowDefinition>
 

@@ -23,7 +23,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <Frame Style="{StaticResource logInSignUp}" >
+                    <Frame  Style="{StaticResource logInSignUp}">
                         <!--Div/Box-->
                         <ScrollView>
                             <StackLayout Padding="0" >
