@@ -4,8 +4,39 @@
 
              x:Class="EcoCareApp.Views.RegisterOwner">
     <ContentPage.Content>
-        <StackLayout>
-            <!--<Label Text="Register owner"
+        <Grid Style="{StaticResource SignUpG}" >
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <!--Image-->
+                <RowDefinition></RowDefinition>
+                <!--Div-->
+            </Grid.RowDefinitions>
+            <Grid Padding="0">
+                <Image Source="images/sign_up.jpg" Aspect="AspectFill"/>
+                <!--Image-->
+            </Grid>
+            <Grid Style="{StaticResource logInSignUpDivG}" >
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="2" Style="{StaticResource logInSignUp}" >
+                    <!--Div/Box-->
+                    <Grid Padding="0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <!--Back Button-->
+                        </Grid.RowDefinitions>
+                        <!--<Label Text="Register owner"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Entry x:Name="un" Text="{Binding UserName}" Placeholder="Choose a user name"/>
