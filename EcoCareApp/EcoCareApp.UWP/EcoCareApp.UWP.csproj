@@ -146,7 +146,7 @@
     <Content Include="images\shopping_cart_bw.png" />
     <Content Include="images\sign_up.jpg" />
     <Content Include="images\start_page.jpg" />
-    <Content Include="images\user bw.png" />
+    <Content Include="images\user_bw.png" />
     <Content Include="images\user.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>

@@ -24888,6 +24888,9 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0x7F07009F
 			public const int user = 2131165343;
 			
+			// aapt resource value: 0x7F0700A0
+			public const int user_bw = 2131165344;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

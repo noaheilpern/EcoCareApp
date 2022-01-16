@@ -4,6 +4,17 @@
              x:Class="EcoCareApp.Views.Home"
              xmlns:xtools="http://xamarin.com/schemas/2020/toolkit">
     <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="100">
+        <xtools:TabViewItem Icon="user_bw.png" IconSelected="user.png">
+            <xtools:TabViewItem.Content>
+                <StackLayout>
+                    <Label Text="Profile!!!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+            </xtools:TabViewItem.Content>
+        </xtools:TabViewItem>
+
+
         <xtools:TabViewItem Icon="home_bw.png" IconSelected="home.png">
             <xtools:TabViewItem.Content>
                 <StackLayout>
@@ -13,15 +24,18 @@
                 </StackLayout>
             </xtools:TabViewItem.Content>
         </xtools:TabViewItem>
-        <xtools:TabViewItem Icon="profile_bw.png" IconSelected="profile.png">
+
+        <xtools:TabViewItem Icon="shopping_cart_bw.png" IconSelected="shopping_cart.png">
             <xtools:TabViewItem.Content>
                 <StackLayout>
-                    <Label Text="Profile!!!"
+                    <Label Text="SHOP SHOP SHOP"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
                 </StackLayout>
             </xtools:TabViewItem.Content>
         </xtools:TabViewItem>
+
+
 
         <xtools:TabViewItem Icon="chart_bw.png" IconSelected="chart.png">
             <xtools:TabViewItem.Content>
@@ -34,14 +48,5 @@
         </xtools:TabViewItem>
 
 
-        <xtools:TabViewItem Icon="shopping_cart_bw.png" IconSelected="shopping_cart.png">
-            <xtools:TabViewItem.Content>
-                <StackLayout>
-                    <Label Text="SHOP SHOP SHOP"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-                </StackLayout>
-            </xtools:TabViewItem.Content>
-        </xtools:TabViewItem>
-    </xtools:TabView>
+            </xtools:TabView>
 </ContentPage>
