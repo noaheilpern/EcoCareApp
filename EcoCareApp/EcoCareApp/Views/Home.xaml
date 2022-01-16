@@ -1,12 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EcoCareApp.Views.Home">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Home!"
+             x:Class="EcoCareApp.Views.Home"
+             xmlns:xtools="http://xamarin.com/schemas/2020/toolkit">
+    <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="100">
+        <xtools:TabViewItem Icon="home_bw.png" IconSelected="home.png">
+            <xtools:TabViewItem.Content>
+                <StackLayout>
+                    <Label Text="Home!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+                </StackLayout>
+            </xtools:TabViewItem.Content>
+        </xtools:TabViewItem>
+        <xtools:TabViewItem Icon="profile_bw.png" IconSelected="profile.png">
+            <xtools:TabViewItem.Content>
+                <StackLayout>
+                    <Label Text="Profile!!!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+            </xtools:TabViewItem.Content>
+        </xtools:TabViewItem>
+
+        <xtools:TabViewItem Icon="chart_bw.png" IconSelected="chart.png">
+            <xtools:TabViewItem.Content>
+                <StackLayout>
+                    <Label Text="CHARTS!!!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+            </xtools:TabViewItem.Content>
+        </xtools:TabViewItem>
+
+
+        <xtools:TabViewItem Icon="shopping_cart_bw.png" IconSelected="shopping_cart.png">
+            <xtools:TabViewItem.Content>
+                <StackLayout>
+                    <Label Text="SHOP SHOP SHOP"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+            </xtools:TabViewItem.Content>
+        </xtools:TabViewItem>
+    </xtools:TabView>
 </ContentPage>

@@ -615,7 +615,7 @@ namespace EcoCareApp.ViewModels
         public ICommand PopUpCountriesClicked => new Command(OpenPopUpCountriesAsync);
         public async void OpenPopUpCountriesAsync()
         {
-            await PopupNavigation.Instance.PushAsync(new RegisterUserPopUp());
+            //await PopupNavigation.Instance.PushAsync(new RegisterUserPopUp());
         }
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }

@@ -36,7 +36,8 @@ namespace EcoCareApp
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
            
             CountriesList = await proxy.GetCountriesAsync();
-            Page p = new Views.StartPage(); 
+            Page p = new Views.Home();
+           
             //p.Title = "Start Page";
             MainPage = new NavigationPage(p) { BarBackgroundColor = Color.FromHex("#81cfe0") };
         }

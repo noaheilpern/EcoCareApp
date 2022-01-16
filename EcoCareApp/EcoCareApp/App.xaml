@@ -63,6 +63,10 @@
                 <Setter Property="Padding" Value="40,0,40,0"></Setter>
                 <Setter Property="Margin" Value="-20,-750,-20,-280"></Setter>
             </Style>
+            <Style x:Key="logInSignUpDivS" TargetType="ScrollView">
+                <Setter Property="Padding" Value="40,0,40,0"></Setter>
+                <Setter Property="Margin" Value="-20,-750,-20,-280"></Setter>
+            </Style>
             <Style x:Key="UserPageDiv" TargetType="Grid">
                 <Setter Property="Padding" Value="40,0,40,0"></Setter>
                 <Setter Property="Margin" Value="-20,-500,-20,-300"></Setter>
