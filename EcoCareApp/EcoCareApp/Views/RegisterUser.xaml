@@ -25,10 +25,10 @@
                     </Grid.RowDefinitions>
                     <Frame Grid.Row="2" Style="{StaticResource logInSignUp}" >
                         <!--Div/Box-->
-                        <Grid Padding="0">
-                            
-                        <!--<ScrollView Style="{StaticResource logInSignUpDivS}">-->
-                            <!--<StackLayout Padding="0" >-->
+                        <ScrollView Style="{StaticResource logInSignUpDivS}">
+                            <Grid Padding="0">
+
+                                <!--<StackLayout Padding="0" >-->
                                 <Label Text="Welcome To Eco Care App, Let the fun begin" Grid.ColumnSpan="2" Style="{StaticResource smallerTitle}"/>
                                 <!--Title-->
                                 <Label Style="{StaticResource link}">
@@ -179,10 +179,11 @@
 
 
                                 <Button Grid.Row="14" Grid.ColumnSpan="2" Text="Sign Up" Command="{Binding ResigterUser}"></Button>
-                            <!--</StackLayout>
+                                <!--</StackLayout>
                         </ScrollView>-->
-                    </Grid>
-        </Frame>
+                            </Grid>
+                        </ScrollView>
+                    </Frame>
                 </Grid>
             </Grid>
         </StackLayout>
