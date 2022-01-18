@@ -4,7 +4,6 @@
 
              x:Class="EcoCareApp.Views.LogIn">
     <ContentPage.Content>
- 
 
         <Grid Style="{StaticResource logInG}">
             <Grid.RowDefinitions>
@@ -15,6 +14,7 @@
             </Grid.RowDefinitions>
             <Image Source="logo.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
             <!--Image-->
+            
 
                 <Frame Grid.Row="1" Style="{StaticResource logInSignUp}" HorizontalOptions="FillAndExpand">
                 <!--Div/Box-->
@@ -40,8 +40,9 @@
                     <Label Text="Let's start save the world!" HorizontalOptions="CenterAndExpand" FontSize="20" Grid.Row="1"/>
                     <!--Title-->
 
-                    <Label Text="email:" Grid.Row="2" Style="{StaticResource entry}"></Label>
-                    <Entry x:Name="mail" Text="{Binding Email}" Grid.Row="3"/>
+                    <Label Text="email:" Grid.Row="2" ></Label>
+                    <Entry x:Name="mail" Text="{Binding Email}" Style="{StaticResource entry}" 
+                           Placeholder="Email" Grid.Row="3"/>
 
                     <Label Text="password:" Grid.Row="4"/>
                     <Grid Grid.Row="5">

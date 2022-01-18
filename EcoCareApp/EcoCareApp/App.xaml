@@ -34,6 +34,8 @@
             <Style x:Key="entry" TargetType="Entry">
                 <Setter Property="FontFamily" Value="Epilogue-ExtraLight"></Setter>
                 <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="Margin" Value="0,0,20,0"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
             </Style>
             <Style x:Key="logInSignUp" TargetType="Frame">
                 <Setter Property="BackgroundColor" Value="#B9C6CB"></Setter>
