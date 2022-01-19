@@ -4,7 +4,7 @@
              x:Class="EcoCareApp.Views.Home"
              xmlns:xtools="http://xamarin.com/schemas/2020/toolkit">
     <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="100">
-        <xtools:TabViewItem Icon="user_bw.png" IconSelected="user.png">
+        <xtools:TabViewItem Icon="images/user_bw.png" IconSelected="images/user.png">
             <xtools:TabViewItem.Content>
                 <StackLayout>
                     <Label Text="Profile!!!"
@@ -15,7 +15,7 @@
         </xtools:TabViewItem>
 
 
-        <xtools:TabViewItem Icon="home_bw.png" IconSelected="home.png">
+        <xtools:TabViewItem Icon="images/home_bw.png" IconSelected="images/home.png">
             <xtools:TabViewItem.Content>
                 <StackLayout>
                     <Label Text="Home!"
@@ -25,7 +25,7 @@
             </xtools:TabViewItem.Content>
         </xtools:TabViewItem>
 
-        <xtools:TabViewItem Icon="shopping_cart_bw.png" IconSelected="shopping_cart.png">
+        <xtools:TabViewItem Icon="images/shopping_cart_bw.png" IconSelected="images/shopping_cart.png">
             <xtools:TabViewItem.Content>
                 <StackLayout>
                     <Label Text="SHOP SHOP SHOP"
@@ -37,7 +37,7 @@
 
 
 
-        <xtools:TabViewItem Icon="chart_bw.png" IconSelected="chart.png">
+        <xtools:TabViewItem Icon="images/chart_bw.png" IconSelected="images/chart.png">
             <xtools:TabViewItem.Content>
                 <StackLayout>
                     <Label Text="CHARTS!!!"

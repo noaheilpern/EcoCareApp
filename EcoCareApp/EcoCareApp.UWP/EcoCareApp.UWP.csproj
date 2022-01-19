@@ -131,6 +131,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="images\bussiness_owner_register.jpg" />
     <Content Include="images\chart.png" />
     <Content Include="images\chart_bw.png" />
     <Content Include="images\home.png" />

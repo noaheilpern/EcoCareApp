@@ -29,7 +29,7 @@
             <Style x:Key="smallerTitle" TargetType="Label">
                 <Setter Property="FontFamily" Value="Amatic"></Setter>
                 <Setter Property="FontSize" Value="24"></Setter>
-                <Setter Property="HorizontalOptions"  Value="Center"></Setter>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"></Setter>
             </Style>
             <Style x:Key="entry" TargetType="Entry">
                 <Setter Property="FontFamily" Value="Epilogue-ExtraLight"></Setter>

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -502,52 +504,62 @@ namespace EcoCareApp.ViewModels
         #endregion
 
         #region country 
-        
+        public RegisterUserViewModel()
+        {
+            this.SearchTerm = string.Empty;
 
-        //private Country selectedCountry;
-        //public Country SelectedCountry
-        //{
-        //    get
-        //    {
-        //        return this.selectedCountry;
-        //    }
-        //    set
-        //    {
-        //        this.selectedCountry = value;
-        //        OnPropertyChanged("SelectedCountry");
-        //    }
-        //}
-        //public List<Country> CountriesList
-        //{
-        //    get
-        //    {
-        //        App a = (App)App.Current;
-        //        return a.CountriesList;
-        //    }
-        //}
+            InitCountries();
+        }
 
-        #endregion
-        #region Search
+        private void InitCountries()
+        {
+            isRefreshing = true;
+            App theApp = (App)App.Current;
+            this.allCountriesList = theApp.CountriesList;
 
-        private List<Country> filteredCountries;
-        public List<Country> FilteredCountries
+            this.FilteredCountries = new ObservableCollection<Country>(this.AllCountriesList.OrderBy(c => c.CountryName));
+            SearchTerm = string.Empty;
+            IsRefreshing = false;
+
+        }
+
+        private Country selectedCountry;
+        public Country SelectedCountry
         {
             get
             {
-
-                App theApp = (App)App.Current;
-                List<Country> countries = new List<Country>();
-                foreach (Country c in theApp.CountriesList)
-                {
-                    countries.Add(c);
-                }
-                return countries;
+                return this.selectedCountry;
+            }
+            set
+            {
+                this.selectedCountry = value;
+                OnPropertyChanged("SelectedCountry");
+            }
+        }
+        private List<Country> allCountriesList;
+        public List<Country> AllCountriesList
+        {
+            get
+            {
+                return allCountriesList;
+            }
+            set
+            {
+                allCountriesList = value;
+                OnPropertyChanged("AllCountriesList");
+            }
+        }
+        private ObservableCollection<Country> filteredCountries;
+        public ObservableCollection<Country> FilteredCountries
+        {
+            get
+            {
+                return this.filteredCountries;
             }
             set
             {
                 if (this.filteredCountries != value)
                 {
-
                     this.filteredCountries = value;
                     OnPropertyChanged("FilteredCountries");
                 }
@@ -565,58 +577,79 @@ namespace EcoCareApp.ViewModels
             {
                 if (this.searchTerm != value)
                 {
-
                     this.searchTerm = value;
                     OnTextChanged(value);
                     OnPropertyChanged("SearchTerm");
+
                 }
             }
         }
 
-
+        #region Search
         public void OnTextChanged(string search)
         {
-            //Filter the list of contacts based on the search term
-            //if (this.CountriesList == null)
-            //    return;
-            //if (String.IsNullOrWhiteSpace(search) || String.IsNullOrEmpty(search))
-            //{
-            //    foreach (Country c in this.CountriesList)
-            //    {
-            //        if (!this.FilteredCountries.Contains(c))
-            //            this.FilteredCountries.Add(c);
-            //    }
-            //}
-            //else
-            //{
-            //    foreach (Country c in this.CountriesList)
-            //    {
-            //        string contactString = country.CountryName; /*$"{uc.FirstName}|{uc.LastName}|{uc.Email}";*/
+            //Filter the list of countries based on the search term
+            if (this.AllCountriesList == null)
+                return;
+            if (String.IsNullOrWhiteSpace(search) || String.IsNullOrEmpty(search))
+            {
+                foreach (Country c in this.AllCountriesList)
+                {
+                    if (!this.FilteredCountries.Contains(c))
+                        this.FilteredCountries.Add(c);
 
-            //        if (!this.FilteredCountries.Contains(country) &&
-            //            contactString.Contains(search))
-            //            this.FilteredCountries.Add(country);
-            //        else if (this.FilteredCountries.Contains(country) &&
-            //            !contactString.Contains(search))
-            //            this.FilteredCountries.Remove(country);
-            //    }
-            //}
 
-            this.FilteredCountries = new List<Country>(this.FilteredCountries);
+                }
+            }
+            else
+            {
+                search = search.ToLower();
+                foreach (Country c in this.AllCountriesList)
+                {
+                    string countryNameString = $"{c.CountryName.ToLower()}";
+
+
+
+                    if (!this.FilteredCountries.Contains(c) &&
+                       countryNameString.Contains(search))
+                        this.FilteredCountries.Add(c);
+                    else if (this.FilteredCountries.Contains(c) &&
+                        !countryNameString.Contains(search))
+                        this.FilteredCountries.Remove(c);
+                }
+            }
+
+            this.FilteredCountries = new ObservableCollection<Country>(this.FilteredCountries.OrderBy(c => c.CountryName));
         }
         #endregion
 
-        public ICommand SaveCountryClicked => new Command(SaveCountry);
-        public void SaveCountry()
+        #region Refresh
+        private bool isRefreshing;
+        public bool IsRefreshing
         {
-            PopupNavigation.Instance.PopAsync(true);
+            get => isRefreshing;
+            set
+            {
+                if (this.isRefreshing != value)
+                {
+                    this.isRefreshing = value;
+                    OnPropertyChanged(nameof(IsRefreshing));
+                }
+            }
         }
+        public ICommand RefreshCommand => new Command(OnRefresh);
+        public void OnRefresh()
+        {
+            InitCountries();
+        }
+        #endregion
 
-        public ICommand PopUpCountriesClicked => new Command(OpenPopUpCountriesAsync);
-        public async void OpenPopUpCountriesAsync()
-        {
-            //await PopupNavigation.Instance.PushAsync(new RegisterUserPopUp());
-        }
+
+        #endregion
+
+
+        
+
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }
         private async Task<bool> ValidateEmailAndUserNameAsync()
@@ -686,7 +719,7 @@ namespace EcoCareApp.ViewModels
                     UserName = this.UserName,
                     UserNameNavigation = u,
                     Birthday = this.Birthday,
-                    //Country = this.Country.CountryName,
+                    Country = this.SelectedCountry.CountryName,
 
                 };
                 App a = (App)App.Current;

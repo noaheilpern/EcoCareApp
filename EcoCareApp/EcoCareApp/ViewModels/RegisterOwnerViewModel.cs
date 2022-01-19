@@ -3,7 +3,9 @@ using EcoCareApp.Services;
 using EcoCareApp.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -459,29 +461,146 @@ namespace EcoCareApp.ViewModels
         #endregion
 
         #region country 
+        public RegisterOwnerViewModel()
+        {
+            this.SearchTerm = string.Empty;
 
+            InitCountries();
+        }
 
-        private Country country;
-        public Country Country
+        private void InitCountries()
+        {
+            isRefreshing = true;
+            App theApp = (App)App.Current;
+            this.allCountriesList = theApp.CountriesList;
+
+            this.FilteredCountries = new ObservableCollection<Country>(this.AllCountriesList.OrderBy(c => c.CountryName));
+            SearchTerm = string.Empty;
+            IsRefreshing = false;
+
+        }
+
+        private Country selectedCountry;
+        public Country SelectedCountry
         {
             get
             {
-                return this.country;
+                return this.selectedCountry;
             }
             set
             {
-                this.country = value;
-                OnPropertyChanged("Country");
+                this.selectedCountry = value;
+                OnPropertyChanged("SelectedCountry");
             }
         }
-        public List<Country> CountriesList
+        private List<Country> allCountriesList;
+        public List<Country> AllCountriesList
         {
             get
             {
-                App a = (App)App.Current;
-                return a.CountriesList;
+                return allCountriesList;
+            }
+            set
+            {
+                allCountriesList = value;
+                OnPropertyChanged("AllCountriesList");
             }
         }
+        private ObservableCollection<Country> filteredCountries;
+        public ObservableCollection<Country> FilteredCountries
+        {
+            get
+            {
+                return this.filteredCountries;
+            }
+            set
+            {
+                if (this.filteredCountries != value)
+                {
+                    this.filteredCountries = value;
+                    OnPropertyChanged("FilteredCountries");
+                }
+            }
+        }
+
+        private string searchTerm;
+        public string SearchTerm
+        {
+            get
+            {
+                return this.searchTerm;
+            }
+            set
+            {
+                if (this.searchTerm != value)
+                {
+                    this.searchTerm = value;
+                    OnTextChanged(value);
+                    OnPropertyChanged("SearchTerm");
+
+                }
+            }
+        }
+
+        #region Search
+        public void OnTextChanged(string search)
+        {
+            //Filter the list of countries based on the search term
+            if (this.AllCountriesList == null)
+                return;
+            if (String.IsNullOrWhiteSpace(search) || String.IsNullOrEmpty(search))
+            {
+                foreach (Country c in this.AllCountriesList)
+                {
+                    if (!this.FilteredCountries.Contains(c))
+                        this.FilteredCountries.Add(c);
+
+
+                }
+            }
+            else
+            {
+                search = search.ToLower(); 
+                foreach (Country c in this.AllCountriesList)
+                {
+                    string countryNameString = $"{c.CountryName.ToLower()}";
+
+
+
+                    if (!this.FilteredCountries.Contains(c) &&
+                       countryNameString.Contains(search))
+                        this.FilteredCountries.Add(c);
+                    else if (this.FilteredCountries.Contains(c) &&
+                        !countryNameString.Contains(search))
+                        this.FilteredCountries.Remove(c);
+                }
+            }
+
+            this.FilteredCountries = new ObservableCollection<Country>(this.FilteredCountries.OrderBy(c => c.CountryName));
+        }
+        #endregion
+
+        #region Refresh
+        private bool isRefreshing;
+        public bool IsRefreshing
+        {
+            get => isRefreshing;
+            set
+            {
+                if (this.isRefreshing != value)
+                {
+                    this.isRefreshing = value;
+                    OnPropertyChanged(nameof(IsRefreshing));
+                }
+            }
+        }
+        public ICommand RefreshCommand => new Command(OnRefresh);
+        public void OnRefresh()
+        {
+            InitCountries();
+        }
+        #endregion
+
 
         #endregion
 
@@ -621,7 +740,7 @@ namespace EcoCareApp.ViewModels
                 {
                     UserName = this.UserName,
                     UserNameNavigation = u,
-                    Country = this.Country.CountryName,
+                    Country = this.SelectedCountry.CountryName,
                     PhoneNum = this.phoneNum,
 
                 };
