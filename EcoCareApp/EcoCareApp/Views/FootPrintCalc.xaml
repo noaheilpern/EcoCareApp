@@ -2,90 +2,103 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoCareApp.Views.FootPrintCalc">
+    <!-- Photo by Luis del Río from Pexels -->
     <ContentPage.Content>
-        <StackLayout>
-            
-            <Label Text="Calculate your current foot print"/>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Label Text="Meat Meals" Grid.Column="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding MeatMealsTyped}"/>
-                <Label Text="{Binding MeatMealsError}" IsVisible="{Binding ShowMeatMealsError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+        <Grid Style="{StaticResource SignUpG}" >
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <!--Image-->
+                <RowDefinition></RowDefinition>
+                <!--Div-->
+            </Grid.RowDefinitions>
+            <Grid Padding="0">
+                <Image Source="images/calc_footprint.png" Aspect="AspectFill"/>
+                <!--Image-->
             </Grid>
-            <Entry x:Name="meat" Text="{Binding MeatMeals}" Placeholder="Meat meals per week" Keyboard="Numeric"/>
-            
-            
-            <Label Text="Are you Vegetarain?"/>
-            <Switch IsToggled="{Binding Vegetarian}"/>
-            
-            <Label Text="Are you vegan/eat only rare meat?" />
-            <Switch IsToggled="{Binding Vegan}"/>
+            <Grid Style="{StaticResource logInSignUpDivG}" >
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="2" Style="{StaticResource logInSignUp}" >
+                    <!--Div/Box-->
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Label Text="Electriciy amount per hour (kWh)" Grid.Column="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding ElectricityAmountTyped}"/>
-                <Label Text="{Binding ElectricityAmountError}" IsVisible="{Binding ShowElectricityAmountError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
-            </Grid>
-            <Entry x:Name="electricitypayment" Text="{Binding ElectricityAmount}" Placeholder="Please type the electricity amount you use in an hour
+                    <ScrollView>
+                        <Grid Padding="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Row="0" Text="Calculate your current foot print" Style="{StaticResource smallerTitle}"/>
+
+                            <Label Text="Meat Meals" Grid.Row="1" Style="{StaticResource labelNameStyle}" IsVisible="{Binding MeatMealsTyped}"/>
+                            <Label Text="{Binding MeatMealsError}" Grid.Row="1" IsVisible="{Binding ShowMeatMealsError}" Style="{StaticResource labelErrorStyle}"/>
+                            <Entry x:Name="meat" Text="{Binding MeatMeals}" Grid.Row="2" Placeholder="Meat meals per week" Keyboard="Numeric"/>
+
+
+                            <Label Text="Are you Vegetarain?" Grid.Row="3" Grid.RowSpan="2"/>
+                            <Switch IsToggled="{Binding Vegetarian}" Grid.Row="3" Grid.RowSpan="2" HorizontalOptions="End"/>
+
+                            <Label Text="Are you vegan/eat only rare meat?" Grid.Row="5" Grid.RowSpan="2"/>
+                            <Switch IsToggled="{Binding Vegan}" Grid.Row="5" Grid.RowSpan="2" HorizontalOptions="End"/>
+
+                            <Label Text="Electriciy amount per hour (kWh)" Grid.Row="7" Style="{StaticResource labelNameStyle}" IsVisible="{Binding ElectricityAmountTyped}"/>
+                            <Label Text="{Binding ElectricityAmountError}" IsVisible="{Binding ShowElectricityAmountError}" Grid.Row="8" Style="{StaticResource labelErrorStyle}"/>
+
+                            <Entry x:Name="electricitypayment" Text="{Binding ElectricityAmount}" Grid.Row="9" Placeholder="Please type the electricity amount you use in an hour
                    (kWh)" Keyboard="Numeric"/>
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Label Text="The distance between your home and your work" Grid.Column="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding WorkDistanceTyped}"/>
-                <Label Text="{Binding WorkDistanceError}" IsVisible="{Binding ShowWorkDistanceError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
-            </Grid>
-            <Entry x:Name="workdis" Text="{Binding WorkDistance}"
+                            <Label Text="The distance between your home and your work" Grid.Row="10" Style="{StaticResource labelNameStyle}" IsVisible="{Binding WorkDistanceTyped}"/>
+                            <Label Text="{Binding WorkDistanceError}" Grid.Row="10" IsVisible="{Binding ShowWorkDistanceError}" Style="{StaticResource labelErrorStyle}"/>
+
+                            <Entry x:Name="workdis" Text="{Binding WorkDistance}" Grid.Row="11" 
                    Placeholder="The distance from you home to work(km)" Keyboard="Numeric"/>
-           
-            <Picker x:Name="transportation"
+
+                            <Picker x:Name="transportation" Grid.Row="12" Grid.RowSpan="2"
         Title="I arrive to work by:"
         TitleColor="Red" SelectedItem="{Binding Transportation}" >
-                <Picker.ItemsSource >
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Vehicle</x:String>
-                        <x:String>Bus</x:String>
-                        <x:String>Metro</x:String>
-                        <x:String>Taxi</x:String>
-                        <x:String>Rail</x:String>
-                        
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
+                                <Picker.ItemsSource >
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Vehicle</x:String>
+                                        <x:String>Bus</x:String>
+                                        <x:String>Metro</x:String>
+                                        <x:String>Taxi</x:String>
+                                        <x:String>Rail</x:String>
+                                        <x:String>Walking</x:String>
+
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
 
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Label Text="The number of peole in your house hold" Grid.Column="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding PeopleAtTheSameHouseHoldTyped}"/>
-                <Label Text="{Binding PeopleAtTheSameHouseHoldError}" IsVisible="{Binding ShowPeopleAtTheSameHouseHoldError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
-            </Grid>
-            <Entry x:Name="PeopleAtHouse" Text="{Binding PeopleAtTheSameHouseHold}" 
+
+                            <Label Text="The number of peole in your house hold" Grid.Row="14" Style="{StaticResource labelNameStyle}" IsVisible="{Binding PeopleAtTheSameHouseHoldTyped}"/>
+                            <Label Text="{Binding PeopleAtTheSameHouseHoldError}" Grid.Row="14" IsVisible="{Binding ShowPeopleAtTheSameHouseHoldError}" Style="{StaticResource labelErrorStyle}"/>
+                            <Entry x:Name="PeopleAtHouse" Grid.Row="15" Text="{Binding PeopleAtTheSameHouseHold}" 
                    Placeholder="The number of people who live in your house" Keyboard="Numeric"/>
 
-            <Button Text="Sign Up" Command="{Binding CalcFp}"></Button>
+                            <Button Text="Sign Up" Grid.Row="16" Command="{Binding CalcFp}"></Button>
+                        </Grid>
+                    </ScrollView>
 
-        </StackLayout>
+                </Frame>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

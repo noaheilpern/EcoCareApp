@@ -143,13 +143,7 @@
                                 </CollectionView>
                             </RefreshView>
                             </ScrollView>
-                            <!--<Picker Grid.Row="14" Title="Select your country"
-        TitleColor="Blue"
-        ItemsSource="{Binding CountriesList}"
-        ItemDisplayBinding="{Binding CountryName}"
-                    SelectedItem="{Binding Country}"
-                    />-->
-
+                   
 
 
                         <Button Text="Sign Up" Grid.Row="16" Command="{Binding ResigterUser}"></Button>

@@ -155,5 +155,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bussiness_owner_register.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\foot_print_calc.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
