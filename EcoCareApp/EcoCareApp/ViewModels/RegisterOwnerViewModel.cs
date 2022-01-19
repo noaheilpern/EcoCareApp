@@ -506,7 +506,12 @@ namespace EcoCareApp.ViewModels
             get => phoneNum;
             set
             {
+              
                 phoneNum = value;
+                if (string.IsNullOrEmpty(PhoneNum))
+                    this.PhoneNumTyped = false;
+                else
+                    this.PhoneNumTyped = true;
                 ValidatePhoneNum();
                 OnPropertyChanged("PhoneNum");
             }

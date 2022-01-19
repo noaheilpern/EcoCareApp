@@ -24,37 +24,26 @@
 
                     <ScrollView>
                         <Grid Padding="0" >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
+                            <RowDefinition Height="100"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
 
                                 <!--Back Button-->
                         </Grid.RowDefinitions>
-                            <Label Text="Register owner" Grid.Row="0" Style="{StaticResource title}" />
-                        <!--
-                        <DatePicker x:Name="startDatePicker"
-                    Format="D"
-                    Date="{Binding Birthday}" />
-            <Entry x:Name="country" Text="{Binding Country}" Placeholder="Country"/>
-
-
-            <Label Text="{Binding Label}"></Label>
-            <Button Text="Sign Up" Command="{Binding Register}"></Button>-->
+                            <Label Text="Register For Bussiness Owner" Grid.Row="0" Style="{StaticResource title}" FontSize="40" />
+                        
 
                         <Grid Grid.Row="1">
                             <Grid.ColumnDefinitions>
