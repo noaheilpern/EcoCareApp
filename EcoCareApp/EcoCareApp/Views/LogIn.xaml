@@ -25,12 +25,12 @@
                         <RowDefinition Height="30"></RowDefinition>
 
                         <RowDefinition Height="20"></RowDefinition>
-                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
                         <RowDefinition Height="20"></RowDefinition>
                         <RowDefinition Height="40"></RowDefinition>
                         <RowDefinition Height="10"></RowDefinition>
                         <RowDefinition Height="30"></RowDefinition>
-                        <RowDefinition Height="60"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
 
 
 

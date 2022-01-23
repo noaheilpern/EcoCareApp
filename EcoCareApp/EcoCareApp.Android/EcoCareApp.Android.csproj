@@ -54,6 +54,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microcharts.Forms">
+      <Version>0.9.5.9</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.13</Version>
     </PackageReference>
@@ -129,16 +132,7 @@
     <AndroidResource Include="Resources\drawable\my_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\home_bw.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\chart_bw.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\shopping_cart_bw.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\user.png" />
@@ -147,16 +141,25 @@
     <AndroidResource Include="Resources\drawable\shopping_cart.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bussiness_owner_register.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\foot_print_calc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\chart_bw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\shopping_cart_bw.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\user_bw.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\bussiness_owner_register.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\foot_print_calc.jpg" />
+    <AndroidResource Include="Resources\drawable\home_bw.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

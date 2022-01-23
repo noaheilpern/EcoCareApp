@@ -2,20 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoCareApp.Views.Home"
-             xmlns:xtools="http://xamarin.com/schemas/2020/toolkit">
-    <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="100">
+             xmlns:xtools="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:EcoCareApp.Views">
+    <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="50">
         <xtools:TabViewItem Icon="images/user_bw.png" IconSelected="images/user.png">
-            <xtools:TabViewItem.Content>
-                <StackLayout>
-                    <Label Text="Profile!!!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-                </StackLayout>
-            </xtools:TabViewItem.Content>
+            <local:UserProfile>
+                <!--<a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Kiranshastry - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/shopping-cart" title="shopping-cart icons">Shopping-cart icons created by Roundicons Premium - Flaticon</a>
+                -->
+            </local:UserProfile>
         </xtools:TabViewItem>
 
 
-        <xtools:TabViewItem Icon="images/home_bw.png" IconSelected="images/home.png">
+        <xtools:TabViewItem Icon="images/home_bw.png" IconSelected="images/home.png" VerticalOptions="FillAndExpand">
             <xtools:TabViewItem.Content>
                 <StackLayout>
                     <Label Text="Home!"
