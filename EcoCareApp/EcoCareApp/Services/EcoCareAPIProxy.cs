@@ -269,7 +269,7 @@ namespace EcoCareApp.Services
                 return false;
             }
         }
-        public async Task<bool> RegisterBusinessOwner(Seller u)
+        public async Task<Seller> RegisterBusinessOwner(Seller u)
         {
             try
             {
@@ -286,17 +286,17 @@ namespace EcoCareApp.Services
 
                     string jsonContent = await response.Content.ReadAsStringAsync();
                     Seller b = JsonSerializer.Deserialize<Seller>(jsonContent, options);
-                    return true;
+                    return b;
                 }
                 else
                 {
-                    return false;
+                    return null;
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                return false;
+                return null;
             }
         }
 

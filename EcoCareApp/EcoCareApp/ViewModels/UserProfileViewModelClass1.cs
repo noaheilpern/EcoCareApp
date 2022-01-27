@@ -1,247 +1,21 @@
-﻿using EcoCareApp.Models;
-using EcoCareApp.Services;
-using EcoCareApp.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace EcoCareApp.ViewModels
 {
-    class RegisterOwnerViewModel:INotifyPropertyChanged
+    class UserProfileViewModelClass1 : INotifyPropertyChanged
     {
+
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        #endregion
-        #region UserName
-        private bool showUserNameError;
-
-        public bool ShowUserNameError
-        {
-            get => showUserNameError;
-            set
-            {
-                showUserNameError = value;
-                OnPropertyChanged("ShowUserNameError");
-            }
-        }
-        public bool userNameTyped;
-        public bool UserNameTyped
-        {
-            get => userNameTyped;
-            set
-            {
-                userNameTyped = value;
-                OnPropertyChanged("UserNameTyped");
-            }
-        }
-
-        private string userName;
-        public string UserName
-        {
-            get => userName;
-            set
-            {
-                userName = value;
-                if (string.IsNullOrEmpty(userName))
-                {
-                    this.UserNameTyped = false;
-                }
-
-                else
-                {
-                    UserNameTyped = true;
-                    OnPropertyChanged("UserNameTyped");
-                }
-                ValidateUserName();
-                OnPropertyChanged("UserName");
-            }
-        }
-        private string userNameError;
-
-        public string UserNameError
-        {
-
-            get => userNameError;
-            set
-            {
-                userNameError = value;
-                OnPropertyChanged("UserNameError");
-            }
-
-
-        }
-
-        private bool ValidateUserName()
-        {
-            this.ShowUserNameError = string.IsNullOrEmpty(UserName);
-            if (!this.ShowUserNameError)
-            {
-
-                this.ShowUserNameError = false;
-                return true;
-
-            }
-            else
-            {
-                this.UserNameError = ERROR_MESSAGES.REQUIRED_FIELD;
-                return false;
-            }
-        }
-        #endregion
-
-        #region Email
-        private bool showEmailError;
-
-        public bool ShowEmailError
-        {
-            get => showEmailError;
-            set
-            {
-                showEmailError = value;
-                OnPropertyChanged("ShowEmailError");
-            }
-        }
-
-        private bool emailTyped;
-        public bool EmailTyped
-        {
-            get => emailTyped;
-            set
-            {
-                emailTyped = value;
-                OnPropertyChanged("EmailTyped");
-            }
-        }
-
-        private string email;
-
-        public string Email
-        {
-            get => email;
-            set
-            {
-                email = value;
-                if (string.IsNullOrEmpty(email))
-                    EmailTyped = false;
-                else
-                    EmailTyped = true;
-                ValidateEmail();
-                OnPropertyChanged("Email");
-            }
-        }
-
-        private string emailError;
-
-        public string EmailError
-        {
-            get => emailError;
-            set
-            {
-                emailError = value;
-                OnPropertyChanged("EmailError");
-            }
-        }
-
-        private bool ValidateEmail()
-        {
-
-            this.ShowEmailError = string.IsNullOrEmpty(Email);
-            if (!this.ShowEmailError)
-            {
-                if (!Regex.IsMatch(this.Email, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
-                {
-                    this.ShowEmailError = true;
-                    this.EmailError = ERROR_MESSAGES.BAD_EMAIL;
-                    return false;
-                }
-                else
-                {
-                    this.ShowEmailError = false;
-                    return true;
-                }
-            }
-            else
-            {
-                this.EmailError = ERROR_MESSAGES.REQUIRED_FIELD;
-                return false;
-            }
-        }
-        #endregion
-
-        #region Birthday
-        private bool birthdayTyped;
-        public bool BirthdayTyped
-        {
-            get => birthdayTyped;
-            set
-            {
-                birthdayTyped = value;
-                OnPropertyChanged("BirthdayTyped");
-            }
-        }
-
-        private bool showBirthdayError;
-
-        public bool ShowBirthdayError
-        {
-            get => showBirthdayError;
-            set
-            {
-                showBirthdayError = value;
-                OnPropertyChanged("ShowBirthdayError");
-            }
-        }
-        private DateTime birthday = DateTime.Today;
-        public DateTime Birthday
-        {
-
-            get => birthday;
-            set
-            {
-                birthday = value;
-                ValidateBirthday();
-                OnPropertyChanged("Birthday");
-
-            }
-        }
-        private string birthdayError;
-        public string BirthdayError
-        {
-            get => birthdayError;
-            set
-            {
-                birthdayError = value;
-
-                OnPropertyChanged("BirthdayError");
-
-            }
-        }
-        private bool ValidateBirthday()
-        {
-
-            if (Birthday.CompareTo(DateTime.Today) >= 0)
-            {
-                this.ShowBirthdayError = true;
-                this.BirthdayError = ERROR_MESSAGES.BAD_DATE;
-                return false;
-            }
-            else
-            {
-                this.ShowBirthdayError = false;
-            }
-            return true;
-
         }
         #endregion
 
@@ -460,6 +234,85 @@ namespace EcoCareApp.ViewModels
 
         #endregion
 
+        #region Email
+        private bool showEmailError;
+
+        public bool ShowEmailError
+        {
+            get => showEmailError;
+            set
+            {
+                showEmailError = value;
+                OnPropertyChanged("ShowEmailError");
+            }
+        }
+
+        private bool emailTyped;
+        public bool EmailTyped
+        {
+            get => emailTyped;
+            set
+            {
+                emailTyped = value;
+                OnPropertyChanged("EmailTyped");
+            }
+        }
+
+        private string email;
+
+        public string Email
+        {
+            get => email;
+            set
+            {
+                email = value;
+                if (string.IsNullOrEmpty(email))
+                    EmailTyped = false;
+                else
+                    EmailTyped = true;
+                ValidateEmail();
+                OnPropertyChanged("Email");
+            }
+        }
+
+        private string emailError;
+
+        public string EmailError
+        {
+            get => emailError;
+            set
+            {
+                emailError = value;
+                OnPropertyChanged("EmailError");
+            }
+        }
+
+        private bool ValidateEmail()
+        {
+
+            this.ShowEmailError = string.IsNullOrEmpty(Email);
+            if (!this.ShowEmailError)
+            {
+                if (!Regex.IsMatch(this.Email, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
+                {
+                    this.ShowEmailError = true;
+                    this.EmailError = ERROR_MESSAGES.BAD_EMAIL;
+                    return false;
+                }
+                else
+                {
+                    this.ShowEmailError = false;
+                    return true;
+                }
+            }
+            else
+            {
+                this.EmailError = ERROR_MESSAGES.REQUIRED_FIELD;
+                return false;
+            }
+        }
+        #endregion
+
         #region country 
         public RegisterOwnerViewModel()
         {
@@ -560,7 +413,7 @@ namespace EcoCareApp.ViewModels
             }
             else
             {
-                search = search.ToLower(); 
+                search = search.ToLower();
                 foreach (Country c in this.AllCountriesList)
                 {
                     string countryNameString = $"{c.CountryName.ToLower()}";
@@ -603,7 +456,7 @@ namespace EcoCareApp.ViewModels
 
 
         #endregion
-
+        //if user is business owner
 
         #region PhoneNum
         private bool showPhoneNumError;
@@ -625,7 +478,7 @@ namespace EcoCareApp.ViewModels
             get => phoneNum;
             set
             {
-              
+
                 phoneNum = value;
                 if (string.IsNullOrEmpty(PhoneNum))
                     this.PhoneNumTyped = false;
@@ -673,119 +526,72 @@ namespace EcoCareApp.ViewModels
                 this.PhoneNumError = ERROR_MESSAGES.REQUIRED_FIELD;
         }
         #endregion
-        public ICommand ResigterUser => new Command(RegiUserAsync);
-        public bool Valid { get; set; }
-        private async Task<bool> ValidateEmailAndUserNameAsync()
+
+        //else 
+        #region Birthday
+        private bool birthdayTyped;
+        public bool BirthdayTyped
         {
-            bool c = true;
-            try
+            get => birthdayTyped;
+            set
             {
-                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                bool b =await proxy.IsEmailExistAsync(Email);
-                
-                if (b)
-                {
-                    this.ShowEmailError = true;
-                    this.EmailError = ERROR_MESSAGES.EMAIL_EXIST;
-                }
-
+                birthdayTyped = value;
+                OnPropertyChanged("BirthdayTyped");
             }
-            catch (Exception e)
-            {
-                this.ShowEmailError = true;
-                this.EmailError = ERROR_MESSAGES.GENERAL_ERROR;
-                c = false;
-            }
-            try
-            {
-                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                bool b = await proxy.IsUserNameExistAsync(UserName);
-                if (b)
-                {
-                    this.ShowUserNameError = true;
-                    this.UserNameError = ERROR_MESSAGES.BAD_USERNAME;
-                }
-
-            }
-            catch (Exception e)
-            {
-                this.ShowUserNameError = true;
-                this.UserNameError = ERROR_MESSAGES.GENERAL_ERROR;
-                c = false;
-            }
-            return c;
-        }
-        private bool Validate()
-        {
-
-            return ValidateEmail() && ValidatePassword() && ValidateUserName();
         }
 
-        private async void RegiUserAsync()
+        private bool showBirthdayError;
+
+        public bool ShowBirthdayError
         {
-            bool success = await ValidateEmailAndUserNameAsync();
-            if (Validate() && success)
+            get => showBirthdayError;
+            set
             {
-                User u = new User
-                {
-                    Email = this.Email,
-                    FirstName = this.FirstName,
-                    LastName = this.LastName,
-                    Pass = this.Password,
-                    UserName = this.UserName,
-                    IsAdmin = false,
+                showBirthdayError = value;
+                OnPropertyChanged("ShowBirthdayError");
+            }
+        }
+        private DateTime birthday = DateTime.Today;
+        public DateTime Birthday
+        {
 
-                };
-                Seller s = new Seller
-                {
-                    UserName = this.UserName,
-                    UserNameNavigation = u,
-                    Country = this.SelectedCountry.CountryName,
-                    PhoneNum = this.phoneNum,
+            get => birthday;
+            set
+            {
+                birthday = value;
+                ValidateBirthday();
+                OnPropertyChanged("Birthday");
 
-                };
-                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                App a = (App)App.Current;
-                //Loading l = new Loading();
-                //l.Title = "Loading";
-                //await App.Current.MainPage.Navigation.PushAsync(l);
-                try
-                {
-                    Seller registeredUser = await proxy.RegisterBusinessOwner(s);
-                    if(registeredUser == null)
-                    {
-                        await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
+            }
+        }
+        private string birthdayError;
+        public string BirthdayError
+        {
+            get => birthdayError;
+            set
+            {
+                birthdayError = value;
 
-                    }
-                    else
-                    {
-                        App app = (App)App.Current;
-                        app.CurrentUser = (User)registeredUser;
-                        Home h = new Home();
-                        h.Title = "Home";
-                        await App.Current.MainPage.Navigation.PushAsync(h);
-                    }
+                OnPropertyChanged("BirthdayError");
 
-                }
-                catch(Exception e)
-                {
-                    await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
+            }
+        }
+        private bool ValidateBirthday()
+        {
 
-
-                }
+            if (Birthday.CompareTo(DateTime.Today) >= 0)
+            {
+                this.ShowBirthdayError = true;
+                this.BirthdayError = ERROR_MESSAGES.BAD_DATE;
+                return false;
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
+                this.ShowBirthdayError = false;
             }
-
+            return true;
 
         }
-
-
-
-
-
+        #endregion
     }
 }
-

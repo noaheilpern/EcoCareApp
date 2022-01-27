@@ -12,6 +12,7 @@ namespace EcoCareApp
 {
     public partial class App : Application
     {
+
         public static bool IsDevEnv
         {
             get
@@ -19,6 +20,8 @@ namespace EcoCareApp
                 return true;
             }
         }
+        public User CurrentUser { get; set; }
+
         public List<Country> CountriesList
         {
             get;
