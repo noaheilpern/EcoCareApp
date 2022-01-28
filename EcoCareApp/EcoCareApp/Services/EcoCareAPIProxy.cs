@@ -143,6 +143,97 @@ namespace EcoCareApp.Services
                 return null;
             }
         }
+
+        public async Task<RegularUser> GetRegularUserDataAsync(string userName)
+        {
+            try
+            {
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetRegularUserData?userName={userName}");
+                if (response.IsSuccessStatusCode)
+                {
+                    JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve,
+                        PropertyNameCaseInsensitive = true
+                    };
+                    string content = await response.Content.ReadAsStringAsync();
+                    RegularUser ru = JsonSerializer.Deserialize<RegularUser>(content, options);
+
+
+                    return ru;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return null;
+            }
+        }
+
+        public async Task<Seller> GetSellerDataAsync(string userName)
+        {
+            try
+            {
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetSellerData?userName={userName}");
+                if (response.IsSuccessStatusCode)
+                {
+                    JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve,
+                        PropertyNameCaseInsensitive = true
+                    };
+                    string content = await response.Content.ReadAsStringAsync();
+                    Seller s = JsonSerializer.Deserialize<Seller>(content, options);
+
+
+                    return s;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return null;
+            }
+        }
+
+
+        public async Task<User> GetUserDataAsync(string userName)
+        {
+            try
+            {
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetUserData?userName={userName}");
+                if (response.IsSuccessStatusCode)
+                {
+                    JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve,
+                        PropertyNameCaseInsensitive = true
+                    };
+                    string content = await response.Content.ReadAsStringAsync();
+                    User u = JsonSerializer.Deserialize<User>(content, options);
+                    
+
+                    return u;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return null;
+            }
+        }
         public async Task<bool> IsUserNameExistAsync(string userName)
         {
             try
@@ -172,6 +263,38 @@ namespace EcoCareApp.Services
                 return false;
             }
         }
+
+        public async Task<bool> IsRegularUserAsync(string userName)
+        {
+            try
+            {
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/IsReguarUser?userName={userName}");
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    PropertyNameCaseInsensitive = true
+                };
+                string content = await response.Content.ReadAsStringAsync();
+                bool b = JsonSerializer.Deserialize<bool>(content, options);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return b;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return false;
+            }
+        }
+
+
+ 
         public async Task<bool> IsEmailExistAsync(string email)
         {
             try
@@ -238,7 +361,7 @@ namespace EcoCareApp.Services
         //it returns true is succeeded or false otherwise
         //questions are ignored upon registering a user and shoul dbe added seperatly.
         //if succeeded - the user is automatically logged in on the server
-        public async Task<bool> RegisterRegularUser(RegularUser u)
+        public async Task<RegularUser> RegisterRegularUser(RegularUser u)
         {
             try
             {
@@ -256,17 +379,17 @@ namespace EcoCareApp.Services
 
                     string jsonContent = await response.Content.ReadAsStringAsync();
                     RegularUser b = JsonSerializer.Deserialize<RegularUser>(jsonContent, options);
-                    return true;
+                    return b;
                 }
                 else
                 {
-                    return false;
+                    return null;
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                return false;
+                return null;
             }
         }
         public async Task<Seller> RegisterBusinessOwner(Seller u)

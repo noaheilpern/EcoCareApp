@@ -90,6 +90,7 @@ namespace EcoCareApp.ViewModels
               
                 //Application.Current.Properties["IsLoggedIn"] = Boolean.TrueString;
                 App a = (App)App.Current;
+                a.IsUserRegular = await proxy.IsRegularUserAsync(u.UserName);
                 Home h = new Home();
                 h.Title = "Home";
                 await App.Current.MainPage.Navigation.PushAsync(h);

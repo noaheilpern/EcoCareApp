@@ -1,14 +1,19 @@
-﻿using System;
+﻿using EcoCareApp.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
 using Xamarin.Forms;
+using EcoCareApp.Services;
+using System.Threading.Tasks;
 
 namespace EcoCareApp.ViewModels
 {
-    class UserProfileViewModelClass1 : INotifyPropertyChanged
+    class UserProfileViewModel : INotifyPropertyChanged
     {
 
         #region INotifyPropertyChanged
@@ -18,6 +23,25 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+        public string UserName {
+            get
+            {
+                App a = (App)App.Current;
+                return a.CurrentUserName;
+            }
+        }
+        
+
+        public Task<User> UserData
+        {
+            get
+            {
+                App a = (App)App.Current;
+                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                return proxy.GetUserDataAsync(a.CurrentUserName);
+
+            }
+        }          
 
         #region Password 
         private const int MIN_PASS_CHARS = 6;
@@ -314,7 +338,7 @@ namespace EcoCareApp.ViewModels
         #endregion
 
         #region country 
-        public RegisterOwnerViewModel()
+        public UserProfileViewModel()
         {
             this.SearchTerm = string.Empty;
 
@@ -456,6 +480,7 @@ namespace EcoCareApp.ViewModels
 
 
         #endregion
+
         //if user is business owner
 
         #region PhoneNum
@@ -593,5 +618,9 @@ namespace EcoCareApp.ViewModels
 
         }
         #endregion
+
+
+
+
     }
 }

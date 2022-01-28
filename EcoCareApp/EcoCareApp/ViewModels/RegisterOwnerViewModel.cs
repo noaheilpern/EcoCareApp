@@ -760,7 +760,8 @@ namespace EcoCareApp.ViewModels
                     else
                     {
                         App app = (App)App.Current;
-                        app.CurrentUser = (User)registeredUser;
+                        app.CurrentUserName = registeredUser.UserName;
+                        app.IsUserRegular = false;
                         Home h = new Home();
                         h.Title = "Home";
                         await App.Current.MainPage.Navigation.PushAsync(h);

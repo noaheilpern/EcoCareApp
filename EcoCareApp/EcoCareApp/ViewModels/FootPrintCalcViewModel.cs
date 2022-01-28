@@ -455,13 +455,15 @@ namespace EcoCareApp.ViewModels
                 //await App.Current.MainPage.Navigation.PushAsync(l);
                 try
                 {
-                    bool registerSucceed = await proxy.RegisterRegularUser(RegularUser);
-                    if (!registerSucceed)
+                    RegularUser registeredUser = await proxy.RegisterRegularUser(RegularUser);
+                    if (registeredUser == null)
                     {
                         await App.Current.MainPage.DisplayAlert("Error","Registeration failed. Please check fields are filled as needed", "OK");
                     }
                     else
                     {
+                        a.CurrentUserName = registeredUser.UserName;
+                        a.IsUserRegular = true;
                         Home h = new Home();
                         h.Title = "Home";
                         await App.Current.MainPage.Navigation.PushAsync(h);
