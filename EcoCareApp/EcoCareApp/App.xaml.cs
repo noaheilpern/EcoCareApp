@@ -20,8 +20,9 @@ namespace EcoCareApp
                 return true;
             }
         }
-        public string CurrentUserName { get; set; }
-        public bool IsUserRegular { get; set; }
+        public User CurrentUser { get; set; }
+        public Seller CurrentSeller { get; set; }
+        public RegularUser CurrentRegularUser { get; set; }
 
         public List<Country> CountriesList
         {

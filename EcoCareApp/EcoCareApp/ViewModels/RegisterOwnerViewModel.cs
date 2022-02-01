@@ -732,6 +732,7 @@ namespace EcoCareApp.ViewModels
                     FirstName = this.FirstName,
                     LastName = this.LastName,
                     Pass = this.Password,
+                    Country = this.SelectedCountry.CountryName,
                     UserName = this.UserName,
                     IsAdmin = false,
 
@@ -740,7 +741,6 @@ namespace EcoCareApp.ViewModels
                 {
                     UserName = this.UserName,
                     UserNameNavigation = u,
-                    Country = this.SelectedCountry.CountryName,
                     PhoneNum = this.phoneNum,
 
                 };
@@ -760,8 +760,8 @@ namespace EcoCareApp.ViewModels
                     else
                     {
                         App app = (App)App.Current;
-                        app.CurrentUserName = registeredUser.UserName;
-                        app.IsUserRegular = false;
+                        app.CurrentSeller = registeredUser;
+                        app.CurrentUser = registeredUser.UserNameNavigation;
                         Home h = new Home();
                         h.Title = "Home";
                         await App.Current.MainPage.Navigation.PushAsync(h);

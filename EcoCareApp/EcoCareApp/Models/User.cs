@@ -11,6 +11,9 @@ namespace EcoCareApp.Models
         public string Pass { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        public string Country { get; set; }
+
         public bool IsAdmin { get; set; }
     }
 }

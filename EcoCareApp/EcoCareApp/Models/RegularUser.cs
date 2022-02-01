@@ -15,7 +15,6 @@ namespace EcoCareApp.Models
 
         public string UserName { get; set; }
         public DateTime Birthday { get; set; }
-        public string Country { get; set; }
         public int InitialMeatsMeals { get; set; }
         public bool VeganRareMeat { get; set; }
         public bool Vegetarian { get; set; }

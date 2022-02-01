@@ -711,6 +711,7 @@ namespace EcoCareApp.ViewModels
                     LastName = this.LastName,
                     Pass = this.Password,
                     UserName = this.UserName,
+                    Country = this.SelectedCountry.CountryName,
                     IsAdmin = false,
 
                 };
@@ -719,7 +720,6 @@ namespace EcoCareApp.ViewModels
                     UserName = this.UserName,
                     UserNameNavigation = u,
                     Birthday = this.Birthday,
-                    Country = this.SelectedCountry.CountryName,
 
                 };
                 App a = (App)App.Current;

@@ -23,25 +23,35 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-        public string UserName {
-            get
+
+
+        public UserProfileViewModel()
+        {
+
+            this.SearchTerm = string.Empty;
+
+            InitCountries();
+
+            App a = (App)App.Current;
+            User u = a.CurrentUser;
+            Password = u.Pass;
+            FirstName = u.FirstName;
+            LastName = u.LastName;
+            SelectedCountry.CountryName = u.Country;
+
+
+            if(a.CurrentRegularUser != null)
             {
-                App a = (App)App.Current;
-                return a.CurrentUserName;
+                Birthday = a.CurrentRegularUser.Birthday;
+            }
+            else
+            {
+                PhoneNum = a.CurrentSeller.PhoneNum;
             }
         }
+       
         
 
-        public Task<User> UserData
-        {
-            get
-            {
-                App a = (App)App.Current;
-                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                return proxy.GetUserDataAsync(a.CurrentUserName);
-
-            }
-        }          
 
         #region Password 
         private const int MIN_PASS_CHARS = 6;
@@ -81,7 +91,6 @@ namespace EcoCareApp.ViewModels
                     this.PasswordTyped = true;
                 ValidatePassword();
                 OnPropertyChanged("Password");
-
             }
         }
         private string passwordError;
@@ -95,6 +104,8 @@ namespace EcoCareApp.ViewModels
 
             }
         }
+
+        
         private bool ValidatePassword()
         {
             this.ShowPasswordError = string.IsNullOrEmpty(Password);
@@ -338,12 +349,7 @@ namespace EcoCareApp.ViewModels
         #endregion
 
         #region country 
-        public UserProfileViewModel()
-        {
-            this.SearchTerm = string.Empty;
-
-            InitCountries();
-        }
+       
 
         private void InitCountries()
         {
@@ -618,6 +624,47 @@ namespace EcoCareApp.ViewModels
 
         }
         #endregion
+
+
+        private async void RegiUserAsync()
+        {
+            App a = (App)App.Current;
+            bool success = true;
+            if(a.CurrentUser.Email != email) {
+                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                success = await proxy.IsEmailExistAsync(email);
+            }
+            if (Validate() && success)
+            {
+                User u = new User
+                {
+                    Email = this.Email,
+                    FirstName = this.FirstName,
+                    LastName = this.LastName,
+                    Pass = this.Password,
+                    UserName = this.UserName,
+                    Country = this.SelectedCountry.CountryName,
+                    IsAdmin = false,
+
+                };
+                RegularUser ru = new RegularUser
+                {
+                    UserName = this.UserName,
+                    UserNameNavigation = u,
+                    Birthday = this.Birthday,
+
+                };
+                App a = (App)App.Current;
+                fp.Title = "Calculate your foot print";
+                await App.Current.MainPage.Navigation.PushAsync(fp);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
+            }
+
+
+        }
 
 
 
