@@ -1,10 +1,57 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EcoCareApp.Views.UserProfile">
+             BackgroundImageSource="images/profile.jpg"
+             
+             x:Class="EcoCareApp.Views.UserProfile"
+             >
   <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
-  </ContentView.Content>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <StackLayout>
+            <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.3*"/>
+                
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                
+            </Grid.RowDefinitions>
+            <Frame BorderColor="white"  CornerRadius="100"  Grid.Column="1" Grid.Row="1" IsClippedToBounds="True" Padding="0" HeightRequest="180" WidthRequest="180" HorizontalOptions="CenterAndExpand">
+                    <Image x:Name="theImage" Source="images/user_bw.jpg" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0" HeightRequest="150" WidthRequest="150"/>
+            </Frame>
+        </Grid>
+
+
+
+        <StackLayout Padding="0" Margin="10" HorizontalOptions="Center">
+            <Frame  BackgroundColor="White" HasShadow="True" Padding="0" Margin="0" CornerRadius="20">
+
+                <StackLayout Padding="0" Margin="50">
+
+                   
+
+                </StackLayout>
+
+
+
+            </Frame>
+        </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
 </ContentView>

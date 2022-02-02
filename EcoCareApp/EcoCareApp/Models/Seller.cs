@@ -12,6 +12,10 @@ namespace EcoCareApp.Models
 
         public virtual User UserNameNavigation { get; set; }
 
+        public bool Equals(Seller s)
+        {
+            return this.PhoneNum == s.PhoneNum && this.UserName == s.UserName;
+        }
     }
 
 }

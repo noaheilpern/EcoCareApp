@@ -69,7 +69,6 @@ namespace EcoCareApp.Services
             return proxy;
         }
 
-
         private EcoCareAPIProxy(string baseUri, string basePhotosUri)
         {
             //Set client handler to support cookies!!
@@ -268,7 +267,7 @@ namespace EcoCareApp.Services
         {
             try
             {
-                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/IsReguarUser?userName={userName}");
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/IsRegularUser?userName={userName}");
                 JsonSerializerOptions options = new JsonSerializerOptions
                 {
                     ReferenceHandler = ReferenceHandler.Preserve,

@@ -144,7 +144,7 @@
     <AndroidResource Include="Resources\drawable\bussiness_owner_register.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\foot_print_calc.jpg" />
+    <AndroidResource Include="Resources\drawable\profile.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\chart.png" />

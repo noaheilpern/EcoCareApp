@@ -28,5 +28,11 @@ namespace EcoCareApp.Models
         public virtual List<UserData> UsersData { get; set; }
         public virtual User UserNameNavigation { get; set; }
 
+        //only to the parameters that can be changed
+        public bool Equals(RegularUser r)
+        {
+            return this.UserName == r.UserName && this.Birthday == r.Birthday && this.PeopleAtTheHousehold == r.PeopleAtTheHousehold;
+        }
+
     }
 }

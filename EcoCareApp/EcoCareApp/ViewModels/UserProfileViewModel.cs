@@ -43,14 +43,99 @@ namespace EcoCareApp.ViewModels
             if(a.CurrentRegularUser != null)
             {
                 Birthday = a.CurrentRegularUser.Birthday;
+                PeopleAtTheSameHouseHold = a.CurrentRegularUser.PeopleAtTheHousehold;
             }
             else
             {
                 PhoneNum = a.CurrentSeller.PhoneNum;
             }
         }
-       
-        
+
+
+
+
+
+        #region PeopleAtTheSameHouseHold 
+
+        private bool showPeopleAtTheSameHouseHoldError;
+
+        public bool ShowPeopleAtTheSameHouseHoldError
+        {
+            get => showPeopleAtTheSameHouseHoldError;
+            set
+            {
+                showPeopleAtTheSameHouseHoldError = value;
+                OnPropertyChanged("ShowPeopleAtTheSameHouseHoldError");
+            }
+        }
+        private bool peopleAtTheSameHouseHoldTyped;
+        public bool PeopleAtTheSameHouseHoldTyped
+        {
+            get => peopleAtTheSameHouseHoldTyped;
+            set
+            {
+                peopleAtTheSameHouseHoldTyped = value;
+                OnPropertyChanged("PeopleAtTheSameHouseHoldTyped");
+            }
+        }
+
+        private int? peopleAtTheSameHouseHold;
+        public int? PeopleAtTheSameHouseHold
+        {
+            get => peopleAtTheSameHouseHold;
+            set
+            {
+                peopleAtTheSameHouseHold = value;
+                if (string.IsNullOrEmpty(PeopleAtTheSameHouseHold.ToString()))
+                    this.PeopleAtTheSameHouseHoldTyped = false;
+                else
+                    this.PeopleAtTheSameHouseHoldTyped = true;
+                ValidatePeopleAtTheSameHouseHold();
+                OnPropertyChanged("PeopleAtTheSameHouseHold");
+
+            }
+        }
+        private string peopleAtTheSameHouseHoldError;
+        public string PeopleAtTheSameHouseHoldError
+        {
+            get => peopleAtTheSameHouseHoldError;
+            set
+            {
+                peopleAtTheSameHouseHoldError = value;
+                OnPropertyChanged("PeopleAtTheSameHouseHoldError");
+
+            }
+        }
+        private bool ValidatePeopleAtTheSameHouseHold()
+        {
+            this.ShowPeopleAtTheSameHouseHoldError = string.IsNullOrEmpty(PeopleAtTheSameHouseHold.ToString());
+            if (!this.ShowPeopleAtTheSameHouseHoldError)
+            {
+                this.PeopleAtTheSameHouseHoldTyped = true;
+
+                if (PeopleAtTheSameHouseHold < 1)
+                {
+                    this.ShowPeopleAtTheSameHouseHoldError = true;
+                    this.PeopleAtTheSameHouseHoldError = ERROR_MESSAGES.BAD_PEOPLEATTHESAMEHOUSEHOLD;
+                    return false;
+                }
+                else
+                {
+                    this.ShowPeopleAtTheSameHouseHoldError = false;
+                    return true;
+                }
+            }
+            else
+            {
+                this.PeopleAtTheSameHouseHoldError = ERROR_MESSAGES.REQUIRED_FIELD;
+                PeopleAtTheSameHouseHoldTyped = false;
+                return false;
+            }
+
+        }
+
+
+        #endregion
 
 
         #region Password 
@@ -626,7 +711,7 @@ namespace EcoCareApp.ViewModels
         #endregion
 
 
-        private async void RegiUserAsync()
+        private async void UpdateUserAsync()
         {
             App a = (App)App.Current;
             bool success = true;
@@ -634,7 +719,7 @@ namespace EcoCareApp.ViewModels
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
                 success = await proxy.IsEmailExistAsync(email);
             }
-            if (Validate() && success)
+            if (/**Validate() && **/ success)
             {
                 User u = new User
                 {
@@ -642,21 +727,49 @@ namespace EcoCareApp.ViewModels
                     FirstName = this.FirstName,
                     LastName = this.LastName,
                     Pass = this.Password,
-                    UserName = this.UserName,
                     Country = this.SelectedCountry.CountryName,
                     IsAdmin = false,
 
                 };
-                RegularUser ru = new RegularUser
-                {
-                    UserName = this.UserName,
-                    UserNameNavigation = u,
-                    Birthday = this.Birthday,
+                App app = (App)App.Current;
+                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                
 
-                };
-                App a = (App)App.Current;
-                fp.Title = "Calculate your foot print";
-                await App.Current.MainPage.Navigation.PushAsync(fp);
+                if (app.CurrentRegularUser!=null)
+                {
+                    RegularUser ru = new RegularUser
+                    {
+                        UserNameNavigation = u,
+                        Birthday = this.Birthday,
+                        PeopleAtTheHousehold = (int)this.PeopleAtTheSameHouseHold,
+
+                    };
+                    if(!u.Equals(app.CurrentUser)|| !ru.Equals(app.CurrentRegularUser))
+                    {
+                        isRefreshing = true;
+                        await proxy.UpdateUserAsync(ru);
+                        isRefreshing = false;
+                    }
+                }
+                else
+                {
+                    Seller s = new Seller
+                    {
+                        UserNameNavigation = u,
+                        PhoneNum = this.PhoneNum,
+
+                    };
+                    if(!u.Equals(app.CurrentUser)|| !s.Equals(app.CurrentSeller))
+                    {
+                        isRefreshing = true;
+                        await proxy.UpdateSellerAsync(s);
+                        isRefreshing = false;
+
+                    }
+                }
+
+                //fp.Title = "Calculate your foot print";
+               //await App.Current.MainPage.Navigation.PushAsync(fp);
             }
             else
             {
