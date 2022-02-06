@@ -3,14 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoCareApp.Views.Home"
              xmlns:xtools="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:local="clr-namespace:EcoCareApp.Views">
+             xmlns:local="clr-namespace:EcoCareApp.Views"
+             xmlns:guage ="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+
+             >
     <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="50">
         <xtools:TabViewItem Icon="images/user_bw.png" IconSelected="images/user.png">
-            <local:UserProfile>
-                <!--<a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Kiranshastry - Flaticon</a>
+            <!--<local:UserProfile>
+                <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Kiranshastry - Flaticon</a>
                 <a href="https://www.flaticon.com/free-icons/shopping-cart" title="shopping-cart icons">Shopping-cart icons created by Roundicons Premium - Flaticon</a>
-                -->
-            </local:UserProfile>
+                
+            </local:UserProfile>-->
         </xtools:TabViewItem>
 
 
@@ -20,10 +23,31 @@
                     <Label Text="Home!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+                    <guage:SfCircularGauge>
+                        <guage:SfCircularGauge.Scales>
+                            <guage:Scale StartValue="0" EndValue="100">
+                                <guage:Scale.Ranges>
+                                    <guage:Range StartValue="0" EndValue="{Binding DidForEco}" Color="Green"></guage:Range>
+                                    <guage:Range StartValue="{Binding DidForEco}" EndValue="100" Color="Gray"></guage:Range>
+
+                                </guage:Scale.Ranges>
+                            </guage:Scale>
+                        </guage:SfCircularGauge.Scales>
+                        <guage:SfCircularGauge.Headers>
+                            <guage:Header Text="{Binding DidForEco, StringFormat='{0:F0}%'}" ForegroundColor="Black" TextSize="20"
+                                          HorizontalHeaderPosition="Center" VerticalHeaderPosition="Center">
+                                
+                            </guage:<Unknown>>
+                        </guage:SfCircularGauge.Headers>
+                    </guage:SfCircularGauge>
                 </StackLayout>
             </xtools:TabViewItem.Content>
         </xtools:TabViewItem>
 
+        
+        
+        
+        
         <xtools:TabViewItem Icon="images/shopping_cart_bw.png" IconSelected="images/shopping_cart.png">
             <xtools:TabViewItem.Content>
                 <StackLayout>

@@ -6,6 +6,14 @@ namespace EcoCareApp.ViewModels
 {
     class HomeViewModel
     {
-        
+        public int DidForEco
+        {
+            get
+            {
+                return 75;
+            }
+            
+        }
     }
 }
+

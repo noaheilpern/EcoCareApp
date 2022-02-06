@@ -38,6 +38,7 @@ namespace EcoCareApp.ViewModels
             FirstName = u.FirstName;
             LastName = u.LastName;
             SelectedCountry.CountryName = u.Country;
+            UserName = u.UserName;
 
 
             if(a.CurrentRegularUser != null)
@@ -51,8 +52,23 @@ namespace EcoCareApp.ViewModels
             }
         }
 
-
-
+        public bool IsRegular
+        {
+            get
+            {
+                App a = (App)App.Current;
+                return a.CurrentRegularUser != null;
+            }
+        }
+        public bool IsSeller
+        {
+            get
+            {
+                App a = (App)App.Current;
+                return a.CurrentRegularUser == null;
+            }
+        }
+        public String UserName { get; }
 
 
         #region PeopleAtTheSameHouseHold 
@@ -591,6 +607,7 @@ namespace EcoCareApp.ViewModels
 
         public string PhoneNum
         {
+            
             get => phoneNum;
             set
             {
@@ -598,7 +615,7 @@ namespace EcoCareApp.ViewModels
                 phoneNum = value;
                 if (string.IsNullOrEmpty(PhoneNum))
                     this.PhoneNumTyped = false;
-                else
+                else if(!IsRegular)
                     this.PhoneNumTyped = true;
                 ValidatePhoneNum();
                 OnPropertyChanged("PhoneNum");
@@ -629,17 +646,21 @@ namespace EcoCareApp.ViewModels
 
         private void ValidatePhoneNum()
         {
-            this.ShowPhoneNumError = string.IsNullOrEmpty(PhoneNum);
-            if (!this.ShowPhoneNumError)
+            if (!IsRegular)
             {
-                if (!Regex.IsMatch(this.PhoneNum, @"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"))
+
+                this.ShowPhoneNumError = string.IsNullOrEmpty(PhoneNum);
+                if (!this.ShowPhoneNumError)
                 {
-                    this.ShowPhoneNumError = true;
-                    this.PhoneNumError = ERROR_MESSAGES.BAD_PHONE;
+                    if (!Regex.IsMatch(this.PhoneNum, @"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"))
+                    {
+                        this.ShowPhoneNumError = true;
+                        this.PhoneNumError = ERROR_MESSAGES.BAD_PHONE;
+                    }
                 }
+                else
+                    this.PhoneNumError = ERROR_MESSAGES.REQUIRED_FIELD;
             }
-            else
-                this.PhoneNumError = ERROR_MESSAGES.REQUIRED_FIELD;
         }
         #endregion
 

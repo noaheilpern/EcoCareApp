@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             BackgroundImageSource="images/profile.jpg"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:EcoCareApp.ViewModels"
+             Background="images/profile.jpg"
              
              x:Class="EcoCareApp.Views.UserProfile"
              >
@@ -44,9 +44,156 @@
 
                 <StackLayout Padding="0" Margin="50">
 
-                   
+                        <ScrollView>
 
-                </StackLayout>
+                            <Grid Padding="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60"></RowDefinition>
+                                    <RowDefinition Height="20"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="60"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+
+
+                                </Grid.RowDefinitions>
+
+
+                                <Label Text="{Binding UserName, StringFormat='Hi {0:F0}'}" Grid.Row="0"  
+                                   Style="{StaticResource smallerTitle}" />
+                                <!--Title-->
+                                
+
+
+
+                                <Label Text="First Name" Grid.Row="3" Style="{StaticResource labelNameStyle}" IsVisible="{Binding FirstNameTyped}"/>
+                                <Label Text="{Binding FirstNameError}" Grid.Row="3" IsVisible="{Binding ShowFirstNameError}" Style="{StaticResource labelErrorStyle}"/>
+
+                                <Entry Grid.Row="4"  Placeholder="Enter your first name" Text="{Binding FirstName}" Style="{StaticResource entry}"/>
+
+                                <Label Text="Last Name" Grid.Row="5" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding LastNameTyped}"/>
+                                <Label Text="{Binding LastNameError}" Grid.Row="5" IsVisible="{Binding ShowLastNameError}" Style="{StaticResource labelErrorStyle}"/>
+
+                                <Entry Grid.Row="6"  Placeholder="Enter your last name" Text="{Binding LastName}" Style="{StaticResource entry}"/>
+
+
+
+                                <Entry Grid.Row="8"  Placeholder="Type a usrname" Text="{Binding UserName}" Style="{StaticResource entry}"/>
+
+                                <Label Text="Email" Grid.Row="9" Style="{StaticResource labelNameStyle}"
+                            IsVisible="{Binding EmailTyped}"/>
+                                <Label Text="{Binding EmailError}" Grid.Row="9" IsVisible="{Binding ShowEmailError}" Style="{StaticResource labelErrorStyle}"/>
+
+                                <Entry Grid.Row="10"  Placeholder="Type an email" Text="{Binding Email}" Style="{StaticResource entry}"/>
+
+
+
+
+
+
+                                <Label Text="Password" Grid.Row="11" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding PasswordTyped}"/>
+                                <Label Text="{Binding PasswordError}" Grid.Row="11" IsVisible="{Binding ShowPasswordError}"
+                        Style="{StaticResource labelErrorStyle}"/>
+
+
+
+                                <Grid Grid.Row="12" >
+                                    <Entry Placeholder="Password"
+                IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" 
+                       Text="{Binding Password}" Style="{StaticResource entry}"/>
+
+                                    <ImageButton VerticalOptions="Center"
+                      Margin="0,0,10,0"
+                     HeightRequest="20"
+                     HorizontalOptions="End"
+                     Source="images/ic_eye_hide.png">
+                                        <ImageButton.Triggers>
+                                            <EventTrigger Event="Clicked">
+                                                <local:ShowPasswordTriggerAction ShowIcon="ic_eye.png"
+                                                                    HideIcon="ic_eye_hide.png"
+                                                                    x:Name="ShowPasswordActualTrigger"/>
+                                            </EventTrigger>
+                                        </ImageButton.Triggers>
+                                    </ImageButton>
+                                </Grid>
+
+
+                                <Label Text="Date of Birth" Grid.Row="13" Style="{StaticResource labelNameStyle}"/>
+                                <Label Text="{Binding BirthdayError}" Grid.Row="13" 
+                        Style="{StaticResource labelErrorStyle}" IsVisible="{Binding IsRegular}"/>
+
+
+                                <DatePicker Grid.Row="14"  x:Name="startDatePicker"
+                    Format="D"
+                    Date="{Binding Birthday}" IsVisible="{Binding IsRegular}" />
+
+
+                                <Label Text="Phone number" Grid.Row="13" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding PhoneNumTyped}"/>
+                                <Label Text="{Binding PhoneNumError}" Grid.Row="13" IsVisible="{Binding ShowPhoneNumError}"  Style="{StaticResource labelErrorStyle}"/>
+                                <Entry Grid.Row="14" IsVisible="{Binding IsSeller}" Placeholder="Type your phone number" Text="{Binding PhoneNum}" Style="{StaticResource entry}" Keyboard="Numeric"/>
+
+
+
+
+
+
+
+                                <Label Text="Country" Grid.Row="15" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding CountryTyped}"/>
+
+
+                                <SearchBar Grid.Row="16" x:Name="searchBar" 
+                       Placeholder="Type your country" 
+                       Text="{Binding SearchTerm}"
+                       />
+                                <ScrollView Grid.Row="17">
+
+
+                                    <RefreshView x:Name="refreshView"
+             Command="{Binding RefreshCommand}"
+             IsRefreshing="{Binding IsRefreshing}">
+                                        <CollectionView HeightRequest="40" EmptyView="No Countries found" x:Name="collectionName" 
+                                ItemsSource="{Binding FilteredCountries}" SelectionMode="Single"
+                                                BackgroundColor="#B9C6CB" 
+                                                SelectionChangedCommand="{Binding SelctionChanged}"
+                        SelectionChangedCommandParameter="{Binding Source={x:Reference collectionName}, Path=SelectedItem}"
+                                SelectedItem="{Binding SelectedCountry}">
+
+                                            <CollectionView.ItemsLayout>
+                                                <GridItemsLayout Span="1" Orientation="Vertical" />
+                                            </CollectionView.ItemsLayout>
+                                            <CollectionView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Label Text="{Binding Path=CountryName, StringFormat='{0}'}"  HorizontalTextAlignment="Start"
+                                                   />
+                                                </DataTemplate>
+                                            </CollectionView.ItemTemplate>
+                                        </CollectionView>
+                                    </RefreshView>
+                                </ScrollView>
+                                <Button Grid.Row="18" Grid.RowSpan="2"  Text="Sign Up" Command="{Binding ResigterUser}"></Button>
+
+                            </Grid>
+                        </ScrollView>
+
+                    </StackLayout>
 
 
 
