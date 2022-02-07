@@ -14,7 +14,7 @@ namespace EcoCareApp.Style
     {
         public Colors()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }
