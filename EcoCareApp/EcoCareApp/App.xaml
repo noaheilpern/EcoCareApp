@@ -3,10 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
              windows:Application.ImageDirectory="images"
-             x:Class="EcoCareApp.App">
+             x:Class="EcoCareApp.App"
+             >
     <Application.Resources>
 
         <ResourceDictionary>
+
 
             <Style x:Key="title" TargetType="Label">
                 <Setter Property="FontFamily" Value="Amatic"></Setter>

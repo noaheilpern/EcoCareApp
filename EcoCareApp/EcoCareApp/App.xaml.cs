@@ -30,6 +30,7 @@ namespace EcoCareApp
             set; }
         public App()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTc4MTI2QDMxMzkyZTM0MmUzMElEYjUvdHlTLzVYNzlUekZiOXRpYjBvd3F1MHc4dnEwbjdkdWMrTkwrblk9");
             InitializeComponent();
             Page p = new Views.Loading();
             MainPage = p;
