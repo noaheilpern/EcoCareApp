@@ -10,7 +10,6 @@ using System.Windows.Input;
 using EcoCareApp.Models;
 using EcoCareApp.Services;
 using EcoCareApp.Views;
-using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
 namespace EcoCareApp.ViewModels

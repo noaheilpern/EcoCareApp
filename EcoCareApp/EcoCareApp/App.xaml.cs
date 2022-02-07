@@ -6,7 +6,6 @@ using Xamarin.Forms.Xaml;
 using EcoCareApp.Models;
 using System.Collections.Generic;
 using EcoCareApp.Services;
-using Rg.Plugins.Popup;
 
 namespace EcoCareApp
 {

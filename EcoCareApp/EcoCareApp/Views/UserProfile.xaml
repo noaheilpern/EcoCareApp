@@ -16,8 +16,7 @@
     BackgroundColor="{DynamicResource GrayShadowBackgroundColor}"
     NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
-
-        <ContentPage.Content>
+    <ContentView.Content>
             <ScrollView>
                 <Grid RowDefinitions="Auto, *">
 
@@ -53,7 +52,7 @@
                                     <UriImageSource
                                     CacheValidity="14"
                                     CachingEnabled="True"
-                                    Uri="{Binding ProfileImage}" />
+                                    Uri="image/user.png" />
                                 </Image.Source>
                             </Image>
 
@@ -243,7 +242,6 @@
                     </svg:CustomShadowFrame>
                 </Grid>
             </ScrollView>
-        </ContentPage.Content>
 
 
 
@@ -436,4 +434,5 @@
             </Frame>
         </StackLayout>
         </StackLayout>-->
+    </ContentView.Content>
 </ContentView>
