@@ -62,21 +62,15 @@
                         Text="{Binding UserName, StringFormat='Hi {0:F0}!'}"
                         TextColor="{DynamicResource Gray-White}" />
 
-                        <!--  State and Country  -->
-                        <Label
+                        <!--  Country  -->
+                    <Label
                         Grid.Row="2"
                         FontSize="12"
                         Style="{StaticResource DescriptionLabelStyle}"
-                        TextColor="{DynamicResource Gray-White}">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="{Binding State}" />
-                                    <Span Text=" " />
-                                    <Span Text="{Binding Country}" />
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </Grid>
+                        TextColor="{DynamicResource Gray-White}" Text="{Binding SelectedCountry}"/>
+
+
+                </Grid>
 
                     <border:SfBorder
                     Grid.Row="1"
@@ -113,10 +107,13 @@
                                         RowSpacing="0">
 
                                             <!--  Category  -->
-                                            <Label
+                                        <Label Text="{Binding CategoryError}" 
+                                                   Style="{StaticResource labelErrorStyle}"
+                                                   ></Label>
+                                            <Entry
                                             HeightRequest="24"
                                             HorizontalOptions="Start"
-                                            Style="{StaticResource TitleLabelStyle}"
+                                            Style="{StaticResource TitleEntryStyle}"
                                             Text="{Binding CategoryValue}" />
 
                                             <!--  Category Value  -->
@@ -240,10 +237,11 @@
                         </svg:CustomShadowFrame.Content>
 
                     </svg:CustomShadowFrame>
-                <Button Text="Update detail(s)" Command="{Binding Update}" ></Button>
                 </Grid>
-                        
-            </ScrollView>
+
+        </ScrollView>
+        
+      <!--  <Button Text="Update detail(s)" Command="{Binding Update}" ></Button> -->
 
 
 

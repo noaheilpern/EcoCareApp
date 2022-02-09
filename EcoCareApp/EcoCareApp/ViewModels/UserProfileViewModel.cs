@@ -10,6 +10,10 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using EcoCareApp.Services;
 using System.Threading.Tasks;
+using EcoCareApp.Views;
+using System.Runtime.Serialization;
+using System.Reflection;
+using System.Runtime.Serialization.Json;
 
 namespace EcoCareApp.ViewModels
 {
@@ -25,10 +29,126 @@ namespace EcoCareApp.ViewModels
         }
         #endregion
 
-        #region country 
+
+        #region Events
+
+        /// <summary>
+        /// The declaration of the property changed event.
+        /// </summary>
+
+        #endregion
+
+        #region Property
+
+        /// <summary>
+        /// Gets or sets the property that has been displays the category.
+        /// </summary>
+        [DataMember(Name = "category")]
+        public string Category { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property that has been displays the category value.
+        /// </summary>
+        [DataMember(Name = "categoryValue")]
+        public string CategoryValue { get; set; }
+
+        /// <summary>
+        /// Gets or sets the property that has been displays the category error.
+        /// </summary>
+        [DataMember(Name = "categoryError")]
+        public string CategoryErorr { get; set; }
+
+        #endregion
+
+        #region Fields
+
+        private static UserProfileViewModel userProfileViewModel;
+
+        /// <summary>
+        /// To store the user profile data collection.
+        /// </summary>
+        private string profileImage;
+
+        private ObservableCollection<UserProfile> cardItems;
+
+        private Command<object> itemTappedCommand;
+
+        #endregion
 
 
-        private void InitCountries()
+        #region Properties
+
+        /// <summary>
+        /// Gets or sets the value of health profile view model.
+        /// </summary>
+        public static UserProfileViewModel BindingContext =>
+            userProfileViewModel = PopulateData<UserProfileViewModel>("profile.json");
+
+        /// <summary>
+        /// Gets or sets the health profile items collection.
+        /// </summary>
+        [DataMember(Name = "cardItems")]
+        public ObservableCollection<UserProfile> CardItems
+        {
+            get
+            {
+                return this.cardItems;
+            }
+
+            set
+            {
+                this.cardItems = value;
+            }
+        }
+
+
+        
+        
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Populates the data for view model from json file.
+        /// </summary>
+        /// <typeparam name="T">Type of view model.</typeparam>
+        /// <param name="fileName">Json file to fetch data.</param>
+        /// <returns>Returns the view model object.</returns>
+        private static T PopulateData<T>(string fileName)
+        {
+            var file = "EssentialUIKit.Data." + fileName;
+
+            var assembly = typeof(App).GetTypeInfo().Assembly;
+
+            T data;
+
+            using (var stream = assembly.GetManifestResourceStream(file))
+            {
+                var serializer = new DataContractJsonSerializer(typeof(T));
+                data = (T)serializer.ReadObject(stream);
+            }
+
+            return data;
+        }
+
+        /// <summary>
+        /// Invoked when an item is selected from the health profile page.
+        /// </summary>
+        /// <param name="selectedItem">Selected item from the list view.</param>
+        private void NavigateToNextPage(object selectedItem)
+        {
+            // Do something
+        }
+
+        #endregion
+    
+
+
+
+#region country 
+
+
+private void InitCountries()
         {
             isRefreshing = true;
             App theApp = (App)App.Current;

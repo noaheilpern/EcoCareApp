@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.SfRadialMenu.XForms.iOS;
 using UIKit;
 
 namespace EcoCareApp.iOS
@@ -23,8 +24,9 @@ namespace EcoCareApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            SfRadialMenuRenderer.Init();
 
-            Syncfusion.SfGauge.XForms.iOS.SfDigitalGaugeRenderer.Init();
+            //Syncfusion.SfGauge.XForms.iOS.SfDigitalGaugeRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

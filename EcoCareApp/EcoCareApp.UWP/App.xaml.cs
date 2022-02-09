@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Rg.Plugins.Popup;
 using Windows.UI.Xaml.Navigation;
+using System.Reflection;
+using Syncfusion.SfRadialMenu.XForms.UWP;
 
 namespace EcoCareApp.UWP
 {
@@ -57,7 +59,10 @@ namespace EcoCareApp.UWP
                 rootFrame = new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
-                Xamarin.Forms.Forms.Init(e);
+                List<Assembly> assembliesToInclude = new List<Assembly>();
+                assembliesToInclude.Add(typeof(SfRadialMenuRenderer).GetTypeInfo().Assembly);
+
+                Xamarin.Forms.Forms.Init(e, assembliesToInclude);
                 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

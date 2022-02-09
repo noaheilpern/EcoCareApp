@@ -4,6 +4,7 @@
              x:Class="EcoCareApp.Views.Home"
              xmlns:xtools="http://xamarin.com/schemas/2020/toolkit"
              xmlns:local="clr-namespace:EcoCareApp.Views"
+             xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms"
              >
     <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="100" VerticalOptions="FillAndExpand">
         <xtools:TabViewItem Icon="images/user_bw.png" IconSelected="images/user.png">
@@ -21,8 +22,21 @@
                     <Label Text="Home!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
- 
-                   <!-- <guage:SfCircularGauge>
+
+                    <radialMenu:SfRadialMenu x:Name="radialMenu" 
+                             CenterButtonText="Add"
+                             CenterButtonFontSize="15">
+                        <radialMenu:SfRadialMenu.Items>
+                            <radialMenu:SfRadialMenuItem Text="Elec"
+                                         FontSize="15"/>
+                            <radialMenu:SfRadialMenuItem Text="Benzin"
+                                         FontSize="15"/>
+                            <radialMenu:SfRadialMenuItem Text="Meat"
+                                         FontSize="15"/>
+                        </radialMenu:SfRadialMenu.Items>
+                    </radialMenu:SfRadialMenu>
+
+                    <!-- <guage:SfCircularGauge>
                         <guage:SfCircularGauge.Scales>
                             <guage:Scale StartValue="0" EndValue="100">
                                 <guage:Scale.Ranges>
