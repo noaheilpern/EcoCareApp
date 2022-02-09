@@ -736,6 +736,9 @@ namespace EcoCareApp.ViewModels
         }
         #endregion
 
+        public ICommand Update => new Command(UpdateUserAsync);
+
+
         private bool Validate()
         {
             bool b = ValidateEmail() && ValidatePassword();

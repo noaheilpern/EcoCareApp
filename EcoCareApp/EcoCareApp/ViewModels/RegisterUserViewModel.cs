@@ -719,7 +719,7 @@ namespace EcoCareApp.ViewModels
                     UserName = this.UserName,
                     UserNameNavigation = u,
                     Birthday = this.Birthday,
-
+                    Stars = 0,
                 };
                 App a = (App)App.Current;
                 FootPrintCalc fp = new FootPrintCalc(ru);

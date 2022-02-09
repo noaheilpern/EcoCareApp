@@ -161,28 +161,33 @@
 
                         <svg:CustomShadowFrame.Content>
                             <Grid
-                            ColumnDefinitions="*, Auto, *, Auto, *"
+                            ColumnDefinitions="5*, * , 5*, *, 5*"
                             ColumnSpacing="0"
-                            HeightRequest="90"
-                            RowDefinitions="*, *"
+                            HeightRequest="70"
+                            RowDefinitions="*, *, *, *"
                             RowSpacing="0"
                             WidthRequest="{OnIdiom Phone=343,
                                                    Default=480}">
 
-                                <!--  Age  -->
-                                <Label
-                                HeightRequest="24"
-                                Style="{StaticResource TitleLabelStyle}"
-                                Text="{Binding Age}"
-                                VerticalOptions="End" />
+                                <!--  First Name  -->
+                          
+                                <Label Text="{Binding FirstNameError}" Grid.Row="1" IsVisible="{Binding ShowFirstNameError}" Style="{StaticResource labelErrorStyle}"/>
+
+                                <Entry
+                                HeightRequest="50"
+                                Style="{StaticResource TitleEntrylStyle}"
+                                Text="{Binding FirstName}"
+                                VerticalOptions="End" 
+                                Grid.Row="2"
+                                    />
 
                                 <Label
-                                Grid.Row="1"
+                                Grid.Row="3"
                                 FontSize="12"
                                 Style="{StaticResource DescriptionLabelStyle}"
-                                Text="Age" />
-
-                                <!--  Seperator  -->
+                                Text="First Name" />
+                            
+                            <!--  Seperator  -->
                                 <BoxView
                                 Grid.RowSpan="2"
                                 Grid.Column="1"
@@ -235,7 +240,9 @@
                         </svg:CustomShadowFrame.Content>
 
                     </svg:CustomShadowFrame>
+                <Button Text="Update detail(s)" Command="{Binding Update}" ></Button>
                 </Grid>
+                        
             </ScrollView>
 
 
