@@ -144,6 +144,7 @@
     <Content Include="images\logo.png" />
     <Content Include="images\log_in.jpg" />
     <Content Include="images\my_logo.png" />
+    <Content Include="images\profileImg.png" />
     <Content Include="images\shopping-cart.png" />
     <Content Include="images\shopping_cart_bw.png" />
     <Content Include="images\sign_up.jpg" />

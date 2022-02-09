@@ -47,13 +47,8 @@
                         VerticalOptions="StartAndExpand"
                         WidthRequest="120">
 
-                            <Image Aspect="AspectFill" BackgroundColor="{DynamicResource GrayShadowBackgroundColor}">
-                                <Image.Source>
-                                    <UriImageSource
-                                    CacheValidity="14"
-                                    CachingEnabled="True"
-                                    Uri="image/user.png" />
-                                </Image.Source>
+                            <Image Aspect="AspectFill" Source="images/profileImg.png" BackgroundColor="{DynamicResource GrayShadowBackgroundColor}">
+                                
                             </Image>
 
                         </border:SfBorder>
@@ -64,7 +59,7 @@
                         Margin="0,0,0,2"
                         FontSize="20"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="{Binding ProfileName}"
+                        Text="{Binding UserName, StringFormat='Hi {0:F0}!'}"
                         TextColor="{DynamicResource Gray-White}" />
 
                         <!--  State and Country  -->

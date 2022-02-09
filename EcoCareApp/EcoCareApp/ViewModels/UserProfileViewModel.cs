@@ -175,7 +175,7 @@ namespace EcoCareApp.ViewModels
             Password = u.Pass;
             FirstName = u.FirstName;
             LastName = u.LastName;
-            SelectedCountry = allCountriesList.Find(c => c.CountryName == u.Country);
+            SelectedCountry = allCountriesList.FirstOrDefault(c => c.CountryName == u.Country);
             UserName = u.UserName;
 
 
@@ -645,7 +645,7 @@ namespace EcoCareApp.ViewModels
             }
         }
 
-        private void ValidatePhoneNum()
+        private bool ValidatePhoneNum()
         {
             if (!IsRegular)
             {
@@ -657,11 +657,15 @@ namespace EcoCareApp.ViewModels
                     {
                         this.ShowPhoneNumError = true;
                         this.PhoneNumError = ERROR_MESSAGES.BAD_PHONE;
+                        return false;
                     }
+                    return true;
                 }
                 else
                     this.PhoneNumError = ERROR_MESSAGES.REQUIRED_FIELD;
+                return false;
             }
+            return false;
         }
         #endregion
 
@@ -732,6 +736,14 @@ namespace EcoCareApp.ViewModels
         }
         #endregion
 
+        private bool Validate()
+        {
+            bool b = ValidateEmail() && ValidatePassword();
+            if (IsRegular)
+                return b && ValidateBirthday() && ValidatePeopleAtTheSameHouseHold();
+            else
+                return b && ValidatePhoneNum();
+        }
 
         private async void UpdateUserAsync()
         {
@@ -741,7 +753,7 @@ namespace EcoCareApp.ViewModels
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
                 success = await proxy.IsEmailExistAsync(email);
             }
-            if (/**Validate() && **/ success)
+            if (Validate() && success)
             {
                 User u = new User
                 {
