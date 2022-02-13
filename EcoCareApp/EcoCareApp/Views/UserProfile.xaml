@@ -21,7 +21,7 @@
                 <Grid RowDefinitions="Auto, *">
 
                     <Grid
-                    HeightRequest="361"
+                    HeightRequest="260"
                     RowDefinitions="Auto, Auto, *"
                     RowSpacing="0">
                         <gradient:SfGradientView Grid.RowSpan="3">
@@ -62,12 +62,12 @@
                         Text="{Binding UserName, StringFormat='Hi {0:F0}!'}"
                         TextColor="{DynamicResource Gray-White}" />
 
-                        <!--  Country  -->
+                        <!--  Stars  -->
                     <Label
                         Grid.Row="2"
                         FontSize="12"
                         Style="{StaticResource DescriptionLabelStyle}"
-                        TextColor="{DynamicResource Gray-White}" Text="{Binding SelectedCountry}"/>
+                        TextColor="{DynamicResource Gray-White}" Text="{Binding Stars, StringFormat='You have {0:F0} stars'}"/>
 
 
                 </Grid>
@@ -86,7 +86,7 @@
                         ItemSize="74"
                         ItemsSource="{Binding CardItems}"
                         SelectionMode="None"
-                        TapCommand="{Binding ItemTappedCommand}">
+                        >
                             <listView:SfListView.ItemTemplate>
                                 <DataTemplate>
                                     <svg:CustomShadowFrame
@@ -125,118 +125,16 @@
                                             Style="{StaticResource DescriptionLabelStyle}"
                                             Text="{Binding Category}" />
 
-                                            <!--  Category Image  -->
-                                            <svg:SVGImage
-                                            Grid.RowSpan="2"
-                                            BackgroundColor="Transparent"
-                                            HeightRequest="31"
-                                            HorizontalOptions="End"
-                                            Source="{Binding CategoryImage}"
-                                            VerticalOptions="Center"
-                                            WidthRequest="32" />
+                                           
                                         </Grid>
 
                                     </svg:CustomShadowFrame>
                                 </DataTemplate>
                             </listView:SfListView.ItemTemplate>
                         </listView:SfListView>
+                        
                     </border:SfBorder>
 
-                    <svg:CustomShadowFrame
-                    Grid.Row="0"
-                    Margin="16,0,16,24"
-                    Padding="0"
-                    BackgroundColor="{DynamicResource GrayShadowColor}"
-                    BorderWidth="0"
-                    CornerRadius="4"
-                    HasShadow="True"
-                    HorizontalOptions="CenterAndExpand"
-                    Radius="4"
-                    VerticalOptions="End"
-                    WidthRequest="{OnIdiom Phone=343,
-                                           Default=736}">
-
-                        <svg:CustomShadowFrame.Content>
-                            <Grid
-                            ColumnDefinitions="5*, * , 5*, *, 5*"
-                            ColumnSpacing="0"
-                            HeightRequest="70"
-                            RowDefinitions="*, *, *, *"
-                            RowSpacing="0"
-                            WidthRequest="{OnIdiom Phone=343,
-                                                   Default=480}">
-
-                                <!--  First Name  -->
-                          
-                                <Label Text="{Binding FirstNameError}" Grid.Row="1" IsVisible="{Binding ShowFirstNameError}" Style="{StaticResource labelErrorStyle}"/>
-
-                                <Entry
-                                HeightRequest="50"
-                                Style="{StaticResource TitleEntrylStyle}"
-                                Text="{Binding FirstName}"
-                                VerticalOptions="End" 
-                                Grid.Row="2"
-                                    />
-
-                                <Label
-                                Grid.Row="3"
-                                FontSize="12"
-                                Style="{StaticResource DescriptionLabelStyle}"
-                                Text="First Name" />
-                            
-                            <!--  Seperator  -->
-                                <BoxView
-                                Grid.RowSpan="2"
-                                Grid.Column="1"
-                                BackgroundColor="{DynamicResource Gray-400}"
-                                HeightRequest="24"
-                                Style="{StaticResource VerticalSeparatorStyle}" />
-
-
-                                <!--  Weight  -->
-                                <Label
-                                Grid.Row="0"
-                                Grid.Column="2"
-                                HeightRequest="24"
-                                Style="{StaticResource TitleLabelStyle}"
-                                Text="{Binding Weight}"
-                                VerticalOptions="End" />
-
-                                <Label
-                                Grid.Row="1"
-                                Grid.Column="2"
-                                FontSize="12"
-                                Style="{StaticResource DescriptionLabelStyle}"
-                                Text="Weight" />
-
-                                <!--  Seperator  -->
-                                <BoxView
-                                Grid.RowSpan="2"
-                                Grid.Column="3"
-                                BackgroundColor="{DynamicResource Gray-400}"
-                                HeightRequest="24"
-                                Style="{StaticResource VerticalSeparatorStyle}" />
-
-                                <!--  Height  -->
-                                <Label
-                                Grid.Row="0"
-                                Grid.Column="4"
-                                HeightRequest="24"
-                                Style="{StaticResource TitleLabelStyle}"
-                                Text="{Binding Height}"
-                                VerticalOptions="End" />
-
-                                <Label
-                                Grid.Row="1"
-                                Grid.Column="4"
-                                FontSize="12"
-                                Style="{StaticResource DescriptionLabelStyle}"
-                                Text="Height" />
-
-                            </Grid>
-                        </svg:CustomShadowFrame.Content>
-
-                    </svg:CustomShadowFrame>
                 </Grid>
 
         </ScrollView>

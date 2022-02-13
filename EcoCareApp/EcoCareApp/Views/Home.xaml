@@ -5,8 +5,8 @@
              xmlns:xtools="http://xamarin.com/schemas/2020/toolkit"
              xmlns:local="clr-namespace:EcoCareApp.Views"
              xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms"
-             >
-    <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="100" VerticalOptions="FillAndExpand">
+             BackgroundColor="#184e77">
+    <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand">
         <xtools:TabViewItem Icon="images/user_bw.png" IconSelected="images/user.png">
             <local:UserProfile>
               <!--  <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Kiranshastry - Flaticon</a>
@@ -19,20 +19,32 @@
         <xtools:TabViewItem Icon="images/home_bw.png" IconSelected="images/home.png" VerticalOptions="FillAndExpand">
             <xtools:TabViewItem.Content>
                 <StackLayout>
-                    <Label Text="Home!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
 
-                    <radialMenu:SfRadialMenu x:Name="radialMenu" 
-                             CenterButtonText="Add"
-                             CenterButtonFontSize="15">
+                    <radialMenu:SfRadialMenu x:Name="radialMenu" AnimationDuration="1000"  SelectionColor="#d9ed92" 
+                             CenterButtonFontSize="15" EnableCenterButtonAnimation="True" CenterButtonPlacement="Center" 
+                                             RimRadius="150" 
+                              RimColor="#b5e48c"  >
+                        <!-- 1a759f -->
+                        <radialMenu:SfRadialMenu.CenterButtonView >
+                            <Grid>
+                                <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
+                                    <Image Source="images/add.png"/>
+                                    
+                                </StackLayout>
+                            </Grid>
+                        </radialMenu:SfRadialMenu.CenterButtonView>
+                        <!--  <div>Icons made by
+                           <a href="https://www.flaticon.com/authors/ilham-fitrotul-hayat" title="Ilham Fitrotul Hayat">Ilham Fitrotul Hayat</a> from
+                            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a>
+                        </div> 
+                        <a href="https://www.flaticon.com/free-icons/distance" title="distance icons">Distance icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/electricity" title="electricity icons">Electricity icons created by fjstudio - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/meat" title="meat icons">Meat icons created by BomSymbols - Flaticon</a>
+                        -->
                         <radialMenu:SfRadialMenu.Items>
-                            <radialMenu:SfRadialMenuItem Text="Elec"
-                                         FontSize="15"/>
-                            <radialMenu:SfRadialMenuItem Text="Benzin"
-                                         FontSize="15"/>
-                            <radialMenu:SfRadialMenuItem Text="Meat"
-                                         FontSize="15"/>
+                            <radialMenu:SfRadialMenuItem Image="distance.png"/>
+                            <radialMenu:SfRadialMenuItem Image="electricity.png"/>
+                            <radialMenu:SfRadialMenuItem Image="meat.png"/>
                         </radialMenu:SfRadialMenu.Items>
                     </radialMenu:SfRadialMenu>
 

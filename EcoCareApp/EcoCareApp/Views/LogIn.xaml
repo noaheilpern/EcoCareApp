@@ -12,7 +12,7 @@
                 <RowDefinition></RowDefinition>
                 <!--Div-->
             </Grid.RowDefinitions>
-            <Image Source="logo.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Image Source="images/logo.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
             <!--Image-->
             
 

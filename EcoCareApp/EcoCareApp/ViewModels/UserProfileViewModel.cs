@@ -69,7 +69,7 @@ namespace EcoCareApp.ViewModels
         /// </summary>
         private string profileImage;
 
-        private ObservableCollection<UserProfile> cardItems;
+        private ObservableCollection<CardsItem> cardItems;
 
         private Command<object> itemTappedCommand;
 
@@ -88,17 +88,14 @@ namespace EcoCareApp.ViewModels
         /// Gets or sets the health profile items collection.
         /// </summary>
         [DataMember(Name = "cardItems")]
-        public ObservableCollection<UserProfile> CardItems
+        public ObservableCollection<CardsItem> CardItems
         {
             get
             {
                 return this.cardItems;
             }
 
-            set
-            {
-                this.cardItems = value;
-            }
+            
         }
 
 
@@ -145,7 +142,7 @@ namespace EcoCareApp.ViewModels
 
 
 
-#region country 
+        #region country 
 
 
 private void InitCountries()
@@ -283,6 +280,8 @@ private void InitCountries()
 
 
         #endregion
+
+
         public UserProfileViewModel()
         {
 
@@ -297,12 +296,36 @@ private void InitCountries()
             LastName = u.LastName;
             SelectedCountry = allCountriesList.FirstOrDefault(c => c.CountryName == u.Country);
             UserName = u.UserName;
+            cardItems = new ObservableCollection<CardsItem>();
+            cardItems.Add(new CardsItem
+            {
+                category = "Password",
+                categoryValue = Password,
 
 
-            if(a.CurrentRegularUser != null)
+            });
+
+            cardItems.Add(new CardsItem
+            {
+                category = "FirstName",
+                categoryValue = FirstName,
+
+
+            });
+            cardItems.Add(new CardsItem
+            {
+                category = "LastName",
+                categoryValue = LastName,
+
+
+            });
+
+            if (a.CurrentRegularUser != null)
             {
                 Birthday = a.CurrentRegularUser.Birthday;
                 PeopleAtTheSameHouseHold = a.CurrentRegularUser.PeopleAtTheHousehold;
+
+                
             }
             else
             {
