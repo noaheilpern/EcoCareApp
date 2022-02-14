@@ -6,7 +6,9 @@ namespace EcoCareApp.Models
 {
     class CardsItem
     {
-        public string category { get; set; }
-        public string categoryValue { get; set; }
+        public string Category { get; set; }
+        public string CategoryValue { get; set; }
+
+        public string CategoryError { get; set; }
     }
 }

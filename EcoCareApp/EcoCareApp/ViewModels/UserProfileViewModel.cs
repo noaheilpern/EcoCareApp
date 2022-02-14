@@ -67,11 +67,21 @@ namespace EcoCareApp.ViewModels
         /// <summary>
         /// To store the user profile data collection.
         /// </summary>
-        private string profileImage;
 
         private ObservableCollection<CardsItem> cardItems;
+        public ObservableCollection<CardsItem> CardItems
+        {
+            get => cardItems;
+            set
+            {
+                cardItems = value;
+                OnPropertyChanged("CardItems");
+            }
 
-        private Command<object> itemTappedCommand;
+           
+        }
+       
+
 
         #endregion
 
@@ -87,16 +97,7 @@ namespace EcoCareApp.ViewModels
         /// <summary>
         /// Gets or sets the health profile items collection.
         /// </summary>
-        [DataMember(Name = "cardItems")]
-        public ObservableCollection<CardsItem> CardItems
-        {
-            get
-            {
-                return this.cardItems;
-            }
-
-            
-        }
+   
 
 
         
@@ -294,37 +295,45 @@ private void InitCountries()
             Password = u.Pass;
             FirstName = u.FirstName;
             LastName = u.LastName;
+            Email = u.Email;
             SelectedCountry = allCountriesList.FirstOrDefault(c => c.CountryName == u.Country);
             UserName = u.UserName;
             cardItems = new ObservableCollection<CardsItem>();
             cardItems.Add(new CardsItem
             {
-                category = "Password",
-                categoryValue = Password,
-
+                Category = "Password",
+                CategoryValue = Password,
+                CategoryError = PasswordError,
 
             });
 
             cardItems.Add(new CardsItem
             {
-                category = "FirstName",
-                categoryValue = FirstName,
+                Category = "FirstName",
+                CategoryValue = FirstName,
+                CategoryError = firstNameError,
+
+            });
+            cardItems.Add(new CardsItem
+            {
+                Category = "LastName",
+                CategoryValue = LastName,
+                CategoryError = lastNameError,
 
 
             });
             cardItems.Add(new CardsItem
             {
-                category = "LastName",
-                categoryValue = LastName,
-
-
+                Category = "Email",
+                CategoryValue = Email,
+                CategoryError = emailError,
             });
 
             if (a.CurrentRegularUser != null)
             {
                 Birthday = a.CurrentRegularUser.Birthday;
                 PeopleAtTheSameHouseHold = a.CurrentRegularUser.PeopleAtTheHousehold;
-
+                Stars = a.CurrentRegularUser.Stars;
                 
             }
             else
@@ -730,7 +739,17 @@ private void InitCountries()
         }
         #endregion
 
-        
+        public int stars;
+        public int Stars {
+            get => stars;
+            set
+            {
+                stars = value;
+                OnPropertyChanged("Stars");
+            }
+
+        }
+
 
         //if user is business owner
 
@@ -893,6 +912,7 @@ private void InitCountries()
 
         private async void UpdateUserAsync()
         {
+            bool worked = true;
             App a = (App)App.Current;
             bool success = true;
             if(a.CurrentUser.Email != email) {
@@ -927,7 +947,7 @@ private void InitCountries()
                     if(!u.Equals(app.CurrentUser)|| !ru.Equals(app.CurrentRegularUser))
                     {
                         isRefreshing = true;
-                        await proxy.UpdateUserAsync(ru);
+                        worked = await proxy.UpdateUserAsync(ru);
                         isRefreshing = false;
                     }
                 }
@@ -942,18 +962,24 @@ private void InitCountries()
                     if(!u.Equals(app.CurrentUser)|| !s.Equals(app.CurrentSeller))
                     {
                         isRefreshing = true;
-                        await proxy.UpdateSellerAsync(s);
+                        worked = await proxy.UpdateSellerAsync(s);
                         isRefreshing = false;
 
                     }
                 }
 
                 //fp.Title = "Calculate your foot print";
-               //await App.Current.MainPage.Navigation.PushAsync(fp);
+                //await App.Current.MainPage.Navigation.PushAsync(fp);
+                if (!worked)
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Updating user data failed. Please check fields are filled as needed", "OK");
+
+                }
             }
+            
             else
             {
-                await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
+                await App.Current.MainPage.DisplayAlert("Error", "Updating user data failed. Please check fields are filled as needed", "OK");
             }
 
 

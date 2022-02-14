@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:EcoCareApp.Views"
              xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms"
              BackgroundColor="#184e77">
-    <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand">
+    <ContentPage.Content>
+   <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand">
         <xtools:TabViewItem Icon="images/user_bw.png" IconSelected="images/user.png">
             <local:UserProfile>
               <!--  <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Kiranshastry - Flaticon</a>
@@ -20,7 +21,7 @@
             <xtools:TabViewItem.Content>
                 <StackLayout>
 
-                    <radialMenu:SfRadialMenu x:Name="radialMenu" AnimationDuration="1000"  SelectionColor="#d9ed92" 
+                    <radialMenu:SfRadialMenu x:Name="radialMenu" AnimationDuration="1000"  SelectionColor="White" 
                              CenterButtonFontSize="15" EnableCenterButtonAnimation="True" CenterButtonPlacement="Center" 
                                              RimRadius="150" 
                               RimColor="#b5e48c"  >
@@ -97,4 +98,5 @@
 
 
             </xtools:TabView>
+    </ContentPage.Content>
 </ContentPage>

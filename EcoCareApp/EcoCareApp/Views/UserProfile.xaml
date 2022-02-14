@@ -12,15 +12,16 @@
     xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
     xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:svg="clr-namespace:EcoCareApp.Controls"
-    BackgroundColor="{DynamicResource GrayShadowBackgroundColor}"
+    xmlns:svg="clr-namespace:EcoCareApp.Controls" x:DataType="local:UserProfileViewModel"
+    xmlns:models="clr-namespace:EcoCareApp.Models"
+             BackgroundColor="{DynamicResource GrayShadowBackgroundColor}"
     NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
     <ContentView.Content>
             <ScrollView>
-                <Grid RowDefinitions="Auto, *">
+                <Grid RowDefinitions="Auto, *, 0.5*">
 
-                    <Grid
+                    <Grid Grid.Row="0"
                     HeightRequest="260"
                     RowDefinitions="Auto, Auto, *"
                     RowSpacing="0">
@@ -88,7 +89,7 @@
                         SelectionMode="None"
                         >
                             <listView:SfListView.ItemTemplate>
-                                <DataTemplate>
+                                <DataTemplate x:DataType="models:CardsItem">
                                     <svg:CustomShadowFrame
                                     Margin="16,8"
                                     Padding="0"
@@ -98,27 +99,28 @@
                                     HasShadow="True"
                                     HorizontalOptions="CenterAndExpand"
                                     Radius="4"
+                                       
                                     WidthRequest="{OnIdiom Phone=343,
                                                            Default=736}">
 
                                         <Grid
                                         Padding="16"
-                                        RowDefinitions="Auto, *"
+                                        RowDefinitions="*, Auto, *"
                                         RowSpacing="0">
 
                                             <!--  Category  -->
                                         <Label Text="{Binding CategoryError}" 
                                                    Style="{StaticResource labelErrorStyle}"
-                                                   ></Label>
+                                                   Grid.Row="0"></Label>
+                                            
                                             <Entry
-                                            HeightRequest="24"
+                                            HeightRequest="50"
                                             HorizontalOptions="Start"
-                                            Style="{StaticResource TitleEntryStyle}"
-                                            Text="{Binding CategoryValue}" />
+                                            Text="{Binding CategoryValue}" Grid.Row="1"/>
 
                                             <!--  Category Value  -->
                                             <Label
-                                            Grid.Row="1"
+                                            Grid.Row="2"
                                             FontSize="12"
                                             HeightRequest="18"
                                             HorizontalOptions="Start"
@@ -134,7 +136,10 @@
                         </listView:SfListView>
                         
                     </border:SfBorder>
-
+                <Grid Grid.Row="2" VerticalOptions="CenterAndExpand">
+                    <Button Text="Save" Command="{Binding Update}"  Margin="0,0,0,2"
+                        Style="{StaticResource UserPageButton}"/>
+                </Grid>
                 </Grid>
 
         </ScrollView>

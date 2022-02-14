@@ -358,6 +358,8 @@ namespace EcoCareApp.Services
 
         public async Task<bool> UpdateUserAsync(RegularUser ru)
         {
+            
+
             try
             {
                 JsonSerializerOptions options = new JsonSerializerOptions
