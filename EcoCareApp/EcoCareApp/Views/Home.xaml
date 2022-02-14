@@ -6,8 +6,9 @@
              xmlns:local="clr-namespace:EcoCareApp.Views"
              xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms"
              BackgroundColor="White"
-             xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
     >
+    <!--              xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms" x:DataType="local:UserProfile">
+ -->
     <ContentPage.Content>
         <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand">
         <xtools:TabViewItem Icon="images/user_bw.png" IconSelected="images/user.png">
