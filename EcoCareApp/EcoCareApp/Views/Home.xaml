@@ -5,9 +5,11 @@
              xmlns:xtools="http://xamarin.com/schemas/2020/toolkit"
              xmlns:local="clr-namespace:EcoCareApp.Views"
              xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms"
-             BackgroundColor="#184e77">
+             BackgroundColor="White"
+             xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
+    >
     <ContentPage.Content>
-   <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand">
+        <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand">
         <xtools:TabViewItem Icon="images/user_bw.png" IconSelected="images/user.png">
             <local:UserProfile>
               <!--  <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Kiranshastry - Flaticon</a>
@@ -24,16 +26,23 @@
                     <radialMenu:SfRadialMenu x:Name="radialMenu" AnimationDuration="1000"  SelectionColor="White" 
                              CenterButtonFontSize="15" EnableCenterButtonAnimation="True" CenterButtonPlacement="Center" 
                                              RimRadius="150" 
-                              RimColor="#b5e48c"  >
+                              RimColor="#b5e48c" SeparatorThickness="5" 
+                              SeparatorColor="Black" >
                         <!-- 1a759f -->
                         <radialMenu:SfRadialMenu.CenterButtonView >
                             <Grid>
                                 <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
-                                    <Image Source="images/add.png"/>
-                                    
+                                    <Image Source="plus_icon.png" IsAnimationPlaying="True"/>
                                 </StackLayout>
                             </Grid>
                         </radialMenu:SfRadialMenu.CenterButtonView>
+                            <radialMenu:SfRadialMenu.CenterButtonBackView>
+                                <Grid>
+                                    <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
+                                        <Image Source="plus_icon.png" IsAnimationPlaying="False"/>
+                                    </StackLayout>
+                                </Grid>
+                            </radialMenu:SfRadialMenu.CenterButtonBackView>
                         <!--  <div>Icons made by
                            <a href="https://www.flaticon.com/authors/ilham-fitrotul-hayat" title="Ilham Fitrotul Hayat">Ilham Fitrotul Hayat</a> from
                             <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a>
@@ -43,30 +52,13 @@
                         <a href="https://www.flaticon.com/free-icons/meat" title="meat icons">Meat icons created by BomSymbols - Flaticon</a>
                         -->
                         <radialMenu:SfRadialMenu.Items>
-                            <radialMenu:SfRadialMenuItem Image="distance.png"/>
+                            <radialMenu:SfRadialMenuItem Image="distance.png" ItemTapped="{Binding DistanceTapped}"/>
                             <radialMenu:SfRadialMenuItem Image="electricity.png"/>
                             <radialMenu:SfRadialMenuItem Image="meat.png"/>
                         </radialMenu:SfRadialMenu.Items>
                     </radialMenu:SfRadialMenu>
 
-                    <!-- <guage:SfCircularGauge>
-                        <guage:SfCircularGauge.Scales>
-                            <guage:Scale StartValue="0" EndValue="100">
-                                <guage:Scale.Ranges>
-                                    <guage:Range StartValue="0" EndValue="{Binding DidForEco}" Color="Green"></guage:Range>
-                                    <guage:Range StartValue="{Binding DidForEco}" EndValue="100" Color="Gray"></guage:Range>
-
-                                </guage:Scale.Ranges>
-                            </guage:Scale>
-                        </guage:SfCircularGauge.Scales>
-                        <guage:SfCircularGauge.Headers>
-                            <guage:Header Text="{Binding DidForEco, StringFormat='{0:F0}%'}" ForegroundColor="Black" TextSize="20"
-                                          HorizontalHeaderPosition="Center" VerticalHeaderPosition="Center">
-                                
-                            </guage:<Unknown>>
-                        </guage:SfCircularGauge.Headers>
-                    </guage:SfCircularGauge> -->
-                </StackLayout>
+                    </StackLayout>
             </xtools:TabViewItem.Content>
         </xtools:TabViewItem>
 

@@ -138,6 +138,7 @@
     <Content Include="images\distance.png" />
     <Content Include="images\electricity.png" />
     <Content Include="images\meat.png" />
+    <Content Include="images\plus_icon.gif" />
     <Content Include="images\profile.jpg" />
     <Content Include="images\home.png" />
     <Content Include="images\home_bw.png" />
@@ -194,6 +195,9 @@
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfListView">
       <Version>19.4.0.48</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout">
+      <Version>19.4.0.50</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRadialMenu">
       <Version>19.4.0.50</Version>

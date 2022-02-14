@@ -153,6 +153,9 @@
     <PackageReference Include="Syncfusion.Xamarin.SfListView">
       <Version>19.4.0.48</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout">
+      <Version>19.4.0.50</Version>
+    </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRadialMenu">
       <Version>19.4.0.50</Version>
     </PackageReference>

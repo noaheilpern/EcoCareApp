@@ -63,7 +63,8 @@ namespace EcoCareApp.UWP
                 assembliesToInclude.Add(typeof(SfRadialMenuRenderer).GetTypeInfo().Assembly);
 
                 Xamarin.Forms.Forms.Init(e, assembliesToInclude);
-                
+                Syncfusion.XForms.UWP.PopupLayout.SfPopupLayoutRenderer.Init();
+
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //TODO: Load state from previously suspended application

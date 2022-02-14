@@ -1,4 +1,5 @@
 ﻿using EcoCareApp.ViewModels;
+using Syncfusion.XForms.PopupLayout;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,8 @@ namespace EcoCareApp.Views
     {
         public Home()
         {
-            this.BindingContext = new HomeViewModel(); 
+            this.BindingContext = new HomeViewModel();
+
             InitializeComponent();
         }
     }
