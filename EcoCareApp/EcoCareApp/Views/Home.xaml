@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoCareApp.Views.Home"
              xmlns:xtools="http://xamarin.com/schemas/2020/toolkit"
@@ -9,7 +9,7 @@
     >
     <!--              xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms" x:DataType="local:UserProfile">
  -->
-    <ContentPage.Content>
+    <ContentView.Content>
         <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand">
         <xtools:TabViewItem Icon="images/user_bw.png" IconSelected="images/user.png">
             <local:UserProfile>
@@ -91,5 +91,5 @@
 
 
             </xtools:TabView>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentView.Content>
+</ContentView>
