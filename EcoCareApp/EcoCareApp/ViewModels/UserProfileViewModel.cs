@@ -306,7 +306,7 @@ private void InitCountries()
                 CategoryError = PasswordError,
 
             });
-
+            
             cardItems.Add(new CardsItem
             {
                 Category = "FirstName",
@@ -921,6 +921,7 @@ private void InitCountries()
             }
             if (Validate() && success)
             {
+                User appUser = a.CurrentUser;
                 User u = new User
                 {
                     Email = this.Email,
@@ -929,6 +930,7 @@ private void InitCountries()
                     Pass = this.Password,
                     Country = this.SelectedCountry.CountryName,
                     IsAdmin = false,
+                    UserName = appUser.UserName,
 
                 };
                 App app = (App)App.Current;
@@ -937,12 +939,20 @@ private void InitCountries()
 
                 if (app.CurrentRegularUser!=null)
                 {
+                    RegularUser appRegularUser = app.CurrentRegularUser;
                     RegularUser ru = new RegularUser
                     {
                         UserNameNavigation = u,
                         Birthday = this.Birthday,
                         PeopleAtTheHousehold = (int)this.PeopleAtTheSameHouseHold,
-
+                        InitialMeatsMeals = appRegularUser.InitialMeatsMeals,
+                        DistanceToWork = appRegularUser.DistanceToWork,
+                        LastElectricityBill = appRegularUser.LastElectricityBill,
+                        Transportation = appRegularUser.Transportation,
+                        UserName = appRegularUser.UserName,
+                        VeganRareMeat = appRegularUser.VeganRareMeat,
+                        Vegetarian = appRegularUser.Vegetarian,
+                        
                     };
                     if(!u.Equals(app.CurrentUser)|| !ru.Equals(app.CurrentRegularUser))
                     {
@@ -953,10 +963,13 @@ private void InitCountries()
                 }
                 else
                 {
+
                     Seller s = new Seller
                     {
                         UserNameNavigation = u,
                         PhoneNum = this.PhoneNum,
+                        UserName = u.UserName,
+                        
 
                     };
                     if(!u.Equals(app.CurrentUser)|| !s.Equals(app.CurrentSeller))
@@ -973,6 +986,11 @@ private void InitCountries()
                 if (!worked)
                 {
                     await App.Current.MainPage.DisplayAlert("Error", "Updating user data failed. Please check fields are filled as needed", "OK");
+
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Succeed", "detail(s) updated successfully", "great:)");
 
                 }
             }
