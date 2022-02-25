@@ -4,62 +4,117 @@
              x:Class="EcoCareApp.Views.Home"
              xmlns:xtools="http://xamarin.com/schemas/2020/toolkit"
              xmlns:local="clr-namespace:EcoCareApp.Views"
+             xmlns:slider="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+
              xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms"
              BackgroundColor="White">
-    <ContentPage.Content>
-        <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand">
-            <xtools:TabViewItem Icon="images/user_bw.png" IconSelected="images/user.png">
-                <local:UserProfile>
-                    <!--  <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Kiranshastry - Flaticon</a>
-                <a href="https://www.flaticon.com/free-icons/shopping-cart" title="shopping-cart icons">Shopping-cart icons created by Roundicons Premium - Flaticon</a>
-                -->
-                </local:UserProfile>
-            </xtools:TabViewItem>
 
-
-            <xtools:TabViewItem Icon="images/home_bw.png" IconSelected="images/home.png" VerticalOptions="FillAndExpand">
-                <xtools:TabViewItem.Content>
-                    <StackLayout>
-
-                        <radialMenu:SfRadialMenu x:Name="radialMenu" AnimationDuration="1000"  SelectionColor="White" 
-                             CenterButtonFontSize="15" EnableCenterButtonAnimation="True" CenterButtonPlacement="Center" 
-                                             RimRadius="150" 
-                              RimColor="#b5e48c" SeparatorThickness="5" 
-                              SeparatorColor="Black" >
-                            <!-- 1a759f -->
-                            <radialMenu:SfRadialMenu.CenterButtonView >
-                                <Grid>
-                                    <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
-                                        <Image Source="plus_icon.png" IsAnimationPlaying="True"/>
-                                    </StackLayout>
-                                </Grid>
-                            </radialMenu:SfRadialMenu.CenterButtonView>
-                            <radialMenu:SfRadialMenu.CenterButtonBackView>
-                                <Grid>
-                                    <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
-                                        <Image Source="plus_icon.png" IsAnimationPlaying="False"/>
-                                    </StackLayout>
-                                </Grid>
-                            </radialMenu:SfRadialMenu.CenterButtonBackView>
-                            <!--  <div>Icons made by
+    <!--  <div>Icons made by
                            <a href="https://www.flaticon.com/authors/ilham-fitrotul-hayat" title="Ilham Fitrotul Hayat">Ilham Fitrotul Hayat</a> from
                             <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a>
                         </div> 
                         <a href="https://www.flaticon.com/free-icons/distance" title="distance icons">Distance icons created by Freepik - Flaticon</a>
                         <a href="https://www.flaticon.com/free-icons/electricity" title="electricity icons">Electricity icons created by fjstudio - Flaticon</a>
                         <a href="https://www.flaticon.com/free-icons/meat" title="meat icons">Meat icons created by BomSymbols - Flaticon</a>
-                        -->
-                            <radialMenu:SfRadialMenu.Items>
-                                <radialMenu:SfRadialMenuItem Image="distance.png"/>
-                                <radialMenu:SfRadialMenuItem Image="electricity.png"/>
-                                <radialMenu:SfRadialMenuItem Image="meat.png"/>
-                            </radialMenu:SfRadialMenu.Items>
-                        </radialMenu:SfRadialMenu>
-
-                    </StackLayout>
-                </xtools:TabViewItem.Content>
+                        <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Kiranshastry - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/shopping-cart" title="shopping-cart icons">Shopping-cart icons created by Roundicons Premium - Flaticon</a>
+                -->
+    
+    <ContentPage.Content>
+        <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand">
+            <xtools:TabViewItem Icon="images/user_bw.png" IconSelected="images/user.png">
+                <!--<local:UserProfile>
+                   
+                </local:UserProfile>-->
             </xtools:TabViewItem>
 
+
+            <xtools:TabViewItem Icon="images/home_bw.png" IconSelected="images/home.png" VerticalOptions="FillAndExpand">
+                <xtools:TabViewItem.Content>
+                    <Grid BackgroundColor="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="0.5"/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0"  x:Name="firstRow">
+
+
+                            <radialMenu:SfRadialMenu x:Name="radialMenu" AnimationDuration="1000"  SelectionColor="White" 
+                             CenterButtonFontSize="15" EnableCenterButtonAnimation="True" CenterButtonPlacement="Center" 
+                                             RimRadius="150" 
+                              RimColor="#b5e48c" SeparatorThickness="5" 
+                              SeparatorColor="Black" >
+                                <radialMenu:SfRadialMenu.CenterButtonView >
+                                    <Grid>
+                                        <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
+                                            <Image Source="static_plus.png"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </radialMenu:SfRadialMenu.CenterButtonView>
+                                <radialMenu:SfRadialMenu.CenterButtonBackView>
+                                    <Grid>
+                                        <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
+                                            <Image Source="static_plus.png"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </radialMenu:SfRadialMenu.CenterButtonBackView>
+
+                                <radialMenu:SfRadialMenu.Items>
+                                    <radialMenu:SfRadialMenuItem Image="distance.png"/>
+                                    <radialMenu:SfRadialMenuItem Image="electricity.png"/>
+                                    <radialMenu:SfRadialMenuItem Image="meat.png"/>
+                                </radialMenu:SfRadialMenu.Items>
+                            </radialMenu:SfRadialMenu>
+
+                        </Grid>
+
+                        <Grid Grid.Row="1" Padding="10,0,10,0" IsVisible="{Binding Visible}">
+                            <BoxView BackgroundColor="#e5e0e0" />
+                        </Grid>
+                        <Grid Grid.Row="2" Padding="10,10,10,10" IsVisible="{Binding Visible}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Name="logRow" Height="30" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <Label Text="Event Logs:" x:Name="eventLogsLabel" FontSize="16" YAlign="Center" HorizontalOptions="Start" FontAttributes="Bold" />
+                            <ContentView Grid.Row="1" Padding="3,1,1,3">
+                                <ContentView VerticalOptions="Fill">
+                                    <ScrollView x:Name="scrollView" IsClippedToBounds="true">
+                                        <StackLayout x:Name="eventLogLayout" Margin="5" />
+                                    </ScrollView>
+                                </ContentView>
+                            </ContentView>
+                        </Grid>
+                    </Grid>
+                    <!--<PropertyView>
+                        <StackLayout>
+                            <ScrollView IsClippedToBounds="true">
+                                <StackLayout>
+                                    <Label Text="RimRadius" />
+                                    <slider:SfRangeSlider x:Name="slider" ToolTipPlacement="None" HeightRequest="75" SnapsTo="None" ShowRange="false" Orientation="Horizontal" TickPlacement="None" ShowValueLabel="false" Minimum="60" Maximum="100" />
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="Enable Dragging" />
+                                        <Switch Grid.Column="1" x:Name="dragSwitch" IsToggled="true" />
+                                        <Label Text="Enable Rotation" Grid.Row="1" Grid.Column="0" />
+                                        <Switch Grid.Column="1" Grid.Row="1" x:Name="rotationSwitch" IsToggled="true" />
+                                    </Grid>
+                                </StackLayout>
+                            </ScrollView>
+                        </StackLayout>
+                    </l.PropertyView>-->
+
+                </xtools:TabViewItem.Content>
+            </xtools:TabViewItem>
+            
 
 
 

@@ -9,6 +9,7 @@
 
         <ResourceDictionary>
 
+            <OnPlatform x:TypeArguments="x:String" x:Key="customfontfamily" iOS="Segoe MDL2 Assets" Android="radialmenu_Segoe MDL2 Assets.ttf" WinPhone="radialmenu_Segoe_MDL2_Assets.ttf#Segoe MDL2 Assets"  />
 
             <Color x:Key="EntryPlaceholderColor">#A0FFFFFF</Color>
             <Color x:Key="GradientStartColor">#012E8B</Color>

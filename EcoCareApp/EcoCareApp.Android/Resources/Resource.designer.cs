@@ -58,12 +58,20 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Animation.EnterFromRight = global::EcoCareApp.Droid.Resource.Animation.EnterFromRight;
 			global::Rg.Plugins.Popup.Resource.Animation.ExitToLeft = global::EcoCareApp.Droid.Resource.Animation.ExitToLeft;
 			global::Rg.Plugins.Popup.Resource.Animation.ExitToRight = global::EcoCareApp.Droid.Resource.Animation.ExitToRight;
+			global::Rg.Plugins.Popup.Resource.Animation.fragment_fast_out_extra_slow_in = global::EcoCareApp.Droid.Resource.Animation.fragment_fast_out_extra_slow_in;
+			global::Rg.Plugins.Popup.Resource.Animation.mtrl_bottom_sheet_slide_in = global::EcoCareApp.Droid.Resource.Animation.mtrl_bottom_sheet_slide_in;
+			global::Rg.Plugins.Popup.Resource.Animation.mtrl_bottom_sheet_slide_out = global::EcoCareApp.Droid.Resource.Animation.mtrl_bottom_sheet_slide_out;
+			global::Rg.Plugins.Popup.Resource.Animation.mtrl_card_lowers_interpolator = global::EcoCareApp.Droid.Resource.Animation.mtrl_card_lowers_interpolator;
 			global::Rg.Plugins.Popup.Resource.Animator.design_appbar_state_list_animator = global::EcoCareApp.Droid.Resource.Animator.design_appbar_state_list_animator;
 			global::Rg.Plugins.Popup.Resource.Animator.design_fab_hide_motion_spec = global::EcoCareApp.Droid.Resource.Animator.design_fab_hide_motion_spec;
 			global::Rg.Plugins.Popup.Resource.Animator.design_fab_show_motion_spec = global::EcoCareApp.Droid.Resource.Animator.design_fab_show_motion_spec;
 			global::Rg.Plugins.Popup.Resource.Animator.mtrl_btn_state_list_anim = global::EcoCareApp.Droid.Resource.Animator.mtrl_btn_state_list_anim;
 			global::Rg.Plugins.Popup.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::EcoCareApp.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::Rg.Plugins.Popup.Resource.Animator.mtrl_card_state_list_anim = global::EcoCareApp.Droid.Resource.Animator.mtrl_card_state_list_anim;
 			global::Rg.Plugins.Popup.Resource.Animator.mtrl_chip_state_list_anim = global::EcoCareApp.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::Rg.Plugins.Popup.Resource.Animator.mtrl_extended_fab_hide_motion_spec = global::EcoCareApp.Droid.Resource.Animator.mtrl_extended_fab_hide_motion_spec;
+			global::Rg.Plugins.Popup.Resource.Animator.mtrl_extended_fab_show_motion_spec = global::EcoCareApp.Droid.Resource.Animator.mtrl_extended_fab_show_motion_spec;
+			global::Rg.Plugins.Popup.Resource.Animator.mtrl_extended_fab_state_list_animator = global::EcoCareApp.Droid.Resource.Animator.mtrl_extended_fab_state_list_animator;
 			global::Rg.Plugins.Popup.Resource.Animator.mtrl_fab_hide_motion_spec = global::EcoCareApp.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
 			global::Rg.Plugins.Popup.Resource.Animator.mtrl_fab_show_motion_spec = global::EcoCareApp.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
 			global::Rg.Plugins.Popup.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::EcoCareApp.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
@@ -100,6 +108,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.actionOverflowButtonStyle = global::EcoCareApp.Droid.Resource.Attribute.actionOverflowButtonStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.actionOverflowMenuStyle = global::EcoCareApp.Droid.Resource.Attribute.actionOverflowMenuStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.actionProviderClass = global::EcoCareApp.Droid.Resource.Attribute.actionProviderClass;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionTextColorAlpha = global::EcoCareApp.Droid.Resource.Attribute.actionTextColorAlpha;
 			global::Rg.Plugins.Popup.Resource.Attribute.actionViewClass = global::EcoCareApp.Droid.Resource.Attribute.actionViewClass;
 			global::Rg.Plugins.Popup.Resource.Attribute.activityChooserViewStyle = global::EcoCareApp.Droid.Resource.Attribute.activityChooserViewStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.alertDialogButtonGroupStyle = global::EcoCareApp.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
@@ -109,6 +118,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.allowStacking = global::EcoCareApp.Droid.Resource.Attribute.allowStacking;
 			global::Rg.Plugins.Popup.Resource.Attribute.alpha = global::EcoCareApp.Droid.Resource.Attribute.alpha;
 			global::Rg.Plugins.Popup.Resource.Attribute.alphabeticModifiers = global::EcoCareApp.Droid.Resource.Attribute.alphabeticModifiers;
+			global::Rg.Plugins.Popup.Resource.Attribute.animationMode = global::EcoCareApp.Droid.Resource.Attribute.animationMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.appBarLayoutStyle = global::EcoCareApp.Droid.Resource.Attribute.appBarLayoutStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.arrowHeadLength = global::EcoCareApp.Droid.Resource.Attribute.arrowHeadLength;
 			global::Rg.Plugins.Popup.Resource.Attribute.arrowShaftLength = global::EcoCareApp.Droid.Resource.Attribute.arrowShaftLength;
 			global::Rg.Plugins.Popup.Resource.Attribute.autoCompleteTextViewStyle = global::EcoCareApp.Droid.Resource.Attribute.autoCompleteTextViewStyle;
@@ -118,16 +129,30 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.autoSizeStepGranularity = global::EcoCareApp.Droid.Resource.Attribute.autoSizeStepGranularity;
 			global::Rg.Plugins.Popup.Resource.Attribute.autoSizeTextType = global::EcoCareApp.Droid.Resource.Attribute.autoSizeTextType;
 			global::Rg.Plugins.Popup.Resource.Attribute.background = global::EcoCareApp.Droid.Resource.Attribute.background;
+			global::Rg.Plugins.Popup.Resource.Attribute.backgroundColor = global::EcoCareApp.Droid.Resource.Attribute.backgroundColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.backgroundInsetBottom = global::EcoCareApp.Droid.Resource.Attribute.backgroundInsetBottom;
+			global::Rg.Plugins.Popup.Resource.Attribute.backgroundInsetEnd = global::EcoCareApp.Droid.Resource.Attribute.backgroundInsetEnd;
+			global::Rg.Plugins.Popup.Resource.Attribute.backgroundInsetStart = global::EcoCareApp.Droid.Resource.Attribute.backgroundInsetStart;
+			global::Rg.Plugins.Popup.Resource.Attribute.backgroundInsetTop = global::EcoCareApp.Droid.Resource.Attribute.backgroundInsetTop;
+			global::Rg.Plugins.Popup.Resource.Attribute.backgroundOverlayColorAlpha = global::EcoCareApp.Droid.Resource.Attribute.backgroundOverlayColorAlpha;
 			global::Rg.Plugins.Popup.Resource.Attribute.backgroundSplit = global::EcoCareApp.Droid.Resource.Attribute.backgroundSplit;
 			global::Rg.Plugins.Popup.Resource.Attribute.backgroundStacked = global::EcoCareApp.Droid.Resource.Attribute.backgroundStacked;
 			global::Rg.Plugins.Popup.Resource.Attribute.backgroundTint = global::EcoCareApp.Droid.Resource.Attribute.backgroundTint;
 			global::Rg.Plugins.Popup.Resource.Attribute.backgroundTintMode = global::EcoCareApp.Droid.Resource.Attribute.backgroundTintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.badgeGravity = global::EcoCareApp.Droid.Resource.Attribute.badgeGravity;
+			global::Rg.Plugins.Popup.Resource.Attribute.badgeStyle = global::EcoCareApp.Droid.Resource.Attribute.badgeStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.badgeTextColor = global::EcoCareApp.Droid.Resource.Attribute.badgeTextColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.barLength = global::EcoCareApp.Droid.Resource.Attribute.barLength;
 			global::Rg.Plugins.Popup.Resource.Attribute.behavior_autoHide = global::EcoCareApp.Droid.Resource.Attribute.behavior_autoHide;
+			global::Rg.Plugins.Popup.Resource.Attribute.behavior_autoShrink = global::EcoCareApp.Droid.Resource.Attribute.behavior_autoShrink;
+			global::Rg.Plugins.Popup.Resource.Attribute.behavior_draggable = global::EcoCareApp.Droid.Resource.Attribute.behavior_draggable;
+			global::Rg.Plugins.Popup.Resource.Attribute.behavior_expandedOffset = global::EcoCareApp.Droid.Resource.Attribute.behavior_expandedOffset;
 			global::Rg.Plugins.Popup.Resource.Attribute.behavior_fitToContents = global::EcoCareApp.Droid.Resource.Attribute.behavior_fitToContents;
+			global::Rg.Plugins.Popup.Resource.Attribute.behavior_halfExpandedRatio = global::EcoCareApp.Droid.Resource.Attribute.behavior_halfExpandedRatio;
 			global::Rg.Plugins.Popup.Resource.Attribute.behavior_hideable = global::EcoCareApp.Droid.Resource.Attribute.behavior_hideable;
 			global::Rg.Plugins.Popup.Resource.Attribute.behavior_overlapTop = global::EcoCareApp.Droid.Resource.Attribute.behavior_overlapTop;
 			global::Rg.Plugins.Popup.Resource.Attribute.behavior_peekHeight = global::EcoCareApp.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.behavior_saveFlags = global::EcoCareApp.Droid.Resource.Attribute.behavior_saveFlags;
 			global::Rg.Plugins.Popup.Resource.Attribute.behavior_skipCollapsed = global::EcoCareApp.Droid.Resource.Attribute.behavior_skipCollapsed;
 			global::Rg.Plugins.Popup.Resource.Attribute.borderlessButtonStyle = global::EcoCareApp.Droid.Resource.Attribute.borderlessButtonStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.borderWidth = global::EcoCareApp.Droid.Resource.Attribute.borderWidth;
@@ -143,7 +168,9 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.boxCornerRadiusTopEnd = global::EcoCareApp.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
 			global::Rg.Plugins.Popup.Resource.Attribute.boxCornerRadiusTopStart = global::EcoCareApp.Droid.Resource.Attribute.boxCornerRadiusTopStart;
 			global::Rg.Plugins.Popup.Resource.Attribute.boxStrokeColor = global::EcoCareApp.Droid.Resource.Attribute.boxStrokeColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.boxStrokeErrorColor = global::EcoCareApp.Droid.Resource.Attribute.boxStrokeErrorColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.boxStrokeWidth = global::EcoCareApp.Droid.Resource.Attribute.boxStrokeWidth;
+			global::Rg.Plugins.Popup.Resource.Attribute.boxStrokeWidthFocused = global::EcoCareApp.Droid.Resource.Attribute.boxStrokeWidthFocused;
 			global::Rg.Plugins.Popup.Resource.Attribute.buttonBarButtonStyle = global::EcoCareApp.Droid.Resource.Attribute.buttonBarButtonStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.buttonBarNegativeButtonStyle = global::EcoCareApp.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.buttonBarNeutralButtonStyle = global::EcoCareApp.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
@@ -160,14 +187,17 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.cardBackgroundColor = global::EcoCareApp.Droid.Resource.Attribute.cardBackgroundColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.cardCornerRadius = global::EcoCareApp.Droid.Resource.Attribute.cardCornerRadius;
 			global::Rg.Plugins.Popup.Resource.Attribute.cardElevation = global::EcoCareApp.Droid.Resource.Attribute.cardElevation;
+			global::Rg.Plugins.Popup.Resource.Attribute.cardForegroundColor = global::EcoCareApp.Droid.Resource.Attribute.cardForegroundColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.cardMaxElevation = global::EcoCareApp.Droid.Resource.Attribute.cardMaxElevation;
 			global::Rg.Plugins.Popup.Resource.Attribute.cardPreventCornerOverlap = global::EcoCareApp.Droid.Resource.Attribute.cardPreventCornerOverlap;
 			global::Rg.Plugins.Popup.Resource.Attribute.cardUseCompatPadding = global::EcoCareApp.Droid.Resource.Attribute.cardUseCompatPadding;
 			global::Rg.Plugins.Popup.Resource.Attribute.cardViewStyle = global::EcoCareApp.Droid.Resource.Attribute.cardViewStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.checkboxStyle = global::EcoCareApp.Droid.Resource.Attribute.checkboxStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.checkedButton = global::EcoCareApp.Droid.Resource.Attribute.checkedButton;
 			global::Rg.Plugins.Popup.Resource.Attribute.checkedChip = global::EcoCareApp.Droid.Resource.Attribute.checkedChip;
 			global::Rg.Plugins.Popup.Resource.Attribute.checkedIcon = global::EcoCareApp.Droid.Resource.Attribute.checkedIcon;
 			global::Rg.Plugins.Popup.Resource.Attribute.checkedIconEnabled = global::EcoCareApp.Droid.Resource.Attribute.checkedIconEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.checkedIconTint = global::EcoCareApp.Droid.Resource.Attribute.checkedIconTint;
 			global::Rg.Plugins.Popup.Resource.Attribute.checkedIconVisible = global::EcoCareApp.Droid.Resource.Attribute.checkedIconVisible;
 			global::Rg.Plugins.Popup.Resource.Attribute.checkedTextViewStyle = global::EcoCareApp.Droid.Resource.Attribute.checkedTextViewStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.chipBackgroundColor = global::EcoCareApp.Droid.Resource.Attribute.chipBackgroundColor;
@@ -180,6 +210,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.chipIconTint = global::EcoCareApp.Droid.Resource.Attribute.chipIconTint;
 			global::Rg.Plugins.Popup.Resource.Attribute.chipIconVisible = global::EcoCareApp.Droid.Resource.Attribute.chipIconVisible;
 			global::Rg.Plugins.Popup.Resource.Attribute.chipMinHeight = global::EcoCareApp.Droid.Resource.Attribute.chipMinHeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipMinTouchTargetSize = global::EcoCareApp.Droid.Resource.Attribute.chipMinTouchTargetSize;
 			global::Rg.Plugins.Popup.Resource.Attribute.chipSpacing = global::EcoCareApp.Droid.Resource.Attribute.chipSpacing;
 			global::Rg.Plugins.Popup.Resource.Attribute.chipSpacingHorizontal = global::EcoCareApp.Droid.Resource.Attribute.chipSpacingHorizontal;
 			global::Rg.Plugins.Popup.Resource.Attribute.chipSpacingVertical = global::EcoCareApp.Droid.Resource.Attribute.chipSpacingVertical;
@@ -188,6 +219,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.chipStrokeColor = global::EcoCareApp.Droid.Resource.Attribute.chipStrokeColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.chipStrokeWidth = global::EcoCareApp.Droid.Resource.Attribute.chipStrokeWidth;
 			global::Rg.Plugins.Popup.Resource.Attribute.chipStyle = global::EcoCareApp.Droid.Resource.Attribute.chipStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipSurfaceColor = global::EcoCareApp.Droid.Resource.Attribute.chipSurfaceColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.closeIcon = global::EcoCareApp.Droid.Resource.Attribute.closeIcon;
 			global::Rg.Plugins.Popup.Resource.Attribute.closeIconEnabled = global::EcoCareApp.Droid.Resource.Attribute.closeIconEnabled;
 			global::Rg.Plugins.Popup.Resource.Attribute.closeIconEndPadding = global::EcoCareApp.Droid.Resource.Attribute.closeIconEndPadding;
@@ -200,6 +232,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.collapsedTitleGravity = global::EcoCareApp.Droid.Resource.Attribute.collapsedTitleGravity;
 			global::Rg.Plugins.Popup.Resource.Attribute.collapsedTitleTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.collapsedTitleTextAppearance;
 			global::Rg.Plugins.Popup.Resource.Attribute.collapseIcon = global::EcoCareApp.Droid.Resource.Attribute.collapseIcon;
+			global::Rg.Plugins.Popup.Resource.Attribute.collectionViewStyle = global::EcoCareApp.Droid.Resource.Attribute.collectionViewStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.color = global::EcoCareApp.Droid.Resource.Attribute.color;
 			global::Rg.Plugins.Popup.Resource.Attribute.colorAccent = global::EcoCareApp.Droid.Resource.Attribute.colorAccent;
 			global::Rg.Plugins.Popup.Resource.Attribute.colorBackgroundFloating = global::EcoCareApp.Droid.Resource.Attribute.colorBackgroundFloating;
@@ -208,9 +241,19 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.colorControlHighlight = global::EcoCareApp.Droid.Resource.Attribute.colorControlHighlight;
 			global::Rg.Plugins.Popup.Resource.Attribute.colorControlNormal = global::EcoCareApp.Droid.Resource.Attribute.colorControlNormal;
 			global::Rg.Plugins.Popup.Resource.Attribute.colorError = global::EcoCareApp.Droid.Resource.Attribute.colorError;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorOnBackground = global::EcoCareApp.Droid.Resource.Attribute.colorOnBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorOnError = global::EcoCareApp.Droid.Resource.Attribute.colorOnError;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorOnPrimary = global::EcoCareApp.Droid.Resource.Attribute.colorOnPrimary;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorOnPrimarySurface = global::EcoCareApp.Droid.Resource.Attribute.colorOnPrimarySurface;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorOnSecondary = global::EcoCareApp.Droid.Resource.Attribute.colorOnSecondary;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorOnSurface = global::EcoCareApp.Droid.Resource.Attribute.colorOnSurface;
 			global::Rg.Plugins.Popup.Resource.Attribute.colorPrimary = global::EcoCareApp.Droid.Resource.Attribute.colorPrimary;
 			global::Rg.Plugins.Popup.Resource.Attribute.colorPrimaryDark = global::EcoCareApp.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorPrimarySurface = global::EcoCareApp.Droid.Resource.Attribute.colorPrimarySurface;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorPrimaryVariant = global::EcoCareApp.Droid.Resource.Attribute.colorPrimaryVariant;
 			global::Rg.Plugins.Popup.Resource.Attribute.colorSecondary = global::EcoCareApp.Droid.Resource.Attribute.colorSecondary;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorSecondaryVariant = global::EcoCareApp.Droid.Resource.Attribute.colorSecondaryVariant;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorSurface = global::EcoCareApp.Droid.Resource.Attribute.colorSurface;
 			global::Rg.Plugins.Popup.Resource.Attribute.colorSwitchThumbNormal = global::EcoCareApp.Droid.Resource.Attribute.colorSwitchThumbNormal;
 			global::Rg.Plugins.Popup.Resource.Attribute.commitIcon = global::EcoCareApp.Droid.Resource.Attribute.commitIcon;
 			global::Rg.Plugins.Popup.Resource.Attribute.contentDescription = global::EcoCareApp.Droid.Resource.Attribute.contentDescription;
@@ -228,12 +271,28 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.contentScrim = global::EcoCareApp.Droid.Resource.Attribute.contentScrim;
 			global::Rg.Plugins.Popup.Resource.Attribute.controlBackground = global::EcoCareApp.Droid.Resource.Attribute.controlBackground;
 			global::Rg.Plugins.Popup.Resource.Attribute.coordinatorLayoutStyle = global::EcoCareApp.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.cornerFamily = global::EcoCareApp.Droid.Resource.Attribute.cornerFamily;
+			global::Rg.Plugins.Popup.Resource.Attribute.cornerFamilyBottomLeft = global::EcoCareApp.Droid.Resource.Attribute.cornerFamilyBottomLeft;
+			global::Rg.Plugins.Popup.Resource.Attribute.cornerFamilyBottomRight = global::EcoCareApp.Droid.Resource.Attribute.cornerFamilyBottomRight;
+			global::Rg.Plugins.Popup.Resource.Attribute.cornerFamilyTopLeft = global::EcoCareApp.Droid.Resource.Attribute.cornerFamilyTopLeft;
+			global::Rg.Plugins.Popup.Resource.Attribute.cornerFamilyTopRight = global::EcoCareApp.Droid.Resource.Attribute.cornerFamilyTopRight;
 			global::Rg.Plugins.Popup.Resource.Attribute.cornerRadius = global::EcoCareApp.Droid.Resource.Attribute.cornerRadius;
+			global::Rg.Plugins.Popup.Resource.Attribute.cornerSize = global::EcoCareApp.Droid.Resource.Attribute.cornerSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.cornerSizeBottomLeft = global::EcoCareApp.Droid.Resource.Attribute.cornerSizeBottomLeft;
+			global::Rg.Plugins.Popup.Resource.Attribute.cornerSizeBottomRight = global::EcoCareApp.Droid.Resource.Attribute.cornerSizeBottomRight;
+			global::Rg.Plugins.Popup.Resource.Attribute.cornerSizeTopLeft = global::EcoCareApp.Droid.Resource.Attribute.cornerSizeTopLeft;
+			global::Rg.Plugins.Popup.Resource.Attribute.cornerSizeTopRight = global::EcoCareApp.Droid.Resource.Attribute.cornerSizeTopRight;
 			global::Rg.Plugins.Popup.Resource.Attribute.counterEnabled = global::EcoCareApp.Droid.Resource.Attribute.counterEnabled;
 			global::Rg.Plugins.Popup.Resource.Attribute.counterMaxLength = global::EcoCareApp.Droid.Resource.Attribute.counterMaxLength;
 			global::Rg.Plugins.Popup.Resource.Attribute.counterOverflowTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.counterOverflowTextColor = global::EcoCareApp.Droid.Resource.Attribute.counterOverflowTextColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.counterTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.counterTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.counterTextColor = global::EcoCareApp.Droid.Resource.Attribute.counterTextColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.customNavigationLayout = global::EcoCareApp.Droid.Resource.Attribute.customNavigationLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.dayInvalidStyle = global::EcoCareApp.Droid.Resource.Attribute.dayInvalidStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.daySelectedStyle = global::EcoCareApp.Droid.Resource.Attribute.daySelectedStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.dayStyle = global::EcoCareApp.Droid.Resource.Attribute.dayStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.dayTodayStyle = global::EcoCareApp.Droid.Resource.Attribute.dayTodayStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.defaultQueryHint = global::EcoCareApp.Droid.Resource.Attribute.defaultQueryHint;
 			global::Rg.Plugins.Popup.Resource.Attribute.dialogCornerRadius = global::EcoCareApp.Droid.Resource.Attribute.dialogCornerRadius;
 			global::Rg.Plugins.Popup.Resource.Attribute.dialogPreferredPadding = global::EcoCareApp.Droid.Resource.Attribute.dialogPreferredPadding;
@@ -253,16 +312,31 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.drawableTintMode = global::EcoCareApp.Droid.Resource.Attribute.drawableTintMode;
 			global::Rg.Plugins.Popup.Resource.Attribute.drawableTopCompat = global::EcoCareApp.Droid.Resource.Attribute.drawableTopCompat;
 			global::Rg.Plugins.Popup.Resource.Attribute.drawerArrowStyle = global::EcoCareApp.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.drawerLayoutStyle = global::EcoCareApp.Droid.Resource.Attribute.drawerLayoutStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.dropdownListPreferredItemHeight = global::EcoCareApp.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
 			global::Rg.Plugins.Popup.Resource.Attribute.dropDownListViewStyle = global::EcoCareApp.Droid.Resource.Attribute.dropDownListViewStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.editTextBackground = global::EcoCareApp.Droid.Resource.Attribute.editTextBackground;
 			global::Rg.Plugins.Popup.Resource.Attribute.editTextColor = global::EcoCareApp.Droid.Resource.Attribute.editTextColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.editTextStyle = global::EcoCareApp.Droid.Resource.Attribute.editTextStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.elevation = global::EcoCareApp.Droid.Resource.Attribute.elevation;
+			global::Rg.Plugins.Popup.Resource.Attribute.elevationOverlayColor = global::EcoCareApp.Droid.Resource.Attribute.elevationOverlayColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.elevationOverlayEnabled = global::EcoCareApp.Droid.Resource.Attribute.elevationOverlayEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.endIconCheckable = global::EcoCareApp.Droid.Resource.Attribute.endIconCheckable;
+			global::Rg.Plugins.Popup.Resource.Attribute.endIconContentDescription = global::EcoCareApp.Droid.Resource.Attribute.endIconContentDescription;
+			global::Rg.Plugins.Popup.Resource.Attribute.endIconDrawable = global::EcoCareApp.Droid.Resource.Attribute.endIconDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.endIconMode = global::EcoCareApp.Droid.Resource.Attribute.endIconMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.endIconTint = global::EcoCareApp.Droid.Resource.Attribute.endIconTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.endIconTintMode = global::EcoCareApp.Droid.Resource.Attribute.endIconTintMode;
 			global::Rg.Plugins.Popup.Resource.Attribute.enforceMaterialTheme = global::EcoCareApp.Droid.Resource.Attribute.enforceMaterialTheme;
 			global::Rg.Plugins.Popup.Resource.Attribute.enforceTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.enforceTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.ensureMinTouchTargetSize = global::EcoCareApp.Droid.Resource.Attribute.ensureMinTouchTargetSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.errorContentDescription = global::EcoCareApp.Droid.Resource.Attribute.errorContentDescription;
 			global::Rg.Plugins.Popup.Resource.Attribute.errorEnabled = global::EcoCareApp.Droid.Resource.Attribute.errorEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.errorIconDrawable = global::EcoCareApp.Droid.Resource.Attribute.errorIconDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.errorIconTint = global::EcoCareApp.Droid.Resource.Attribute.errorIconTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.errorIconTintMode = global::EcoCareApp.Droid.Resource.Attribute.errorIconTintMode;
 			global::Rg.Plugins.Popup.Resource.Attribute.errorTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.errorTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.errorTextColor = global::EcoCareApp.Droid.Resource.Attribute.errorTextColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.expandActivityOverflowButtonDrawable = global::EcoCareApp.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
 			global::Rg.Plugins.Popup.Resource.Attribute.expanded = global::EcoCareApp.Droid.Resource.Attribute.expanded;
 			global::Rg.Plugins.Popup.Resource.Attribute.expandedTitleGravity = global::EcoCareApp.Droid.Resource.Attribute.expandedTitleGravity;
@@ -272,7 +346,10 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.expandedTitleMarginStart = global::EcoCareApp.Droid.Resource.Attribute.expandedTitleMarginStart;
 			global::Rg.Plugins.Popup.Resource.Attribute.expandedTitleMarginTop = global::EcoCareApp.Droid.Resource.Attribute.expandedTitleMarginTop;
 			global::Rg.Plugins.Popup.Resource.Attribute.expandedTitleTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.extendedFloatingActionButtonStyle = global::EcoCareApp.Droid.Resource.Attribute.extendedFloatingActionButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.extendMotionSpec = global::EcoCareApp.Droid.Resource.Attribute.extendMotionSpec;
 			global::Rg.Plugins.Popup.Resource.Attribute.fabAlignmentMode = global::EcoCareApp.Droid.Resource.Attribute.fabAlignmentMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.fabAnimationMode = global::EcoCareApp.Droid.Resource.Attribute.fabAnimationMode;
 			global::Rg.Plugins.Popup.Resource.Attribute.fabCradleMargin = global::EcoCareApp.Droid.Resource.Attribute.fabCradleMargin;
 			global::Rg.Plugins.Popup.Resource.Attribute.fabCradleRoundedCornerRadius = global::EcoCareApp.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
 			global::Rg.Plugins.Popup.Resource.Attribute.fabCradleVerticalOffset = global::EcoCareApp.Droid.Resource.Attribute.fabCradleVerticalOffset;
@@ -298,20 +375,26 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.fontWeight = global::EcoCareApp.Droid.Resource.Attribute.fontWeight;
 			global::Rg.Plugins.Popup.Resource.Attribute.foregroundInsidePadding = global::EcoCareApp.Droid.Resource.Attribute.foregroundInsidePadding;
 			global::Rg.Plugins.Popup.Resource.Attribute.gapBetweenBars = global::EcoCareApp.Droid.Resource.Attribute.gapBetweenBars;
+			global::Rg.Plugins.Popup.Resource.Attribute.gestureInsetBottomIgnored = global::EcoCareApp.Droid.Resource.Attribute.gestureInsetBottomIgnored;
 			global::Rg.Plugins.Popup.Resource.Attribute.goIcon = global::EcoCareApp.Droid.Resource.Attribute.goIcon;
+			global::Rg.Plugins.Popup.Resource.Attribute.haloColor = global::EcoCareApp.Droid.Resource.Attribute.haloColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.haloRadius = global::EcoCareApp.Droid.Resource.Attribute.haloRadius;
 			global::Rg.Plugins.Popup.Resource.Attribute.headerLayout = global::EcoCareApp.Droid.Resource.Attribute.headerLayout;
 			global::Rg.Plugins.Popup.Resource.Attribute.height = global::EcoCareApp.Droid.Resource.Attribute.height;
 			global::Rg.Plugins.Popup.Resource.Attribute.helperText = global::EcoCareApp.Droid.Resource.Attribute.helperText;
 			global::Rg.Plugins.Popup.Resource.Attribute.helperTextEnabled = global::EcoCareApp.Droid.Resource.Attribute.helperTextEnabled;
 			global::Rg.Plugins.Popup.Resource.Attribute.helperTextTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.helperTextTextColor = global::EcoCareApp.Droid.Resource.Attribute.helperTextTextColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.hideMotionSpec = global::EcoCareApp.Droid.Resource.Attribute.hideMotionSpec;
 			global::Rg.Plugins.Popup.Resource.Attribute.hideOnContentScroll = global::EcoCareApp.Droid.Resource.Attribute.hideOnContentScroll;
 			global::Rg.Plugins.Popup.Resource.Attribute.hideOnScroll = global::EcoCareApp.Droid.Resource.Attribute.hideOnScroll;
 			global::Rg.Plugins.Popup.Resource.Attribute.hintAnimationEnabled = global::EcoCareApp.Droid.Resource.Attribute.hintAnimationEnabled;
 			global::Rg.Plugins.Popup.Resource.Attribute.hintEnabled = global::EcoCareApp.Droid.Resource.Attribute.hintEnabled;
 			global::Rg.Plugins.Popup.Resource.Attribute.hintTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.hintTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.hintTextColor = global::EcoCareApp.Droid.Resource.Attribute.hintTextColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.homeAsUpIndicator = global::EcoCareApp.Droid.Resource.Attribute.homeAsUpIndicator;
 			global::Rg.Plugins.Popup.Resource.Attribute.homeLayout = global::EcoCareApp.Droid.Resource.Attribute.homeLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.horizontalOffset = global::EcoCareApp.Droid.Resource.Attribute.horizontalOffset;
 			global::Rg.Plugins.Popup.Resource.Attribute.hoveredFocusedTranslationZ = global::EcoCareApp.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
 			global::Rg.Plugins.Popup.Resource.Attribute.icon = global::EcoCareApp.Droid.Resource.Attribute.icon;
 			global::Rg.Plugins.Popup.Resource.Attribute.iconEndPadding = global::EcoCareApp.Droid.Resource.Attribute.iconEndPadding;
@@ -327,19 +410,34 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.initialActivityCount = global::EcoCareApp.Droid.Resource.Attribute.initialActivityCount;
 			global::Rg.Plugins.Popup.Resource.Attribute.insetForeground = global::EcoCareApp.Droid.Resource.Attribute.insetForeground;
 			global::Rg.Plugins.Popup.Resource.Attribute.isLightTheme = global::EcoCareApp.Droid.Resource.Attribute.isLightTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.isMaterialTheme = global::EcoCareApp.Droid.Resource.Attribute.isMaterialTheme;
 			global::Rg.Plugins.Popup.Resource.Attribute.itemBackground = global::EcoCareApp.Droid.Resource.Attribute.itemBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemFillColor = global::EcoCareApp.Droid.Resource.Attribute.itemFillColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.itemHorizontalPadding = global::EcoCareApp.Droid.Resource.Attribute.itemHorizontalPadding;
 			global::Rg.Plugins.Popup.Resource.Attribute.itemHorizontalTranslationEnabled = global::EcoCareApp.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
 			global::Rg.Plugins.Popup.Resource.Attribute.itemIconPadding = global::EcoCareApp.Droid.Resource.Attribute.itemIconPadding;
 			global::Rg.Plugins.Popup.Resource.Attribute.itemIconSize = global::EcoCareApp.Droid.Resource.Attribute.itemIconSize;
 			global::Rg.Plugins.Popup.Resource.Attribute.itemIconTint = global::EcoCareApp.Droid.Resource.Attribute.itemIconTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemMaxLines = global::EcoCareApp.Droid.Resource.Attribute.itemMaxLines;
 			global::Rg.Plugins.Popup.Resource.Attribute.itemPadding = global::EcoCareApp.Droid.Resource.Attribute.itemPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemRippleColor = global::EcoCareApp.Droid.Resource.Attribute.itemRippleColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemShapeAppearance = global::EcoCareApp.Droid.Resource.Attribute.itemShapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemShapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Attribute.itemShapeAppearanceOverlay;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemShapeFillColor = global::EcoCareApp.Droid.Resource.Attribute.itemShapeFillColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemShapeInsetBottom = global::EcoCareApp.Droid.Resource.Attribute.itemShapeInsetBottom;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemShapeInsetEnd = global::EcoCareApp.Droid.Resource.Attribute.itemShapeInsetEnd;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemShapeInsetStart = global::EcoCareApp.Droid.Resource.Attribute.itemShapeInsetStart;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemShapeInsetTop = global::EcoCareApp.Droid.Resource.Attribute.itemShapeInsetTop;
 			global::Rg.Plugins.Popup.Resource.Attribute.itemSpacing = global::EcoCareApp.Droid.Resource.Attribute.itemSpacing;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemStrokeColor = global::EcoCareApp.Droid.Resource.Attribute.itemStrokeColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemStrokeWidth = global::EcoCareApp.Droid.Resource.Attribute.itemStrokeWidth;
 			global::Rg.Plugins.Popup.Resource.Attribute.itemTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.itemTextAppearance;
 			global::Rg.Plugins.Popup.Resource.Attribute.itemTextAppearanceActive = global::EcoCareApp.Droid.Resource.Attribute.itemTextAppearanceActive;
 			global::Rg.Plugins.Popup.Resource.Attribute.itemTextAppearanceInactive = global::EcoCareApp.Droid.Resource.Attribute.itemTextAppearanceInactive;
 			global::Rg.Plugins.Popup.Resource.Attribute.itemTextColor = global::EcoCareApp.Droid.Resource.Attribute.itemTextColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.keylines = global::EcoCareApp.Droid.Resource.Attribute.keylines;
+			global::Rg.Plugins.Popup.Resource.Attribute.labelBehavior = global::EcoCareApp.Droid.Resource.Attribute.labelBehavior;
+			global::Rg.Plugins.Popup.Resource.Attribute.labelStyle = global::EcoCareApp.Droid.Resource.Attribute.labelStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.labelVisibilityMode = global::EcoCareApp.Droid.Resource.Attribute.labelVisibilityMode;
 			global::Rg.Plugins.Popup.Resource.Attribute.lastBaselineToBottomHeight = global::EcoCareApp.Droid.Resource.Attribute.lastBaselineToBottomHeight;
 			global::Rg.Plugins.Popup.Resource.Attribute.layout = global::EcoCareApp.Droid.Resource.Attribute.layout;
@@ -355,6 +453,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.layout_scrollFlags = global::EcoCareApp.Droid.Resource.Attribute.layout_scrollFlags;
 			global::Rg.Plugins.Popup.Resource.Attribute.layout_scrollInterpolator = global::EcoCareApp.Droid.Resource.Attribute.layout_scrollInterpolator;
 			global::Rg.Plugins.Popup.Resource.Attribute.liftOnScroll = global::EcoCareApp.Droid.Resource.Attribute.liftOnScroll;
+			global::Rg.Plugins.Popup.Resource.Attribute.liftOnScrollTargetViewId = global::EcoCareApp.Droid.Resource.Attribute.liftOnScrollTargetViewId;
 			global::Rg.Plugins.Popup.Resource.Attribute.lineHeight = global::EcoCareApp.Droid.Resource.Attribute.lineHeight;
 			global::Rg.Plugins.Popup.Resource.Attribute.lineSpacing = global::EcoCareApp.Droid.Resource.Attribute.lineSpacing;
 			global::Rg.Plugins.Popup.Resource.Attribute.listChoiceBackgroundIndicator = global::EcoCareApp.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
@@ -374,22 +473,47 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.listPreferredItemPaddingStart = global::EcoCareApp.Droid.Resource.Attribute.listPreferredItemPaddingStart;
 			global::Rg.Plugins.Popup.Resource.Attribute.logo = global::EcoCareApp.Droid.Resource.Attribute.logo;
 			global::Rg.Plugins.Popup.Resource.Attribute.logoDescription = global::EcoCareApp.Droid.Resource.Attribute.logoDescription;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialAlertDialogBodyTextStyle = global::EcoCareApp.Droid.Resource.Attribute.materialAlertDialogBodyTextStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialAlertDialogTheme = global::EcoCareApp.Droid.Resource.Attribute.materialAlertDialogTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialAlertDialogTitleIconStyle = global::EcoCareApp.Droid.Resource.Attribute.materialAlertDialogTitleIconStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialAlertDialogTitlePanelStyle = global::EcoCareApp.Droid.Resource.Attribute.materialAlertDialogTitlePanelStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialAlertDialogTitleTextStyle = global::EcoCareApp.Droid.Resource.Attribute.materialAlertDialogTitleTextStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialButtonOutlinedStyle = global::EcoCareApp.Droid.Resource.Attribute.materialButtonOutlinedStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.materialButtonStyle = global::EcoCareApp.Droid.Resource.Attribute.materialButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialButtonToggleGroupStyle = global::EcoCareApp.Droid.Resource.Attribute.materialButtonToggleGroupStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialCalendarDay = global::EcoCareApp.Droid.Resource.Attribute.materialCalendarDay;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialCalendarFullscreenTheme = global::EcoCareApp.Droid.Resource.Attribute.materialCalendarFullscreenTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialCalendarHeaderConfirmButton = global::EcoCareApp.Droid.Resource.Attribute.materialCalendarHeaderConfirmButton;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialCalendarHeaderDivider = global::EcoCareApp.Droid.Resource.Attribute.materialCalendarHeaderDivider;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialCalendarHeaderLayout = global::EcoCareApp.Droid.Resource.Attribute.materialCalendarHeaderLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialCalendarHeaderSelection = global::EcoCareApp.Droid.Resource.Attribute.materialCalendarHeaderSelection;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialCalendarHeaderTitle = global::EcoCareApp.Droid.Resource.Attribute.materialCalendarHeaderTitle;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialCalendarHeaderToggleButton = global::EcoCareApp.Droid.Resource.Attribute.materialCalendarHeaderToggleButton;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialCalendarStyle = global::EcoCareApp.Droid.Resource.Attribute.materialCalendarStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialCalendarTheme = global::EcoCareApp.Droid.Resource.Attribute.materialCalendarTheme;
 			global::Rg.Plugins.Popup.Resource.Attribute.materialCardViewStyle = global::EcoCareApp.Droid.Resource.Attribute.materialCardViewStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialThemeOverlay = global::EcoCareApp.Droid.Resource.Attribute.materialThemeOverlay;
 			global::Rg.Plugins.Popup.Resource.Attribute.maxActionInlineWidth = global::EcoCareApp.Droid.Resource.Attribute.maxActionInlineWidth;
 			global::Rg.Plugins.Popup.Resource.Attribute.maxButtonHeight = global::EcoCareApp.Droid.Resource.Attribute.maxButtonHeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.maxCharacterCount = global::EcoCareApp.Droid.Resource.Attribute.maxCharacterCount;
 			global::Rg.Plugins.Popup.Resource.Attribute.maxImageSize = global::EcoCareApp.Droid.Resource.Attribute.maxImageSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.maxLines = global::EcoCareApp.Droid.Resource.Attribute.maxLines;
 			global::Rg.Plugins.Popup.Resource.Attribute.measureWithLargestChild = global::EcoCareApp.Droid.Resource.Attribute.measureWithLargestChild;
 			global::Rg.Plugins.Popup.Resource.Attribute.menu = global::EcoCareApp.Droid.Resource.Attribute.menu;
+			global::Rg.Plugins.Popup.Resource.Attribute.minTouchTargetSize = global::EcoCareApp.Droid.Resource.Attribute.minTouchTargetSize;
 			global::Rg.Plugins.Popup.Resource.Attribute.multiChoiceItemLayout = global::EcoCareApp.Droid.Resource.Attribute.multiChoiceItemLayout;
 			global::Rg.Plugins.Popup.Resource.Attribute.navigationContentDescription = global::EcoCareApp.Droid.Resource.Attribute.navigationContentDescription;
 			global::Rg.Plugins.Popup.Resource.Attribute.navigationIcon = global::EcoCareApp.Droid.Resource.Attribute.navigationIcon;
 			global::Rg.Plugins.Popup.Resource.Attribute.navigationMode = global::EcoCareApp.Droid.Resource.Attribute.navigationMode;
 			global::Rg.Plugins.Popup.Resource.Attribute.navigationViewStyle = global::EcoCareApp.Droid.Resource.Attribute.navigationViewStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.number = global::EcoCareApp.Droid.Resource.Attribute.number;
 			global::Rg.Plugins.Popup.Resource.Attribute.numericModifiers = global::EcoCareApp.Droid.Resource.Attribute.numericModifiers;
 			global::Rg.Plugins.Popup.Resource.Attribute.overlapAnchor = global::EcoCareApp.Droid.Resource.Attribute.overlapAnchor;
 			global::Rg.Plugins.Popup.Resource.Attribute.paddingBottomNoButtons = global::EcoCareApp.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Rg.Plugins.Popup.Resource.Attribute.paddingBottomSystemWindowInsets = global::EcoCareApp.Droid.Resource.Attribute.paddingBottomSystemWindowInsets;
 			global::Rg.Plugins.Popup.Resource.Attribute.paddingEnd = global::EcoCareApp.Droid.Resource.Attribute.paddingEnd;
+			global::Rg.Plugins.Popup.Resource.Attribute.paddingLeftSystemWindowInsets = global::EcoCareApp.Droid.Resource.Attribute.paddingLeftSystemWindowInsets;
+			global::Rg.Plugins.Popup.Resource.Attribute.paddingRightSystemWindowInsets = global::EcoCareApp.Droid.Resource.Attribute.paddingRightSystemWindowInsets;
 			global::Rg.Plugins.Popup.Resource.Attribute.paddingStart = global::EcoCareApp.Droid.Resource.Attribute.paddingStart;
 			global::Rg.Plugins.Popup.Resource.Attribute.paddingTopNoTitle = global::EcoCareApp.Droid.Resource.Attribute.paddingTopNoTitle;
 			global::Rg.Plugins.Popup.Resource.Attribute.panelBackground = global::EcoCareApp.Droid.Resource.Attribute.panelBackground;
@@ -400,9 +524,16 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.passwordToggleEnabled = global::EcoCareApp.Droid.Resource.Attribute.passwordToggleEnabled;
 			global::Rg.Plugins.Popup.Resource.Attribute.passwordToggleTint = global::EcoCareApp.Droid.Resource.Attribute.passwordToggleTint;
 			global::Rg.Plugins.Popup.Resource.Attribute.passwordToggleTintMode = global::EcoCareApp.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.placeholderText = global::EcoCareApp.Droid.Resource.Attribute.placeholderText;
+			global::Rg.Plugins.Popup.Resource.Attribute.placeholderTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.placeholderTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.placeholderTextColor = global::EcoCareApp.Droid.Resource.Attribute.placeholderTextColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.popupMenuBackground = global::EcoCareApp.Droid.Resource.Attribute.popupMenuBackground;
 			global::Rg.Plugins.Popup.Resource.Attribute.popupMenuStyle = global::EcoCareApp.Droid.Resource.Attribute.popupMenuStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.popupTheme = global::EcoCareApp.Droid.Resource.Attribute.popupTheme;
 			global::Rg.Plugins.Popup.Resource.Attribute.popupWindowStyle = global::EcoCareApp.Droid.Resource.Attribute.popupWindowStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.prefixText = global::EcoCareApp.Droid.Resource.Attribute.prefixText;
+			global::Rg.Plugins.Popup.Resource.Attribute.prefixTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.prefixTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.prefixTextColor = global::EcoCareApp.Droid.Resource.Attribute.prefixTextColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.preserveIconSpacing = global::EcoCareApp.Droid.Resource.Attribute.preserveIconSpacing;
 			global::Rg.Plugins.Popup.Resource.Attribute.pressedTranslationZ = global::EcoCareApp.Droid.Resource.Attribute.pressedTranslationZ;
 			global::Rg.Plugins.Popup.Resource.Attribute.progressBarPadding = global::EcoCareApp.Droid.Resource.Attribute.progressBarPadding;
@@ -410,6 +541,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.queryBackground = global::EcoCareApp.Droid.Resource.Attribute.queryBackground;
 			global::Rg.Plugins.Popup.Resource.Attribute.queryHint = global::EcoCareApp.Droid.Resource.Attribute.queryHint;
 			global::Rg.Plugins.Popup.Resource.Attribute.radioButtonStyle = global::EcoCareApp.Droid.Resource.Attribute.radioButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.rangeFillColor = global::EcoCareApp.Droid.Resource.Attribute.rangeFillColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.ratingBarStyle = global::EcoCareApp.Droid.Resource.Attribute.ratingBarStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.ratingBarStyleIndicator = global::EcoCareApp.Droid.Resource.Attribute.ratingBarStyleIndicator;
 			global::Rg.Plugins.Popup.Resource.Attribute.ratingBarStyleSmall = global::EcoCareApp.Droid.Resource.Attribute.ratingBarStyleSmall;
@@ -419,22 +551,32 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.scrimAnimationDuration = global::EcoCareApp.Droid.Resource.Attribute.scrimAnimationDuration;
 			global::Rg.Plugins.Popup.Resource.Attribute.scrimBackground = global::EcoCareApp.Droid.Resource.Attribute.scrimBackground;
 			global::Rg.Plugins.Popup.Resource.Attribute.scrimVisibleHeightTrigger = global::EcoCareApp.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Rg.Plugins.Popup.Resource.Attribute.scrollViewStyle = global::EcoCareApp.Droid.Resource.Attribute.scrollViewStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.searchHintIcon = global::EcoCareApp.Droid.Resource.Attribute.searchHintIcon;
 			global::Rg.Plugins.Popup.Resource.Attribute.searchIcon = global::EcoCareApp.Droid.Resource.Attribute.searchIcon;
 			global::Rg.Plugins.Popup.Resource.Attribute.searchViewStyle = global::EcoCareApp.Droid.Resource.Attribute.searchViewStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.seekBarStyle = global::EcoCareApp.Droid.Resource.Attribute.seekBarStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.selectableItemBackground = global::EcoCareApp.Droid.Resource.Attribute.selectableItemBackground;
 			global::Rg.Plugins.Popup.Resource.Attribute.selectableItemBackgroundBorderless = global::EcoCareApp.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Rg.Plugins.Popup.Resource.Attribute.selectionRequired = global::EcoCareApp.Droid.Resource.Attribute.selectionRequired;
+			global::Rg.Plugins.Popup.Resource.Attribute.shapeAppearance = global::EcoCareApp.Droid.Resource.Attribute.shapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.shapeAppearanceLargeComponent = global::EcoCareApp.Droid.Resource.Attribute.shapeAppearanceLargeComponent;
+			global::Rg.Plugins.Popup.Resource.Attribute.shapeAppearanceMediumComponent = global::EcoCareApp.Droid.Resource.Attribute.shapeAppearanceMediumComponent;
+			global::Rg.Plugins.Popup.Resource.Attribute.shapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Attribute.shapeAppearanceOverlay;
+			global::Rg.Plugins.Popup.Resource.Attribute.shapeAppearanceSmallComponent = global::EcoCareApp.Droid.Resource.Attribute.shapeAppearanceSmallComponent;
 			global::Rg.Plugins.Popup.Resource.Attribute.showAsAction = global::EcoCareApp.Droid.Resource.Attribute.showAsAction;
 			global::Rg.Plugins.Popup.Resource.Attribute.showDividers = global::EcoCareApp.Droid.Resource.Attribute.showDividers;
 			global::Rg.Plugins.Popup.Resource.Attribute.showMotionSpec = global::EcoCareApp.Droid.Resource.Attribute.showMotionSpec;
 			global::Rg.Plugins.Popup.Resource.Attribute.showText = global::EcoCareApp.Droid.Resource.Attribute.showText;
 			global::Rg.Plugins.Popup.Resource.Attribute.showTitle = global::EcoCareApp.Droid.Resource.Attribute.showTitle;
+			global::Rg.Plugins.Popup.Resource.Attribute.shrinkMotionSpec = global::EcoCareApp.Droid.Resource.Attribute.shrinkMotionSpec;
 			global::Rg.Plugins.Popup.Resource.Attribute.singleChoiceItemLayout = global::EcoCareApp.Droid.Resource.Attribute.singleChoiceItemLayout;
 			global::Rg.Plugins.Popup.Resource.Attribute.singleLine = global::EcoCareApp.Droid.Resource.Attribute.singleLine;
 			global::Rg.Plugins.Popup.Resource.Attribute.singleSelection = global::EcoCareApp.Droid.Resource.Attribute.singleSelection;
+			global::Rg.Plugins.Popup.Resource.Attribute.sliderStyle = global::EcoCareApp.Droid.Resource.Attribute.sliderStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.snackbarButtonStyle = global::EcoCareApp.Droid.Resource.Attribute.snackbarButtonStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.snackbarStyle = global::EcoCareApp.Droid.Resource.Attribute.snackbarStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.snackbarTextViewStyle = global::EcoCareApp.Droid.Resource.Attribute.snackbarTextViewStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.spanCount = global::EcoCareApp.Droid.Resource.Attribute.spanCount;
 			global::Rg.Plugins.Popup.Resource.Attribute.spinBars = global::EcoCareApp.Droid.Resource.Attribute.spinBars;
 			global::Rg.Plugins.Popup.Resource.Attribute.spinnerDropDownItemStyle = global::EcoCareApp.Droid.Resource.Attribute.spinnerDropDownItemStyle;
@@ -442,12 +584,19 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.splitTrack = global::EcoCareApp.Droid.Resource.Attribute.splitTrack;
 			global::Rg.Plugins.Popup.Resource.Attribute.srcCompat = global::EcoCareApp.Droid.Resource.Attribute.srcCompat;
 			global::Rg.Plugins.Popup.Resource.Attribute.stackFromEnd = global::EcoCareApp.Droid.Resource.Attribute.stackFromEnd;
+			global::Rg.Plugins.Popup.Resource.Attribute.startIconCheckable = global::EcoCareApp.Droid.Resource.Attribute.startIconCheckable;
+			global::Rg.Plugins.Popup.Resource.Attribute.startIconContentDescription = global::EcoCareApp.Droid.Resource.Attribute.startIconContentDescription;
+			global::Rg.Plugins.Popup.Resource.Attribute.startIconDrawable = global::EcoCareApp.Droid.Resource.Attribute.startIconDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.startIconTint = global::EcoCareApp.Droid.Resource.Attribute.startIconTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.startIconTintMode = global::EcoCareApp.Droid.Resource.Attribute.startIconTintMode;
 			global::Rg.Plugins.Popup.Resource.Attribute.state_above_anchor = global::EcoCareApp.Droid.Resource.Attribute.state_above_anchor;
 			global::Rg.Plugins.Popup.Resource.Attribute.state_collapsed = global::EcoCareApp.Droid.Resource.Attribute.state_collapsed;
 			global::Rg.Plugins.Popup.Resource.Attribute.state_collapsible = global::EcoCareApp.Droid.Resource.Attribute.state_collapsible;
+			global::Rg.Plugins.Popup.Resource.Attribute.state_dragged = global::EcoCareApp.Droid.Resource.Attribute.state_dragged;
 			global::Rg.Plugins.Popup.Resource.Attribute.state_liftable = global::EcoCareApp.Droid.Resource.Attribute.state_liftable;
 			global::Rg.Plugins.Popup.Resource.Attribute.state_lifted = global::EcoCareApp.Droid.Resource.Attribute.state_lifted;
 			global::Rg.Plugins.Popup.Resource.Attribute.statusBarBackground = global::EcoCareApp.Droid.Resource.Attribute.statusBarBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.statusBarForeground = global::EcoCareApp.Droid.Resource.Attribute.statusBarForeground;
 			global::Rg.Plugins.Popup.Resource.Attribute.statusBarScrim = global::EcoCareApp.Droid.Resource.Attribute.statusBarScrim;
 			global::Rg.Plugins.Popup.Resource.Attribute.strokeColor = global::EcoCareApp.Droid.Resource.Attribute.strokeColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.strokeWidth = global::EcoCareApp.Droid.Resource.Attribute.strokeWidth;
@@ -457,7 +606,11 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.subtitleTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.subtitleTextAppearance;
 			global::Rg.Plugins.Popup.Resource.Attribute.subtitleTextColor = global::EcoCareApp.Droid.Resource.Attribute.subtitleTextColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.subtitleTextStyle = global::EcoCareApp.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.suffixText = global::EcoCareApp.Droid.Resource.Attribute.suffixText;
+			global::Rg.Plugins.Popup.Resource.Attribute.suffixTextAppearance = global::EcoCareApp.Droid.Resource.Attribute.suffixTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.suffixTextColor = global::EcoCareApp.Droid.Resource.Attribute.suffixTextColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.suggestionRowLayout = global::EcoCareApp.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.swipeRefreshLayoutProgressSpinnerBackgroundColor = global::EcoCareApp.Droid.Resource.Attribute.swipeRefreshLayoutProgressSpinnerBackgroundColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.switchMinWidth = global::EcoCareApp.Droid.Resource.Attribute.switchMinWidth;
 			global::Rg.Plugins.Popup.Resource.Attribute.switchPadding = global::EcoCareApp.Droid.Resource.Attribute.switchPadding;
 			global::Rg.Plugins.Popup.Resource.Attribute.switchStyle = global::EcoCareApp.Droid.Resource.Attribute.switchStyle;
@@ -500,6 +653,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceHeadline5 = global::EcoCareApp.Droid.Resource.Attribute.textAppearanceHeadline5;
 			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceHeadline6 = global::EcoCareApp.Droid.Resource.Attribute.textAppearanceHeadline6;
 			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceLargePopupMenu = global::EcoCareApp.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceLineHeightEnabled = global::EcoCareApp.Droid.Resource.Attribute.textAppearanceLineHeightEnabled;
 			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceListItem = global::EcoCareApp.Droid.Resource.Attribute.textAppearanceListItem;
 			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceListItemSecondary = global::EcoCareApp.Droid.Resource.Attribute.textAppearanceListItemSecondary;
 			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceListItemSmall = global::EcoCareApp.Droid.Resource.Attribute.textAppearanceListItemSmall;
@@ -513,14 +667,22 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.textColorAlertDialogListItem = global::EcoCareApp.Droid.Resource.Attribute.textColorAlertDialogListItem;
 			global::Rg.Plugins.Popup.Resource.Attribute.textColorSearchUrl = global::EcoCareApp.Droid.Resource.Attribute.textColorSearchUrl;
 			global::Rg.Plugins.Popup.Resource.Attribute.textEndPadding = global::EcoCareApp.Droid.Resource.Attribute.textEndPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.textInputLayoutFocusedRectEnabled = global::EcoCareApp.Droid.Resource.Attribute.textInputLayoutFocusedRectEnabled;
 			global::Rg.Plugins.Popup.Resource.Attribute.textInputStyle = global::EcoCareApp.Droid.Resource.Attribute.textInputStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.textLocale = global::EcoCareApp.Droid.Resource.Attribute.textLocale;
 			global::Rg.Plugins.Popup.Resource.Attribute.textStartPadding = global::EcoCareApp.Droid.Resource.Attribute.textStartPadding;
 			global::Rg.Plugins.Popup.Resource.Attribute.theme = global::EcoCareApp.Droid.Resource.Attribute.theme;
+			global::Rg.Plugins.Popup.Resource.Attribute.themeLineHeight = global::EcoCareApp.Droid.Resource.Attribute.themeLineHeight;
 			global::Rg.Plugins.Popup.Resource.Attribute.thickness = global::EcoCareApp.Droid.Resource.Attribute.thickness;
+			global::Rg.Plugins.Popup.Resource.Attribute.thumbColor = global::EcoCareApp.Droid.Resource.Attribute.thumbColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.thumbElevation = global::EcoCareApp.Droid.Resource.Attribute.thumbElevation;
+			global::Rg.Plugins.Popup.Resource.Attribute.thumbRadius = global::EcoCareApp.Droid.Resource.Attribute.thumbRadius;
 			global::Rg.Plugins.Popup.Resource.Attribute.thumbTextPadding = global::EcoCareApp.Droid.Resource.Attribute.thumbTextPadding;
 			global::Rg.Plugins.Popup.Resource.Attribute.thumbTint = global::EcoCareApp.Droid.Resource.Attribute.thumbTint;
 			global::Rg.Plugins.Popup.Resource.Attribute.thumbTintMode = global::EcoCareApp.Droid.Resource.Attribute.thumbTintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.tickColor = global::EcoCareApp.Droid.Resource.Attribute.tickColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.tickColorActive = global::EcoCareApp.Droid.Resource.Attribute.tickColorActive;
+			global::Rg.Plugins.Popup.Resource.Attribute.tickColorInactive = global::EcoCareApp.Droid.Resource.Attribute.tickColorInactive;
 			global::Rg.Plugins.Popup.Resource.Attribute.tickMark = global::EcoCareApp.Droid.Resource.Attribute.tickMark;
 			global::Rg.Plugins.Popup.Resource.Attribute.tickMarkTint = global::EcoCareApp.Droid.Resource.Attribute.tickMarkTint;
 			global::Rg.Plugins.Popup.Resource.Attribute.tickMarkTintMode = global::EcoCareApp.Droid.Resource.Attribute.tickMarkTintMode;
@@ -542,12 +704,21 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.toolbarStyle = global::EcoCareApp.Droid.Resource.Attribute.toolbarStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.tooltipForegroundColor = global::EcoCareApp.Droid.Resource.Attribute.tooltipForegroundColor;
 			global::Rg.Plugins.Popup.Resource.Attribute.tooltipFrameBackground = global::EcoCareApp.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.tooltipStyle = global::EcoCareApp.Droid.Resource.Attribute.tooltipStyle;
 			global::Rg.Plugins.Popup.Resource.Attribute.tooltipText = global::EcoCareApp.Droid.Resource.Attribute.tooltipText;
 			global::Rg.Plugins.Popup.Resource.Attribute.track = global::EcoCareApp.Droid.Resource.Attribute.track;
+			global::Rg.Plugins.Popup.Resource.Attribute.trackColor = global::EcoCareApp.Droid.Resource.Attribute.trackColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.trackColorActive = global::EcoCareApp.Droid.Resource.Attribute.trackColorActive;
+			global::Rg.Plugins.Popup.Resource.Attribute.trackColorInactive = global::EcoCareApp.Droid.Resource.Attribute.trackColorInactive;
+			global::Rg.Plugins.Popup.Resource.Attribute.trackHeight = global::EcoCareApp.Droid.Resource.Attribute.trackHeight;
 			global::Rg.Plugins.Popup.Resource.Attribute.trackTint = global::EcoCareApp.Droid.Resource.Attribute.trackTint;
 			global::Rg.Plugins.Popup.Resource.Attribute.trackTintMode = global::EcoCareApp.Droid.Resource.Attribute.trackTintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.transitionShapeAppearance = global::EcoCareApp.Droid.Resource.Attribute.transitionShapeAppearance;
 			global::Rg.Plugins.Popup.Resource.Attribute.ttcIndex = global::EcoCareApp.Droid.Resource.Attribute.ttcIndex;
 			global::Rg.Plugins.Popup.Resource.Attribute.useCompatPadding = global::EcoCareApp.Droid.Resource.Attribute.useCompatPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.useMaterialThemeColors = global::EcoCareApp.Droid.Resource.Attribute.useMaterialThemeColors;
+			global::Rg.Plugins.Popup.Resource.Attribute.values = global::EcoCareApp.Droid.Resource.Attribute.values;
+			global::Rg.Plugins.Popup.Resource.Attribute.verticalOffset = global::EcoCareApp.Droid.Resource.Attribute.verticalOffset;
 			global::Rg.Plugins.Popup.Resource.Attribute.viewInflaterClass = global::EcoCareApp.Droid.Resource.Attribute.viewInflaterClass;
 			global::Rg.Plugins.Popup.Resource.Attribute.voiceIcon = global::EcoCareApp.Droid.Resource.Attribute.voiceIcon;
 			global::Rg.Plugins.Popup.Resource.Attribute.windowActionBar = global::EcoCareApp.Droid.Resource.Attribute.windowActionBar;
@@ -560,6 +731,9 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Attribute.windowMinWidthMajor = global::EcoCareApp.Droid.Resource.Attribute.windowMinWidthMajor;
 			global::Rg.Plugins.Popup.Resource.Attribute.windowMinWidthMinor = global::EcoCareApp.Droid.Resource.Attribute.windowMinWidthMinor;
 			global::Rg.Plugins.Popup.Resource.Attribute.windowNoTitle = global::EcoCareApp.Droid.Resource.Attribute.windowNoTitle;
+			global::Rg.Plugins.Popup.Resource.Attribute.yearSelectedStyle = global::EcoCareApp.Droid.Resource.Attribute.yearSelectedStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.yearStyle = global::EcoCareApp.Droid.Resource.Attribute.yearStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.yearTodayStyle = global::EcoCareApp.Droid.Resource.Attribute.yearTodayStyle;
 			global::Rg.Plugins.Popup.Resource.Boolean.abc_action_bar_embed_tabs = global::EcoCareApp.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
 			global::Rg.Plugins.Popup.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::EcoCareApp.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
 			global::Rg.Plugins.Popup.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::EcoCareApp.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
@@ -568,6 +742,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Color.abc_btn_colored_borderless_text_material = global::EcoCareApp.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
 			global::Rg.Plugins.Popup.Resource.Color.abc_btn_colored_text_material = global::EcoCareApp.Droid.Resource.Color.abc_btn_colored_text_material;
 			global::Rg.Plugins.Popup.Resource.Color.abc_color_highlight_material = global::EcoCareApp.Droid.Resource.Color.abc_color_highlight_material;
+			global::Rg.Plugins.Popup.Resource.Color.abc_decor_view_status_guard = global::EcoCareApp.Droid.Resource.Color.abc_decor_view_status_guard;
+			global::Rg.Plugins.Popup.Resource.Color.abc_decor_view_status_guard_light = global::EcoCareApp.Droid.Resource.Color.abc_decor_view_status_guard_light;
 			global::Rg.Plugins.Popup.Resource.Color.abc_hint_foreground_material_dark = global::EcoCareApp.Droid.Resource.Color.abc_hint_foreground_material_dark;
 			global::Rg.Plugins.Popup.Resource.Color.abc_hint_foreground_material_light = global::EcoCareApp.Droid.Resource.Color.abc_hint_foreground_material_light;
 			global::Rg.Plugins.Popup.Resource.Color.abc_primary_text_disable_only_material_dark = global::EcoCareApp.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
@@ -588,6 +764,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Color.abc_tint_switch_track = global::EcoCareApp.Droid.Resource.Color.abc_tint_switch_track;
 			global::Rg.Plugins.Popup.Resource.Color.accent_material_dark = global::EcoCareApp.Droid.Resource.Color.accent_material_dark;
 			global::Rg.Plugins.Popup.Resource.Color.accent_material_light = global::EcoCareApp.Droid.Resource.Color.accent_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.androidx_core_ripple_material_light = global::EcoCareApp.Droid.Resource.Color.androidx_core_ripple_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.androidx_core_secondary_text_default_material_light = global::EcoCareApp.Droid.Resource.Color.androidx_core_secondary_text_default_material_light;
 			global::Rg.Plugins.Popup.Resource.Color.background_floating_material_dark = global::EcoCareApp.Droid.Resource.Color.background_floating_material_dark;
 			global::Rg.Plugins.Popup.Resource.Color.background_floating_material_light = global::EcoCareApp.Droid.Resource.Color.background_floating_material_light;
 			global::Rg.Plugins.Popup.Resource.Color.background_material_dark = global::EcoCareApp.Droid.Resource.Color.background_material_dark;
@@ -608,9 +786,35 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Color.cardview_light_background = global::EcoCareApp.Droid.Resource.Color.cardview_light_background;
 			global::Rg.Plugins.Popup.Resource.Color.cardview_shadow_end_color = global::EcoCareApp.Droid.Resource.Color.cardview_shadow_end_color;
 			global::Rg.Plugins.Popup.Resource.Color.cardview_shadow_start_color = global::EcoCareApp.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Rg.Plugins.Popup.Resource.Color.checkbox_themeable_attribute_color = global::EcoCareApp.Droid.Resource.Color.checkbox_themeable_attribute_color;
 			global::Rg.Plugins.Popup.Resource.Color.design_bottom_navigation_shadow_color = global::EcoCareApp.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_box_stroke_color = global::EcoCareApp.Droid.Resource.Color.design_box_stroke_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_background = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_background;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_error = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_error;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_on_background = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_on_background;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_on_error = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_on_error;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_on_primary = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_on_primary;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_on_secondary = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_on_secondary;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_on_surface = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_on_surface;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_primary = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_primary;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_primary_dark = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_primary_dark;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_primary_variant = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_primary_variant;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_secondary = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_secondary;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_secondary_variant = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_secondary_variant;
+			global::Rg.Plugins.Popup.Resource.Color.design_dark_default_color_surface = global::EcoCareApp.Droid.Resource.Color.design_dark_default_color_surface;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_background = global::EcoCareApp.Droid.Resource.Color.design_default_color_background;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_error = global::EcoCareApp.Droid.Resource.Color.design_default_color_error;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_on_background = global::EcoCareApp.Droid.Resource.Color.design_default_color_on_background;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_on_error = global::EcoCareApp.Droid.Resource.Color.design_default_color_on_error;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_on_primary = global::EcoCareApp.Droid.Resource.Color.design_default_color_on_primary;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_on_secondary = global::EcoCareApp.Droid.Resource.Color.design_default_color_on_secondary;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_on_surface = global::EcoCareApp.Droid.Resource.Color.design_default_color_on_surface;
 			global::Rg.Plugins.Popup.Resource.Color.design_default_color_primary = global::EcoCareApp.Droid.Resource.Color.design_default_color_primary;
 			global::Rg.Plugins.Popup.Resource.Color.design_default_color_primary_dark = global::EcoCareApp.Droid.Resource.Color.design_default_color_primary_dark;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_primary_variant = global::EcoCareApp.Droid.Resource.Color.design_default_color_primary_variant;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_secondary = global::EcoCareApp.Droid.Resource.Color.design_default_color_secondary;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_secondary_variant = global::EcoCareApp.Droid.Resource.Color.design_default_color_secondary_variant;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_surface = global::EcoCareApp.Droid.Resource.Color.design_default_color_surface;
 			global::Rg.Plugins.Popup.Resource.Color.design_error = global::EcoCareApp.Droid.Resource.Color.design_error;
 			global::Rg.Plugins.Popup.Resource.Color.design_fab_shadow_end_color = global::EcoCareApp.Droid.Resource.Color.design_fab_shadow_end_color;
 			global::Rg.Plugins.Popup.Resource.Color.design_fab_shadow_mid_color = global::EcoCareApp.Droid.Resource.Color.design_fab_shadow_mid_color;
@@ -619,6 +823,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Color.design_fab_stroke_end_outer_color = global::EcoCareApp.Droid.Resource.Color.design_fab_stroke_end_outer_color;
 			global::Rg.Plugins.Popup.Resource.Color.design_fab_stroke_top_inner_color = global::EcoCareApp.Droid.Resource.Color.design_fab_stroke_top_inner_color;
 			global::Rg.Plugins.Popup.Resource.Color.design_fab_stroke_top_outer_color = global::EcoCareApp.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_icon_tint = global::EcoCareApp.Droid.Resource.Color.design_icon_tint;
 			global::Rg.Plugins.Popup.Resource.Color.design_snackbar_background_color = global::EcoCareApp.Droid.Resource.Color.design_snackbar_background_color;
 			global::Rg.Plugins.Popup.Resource.Color.dim_foreground_disabled_material_dark = global::EcoCareApp.Droid.Resource.Color.dim_foreground_disabled_material_dark;
 			global::Rg.Plugins.Popup.Resource.Color.dim_foreground_disabled_material_light = global::EcoCareApp.Droid.Resource.Color.dim_foreground_disabled_material_light;
@@ -642,17 +847,56 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Color.material_grey_800 = global::EcoCareApp.Droid.Resource.Color.material_grey_800;
 			global::Rg.Plugins.Popup.Resource.Color.material_grey_850 = global::EcoCareApp.Droid.Resource.Color.material_grey_850;
 			global::Rg.Plugins.Popup.Resource.Color.material_grey_900 = global::EcoCareApp.Droid.Resource.Color.material_grey_900;
+			global::Rg.Plugins.Popup.Resource.Color.material_on_background_disabled = global::EcoCareApp.Droid.Resource.Color.material_on_background_disabled;
+			global::Rg.Plugins.Popup.Resource.Color.material_on_background_emphasis_high_type = global::EcoCareApp.Droid.Resource.Color.material_on_background_emphasis_high_type;
+			global::Rg.Plugins.Popup.Resource.Color.material_on_background_emphasis_medium = global::EcoCareApp.Droid.Resource.Color.material_on_background_emphasis_medium;
+			global::Rg.Plugins.Popup.Resource.Color.material_on_primary_disabled = global::EcoCareApp.Droid.Resource.Color.material_on_primary_disabled;
+			global::Rg.Plugins.Popup.Resource.Color.material_on_primary_emphasis_high_type = global::EcoCareApp.Droid.Resource.Color.material_on_primary_emphasis_high_type;
+			global::Rg.Plugins.Popup.Resource.Color.material_on_primary_emphasis_medium = global::EcoCareApp.Droid.Resource.Color.material_on_primary_emphasis_medium;
+			global::Rg.Plugins.Popup.Resource.Color.material_on_surface_disabled = global::EcoCareApp.Droid.Resource.Color.material_on_surface_disabled;
+			global::Rg.Plugins.Popup.Resource.Color.material_on_surface_emphasis_high_type = global::EcoCareApp.Droid.Resource.Color.material_on_surface_emphasis_high_type;
+			global::Rg.Plugins.Popup.Resource.Color.material_on_surface_emphasis_medium = global::EcoCareApp.Droid.Resource.Color.material_on_surface_emphasis_medium;
+			global::Rg.Plugins.Popup.Resource.Color.material_on_surface_stroke = global::EcoCareApp.Droid.Resource.Color.material_on_surface_stroke;
+			global::Rg.Plugins.Popup.Resource.Color.material_slider_active_tick_marks_color = global::EcoCareApp.Droid.Resource.Color.material_slider_active_tick_marks_color;
+			global::Rg.Plugins.Popup.Resource.Color.material_slider_active_track_color = global::EcoCareApp.Droid.Resource.Color.material_slider_active_track_color;
+			global::Rg.Plugins.Popup.Resource.Color.material_slider_halo_color = global::EcoCareApp.Droid.Resource.Color.material_slider_halo_color;
+			global::Rg.Plugins.Popup.Resource.Color.material_slider_inactive_tick_marks_color = global::EcoCareApp.Droid.Resource.Color.material_slider_inactive_tick_marks_color;
+			global::Rg.Plugins.Popup.Resource.Color.material_slider_inactive_track_color = global::EcoCareApp.Droid.Resource.Color.material_slider_inactive_track_color;
+			global::Rg.Plugins.Popup.Resource.Color.material_slider_thumb_color = global::EcoCareApp.Droid.Resource.Color.material_slider_thumb_color;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_bg_color_selector = global::EcoCareApp.Droid.Resource.Color.mtrl_btn_bg_color_selector;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_ripple_color = global::EcoCareApp.Droid.Resource.Color.mtrl_btn_ripple_color;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_stroke_color_selector = global::EcoCareApp.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_text_btn_bg_color_selector = global::EcoCareApp.Droid.Resource.Color.mtrl_btn_text_btn_bg_color_selector;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_text_btn_ripple_color = global::EcoCareApp.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_text_color_disabled = global::EcoCareApp.Droid.Resource.Color.mtrl_btn_text_color_disabled;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_text_color_selector = global::EcoCareApp.Droid.Resource.Color.mtrl_btn_text_color_selector;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_transparent_bg_color = global::EcoCareApp.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_calendar_item_stroke_color = global::EcoCareApp.Droid.Resource.Color.mtrl_calendar_item_stroke_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_calendar_selected_range = global::EcoCareApp.Droid.Resource.Color.mtrl_calendar_selected_range;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_card_view_foreground = global::EcoCareApp.Droid.Resource.Color.mtrl_card_view_foreground;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_card_view_ripple = global::EcoCareApp.Droid.Resource.Color.mtrl_card_view_ripple;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_chip_background_color = global::EcoCareApp.Droid.Resource.Color.mtrl_chip_background_color;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_chip_close_icon_tint = global::EcoCareApp.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_chip_surface_color = global::EcoCareApp.Droid.Resource.Color.mtrl_chip_surface_color;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_chip_text_color = global::EcoCareApp.Droid.Resource.Color.mtrl_chip_text_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_choice_chip_background_color = global::EcoCareApp.Droid.Resource.Color.mtrl_choice_chip_background_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_choice_chip_ripple_color = global::EcoCareApp.Droid.Resource.Color.mtrl_choice_chip_ripple_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_choice_chip_text_color = global::EcoCareApp.Droid.Resource.Color.mtrl_choice_chip_text_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_error = global::EcoCareApp.Droid.Resource.Color.mtrl_error;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_fab_bg_color_selector = global::EcoCareApp.Droid.Resource.Color.mtrl_fab_bg_color_selector;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_fab_icon_text_color_selector = global::EcoCareApp.Droid.Resource.Color.mtrl_fab_icon_text_color_selector;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_fab_ripple_color = global::EcoCareApp.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_filled_background_color = global::EcoCareApp.Droid.Resource.Color.mtrl_filled_background_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_filled_icon_tint = global::EcoCareApp.Droid.Resource.Color.mtrl_filled_icon_tint;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_filled_stroke_color = global::EcoCareApp.Droid.Resource.Color.mtrl_filled_stroke_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_indicator_text_color = global::EcoCareApp.Droid.Resource.Color.mtrl_indicator_text_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_navigation_item_background_color = global::EcoCareApp.Droid.Resource.Color.mtrl_navigation_item_background_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_navigation_item_icon_tint = global::EcoCareApp.Droid.Resource.Color.mtrl_navigation_item_icon_tint;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_navigation_item_text_color = global::EcoCareApp.Droid.Resource.Color.mtrl_navigation_item_text_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_on_primary_text_btn_text_color_selector = global::EcoCareApp.Droid.Resource.Color.mtrl_on_primary_text_btn_text_color_selector;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_outlined_icon_tint = global::EcoCareApp.Droid.Resource.Color.mtrl_outlined_icon_tint;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_outlined_stroke_color = global::EcoCareApp.Droid.Resource.Color.mtrl_outlined_stroke_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_popupmenu_overlay_color = global::EcoCareApp.Droid.Resource.Color.mtrl_popupmenu_overlay_color;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_scrim_color = global::EcoCareApp.Droid.Resource.Color.mtrl_scrim_color;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_tabs_colored_ripple_color = global::EcoCareApp.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_tabs_icon_color_selector = global::EcoCareApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
@@ -662,6 +906,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_textinput_default_box_stroke_color = global::EcoCareApp.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_textinput_disabled_color = global::EcoCareApp.Droid.Resource.Color.mtrl_textinput_disabled_color;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::EcoCareApp.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_textinput_focused_box_stroke_color = global::EcoCareApp.Droid.Resource.Color.mtrl_textinput_focused_box_stroke_color;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::EcoCareApp.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
 			global::Rg.Plugins.Popup.Resource.Color.mtrl_text_btn_text_color_selector = global::EcoCareApp.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
 			global::Rg.Plugins.Popup.Resource.Color.notification_action_color_filter = global::EcoCareApp.Droid.Resource.Color.notification_action_color_filter;
@@ -675,6 +920,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Color.primary_text_default_material_light = global::EcoCareApp.Droid.Resource.Color.primary_text_default_material_light;
 			global::Rg.Plugins.Popup.Resource.Color.primary_text_disabled_material_dark = global::EcoCareApp.Droid.Resource.Color.primary_text_disabled_material_dark;
 			global::Rg.Plugins.Popup.Resource.Color.primary_text_disabled_material_light = global::EcoCareApp.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.radiobutton_themeable_attribute_color = global::EcoCareApp.Droid.Resource.Color.radiobutton_themeable_attribute_color;
 			global::Rg.Plugins.Popup.Resource.Color.ripple_material_dark = global::EcoCareApp.Droid.Resource.Color.ripple_material_dark;
 			global::Rg.Plugins.Popup.Resource.Color.ripple_material_light = global::EcoCareApp.Droid.Resource.Color.ripple_material_light;
 			global::Rg.Plugins.Popup.Resource.Color.secondary_text_default_material_dark = global::EcoCareApp.Droid.Resource.Color.secondary_text_default_material_dark;
@@ -687,6 +933,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Color.switch_thumb_material_light = global::EcoCareApp.Droid.Resource.Color.switch_thumb_material_light;
 			global::Rg.Plugins.Popup.Resource.Color.switch_thumb_normal_material_dark = global::EcoCareApp.Droid.Resource.Color.switch_thumb_normal_material_dark;
 			global::Rg.Plugins.Popup.Resource.Color.switch_thumb_normal_material_light = global::EcoCareApp.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.test_mtrl_calendar_day = global::EcoCareApp.Droid.Resource.Color.test_mtrl_calendar_day;
+			global::Rg.Plugins.Popup.Resource.Color.test_mtrl_calendar_day_selected = global::EcoCareApp.Droid.Resource.Color.test_mtrl_calendar_day_selected;
 			global::Rg.Plugins.Popup.Resource.Color.tooltip_background_dark = global::EcoCareApp.Droid.Resource.Color.tooltip_background_dark;
 			global::Rg.Plugins.Popup.Resource.Color.tooltip_background_light = global::EcoCareApp.Droid.Resource.Color.tooltip_background_light;
 			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_content_inset_material = global::EcoCareApp.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
@@ -767,6 +1015,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::EcoCareApp.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
 			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_title_material = global::EcoCareApp.Droid.Resource.Dimension.abc_text_size_title_material;
 			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_title_material_toolbar = global::EcoCareApp.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Rg.Plugins.Popup.Resource.Dimension.action_bar_size = global::EcoCareApp.Droid.Resource.Dimension.action_bar_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.appcompat_dialog_background_inset = global::EcoCareApp.Droid.Resource.Dimension.appcompat_dialog_background_inset;
 			global::Rg.Plugins.Popup.Resource.Dimension.browser_actions_context_menu_max_width = global::EcoCareApp.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
 			global::Rg.Plugins.Popup.Resource.Dimension.browser_actions_context_menu_min_padding = global::EcoCareApp.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
 			global::Rg.Plugins.Popup.Resource.Dimension.cardview_compat_inset_shadow = global::EcoCareApp.Droid.Resource.Dimension.cardview_compat_inset_shadow;
@@ -779,6 +1029,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Dimension.compat_control_corner_material = global::EcoCareApp.Droid.Resource.Dimension.compat_control_corner_material;
 			global::Rg.Plugins.Popup.Resource.Dimension.compat_notification_large_icon_max_height = global::EcoCareApp.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
 			global::Rg.Plugins.Popup.Resource.Dimension.compat_notification_large_icon_max_width = global::EcoCareApp.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.default_dimension = global::EcoCareApp.Droid.Resource.Dimension.default_dimension;
+			global::Rg.Plugins.Popup.Resource.Dimension.def_drawer_elevation = global::EcoCareApp.Droid.Resource.Dimension.def_drawer_elevation;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_appbar_elevation = global::EcoCareApp.Droid.Resource.Dimension.design_appbar_elevation;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::EcoCareApp.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::EcoCareApp.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
@@ -791,6 +1043,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_margin = global::EcoCareApp.Droid.Resource.Dimension.design_bottom_navigation_margin;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_shadow_height = global::EcoCareApp.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_text_size = global::EcoCareApp.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_sheet_elevation = global::EcoCareApp.Droid.Resource.Dimension.design_bottom_sheet_elevation;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_sheet_modal_elevation = global::EcoCareApp.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_sheet_peek_height_min = global::EcoCareApp.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_fab_border_width = global::EcoCareApp.Droid.Resource.Dimension.design_fab_border_width;
@@ -809,6 +1062,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Dimension.design_navigation_padding_bottom = global::EcoCareApp.Droid.Resource.Dimension.design_navigation_padding_bottom;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_navigation_separator_vertical_padding = global::EcoCareApp.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_action_inline_max_width = global::EcoCareApp.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_action_text_color_alpha = global::EcoCareApp.Droid.Resource.Dimension.design_snackbar_action_text_color_alpha;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_background_corner_radius = global::EcoCareApp.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_elevation = global::EcoCareApp.Droid.Resource.Dimension.design_snackbar_elevation;
 			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::EcoCareApp.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
@@ -838,7 +1092,24 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::EcoCareApp.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
 			global::Rg.Plugins.Popup.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::EcoCareApp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
 			global::Rg.Plugins.Popup.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::EcoCareApp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Rg.Plugins.Popup.Resource.Dimension.material_emphasis_disabled = global::EcoCareApp.Droid.Resource.Dimension.material_emphasis_disabled;
+			global::Rg.Plugins.Popup.Resource.Dimension.material_emphasis_high_type = global::EcoCareApp.Droid.Resource.Dimension.material_emphasis_high_type;
+			global::Rg.Plugins.Popup.Resource.Dimension.material_emphasis_medium = global::EcoCareApp.Droid.Resource.Dimension.material_emphasis_medium;
+			global::Rg.Plugins.Popup.Resource.Dimension.material_text_view_test_line_height = global::EcoCareApp.Droid.Resource.Dimension.material_text_view_test_line_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.material_text_view_test_line_height_override = global::EcoCareApp.Droid.Resource.Dimension.material_text_view_test_line_height_override;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_alert_dialog_background_inset_bottom = global::EcoCareApp.Droid.Resource.Dimension.mtrl_alert_dialog_background_inset_bottom;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_alert_dialog_background_inset_end = global::EcoCareApp.Droid.Resource.Dimension.mtrl_alert_dialog_background_inset_end;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_alert_dialog_background_inset_start = global::EcoCareApp.Droid.Resource.Dimension.mtrl_alert_dialog_background_inset_start;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_alert_dialog_background_inset_top = global::EcoCareApp.Droid.Resource.Dimension.mtrl_alert_dialog_background_inset_top;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_alert_dialog_picker_background_inset = global::EcoCareApp.Droid.Resource.Dimension.mtrl_alert_dialog_picker_background_inset;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_badge_horizontal_edge_offset = global::EcoCareApp.Droid.Resource.Dimension.mtrl_badge_horizontal_edge_offset;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_badge_long_text_horizontal_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_badge_long_text_horizontal_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_badge_radius = global::EcoCareApp.Droid.Resource.Dimension.mtrl_badge_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_badge_text_horizontal_edge_offset = global::EcoCareApp.Droid.Resource.Dimension.mtrl_badge_text_horizontal_edge_offset;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_badge_text_size = global::EcoCareApp.Droid.Resource.Dimension.mtrl_badge_text_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_badge_with_text_radius = global::EcoCareApp.Droid.Resource.Dimension.mtrl_badge_with_text_radius;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::EcoCareApp.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_bottomappbar_fab_bottom_margin = global::EcoCareApp.Droid.Resource.Dimension.mtrl_bottomappbar_fab_bottom_margin;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::EcoCareApp.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::EcoCareApp.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::EcoCareApp.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
@@ -865,25 +1136,130 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::EcoCareApp.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_text_size = global::EcoCareApp.Droid.Resource.Dimension.mtrl_btn_text_size;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_z = global::EcoCareApp.Droid.Resource.Dimension.mtrl_btn_z;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_action_height = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_action_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_action_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_action_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_bottom_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_bottom_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_content_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_content_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_days_of_week_height = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_days_of_week_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_day_corner = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_day_corner;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_day_height = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_day_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_day_horizontal_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_day_horizontal_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_day_today_stroke = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_day_today_stroke;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_day_vertical_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_day_vertical_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_day_width = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_day_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_dialog_background_inset = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_dialog_background_inset;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_header_content_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_header_content_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_header_content_padding_fullscreen = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_header_content_padding_fullscreen;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_header_divider_thickness = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_header_divider_thickness;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_header_height = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_header_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_header_height_fullscreen = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_header_height_fullscreen;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_header_selection_line_height = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_header_selection_line_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_header_text_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_header_text_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_header_toggle_margin_bottom = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_header_toggle_margin_bottom;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_header_toggle_margin_top = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_header_toggle_margin_top;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_landscape_header_width = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_landscape_header_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_maximum_default_fullscreen_minor_axis = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_maximum_default_fullscreen_minor_axis;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_month_horizontal_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_month_horizontal_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_month_vertical_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_month_vertical_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_navigation_bottom_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_navigation_bottom_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_navigation_height = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_navigation_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_navigation_top_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_navigation_top_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_pre_l_text_clip_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_pre_l_text_clip_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_selection_baseline_to_top_fullscreen = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_selection_baseline_to_top_fullscreen;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_bottom = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_bottom;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_bottom_fullscreen = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_bottom_fullscreen;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_top = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_top;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_text_input_padding_top = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_text_input_padding_top;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_title_baseline_to_top = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_title_baseline_to_top;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_title_baseline_to_top_fullscreen = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_title_baseline_to_top_fullscreen;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_year_corner = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_year_corner;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_year_height = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_year_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_year_horizontal_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_year_horizontal_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_year_vertical_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_year_vertical_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_calendar_year_width = global::EcoCareApp.Droid.Resource.Dimension.mtrl_calendar_year_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_card_checked_icon_margin = global::EcoCareApp.Droid.Resource.Dimension.mtrl_card_checked_icon_margin;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_card_checked_icon_size = global::EcoCareApp.Droid.Resource.Dimension.mtrl_card_checked_icon_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_card_corner_radius = global::EcoCareApp.Droid.Resource.Dimension.mtrl_card_corner_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_card_dragged_z = global::EcoCareApp.Droid.Resource.Dimension.mtrl_card_dragged_z;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_card_elevation = global::EcoCareApp.Droid.Resource.Dimension.mtrl_card_elevation;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_card_spacing = global::EcoCareApp.Droid.Resource.Dimension.mtrl_card_spacing;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_chip_pressed_translation_z = global::EcoCareApp.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_chip_text_size = global::EcoCareApp.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_edittext_rectangle_top_offset = global::EcoCareApp.Droid.Resource.Dimension.mtrl_edittext_rectangle_top_offset;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_elevation = global::EcoCareApp.Droid.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_vertical_offset = global::EcoCareApp.Droid.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_vertical_offset;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_vertical_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_vertical_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_bottom_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_bottom_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_corner_radius = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_corner_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_disabled_elevation = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_disabled_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_disabled_translation_z = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_disabled_translation_z;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_elevation = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_end_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_end_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_end_padding_icon = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_end_padding_icon;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_icon_size = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_icon_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_icon_text_spacing = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_icon_text_spacing;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_min_height = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_min_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_min_width = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_min_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_start_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_start_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_start_padding_icon = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_start_padding_icon;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_top_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_top_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_translation_z_base = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_translation_z_base;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_translation_z_hovered_focused = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_translation_z_hovered_focused;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_extended_fab_translation_z_pressed = global::EcoCareApp.Droid.Resource.Dimension.mtrl_extended_fab_translation_z_pressed;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_fab_elevation = global::EcoCareApp.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_fab_min_touch_target = global::EcoCareApp.Droid.Resource.Dimension.mtrl_fab_min_touch_target;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::EcoCareApp.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_fab_translation_z_pressed = global::EcoCareApp.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_high_ripple_default_alpha = global::EcoCareApp.Droid.Resource.Dimension.mtrl_high_ripple_default_alpha;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_high_ripple_focused_alpha = global::EcoCareApp.Droid.Resource.Dimension.mtrl_high_ripple_focused_alpha;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_high_ripple_hovered_alpha = global::EcoCareApp.Droid.Resource.Dimension.mtrl_high_ripple_hovered_alpha;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_high_ripple_pressed_alpha = global::EcoCareApp.Droid.Resource.Dimension.mtrl_high_ripple_pressed_alpha;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_large_touch_target = global::EcoCareApp.Droid.Resource.Dimension.mtrl_large_touch_target;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_low_ripple_default_alpha = global::EcoCareApp.Droid.Resource.Dimension.mtrl_low_ripple_default_alpha;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_low_ripple_focused_alpha = global::EcoCareApp.Droid.Resource.Dimension.mtrl_low_ripple_focused_alpha;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_low_ripple_hovered_alpha = global::EcoCareApp.Droid.Resource.Dimension.mtrl_low_ripple_hovered_alpha;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_low_ripple_pressed_alpha = global::EcoCareApp.Droid.Resource.Dimension.mtrl_low_ripple_pressed_alpha;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_min_touch_target_size = global::EcoCareApp.Droid.Resource.Dimension.mtrl_min_touch_target_size;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_navigation_elevation = global::EcoCareApp.Droid.Resource.Dimension.mtrl_navigation_elevation;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_navigation_item_icon_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_navigation_item_icon_size = global::EcoCareApp.Droid.Resource.Dimension.mtrl_navigation_item_icon_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_navigation_item_shape_horizontal_margin = global::EcoCareApp.Droid.Resource.Dimension.mtrl_navigation_item_shape_horizontal_margin;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_navigation_item_shape_vertical_margin = global::EcoCareApp.Droid.Resource.Dimension.mtrl_navigation_item_shape_vertical_margin;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_shape_corner_size_large_component = global::EcoCareApp.Droid.Resource.Dimension.mtrl_shape_corner_size_large_component;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_shape_corner_size_medium_component = global::EcoCareApp.Droid.Resource.Dimension.mtrl_shape_corner_size_medium_component;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_shape_corner_size_small_component = global::EcoCareApp.Droid.Resource.Dimension.mtrl_shape_corner_size_small_component;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_slider_halo_radius = global::EcoCareApp.Droid.Resource.Dimension.mtrl_slider_halo_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_slider_label_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_slider_label_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_slider_label_radius = global::EcoCareApp.Droid.Resource.Dimension.mtrl_slider_label_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_slider_label_square_side = global::EcoCareApp.Droid.Resource.Dimension.mtrl_slider_label_square_side;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_slider_thumb_elevation = global::EcoCareApp.Droid.Resource.Dimension.mtrl_slider_thumb_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_slider_thumb_radius = global::EcoCareApp.Droid.Resource.Dimension.mtrl_slider_thumb_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_slider_track_height = global::EcoCareApp.Droid.Resource.Dimension.mtrl_slider_track_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_slider_track_side_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_slider_track_side_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_slider_track_top = global::EcoCareApp.Droid.Resource.Dimension.mtrl_slider_track_top;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_slider_widget_height = global::EcoCareApp.Droid.Resource.Dimension.mtrl_slider_widget_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_snackbar_action_text_color_alpha = global::EcoCareApp.Droid.Resource.Dimension.mtrl_snackbar_action_text_color_alpha;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::EcoCareApp.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_snackbar_background_overlay_color_alpha = global::EcoCareApp.Droid.Resource.Dimension.mtrl_snackbar_background_overlay_color_alpha;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_snackbar_margin = global::EcoCareApp.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_switch_thumb_elevation = global::EcoCareApp.Droid.Resource.Dimension.mtrl_switch_thumb_elevation;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::EcoCareApp.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::EcoCareApp.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::EcoCareApp.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::EcoCareApp.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_counter_margin_start = global::EcoCareApp.Droid.Resource.Dimension.mtrl_textinput_counter_margin_start;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_end_icon_margin_start = global::EcoCareApp.Droid.Resource.Dimension.mtrl_textinput_end_icon_margin_start;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_start_icon_margin_end = global::EcoCareApp.Droid.Resource.Dimension.mtrl_textinput_start_icon_margin_end;
 			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_toolbar_default_height = global::EcoCareApp.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_tooltip_arrowSize = global::EcoCareApp.Droid.Resource.Dimension.mtrl_tooltip_arrowSize;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_tooltip_cornerSize = global::EcoCareApp.Droid.Resource.Dimension.mtrl_tooltip_cornerSize;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_tooltip_minHeight = global::EcoCareApp.Droid.Resource.Dimension.mtrl_tooltip_minHeight;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_tooltip_minWidth = global::EcoCareApp.Droid.Resource.Dimension.mtrl_tooltip_minWidth;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_tooltip_padding = global::EcoCareApp.Droid.Resource.Dimension.mtrl_tooltip_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_transition_shared_axis_slide_distance = global::EcoCareApp.Droid.Resource.Dimension.mtrl_transition_shared_axis_slide_distance;
 			global::Rg.Plugins.Popup.Resource.Dimension.notification_action_icon_size = global::EcoCareApp.Droid.Resource.Dimension.notification_action_icon_size;
 			global::Rg.Plugins.Popup.Resource.Dimension.notification_action_text_size = global::EcoCareApp.Droid.Resource.Dimension.notification_action_text_size;
 			global::Rg.Plugins.Popup.Resource.Dimension.notification_big_circle_margin = global::EcoCareApp.Droid.Resource.Dimension.notification_big_circle_margin;
@@ -899,6 +1275,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Dimension.notification_subtext_size = global::EcoCareApp.Droid.Resource.Dimension.notification_subtext_size;
 			global::Rg.Plugins.Popup.Resource.Dimension.notification_top_pad = global::EcoCareApp.Droid.Resource.Dimension.notification_top_pad;
 			global::Rg.Plugins.Popup.Resource.Dimension.notification_top_pad_large_text = global::EcoCareApp.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Rg.Plugins.Popup.Resource.Dimension.test_mtrl_calendar_day_cornerSize = global::EcoCareApp.Droid.Resource.Dimension.test_mtrl_calendar_day_cornerSize;
 			global::Rg.Plugins.Popup.Resource.Dimension.tooltip_corner_radius = global::EcoCareApp.Droid.Resource.Dimension.tooltip_corner_radius;
 			global::Rg.Plugins.Popup.Resource.Dimension.tooltip_horizontal_padding = global::EcoCareApp.Droid.Resource.Dimension.tooltip_horizontal_padding;
 			global::Rg.Plugins.Popup.Resource.Dimension.tooltip_margin = global::EcoCareApp.Droid.Resource.Dimension.tooltip_margin;
@@ -996,9 +1373,25 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Drawable.design_ic_visibility_off = global::EcoCareApp.Droid.Resource.Drawable.design_ic_visibility_off;
 			global::Rg.Plugins.Popup.Resource.Drawable.design_password_eye = global::EcoCareApp.Droid.Resource.Drawable.design_password_eye;
 			global::Rg.Plugins.Popup.Resource.Drawable.design_snackbar_background = global::EcoCareApp.Droid.Resource.Drawable.design_snackbar_background;
+			global::Rg.Plugins.Popup.Resource.Drawable.ic_mtrl_checked_circle = global::EcoCareApp.Droid.Resource.Drawable.ic_mtrl_checked_circle;
 			global::Rg.Plugins.Popup.Resource.Drawable.ic_mtrl_chip_checked_black = global::EcoCareApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
 			global::Rg.Plugins.Popup.Resource.Drawable.ic_mtrl_chip_checked_circle = global::EcoCareApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
 			global::Rg.Plugins.Popup.Resource.Drawable.ic_mtrl_chip_close_circle = global::EcoCareApp.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::Rg.Plugins.Popup.Resource.Drawable.material_ic_calendar_black_24dp = global::EcoCareApp.Droid.Resource.Drawable.material_ic_calendar_black_24dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.material_ic_clear_black_24dp = global::EcoCareApp.Droid.Resource.Drawable.material_ic_clear_black_24dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.material_ic_edit_black_24dp = global::EcoCareApp.Droid.Resource.Drawable.material_ic_edit_black_24dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.material_ic_keyboard_arrow_left_black_24dp = global::EcoCareApp.Droid.Resource.Drawable.material_ic_keyboard_arrow_left_black_24dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.material_ic_keyboard_arrow_right_black_24dp = global::EcoCareApp.Droid.Resource.Drawable.material_ic_keyboard_arrow_right_black_24dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.material_ic_menu_arrow_down_black_24dp = global::EcoCareApp.Droid.Resource.Drawable.material_ic_menu_arrow_down_black_24dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.material_ic_menu_arrow_up_black_24dp = global::EcoCareApp.Droid.Resource.Drawable.material_ic_menu_arrow_up_black_24dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.mtrl_dialog_background = global::EcoCareApp.Droid.Resource.Drawable.mtrl_dialog_background;
+			global::Rg.Plugins.Popup.Resource.Drawable.mtrl_dropdown_arrow = global::EcoCareApp.Droid.Resource.Drawable.mtrl_dropdown_arrow;
+			global::Rg.Plugins.Popup.Resource.Drawable.mtrl_ic_arrow_drop_down = global::EcoCareApp.Droid.Resource.Drawable.mtrl_ic_arrow_drop_down;
+			global::Rg.Plugins.Popup.Resource.Drawable.mtrl_ic_arrow_drop_up = global::EcoCareApp.Droid.Resource.Drawable.mtrl_ic_arrow_drop_up;
+			global::Rg.Plugins.Popup.Resource.Drawable.mtrl_ic_cancel = global::EcoCareApp.Droid.Resource.Drawable.mtrl_ic_cancel;
+			global::Rg.Plugins.Popup.Resource.Drawable.mtrl_ic_error = global::EcoCareApp.Droid.Resource.Drawable.mtrl_ic_error;
+			global::Rg.Plugins.Popup.Resource.Drawable.mtrl_popupmenu_background = global::EcoCareApp.Droid.Resource.Drawable.mtrl_popupmenu_background;
+			global::Rg.Plugins.Popup.Resource.Drawable.mtrl_popupmenu_background_dark = global::EcoCareApp.Droid.Resource.Drawable.mtrl_popupmenu_background_dark;
 			global::Rg.Plugins.Popup.Resource.Drawable.mtrl_tabs_default_indicator = global::EcoCareApp.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
 			global::Rg.Plugins.Popup.Resource.Drawable.navigation_empty_icon = global::EcoCareApp.Droid.Resource.Drawable.navigation_empty_icon;
 			global::Rg.Plugins.Popup.Resource.Drawable.notification_action_background = global::EcoCareApp.Droid.Resource.Drawable.notification_action_background;
@@ -1013,6 +1406,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Drawable.notification_template_icon_low_bg = global::EcoCareApp.Droid.Resource.Drawable.notification_template_icon_low_bg;
 			global::Rg.Plugins.Popup.Resource.Drawable.notification_tile_bg = global::EcoCareApp.Droid.Resource.Drawable.notification_tile_bg;
 			global::Rg.Plugins.Popup.Resource.Drawable.notify_panel_notification_icon_bg = global::EcoCareApp.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Rg.Plugins.Popup.Resource.Drawable.test_custom_background = global::EcoCareApp.Droid.Resource.Drawable.test_custom_background;
 			global::Rg.Plugins.Popup.Resource.Drawable.tooltip_frame_dark = global::EcoCareApp.Droid.Resource.Drawable.tooltip_frame_dark;
 			global::Rg.Plugins.Popup.Resource.Drawable.tooltip_frame_light = global::EcoCareApp.Droid.Resource.Drawable.tooltip_frame_light;
 			global::Rg.Plugins.Popup.Resource.Id.accessibility_action_clickable_span = global::EcoCareApp.Droid.Resource.Id.accessibility_action_clickable_span;
@@ -1080,6 +1474,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Id.bottom = global::EcoCareApp.Droid.Resource.Id.bottom;
 			global::Rg.Plugins.Popup.Resource.Id.bottomtab_navarea = global::EcoCareApp.Droid.Resource.Id.bottomtab_navarea;
 			global::Rg.Plugins.Popup.Resource.Id.bottomtab_tabbar = global::EcoCareApp.Droid.Resource.Id.bottomtab_tabbar;
+			global::Rg.Plugins.Popup.Resource.Id.BOTTOM_END = global::EcoCareApp.Droid.Resource.Id.BOTTOM_END;
+			global::Rg.Plugins.Popup.Resource.Id.BOTTOM_START = global::EcoCareApp.Droid.Resource.Id.BOTTOM_START;
 			global::Rg.Plugins.Popup.Resource.Id.browser_actions_header_text = global::EcoCareApp.Droid.Resource.Id.browser_actions_header_text;
 			global::Rg.Plugins.Popup.Resource.Id.browser_actions_menu_items = global::EcoCareApp.Droid.Resource.Id.browser_actions_menu_items;
 			global::Rg.Plugins.Popup.Resource.Id.browser_actions_menu_item_icon = global::EcoCareApp.Droid.Resource.Id.browser_actions_menu_item_icon;
@@ -1087,15 +1483,23 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Id.browser_actions_menu_view = global::EcoCareApp.Droid.Resource.Id.browser_actions_menu_view;
 			global::Rg.Plugins.Popup.Resource.Id.buttonPanel = global::EcoCareApp.Droid.Resource.Id.buttonPanel;
 			global::Rg.Plugins.Popup.Resource.Id.cancel_action = global::EcoCareApp.Droid.Resource.Id.cancel_action;
+			global::Rg.Plugins.Popup.Resource.Id.cancel_button = global::EcoCareApp.Droid.Resource.Id.cancel_button;
 			global::Rg.Plugins.Popup.Resource.Id.center = global::EcoCareApp.Droid.Resource.Id.center;
 			global::Rg.Plugins.Popup.Resource.Id.center_horizontal = global::EcoCareApp.Droid.Resource.Id.center_horizontal;
 			global::Rg.Plugins.Popup.Resource.Id.center_vertical = global::EcoCareApp.Droid.Resource.Id.center_vertical;
 			global::Rg.Plugins.Popup.Resource.Id.checkbox = global::EcoCareApp.Droid.Resource.Id.checkbox;
 			global::Rg.Plugins.Popup.Resource.Id.@checked = global::EcoCareApp.Droid.Resource.Id.@checked;
+			global::Rg.Plugins.Popup.Resource.Id.chip = global::EcoCareApp.Droid.Resource.Id.chip;
+			global::Rg.Plugins.Popup.Resource.Id.chip1 = global::EcoCareApp.Droid.Resource.Id.chip1;
+			global::Rg.Plugins.Popup.Resource.Id.chip2 = global::EcoCareApp.Droid.Resource.Id.chip2;
+			global::Rg.Plugins.Popup.Resource.Id.chip3 = global::EcoCareApp.Droid.Resource.Id.chip3;
+			global::Rg.Plugins.Popup.Resource.Id.chip_group = global::EcoCareApp.Droid.Resource.Id.chip_group;
 			global::Rg.Plugins.Popup.Resource.Id.chronometer = global::EcoCareApp.Droid.Resource.Id.chronometer;
+			global::Rg.Plugins.Popup.Resource.Id.clear_text = global::EcoCareApp.Droid.Resource.Id.clear_text;
 			global::Rg.Plugins.Popup.Resource.Id.clip_horizontal = global::EcoCareApp.Droid.Resource.Id.clip_horizontal;
 			global::Rg.Plugins.Popup.Resource.Id.clip_vertical = global::EcoCareApp.Droid.Resource.Id.clip_vertical;
 			global::Rg.Plugins.Popup.Resource.Id.collapseActionView = global::EcoCareApp.Droid.Resource.Id.collapseActionView;
+			global::Rg.Plugins.Popup.Resource.Id.confirm_button = global::EcoCareApp.Droid.Resource.Id.confirm_button;
 			global::Rg.Plugins.Popup.Resource.Id.container = global::EcoCareApp.Droid.Resource.Id.container;
 			global::Rg.Plugins.Popup.Resource.Id.content = global::EcoCareApp.Droid.Resource.Id.content;
 			global::Rg.Plugins.Popup.Resource.Id.contentPanel = global::EcoCareApp.Droid.Resource.Id.contentPanel;
@@ -1103,6 +1507,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Id.CTRL = global::EcoCareApp.Droid.Resource.Id.CTRL;
 			global::Rg.Plugins.Popup.Resource.Id.custom = global::EcoCareApp.Droid.Resource.Id.custom;
 			global::Rg.Plugins.Popup.Resource.Id.customPanel = global::EcoCareApp.Droid.Resource.Id.customPanel;
+			global::Rg.Plugins.Popup.Resource.Id.cut = global::EcoCareApp.Droid.Resource.Id.cut;
+			global::Rg.Plugins.Popup.Resource.Id.date_picker_actions = global::EcoCareApp.Droid.Resource.Id.date_picker_actions;
 			global::Rg.Plugins.Popup.Resource.Id.decor_content_parent = global::EcoCareApp.Droid.Resource.Id.decor_content_parent;
 			global::Rg.Plugins.Popup.Resource.Id.default_activity_button = global::EcoCareApp.Droid.Resource.Id.default_activity_button;
 			global::Rg.Plugins.Popup.Resource.Id.design_bottom_sheet = global::EcoCareApp.Droid.Resource.Id.design_bottom_sheet;
@@ -1112,6 +1518,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Id.design_navigation_view = global::EcoCareApp.Droid.Resource.Id.design_navigation_view;
 			global::Rg.Plugins.Popup.Resource.Id.dialog_button = global::EcoCareApp.Droid.Resource.Id.dialog_button;
 			global::Rg.Plugins.Popup.Resource.Id.disableHome = global::EcoCareApp.Droid.Resource.Id.disableHome;
+			global::Rg.Plugins.Popup.Resource.Id.dropdown_menu = global::EcoCareApp.Droid.Resource.Id.dropdown_menu;
 			global::Rg.Plugins.Popup.Resource.Id.edit_query = global::EcoCareApp.Droid.Resource.Id.edit_query;
 			global::Rg.Plugins.Popup.Resource.Id.end = global::EcoCareApp.Droid.Resource.Id.end;
 			global::Rg.Plugins.Popup.Resource.Id.end_padder = global::EcoCareApp.Droid.Resource.Id.end_padder;
@@ -1120,17 +1527,23 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Id.exitUntilCollapsed = global::EcoCareApp.Droid.Resource.Id.exitUntilCollapsed;
 			global::Rg.Plugins.Popup.Resource.Id.expanded_menu = global::EcoCareApp.Droid.Resource.Id.expanded_menu;
 			global::Rg.Plugins.Popup.Resource.Id.expand_activities_button = global::EcoCareApp.Droid.Resource.Id.expand_activities_button;
+			global::Rg.Plugins.Popup.Resource.Id.fade = global::EcoCareApp.Droid.Resource.Id.fade;
 			global::Rg.Plugins.Popup.Resource.Id.fill = global::EcoCareApp.Droid.Resource.Id.fill;
 			global::Rg.Plugins.Popup.Resource.Id.filled = global::EcoCareApp.Droid.Resource.Id.filled;
 			global::Rg.Plugins.Popup.Resource.Id.fill_horizontal = global::EcoCareApp.Droid.Resource.Id.fill_horizontal;
 			global::Rg.Plugins.Popup.Resource.Id.fill_vertical = global::EcoCareApp.Droid.Resource.Id.fill_vertical;
+			global::Rg.Plugins.Popup.Resource.Id.fitToContents = global::EcoCareApp.Droid.Resource.Id.fitToContents;
 			global::Rg.Plugins.Popup.Resource.Id.@fixed = global::EcoCareApp.Droid.Resource.Id.@fixed;
+			global::Rg.Plugins.Popup.Resource.Id.floating = global::EcoCareApp.Droid.Resource.Id.floating;
 			global::Rg.Plugins.Popup.Resource.Id.flyoutcontent_appbar = global::EcoCareApp.Droid.Resource.Id.flyoutcontent_appbar;
 			global::Rg.Plugins.Popup.Resource.Id.forever = global::EcoCareApp.Droid.Resource.Id.forever;
+			global::Rg.Plugins.Popup.Resource.Id.fragment_container_view_tag = global::EcoCareApp.Droid.Resource.Id.fragment_container_view_tag;
 			global::Rg.Plugins.Popup.Resource.Id.FUNCTION = global::EcoCareApp.Droid.Resource.Id.FUNCTION;
 			global::Rg.Plugins.Popup.Resource.Id.ghost_view = global::EcoCareApp.Droid.Resource.Id.ghost_view;
 			global::Rg.Plugins.Popup.Resource.Id.ghost_view_holder = global::EcoCareApp.Droid.Resource.Id.ghost_view_holder;
+			global::Rg.Plugins.Popup.Resource.Id.gone = global::EcoCareApp.Droid.Resource.Id.gone;
 			global::Rg.Plugins.Popup.Resource.Id.group_divider = global::EcoCareApp.Droid.Resource.Id.group_divider;
+			global::Rg.Plugins.Popup.Resource.Id.hideable = global::EcoCareApp.Droid.Resource.Id.hideable;
 			global::Rg.Plugins.Popup.Resource.Id.home = global::EcoCareApp.Droid.Resource.Id.home;
 			global::Rg.Plugins.Popup.Resource.Id.homeAsUp = global::EcoCareApp.Droid.Resource.Id.homeAsUp;
 			global::Rg.Plugins.Popup.Resource.Id.icon = global::EcoCareApp.Droid.Resource.Id.icon;
@@ -1152,17 +1565,44 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Id.main_viewpager = global::EcoCareApp.Droid.Resource.Id.main_viewpager;
 			global::Rg.Plugins.Popup.Resource.Id.masked = global::EcoCareApp.Droid.Resource.Id.masked;
 			global::Rg.Plugins.Popup.Resource.Id.media_actions = global::EcoCareApp.Droid.Resource.Id.media_actions;
+			global::Rg.Plugins.Popup.Resource.Id.media_controller_compat_view_tag = global::EcoCareApp.Droid.Resource.Id.media_controller_compat_view_tag;
 			global::Rg.Plugins.Popup.Resource.Id.message = global::EcoCareApp.Droid.Resource.Id.message;
 			global::Rg.Plugins.Popup.Resource.Id.META = global::EcoCareApp.Droid.Resource.Id.META;
 			global::Rg.Plugins.Popup.Resource.Id.middle = global::EcoCareApp.Droid.Resource.Id.middle;
 			global::Rg.Plugins.Popup.Resource.Id.mini = global::EcoCareApp.Droid.Resource.Id.mini;
+			global::Rg.Plugins.Popup.Resource.Id.month_grid = global::EcoCareApp.Droid.Resource.Id.month_grid;
+			global::Rg.Plugins.Popup.Resource.Id.month_navigation_bar = global::EcoCareApp.Droid.Resource.Id.month_navigation_bar;
+			global::Rg.Plugins.Popup.Resource.Id.month_navigation_fragment_toggle = global::EcoCareApp.Droid.Resource.Id.month_navigation_fragment_toggle;
+			global::Rg.Plugins.Popup.Resource.Id.month_navigation_next = global::EcoCareApp.Droid.Resource.Id.month_navigation_next;
+			global::Rg.Plugins.Popup.Resource.Id.month_navigation_previous = global::EcoCareApp.Droid.Resource.Id.month_navigation_previous;
+			global::Rg.Plugins.Popup.Resource.Id.month_title = global::EcoCareApp.Droid.Resource.Id.month_title;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_calendar_days_of_week = global::EcoCareApp.Droid.Resource.Id.mtrl_calendar_days_of_week;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_calendar_day_selector_frame = global::EcoCareApp.Droid.Resource.Id.mtrl_calendar_day_selector_frame;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_calendar_frame = global::EcoCareApp.Droid.Resource.Id.mtrl_calendar_frame;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_calendar_main_pane = global::EcoCareApp.Droid.Resource.Id.mtrl_calendar_main_pane;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_calendar_months = global::EcoCareApp.Droid.Resource.Id.mtrl_calendar_months;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_calendar_selection_frame = global::EcoCareApp.Droid.Resource.Id.mtrl_calendar_selection_frame;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_calendar_text_input_frame = global::EcoCareApp.Droid.Resource.Id.mtrl_calendar_text_input_frame;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_calendar_year_selector_frame = global::EcoCareApp.Droid.Resource.Id.mtrl_calendar_year_selector_frame;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_card_checked_layer_id = global::EcoCareApp.Droid.Resource.Id.mtrl_card_checked_layer_id;
 			global::Rg.Plugins.Popup.Resource.Id.mtrl_child_content_container = global::EcoCareApp.Droid.Resource.Id.mtrl_child_content_container;
 			global::Rg.Plugins.Popup.Resource.Id.mtrl_internal_children_alpha_tag = global::EcoCareApp.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_motion_snapshot_view = global::EcoCareApp.Droid.Resource.Id.mtrl_motion_snapshot_view;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_picker_fullscreen = global::EcoCareApp.Droid.Resource.Id.mtrl_picker_fullscreen;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_picker_header = global::EcoCareApp.Droid.Resource.Id.mtrl_picker_header;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_picker_header_selection_text = global::EcoCareApp.Droid.Resource.Id.mtrl_picker_header_selection_text;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_picker_header_title_and_selection = global::EcoCareApp.Droid.Resource.Id.mtrl_picker_header_title_and_selection;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_picker_header_toggle = global::EcoCareApp.Droid.Resource.Id.mtrl_picker_header_toggle;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_picker_text_input_date = global::EcoCareApp.Droid.Resource.Id.mtrl_picker_text_input_date;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_picker_text_input_range_end = global::EcoCareApp.Droid.Resource.Id.mtrl_picker_text_input_range_end;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_picker_text_input_range_start = global::EcoCareApp.Droid.Resource.Id.mtrl_picker_text_input_range_start;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_picker_title_text = global::EcoCareApp.Droid.Resource.Id.mtrl_picker_title_text;
 			global::Rg.Plugins.Popup.Resource.Id.multiply = global::EcoCareApp.Droid.Resource.Id.multiply;
 			global::Rg.Plugins.Popup.Resource.Id.navigation_header_container = global::EcoCareApp.Droid.Resource.Id.navigation_header_container;
 			global::Rg.Plugins.Popup.Resource.Id.never = global::EcoCareApp.Droid.Resource.Id.never;
 			global::Rg.Plugins.Popup.Resource.Id.none = global::EcoCareApp.Droid.Resource.Id.none;
 			global::Rg.Plugins.Popup.Resource.Id.normal = global::EcoCareApp.Droid.Resource.Id.normal;
+			global::Rg.Plugins.Popup.Resource.Id.noScroll = global::EcoCareApp.Droid.Resource.Id.noScroll;
 			global::Rg.Plugins.Popup.Resource.Id.notification_background = global::EcoCareApp.Droid.Resource.Id.notification_background;
 			global::Rg.Plugins.Popup.Resource.Id.notification_main_column = global::EcoCareApp.Droid.Resource.Id.notification_main_column;
 			global::Rg.Plugins.Popup.Resource.Id.notification_main_column_container = global::EcoCareApp.Droid.Resource.Id.notification_main_column_container;
@@ -1172,6 +1612,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Id.parallax = global::EcoCareApp.Droid.Resource.Id.parallax;
 			global::Rg.Plugins.Popup.Resource.Id.parentPanel = global::EcoCareApp.Droid.Resource.Id.parentPanel;
 			global::Rg.Plugins.Popup.Resource.Id.parent_matrix = global::EcoCareApp.Droid.Resource.Id.parent_matrix;
+			global::Rg.Plugins.Popup.Resource.Id.password_toggle = global::EcoCareApp.Droid.Resource.Id.password_toggle;
+			global::Rg.Plugins.Popup.Resource.Id.peekHeight = global::EcoCareApp.Droid.Resource.Id.peekHeight;
 			global::Rg.Plugins.Popup.Resource.Id.pin = global::EcoCareApp.Droid.Resource.Id.pin;
 			global::Rg.Plugins.Popup.Resource.Id.progress_circular = global::EcoCareApp.Droid.Resource.Id.progress_circular;
 			global::Rg.Plugins.Popup.Resource.Id.progress_horizontal = global::EcoCareApp.Droid.Resource.Id.progress_horizontal;
@@ -1179,8 +1621,11 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Id.right = global::EcoCareApp.Droid.Resource.Id.right;
 			global::Rg.Plugins.Popup.Resource.Id.right_icon = global::EcoCareApp.Droid.Resource.Id.right_icon;
 			global::Rg.Plugins.Popup.Resource.Id.right_side = global::EcoCareApp.Droid.Resource.Id.right_side;
+			global::Rg.Plugins.Popup.Resource.Id.rounded = global::EcoCareApp.Droid.Resource.Id.rounded;
+			global::Rg.Plugins.Popup.Resource.Id.row_index_key = global::EcoCareApp.Droid.Resource.Id.row_index_key;
 			global::Rg.Plugins.Popup.Resource.Id.save_non_transition_alpha = global::EcoCareApp.Droid.Resource.Id.save_non_transition_alpha;
 			global::Rg.Plugins.Popup.Resource.Id.save_overlay_view = global::EcoCareApp.Droid.Resource.Id.save_overlay_view;
+			global::Rg.Plugins.Popup.Resource.Id.scale = global::EcoCareApp.Droid.Resource.Id.scale;
 			global::Rg.Plugins.Popup.Resource.Id.screen = global::EcoCareApp.Droid.Resource.Id.screen;
 			global::Rg.Plugins.Popup.Resource.Id.scroll = global::EcoCareApp.Droid.Resource.Id.scroll;
 			global::Rg.Plugins.Popup.Resource.Id.scrollable = global::EcoCareApp.Droid.Resource.Id.scrollable;
@@ -1206,6 +1651,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Id.showCustom = global::EcoCareApp.Droid.Resource.Id.showCustom;
 			global::Rg.Plugins.Popup.Resource.Id.showHome = global::EcoCareApp.Droid.Resource.Id.showHome;
 			global::Rg.Plugins.Popup.Resource.Id.showTitle = global::EcoCareApp.Droid.Resource.Id.showTitle;
+			global::Rg.Plugins.Popup.Resource.Id.skipCollapsed = global::EcoCareApp.Droid.Resource.Id.skipCollapsed;
+			global::Rg.Plugins.Popup.Resource.Id.slide = global::EcoCareApp.Droid.Resource.Id.slide;
 			global::Rg.Plugins.Popup.Resource.Id.sliding_tabs = global::EcoCareApp.Droid.Resource.Id.sliding_tabs;
 			global::Rg.Plugins.Popup.Resource.Id.snackbar_action = global::EcoCareApp.Droid.Resource.Id.snackbar_action;
 			global::Rg.Plugins.Popup.Resource.Id.snackbar_text = global::EcoCareApp.Droid.Resource.Id.snackbar_text;
@@ -1231,14 +1678,24 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Id.tag_transition_group = global::EcoCareApp.Droid.Resource.Id.tag_transition_group;
 			global::Rg.Plugins.Popup.Resource.Id.tag_unhandled_key_event_manager = global::EcoCareApp.Droid.Resource.Id.tag_unhandled_key_event_manager;
 			global::Rg.Plugins.Popup.Resource.Id.tag_unhandled_key_listeners = global::EcoCareApp.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Rg.Plugins.Popup.Resource.Id.test_checkbox_android_button_tint = global::EcoCareApp.Droid.Resource.Id.test_checkbox_android_button_tint;
+			global::Rg.Plugins.Popup.Resource.Id.test_checkbox_app_button_tint = global::EcoCareApp.Droid.Resource.Id.test_checkbox_app_button_tint;
+			global::Rg.Plugins.Popup.Resource.Id.test_radiobutton_android_button_tint = global::EcoCareApp.Droid.Resource.Id.test_radiobutton_android_button_tint;
+			global::Rg.Plugins.Popup.Resource.Id.test_radiobutton_app_button_tint = global::EcoCareApp.Droid.Resource.Id.test_radiobutton_app_button_tint;
 			global::Rg.Plugins.Popup.Resource.Id.text = global::EcoCareApp.Droid.Resource.Id.text;
 			global::Rg.Plugins.Popup.Resource.Id.text2 = global::EcoCareApp.Droid.Resource.Id.text2;
+			global::Rg.Plugins.Popup.Resource.Id.textEnd = global::EcoCareApp.Droid.Resource.Id.textEnd;
 			global::Rg.Plugins.Popup.Resource.Id.textinput_counter = global::EcoCareApp.Droid.Resource.Id.textinput_counter;
 			global::Rg.Plugins.Popup.Resource.Id.textinput_error = global::EcoCareApp.Droid.Resource.Id.textinput_error;
 			global::Rg.Plugins.Popup.Resource.Id.textinput_helper_text = global::EcoCareApp.Droid.Resource.Id.textinput_helper_text;
+			global::Rg.Plugins.Popup.Resource.Id.textinput_placeholder = global::EcoCareApp.Droid.Resource.Id.textinput_placeholder;
+			global::Rg.Plugins.Popup.Resource.Id.textinput_prefix_text = global::EcoCareApp.Droid.Resource.Id.textinput_prefix_text;
+			global::Rg.Plugins.Popup.Resource.Id.textinput_suffix_text = global::EcoCareApp.Droid.Resource.Id.textinput_suffix_text;
 			global::Rg.Plugins.Popup.Resource.Id.textSpacerNoButtons = global::EcoCareApp.Droid.Resource.Id.textSpacerNoButtons;
 			global::Rg.Plugins.Popup.Resource.Id.textSpacerNoTitle = global::EcoCareApp.Droid.Resource.Id.textSpacerNoTitle;
 			global::Rg.Plugins.Popup.Resource.Id.textStart = global::EcoCareApp.Droid.Resource.Id.textStart;
+			global::Rg.Plugins.Popup.Resource.Id.text_input_end_icon = global::EcoCareApp.Droid.Resource.Id.text_input_end_icon;
+			global::Rg.Plugins.Popup.Resource.Id.text_input_start_icon = global::EcoCareApp.Droid.Resource.Id.text_input_start_icon;
 			global::Rg.Plugins.Popup.Resource.Id.time = global::EcoCareApp.Droid.Resource.Id.time;
 			global::Rg.Plugins.Popup.Resource.Id.title = global::EcoCareApp.Droid.Resource.Id.title;
 			global::Rg.Plugins.Popup.Resource.Id.titleDividerNoCustom = global::EcoCareApp.Droid.Resource.Id.titleDividerNoCustom;
@@ -1246,6 +1703,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Id.toolbar = global::EcoCareApp.Droid.Resource.Id.toolbar;
 			global::Rg.Plugins.Popup.Resource.Id.top = global::EcoCareApp.Droid.Resource.Id.top;
 			global::Rg.Plugins.Popup.Resource.Id.topPanel = global::EcoCareApp.Droid.Resource.Id.topPanel;
+			global::Rg.Plugins.Popup.Resource.Id.TOP_END = global::EcoCareApp.Droid.Resource.Id.TOP_END;
+			global::Rg.Plugins.Popup.Resource.Id.TOP_START = global::EcoCareApp.Droid.Resource.Id.TOP_START;
 			global::Rg.Plugins.Popup.Resource.Id.touch_outside = global::EcoCareApp.Droid.Resource.Id.touch_outside;
 			global::Rg.Plugins.Popup.Resource.Id.transition_current_scene = global::EcoCareApp.Droid.Resource.Id.transition_current_scene;
 			global::Rg.Plugins.Popup.Resource.Id.transition_layout_save = global::EcoCareApp.Droid.Resource.Id.transition_layout_save;
@@ -1258,9 +1717,13 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Id.up = global::EcoCareApp.Droid.Resource.Id.up;
 			global::Rg.Plugins.Popup.Resource.Id.useLogo = global::EcoCareApp.Droid.Resource.Id.useLogo;
 			global::Rg.Plugins.Popup.Resource.Id.view_offset_helper = global::EcoCareApp.Droid.Resource.Id.view_offset_helper;
+			global::Rg.Plugins.Popup.Resource.Id.view_tree_saved_state_registry_owner = global::EcoCareApp.Droid.Resource.Id.view_tree_saved_state_registry_owner;
 			global::Rg.Plugins.Popup.Resource.Id.visible = global::EcoCareApp.Droid.Resource.Id.visible;
+			global::Rg.Plugins.Popup.Resource.Id.visible_removing_fragment_view_tag = global::EcoCareApp.Droid.Resource.Id.visible_removing_fragment_view_tag;
+			global::Rg.Plugins.Popup.Resource.Id.withinBounds = global::EcoCareApp.Droid.Resource.Id.withinBounds;
 			global::Rg.Plugins.Popup.Resource.Id.withText = global::EcoCareApp.Droid.Resource.Id.withText;
 			global::Rg.Plugins.Popup.Resource.Id.wrap_content = global::EcoCareApp.Droid.Resource.Id.wrap_content;
+			global::Rg.Plugins.Popup.Resource.Id.zero_corner_chip = global::EcoCareApp.Droid.Resource.Id.zero_corner_chip;
 			global::Rg.Plugins.Popup.Resource.Integer.abc_config_activityDefaultDur = global::EcoCareApp.Droid.Resource.Integer.abc_config_activityDefaultDur;
 			global::Rg.Plugins.Popup.Resource.Integer.abc_config_activityShortDur = global::EcoCareApp.Droid.Resource.Integer.abc_config_activityShortDur;
 			global::Rg.Plugins.Popup.Resource.Integer.app_bar_elevation_anim_duration = global::EcoCareApp.Droid.Resource.Integer.app_bar_elevation_anim_duration;
@@ -1270,8 +1733,14 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Integer.design_snackbar_text_max_lines = global::EcoCareApp.Droid.Resource.Integer.design_snackbar_text_max_lines;
 			global::Rg.Plugins.Popup.Resource.Integer.design_tab_indicator_anim_duration_ms = global::EcoCareApp.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
 			global::Rg.Plugins.Popup.Resource.Integer.hide_password_duration = global::EcoCareApp.Droid.Resource.Integer.hide_password_duration;
+			global::Rg.Plugins.Popup.Resource.Integer.mtrl_badge_max_character_count = global::EcoCareApp.Droid.Resource.Integer.mtrl_badge_max_character_count;
 			global::Rg.Plugins.Popup.Resource.Integer.mtrl_btn_anim_delay_ms = global::EcoCareApp.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
 			global::Rg.Plugins.Popup.Resource.Integer.mtrl_btn_anim_duration_ms = global::EcoCareApp.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::Rg.Plugins.Popup.Resource.Integer.mtrl_calendar_header_orientation = global::EcoCareApp.Droid.Resource.Integer.mtrl_calendar_header_orientation;
+			global::Rg.Plugins.Popup.Resource.Integer.mtrl_calendar_selection_text_lines = global::EcoCareApp.Droid.Resource.Integer.mtrl_calendar_selection_text_lines;
+			global::Rg.Plugins.Popup.Resource.Integer.mtrl_calendar_year_selector_span = global::EcoCareApp.Droid.Resource.Integer.mtrl_calendar_year_selector_span;
+			global::Rg.Plugins.Popup.Resource.Integer.mtrl_card_anim_delay_ms = global::EcoCareApp.Droid.Resource.Integer.mtrl_card_anim_delay_ms;
+			global::Rg.Plugins.Popup.Resource.Integer.mtrl_card_anim_duration_ms = global::EcoCareApp.Droid.Resource.Integer.mtrl_card_anim_duration_ms;
 			global::Rg.Plugins.Popup.Resource.Integer.mtrl_chip_anim_duration = global::EcoCareApp.Droid.Resource.Integer.mtrl_chip_anim_duration;
 			global::Rg.Plugins.Popup.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::EcoCareApp.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
 			global::Rg.Plugins.Popup.Resource.Integer.show_password_duration = global::EcoCareApp.Droid.Resource.Integer.show_password_duration;
@@ -1332,11 +1801,39 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Layout.design_navigation_item_subheader = global::EcoCareApp.Droid.Resource.Layout.design_navigation_item_subheader;
 			global::Rg.Plugins.Popup.Resource.Layout.design_navigation_menu = global::EcoCareApp.Droid.Resource.Layout.design_navigation_menu;
 			global::Rg.Plugins.Popup.Resource.Layout.design_navigation_menu_item = global::EcoCareApp.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Rg.Plugins.Popup.Resource.Layout.design_text_input_end_icon = global::EcoCareApp.Droid.Resource.Layout.design_text_input_end_icon;
+			global::Rg.Plugins.Popup.Resource.Layout.design_text_input_start_icon = global::EcoCareApp.Droid.Resource.Layout.design_text_input_start_icon;
 			global::Rg.Plugins.Popup.Resource.Layout.FallbackTabbarDoNotUse = global::EcoCareApp.Droid.Resource.Layout.FallbackTabbarDoNotUse;
 			global::Rg.Plugins.Popup.Resource.Layout.FallbackToolbarDoNotUse = global::EcoCareApp.Droid.Resource.Layout.FallbackToolbarDoNotUse;
 			global::Rg.Plugins.Popup.Resource.Layout.FlyoutContent = global::EcoCareApp.Droid.Resource.Layout.FlyoutContent;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_alert_dialog = global::EcoCareApp.Droid.Resource.Layout.mtrl_alert_dialog;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_alert_dialog_actions = global::EcoCareApp.Droid.Resource.Layout.mtrl_alert_dialog_actions;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_alert_dialog_title = global::EcoCareApp.Droid.Resource.Layout.mtrl_alert_dialog_title;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_alert_select_dialog_item = global::EcoCareApp.Droid.Resource.Layout.mtrl_alert_select_dialog_item;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_alert_select_dialog_multichoice = global::EcoCareApp.Droid.Resource.Layout.mtrl_alert_select_dialog_multichoice;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_alert_select_dialog_singlechoice = global::EcoCareApp.Droid.Resource.Layout.mtrl_alert_select_dialog_singlechoice;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_calendar_day = global::EcoCareApp.Droid.Resource.Layout.mtrl_calendar_day;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_calendar_days_of_week = global::EcoCareApp.Droid.Resource.Layout.mtrl_calendar_days_of_week;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_calendar_day_of_week = global::EcoCareApp.Droid.Resource.Layout.mtrl_calendar_day_of_week;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_calendar_horizontal = global::EcoCareApp.Droid.Resource.Layout.mtrl_calendar_horizontal;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_calendar_month = global::EcoCareApp.Droid.Resource.Layout.mtrl_calendar_month;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_calendar_months = global::EcoCareApp.Droid.Resource.Layout.mtrl_calendar_months;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_calendar_month_labeled = global::EcoCareApp.Droid.Resource.Layout.mtrl_calendar_month_labeled;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_calendar_month_navigation = global::EcoCareApp.Droid.Resource.Layout.mtrl_calendar_month_navigation;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_calendar_vertical = global::EcoCareApp.Droid.Resource.Layout.mtrl_calendar_vertical;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_calendar_year = global::EcoCareApp.Droid.Resource.Layout.mtrl_calendar_year;
 			global::Rg.Plugins.Popup.Resource.Layout.mtrl_layout_snackbar = global::EcoCareApp.Droid.Resource.Layout.mtrl_layout_snackbar;
 			global::Rg.Plugins.Popup.Resource.Layout.mtrl_layout_snackbar_include = global::EcoCareApp.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_picker_actions = global::EcoCareApp.Droid.Resource.Layout.mtrl_picker_actions;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_picker_dialog = global::EcoCareApp.Droid.Resource.Layout.mtrl_picker_dialog;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_picker_fullscreen = global::EcoCareApp.Droid.Resource.Layout.mtrl_picker_fullscreen;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_picker_header_dialog = global::EcoCareApp.Droid.Resource.Layout.mtrl_picker_header_dialog;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_picker_header_fullscreen = global::EcoCareApp.Droid.Resource.Layout.mtrl_picker_header_fullscreen;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_picker_header_selection_text = global::EcoCareApp.Droid.Resource.Layout.mtrl_picker_header_selection_text;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_picker_header_title_text = global::EcoCareApp.Droid.Resource.Layout.mtrl_picker_header_title_text;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_picker_header_toggle = global::EcoCareApp.Droid.Resource.Layout.mtrl_picker_header_toggle;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_picker_text_input_date = global::EcoCareApp.Droid.Resource.Layout.mtrl_picker_text_input_date;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_picker_text_input_date_range = global::EcoCareApp.Droid.Resource.Layout.mtrl_picker_text_input_date_range;
 			global::Rg.Plugins.Popup.Resource.Layout.notification_action = global::EcoCareApp.Droid.Resource.Layout.notification_action;
 			global::Rg.Plugins.Popup.Resource.Layout.notification_action_tombstone = global::EcoCareApp.Droid.Resource.Layout.notification_action_tombstone;
 			global::Rg.Plugins.Popup.Resource.Layout.notification_media_action = global::EcoCareApp.Droid.Resource.Layout.notification_media_action;
@@ -1359,7 +1856,22 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Layout.ShellContent = global::EcoCareApp.Droid.Resource.Layout.ShellContent;
 			global::Rg.Plugins.Popup.Resource.Layout.support_simple_spinner_dropdown_item = global::EcoCareApp.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
 			global::Rg.Plugins.Popup.Resource.Layout.Tabbar = global::EcoCareApp.Droid.Resource.Layout.Tabbar;
+			global::Rg.Plugins.Popup.Resource.Layout.test_action_chip = global::EcoCareApp.Droid.Resource.Layout.test_action_chip;
+			global::Rg.Plugins.Popup.Resource.Layout.test_chip_zero_corner_radius = global::EcoCareApp.Droid.Resource.Layout.test_chip_zero_corner_radius;
+			global::Rg.Plugins.Popup.Resource.Layout.test_design_checkbox = global::EcoCareApp.Droid.Resource.Layout.test_design_checkbox;
+			global::Rg.Plugins.Popup.Resource.Layout.test_design_radiobutton = global::EcoCareApp.Droid.Resource.Layout.test_design_radiobutton;
+			global::Rg.Plugins.Popup.Resource.Layout.test_reflow_chipgroup = global::EcoCareApp.Droid.Resource.Layout.test_reflow_chipgroup;
+			global::Rg.Plugins.Popup.Resource.Layout.test_toolbar = global::EcoCareApp.Droid.Resource.Layout.test_toolbar;
+			global::Rg.Plugins.Popup.Resource.Layout.test_toolbar_custom_background = global::EcoCareApp.Droid.Resource.Layout.test_toolbar_custom_background;
+			global::Rg.Plugins.Popup.Resource.Layout.test_toolbar_elevation = global::EcoCareApp.Droid.Resource.Layout.test_toolbar_elevation;
+			global::Rg.Plugins.Popup.Resource.Layout.test_toolbar_surface = global::EcoCareApp.Droid.Resource.Layout.test_toolbar_surface;
+			global::Rg.Plugins.Popup.Resource.Layout.text_view_without_line_height = global::EcoCareApp.Droid.Resource.Layout.text_view_without_line_height;
+			global::Rg.Plugins.Popup.Resource.Layout.text_view_with_line_height_from_appearance = global::EcoCareApp.Droid.Resource.Layout.text_view_with_line_height_from_appearance;
+			global::Rg.Plugins.Popup.Resource.Layout.text_view_with_line_height_from_layout = global::EcoCareApp.Droid.Resource.Layout.text_view_with_line_height_from_layout;
+			global::Rg.Plugins.Popup.Resource.Layout.text_view_with_line_height_from_style = global::EcoCareApp.Droid.Resource.Layout.text_view_with_line_height_from_style;
+			global::Rg.Plugins.Popup.Resource.Layout.text_view_with_theme_line_height = global::EcoCareApp.Droid.Resource.Layout.text_view_with_theme_line_height;
 			global::Rg.Plugins.Popup.Resource.Layout.Toolbar = global::EcoCareApp.Droid.Resource.Layout.Toolbar;
+			global::Rg.Plugins.Popup.Resource.Plurals.mtrl_badge_content_description = global::EcoCareApp.Droid.Resource.Plurals.mtrl_badge_content_description;
 			global::Rg.Plugins.Popup.Resource.String.abc_action_bar_home_description = global::EcoCareApp.Droid.Resource.String.abc_action_bar_home_description;
 			global::Rg.Plugins.Popup.Resource.String.abc_action_bar_up_description = global::EcoCareApp.Droid.Resource.String.abc_action_bar_up_description;
 			global::Rg.Plugins.Popup.Resource.String.abc_action_menu_overflow_description = global::EcoCareApp.Droid.Resource.String.abc_action_menu_overflow_description;
@@ -1390,11 +1902,59 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.String.appbar_scrolling_view_behavior = global::EcoCareApp.Droid.Resource.String.appbar_scrolling_view_behavior;
 			global::Rg.Plugins.Popup.Resource.String.bottom_sheet_behavior = global::EcoCareApp.Droid.Resource.String.bottom_sheet_behavior;
 			global::Rg.Plugins.Popup.Resource.String.character_counter_content_description = global::EcoCareApp.Droid.Resource.String.character_counter_content_description;
+			global::Rg.Plugins.Popup.Resource.String.character_counter_overflowed_content_description = global::EcoCareApp.Droid.Resource.String.character_counter_overflowed_content_description;
 			global::Rg.Plugins.Popup.Resource.String.character_counter_pattern = global::EcoCareApp.Droid.Resource.String.character_counter_pattern;
+			global::Rg.Plugins.Popup.Resource.String.chip_text = global::EcoCareApp.Droid.Resource.String.chip_text;
+			global::Rg.Plugins.Popup.Resource.String.clear_text_end_icon_content_description = global::EcoCareApp.Droid.Resource.String.clear_text_end_icon_content_description;
+			global::Rg.Plugins.Popup.Resource.String.copy_toast_msg = global::EcoCareApp.Droid.Resource.String.copy_toast_msg;
+			global::Rg.Plugins.Popup.Resource.String.error_icon_content_description = global::EcoCareApp.Droid.Resource.String.error_icon_content_description;
+			global::Rg.Plugins.Popup.Resource.String.exposed_dropdown_menu_content_description = global::EcoCareApp.Droid.Resource.String.exposed_dropdown_menu_content_description;
 			global::Rg.Plugins.Popup.Resource.String.fab_transformation_scrim_behavior = global::EcoCareApp.Droid.Resource.String.fab_transformation_scrim_behavior;
 			global::Rg.Plugins.Popup.Resource.String.fab_transformation_sheet_behavior = global::EcoCareApp.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::Rg.Plugins.Popup.Resource.String.fallback_menu_item_copy_link = global::EcoCareApp.Droid.Resource.String.fallback_menu_item_copy_link;
+			global::Rg.Plugins.Popup.Resource.String.fallback_menu_item_open_in_browser = global::EcoCareApp.Droid.Resource.String.fallback_menu_item_open_in_browser;
+			global::Rg.Plugins.Popup.Resource.String.fallback_menu_item_share_link = global::EcoCareApp.Droid.Resource.String.fallback_menu_item_share_link;
 			global::Rg.Plugins.Popup.Resource.String.hide_bottom_view_on_scroll_behavior = global::EcoCareApp.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::Rg.Plugins.Popup.Resource.String.icon_content_description = global::EcoCareApp.Droid.Resource.String.icon_content_description;
+			global::Rg.Plugins.Popup.Resource.String.item_view_role_description = global::EcoCareApp.Droid.Resource.String.item_view_role_description;
+			global::Rg.Plugins.Popup.Resource.String.material_slider_range_end = global::EcoCareApp.Droid.Resource.String.material_slider_range_end;
+			global::Rg.Plugins.Popup.Resource.String.material_slider_range_start = global::EcoCareApp.Droid.Resource.String.material_slider_range_start;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_badge_numberless_content_description = global::EcoCareApp.Droid.Resource.String.mtrl_badge_numberless_content_description;
 			global::Rg.Plugins.Popup.Resource.String.mtrl_chip_close_icon_content_description = global::EcoCareApp.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_exceed_max_badge_number_content_description = global::EcoCareApp.Droid.Resource.String.mtrl_exceed_max_badge_number_content_description;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_exceed_max_badge_number_suffix = global::EcoCareApp.Droid.Resource.String.mtrl_exceed_max_badge_number_suffix;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_a11y_next_month = global::EcoCareApp.Droid.Resource.String.mtrl_picker_a11y_next_month;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_a11y_prev_month = global::EcoCareApp.Droid.Resource.String.mtrl_picker_a11y_prev_month;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_announce_current_selection = global::EcoCareApp.Droid.Resource.String.mtrl_picker_announce_current_selection;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_cancel = global::EcoCareApp.Droid.Resource.String.mtrl_picker_cancel;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_confirm = global::EcoCareApp.Droid.Resource.String.mtrl_picker_confirm;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_date_header_selected = global::EcoCareApp.Droid.Resource.String.mtrl_picker_date_header_selected;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_date_header_title = global::EcoCareApp.Droid.Resource.String.mtrl_picker_date_header_title;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_date_header_unselected = global::EcoCareApp.Droid.Resource.String.mtrl_picker_date_header_unselected;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_day_of_week_column_header = global::EcoCareApp.Droid.Resource.String.mtrl_picker_day_of_week_column_header;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_invalid_format = global::EcoCareApp.Droid.Resource.String.mtrl_picker_invalid_format;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_invalid_format_example = global::EcoCareApp.Droid.Resource.String.mtrl_picker_invalid_format_example;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_invalid_format_use = global::EcoCareApp.Droid.Resource.String.mtrl_picker_invalid_format_use;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_invalid_range = global::EcoCareApp.Droid.Resource.String.mtrl_picker_invalid_range;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_navigate_to_year_description = global::EcoCareApp.Droid.Resource.String.mtrl_picker_navigate_to_year_description;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_out_of_range = global::EcoCareApp.Droid.Resource.String.mtrl_picker_out_of_range;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_range_header_only_end_selected = global::EcoCareApp.Droid.Resource.String.mtrl_picker_range_header_only_end_selected;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_range_header_only_start_selected = global::EcoCareApp.Droid.Resource.String.mtrl_picker_range_header_only_start_selected;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_range_header_selected = global::EcoCareApp.Droid.Resource.String.mtrl_picker_range_header_selected;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_range_header_title = global::EcoCareApp.Droid.Resource.String.mtrl_picker_range_header_title;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_range_header_unselected = global::EcoCareApp.Droid.Resource.String.mtrl_picker_range_header_unselected;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_save = global::EcoCareApp.Droid.Resource.String.mtrl_picker_save;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_text_input_date_hint = global::EcoCareApp.Droid.Resource.String.mtrl_picker_text_input_date_hint;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_text_input_date_range_end_hint = global::EcoCareApp.Droid.Resource.String.mtrl_picker_text_input_date_range_end_hint;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_text_input_date_range_start_hint = global::EcoCareApp.Droid.Resource.String.mtrl_picker_text_input_date_range_start_hint;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_text_input_day_abbr = global::EcoCareApp.Droid.Resource.String.mtrl_picker_text_input_day_abbr;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_text_input_month_abbr = global::EcoCareApp.Droid.Resource.String.mtrl_picker_text_input_month_abbr;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_text_input_year_abbr = global::EcoCareApp.Droid.Resource.String.mtrl_picker_text_input_year_abbr;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_toggle_to_calendar_input_mode = global::EcoCareApp.Droid.Resource.String.mtrl_picker_toggle_to_calendar_input_mode;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_toggle_to_day_selection = global::EcoCareApp.Droid.Resource.String.mtrl_picker_toggle_to_day_selection;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_toggle_to_text_input_mode = global::EcoCareApp.Droid.Resource.String.mtrl_picker_toggle_to_text_input_mode;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_picker_toggle_to_year_selection = global::EcoCareApp.Droid.Resource.String.mtrl_picker_toggle_to_year_selection;
+			global::Rg.Plugins.Popup.Resource.String.overflow_tab_title = global::EcoCareApp.Droid.Resource.String.overflow_tab_title;
 			global::Rg.Plugins.Popup.Resource.String.password_toggle_content_description = global::EcoCareApp.Droid.Resource.String.password_toggle_content_description;
 			global::Rg.Plugins.Popup.Resource.String.path_password_eye = global::EcoCareApp.Droid.Resource.String.path_password_eye;
 			global::Rg.Plugins.Popup.Resource.String.path_password_eye_mask_strike_through = global::EcoCareApp.Droid.Resource.String.path_password_eye_mask_strike_through;
@@ -1404,10 +1964,13 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.String.status_bar_notification_info_overflow = global::EcoCareApp.Droid.Resource.String.status_bar_notification_info_overflow;
 			global::Rg.Plugins.Popup.Resource.Style.AlertDialog_AppCompat = global::EcoCareApp.Droid.Resource.Style.AlertDialog_AppCompat;
 			global::Rg.Plugins.Popup.Resource.Style.AlertDialog_AppCompat_Light = global::EcoCareApp.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.AndroidThemeColorAccentYellow = global::EcoCareApp.Droid.Resource.Style.AndroidThemeColorAccentYellow;
 			global::Rg.Plugins.Popup.Resource.Style.Animation_AppCompat_Dialog = global::EcoCareApp.Droid.Resource.Style.Animation_AppCompat_Dialog;
 			global::Rg.Plugins.Popup.Resource.Style.Animation_AppCompat_DropDownUp = global::EcoCareApp.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
 			global::Rg.Plugins.Popup.Resource.Style.Animation_AppCompat_Tooltip = global::EcoCareApp.Droid.Resource.Style.Animation_AppCompat_Tooltip;
 			global::Rg.Plugins.Popup.Resource.Style.Animation_Design_BottomSheetDialog = global::EcoCareApp.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Rg.Plugins.Popup.Resource.Style.Animation_MaterialComponents_BottomSheetDialog = global::EcoCareApp.Droid.Resource.Style.Animation_MaterialComponents_BottomSheetDialog;
+			global::Rg.Plugins.Popup.Resource.Style.AppCompatDialogStyle = global::EcoCareApp.Droid.Resource.Style.AppCompatDialogStyle;
 			global::Rg.Plugins.Popup.Resource.Style.Base_AlertDialog_AppCompat = global::EcoCareApp.Droid.Resource.Style.Base_AlertDialog_AppCompat;
 			global::Rg.Plugins.Popup.Resource.Style.Base_AlertDialog_AppCompat_Light = global::EcoCareApp.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Animation_AppCompat_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
@@ -1416,6 +1979,9 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.Base_CardView = global::EcoCareApp.Droid.Resource.Style.Base_CardView;
 			global::Rg.Plugins.Popup.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::EcoCareApp.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
 			global::Rg.Plugins.Popup.Resource.Style.Base_DialogWindowTitle_AppCompat = global::EcoCareApp.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Icon = global::EcoCareApp.Droid.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Icon;
+			global::Rg.Plugins.Popup.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Panel = global::EcoCareApp.Droid.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Panel;
+			global::Rg.Plugins.Popup.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Text = global::EcoCareApp.Droid.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Text;
 			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_AppCompat;
 			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
 			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
@@ -1461,6 +2027,10 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
 			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
 			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_MaterialComponents_Badge = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_MaterialComponents_Badge;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_MaterialComponents_Button = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_MaterialComponents_Button;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_MaterialComponents_Headline6 = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_MaterialComponents_Headline6;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_MaterialComponents_Subtitle2 = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_MaterialComponents_Subtitle2;
 			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
 			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
 			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::EcoCareApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
@@ -1473,6 +2043,9 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::EcoCareApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
 			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
 			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::EcoCareApp.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert_Framework = global::EcoCareApp.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert_Framework;
+			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework = global::EcoCareApp.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework;
+			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog = global::EcoCareApp.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat = global::EcoCareApp.Droid.Resource.Style.Base_Theme_AppCompat;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::EcoCareApp.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
@@ -1493,6 +2066,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Dialog_Bridge = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
@@ -1502,22 +2076,30 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Bridge = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::EcoCareApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::EcoCareApp.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_MaterialAlertDialog = global::EcoCareApp.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_MaterialAlertDialog;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents = global::EcoCareApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::EcoCareApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog_Bridge = global::EcoCareApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::EcoCareApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::EcoCareApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::EcoCareApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog_Bridge = global::EcoCareApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V21_Theme_AppCompat = global::EcoCareApp.Droid.Resource.Style.Base_V21_Theme_AppCompat;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V21_Theme_AppCompat_Light = global::EcoCareApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V21_Theme_MaterialComponents = global::EcoCareApp.Droid.Resource.Style.Base_V21_Theme_MaterialComponents;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V21_Theme_MaterialComponents_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_V21_Theme_MaterialComponents_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V21_Theme_MaterialComponents_Light = global::EcoCareApp.Droid.Resource.Style.Base_V21_Theme_MaterialComponents_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V21_Theme_MaterialComponents_Light_Dialog = global::EcoCareApp.Droid.Resource.Style.Base_V21_Theme_MaterialComponents_Light_Dialog;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V22_Theme_AppCompat = global::EcoCareApp.Droid.Resource.Style.Base_V22_Theme_AppCompat;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V22_Theme_AppCompat_Light = global::EcoCareApp.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
 			global::Rg.Plugins.Popup.Resource.Style.Base_V23_Theme_AppCompat = global::EcoCareApp.Droid.Resource.Style.Base_V23_Theme_AppCompat;
@@ -1594,12 +2176,34 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Toolbar = global::EcoCareApp.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::EcoCareApp.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_Design_TabLayout = global::EcoCareApp.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_AutoCompleteTextView = global::EcoCareApp.Droid.Resource.Style.Base_Widget_MaterialComponents_AutoCompleteTextView;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_CheckedTextView = global::EcoCareApp.Droid.Resource.Style.Base_Widget_MaterialComponents_CheckedTextView;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_Chip = global::EcoCareApp.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_PopupMenu = global::EcoCareApp.Droid.Resource.Style.Base_Widget_MaterialComponents_PopupMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_ContextMenu = global::EcoCareApp.Droid.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_ContextMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_ListPopupWindow = global::EcoCareApp.Droid.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_ListPopupWindow;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_Overflow = global::EcoCareApp.Droid.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_Overflow;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_Slider = global::EcoCareApp.Droid.Resource.Style.Base_Widget_MaterialComponents_Slider;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::EcoCareApp.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
 			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::EcoCareApp.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_TextView = global::EcoCareApp.Droid.Resource.Style.Base_Widget_MaterialComponents_TextView;
 			global::Rg.Plugins.Popup.Resource.Style.CardView = global::EcoCareApp.Droid.Resource.Style.CardView;
 			global::Rg.Plugins.Popup.Resource.Style.CardView_Dark = global::EcoCareApp.Droid.Resource.Style.CardView_Dark;
 			global::Rg.Plugins.Popup.Resource.Style.CardView_Light = global::EcoCareApp.Droid.Resource.Style.CardView_Light;
+			global::Rg.Plugins.Popup.Resource.Style.collectionViewTheme = global::EcoCareApp.Droid.Resource.Style.collectionViewTheme;
+			global::Rg.Plugins.Popup.Resource.Style.EmptyTheme = global::EcoCareApp.Droid.Resource.Style.EmptyTheme;
+			global::Rg.Plugins.Popup.Resource.Style.MainTheme = global::EcoCareApp.Droid.Resource.Style.MainTheme;
+			global::Rg.Plugins.Popup.Resource.Style.MainTheme_Base = global::EcoCareApp.Droid.Resource.Style.MainTheme_Base;
+			global::Rg.Plugins.Popup.Resource.Style.MaterialAlertDialog_MaterialComponents = global::EcoCareApp.Droid.Resource.Style.MaterialAlertDialog_MaterialComponents;
+			global::Rg.Plugins.Popup.Resource.Style.MaterialAlertDialog_MaterialComponents_Body_Text = global::EcoCareApp.Droid.Resource.Style.MaterialAlertDialog_MaterialComponents_Body_Text;
+			global::Rg.Plugins.Popup.Resource.Style.MaterialAlertDialog_MaterialComponents_Picker_Date_Calendar = global::EcoCareApp.Droid.Resource.Style.MaterialAlertDialog_MaterialComponents_Picker_Date_Calendar;
+			global::Rg.Plugins.Popup.Resource.Style.MaterialAlertDialog_MaterialComponents_Picker_Date_Spinner = global::EcoCareApp.Droid.Resource.Style.MaterialAlertDialog_MaterialComponents_Picker_Date_Spinner;
+			global::Rg.Plugins.Popup.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Icon = global::EcoCareApp.Droid.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Icon;
+			global::Rg.Plugins.Popup.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Icon_CenterStacked = global::EcoCareApp.Droid.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Icon_CenterStacked;
+			global::Rg.Plugins.Popup.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Panel = global::EcoCareApp.Droid.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Panel;
+			global::Rg.Plugins.Popup.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked = global::EcoCareApp.Droid.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked;
+			global::Rg.Plugins.Popup.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Text = global::EcoCareApp.Droid.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Text;
+			global::Rg.Plugins.Popup.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked = global::EcoCareApp.Droid.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked;
 			global::Rg.Plugins.Popup.Resource.Style.Platform_AppCompat = global::EcoCareApp.Droid.Resource.Style.Platform_AppCompat;
 			global::Rg.Plugins.Popup.Resource.Style.Platform_AppCompat_Light = global::EcoCareApp.Droid.Resource.Style.Platform_AppCompat_Light;
 			global::Rg.Plugins.Popup.Resource.Style.Platform_MaterialComponents = global::EcoCareApp.Droid.Resource.Style.Platform_MaterialComponents;
@@ -1631,6 +2235,40 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::EcoCareApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
 			global::Rg.Plugins.Popup.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::EcoCareApp.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
 			global::Rg.Plugins.Popup.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::EcoCareApp.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Rg.Plugins.Popup.Resource.Style.scrollViewScrollBars = global::EcoCareApp.Droid.Resource.Style.scrollViewScrollBars;
+			global::Rg.Plugins.Popup.Resource.Style.scrollViewTheme = global::EcoCareApp.Droid.Resource.Style.scrollViewTheme;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_BottomLeftDifferentCornerSize = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_BottomLeftDifferentCornerSize;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_BottomRightCut = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_BottomRightCut;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_Cut = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_Cut;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_DifferentCornerSize = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_DifferentCornerSize;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_BottomSheet = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_BottomSheet;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_Chip = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_Chip;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_FloatingActionButton = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_FloatingActionButton;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_TopLeftCut = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_TopLeftCut;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearanceOverlay_TopRightDifferentCornerSize = global::EcoCareApp.Droid.Resource.Style.ShapeAppearanceOverlay_TopRightDifferentCornerSize;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearance_MaterialComponents = global::EcoCareApp.Droid.Resource.Style.ShapeAppearance_MaterialComponents;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearance_MaterialComponents_LargeComponent = global::EcoCareApp.Droid.Resource.Style.ShapeAppearance_MaterialComponents_LargeComponent;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearance_MaterialComponents_MediumComponent = global::EcoCareApp.Droid.Resource.Style.ShapeAppearance_MaterialComponents_MediumComponent;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearance_MaterialComponents_SmallComponent = global::EcoCareApp.Droid.Resource.Style.ShapeAppearance_MaterialComponents_SmallComponent;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearance_MaterialComponents_Test = global::EcoCareApp.Droid.Resource.Style.ShapeAppearance_MaterialComponents_Test;
+			global::Rg.Plugins.Popup.Resource.Style.ShapeAppearance_MaterialComponents_Tooltip = global::EcoCareApp.Droid.Resource.Style.ShapeAppearance_MaterialComponents_Tooltip;
+			global::Rg.Plugins.Popup.Resource.Style.TestStyleWithLineHeight = global::EcoCareApp.Droid.Resource.Style.TestStyleWithLineHeight;
+			global::Rg.Plugins.Popup.Resource.Style.TestStyleWithLineHeightAppearance = global::EcoCareApp.Droid.Resource.Style.TestStyleWithLineHeightAppearance;
+			global::Rg.Plugins.Popup.Resource.Style.TestStyleWithoutLineHeight = global::EcoCareApp.Droid.Resource.Style.TestStyleWithoutLineHeight;
+			global::Rg.Plugins.Popup.Resource.Style.TestStyleWithThemeLineHeightAttribute = global::EcoCareApp.Droid.Resource.Style.TestStyleWithThemeLineHeightAttribute;
+			global::Rg.Plugins.Popup.Resource.Style.TestThemeWithLineHeight = global::EcoCareApp.Droid.Resource.Style.TestThemeWithLineHeight;
+			global::Rg.Plugins.Popup.Resource.Style.TestThemeWithLineHeightDisabled = global::EcoCareApp.Droid.Resource.Style.TestThemeWithLineHeightDisabled;
+			global::Rg.Plugins.Popup.Resource.Style.Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = global::EcoCareApp.Droid.Resource.Style.Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day;
+			global::Rg.Plugins.Popup.Resource.Style.Test_Theme_MaterialComponents_MaterialCalendar = global::EcoCareApp.Droid.Resource.Style.Test_Theme_MaterialComponents_MaterialCalendar;
+			global::Rg.Plugins.Popup.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar = global::EcoCareApp.Droid.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar;
+			global::Rg.Plugins.Popup.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar_Day = global::EcoCareApp.Droid.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar_Day;
+			global::Rg.Plugins.Popup.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar_Day_Selected = global::EcoCareApp.Droid.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar_Day_Selected;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat = global::EcoCareApp.Droid.Resource.Style.TextAppearance_AppCompat;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Body1 = global::EcoCareApp.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Body2 = global::EcoCareApp.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
@@ -1695,8 +2333,12 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Error = global::EcoCareApp.Droid.Resource.Style.TextAppearance_Design_Error;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_HelperText = global::EcoCareApp.Droid.Resource.Style.TextAppearance_Design_HelperText;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Hint = global::EcoCareApp.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Placeholder = global::EcoCareApp.Droid.Resource.Style.TextAppearance_Design_Placeholder;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Prefix = global::EcoCareApp.Droid.Resource.Style.TextAppearance_Design_Prefix;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Snackbar_Message = global::EcoCareApp.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Suffix = global::EcoCareApp.Droid.Resource.Style.TextAppearance_Design_Suffix;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Tab = global::EcoCareApp.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Badge = global::EcoCareApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Badge;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::EcoCareApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::EcoCareApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Button = global::EcoCareApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
@@ -1711,9 +2353,11 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Overline = global::EcoCareApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::EcoCareApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::EcoCareApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Tooltip = global::EcoCareApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Tooltip;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::EcoCareApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::EcoCareApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
 			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::EcoCareApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlayColorAccentRed = global::EcoCareApp.Droid.Resource.Style.ThemeOverlayColorAccentRed;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_AppCompat;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat_Dark = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
@@ -1723,18 +2367,43 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat_Light = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_Design_TextInputEditText = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_Design_TextInputEditText;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar_Primary = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar_Primary;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar_Surface = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar_Surface;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_BottomAppBar_Primary = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_BottomAppBar_Primary;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_BottomAppBar_Surface = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_BottomAppBar_Surface;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_BottomSheetDialog = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_BottomSheetDialog;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_DayNight_BottomSheetDialog = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_DayNight_BottomSheetDialog;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert_Framework = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert_Framework;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_MaterialCalendar = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialCalendar;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_MaterialCalendar_Fullscreen = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialCalendar_Fullscreen;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
 			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Toolbar_Primary = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Toolbar_Primary;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Toolbar_Surface = global::EcoCareApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Toolbar_Surface;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat = global::EcoCareApp.Droid.Resource.Style.Theme_AppCompat;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_CompactMenu = global::EcoCareApp.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_DayNight = global::EcoCareApp.Droid.Resource.Style.Theme_AppCompat_DayNight;
@@ -1748,6 +2417,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::EcoCareApp.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Dialog_Alert = global::EcoCareApp.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::EcoCareApp.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Empty = global::EcoCareApp.Droid.Resource.Style.Theme_AppCompat_Empty;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Light = global::EcoCareApp.Droid.Resource.Style.Theme_AppCompat_Light;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::EcoCareApp.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Light_Dialog = global::EcoCareApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
@@ -1766,11 +2436,33 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_CompactMenu = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_BottomSheetDialog = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_BottomSheetDialog;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_DarkActionBar = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_DarkActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_DarkActionBar_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_DarkActionBar_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_Dialog = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_DialogWhenLarge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_DialogWhenLarge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Alert = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Alert_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Alert_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_FixedSize = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_FixedSize;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_FixedSize_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_FixedSize_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_MinWidth = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_MinWidth_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_MinWidth_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_NoActionBar = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_NoActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DayNight_NoActionBar_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DayNight_NoActionBar_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Dialog = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Dialog_Alert_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Dialog_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Dialog_FixedSize = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog_FixedSize;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Dialog_FixedSize_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog_FixedSize_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_BarSize = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_BarSize;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
@@ -1778,7 +2470,13 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Dialog_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Dialog_FixedSize = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Dialog_FixedSize_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_FixedSize_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_LargeTouch = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_LargeTouch;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
 			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_NoActionBar = global::EcoCareApp.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
@@ -1867,11 +2565,27 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::EcoCareApp.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_Snackbar = global::EcoCareApp.Droid.Resource.Style.Widget_Design_Snackbar;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_TabLayout = global::EcoCareApp.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_TextInputEditText = global::EcoCareApp.Droid.Resource.Style.Widget_Design_TextInputEditText;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_TextInputLayout = global::EcoCareApp.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_ActionBar_Primary = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_ActionBar_Primary;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_ActionBar_PrimarySurface = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_ActionBar_PrimarySurface;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_ActionBar_Solid = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_ActionBar_Solid;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_ActionBar_Surface = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_ActionBar_Surface;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_AppBarLayout_Primary = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_AppBarLayout_Primary;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_AppBarLayout_PrimarySurface = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_AppBarLayout_PrimarySurface;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_AppBarLayout_Surface = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_AppBarLayout_Surface;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_FilledBox = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_FilledBox;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_FilledBox_Dense = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_FilledBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Badge = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Badge;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomAppBar_PrimarySurface = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_PrimarySurface;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomNavigationView_PrimarySurface = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_PrimarySurface;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomSheet = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Button;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_Icon = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
@@ -1879,31 +2593,76 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Flush = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Flush;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_TextButton_Snackbar = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Snackbar;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_CardView = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_CheckedTextView = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_CheckedTextView;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_ChipGroup = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Chip_Action = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_CompoundButton_CheckBox = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_CompoundButton_CheckBox;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_CompoundButton_RadioButton = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_CompoundButton_RadioButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_CompoundButton_Switch = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_CompoundButton_Switch;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_ExtendedFloatingActionButton = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_ExtendedFloatingActionButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_ExtendedFloatingActionButton_Icon = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_ExtendedFloatingActionButton_Icon;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Light_ActionBar_Solid = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Light_ActionBar_Solid;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialButtonToggleGroup = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialButtonToggleGroup;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_DayTextView = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_DayTextView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Invalid = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Invalid;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Selected = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Selected;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Today = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Today;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Fullscreen = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Fullscreen;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderConfirmButton = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderConfirmButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderDivider = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderDivider;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderLayout = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderLayout;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderSelection = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderSelection;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderTitle = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderTitle;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderToggleButton = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderToggleButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Item = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Item;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year_Selected = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year_Selected;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year_Today = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year_Today;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_NavigationView = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_PopupMenu = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_PopupMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_PopupMenu_ContextMenu = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_PopupMenu_ContextMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_PopupMenu_ListPopupWindow = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_PopupMenu_ListPopupWindow;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_PopupMenu_Overflow = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_PopupMenu_Overflow;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_ShapeableImageView = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_ShapeableImageView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Slider = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Slider;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Snackbar = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Snackbar_TextView = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_TextView;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TabLayout = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TabLayout_PrimarySurface = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_PrimarySurface;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextView = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_TextView;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Toolbar = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Toolbar_Primary = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Toolbar_Primary;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Toolbar_PrimarySurface = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Toolbar_PrimarySurface;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Toolbar_Surface = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Toolbar_Surface;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Tooltip = global::EcoCareApp.Droid.Resource.Style.Widget_MaterialComponents_Tooltip;
 			global::Rg.Plugins.Popup.Resource.Style.Widget_Support_CoordinatorLayout = global::EcoCareApp.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
 			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar = global::EcoCareApp.Droid.Resource.Styleable.ActionBar;
 			global::Rg.Plugins.Popup.Resource.Styleable.ActionBarLayout = global::EcoCareApp.Droid.Resource.Styleable.ActionBarLayout;
@@ -1989,6 +2748,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::EcoCareApp.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
 			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::EcoCareApp.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
 			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_liftOnScroll = global::EcoCareApp.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_liftOnScrollTargetViewId = global::EcoCareApp.Droid.Resource.Styleable.AppBarLayout_liftOnScrollTargetViewId;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_statusBarForeground = global::EcoCareApp.Droid.Resource.Styleable.AppBarLayout_statusBarForeground;
 			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatImageView = global::EcoCareApp.Droid.Resource.Styleable.AppCompatImageView;
 			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatImageView_android_src = global::EcoCareApp.Droid.Resource.Styleable.AppCompatImageView_android_src;
 			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatImageView_srcCompat = global::EcoCareApp.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
@@ -2155,20 +2916,42 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::EcoCareApp.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
 			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::EcoCareApp.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
 			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowNoTitle = global::EcoCareApp.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Rg.Plugins.Popup.Resource.Styleable.Badge = global::EcoCareApp.Droid.Resource.Styleable.Badge;
+			global::Rg.Plugins.Popup.Resource.Styleable.Badge_backgroundColor = global::EcoCareApp.Droid.Resource.Styleable.Badge_backgroundColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.Badge_badgeGravity = global::EcoCareApp.Droid.Resource.Styleable.Badge_badgeGravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.Badge_badgeTextColor = global::EcoCareApp.Droid.Resource.Styleable.Badge_badgeTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.Badge_horizontalOffset = global::EcoCareApp.Droid.Resource.Styleable.Badge_horizontalOffset;
+			global::Rg.Plugins.Popup.Resource.Styleable.Badge_maxCharacterCount = global::EcoCareApp.Droid.Resource.Styleable.Badge_maxCharacterCount;
+			global::Rg.Plugins.Popup.Resource.Styleable.Badge_number = global::EcoCareApp.Droid.Resource.Styleable.Badge_number;
+			global::Rg.Plugins.Popup.Resource.Styleable.Badge_verticalOffset = global::EcoCareApp.Droid.Resource.Styleable.Badge_verticalOffset;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar = global::EcoCareApp.Droid.Resource.Styleable.BottomAppBar;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_backgroundTint = global::EcoCareApp.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_elevation = global::EcoCareApp.Droid.Resource.Styleable.BottomAppBar_elevation;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::EcoCareApp.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_fabAnimationMode = global::EcoCareApp.Droid.Resource.Styleable.BottomAppBar_fabAnimationMode;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_fabCradleMargin = global::EcoCareApp.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::EcoCareApp.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::EcoCareApp.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_hideOnScroll = global::EcoCareApp.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_paddingBottomSystemWindowInsets = global::EcoCareApp.Droid.Resource.Styleable.BottomAppBar_paddingBottomSystemWindowInsets;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_paddingLeftSystemWindowInsets = global::EcoCareApp.Droid.Resource.Styleable.BottomAppBar_paddingLeftSystemWindowInsets;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_paddingRightSystemWindowInsets = global::EcoCareApp.Droid.Resource.Styleable.BottomAppBar_paddingRightSystemWindowInsets;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView = global::EcoCareApp.Droid.Resource.Styleable.BottomNavigationView;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::EcoCareApp.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_android_elevation = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_android_elevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_backgroundTint = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_backgroundTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_behavior_draggable = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_draggable;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_behavior_expandedOffset = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_expandedOffset;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_behavior_halfExpandedRatio = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_halfExpandedRatio;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_behavior_saveFlags = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_saveFlags;
 			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_gestureInsetBottomIgnored = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_gestureInsetBottomIgnored;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_shapeAppearance = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_shapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_shapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_shapeAppearanceOverlay;
 			global::Rg.Plugins.Popup.Resource.Styleable.ButtonBarLayout = global::EcoCareApp.Droid.Resource.Styleable.ButtonBarLayout;
 			global::Rg.Plugins.Popup.Resource.Styleable.ButtonBarLayout_allowStacking = global::EcoCareApp.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
 			global::Rg.Plugins.Popup.Resource.Styleable.CardView = global::EcoCareApp.Droid.Resource.Styleable.CardView;
@@ -2191,6 +2974,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup_chipSpacing = global::EcoCareApp.Droid.Resource.Styleable.ChipGroup_chipSpacing;
 			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::EcoCareApp.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
 			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup_chipSpacingVertical = global::EcoCareApp.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup_selectionRequired = global::EcoCareApp.Droid.Resource.Styleable.ChipGroup_selectionRequired;
 			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup_singleLine = global::EcoCareApp.Droid.Resource.Styleable.ChipGroup_singleLine;
 			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup_singleSelection = global::EcoCareApp.Droid.Resource.Styleable.ChipGroup_singleSelection;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_android_checkable = global::EcoCareApp.Droid.Resource.Styleable.Chip_android_checkable;
@@ -2198,8 +2982,10 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_android_maxWidth = global::EcoCareApp.Droid.Resource.Styleable.Chip_android_maxWidth;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_android_text = global::EcoCareApp.Droid.Resource.Styleable.Chip_android_text;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_android_textAppearance = global::EcoCareApp.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_android_textColor = global::EcoCareApp.Droid.Resource.Styleable.Chip_android_textColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_checkedIcon = global::EcoCareApp.Droid.Resource.Styleable.Chip_checkedIcon;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_checkedIconEnabled = global::EcoCareApp.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_checkedIconTint = global::EcoCareApp.Droid.Resource.Styleable.Chip_checkedIconTint;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_checkedIconVisible = global::EcoCareApp.Droid.Resource.Styleable.Chip_checkedIconVisible;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipBackgroundColor = global::EcoCareApp.Droid.Resource.Styleable.Chip_chipBackgroundColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipCornerRadius = global::EcoCareApp.Droid.Resource.Styleable.Chip_chipCornerRadius;
@@ -2210,9 +2996,11 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipIconTint = global::EcoCareApp.Droid.Resource.Styleable.Chip_chipIconTint;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipIconVisible = global::EcoCareApp.Droid.Resource.Styleable.Chip_chipIconVisible;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipMinHeight = global::EcoCareApp.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipMinTouchTargetSize = global::EcoCareApp.Droid.Resource.Styleable.Chip_chipMinTouchTargetSize;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipStartPadding = global::EcoCareApp.Droid.Resource.Styleable.Chip_chipStartPadding;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipStrokeColor = global::EcoCareApp.Droid.Resource.Styleable.Chip_chipStrokeColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipStrokeWidth = global::EcoCareApp.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipSurfaceColor = global::EcoCareApp.Droid.Resource.Styleable.Chip_chipSurfaceColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIcon = global::EcoCareApp.Droid.Resource.Styleable.Chip_closeIcon;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIconEnabled = global::EcoCareApp.Droid.Resource.Styleable.Chip_closeIconEnabled;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIconEndPadding = global::EcoCareApp.Droid.Resource.Styleable.Chip_closeIconEndPadding;
@@ -2220,10 +3008,13 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIconStartPadding = global::EcoCareApp.Droid.Resource.Styleable.Chip_closeIconStartPadding;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIconTint = global::EcoCareApp.Droid.Resource.Styleable.Chip_closeIconTint;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIconVisible = global::EcoCareApp.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_ensureMinTouchTargetSize = global::EcoCareApp.Droid.Resource.Styleable.Chip_ensureMinTouchTargetSize;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_hideMotionSpec = global::EcoCareApp.Droid.Resource.Styleable.Chip_hideMotionSpec;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_iconEndPadding = global::EcoCareApp.Droid.Resource.Styleable.Chip_iconEndPadding;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_iconStartPadding = global::EcoCareApp.Droid.Resource.Styleable.Chip_iconStartPadding;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_rippleColor = global::EcoCareApp.Droid.Resource.Styleable.Chip_rippleColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_shapeAppearance = global::EcoCareApp.Droid.Resource.Styleable.Chip_shapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_shapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Styleable.Chip_shapeAppearanceOverlay;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_showMotionSpec = global::EcoCareApp.Droid.Resource.Styleable.Chip_showMotionSpec;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_textEndPadding = global::EcoCareApp.Droid.Resource.Styleable.Chip_textEndPadding;
 			global::Rg.Plugins.Popup.Resource.Styleable.Chip_textStartPadding = global::EcoCareApp.Droid.Resource.Styleable.Chip_textStartPadding;
@@ -2241,6 +3032,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_Layout = global::EcoCareApp.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
 			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::EcoCareApp.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
 			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::EcoCareApp.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_maxLines = global::EcoCareApp.Droid.Resource.Styleable.CollapsingToolbarLayout_maxLines;
 			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::EcoCareApp.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
 			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::EcoCareApp.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
 			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::EcoCareApp.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
@@ -2276,13 +3068,26 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::EcoCareApp.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
 			global::Rg.Plugins.Popup.Resource.Styleable.DrawerArrowToggle_spinBars = global::EcoCareApp.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
 			global::Rg.Plugins.Popup.Resource.Styleable.DrawerArrowToggle_thickness = global::EcoCareApp.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Rg.Plugins.Popup.Resource.Styleable.DrawerLayout = global::EcoCareApp.Droid.Resource.Styleable.DrawerLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.DrawerLayout_elevation = global::EcoCareApp.Droid.Resource.Styleable.DrawerLayout_elevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.ExtendedFloatingActionButton = global::EcoCareApp.Droid.Resource.Styleable.ExtendedFloatingActionButton;
+			global::Rg.Plugins.Popup.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout = global::EcoCareApp.Droid.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout_behavior_autoHide = global::EcoCareApp.Droid.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Rg.Plugins.Popup.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout_behavior_autoShrink = global::EcoCareApp.Droid.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout_behavior_autoShrink;
+			global::Rg.Plugins.Popup.Resource.Styleable.ExtendedFloatingActionButton_elevation = global::EcoCareApp.Droid.Resource.Styleable.ExtendedFloatingActionButton_elevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.ExtendedFloatingActionButton_extendMotionSpec = global::EcoCareApp.Droid.Resource.Styleable.ExtendedFloatingActionButton_extendMotionSpec;
+			global::Rg.Plugins.Popup.Resource.Styleable.ExtendedFloatingActionButton_hideMotionSpec = global::EcoCareApp.Droid.Resource.Styleable.ExtendedFloatingActionButton_hideMotionSpec;
+			global::Rg.Plugins.Popup.Resource.Styleable.ExtendedFloatingActionButton_showMotionSpec = global::EcoCareApp.Droid.Resource.Styleable.ExtendedFloatingActionButton_showMotionSpec;
+			global::Rg.Plugins.Popup.Resource.Styleable.ExtendedFloatingActionButton_shrinkMotionSpec = global::EcoCareApp.Droid.Resource.Styleable.ExtendedFloatingActionButton_shrinkMotionSpec;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_android_enabled = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_android_enabled;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_backgroundTint = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_borderWidth = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_elevation = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_ensureMinTouchTargetSize = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_ensureMinTouchTargetSize;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_fabCustomSize = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_fabSize = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_fabSize;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
@@ -2290,6 +3095,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_maxImageSize = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_rippleColor = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_shapeAppearance = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_shapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_shapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_shapeAppearanceOverlay;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_showMotionSpec = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
 			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_useCompatPadding = global::EcoCareApp.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
 			global::Rg.Plugins.Popup.Resource.Styleable.FlowLayout = global::EcoCareApp.Droid.Resource.Styleable.FlowLayout;
@@ -2317,6 +3124,13 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::EcoCareApp.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
 			global::Rg.Plugins.Popup.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::EcoCareApp.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
 			global::Rg.Plugins.Popup.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::EcoCareApp.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.Fragment = global::EcoCareApp.Droid.Resource.Styleable.Fragment;
+			global::Rg.Plugins.Popup.Resource.Styleable.FragmentContainerView = global::EcoCareApp.Droid.Resource.Styleable.FragmentContainerView;
+			global::Rg.Plugins.Popup.Resource.Styleable.FragmentContainerView_android_name = global::EcoCareApp.Droid.Resource.Styleable.FragmentContainerView_android_name;
+			global::Rg.Plugins.Popup.Resource.Styleable.FragmentContainerView_android_tag = global::EcoCareApp.Droid.Resource.Styleable.FragmentContainerView_android_tag;
+			global::Rg.Plugins.Popup.Resource.Styleable.Fragment_android_id = global::EcoCareApp.Droid.Resource.Styleable.Fragment_android_id;
+			global::Rg.Plugins.Popup.Resource.Styleable.Fragment_android_name = global::EcoCareApp.Droid.Resource.Styleable.Fragment_android_name;
+			global::Rg.Plugins.Popup.Resource.Styleable.Fragment_android_tag = global::EcoCareApp.Droid.Resource.Styleable.Fragment_android_tag;
 			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor = global::EcoCareApp.Droid.Resource.Styleable.GradientColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.GradientColorItem = global::EcoCareApp.Droid.Resource.Styleable.GradientColorItem;
 			global::Rg.Plugins.Popup.Resource.Styleable.GradientColorItem_android_color = global::EcoCareApp.Droid.Resource.Styleable.GradientColorItem_android_color;
@@ -2333,6 +3147,12 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_startY = global::EcoCareApp.Droid.Resource.Styleable.GradientColor_android_startY;
 			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_tileMode = global::EcoCareApp.Droid.Resource.Styleable.GradientColor_android_tileMode;
 			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_type = global::EcoCareApp.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Rg.Plugins.Popup.Resource.Styleable.Insets = global::EcoCareApp.Droid.Resource.Styleable.Insets;
+			global::Rg.Plugins.Popup.Resource.Styleable.Insets_paddingBottomSystemWindowInsets = global::EcoCareApp.Droid.Resource.Styleable.Insets_paddingBottomSystemWindowInsets;
+			global::Rg.Plugins.Popup.Resource.Styleable.Insets_paddingLeftSystemWindowInsets = global::EcoCareApp.Droid.Resource.Styleable.Insets_paddingLeftSystemWindowInsets;
+			global::Rg.Plugins.Popup.Resource.Styleable.Insets_paddingRightSystemWindowInsets = global::EcoCareApp.Droid.Resource.Styleable.Insets_paddingRightSystemWindowInsets;
+			global::Rg.Plugins.Popup.Resource.Styleable.ItemsViewRendererTheme = global::EcoCareApp.Droid.Resource.Styleable.ItemsViewRendererTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.ItemsViewRendererTheme_collectionViewStyle = global::EcoCareApp.Droid.Resource.Styleable.ItemsViewRendererTheme_collectionViewStyle;
 			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat = global::EcoCareApp.Droid.Resource.Styleable.LinearLayoutCompat;
 			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::EcoCareApp.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
 			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::EcoCareApp.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
@@ -2351,7 +3171,26 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.ListPopupWindow = global::EcoCareApp.Droid.Resource.Styleable.ListPopupWindow;
 			global::Rg.Plugins.Popup.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::EcoCareApp.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
 			global::Rg.Plugins.Popup.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::EcoCareApp.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAlertDialog = global::EcoCareApp.Droid.Resource.Styleable.MaterialAlertDialog;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAlertDialogTheme = global::EcoCareApp.Droid.Resource.Styleable.MaterialAlertDialogTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogBodyTextStyle = global::EcoCareApp.Droid.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogBodyTextStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTheme = global::EcoCareApp.Droid.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitleIconStyle = global::EcoCareApp.Droid.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitleIconStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitlePanelStyle = global::EcoCareApp.Droid.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitlePanelStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitleTextStyle = global::EcoCareApp.Droid.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitleTextStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAlertDialog_backgroundInsetBottom = global::EcoCareApp.Droid.Resource.Styleable.MaterialAlertDialog_backgroundInsetBottom;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAlertDialog_backgroundInsetEnd = global::EcoCareApp.Droid.Resource.Styleable.MaterialAlertDialog_backgroundInsetEnd;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAlertDialog_backgroundInsetStart = global::EcoCareApp.Droid.Resource.Styleable.MaterialAlertDialog_backgroundInsetStart;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAlertDialog_backgroundInsetTop = global::EcoCareApp.Droid.Resource.Styleable.MaterialAlertDialog_backgroundInsetTop;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAutoCompleteTextView = global::EcoCareApp.Droid.Resource.Styleable.MaterialAutoCompleteTextView;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialAutoCompleteTextView_android_inputType = global::EcoCareApp.Droid.Resource.Styleable.MaterialAutoCompleteTextView_android_inputType;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButtonToggleGroup = global::EcoCareApp.Droid.Resource.Styleable.MaterialButtonToggleGroup;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButtonToggleGroup_checkedButton = global::EcoCareApp.Droid.Resource.Styleable.MaterialButtonToggleGroup_checkedButton;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButtonToggleGroup_selectionRequired = global::EcoCareApp.Droid.Resource.Styleable.MaterialButtonToggleGroup_selectionRequired;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButtonToggleGroup_singleSelection = global::EcoCareApp.Droid.Resource.Styleable.MaterialButtonToggleGroup_singleSelection;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_android_background = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_android_background;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_android_checkable = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_android_checkable;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_android_insetBottom = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_android_insetLeft = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_android_insetRight = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_android_insetRight;
@@ -2359,6 +3198,7 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_backgroundTint = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_backgroundTint;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_backgroundTintMode = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_cornerRadius = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_elevation = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_elevation;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_icon = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_icon;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_iconGravity = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_iconGravity;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_iconPadding = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_iconPadding;
@@ -2366,11 +3206,58 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_iconTint = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_iconTint;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_iconTintMode = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_iconTintMode;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_rippleColor = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_shapeAppearance = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_shapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_shapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_shapeAppearanceOverlay;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_strokeColor = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_strokeColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_strokeWidth = global::EcoCareApp.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendar = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendar;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendarItem = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendarItem;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendarItem_android_insetBottom = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendarItem_android_insetBottom;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendarItem_android_insetLeft = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendarItem_android_insetLeft;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendarItem_android_insetRight = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendarItem_android_insetRight;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendarItem_android_insetTop = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendarItem_android_insetTop;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendarItem_itemFillColor = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendarItem_itemFillColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendarItem_itemShapeAppearance = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendarItem_itemShapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendarItem_itemShapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendarItem_itemShapeAppearanceOverlay;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendarItem_itemStrokeColor = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendarItem_itemStrokeColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendarItem_itemStrokeWidth = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendarItem_itemStrokeWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendarItem_itemTextColor = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendarItem_itemTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendar_android_windowFullscreen = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendar_android_windowFullscreen;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendar_dayInvalidStyle = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendar_dayInvalidStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendar_daySelectedStyle = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendar_daySelectedStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendar_dayStyle = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendar_dayStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendar_dayTodayStyle = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendar_dayTodayStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendar_rangeFillColor = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendar_rangeFillColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendar_yearSelectedStyle = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendar_yearSelectedStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendar_yearStyle = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendar_yearStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCalendar_yearTodayStyle = global::EcoCareApp.Droid.Resource.Styleable.MaterialCalendar_yearTodayStyle;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView = global::EcoCareApp.Droid.Resource.Styleable.MaterialCardView;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView_android_checkable = global::EcoCareApp.Droid.Resource.Styleable.MaterialCardView_android_checkable;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView_cardForegroundColor = global::EcoCareApp.Droid.Resource.Styleable.MaterialCardView_cardForegroundColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView_checkedIcon = global::EcoCareApp.Droid.Resource.Styleable.MaterialCardView_checkedIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView_checkedIconTint = global::EcoCareApp.Droid.Resource.Styleable.MaterialCardView_checkedIconTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView_rippleColor = global::EcoCareApp.Droid.Resource.Styleable.MaterialCardView_rippleColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView_shapeAppearance = global::EcoCareApp.Droid.Resource.Styleable.MaterialCardView_shapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView_shapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Styleable.MaterialCardView_shapeAppearanceOverlay;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView_state_dragged = global::EcoCareApp.Droid.Resource.Styleable.MaterialCardView_state_dragged;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView_strokeColor = global::EcoCareApp.Droid.Resource.Styleable.MaterialCardView_strokeColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView_strokeWidth = global::EcoCareApp.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCheckBox = global::EcoCareApp.Droid.Resource.Styleable.MaterialCheckBox;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCheckBox_buttonTint = global::EcoCareApp.Droid.Resource.Styleable.MaterialCheckBox_buttonTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCheckBox_useMaterialThemeColors = global::EcoCareApp.Droid.Resource.Styleable.MaterialCheckBox_useMaterialThemeColors;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialRadioButton = global::EcoCareApp.Droid.Resource.Styleable.MaterialRadioButton;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialRadioButton_buttonTint = global::EcoCareApp.Droid.Resource.Styleable.MaterialRadioButton_buttonTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialRadioButton_useMaterialThemeColors = global::EcoCareApp.Droid.Resource.Styleable.MaterialRadioButton_useMaterialThemeColors;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialShape = global::EcoCareApp.Droid.Resource.Styleable.MaterialShape;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialShape_shapeAppearance = global::EcoCareApp.Droid.Resource.Styleable.MaterialShape_shapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialShape_shapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Styleable.MaterialShape_shapeAppearanceOverlay;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialTextAppearance = global::EcoCareApp.Droid.Resource.Styleable.MaterialTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialTextAppearance_android_lineHeight = global::EcoCareApp.Droid.Resource.Styleable.MaterialTextAppearance_android_lineHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialTextAppearance_lineHeight = global::EcoCareApp.Droid.Resource.Styleable.MaterialTextAppearance_lineHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialTextView = global::EcoCareApp.Droid.Resource.Styleable.MaterialTextView;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialTextView_android_lineHeight = global::EcoCareApp.Droid.Resource.Styleable.MaterialTextView_android_lineHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialTextView_android_textAppearance = global::EcoCareApp.Droid.Resource.Styleable.MaterialTextView_android_textAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialTextView_lineHeight = global::EcoCareApp.Droid.Resource.Styleable.MaterialTextView_lineHeight;
 			global::Rg.Plugins.Popup.Resource.Styleable.MenuGroup = global::EcoCareApp.Droid.Resource.Styleable.MenuGroup;
 			global::Rg.Plugins.Popup.Resource.Styleable.MenuGroup_android_checkableBehavior = global::EcoCareApp.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
 			global::Rg.Plugins.Popup.Resource.Styleable.MenuGroup_android_enabled = global::EcoCareApp.Droid.Resource.Styleable.MenuGroup_android_enabled;
@@ -2421,7 +3308,16 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemBackground = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemBackground;
 			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemHorizontalPadding = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
 			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemIconPadding = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemIconSize = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemIconSize;
 			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemIconTint = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemMaxLines = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemMaxLines;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemShapeAppearance = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemShapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemShapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemShapeAppearanceOverlay;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemShapeFillColor = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemShapeFillColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemShapeInsetBottom = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemShapeInsetBottom;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemShapeInsetEnd = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemShapeInsetEnd;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemShapeInsetStart = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemShapeInsetStart;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemShapeInsetTop = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemShapeInsetTop;
 			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemTextAppearance = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
 			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemTextColor = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_itemTextColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_menu = global::EcoCareApp.Droid.Resource.Styleable.NavigationView_menu;
@@ -2431,6 +3327,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::EcoCareApp.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
 			global::Rg.Plugins.Popup.Resource.Styleable.PopupWindow_android_popupBackground = global::EcoCareApp.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
 			global::Rg.Plugins.Popup.Resource.Styleable.PopupWindow_overlapAnchor = global::EcoCareApp.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Rg.Plugins.Popup.Resource.Styleable.RangeSlider = global::EcoCareApp.Droid.Resource.Styleable.RangeSlider;
+			global::Rg.Plugins.Popup.Resource.Styleable.RangeSlider_values = global::EcoCareApp.Droid.Resource.Styleable.RangeSlider_values;
 			global::Rg.Plugins.Popup.Resource.Styleable.RecycleListView = global::EcoCareApp.Droid.Resource.Styleable.RecycleListView;
 			global::Rg.Plugins.Popup.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::EcoCareApp.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
 			global::Rg.Plugins.Popup.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::EcoCareApp.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
@@ -2451,6 +3349,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::EcoCareApp.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
 			global::Rg.Plugins.Popup.Resource.Styleable.ScrollingViewBehavior_Layout = global::EcoCareApp.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
 			global::Rg.Plugins.Popup.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::EcoCareApp.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Rg.Plugins.Popup.Resource.Styleable.ScrollViewRendererTheme = global::EcoCareApp.Droid.Resource.Styleable.ScrollViewRendererTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.ScrollViewRendererTheme_scrollViewStyle = global::EcoCareApp.Droid.Resource.Styleable.ScrollViewRendererTheme_scrollViewStyle;
 			global::Rg.Plugins.Popup.Resource.Styleable.SearchView = global::EcoCareApp.Droid.Resource.Styleable.SearchView;
 			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_android_focusable = global::EcoCareApp.Droid.Resource.Styleable.SearchView_android_focusable;
 			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_android_imeOptions = global::EcoCareApp.Droid.Resource.Styleable.SearchView_android_imeOptions;
@@ -2469,13 +3369,55 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_submitBackground = global::EcoCareApp.Droid.Resource.Styleable.SearchView_submitBackground;
 			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_suggestionRowLayout = global::EcoCareApp.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
 			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_voiceIcon = global::EcoCareApp.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeableImageView = global::EcoCareApp.Droid.Resource.Styleable.ShapeableImageView;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeableImageView_shapeAppearance = global::EcoCareApp.Droid.Resource.Styleable.ShapeableImageView_shapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeableImageView_shapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Styleable.ShapeableImageView_shapeAppearanceOverlay;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeableImageView_strokeColor = global::EcoCareApp.Droid.Resource.Styleable.ShapeableImageView_strokeColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeableImageView_strokeWidth = global::EcoCareApp.Droid.Resource.Styleable.ShapeableImageView_strokeWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeAppearance = global::EcoCareApp.Droid.Resource.Styleable.ShapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeAppearance_cornerFamily = global::EcoCareApp.Droid.Resource.Styleable.ShapeAppearance_cornerFamily;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeAppearance_cornerFamilyBottomLeft = global::EcoCareApp.Droid.Resource.Styleable.ShapeAppearance_cornerFamilyBottomLeft;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeAppearance_cornerFamilyBottomRight = global::EcoCareApp.Droid.Resource.Styleable.ShapeAppearance_cornerFamilyBottomRight;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeAppearance_cornerFamilyTopLeft = global::EcoCareApp.Droid.Resource.Styleable.ShapeAppearance_cornerFamilyTopLeft;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeAppearance_cornerFamilyTopRight = global::EcoCareApp.Droid.Resource.Styleable.ShapeAppearance_cornerFamilyTopRight;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeAppearance_cornerSize = global::EcoCareApp.Droid.Resource.Styleable.ShapeAppearance_cornerSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeAppearance_cornerSizeBottomLeft = global::EcoCareApp.Droid.Resource.Styleable.ShapeAppearance_cornerSizeBottomLeft;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeAppearance_cornerSizeBottomRight = global::EcoCareApp.Droid.Resource.Styleable.ShapeAppearance_cornerSizeBottomRight;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeAppearance_cornerSizeTopLeft = global::EcoCareApp.Droid.Resource.Styleable.ShapeAppearance_cornerSizeTopLeft;
+			global::Rg.Plugins.Popup.Resource.Styleable.ShapeAppearance_cornerSizeTopRight = global::EcoCareApp.Droid.Resource.Styleable.ShapeAppearance_cornerSizeTopRight;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider = global::EcoCareApp.Droid.Resource.Styleable.Slider;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_android_enabled = global::EcoCareApp.Droid.Resource.Styleable.Slider_android_enabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_android_stepSize = global::EcoCareApp.Droid.Resource.Styleable.Slider_android_stepSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_android_value = global::EcoCareApp.Droid.Resource.Styleable.Slider_android_value;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_android_valueFrom = global::EcoCareApp.Droid.Resource.Styleable.Slider_android_valueFrom;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_android_valueTo = global::EcoCareApp.Droid.Resource.Styleable.Slider_android_valueTo;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_haloColor = global::EcoCareApp.Droid.Resource.Styleable.Slider_haloColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_haloRadius = global::EcoCareApp.Droid.Resource.Styleable.Slider_haloRadius;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_labelBehavior = global::EcoCareApp.Droid.Resource.Styleable.Slider_labelBehavior;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_labelStyle = global::EcoCareApp.Droid.Resource.Styleable.Slider_labelStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_thumbColor = global::EcoCareApp.Droid.Resource.Styleable.Slider_thumbColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_thumbElevation = global::EcoCareApp.Droid.Resource.Styleable.Slider_thumbElevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_thumbRadius = global::EcoCareApp.Droid.Resource.Styleable.Slider_thumbRadius;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_tickColor = global::EcoCareApp.Droid.Resource.Styleable.Slider_tickColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_tickColorActive = global::EcoCareApp.Droid.Resource.Styleable.Slider_tickColorActive;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_tickColorInactive = global::EcoCareApp.Droid.Resource.Styleable.Slider_tickColorInactive;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_trackColor = global::EcoCareApp.Droid.Resource.Styleable.Slider_trackColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_trackColorActive = global::EcoCareApp.Droid.Resource.Styleable.Slider_trackColorActive;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_trackColorInactive = global::EcoCareApp.Droid.Resource.Styleable.Slider_trackColorInactive;
+			global::Rg.Plugins.Popup.Resource.Styleable.Slider_trackHeight = global::EcoCareApp.Droid.Resource.Styleable.Slider_trackHeight;
 			global::Rg.Plugins.Popup.Resource.Styleable.Snackbar = global::EcoCareApp.Droid.Resource.Styleable.Snackbar;
 			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout = global::EcoCareApp.Droid.Resource.Styleable.SnackbarLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout_actionTextColorAlpha = global::EcoCareApp.Droid.Resource.Styleable.SnackbarLayout_actionTextColorAlpha;
 			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout_android_maxWidth = global::EcoCareApp.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout_animationMode = global::EcoCareApp.Droid.Resource.Styleable.SnackbarLayout_animationMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout_backgroundOverlayColorAlpha = global::EcoCareApp.Droid.Resource.Styleable.SnackbarLayout_backgroundOverlayColorAlpha;
+			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout_backgroundTint = global::EcoCareApp.Droid.Resource.Styleable.SnackbarLayout_backgroundTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout_backgroundTintMode = global::EcoCareApp.Droid.Resource.Styleable.SnackbarLayout_backgroundTintMode;
 			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout_elevation = global::EcoCareApp.Droid.Resource.Styleable.SnackbarLayout_elevation;
 			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::EcoCareApp.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
 			global::Rg.Plugins.Popup.Resource.Styleable.Snackbar_snackbarButtonStyle = global::EcoCareApp.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
 			global::Rg.Plugins.Popup.Resource.Styleable.Snackbar_snackbarStyle = global::EcoCareApp.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.Snackbar_snackbarTextViewStyle = global::EcoCareApp.Droid.Resource.Styleable.Snackbar_snackbarTextViewStyle;
 			global::Rg.Plugins.Popup.Resource.Styleable.Spinner = global::EcoCareApp.Droid.Resource.Styleable.Spinner;
 			global::Rg.Plugins.Popup.Resource.Styleable.Spinner_android_dropDownWidth = global::EcoCareApp.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
 			global::Rg.Plugins.Popup.Resource.Styleable.Spinner_android_entries = global::EcoCareApp.Droid.Resource.Styleable.Spinner_android_entries;
@@ -2491,6 +3433,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::EcoCareApp.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
 			global::Rg.Plugins.Popup.Resource.Styleable.StateListDrawable_android_variablePadding = global::EcoCareApp.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
 			global::Rg.Plugins.Popup.Resource.Styleable.StateListDrawable_android_visible = global::EcoCareApp.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwipeRefreshLayout = global::EcoCareApp.Droid.Resource.Styleable.SwipeRefreshLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor = global::EcoCareApp.Droid.Resource.Styleable.SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat = global::EcoCareApp.Droid.Resource.Styleable.SwitchCompat;
 			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_android_textOff = global::EcoCareApp.Droid.Resource.Styleable.SwitchCompat_android_textOff;
 			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_android_textOn = global::EcoCareApp.Droid.Resource.Styleable.SwitchCompat_android_textOn;
@@ -2506,6 +3450,8 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_track = global::EcoCareApp.Droid.Resource.Styleable.SwitchCompat_track;
 			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_trackTint = global::EcoCareApp.Droid.Resource.Styleable.SwitchCompat_trackTint;
 			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_trackTintMode = global::EcoCareApp.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchMaterial = global::EcoCareApp.Droid.Resource.Styleable.SwitchMaterial;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchMaterial_useMaterialThemeColors = global::EcoCareApp.Droid.Resource.Styleable.SwitchMaterial_useMaterialThemeColors;
 			global::Rg.Plugins.Popup.Resource.Styleable.TabItem = global::EcoCareApp.Droid.Resource.Styleable.TabItem;
 			global::Rg.Plugins.Popup.Resource.Styleable.TabItem_android_icon = global::EcoCareApp.Droid.Resource.Styleable.TabItem_android_icon;
 			global::Rg.Plugins.Popup.Resource.Styleable.TabItem_android_layout = global::EcoCareApp.Droid.Resource.Styleable.TabItem_android_layout;
@@ -2553,7 +3499,10 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_fontVariationSettings = global::EcoCareApp.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_textAllCaps = global::EcoCareApp.Droid.Resource.Styleable.TextAppearance_textAllCaps;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_textLocale = global::EcoCareApp.Droid.Resource.Styleable.TextAppearance_textLocale;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputEditText = global::EcoCareApp.Droid.Resource.Styleable.TextInputEditText;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputEditText_textInputLayoutFocusedRectEnabled = global::EcoCareApp.Droid.Resource.Styleable.TextInputEditText_textInputLayoutFocusedRectEnabled;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_android_enabled = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_android_enabled;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_android_hint = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_android_hint;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_android_textColorHint = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
@@ -2564,24 +3513,57 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxStrokeColor = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxStrokeErrorColor = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_boxStrokeErrorColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxStrokeWidthFocused = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidthFocused;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_counterEnabled = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_counterMaxLength = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_counterOverflowTextColor = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_counterTextAppearance = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_counterTextColor = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_counterTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_endIconCheckable = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_endIconCheckable;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_endIconContentDescription = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_endIconContentDescription;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_endIconDrawable = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_endIconDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_endIconMode = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_endIconMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_endIconTint = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_endIconTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_endIconTintMode = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_endIconTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_errorContentDescription = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_errorContentDescription;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_errorEnabled = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_errorIconDrawable = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_errorIconDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_errorIconTint = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_errorIconTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_errorIconTintMode = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_errorIconTintMode;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_errorTextAppearance = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_errorTextColor = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_errorTextColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_helperText = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_helperText;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_helperTextEnabled = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_helperTextTextColor = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_helperTextTextColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_hintEnabled = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_hintTextAppearance = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_hintTextColor = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_hintTextColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_passwordToggleTint = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
 			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_placeholderText = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_placeholderText;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_placeholderTextAppearance = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_placeholderTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_placeholderTextColor = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_placeholderTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_prefixText = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_prefixText;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_prefixTextAppearance = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_prefixTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_prefixTextColor = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_prefixTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_shapeAppearance = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_shapeAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_shapeAppearanceOverlay = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_shapeAppearanceOverlay;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_startIconCheckable = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_startIconCheckable;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_startIconContentDescription = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_startIconContentDescription;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_startIconDrawable = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_startIconDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_startIconTint = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_startIconTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_startIconTintMode = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_startIconTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_suffixText = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_suffixText;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_suffixTextAppearance = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_suffixTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_suffixTextColor = global::EcoCareApp.Droid.Resource.Styleable.TextInputLayout_suffixTextColor;
 			global::Rg.Plugins.Popup.Resource.Styleable.ThemeEnforcement = global::EcoCareApp.Droid.Resource.Styleable.ThemeEnforcement;
 			global::Rg.Plugins.Popup.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::EcoCareApp.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
 			global::Rg.Plugins.Popup.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::EcoCareApp.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
@@ -2617,11 +3599,21 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_titleMarginTop = global::EcoCareApp.Droid.Resource.Styleable.Toolbar_titleMarginTop;
 			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_titleTextAppearance = global::EcoCareApp.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
 			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_titleTextColor = global::EcoCareApp.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.Tooltip = global::EcoCareApp.Droid.Resource.Styleable.Tooltip;
+			global::Rg.Plugins.Popup.Resource.Styleable.Tooltip_android_layout_margin = global::EcoCareApp.Droid.Resource.Styleable.Tooltip_android_layout_margin;
+			global::Rg.Plugins.Popup.Resource.Styleable.Tooltip_android_minHeight = global::EcoCareApp.Droid.Resource.Styleable.Tooltip_android_minHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.Tooltip_android_minWidth = global::EcoCareApp.Droid.Resource.Styleable.Tooltip_android_minWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.Tooltip_android_padding = global::EcoCareApp.Droid.Resource.Styleable.Tooltip_android_padding;
+			global::Rg.Plugins.Popup.Resource.Styleable.Tooltip_android_text = global::EcoCareApp.Droid.Resource.Styleable.Tooltip_android_text;
+			global::Rg.Plugins.Popup.Resource.Styleable.Tooltip_android_textAppearance = global::EcoCareApp.Droid.Resource.Styleable.Tooltip_android_textAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.Tooltip_backgroundTint = global::EcoCareApp.Droid.Resource.Styleable.Tooltip_backgroundTint;
 			global::Rg.Plugins.Popup.Resource.Styleable.View = global::EcoCareApp.Droid.Resource.Styleable.View;
 			global::Rg.Plugins.Popup.Resource.Styleable.ViewBackgroundHelper = global::EcoCareApp.Droid.Resource.Styleable.ViewBackgroundHelper;
 			global::Rg.Plugins.Popup.Resource.Styleable.ViewBackgroundHelper_android_background = global::EcoCareApp.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
 			global::Rg.Plugins.Popup.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::EcoCareApp.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
 			global::Rg.Plugins.Popup.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::EcoCareApp.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.ViewPager2 = global::EcoCareApp.Droid.Resource.Styleable.ViewPager2;
+			global::Rg.Plugins.Popup.Resource.Styleable.ViewPager2_android_orientation = global::EcoCareApp.Droid.Resource.Styleable.ViewPager2_android_orientation;
 			global::Rg.Plugins.Popup.Resource.Styleable.ViewStubCompat = global::EcoCareApp.Droid.Resource.Styleable.ViewStubCompat;
 			global::Rg.Plugins.Popup.Resource.Styleable.ViewStubCompat_android_id = global::EcoCareApp.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::Rg.Plugins.Popup.Resource.Styleable.ViewStubCompat_android_inflatedId = global::EcoCareApp.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
@@ -2631,6 +3623,12 @@ namespace EcoCareApp.Droid
 			global::Rg.Plugins.Popup.Resource.Styleable.View_paddingEnd = global::EcoCareApp.Droid.Resource.Styleable.View_paddingEnd;
 			global::Rg.Plugins.Popup.Resource.Styleable.View_paddingStart = global::EcoCareApp.Droid.Resource.Styleable.View_paddingStart;
 			global::Rg.Plugins.Popup.Resource.Styleable.View_theme = global::EcoCareApp.Droid.Resource.Styleable.View_theme;
+			global::Rg.Plugins.Popup.Resource.Xml.image_share_filepaths = global::EcoCareApp.Droid.Resource.Xml.image_share_filepaths;
+			global::Rg.Plugins.Popup.Resource.Xml.standalone_badge = global::EcoCareApp.Droid.Resource.Xml.standalone_badge;
+			global::Rg.Plugins.Popup.Resource.Xml.standalone_badge_gravity_bottom_end = global::EcoCareApp.Droid.Resource.Xml.standalone_badge_gravity_bottom_end;
+			global::Rg.Plugins.Popup.Resource.Xml.standalone_badge_gravity_bottom_start = global::EcoCareApp.Droid.Resource.Xml.standalone_badge_gravity_bottom_start;
+			global::Rg.Plugins.Popup.Resource.Xml.standalone_badge_gravity_top_start = global::EcoCareApp.Droid.Resource.Xml.standalone_badge_gravity_top_start;
+			global::Rg.Plugins.Popup.Resource.Xml.standalone_badge_offset = global::EcoCareApp.Droid.Resource.Xml.standalone_badge_offset;
 			global::SkiaSharp.Views.Forms.Resource.Animation.abc_fade_in = global::EcoCareApp.Droid.Resource.Animation.abc_fade_in;
 			global::SkiaSharp.Views.Forms.Resource.Animation.abc_fade_out = global::EcoCareApp.Droid.Resource.Animation.abc_fade_out;
 			global::SkiaSharp.Views.Forms.Resource.Animation.abc_grow_fade_in_from_bottom = global::EcoCareApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -5218,6 +6216,54 @@ namespace EcoCareApp.Droid
 			global::Syncfusion.SfRadialMenu.Android.Resource.Styleable.SfRadialMenu_radialSeparatorColor = global::EcoCareApp.Droid.Resource.Styleable.SfRadialMenu_radialSeparatorColor;
 			global::Syncfusion.SfRadialMenu.Android.Resource.Styleable.SfRadialMenu_radialSeparatorThickness = global::EcoCareApp.Droid.Resource.Styleable.SfRadialMenu_radialSeparatorThickness;
 			global::Syncfusion.SfRadialMenu.Android.Resource.Styleable.SfRadialMenu_radialVisibleSegmentsCount = global::EcoCareApp.Droid.Resource.Styleable.SfRadialMenu_radialVisibleSegmentsCount;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderDirectionReversed = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderDirectionReversed;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderEndValue = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderEndValue;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderKnobColor = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderKnobColor;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderMaximum = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderMaximum;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderMinimum = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderMinimum;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderOrientation = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderOrientation;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderShowRange = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderShowRange;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderShowValueLabel = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderShowValueLabel;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderStartValue = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderStartValue;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderThumbSize = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderThumbSize;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderTickPlacement = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderTickPlacement;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderTrackColor = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderTrackColor;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderTrackSelectionColor = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderTrackSelectionColor;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderValue = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderValue;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Attribute.rangeSliderValuePlacement = global::EcoCareApp.Droid.Resource.Attribute.rangeSliderValuePlacement;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Dimension.label_font_size = global::EcoCareApp.Droid.Resource.Dimension.label_font_size;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Dimension.thumb_size = global::EcoCareApp.Droid.Resource.Dimension.thumb_size;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Dimension.tick_size = global::EcoCareApp.Droid.Resource.Dimension.tick_size;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Dimension.tool_bottom = global::EcoCareApp.Droid.Resource.Dimension.tool_bottom;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Dimension.tool_left = global::EcoCareApp.Droid.Resource.Dimension.tool_left;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Dimension.tool_right = global::EcoCareApp.Droid.Resource.Dimension.tool_right;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Dimension.tool_top = global::EcoCareApp.Droid.Resource.Dimension.tool_top;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Dimension.tooltip_textsize = global::EcoCareApp.Droid.Resource.Dimension.tooltip_textsize;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Dimension.track_size = global::EcoCareApp.Droid.Resource.Dimension.track_size;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Id.bottomRight = global::EcoCareApp.Droid.Resource.Id.bottomRight;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Id.horizontal = global::EcoCareApp.Droid.Resource.Id.horizontal;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Id.inline = global::EcoCareApp.Droid.Resource.Id.inline;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Id.none = global::EcoCareApp.Droid.Resource.Id.none;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Id.outside = global::EcoCareApp.Droid.Resource.Id.outside;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Id.topLeft = global::EcoCareApp.Droid.Resource.Id.topLeft;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Id.vertical = global::EcoCareApp.Droid.Resource.Id.vertical;
+			global::Com.Syncfusion.Sfrangeslider.Resource.String.library_name = global::EcoCareApp.Droid.Resource.String.library_name;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderDirectionReversed = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderDirectionReversed;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderEndValue = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderEndValue;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderKnobColor = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderKnobColor;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderMaximum = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderMaximum;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderMinimum = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderMinimum;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderOrientation = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderOrientation;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderShowRange = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderShowRange;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderShowValueLabel = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderShowValueLabel;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderStartValue = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderStartValue;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderThumbSize = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderThumbSize;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderTickPlacement = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderTickPlacement;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderTrackColor = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderTrackColor;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderTrackSelectionColor = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderTrackSelectionColor;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderValue = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderValue;
+			global::Com.Syncfusion.Sfrangeslider.Resource.Styleable.SfRangeSlider_rangeSliderValuePlacement = global::EcoCareApp.Droid.Resource.Styleable.SfRangeSlider_rangeSliderValuePlacement;
 			global::Xamarin.CommunityToolkit.Resource.Animation.abc_fade_in = global::EcoCareApp.Droid.Resource.Animation.abc_fade_in;
 			global::Xamarin.CommunityToolkit.Resource.Animation.abc_fade_out = global::EcoCareApp.Droid.Resource.Animation.abc_fade_out;
 			global::Xamarin.CommunityToolkit.Resource.Animation.abc_grow_fade_in_from_bottom = global::EcoCareApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -24221,124 +25267,169 @@ namespace EcoCareApp.Droid
 			public const int rangeFillColor = 2130903849;
 			
 			// aapt resource value: 0x7F03032A
-			public const int ratingBarStyle = 2130903850;
+			public const int rangeSliderDirectionReversed = 2130903850;
 			
 			// aapt resource value: 0x7F03032B
-			public const int ratingBarStyleIndicator = 2130903851;
+			public const int rangeSliderEndValue = 2130903851;
 			
 			// aapt resource value: 0x7F03032C
-			public const int ratingBarStyleSmall = 2130903852;
+			public const int rangeSliderKnobColor = 2130903852;
 			
 			// aapt resource value: 0x7F03032D
-			public const int reactiveGuide_animateChange = 2130903853;
+			public const int rangeSliderMaximum = 2130903853;
 			
 			// aapt resource value: 0x7F03032E
-			public const int reactiveGuide_applyToAllConstraintSets = 2130903854;
+			public const int rangeSliderMinimum = 2130903854;
 			
 			// aapt resource value: 0x7F03032F
-			public const int reactiveGuide_applyToConstraintSet = 2130903855;
+			public const int rangeSliderOrientation = 2130903855;
 			
 			// aapt resource value: 0x7F030330
-			public const int reactiveGuide_valueId = 2130903856;
+			public const int rangeSliderShowRange = 2130903856;
 			
 			// aapt resource value: 0x7F030331
-			public const int recyclerViewStyle = 2130903857;
+			public const int rangeSliderShowValueLabel = 2130903857;
 			
 			// aapt resource value: 0x7F030332
-			public const int region_heightLessThan = 2130903858;
+			public const int rangeSliderStartValue = 2130903858;
 			
 			// aapt resource value: 0x7F030333
-			public const int region_heightMoreThan = 2130903859;
+			public const int rangeSliderThumbSize = 2130903859;
 			
 			// aapt resource value: 0x7F030334
-			public const int region_widthLessThan = 2130903860;
+			public const int rangeSliderTickPlacement = 2130903860;
 			
 			// aapt resource value: 0x7F030335
-			public const int region_widthMoreThan = 2130903861;
+			public const int rangeSliderTrackColor = 2130903861;
 			
 			// aapt resource value: 0x7F030336
-			public const int reverseLayout = 2130903862;
+			public const int rangeSliderTrackSelectionColor = 2130903862;
 			
 			// aapt resource value: 0x7F030337
-			public const int rippleColor = 2130903863;
+			public const int rangeSliderValue = 2130903863;
 			
 			// aapt resource value: 0x7F030338
-			public const int rotationCenterId = 2130903864;
+			public const int rangeSliderValuePlacement = 2130903864;
 			
 			// aapt resource value: 0x7F030339
-			public const int round = 2130903865;
+			public const int ratingBarStyle = 2130903865;
 			
 			// aapt resource value: 0x7F03033A
-			public const int roundPercent = 2130903866;
+			public const int ratingBarStyleIndicator = 2130903866;
 			
 			// aapt resource value: 0x7F03033B
-			public const int saturation = 2130903867;
+			public const int ratingBarStyleSmall = 2130903867;
 			
 			// aapt resource value: 0x7F03033C
-			public const int scaleFromTextSize = 2130903868;
+			public const int reactiveGuide_animateChange = 2130903868;
 			
 			// aapt resource value: 0x7F03033D
-			public const int scrimAnimationDuration = 2130903869;
+			public const int reactiveGuide_applyToAllConstraintSets = 2130903869;
 			
 			// aapt resource value: 0x7F03033E
-			public const int scrimBackground = 2130903870;
+			public const int reactiveGuide_applyToConstraintSet = 2130903870;
 			
 			// aapt resource value: 0x7F03033F
-			public const int scrimVisibleHeightTrigger = 2130903871;
+			public const int reactiveGuide_valueId = 2130903871;
 			
 			// aapt resource value: 0x7F030340
-			public const int scrollViewStyle = 2130903872;
+			public const int recyclerViewStyle = 2130903872;
 			
 			// aapt resource value: 0x7F030341
-			public const int searchHintIcon = 2130903873;
+			public const int region_heightLessThan = 2130903873;
 			
 			// aapt resource value: 0x7F030342
-			public const int searchIcon = 2130903874;
+			public const int region_heightMoreThan = 2130903874;
 			
 			// aapt resource value: 0x7F030343
-			public const int searchViewStyle = 2130903875;
+			public const int region_widthLessThan = 2130903875;
 			
 			// aapt resource value: 0x7F030344
-			public const int seekBarIncrement = 2130903876;
+			public const int region_widthMoreThan = 2130903876;
 			
 			// aapt resource value: 0x7F030345
-			public const int seekBarPreferenceStyle = 2130903877;
+			public const int reverseLayout = 2130903877;
 			
 			// aapt resource value: 0x7F030346
-			public const int seekBarStyle = 2130903878;
+			public const int rippleColor = 2130903878;
 			
 			// aapt resource value: 0x7F030347
-			public const int selectable = 2130903879;
+			public const int rotationCenterId = 2130903879;
 			
 			// aapt resource value: 0x7F030348
-			public const int selectableItemBackground = 2130903880;
+			public const int round = 2130903880;
 			
 			// aapt resource value: 0x7F030349
-			public const int selectableItemBackgroundBorderless = 2130903881;
+			public const int roundPercent = 2130903881;
 			
 			// aapt resource value: 0x7F03034A
-			public const int selectionRequired = 2130903882;
+			public const int saturation = 2130903882;
 			
 			// aapt resource value: 0x7F03034B
-			public const int selectorSize = 2130903883;
+			public const int scaleFromTextSize = 2130903883;
 			
 			// aapt resource value: 0x7F03034C
-			public const int setsTag = 2130903884;
+			public const int scrimAnimationDuration = 2130903884;
 			
 			// aapt resource value: 0x7F03034D
-			public const int shapeAppearance = 2130903885;
+			public const int scrimBackground = 2130903885;
 			
 			// aapt resource value: 0x7F03034E
-			public const int shapeAppearanceLargeComponent = 2130903886;
+			public const int scrimVisibleHeightTrigger = 2130903886;
 			
 			// aapt resource value: 0x7F03034F
-			public const int shapeAppearanceMediumComponent = 2130903887;
+			public const int scrollViewStyle = 2130903887;
 			
 			// aapt resource value: 0x7F030350
-			public const int shapeAppearanceOverlay = 2130903888;
+			public const int searchHintIcon = 2130903888;
 			
 			// aapt resource value: 0x7F030351
-			public const int shapeAppearanceSmallComponent = 2130903889;
+			public const int searchIcon = 2130903889;
+			
+			// aapt resource value: 0x7F030352
+			public const int searchViewStyle = 2130903890;
+			
+			// aapt resource value: 0x7F030353
+			public const int seekBarIncrement = 2130903891;
+			
+			// aapt resource value: 0x7F030354
+			public const int seekBarPreferenceStyle = 2130903892;
+			
+			// aapt resource value: 0x7F030355
+			public const int seekBarStyle = 2130903893;
+			
+			// aapt resource value: 0x7F030356
+			public const int selectable = 2130903894;
+			
+			// aapt resource value: 0x7F030357
+			public const int selectableItemBackground = 2130903895;
+			
+			// aapt resource value: 0x7F030358
+			public const int selectableItemBackgroundBorderless = 2130903896;
+			
+			// aapt resource value: 0x7F030359
+			public const int selectionRequired = 2130903897;
+			
+			// aapt resource value: 0x7F03035A
+			public const int selectorSize = 2130903898;
+			
+			// aapt resource value: 0x7F03035B
+			public const int setsTag = 2130903899;
+			
+			// aapt resource value: 0x7F03035C
+			public const int shapeAppearance = 2130903900;
+			
+			// aapt resource value: 0x7F03035D
+			public const int shapeAppearanceLargeComponent = 2130903901;
+			
+			// aapt resource value: 0x7F03035E
+			public const int shapeAppearanceMediumComponent = 2130903902;
+			
+			// aapt resource value: 0x7F03035F
+			public const int shapeAppearanceOverlay = 2130903903;
+			
+			// aapt resource value: 0x7F030360
+			public const int shapeAppearanceSmallComponent = 2130903904;
 			
 			// aapt resource value: 0x7F030001
 			public const int SharedValue = 2130903041;
@@ -24346,749 +25437,749 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0x7F030002
 			public const int SharedValueId = 2130903042;
 			
-			// aapt resource value: 0x7F030352
-			public const int shortcutMatchRequired = 2130903890;
-			
-			// aapt resource value: 0x7F030353
-			public const int shouldDisableView = 2130903891;
-			
-			// aapt resource value: 0x7F030354
-			public const int showAnimationBehavior = 2130903892;
-			
-			// aapt resource value: 0x7F030355
-			public const int showAsAction = 2130903893;
-			
-			// aapt resource value: 0x7F030356
-			public const int showDelay = 2130903894;
-			
-			// aapt resource value: 0x7F030357
-			public const int showDividers = 2130903895;
-			
-			// aapt resource value: 0x7F030358
-			public const int showMotionSpec = 2130903896;
-			
-			// aapt resource value: 0x7F030359
-			public const int showPaths = 2130903897;
-			
-			// aapt resource value: 0x7F03035A
-			public const int showSeekBarValue = 2130903898;
-			
-			// aapt resource value: 0x7F03035B
-			public const int showText = 2130903899;
-			
-			// aapt resource value: 0x7F03035C
-			public const int showTitle = 2130903900;
-			
-			// aapt resource value: 0x7F03035D
-			public const int shrinkMotionSpec = 2130903901;
-			
-			// aapt resource value: 0x7F03035E
-			public const int singleChoiceItemLayout = 2130903902;
-			
-			// aapt resource value: 0x7F03035F
-			public const int singleLine = 2130903903;
-			
-			// aapt resource value: 0x7F030360
-			public const int singleLineTitle = 2130903904;
-			
 			// aapt resource value: 0x7F030361
-			public const int singleSelection = 2130903905;
+			public const int shortcutMatchRequired = 2130903905;
 			
 			// aapt resource value: 0x7F030362
-			public const int sizePercent = 2130903906;
+			public const int shouldDisableView = 2130903906;
 			
 			// aapt resource value: 0x7F030363
-			public const int sliderStyle = 2130903907;
+			public const int showAnimationBehavior = 2130903907;
 			
 			// aapt resource value: 0x7F030364
-			public const int snackbarButtonStyle = 2130903908;
+			public const int showAsAction = 2130903908;
 			
 			// aapt resource value: 0x7F030365
-			public const int snackbarStyle = 2130903909;
+			public const int showDelay = 2130903909;
 			
 			// aapt resource value: 0x7F030366
-			public const int snackbarTextViewStyle = 2130903910;
+			public const int showDividers = 2130903910;
 			
 			// aapt resource value: 0x7F030367
-			public const int spanCount = 2130903911;
+			public const int showMotionSpec = 2130903911;
 			
 			// aapt resource value: 0x7F030368
-			public const int spinBars = 2130903912;
+			public const int showPaths = 2130903912;
 			
 			// aapt resource value: 0x7F030369
-			public const int spinnerDropDownItemStyle = 2130903913;
+			public const int showSeekBarValue = 2130903913;
 			
 			// aapt resource value: 0x7F03036A
-			public const int spinnerStyle = 2130903914;
+			public const int showText = 2130903914;
 			
 			// aapt resource value: 0x7F03036B
-			public const int splitTrack = 2130903915;
+			public const int showTitle = 2130903915;
 			
 			// aapt resource value: 0x7F03036C
-			public const int springBoundary = 2130903916;
+			public const int shrinkMotionSpec = 2130903916;
 			
 			// aapt resource value: 0x7F03036D
-			public const int springDamping = 2130903917;
+			public const int singleChoiceItemLayout = 2130903917;
 			
 			// aapt resource value: 0x7F03036E
-			public const int springMass = 2130903918;
+			public const int singleLine = 2130903918;
 			
 			// aapt resource value: 0x7F03036F
-			public const int springStiffness = 2130903919;
+			public const int singleLineTitle = 2130903919;
 			
 			// aapt resource value: 0x7F030370
-			public const int springStopThreshold = 2130903920;
+			public const int singleSelection = 2130903920;
 			
 			// aapt resource value: 0x7F030371
-			public const int srcCompat = 2130903921;
+			public const int sizePercent = 2130903921;
 			
 			// aapt resource value: 0x7F030372
-			public const int stackFromEnd = 2130903922;
+			public const int sliderStyle = 2130903922;
 			
 			// aapt resource value: 0x7F030373
-			public const int staggered = 2130903923;
+			public const int snackbarButtonStyle = 2130903923;
 			
 			// aapt resource value: 0x7F030374
-			public const int startDestination = 2130903924;
+			public const int snackbarStyle = 2130903924;
 			
 			// aapt resource value: 0x7F030375
-			public const int startIconCheckable = 2130903925;
+			public const int snackbarTextViewStyle = 2130903925;
 			
 			// aapt resource value: 0x7F030376
-			public const int startIconContentDescription = 2130903926;
+			public const int spanCount = 2130903926;
 			
 			// aapt resource value: 0x7F030377
-			public const int startIconDrawable = 2130903927;
+			public const int spinBars = 2130903927;
 			
 			// aapt resource value: 0x7F030378
-			public const int startIconTint = 2130903928;
+			public const int spinnerDropDownItemStyle = 2130903928;
 			
 			// aapt resource value: 0x7F030379
-			public const int startIconTintMode = 2130903929;
+			public const int spinnerStyle = 2130903929;
 			
 			// aapt resource value: 0x7F03037A
-			public const int state_above_anchor = 2130903930;
+			public const int splitTrack = 2130903930;
 			
 			// aapt resource value: 0x7F03037B
-			public const int state_collapsed = 2130903931;
+			public const int springBoundary = 2130903931;
 			
 			// aapt resource value: 0x7F03037C
-			public const int state_collapsible = 2130903932;
+			public const int springDamping = 2130903932;
 			
 			// aapt resource value: 0x7F03037D
-			public const int state_dragged = 2130903933;
+			public const int springMass = 2130903933;
 			
 			// aapt resource value: 0x7F03037E
-			public const int state_liftable = 2130903934;
+			public const int springStiffness = 2130903934;
 			
 			// aapt resource value: 0x7F03037F
-			public const int state_lifted = 2130903935;
+			public const int springStopThreshold = 2130903935;
 			
 			// aapt resource value: 0x7F030380
-			public const int statusBarBackground = 2130903936;
+			public const int srcCompat = 2130903936;
 			
 			// aapt resource value: 0x7F030381
-			public const int statusBarForeground = 2130903937;
+			public const int stackFromEnd = 2130903937;
 			
 			// aapt resource value: 0x7F030382
-			public const int statusBarScrim = 2130903938;
+			public const int staggered = 2130903938;
 			
 			// aapt resource value: 0x7F030383
-			public const int strokeColor = 2130903939;
+			public const int startDestination = 2130903939;
 			
 			// aapt resource value: 0x7F030384
-			public const int strokeWidth = 2130903940;
+			public const int startIconCheckable = 2130903940;
 			
 			// aapt resource value: 0x7F030385
-			public const int subMenuArrow = 2130903941;
+			public const int startIconContentDescription = 2130903941;
 			
 			// aapt resource value: 0x7F030386
-			public const int submitBackground = 2130903942;
+			public const int startIconDrawable = 2130903942;
 			
 			// aapt resource value: 0x7F030387
-			public const int subtitle = 2130903943;
+			public const int startIconTint = 2130903943;
 			
 			// aapt resource value: 0x7F030388
-			public const int subtitleCentered = 2130903944;
+			public const int startIconTintMode = 2130903944;
 			
 			// aapt resource value: 0x7F030389
-			public const int subtitleTextAppearance = 2130903945;
+			public const int state_above_anchor = 2130903945;
 			
 			// aapt resource value: 0x7F03038A
-			public const int subtitleTextColor = 2130903946;
+			public const int state_collapsed = 2130903946;
 			
 			// aapt resource value: 0x7F03038B
-			public const int subtitleTextStyle = 2130903947;
+			public const int state_collapsible = 2130903947;
 			
 			// aapt resource value: 0x7F03038C
-			public const int suffixText = 2130903948;
+			public const int state_dragged = 2130903948;
 			
 			// aapt resource value: 0x7F03038D
-			public const int suffixTextAppearance = 2130903949;
+			public const int state_liftable = 2130903949;
 			
 			// aapt resource value: 0x7F03038E
-			public const int suffixTextColor = 2130903950;
+			public const int state_lifted = 2130903950;
 			
 			// aapt resource value: 0x7F03038F
-			public const int suggestionRowLayout = 2130903951;
+			public const int statusBarBackground = 2130903951;
 			
 			// aapt resource value: 0x7F030390
-			public const int summary = 2130903952;
+			public const int statusBarForeground = 2130903952;
 			
 			// aapt resource value: 0x7F030391
-			public const int summaryOff = 2130903953;
+			public const int statusBarScrim = 2130903953;
 			
 			// aapt resource value: 0x7F030392
-			public const int summaryOn = 2130903954;
+			public const int strokeColor = 2130903954;
 			
 			// aapt resource value: 0x7F030393
-			public const int swipeRefreshLayoutProgressSpinnerBackgroundColor = 2130903955;
+			public const int strokeWidth = 2130903955;
 			
 			// aapt resource value: 0x7F030394
-			public const int switchMinWidth = 2130903956;
+			public const int subMenuArrow = 2130903956;
 			
 			// aapt resource value: 0x7F030395
-			public const int switchPadding = 2130903957;
+			public const int submitBackground = 2130903957;
 			
 			// aapt resource value: 0x7F030396
-			public const int switchPreferenceCompatStyle = 2130903958;
+			public const int subtitle = 2130903958;
 			
 			// aapt resource value: 0x7F030397
-			public const int switchPreferenceStyle = 2130903959;
+			public const int subtitleCentered = 2130903959;
 			
 			// aapt resource value: 0x7F030398
-			public const int switchStyle = 2130903960;
+			public const int subtitleTextAppearance = 2130903960;
 			
 			// aapt resource value: 0x7F030399
-			public const int switchTextAppearance = 2130903961;
+			public const int subtitleTextColor = 2130903961;
 			
 			// aapt resource value: 0x7F03039A
-			public const int switchTextOff = 2130903962;
+			public const int subtitleTextStyle = 2130903962;
 			
 			// aapt resource value: 0x7F03039B
-			public const int switchTextOn = 2130903963;
+			public const int suffixText = 2130903963;
 			
 			// aapt resource value: 0x7F03039C
-			public const int tabBackground = 2130903964;
+			public const int suffixTextAppearance = 2130903964;
 			
 			// aapt resource value: 0x7F03039D
-			public const int tabContentStart = 2130903965;
+			public const int suffixTextColor = 2130903965;
 			
 			// aapt resource value: 0x7F03039E
-			public const int tabGravity = 2130903966;
+			public const int suggestionRowLayout = 2130903966;
 			
 			// aapt resource value: 0x7F03039F
-			public const int tabIconTint = 2130903967;
+			public const int summary = 2130903967;
 			
 			// aapt resource value: 0x7F0303A0
-			public const int tabIconTintMode = 2130903968;
+			public const int summaryOff = 2130903968;
 			
 			// aapt resource value: 0x7F0303A1
-			public const int tabIndicator = 2130903969;
+			public const int summaryOn = 2130903969;
 			
 			// aapt resource value: 0x7F0303A2
-			public const int tabIndicatorAnimationDuration = 2130903970;
+			public const int swipeRefreshLayoutProgressSpinnerBackgroundColor = 2130903970;
 			
 			// aapt resource value: 0x7F0303A3
-			public const int tabIndicatorAnimationMode = 2130903971;
+			public const int switchMinWidth = 2130903971;
 			
 			// aapt resource value: 0x7F0303A4
-			public const int tabIndicatorColor = 2130903972;
+			public const int switchPadding = 2130903972;
 			
 			// aapt resource value: 0x7F0303A5
-			public const int tabIndicatorFullWidth = 2130903973;
+			public const int switchPreferenceCompatStyle = 2130903973;
 			
 			// aapt resource value: 0x7F0303A6
-			public const int tabIndicatorGravity = 2130903974;
+			public const int switchPreferenceStyle = 2130903974;
 			
 			// aapt resource value: 0x7F0303A7
-			public const int tabIndicatorHeight = 2130903975;
+			public const int switchStyle = 2130903975;
 			
 			// aapt resource value: 0x7F0303A8
-			public const int tabInlineLabel = 2130903976;
+			public const int switchTextAppearance = 2130903976;
 			
 			// aapt resource value: 0x7F0303A9
-			public const int tabMaxWidth = 2130903977;
+			public const int switchTextOff = 2130903977;
 			
 			// aapt resource value: 0x7F0303AA
-			public const int tabMinWidth = 2130903978;
+			public const int switchTextOn = 2130903978;
 			
 			// aapt resource value: 0x7F0303AB
-			public const int tabMode = 2130903979;
+			public const int tabBackground = 2130903979;
 			
 			// aapt resource value: 0x7F0303AC
-			public const int tabPadding = 2130903980;
+			public const int tabContentStart = 2130903980;
 			
 			// aapt resource value: 0x7F0303AD
-			public const int tabPaddingBottom = 2130903981;
+			public const int tabGravity = 2130903981;
 			
 			// aapt resource value: 0x7F0303AE
-			public const int tabPaddingEnd = 2130903982;
+			public const int tabIconTint = 2130903982;
 			
 			// aapt resource value: 0x7F0303AF
-			public const int tabPaddingStart = 2130903983;
+			public const int tabIconTintMode = 2130903983;
 			
 			// aapt resource value: 0x7F0303B0
-			public const int tabPaddingTop = 2130903984;
+			public const int tabIndicator = 2130903984;
 			
 			// aapt resource value: 0x7F0303B1
-			public const int tabRippleColor = 2130903985;
+			public const int tabIndicatorAnimationDuration = 2130903985;
 			
 			// aapt resource value: 0x7F0303B2
-			public const int tabSelectedTextColor = 2130903986;
+			public const int tabIndicatorAnimationMode = 2130903986;
 			
 			// aapt resource value: 0x7F0303B3
-			public const int tabStyle = 2130903987;
+			public const int tabIndicatorColor = 2130903987;
 			
 			// aapt resource value: 0x7F0303B4
-			public const int tabTextAppearance = 2130903988;
+			public const int tabIndicatorFullWidth = 2130903988;
 			
 			// aapt resource value: 0x7F0303B5
-			public const int tabTextColor = 2130903989;
+			public const int tabIndicatorGravity = 2130903989;
 			
 			// aapt resource value: 0x7F0303B6
-			public const int tabUnboundedRipple = 2130903990;
+			public const int tabIndicatorHeight = 2130903990;
 			
 			// aapt resource value: 0x7F0303B7
-			public const int targetId = 2130903991;
+			public const int tabInlineLabel = 2130903991;
 			
 			// aapt resource value: 0x7F0303B8
-			public const int targetPackage = 2130903992;
+			public const int tabMaxWidth = 2130903992;
 			
 			// aapt resource value: 0x7F0303B9
-			public const int telltales_tailColor = 2130903993;
+			public const int tabMinWidth = 2130903993;
 			
 			// aapt resource value: 0x7F0303BA
-			public const int telltales_tailScale = 2130903994;
+			public const int tabMode = 2130903994;
 			
 			// aapt resource value: 0x7F0303BB
-			public const int telltales_velocityMode = 2130903995;
+			public const int tabPadding = 2130903995;
 			
 			// aapt resource value: 0x7F0303BC
-			public const int textAllCaps = 2130903996;
+			public const int tabPaddingBottom = 2130903996;
 			
 			// aapt resource value: 0x7F0303BD
-			public const int textAppearanceBody1 = 2130903997;
+			public const int tabPaddingEnd = 2130903997;
 			
 			// aapt resource value: 0x7F0303BE
-			public const int textAppearanceBody2 = 2130903998;
+			public const int tabPaddingStart = 2130903998;
 			
 			// aapt resource value: 0x7F0303BF
-			public const int textAppearanceButton = 2130903999;
+			public const int tabPaddingTop = 2130903999;
 			
 			// aapt resource value: 0x7F0303C0
-			public const int textAppearanceCaption = 2130904000;
+			public const int tabRippleColor = 2130904000;
 			
 			// aapt resource value: 0x7F0303C1
-			public const int textAppearanceHeadline1 = 2130904001;
+			public const int tabSelectedTextColor = 2130904001;
 			
 			// aapt resource value: 0x7F0303C2
-			public const int textAppearanceHeadline2 = 2130904002;
+			public const int tabStyle = 2130904002;
 			
 			// aapt resource value: 0x7F0303C3
-			public const int textAppearanceHeadline3 = 2130904003;
+			public const int tabTextAppearance = 2130904003;
 			
 			// aapt resource value: 0x7F0303C4
-			public const int textAppearanceHeadline4 = 2130904004;
+			public const int tabTextColor = 2130904004;
 			
 			// aapt resource value: 0x7F0303C5
-			public const int textAppearanceHeadline5 = 2130904005;
+			public const int tabUnboundedRipple = 2130904005;
 			
 			// aapt resource value: 0x7F0303C6
-			public const int textAppearanceHeadline6 = 2130904006;
+			public const int targetId = 2130904006;
 			
 			// aapt resource value: 0x7F0303C7
-			public const int textAppearanceLargePopupMenu = 2130904007;
+			public const int targetPackage = 2130904007;
 			
 			// aapt resource value: 0x7F0303C8
-			public const int textAppearanceLineHeightEnabled = 2130904008;
+			public const int telltales_tailColor = 2130904008;
 			
 			// aapt resource value: 0x7F0303C9
-			public const int textAppearanceListItem = 2130904009;
+			public const int telltales_tailScale = 2130904009;
 			
 			// aapt resource value: 0x7F0303CA
-			public const int textAppearanceListItemSecondary = 2130904010;
+			public const int telltales_velocityMode = 2130904010;
 			
 			// aapt resource value: 0x7F0303CB
-			public const int textAppearanceListItemSmall = 2130904011;
+			public const int textAllCaps = 2130904011;
 			
 			// aapt resource value: 0x7F0303CC
-			public const int textAppearanceOverline = 2130904012;
+			public const int textAppearanceBody1 = 2130904012;
 			
 			// aapt resource value: 0x7F0303CD
-			public const int textAppearancePopupMenuHeader = 2130904013;
+			public const int textAppearanceBody2 = 2130904013;
 			
 			// aapt resource value: 0x7F0303CE
-			public const int textAppearanceSearchResultSubtitle = 2130904014;
+			public const int textAppearanceButton = 2130904014;
 			
 			// aapt resource value: 0x7F0303CF
-			public const int textAppearanceSearchResultTitle = 2130904015;
+			public const int textAppearanceCaption = 2130904015;
 			
 			// aapt resource value: 0x7F0303D0
-			public const int textAppearanceSmallPopupMenu = 2130904016;
+			public const int textAppearanceHeadline1 = 2130904016;
 			
 			// aapt resource value: 0x7F0303D1
-			public const int textAppearanceSubtitle1 = 2130904017;
+			public const int textAppearanceHeadline2 = 2130904017;
 			
 			// aapt resource value: 0x7F0303D2
-			public const int textAppearanceSubtitle2 = 2130904018;
+			public const int textAppearanceHeadline3 = 2130904018;
 			
 			// aapt resource value: 0x7F0303D3
-			public const int textBackground = 2130904019;
+			public const int textAppearanceHeadline4 = 2130904019;
 			
 			// aapt resource value: 0x7F0303D4
-			public const int textBackgroundPanX = 2130904020;
+			public const int textAppearanceHeadline5 = 2130904020;
 			
 			// aapt resource value: 0x7F0303D5
-			public const int textBackgroundPanY = 2130904021;
+			public const int textAppearanceHeadline6 = 2130904021;
 			
 			// aapt resource value: 0x7F0303D6
-			public const int textBackgroundRotate = 2130904022;
+			public const int textAppearanceLargePopupMenu = 2130904022;
 			
 			// aapt resource value: 0x7F0303D7
-			public const int textBackgroundZoom = 2130904023;
+			public const int textAppearanceLineHeightEnabled = 2130904023;
 			
 			// aapt resource value: 0x7F0303D8
-			public const int textColorAlertDialogListItem = 2130904024;
+			public const int textAppearanceListItem = 2130904024;
 			
 			// aapt resource value: 0x7F0303D9
-			public const int textColorSearchUrl = 2130904025;
+			public const int textAppearanceListItemSecondary = 2130904025;
 			
 			// aapt resource value: 0x7F0303DA
-			public const int textEndPadding = 2130904026;
+			public const int textAppearanceListItemSmall = 2130904026;
 			
 			// aapt resource value: 0x7F0303DB
-			public const int textFillColor = 2130904027;
+			public const int textAppearanceOverline = 2130904027;
 			
 			// aapt resource value: 0x7F0303DC
-			public const int textInputLayoutFocusedRectEnabled = 2130904028;
+			public const int textAppearancePopupMenuHeader = 2130904028;
 			
 			// aapt resource value: 0x7F0303DD
-			public const int textInputStyle = 2130904029;
+			public const int textAppearanceSearchResultSubtitle = 2130904029;
 			
 			// aapt resource value: 0x7F0303DE
-			public const int textLocale = 2130904030;
+			public const int textAppearanceSearchResultTitle = 2130904030;
 			
 			// aapt resource value: 0x7F0303DF
-			public const int textOutlineColor = 2130904031;
+			public const int textAppearanceSmallPopupMenu = 2130904031;
 			
 			// aapt resource value: 0x7F0303E0
-			public const int textOutlineThickness = 2130904032;
+			public const int textAppearanceSubtitle1 = 2130904032;
 			
 			// aapt resource value: 0x7F0303E1
-			public const int textPanX = 2130904033;
+			public const int textAppearanceSubtitle2 = 2130904033;
 			
 			// aapt resource value: 0x7F0303E2
-			public const int textPanY = 2130904034;
+			public const int textBackground = 2130904034;
 			
 			// aapt resource value: 0x7F0303E3
-			public const int textStartPadding = 2130904035;
+			public const int textBackgroundPanX = 2130904035;
 			
 			// aapt resource value: 0x7F0303E4
-			public const int textureBlurFactor = 2130904036;
+			public const int textBackgroundPanY = 2130904036;
 			
 			// aapt resource value: 0x7F0303E5
-			public const int textureEffect = 2130904037;
+			public const int textBackgroundRotate = 2130904037;
 			
 			// aapt resource value: 0x7F0303E6
-			public const int textureHeight = 2130904038;
+			public const int textBackgroundZoom = 2130904038;
 			
 			// aapt resource value: 0x7F0303E7
-			public const int textureWidth = 2130904039;
+			public const int textColorAlertDialogListItem = 2130904039;
 			
 			// aapt resource value: 0x7F0303E8
-			public const int theme = 2130904040;
+			public const int textColorSearchUrl = 2130904040;
 			
 			// aapt resource value: 0x7F0303E9
-			public const int themeLineHeight = 2130904041;
+			public const int textEndPadding = 2130904041;
 			
 			// aapt resource value: 0x7F0303EA
-			public const int thickness = 2130904042;
+			public const int textFillColor = 2130904042;
 			
 			// aapt resource value: 0x7F0303EB
-			public const int thumbColor = 2130904043;
+			public const int textInputLayoutFocusedRectEnabled = 2130904043;
 			
 			// aapt resource value: 0x7F0303EC
-			public const int thumbElevation = 2130904044;
+			public const int textInputStyle = 2130904044;
 			
 			// aapt resource value: 0x7F0303ED
-			public const int thumbRadius = 2130904045;
+			public const int textLocale = 2130904045;
 			
 			// aapt resource value: 0x7F0303EE
-			public const int thumbStrokeColor = 2130904046;
+			public const int textOutlineColor = 2130904046;
 			
 			// aapt resource value: 0x7F0303EF
-			public const int thumbStrokeWidth = 2130904047;
+			public const int textOutlineThickness = 2130904047;
 			
 			// aapt resource value: 0x7F0303F0
-			public const int thumbTextPadding = 2130904048;
+			public const int textPanX = 2130904048;
 			
 			// aapt resource value: 0x7F0303F1
-			public const int thumbTint = 2130904049;
+			public const int textPanY = 2130904049;
 			
 			// aapt resource value: 0x7F0303F2
-			public const int thumbTintMode = 2130904050;
+			public const int textStartPadding = 2130904050;
 			
 			// aapt resource value: 0x7F0303F3
-			public const int tickColor = 2130904051;
+			public const int textureBlurFactor = 2130904051;
 			
 			// aapt resource value: 0x7F0303F4
-			public const int tickColorActive = 2130904052;
+			public const int textureEffect = 2130904052;
 			
 			// aapt resource value: 0x7F0303F5
-			public const int tickColorInactive = 2130904053;
+			public const int textureHeight = 2130904053;
 			
 			// aapt resource value: 0x7F0303F6
-			public const int tickMark = 2130904054;
+			public const int textureWidth = 2130904054;
 			
 			// aapt resource value: 0x7F0303F7
-			public const int tickMarkTint = 2130904055;
+			public const int theme = 2130904055;
 			
 			// aapt resource value: 0x7F0303F8
-			public const int tickMarkTintMode = 2130904056;
+			public const int themeLineHeight = 2130904056;
 			
 			// aapt resource value: 0x7F0303F9
-			public const int tickVisible = 2130904057;
+			public const int thickness = 2130904057;
 			
 			// aapt resource value: 0x7F0303FA
-			public const int tint = 2130904058;
+			public const int thumbColor = 2130904058;
 			
 			// aapt resource value: 0x7F0303FB
-			public const int tintMode = 2130904059;
+			public const int thumbElevation = 2130904059;
 			
 			// aapt resource value: 0x7F0303FC
-			public const int title = 2130904060;
+			public const int thumbRadius = 2130904060;
 			
 			// aapt resource value: 0x7F0303FD
-			public const int titleCentered = 2130904061;
+			public const int thumbStrokeColor = 2130904061;
 			
 			// aapt resource value: 0x7F0303FE
-			public const int titleCollapseMode = 2130904062;
+			public const int thumbStrokeWidth = 2130904062;
 			
 			// aapt resource value: 0x7F0303FF
-			public const int titleEnabled = 2130904063;
+			public const int thumbTextPadding = 2130904063;
 			
 			// aapt resource value: 0x7F030400
-			public const int titleMargin = 2130904064;
+			public const int thumbTint = 2130904064;
 			
 			// aapt resource value: 0x7F030401
-			public const int titleMarginBottom = 2130904065;
+			public const int thumbTintMode = 2130904065;
 			
 			// aapt resource value: 0x7F030402
-			public const int titleMarginEnd = 2130904066;
-			
-			// aapt resource value: 0x7F030405
-			public const int titleMargins = 2130904069;
+			public const int tickColor = 2130904066;
 			
 			// aapt resource value: 0x7F030403
-			public const int titleMarginStart = 2130904067;
+			public const int tickColorActive = 2130904067;
 			
 			// aapt resource value: 0x7F030404
-			public const int titleMarginTop = 2130904068;
+			public const int tickColorInactive = 2130904068;
+			
+			// aapt resource value: 0x7F030405
+			public const int tickMark = 2130904069;
 			
 			// aapt resource value: 0x7F030406
-			public const int titleTextAppearance = 2130904070;
+			public const int tickMarkTint = 2130904070;
 			
 			// aapt resource value: 0x7F030407
-			public const int titleTextColor = 2130904071;
+			public const int tickMarkTintMode = 2130904071;
 			
 			// aapt resource value: 0x7F030408
-			public const int titleTextStyle = 2130904072;
+			public const int tickVisible = 2130904072;
 			
 			// aapt resource value: 0x7F030409
-			public const int toolbarId = 2130904073;
+			public const int tint = 2130904073;
 			
 			// aapt resource value: 0x7F03040A
-			public const int toolbarNavigationButtonStyle = 2130904074;
+			public const int tintMode = 2130904074;
 			
 			// aapt resource value: 0x7F03040B
-			public const int toolbarStyle = 2130904075;
+			public const int title = 2130904075;
 			
 			// aapt resource value: 0x7F03040C
-			public const int tooltipForegroundColor = 2130904076;
+			public const int titleCentered = 2130904076;
 			
 			// aapt resource value: 0x7F03040D
-			public const int tooltipFrameBackground = 2130904077;
+			public const int titleCollapseMode = 2130904077;
 			
 			// aapt resource value: 0x7F03040E
-			public const int tooltipStyle = 2130904078;
+			public const int titleEnabled = 2130904078;
 			
 			// aapt resource value: 0x7F03040F
-			public const int tooltipText = 2130904079;
+			public const int titleMargin = 2130904079;
 			
 			// aapt resource value: 0x7F030410
-			public const int touchAnchorId = 2130904080;
+			public const int titleMarginBottom = 2130904080;
 			
 			// aapt resource value: 0x7F030411
-			public const int touchAnchorSide = 2130904081;
-			
-			// aapt resource value: 0x7F030412
-			public const int touchRegionId = 2130904082;
-			
-			// aapt resource value: 0x7F030413
-			public const int track = 2130904083;
+			public const int titleMarginEnd = 2130904081;
 			
 			// aapt resource value: 0x7F030414
-			public const int trackColor = 2130904084;
+			public const int titleMargins = 2130904084;
+			
+			// aapt resource value: 0x7F030412
+			public const int titleMarginStart = 2130904082;
+			
+			// aapt resource value: 0x7F030413
+			public const int titleMarginTop = 2130904083;
 			
 			// aapt resource value: 0x7F030415
-			public const int trackColorActive = 2130904085;
+			public const int titleTextAppearance = 2130904085;
 			
 			// aapt resource value: 0x7F030416
-			public const int trackColorInactive = 2130904086;
+			public const int titleTextColor = 2130904086;
 			
 			// aapt resource value: 0x7F030417
-			public const int trackCornerRadius = 2130904087;
+			public const int titleTextStyle = 2130904087;
 			
 			// aapt resource value: 0x7F030418
-			public const int trackHeight = 2130904088;
+			public const int toolbarId = 2130904088;
 			
 			// aapt resource value: 0x7F030419
-			public const int trackThickness = 2130904089;
+			public const int toolbarNavigationButtonStyle = 2130904089;
 			
 			// aapt resource value: 0x7F03041A
-			public const int trackTint = 2130904090;
+			public const int toolbarStyle = 2130904090;
 			
 			// aapt resource value: 0x7F03041B
-			public const int trackTintMode = 2130904091;
+			public const int tooltipForegroundColor = 2130904091;
 			
 			// aapt resource value: 0x7F03041C
-			public const int transformPivotTarget = 2130904092;
+			public const int tooltipFrameBackground = 2130904092;
 			
 			// aapt resource value: 0x7F03041D
-			public const int transitionDisable = 2130904093;
+			public const int tooltipStyle = 2130904093;
 			
 			// aapt resource value: 0x7F03041E
-			public const int transitionEasing = 2130904094;
+			public const int tooltipText = 2130904094;
 			
 			// aapt resource value: 0x7F03041F
-			public const int transitionFlags = 2130904095;
+			public const int touchAnchorId = 2130904095;
 			
 			// aapt resource value: 0x7F030420
-			public const int transitionPathRotate = 2130904096;
+			public const int touchAnchorSide = 2130904096;
 			
 			// aapt resource value: 0x7F030421
-			public const int transitionShapeAppearance = 2130904097;
+			public const int touchRegionId = 2130904097;
 			
 			// aapt resource value: 0x7F030422
-			public const int triggerId = 2130904098;
+			public const int track = 2130904098;
 			
 			// aapt resource value: 0x7F030423
-			public const int triggerReceiver = 2130904099;
+			public const int trackColor = 2130904099;
 			
 			// aapt resource value: 0x7F030424
-			public const int triggerSlack = 2130904100;
+			public const int trackColorActive = 2130904100;
 			
 			// aapt resource value: 0x7F030425
-			public const int ttcIndex = 2130904101;
-			
-			// aapt resource value: 0x7F030427
-			public const int updatesContinuously = 2130904103;
+			public const int trackColorInactive = 2130904101;
 			
 			// aapt resource value: 0x7F030426
-			public const int upDuration = 2130904102;
+			public const int trackCornerRadius = 2130904102;
+			
+			// aapt resource value: 0x7F030427
+			public const int trackHeight = 2130904103;
 			
 			// aapt resource value: 0x7F030428
-			public const int uri = 2130904104;
+			public const int trackThickness = 2130904104;
 			
 			// aapt resource value: 0x7F030429
-			public const int useCompatPadding = 2130904105;
+			public const int trackTint = 2130904105;
 			
 			// aapt resource value: 0x7F03042A
-			public const int useMaterialThemeColors = 2130904106;
+			public const int trackTintMode = 2130904106;
 			
 			// aapt resource value: 0x7F03042B
-			public const int useSimpleSummaryProvider = 2130904107;
+			public const int transformPivotTarget = 2130904107;
 			
 			// aapt resource value: 0x7F03042C
-			public const int values = 2130904108;
+			public const int transitionDisable = 2130904108;
 			
 			// aapt resource value: 0x7F03042D
-			public const int verticalOffset = 2130904109;
+			public const int transitionEasing = 2130904109;
 			
 			// aapt resource value: 0x7F03042E
-			public const int viewInflaterClass = 2130904110;
+			public const int transitionFlags = 2130904110;
 			
 			// aapt resource value: 0x7F03042F
-			public const int viewTransitionMode = 2130904111;
+			public const int transitionPathRotate = 2130904111;
 			
 			// aapt resource value: 0x7F030430
-			public const int viewTransitionOnCross = 2130904112;
+			public const int transitionShapeAppearance = 2130904112;
 			
 			// aapt resource value: 0x7F030431
-			public const int viewTransitionOnNegativeCross = 2130904113;
+			public const int triggerId = 2130904113;
 			
 			// aapt resource value: 0x7F030432
-			public const int viewTransitionOnPositiveCross = 2130904114;
+			public const int triggerReceiver = 2130904114;
 			
 			// aapt resource value: 0x7F030433
-			public const int visibilityMode = 2130904115;
+			public const int triggerSlack = 2130904115;
 			
 			// aapt resource value: 0x7F030434
-			public const int voiceIcon = 2130904116;
-			
-			// aapt resource value: 0x7F030435
-			public const int warmth = 2130904117;
+			public const int ttcIndex = 2130904116;
 			
 			// aapt resource value: 0x7F030436
-			public const int waveDecay = 2130904118;
+			public const int updatesContinuously = 2130904118;
+			
+			// aapt resource value: 0x7F030435
+			public const int upDuration = 2130904117;
 			
 			// aapt resource value: 0x7F030437
-			public const int waveOffset = 2130904119;
+			public const int uri = 2130904119;
 			
 			// aapt resource value: 0x7F030438
-			public const int wavePeriod = 2130904120;
+			public const int useCompatPadding = 2130904120;
 			
 			// aapt resource value: 0x7F030439
-			public const int wavePhase = 2130904121;
+			public const int useMaterialThemeColors = 2130904121;
 			
 			// aapt resource value: 0x7F03043A
-			public const int waveShape = 2130904122;
+			public const int useSimpleSummaryProvider = 2130904122;
 			
 			// aapt resource value: 0x7F03043B
-			public const int waveVariesBy = 2130904123;
+			public const int values = 2130904123;
 			
 			// aapt resource value: 0x7F03043C
-			public const int widgetLayout = 2130904124;
+			public const int verticalOffset = 2130904124;
 			
 			// aapt resource value: 0x7F03043D
-			public const int windowActionBar = 2130904125;
+			public const int viewInflaterClass = 2130904125;
 			
 			// aapt resource value: 0x7F03043E
-			public const int windowActionBarOverlay = 2130904126;
+			public const int viewTransitionMode = 2130904126;
 			
 			// aapt resource value: 0x7F03043F
-			public const int windowActionModeOverlay = 2130904127;
+			public const int viewTransitionOnCross = 2130904127;
 			
 			// aapt resource value: 0x7F030440
-			public const int windowFixedHeightMajor = 2130904128;
+			public const int viewTransitionOnNegativeCross = 2130904128;
 			
 			// aapt resource value: 0x7F030441
-			public const int windowFixedHeightMinor = 2130904129;
+			public const int viewTransitionOnPositiveCross = 2130904129;
 			
 			// aapt resource value: 0x7F030442
-			public const int windowFixedWidthMajor = 2130904130;
+			public const int visibilityMode = 2130904130;
 			
 			// aapt resource value: 0x7F030443
-			public const int windowFixedWidthMinor = 2130904131;
+			public const int voiceIcon = 2130904131;
 			
 			// aapt resource value: 0x7F030444
-			public const int windowMinWidthMajor = 2130904132;
+			public const int warmth = 2130904132;
 			
 			// aapt resource value: 0x7F030445
-			public const int windowMinWidthMinor = 2130904133;
+			public const int waveDecay = 2130904133;
 			
 			// aapt resource value: 0x7F030446
-			public const int windowNoTitle = 2130904134;
+			public const int waveOffset = 2130904134;
 			
 			// aapt resource value: 0x7F030447
-			public const int yearSelectedStyle = 2130904135;
+			public const int wavePeriod = 2130904135;
 			
 			// aapt resource value: 0x7F030448
-			public const int yearStyle = 2130904136;
+			public const int wavePhase = 2130904136;
 			
 			// aapt resource value: 0x7F030449
-			public const int yearTodayStyle = 2130904137;
+			public const int waveShape = 2130904137;
+			
+			// aapt resource value: 0x7F03044A
+			public const int waveVariesBy = 2130904138;
+			
+			// aapt resource value: 0x7F03044B
+			public const int widgetLayout = 2130904139;
+			
+			// aapt resource value: 0x7F03044C
+			public const int windowActionBar = 2130904140;
+			
+			// aapt resource value: 0x7F03044D
+			public const int windowActionBarOverlay = 2130904141;
+			
+			// aapt resource value: 0x7F03044E
+			public const int windowActionModeOverlay = 2130904142;
+			
+			// aapt resource value: 0x7F03044F
+			public const int windowFixedHeightMajor = 2130904143;
+			
+			// aapt resource value: 0x7F030450
+			public const int windowFixedHeightMinor = 2130904144;
+			
+			// aapt resource value: 0x7F030451
+			public const int windowFixedWidthMajor = 2130904145;
+			
+			// aapt resource value: 0x7F030452
+			public const int windowFixedWidthMinor = 2130904146;
+			
+			// aapt resource value: 0x7F030453
+			public const int windowMinWidthMajor = 2130904147;
+			
+			// aapt resource value: 0x7F030454
+			public const int windowMinWidthMinor = 2130904148;
+			
+			// aapt resource value: 0x7F030455
+			public const int windowNoTitle = 2130904149;
+			
+			// aapt resource value: 0x7F030456
+			public const int yearSelectedStyle = 2130904150;
+			
+			// aapt resource value: 0x7F030457
+			public const int yearStyle = 2130904151;
+			
+			// aapt resource value: 0x7F030458
+			public const int yearTodayStyle = 2130904152;
 			
 			static Attribute()
 			{
@@ -26270,814 +27361,841 @@ namespace EcoCareApp.Droid
 			public const int item_touch_helper_swipe_escape_velocity = 2131099807;
 			
 			// aapt resource value: 0x7F0600A0
-			public const int material_bottom_sheet_max_width = 2131099808;
+			public const int label_font_size = 2131099808;
 			
 			// aapt resource value: 0x7F0600A1
-			public const int material_clock_display_padding = 2131099809;
+			public const int material_bottom_sheet_max_width = 2131099809;
 			
 			// aapt resource value: 0x7F0600A2
-			public const int material_clock_face_margin_top = 2131099810;
+			public const int material_clock_display_padding = 2131099810;
 			
 			// aapt resource value: 0x7F0600A3
-			public const int material_clock_hand_center_dot_radius = 2131099811;
+			public const int material_clock_face_margin_top = 2131099811;
 			
 			// aapt resource value: 0x7F0600A4
-			public const int material_clock_hand_padding = 2131099812;
+			public const int material_clock_hand_center_dot_radius = 2131099812;
 			
 			// aapt resource value: 0x7F0600A5
-			public const int material_clock_hand_stroke_width = 2131099813;
+			public const int material_clock_hand_padding = 2131099813;
 			
 			// aapt resource value: 0x7F0600A6
-			public const int material_clock_number_text_size = 2131099814;
+			public const int material_clock_hand_stroke_width = 2131099814;
 			
 			// aapt resource value: 0x7F0600A7
-			public const int material_clock_period_toggle_height = 2131099815;
+			public const int material_clock_number_text_size = 2131099815;
 			
 			// aapt resource value: 0x7F0600A8
-			public const int material_clock_period_toggle_margin_left = 2131099816;
+			public const int material_clock_period_toggle_height = 2131099816;
 			
 			// aapt resource value: 0x7F0600A9
-			public const int material_clock_period_toggle_width = 2131099817;
+			public const int material_clock_period_toggle_margin_left = 2131099817;
 			
 			// aapt resource value: 0x7F0600AA
-			public const int material_clock_size = 2131099818;
+			public const int material_clock_period_toggle_width = 2131099818;
 			
 			// aapt resource value: 0x7F0600AB
-			public const int material_cursor_inset_bottom = 2131099819;
+			public const int material_clock_size = 2131099819;
 			
 			// aapt resource value: 0x7F0600AC
-			public const int material_cursor_inset_top = 2131099820;
+			public const int material_cursor_inset_bottom = 2131099820;
 			
 			// aapt resource value: 0x7F0600AD
-			public const int material_cursor_width = 2131099821;
+			public const int material_cursor_inset_top = 2131099821;
 			
 			// aapt resource value: 0x7F0600AE
-			public const int material_emphasis_disabled = 2131099822;
+			public const int material_cursor_width = 2131099822;
 			
 			// aapt resource value: 0x7F0600AF
-			public const int material_emphasis_high_type = 2131099823;
+			public const int material_emphasis_disabled = 2131099823;
 			
 			// aapt resource value: 0x7F0600B0
-			public const int material_emphasis_medium = 2131099824;
+			public const int material_emphasis_high_type = 2131099824;
 			
 			// aapt resource value: 0x7F0600B1
-			public const int material_filled_edittext_font_1_3_padding_bottom = 2131099825;
+			public const int material_emphasis_medium = 2131099825;
 			
 			// aapt resource value: 0x7F0600B2
-			public const int material_filled_edittext_font_1_3_padding_top = 2131099826;
+			public const int material_filled_edittext_font_1_3_padding_bottom = 2131099826;
 			
 			// aapt resource value: 0x7F0600B3
-			public const int material_filled_edittext_font_2_0_padding_bottom = 2131099827;
+			public const int material_filled_edittext_font_1_3_padding_top = 2131099827;
 			
 			// aapt resource value: 0x7F0600B4
-			public const int material_filled_edittext_font_2_0_padding_top = 2131099828;
+			public const int material_filled_edittext_font_2_0_padding_bottom = 2131099828;
 			
 			// aapt resource value: 0x7F0600B5
-			public const int material_font_1_3_box_collapsed_padding_top = 2131099829;
+			public const int material_filled_edittext_font_2_0_padding_top = 2131099829;
 			
 			// aapt resource value: 0x7F0600B6
-			public const int material_font_2_0_box_collapsed_padding_top = 2131099830;
+			public const int material_font_1_3_box_collapsed_padding_top = 2131099830;
 			
 			// aapt resource value: 0x7F0600B7
-			public const int material_helper_text_default_padding_top = 2131099831;
+			public const int material_font_2_0_box_collapsed_padding_top = 2131099831;
 			
 			// aapt resource value: 0x7F0600B8
-			public const int material_helper_text_font_1_3_padding_horizontal = 2131099832;
+			public const int material_helper_text_default_padding_top = 2131099832;
 			
 			// aapt resource value: 0x7F0600B9
-			public const int material_helper_text_font_1_3_padding_top = 2131099833;
+			public const int material_helper_text_font_1_3_padding_horizontal = 2131099833;
 			
 			// aapt resource value: 0x7F0600BA
-			public const int material_input_text_to_prefix_suffix_padding = 2131099834;
-			
-			// aapt resource value: 0x7F0600BD
-			public const int material_textinput_default_width = 2131099837;
-			
-			// aapt resource value: 0x7F0600BE
-			public const int material_textinput_max_width = 2131099838;
-			
-			// aapt resource value: 0x7F0600BF
-			public const int material_textinput_min_width = 2131099839;
+			public const int material_helper_text_font_1_3_padding_top = 2131099834;
 			
 			// aapt resource value: 0x7F0600BB
-			public const int material_text_view_test_line_height = 2131099835;
+			public const int material_input_text_to_prefix_suffix_padding = 2131099835;
 			
-			// aapt resource value: 0x7F0600BC
-			public const int material_text_view_test_line_height_override = 2131099836;
+			// aapt resource value: 0x7F0600BE
+			public const int material_textinput_default_width = 2131099838;
 			
-			// aapt resource value: 0x7F0600C2
-			public const int material_timepicker_dialog_buttons_margin_top = 2131099842;
+			// aapt resource value: 0x7F0600BF
+			public const int material_textinput_max_width = 2131099839;
 			
 			// aapt resource value: 0x7F0600C0
-			public const int material_time_picker_minimum_screen_height = 2131099840;
+			public const int material_textinput_min_width = 2131099840;
 			
-			// aapt resource value: 0x7F0600C1
-			public const int material_time_picker_minimum_screen_width = 2131099841;
+			// aapt resource value: 0x7F0600BC
+			public const int material_text_view_test_line_height = 2131099836;
+			
+			// aapt resource value: 0x7F0600BD
+			public const int material_text_view_test_line_height_override = 2131099837;
 			
 			// aapt resource value: 0x7F0600C3
-			public const int mtrl_alert_dialog_background_inset_bottom = 2131099843;
+			public const int material_timepicker_dialog_buttons_margin_top = 2131099843;
+			
+			// aapt resource value: 0x7F0600C1
+			public const int material_time_picker_minimum_screen_height = 2131099841;
+			
+			// aapt resource value: 0x7F0600C2
+			public const int material_time_picker_minimum_screen_width = 2131099842;
 			
 			// aapt resource value: 0x7F0600C4
-			public const int mtrl_alert_dialog_background_inset_end = 2131099844;
+			public const int mtrl_alert_dialog_background_inset_bottom = 2131099844;
 			
 			// aapt resource value: 0x7F0600C5
-			public const int mtrl_alert_dialog_background_inset_start = 2131099845;
+			public const int mtrl_alert_dialog_background_inset_end = 2131099845;
 			
 			// aapt resource value: 0x7F0600C6
-			public const int mtrl_alert_dialog_background_inset_top = 2131099846;
+			public const int mtrl_alert_dialog_background_inset_start = 2131099846;
 			
 			// aapt resource value: 0x7F0600C7
-			public const int mtrl_alert_dialog_picker_background_inset = 2131099847;
+			public const int mtrl_alert_dialog_background_inset_top = 2131099847;
 			
 			// aapt resource value: 0x7F0600C8
-			public const int mtrl_badge_horizontal_edge_offset = 2131099848;
+			public const int mtrl_alert_dialog_picker_background_inset = 2131099848;
 			
 			// aapt resource value: 0x7F0600C9
-			public const int mtrl_badge_long_text_horizontal_padding = 2131099849;
+			public const int mtrl_badge_horizontal_edge_offset = 2131099849;
 			
 			// aapt resource value: 0x7F0600CA
-			public const int mtrl_badge_radius = 2131099850;
+			public const int mtrl_badge_long_text_horizontal_padding = 2131099850;
 			
 			// aapt resource value: 0x7F0600CB
-			public const int mtrl_badge_text_horizontal_edge_offset = 2131099851;
+			public const int mtrl_badge_radius = 2131099851;
 			
 			// aapt resource value: 0x7F0600CC
-			public const int mtrl_badge_text_size = 2131099852;
+			public const int mtrl_badge_text_horizontal_edge_offset = 2131099852;
 			
 			// aapt resource value: 0x7F0600CD
-			public const int mtrl_badge_toolbar_action_menu_item_horizontal_offset = 2131099853;
+			public const int mtrl_badge_text_size = 2131099853;
 			
 			// aapt resource value: 0x7F0600CE
-			public const int mtrl_badge_toolbar_action_menu_item_vertical_offset = 2131099854;
+			public const int mtrl_badge_toolbar_action_menu_item_horizontal_offset = 2131099854;
 			
 			// aapt resource value: 0x7F0600CF
-			public const int mtrl_badge_with_text_radius = 2131099855;
+			public const int mtrl_badge_toolbar_action_menu_item_vertical_offset = 2131099855;
 			
 			// aapt resource value: 0x7F0600D0
-			public const int mtrl_bottomappbar_fabOffsetEndMode = 2131099856;
+			public const int mtrl_badge_with_text_radius = 2131099856;
 			
 			// aapt resource value: 0x7F0600D1
-			public const int mtrl_bottomappbar_fab_bottom_margin = 2131099857;
+			public const int mtrl_bottomappbar_fabOffsetEndMode = 2131099857;
 			
 			// aapt resource value: 0x7F0600D2
-			public const int mtrl_bottomappbar_fab_cradle_margin = 2131099858;
+			public const int mtrl_bottomappbar_fab_bottom_margin = 2131099858;
 			
 			// aapt resource value: 0x7F0600D3
-			public const int mtrl_bottomappbar_fab_cradle_rounded_corner_radius = 2131099859;
+			public const int mtrl_bottomappbar_fab_cradle_margin = 2131099859;
 			
 			// aapt resource value: 0x7F0600D4
-			public const int mtrl_bottomappbar_fab_cradle_vertical_offset = 2131099860;
+			public const int mtrl_bottomappbar_fab_cradle_rounded_corner_radius = 2131099860;
 			
 			// aapt resource value: 0x7F0600D5
-			public const int mtrl_bottomappbar_height = 2131099861;
+			public const int mtrl_bottomappbar_fab_cradle_vertical_offset = 2131099861;
 			
 			// aapt resource value: 0x7F0600D6
-			public const int mtrl_btn_corner_radius = 2131099862;
+			public const int mtrl_bottomappbar_height = 2131099862;
 			
 			// aapt resource value: 0x7F0600D7
-			public const int mtrl_btn_dialog_btn_min_width = 2131099863;
+			public const int mtrl_btn_corner_radius = 2131099863;
 			
 			// aapt resource value: 0x7F0600D8
-			public const int mtrl_btn_disabled_elevation = 2131099864;
+			public const int mtrl_btn_dialog_btn_min_width = 2131099864;
 			
 			// aapt resource value: 0x7F0600D9
-			public const int mtrl_btn_disabled_z = 2131099865;
+			public const int mtrl_btn_disabled_elevation = 2131099865;
 			
 			// aapt resource value: 0x7F0600DA
-			public const int mtrl_btn_elevation = 2131099866;
+			public const int mtrl_btn_disabled_z = 2131099866;
 			
 			// aapt resource value: 0x7F0600DB
-			public const int mtrl_btn_focused_z = 2131099867;
+			public const int mtrl_btn_elevation = 2131099867;
 			
 			// aapt resource value: 0x7F0600DC
-			public const int mtrl_btn_hovered_z = 2131099868;
+			public const int mtrl_btn_focused_z = 2131099868;
 			
 			// aapt resource value: 0x7F0600DD
-			public const int mtrl_btn_icon_btn_padding_left = 2131099869;
+			public const int mtrl_btn_hovered_z = 2131099869;
 			
 			// aapt resource value: 0x7F0600DE
-			public const int mtrl_btn_icon_padding = 2131099870;
+			public const int mtrl_btn_icon_btn_padding_left = 2131099870;
 			
 			// aapt resource value: 0x7F0600DF
-			public const int mtrl_btn_inset = 2131099871;
+			public const int mtrl_btn_icon_padding = 2131099871;
 			
 			// aapt resource value: 0x7F0600E0
-			public const int mtrl_btn_letter_spacing = 2131099872;
+			public const int mtrl_btn_inset = 2131099872;
 			
 			// aapt resource value: 0x7F0600E1
-			public const int mtrl_btn_max_width = 2131099873;
+			public const int mtrl_btn_letter_spacing = 2131099873;
 			
 			// aapt resource value: 0x7F0600E2
-			public const int mtrl_btn_padding_bottom = 2131099874;
+			public const int mtrl_btn_max_width = 2131099874;
 			
 			// aapt resource value: 0x7F0600E3
-			public const int mtrl_btn_padding_left = 2131099875;
+			public const int mtrl_btn_padding_bottom = 2131099875;
 			
 			// aapt resource value: 0x7F0600E4
-			public const int mtrl_btn_padding_right = 2131099876;
+			public const int mtrl_btn_padding_left = 2131099876;
 			
 			// aapt resource value: 0x7F0600E5
-			public const int mtrl_btn_padding_top = 2131099877;
+			public const int mtrl_btn_padding_right = 2131099877;
 			
 			// aapt resource value: 0x7F0600E6
-			public const int mtrl_btn_pressed_z = 2131099878;
+			public const int mtrl_btn_padding_top = 2131099878;
 			
 			// aapt resource value: 0x7F0600E7
-			public const int mtrl_btn_snackbar_margin_horizontal = 2131099879;
+			public const int mtrl_btn_pressed_z = 2131099879;
 			
 			// aapt resource value: 0x7F0600E8
-			public const int mtrl_btn_stroke_size = 2131099880;
+			public const int mtrl_btn_snackbar_margin_horizontal = 2131099880;
 			
 			// aapt resource value: 0x7F0600E9
-			public const int mtrl_btn_text_btn_icon_padding = 2131099881;
+			public const int mtrl_btn_stroke_size = 2131099881;
 			
 			// aapt resource value: 0x7F0600EA
-			public const int mtrl_btn_text_btn_padding_left = 2131099882;
+			public const int mtrl_btn_text_btn_icon_padding = 2131099882;
 			
 			// aapt resource value: 0x7F0600EB
-			public const int mtrl_btn_text_btn_padding_right = 2131099883;
+			public const int mtrl_btn_text_btn_padding_left = 2131099883;
 			
 			// aapt resource value: 0x7F0600EC
-			public const int mtrl_btn_text_size = 2131099884;
+			public const int mtrl_btn_text_btn_padding_right = 2131099884;
 			
 			// aapt resource value: 0x7F0600ED
-			public const int mtrl_btn_z = 2131099885;
+			public const int mtrl_btn_text_size = 2131099885;
 			
 			// aapt resource value: 0x7F0600EE
-			public const int mtrl_calendar_action_confirm_button_min_width = 2131099886;
+			public const int mtrl_btn_z = 2131099886;
 			
 			// aapt resource value: 0x7F0600EF
-			public const int mtrl_calendar_action_height = 2131099887;
+			public const int mtrl_calendar_action_confirm_button_min_width = 2131099887;
 			
 			// aapt resource value: 0x7F0600F0
-			public const int mtrl_calendar_action_padding = 2131099888;
+			public const int mtrl_calendar_action_height = 2131099888;
 			
 			// aapt resource value: 0x7F0600F1
-			public const int mtrl_calendar_bottom_padding = 2131099889;
+			public const int mtrl_calendar_action_padding = 2131099889;
 			
 			// aapt resource value: 0x7F0600F2
-			public const int mtrl_calendar_content_padding = 2131099890;
-			
-			// aapt resource value: 0x7F0600F9
-			public const int mtrl_calendar_days_of_week_height = 2131099897;
+			public const int mtrl_calendar_bottom_padding = 2131099890;
 			
 			// aapt resource value: 0x7F0600F3
-			public const int mtrl_calendar_day_corner = 2131099891;
-			
-			// aapt resource value: 0x7F0600F4
-			public const int mtrl_calendar_day_height = 2131099892;
-			
-			// aapt resource value: 0x7F0600F5
-			public const int mtrl_calendar_day_horizontal_padding = 2131099893;
-			
-			// aapt resource value: 0x7F0600F6
-			public const int mtrl_calendar_day_today_stroke = 2131099894;
-			
-			// aapt resource value: 0x7F0600F7
-			public const int mtrl_calendar_day_vertical_padding = 2131099895;
-			
-			// aapt resource value: 0x7F0600F8
-			public const int mtrl_calendar_day_width = 2131099896;
+			public const int mtrl_calendar_content_padding = 2131099891;
 			
 			// aapt resource value: 0x7F0600FA
-			public const int mtrl_calendar_dialog_background_inset = 2131099898;
+			public const int mtrl_calendar_days_of_week_height = 2131099898;
+			
+			// aapt resource value: 0x7F0600F4
+			public const int mtrl_calendar_day_corner = 2131099892;
+			
+			// aapt resource value: 0x7F0600F5
+			public const int mtrl_calendar_day_height = 2131099893;
+			
+			// aapt resource value: 0x7F0600F6
+			public const int mtrl_calendar_day_horizontal_padding = 2131099894;
+			
+			// aapt resource value: 0x7F0600F7
+			public const int mtrl_calendar_day_today_stroke = 2131099895;
+			
+			// aapt resource value: 0x7F0600F8
+			public const int mtrl_calendar_day_vertical_padding = 2131099896;
+			
+			// aapt resource value: 0x7F0600F9
+			public const int mtrl_calendar_day_width = 2131099897;
 			
 			// aapt resource value: 0x7F0600FB
-			public const int mtrl_calendar_header_content_padding = 2131099899;
+			public const int mtrl_calendar_dialog_background_inset = 2131099899;
 			
 			// aapt resource value: 0x7F0600FC
-			public const int mtrl_calendar_header_content_padding_fullscreen = 2131099900;
+			public const int mtrl_calendar_header_content_padding = 2131099900;
 			
 			// aapt resource value: 0x7F0600FD
-			public const int mtrl_calendar_header_divider_thickness = 2131099901;
+			public const int mtrl_calendar_header_content_padding_fullscreen = 2131099901;
 			
 			// aapt resource value: 0x7F0600FE
-			public const int mtrl_calendar_header_height = 2131099902;
+			public const int mtrl_calendar_header_divider_thickness = 2131099902;
 			
 			// aapt resource value: 0x7F0600FF
-			public const int mtrl_calendar_header_height_fullscreen = 2131099903;
+			public const int mtrl_calendar_header_height = 2131099903;
 			
 			// aapt resource value: 0x7F060100
-			public const int mtrl_calendar_header_selection_line_height = 2131099904;
+			public const int mtrl_calendar_header_height_fullscreen = 2131099904;
 			
 			// aapt resource value: 0x7F060101
-			public const int mtrl_calendar_header_text_padding = 2131099905;
+			public const int mtrl_calendar_header_selection_line_height = 2131099905;
 			
 			// aapt resource value: 0x7F060102
-			public const int mtrl_calendar_header_toggle_margin_bottom = 2131099906;
+			public const int mtrl_calendar_header_text_padding = 2131099906;
 			
 			// aapt resource value: 0x7F060103
-			public const int mtrl_calendar_header_toggle_margin_top = 2131099907;
+			public const int mtrl_calendar_header_toggle_margin_bottom = 2131099907;
 			
 			// aapt resource value: 0x7F060104
-			public const int mtrl_calendar_landscape_header_width = 2131099908;
+			public const int mtrl_calendar_header_toggle_margin_top = 2131099908;
 			
 			// aapt resource value: 0x7F060105
-			public const int mtrl_calendar_maximum_default_fullscreen_minor_axis = 2131099909;
+			public const int mtrl_calendar_landscape_header_width = 2131099909;
 			
 			// aapt resource value: 0x7F060106
-			public const int mtrl_calendar_month_horizontal_padding = 2131099910;
+			public const int mtrl_calendar_maximum_default_fullscreen_minor_axis = 2131099910;
 			
 			// aapt resource value: 0x7F060107
-			public const int mtrl_calendar_month_vertical_padding = 2131099911;
+			public const int mtrl_calendar_month_horizontal_padding = 2131099911;
 			
 			// aapt resource value: 0x7F060108
-			public const int mtrl_calendar_navigation_bottom_padding = 2131099912;
+			public const int mtrl_calendar_month_vertical_padding = 2131099912;
 			
 			// aapt resource value: 0x7F060109
-			public const int mtrl_calendar_navigation_height = 2131099913;
+			public const int mtrl_calendar_navigation_bottom_padding = 2131099913;
 			
 			// aapt resource value: 0x7F06010A
-			public const int mtrl_calendar_navigation_top_padding = 2131099914;
+			public const int mtrl_calendar_navigation_height = 2131099914;
 			
 			// aapt resource value: 0x7F06010B
-			public const int mtrl_calendar_pre_l_text_clip_padding = 2131099915;
+			public const int mtrl_calendar_navigation_top_padding = 2131099915;
 			
 			// aapt resource value: 0x7F06010C
-			public const int mtrl_calendar_selection_baseline_to_top_fullscreen = 2131099916;
+			public const int mtrl_calendar_pre_l_text_clip_padding = 2131099916;
 			
 			// aapt resource value: 0x7F06010D
-			public const int mtrl_calendar_selection_text_baseline_to_bottom = 2131099917;
+			public const int mtrl_calendar_selection_baseline_to_top_fullscreen = 2131099917;
 			
 			// aapt resource value: 0x7F06010E
-			public const int mtrl_calendar_selection_text_baseline_to_bottom_fullscreen = 2131099918;
+			public const int mtrl_calendar_selection_text_baseline_to_bottom = 2131099918;
 			
 			// aapt resource value: 0x7F06010F
-			public const int mtrl_calendar_selection_text_baseline_to_top = 2131099919;
+			public const int mtrl_calendar_selection_text_baseline_to_bottom_fullscreen = 2131099919;
 			
 			// aapt resource value: 0x7F060110
-			public const int mtrl_calendar_text_input_padding_top = 2131099920;
+			public const int mtrl_calendar_selection_text_baseline_to_top = 2131099920;
 			
 			// aapt resource value: 0x7F060111
-			public const int mtrl_calendar_title_baseline_to_top = 2131099921;
+			public const int mtrl_calendar_text_input_padding_top = 2131099921;
 			
 			// aapt resource value: 0x7F060112
-			public const int mtrl_calendar_title_baseline_to_top_fullscreen = 2131099922;
+			public const int mtrl_calendar_title_baseline_to_top = 2131099922;
 			
 			// aapt resource value: 0x7F060113
-			public const int mtrl_calendar_year_corner = 2131099923;
+			public const int mtrl_calendar_title_baseline_to_top_fullscreen = 2131099923;
 			
 			// aapt resource value: 0x7F060114
-			public const int mtrl_calendar_year_height = 2131099924;
+			public const int mtrl_calendar_year_corner = 2131099924;
 			
 			// aapt resource value: 0x7F060115
-			public const int mtrl_calendar_year_horizontal_padding = 2131099925;
+			public const int mtrl_calendar_year_height = 2131099925;
 			
 			// aapt resource value: 0x7F060116
-			public const int mtrl_calendar_year_vertical_padding = 2131099926;
+			public const int mtrl_calendar_year_horizontal_padding = 2131099926;
 			
 			// aapt resource value: 0x7F060117
-			public const int mtrl_calendar_year_width = 2131099927;
+			public const int mtrl_calendar_year_vertical_padding = 2131099927;
 			
 			// aapt resource value: 0x7F060118
-			public const int mtrl_card_checked_icon_margin = 2131099928;
+			public const int mtrl_calendar_year_width = 2131099928;
 			
 			// aapt resource value: 0x7F060119
-			public const int mtrl_card_checked_icon_size = 2131099929;
+			public const int mtrl_card_checked_icon_margin = 2131099929;
 			
 			// aapt resource value: 0x7F06011A
-			public const int mtrl_card_corner_radius = 2131099930;
+			public const int mtrl_card_checked_icon_size = 2131099930;
 			
 			// aapt resource value: 0x7F06011B
-			public const int mtrl_card_dragged_z = 2131099931;
+			public const int mtrl_card_corner_radius = 2131099931;
 			
 			// aapt resource value: 0x7F06011C
-			public const int mtrl_card_elevation = 2131099932;
+			public const int mtrl_card_dragged_z = 2131099932;
 			
 			// aapt resource value: 0x7F06011D
-			public const int mtrl_card_spacing = 2131099933;
+			public const int mtrl_card_elevation = 2131099933;
 			
 			// aapt resource value: 0x7F06011E
-			public const int mtrl_chip_pressed_translation_z = 2131099934;
+			public const int mtrl_card_spacing = 2131099934;
 			
 			// aapt resource value: 0x7F06011F
-			public const int mtrl_chip_text_size = 2131099935;
+			public const int mtrl_chip_pressed_translation_z = 2131099935;
 			
 			// aapt resource value: 0x7F060120
-			public const int mtrl_edittext_rectangle_top_offset = 2131099936;
+			public const int mtrl_chip_text_size = 2131099936;
 			
 			// aapt resource value: 0x7F060121
-			public const int mtrl_exposed_dropdown_menu_popup_elevation = 2131099937;
+			public const int mtrl_edittext_rectangle_top_offset = 2131099937;
 			
 			// aapt resource value: 0x7F060122
-			public const int mtrl_exposed_dropdown_menu_popup_vertical_offset = 2131099938;
+			public const int mtrl_exposed_dropdown_menu_popup_elevation = 2131099938;
 			
 			// aapt resource value: 0x7F060123
-			public const int mtrl_exposed_dropdown_menu_popup_vertical_padding = 2131099939;
+			public const int mtrl_exposed_dropdown_menu_popup_vertical_offset = 2131099939;
 			
 			// aapt resource value: 0x7F060124
-			public const int mtrl_extended_fab_bottom_padding = 2131099940;
+			public const int mtrl_exposed_dropdown_menu_popup_vertical_padding = 2131099940;
 			
 			// aapt resource value: 0x7F060125
-			public const int mtrl_extended_fab_corner_radius = 2131099941;
+			public const int mtrl_extended_fab_bottom_padding = 2131099941;
 			
 			// aapt resource value: 0x7F060126
-			public const int mtrl_extended_fab_disabled_elevation = 2131099942;
+			public const int mtrl_extended_fab_corner_radius = 2131099942;
 			
 			// aapt resource value: 0x7F060127
-			public const int mtrl_extended_fab_disabled_translation_z = 2131099943;
+			public const int mtrl_extended_fab_disabled_elevation = 2131099943;
 			
 			// aapt resource value: 0x7F060128
-			public const int mtrl_extended_fab_elevation = 2131099944;
+			public const int mtrl_extended_fab_disabled_translation_z = 2131099944;
 			
 			// aapt resource value: 0x7F060129
-			public const int mtrl_extended_fab_end_padding = 2131099945;
+			public const int mtrl_extended_fab_elevation = 2131099945;
 			
 			// aapt resource value: 0x7F06012A
-			public const int mtrl_extended_fab_end_padding_icon = 2131099946;
+			public const int mtrl_extended_fab_end_padding = 2131099946;
 			
 			// aapt resource value: 0x7F06012B
-			public const int mtrl_extended_fab_icon_size = 2131099947;
+			public const int mtrl_extended_fab_end_padding_icon = 2131099947;
 			
 			// aapt resource value: 0x7F06012C
-			public const int mtrl_extended_fab_icon_text_spacing = 2131099948;
+			public const int mtrl_extended_fab_icon_size = 2131099948;
 			
 			// aapt resource value: 0x7F06012D
-			public const int mtrl_extended_fab_min_height = 2131099949;
+			public const int mtrl_extended_fab_icon_text_spacing = 2131099949;
 			
 			// aapt resource value: 0x7F06012E
-			public const int mtrl_extended_fab_min_width = 2131099950;
+			public const int mtrl_extended_fab_min_height = 2131099950;
 			
 			// aapt resource value: 0x7F06012F
-			public const int mtrl_extended_fab_start_padding = 2131099951;
+			public const int mtrl_extended_fab_min_width = 2131099951;
 			
 			// aapt resource value: 0x7F060130
-			public const int mtrl_extended_fab_start_padding_icon = 2131099952;
+			public const int mtrl_extended_fab_start_padding = 2131099952;
 			
 			// aapt resource value: 0x7F060131
-			public const int mtrl_extended_fab_top_padding = 2131099953;
+			public const int mtrl_extended_fab_start_padding_icon = 2131099953;
 			
 			// aapt resource value: 0x7F060132
-			public const int mtrl_extended_fab_translation_z_base = 2131099954;
+			public const int mtrl_extended_fab_top_padding = 2131099954;
 			
 			// aapt resource value: 0x7F060133
-			public const int mtrl_extended_fab_translation_z_hovered_focused = 2131099955;
+			public const int mtrl_extended_fab_translation_z_base = 2131099955;
 			
 			// aapt resource value: 0x7F060134
-			public const int mtrl_extended_fab_translation_z_pressed = 2131099956;
+			public const int mtrl_extended_fab_translation_z_hovered_focused = 2131099956;
 			
 			// aapt resource value: 0x7F060135
-			public const int mtrl_fab_elevation = 2131099957;
+			public const int mtrl_extended_fab_translation_z_pressed = 2131099957;
 			
 			// aapt resource value: 0x7F060136
-			public const int mtrl_fab_min_touch_target = 2131099958;
+			public const int mtrl_fab_elevation = 2131099958;
 			
 			// aapt resource value: 0x7F060137
-			public const int mtrl_fab_translation_z_hovered_focused = 2131099959;
+			public const int mtrl_fab_min_touch_target = 2131099959;
 			
 			// aapt resource value: 0x7F060138
-			public const int mtrl_fab_translation_z_pressed = 2131099960;
+			public const int mtrl_fab_translation_z_hovered_focused = 2131099960;
 			
 			// aapt resource value: 0x7F060139
-			public const int mtrl_high_ripple_default_alpha = 2131099961;
+			public const int mtrl_fab_translation_z_pressed = 2131099961;
 			
 			// aapt resource value: 0x7F06013A
-			public const int mtrl_high_ripple_focused_alpha = 2131099962;
+			public const int mtrl_high_ripple_default_alpha = 2131099962;
 			
 			// aapt resource value: 0x7F06013B
-			public const int mtrl_high_ripple_hovered_alpha = 2131099963;
+			public const int mtrl_high_ripple_focused_alpha = 2131099963;
 			
 			// aapt resource value: 0x7F06013C
-			public const int mtrl_high_ripple_pressed_alpha = 2131099964;
+			public const int mtrl_high_ripple_hovered_alpha = 2131099964;
 			
 			// aapt resource value: 0x7F06013D
-			public const int mtrl_large_touch_target = 2131099965;
+			public const int mtrl_high_ripple_pressed_alpha = 2131099965;
 			
 			// aapt resource value: 0x7F06013E
-			public const int mtrl_low_ripple_default_alpha = 2131099966;
+			public const int mtrl_large_touch_target = 2131099966;
 			
 			// aapt resource value: 0x7F06013F
-			public const int mtrl_low_ripple_focused_alpha = 2131099967;
+			public const int mtrl_low_ripple_default_alpha = 2131099967;
 			
 			// aapt resource value: 0x7F060140
-			public const int mtrl_low_ripple_hovered_alpha = 2131099968;
+			public const int mtrl_low_ripple_focused_alpha = 2131099968;
 			
 			// aapt resource value: 0x7F060141
-			public const int mtrl_low_ripple_pressed_alpha = 2131099969;
+			public const int mtrl_low_ripple_hovered_alpha = 2131099969;
 			
 			// aapt resource value: 0x7F060142
-			public const int mtrl_min_touch_target_size = 2131099970;
+			public const int mtrl_low_ripple_pressed_alpha = 2131099970;
 			
 			// aapt resource value: 0x7F060143
-			public const int mtrl_navigation_bar_item_default_icon_size = 2131099971;
+			public const int mtrl_min_touch_target_size = 2131099971;
 			
 			// aapt resource value: 0x7F060144
-			public const int mtrl_navigation_bar_item_default_margin = 2131099972;
+			public const int mtrl_navigation_bar_item_default_icon_size = 2131099972;
 			
 			// aapt resource value: 0x7F060145
-			public const int mtrl_navigation_elevation = 2131099973;
+			public const int mtrl_navigation_bar_item_default_margin = 2131099973;
 			
 			// aapt resource value: 0x7F060146
-			public const int mtrl_navigation_item_horizontal_padding = 2131099974;
+			public const int mtrl_navigation_elevation = 2131099974;
 			
 			// aapt resource value: 0x7F060147
-			public const int mtrl_navigation_item_icon_padding = 2131099975;
+			public const int mtrl_navigation_item_horizontal_padding = 2131099975;
 			
 			// aapt resource value: 0x7F060148
-			public const int mtrl_navigation_item_icon_size = 2131099976;
+			public const int mtrl_navigation_item_icon_padding = 2131099976;
 			
 			// aapt resource value: 0x7F060149
-			public const int mtrl_navigation_item_shape_horizontal_margin = 2131099977;
+			public const int mtrl_navigation_item_icon_size = 2131099977;
 			
 			// aapt resource value: 0x7F06014A
-			public const int mtrl_navigation_item_shape_vertical_margin = 2131099978;
+			public const int mtrl_navigation_item_shape_horizontal_margin = 2131099978;
 			
 			// aapt resource value: 0x7F06014B
-			public const int mtrl_navigation_rail_active_text_size = 2131099979;
+			public const int mtrl_navigation_item_shape_vertical_margin = 2131099979;
 			
 			// aapt resource value: 0x7F06014C
-			public const int mtrl_navigation_rail_compact_width = 2131099980;
+			public const int mtrl_navigation_rail_active_text_size = 2131099980;
 			
 			// aapt resource value: 0x7F06014D
-			public const int mtrl_navigation_rail_default_width = 2131099981;
+			public const int mtrl_navigation_rail_compact_width = 2131099981;
 			
 			// aapt resource value: 0x7F06014E
-			public const int mtrl_navigation_rail_elevation = 2131099982;
+			public const int mtrl_navigation_rail_default_width = 2131099982;
 			
 			// aapt resource value: 0x7F06014F
-			public const int mtrl_navigation_rail_icon_margin = 2131099983;
+			public const int mtrl_navigation_rail_elevation = 2131099983;
 			
 			// aapt resource value: 0x7F060150
-			public const int mtrl_navigation_rail_icon_size = 2131099984;
+			public const int mtrl_navigation_rail_icon_margin = 2131099984;
 			
 			// aapt resource value: 0x7F060151
-			public const int mtrl_navigation_rail_margin = 2131099985;
+			public const int mtrl_navigation_rail_icon_size = 2131099985;
 			
 			// aapt resource value: 0x7F060152
-			public const int mtrl_navigation_rail_text_bottom_margin = 2131099986;
+			public const int mtrl_navigation_rail_margin = 2131099986;
 			
 			// aapt resource value: 0x7F060153
-			public const int mtrl_navigation_rail_text_size = 2131099987;
+			public const int mtrl_navigation_rail_text_bottom_margin = 2131099987;
 			
 			// aapt resource value: 0x7F060154
-			public const int mtrl_progress_circular_inset = 2131099988;
+			public const int mtrl_navigation_rail_text_size = 2131099988;
 			
 			// aapt resource value: 0x7F060155
-			public const int mtrl_progress_circular_inset_extra_small = 2131099989;
+			public const int mtrl_progress_circular_inset = 2131099989;
 			
 			// aapt resource value: 0x7F060156
-			public const int mtrl_progress_circular_inset_medium = 2131099990;
+			public const int mtrl_progress_circular_inset_extra_small = 2131099990;
 			
 			// aapt resource value: 0x7F060157
-			public const int mtrl_progress_circular_inset_small = 2131099991;
+			public const int mtrl_progress_circular_inset_medium = 2131099991;
 			
 			// aapt resource value: 0x7F060158
-			public const int mtrl_progress_circular_radius = 2131099992;
+			public const int mtrl_progress_circular_inset_small = 2131099992;
 			
 			// aapt resource value: 0x7F060159
-			public const int mtrl_progress_circular_size = 2131099993;
+			public const int mtrl_progress_circular_radius = 2131099993;
 			
 			// aapt resource value: 0x7F06015A
-			public const int mtrl_progress_circular_size_extra_small = 2131099994;
+			public const int mtrl_progress_circular_size = 2131099994;
 			
 			// aapt resource value: 0x7F06015B
-			public const int mtrl_progress_circular_size_medium = 2131099995;
+			public const int mtrl_progress_circular_size_extra_small = 2131099995;
 			
 			// aapt resource value: 0x7F06015C
-			public const int mtrl_progress_circular_size_small = 2131099996;
+			public const int mtrl_progress_circular_size_medium = 2131099996;
 			
 			// aapt resource value: 0x7F06015D
-			public const int mtrl_progress_circular_track_thickness_extra_small = 2131099997;
+			public const int mtrl_progress_circular_size_small = 2131099997;
 			
 			// aapt resource value: 0x7F06015E
-			public const int mtrl_progress_circular_track_thickness_medium = 2131099998;
+			public const int mtrl_progress_circular_track_thickness_extra_small = 2131099998;
 			
 			// aapt resource value: 0x7F06015F
-			public const int mtrl_progress_circular_track_thickness_small = 2131099999;
+			public const int mtrl_progress_circular_track_thickness_medium = 2131099999;
 			
 			// aapt resource value: 0x7F060160
-			public const int mtrl_progress_indicator_full_rounded_corner_radius = 2131100000;
+			public const int mtrl_progress_circular_track_thickness_small = 2131100000;
 			
 			// aapt resource value: 0x7F060161
-			public const int mtrl_progress_track_thickness = 2131100001;
+			public const int mtrl_progress_indicator_full_rounded_corner_radius = 2131100001;
 			
 			// aapt resource value: 0x7F060162
-			public const int mtrl_shape_corner_size_large_component = 2131100002;
+			public const int mtrl_progress_track_thickness = 2131100002;
 			
 			// aapt resource value: 0x7F060163
-			public const int mtrl_shape_corner_size_medium_component = 2131100003;
+			public const int mtrl_shape_corner_size_large_component = 2131100003;
 			
 			// aapt resource value: 0x7F060164
-			public const int mtrl_shape_corner_size_small_component = 2131100004;
+			public const int mtrl_shape_corner_size_medium_component = 2131100004;
 			
 			// aapt resource value: 0x7F060165
-			public const int mtrl_slider_halo_radius = 2131100005;
+			public const int mtrl_shape_corner_size_small_component = 2131100005;
 			
 			// aapt resource value: 0x7F060166
-			public const int mtrl_slider_label_padding = 2131100006;
+			public const int mtrl_slider_halo_radius = 2131100006;
 			
 			// aapt resource value: 0x7F060167
-			public const int mtrl_slider_label_radius = 2131100007;
+			public const int mtrl_slider_label_padding = 2131100007;
 			
 			// aapt resource value: 0x7F060168
-			public const int mtrl_slider_label_square_side = 2131100008;
+			public const int mtrl_slider_label_radius = 2131100008;
 			
 			// aapt resource value: 0x7F060169
-			public const int mtrl_slider_thumb_elevation = 2131100009;
+			public const int mtrl_slider_label_square_side = 2131100009;
 			
 			// aapt resource value: 0x7F06016A
-			public const int mtrl_slider_thumb_radius = 2131100010;
+			public const int mtrl_slider_thumb_elevation = 2131100010;
 			
 			// aapt resource value: 0x7F06016B
-			public const int mtrl_slider_track_height = 2131100011;
+			public const int mtrl_slider_thumb_radius = 2131100011;
 			
 			// aapt resource value: 0x7F06016C
-			public const int mtrl_slider_track_side_padding = 2131100012;
+			public const int mtrl_slider_track_height = 2131100012;
 			
 			// aapt resource value: 0x7F06016D
-			public const int mtrl_slider_track_top = 2131100013;
+			public const int mtrl_slider_track_side_padding = 2131100013;
 			
 			// aapt resource value: 0x7F06016E
-			public const int mtrl_slider_widget_height = 2131100014;
+			public const int mtrl_slider_track_top = 2131100014;
 			
 			// aapt resource value: 0x7F06016F
-			public const int mtrl_snackbar_action_text_color_alpha = 2131100015;
+			public const int mtrl_slider_widget_height = 2131100015;
 			
 			// aapt resource value: 0x7F060170
-			public const int mtrl_snackbar_background_corner_radius = 2131100016;
+			public const int mtrl_snackbar_action_text_color_alpha = 2131100016;
 			
 			// aapt resource value: 0x7F060171
-			public const int mtrl_snackbar_background_overlay_color_alpha = 2131100017;
+			public const int mtrl_snackbar_background_corner_radius = 2131100017;
 			
 			// aapt resource value: 0x7F060172
-			public const int mtrl_snackbar_margin = 2131100018;
+			public const int mtrl_snackbar_background_overlay_color_alpha = 2131100018;
 			
 			// aapt resource value: 0x7F060173
-			public const int mtrl_snackbar_message_margin_horizontal = 2131100019;
+			public const int mtrl_snackbar_margin = 2131100019;
 			
 			// aapt resource value: 0x7F060174
-			public const int mtrl_snackbar_padding_horizontal = 2131100020;
+			public const int mtrl_snackbar_message_margin_horizontal = 2131100020;
 			
 			// aapt resource value: 0x7F060175
-			public const int mtrl_switch_thumb_elevation = 2131100021;
+			public const int mtrl_snackbar_padding_horizontal = 2131100021;
 			
 			// aapt resource value: 0x7F060176
-			public const int mtrl_textinput_box_corner_radius_medium = 2131100022;
+			public const int mtrl_switch_thumb_elevation = 2131100022;
 			
 			// aapt resource value: 0x7F060177
-			public const int mtrl_textinput_box_corner_radius_small = 2131100023;
+			public const int mtrl_textinput_box_corner_radius_medium = 2131100023;
 			
 			// aapt resource value: 0x7F060178
-			public const int mtrl_textinput_box_label_cutout_padding = 2131100024;
+			public const int mtrl_textinput_box_corner_radius_small = 2131100024;
 			
 			// aapt resource value: 0x7F060179
-			public const int mtrl_textinput_box_stroke_width_default = 2131100025;
+			public const int mtrl_textinput_box_label_cutout_padding = 2131100025;
 			
 			// aapt resource value: 0x7F06017A
-			public const int mtrl_textinput_box_stroke_width_focused = 2131100026;
+			public const int mtrl_textinput_box_stroke_width_default = 2131100026;
 			
 			// aapt resource value: 0x7F06017B
-			public const int mtrl_textinput_counter_margin_start = 2131100027;
+			public const int mtrl_textinput_box_stroke_width_focused = 2131100027;
 			
 			// aapt resource value: 0x7F06017C
-			public const int mtrl_textinput_end_icon_margin_start = 2131100028;
+			public const int mtrl_textinput_counter_margin_start = 2131100028;
 			
 			// aapt resource value: 0x7F06017D
-			public const int mtrl_textinput_outline_box_expanded_padding = 2131100029;
+			public const int mtrl_textinput_end_icon_margin_start = 2131100029;
 			
 			// aapt resource value: 0x7F06017E
-			public const int mtrl_textinput_start_icon_margin_end = 2131100030;
+			public const int mtrl_textinput_outline_box_expanded_padding = 2131100030;
 			
 			// aapt resource value: 0x7F06017F
-			public const int mtrl_toolbar_default_height = 2131100031;
+			public const int mtrl_textinput_start_icon_margin_end = 2131100031;
 			
 			// aapt resource value: 0x7F060180
-			public const int mtrl_tooltip_arrowSize = 2131100032;
+			public const int mtrl_toolbar_default_height = 2131100032;
 			
 			// aapt resource value: 0x7F060181
-			public const int mtrl_tooltip_cornerSize = 2131100033;
+			public const int mtrl_tooltip_arrowSize = 2131100033;
 			
 			// aapt resource value: 0x7F060182
-			public const int mtrl_tooltip_minHeight = 2131100034;
+			public const int mtrl_tooltip_cornerSize = 2131100034;
 			
 			// aapt resource value: 0x7F060183
-			public const int mtrl_tooltip_minWidth = 2131100035;
+			public const int mtrl_tooltip_minHeight = 2131100035;
 			
 			// aapt resource value: 0x7F060184
-			public const int mtrl_tooltip_padding = 2131100036;
+			public const int mtrl_tooltip_minWidth = 2131100036;
 			
 			// aapt resource value: 0x7F060185
-			public const int mtrl_transition_shared_axis_slide_distance = 2131100037;
+			public const int mtrl_tooltip_padding = 2131100037;
 			
 			// aapt resource value: 0x7F060186
-			public const int notification_action_icon_size = 2131100038;
+			public const int mtrl_transition_shared_axis_slide_distance = 2131100038;
 			
 			// aapt resource value: 0x7F060187
-			public const int notification_action_text_size = 2131100039;
+			public const int notification_action_icon_size = 2131100039;
 			
 			// aapt resource value: 0x7F060188
-			public const int notification_big_circle_margin = 2131100040;
+			public const int notification_action_text_size = 2131100040;
 			
 			// aapt resource value: 0x7F060189
-			public const int notification_content_margin_start = 2131100041;
+			public const int notification_big_circle_margin = 2131100041;
 			
 			// aapt resource value: 0x7F06018A
-			public const int notification_large_icon_height = 2131100042;
+			public const int notification_content_margin_start = 2131100042;
 			
 			// aapt resource value: 0x7F06018B
-			public const int notification_large_icon_width = 2131100043;
+			public const int notification_large_icon_height = 2131100043;
 			
 			// aapt resource value: 0x7F06018C
-			public const int notification_main_column_padding_top = 2131100044;
+			public const int notification_large_icon_width = 2131100044;
 			
 			// aapt resource value: 0x7F06018D
-			public const int notification_media_narrow_margin = 2131100045;
+			public const int notification_main_column_padding_top = 2131100045;
 			
 			// aapt resource value: 0x7F06018E
-			public const int notification_right_icon_size = 2131100046;
+			public const int notification_media_narrow_margin = 2131100046;
 			
 			// aapt resource value: 0x7F06018F
-			public const int notification_right_side_padding_top = 2131100047;
+			public const int notification_right_icon_size = 2131100047;
 			
 			// aapt resource value: 0x7F060190
-			public const int notification_small_icon_background_padding = 2131100048;
+			public const int notification_right_side_padding_top = 2131100048;
 			
 			// aapt resource value: 0x7F060191
-			public const int notification_small_icon_size_as_large = 2131100049;
+			public const int notification_small_icon_background_padding = 2131100049;
 			
 			// aapt resource value: 0x7F060192
-			public const int notification_subtext_size = 2131100050;
+			public const int notification_small_icon_size_as_large = 2131100050;
 			
 			// aapt resource value: 0x7F060193
-			public const int notification_top_pad = 2131100051;
+			public const int notification_subtext_size = 2131100051;
 			
 			// aapt resource value: 0x7F060194
-			public const int notification_top_pad_large_text = 2131100052;
+			public const int notification_top_pad = 2131100052;
 			
 			// aapt resource value: 0x7F060195
-			public const int preference_dropdown_padding_start = 2131100053;
+			public const int notification_top_pad_large_text = 2131100053;
 			
 			// aapt resource value: 0x7F060196
-			public const int preference_icon_minWidth = 2131100054;
+			public const int preference_dropdown_padding_start = 2131100054;
 			
 			// aapt resource value: 0x7F060197
-			public const int preference_seekbar_padding_horizontal = 2131100055;
+			public const int preference_icon_minWidth = 2131100055;
 			
 			// aapt resource value: 0x7F060198
-			public const int preference_seekbar_padding_vertical = 2131100056;
+			public const int preference_seekbar_padding_horizontal = 2131100056;
 			
 			// aapt resource value: 0x7F060199
-			public const int preference_seekbar_value_minWidth = 2131100057;
+			public const int preference_seekbar_padding_vertical = 2131100057;
 			
 			// aapt resource value: 0x7F06019A
-			public const int test_mtrl_calendar_day_cornerSize = 2131100058;
+			public const int preference_seekbar_value_minWidth = 2131100058;
 			
 			// aapt resource value: 0x7F06019B
-			public const int test_navigation_bar_active_item_max_width = 2131100059;
+			public const int test_mtrl_calendar_day_cornerSize = 2131100059;
 			
 			// aapt resource value: 0x7F06019C
-			public const int test_navigation_bar_active_item_min_width = 2131100060;
+			public const int test_navigation_bar_active_item_max_width = 2131100060;
 			
 			// aapt resource value: 0x7F06019D
-			public const int test_navigation_bar_active_text_size = 2131100061;
+			public const int test_navigation_bar_active_item_min_width = 2131100061;
 			
 			// aapt resource value: 0x7F06019E
-			public const int test_navigation_bar_elevation = 2131100062;
+			public const int test_navigation_bar_active_text_size = 2131100062;
 			
 			// aapt resource value: 0x7F06019F
-			public const int test_navigation_bar_height = 2131100063;
+			public const int test_navigation_bar_elevation = 2131100063;
 			
 			// aapt resource value: 0x7F0601A0
-			public const int test_navigation_bar_icon_size = 2131100064;
+			public const int test_navigation_bar_height = 2131100064;
 			
 			// aapt resource value: 0x7F0601A1
-			public const int test_navigation_bar_item_max_width = 2131100065;
+			public const int test_navigation_bar_icon_size = 2131100065;
 			
 			// aapt resource value: 0x7F0601A2
-			public const int test_navigation_bar_item_min_width = 2131100066;
+			public const int test_navigation_bar_item_max_width = 2131100066;
 			
 			// aapt resource value: 0x7F0601A3
-			public const int test_navigation_bar_label_padding = 2131100067;
+			public const int test_navigation_bar_item_min_width = 2131100067;
 			
 			// aapt resource value: 0x7F0601A4
-			public const int test_navigation_bar_shadow_height = 2131100068;
+			public const int test_navigation_bar_label_padding = 2131100068;
 			
 			// aapt resource value: 0x7F0601A5
-			public const int test_navigation_bar_text_size = 2131100069;
+			public const int test_navigation_bar_shadow_height = 2131100069;
 			
 			// aapt resource value: 0x7F0601A6
-			public const int tooltip_corner_radius = 2131100070;
+			public const int test_navigation_bar_text_size = 2131100070;
 			
 			// aapt resource value: 0x7F0601A7
-			public const int tooltip_horizontal_padding = 2131100071;
+			public const int thumb_size = 2131100071;
 			
 			// aapt resource value: 0x7F0601A8
-			public const int tooltip_margin = 2131100072;
-			
-			// aapt resource value: 0x7F0601A9
-			public const int tooltip_precise_anchor_extra_offset = 2131100073;
-			
-			// aapt resource value: 0x7F0601AA
-			public const int tooltip_precise_anchor_threshold = 2131100074;
-			
-			// aapt resource value: 0x7F0601AB
-			public const int tooltip_vertical_padding = 2131100075;
-			
-			// aapt resource value: 0x7F0601AC
-			public const int tooltip_y_offset_non_touch = 2131100076;
+			public const int tick_size = 2131100072;
 			
 			// aapt resource value: 0x7F0601AD
-			public const int tooltip_y_offset_touch = 2131100077;
+			public const int tooltip_corner_radius = 2131100077;
+			
+			// aapt resource value: 0x7F0601AE
+			public const int tooltip_horizontal_padding = 2131100078;
+			
+			// aapt resource value: 0x7F0601AF
+			public const int tooltip_margin = 2131100079;
+			
+			// aapt resource value: 0x7F0601B0
+			public const int tooltip_precise_anchor_extra_offset = 2131100080;
+			
+			// aapt resource value: 0x7F0601B1
+			public const int tooltip_precise_anchor_threshold = 2131100081;
+			
+			// aapt resource value: 0x7F0601B2
+			public const int tooltip_textsize = 2131100082;
+			
+			// aapt resource value: 0x7F0601B3
+			public const int tooltip_vertical_padding = 2131100083;
+			
+			// aapt resource value: 0x7F0601B4
+			public const int tooltip_y_offset_non_touch = 2131100084;
+			
+			// aapt resource value: 0x7F0601B5
+			public const int tooltip_y_offset_touch = 2131100085;
+			
+			// aapt resource value: 0x7F0601A9
+			public const int tool_bottom = 2131100073;
+			
+			// aapt resource value: 0x7F0601AA
+			public const int tool_left = 2131100074;
+			
+			// aapt resource value: 0x7F0601AB
+			public const int tool_right = 2131100075;
+			
+			// aapt resource value: 0x7F0601AC
+			public const int tool_top = 2131100076;
+			
+			// aapt resource value: 0x7F0601B6
+			public const int track_size = 2131100086;
 			
 			static Dimension()
 			{
@@ -27681,19 +28799,22 @@ namespace EcoCareApp.Droid
 			public const int start_page = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int test_custom_background = 2131165386;
+			public const int static_plus = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int tooltip_frame_dark = 2131165387;
+			public const int test_custom_background = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int tooltip_frame_light = 2131165388;
+			public const int tooltip_frame_dark = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int user = 2131165389;
+			public const int tooltip_frame_light = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int user_bw = 2131165390;
+			public const int user = 2131165390;
+			
+			// aapt resource value: 0x7F0700CF
+			public const int user_bw = 2131165391;
 			
 			static Drawable()
 			{
@@ -27958,10 +29079,13 @@ namespace EcoCareApp.Droid
 			public const int bottom = 2131230819;
 			
 			// aapt resource value: 0x7F080064
-			public const int bottomtab_navarea = 2131230820;
+			public const int bottomRight = 2131230820;
 			
 			// aapt resource value: 0x7F080065
-			public const int bottomtab_tabbar = 2131230821;
+			public const int bottomtab_navarea = 2131230821;
+			
+			// aapt resource value: 0x7F080066
+			public const int bottomtab_tabbar = 2131230822;
 			
 			// aapt resource value: 0x7F080001
 			public const int BOTTOM_END = 2131230721;
@@ -27969,899 +29093,908 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0x7F080002
 			public const int BOTTOM_START = 2131230722;
 			
-			// aapt resource value: 0x7F080066
-			public const int bounce = 2131230822;
-			
 			// aapt resource value: 0x7F080067
-			public const int bounceBoth = 2131230823;
+			public const int bounce = 2131230823;
 			
 			// aapt resource value: 0x7F080068
-			public const int bounceEnd = 2131230824;
+			public const int bounceBoth = 2131230824;
 			
 			// aapt resource value: 0x7F080069
-			public const int bounceStart = 2131230825;
+			public const int bounceEnd = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int browser_actions_header_text = 2131230826;
-			
-			// aapt resource value: 0x7F08006D
-			public const int browser_actions_menu_items = 2131230829;
+			public const int bounceStart = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
-			public const int browser_actions_menu_item_icon = 2131230827;
-			
-			// aapt resource value: 0x7F08006C
-			public const int browser_actions_menu_item_text = 2131230828;
+			public const int browser_actions_header_text = 2131230827;
 			
 			// aapt resource value: 0x7F08006E
-			public const int browser_actions_menu_view = 2131230830;
+			public const int browser_actions_menu_items = 2131230830;
+			
+			// aapt resource value: 0x7F08006C
+			public const int browser_actions_menu_item_icon = 2131230828;
+			
+			// aapt resource value: 0x7F08006D
+			public const int browser_actions_menu_item_text = 2131230829;
 			
 			// aapt resource value: 0x7F08006F
-			public const int buttonPanel = 2131230831;
+			public const int browser_actions_menu_view = 2131230831;
 			
 			// aapt resource value: 0x7F080070
-			public const int cache_measures = 2131230832;
+			public const int buttonPanel = 2131230832;
 			
 			// aapt resource value: 0x7F080071
-			public const int cameratexture = 2131230833;
+			public const int cache_measures = 2131230833;
 			
 			// aapt resource value: 0x7F080072
-			public const int cancel_action = 2131230834;
+			public const int cameratexture = 2131230834;
 			
 			// aapt resource value: 0x7F080073
-			public const int cancel_button = 2131230835;
+			public const int cancel_action = 2131230835;
 			
 			// aapt resource value: 0x7F080074
-			public const int carryVelocity = 2131230836;
+			public const int cancel_button = 2131230836;
 			
 			// aapt resource value: 0x7F080075
-			public const int center = 2131230837;
+			public const int carryVelocity = 2131230837;
 			
 			// aapt resource value: 0x7F080005
 			public const int Center = 2131230725;
 			
 			// aapt resource value: 0x7F080076
-			public const int center_horizontal = 2131230838;
+			public const int center = 2131230838;
 			
 			// aapt resource value: 0x7F080077
-			public const int center_vertical = 2131230839;
+			public const int center_horizontal = 2131230839;
 			
 			// aapt resource value: 0x7F080078
-			public const int chain = 2131230840;
+			public const int center_vertical = 2131230840;
 			
 			// aapt resource value: 0x7F080079
-			public const int chains = 2131230841;
+			public const int chain = 2131230841;
 			
 			// aapt resource value: 0x7F08007A
-			public const int checkbox = 2131230842;
+			public const int chains = 2131230842;
 			
 			// aapt resource value: 0x7F08007B
-			public const int @checked = 2131230843;
+			public const int checkbox = 2131230843;
 			
 			// aapt resource value: 0x7F08007C
-			public const int chip = 2131230844;
+			public const int @checked = 2131230844;
 			
 			// aapt resource value: 0x7F08007D
-			public const int chip1 = 2131230845;
+			public const int chip = 2131230845;
 			
 			// aapt resource value: 0x7F08007E
-			public const int chip2 = 2131230846;
+			public const int chip1 = 2131230846;
 			
 			// aapt resource value: 0x7F08007F
-			public const int chip3 = 2131230847;
+			public const int chip2 = 2131230847;
 			
 			// aapt resource value: 0x7F080080
-			public const int chip_group = 2131230848;
+			public const int chip3 = 2131230848;
 			
 			// aapt resource value: 0x7F080081
-			public const int chronometer = 2131230849;
+			public const int chip_group = 2131230849;
 			
 			// aapt resource value: 0x7F080082
-			public const int circle_center = 2131230850;
+			public const int chronometer = 2131230850;
 			
 			// aapt resource value: 0x7F080083
-			public const int clear_text = 2131230851;
+			public const int circle_center = 2131230851;
 			
 			// aapt resource value: 0x7F080084
-			public const int clip_horizontal = 2131230852;
+			public const int clear_text = 2131230852;
 			
 			// aapt resource value: 0x7F080085
-			public const int clip_vertical = 2131230853;
+			public const int clip_horizontal = 2131230853;
 			
 			// aapt resource value: 0x7F080086
-			public const int clockwise = 2131230854;
+			public const int clip_vertical = 2131230854;
 			
 			// aapt resource value: 0x7F080087
-			public const int closest = 2131230855;
+			public const int clockwise = 2131230855;
 			
 			// aapt resource value: 0x7F080088
-			public const int collapseActionView = 2131230856;
+			public const int closest = 2131230856;
 			
 			// aapt resource value: 0x7F080089
-			public const int confirm_button = 2131230857;
+			public const int collapseActionView = 2131230857;
 			
 			// aapt resource value: 0x7F08008A
-			public const int constraint = 2131230858;
+			public const int confirm_button = 2131230858;
 			
 			// aapt resource value: 0x7F08008B
-			public const int container = 2131230859;
+			public const int constraint = 2131230859;
 			
 			// aapt resource value: 0x7F08008C
-			public const int content = 2131230860;
+			public const int container = 2131230860;
 			
 			// aapt resource value: 0x7F08008D
-			public const int contentPanel = 2131230861;
+			public const int content = 2131230861;
 			
 			// aapt resource value: 0x7F08008E
-			public const int contiguous = 2131230862;
+			public const int contentPanel = 2131230862;
 			
 			// aapt resource value: 0x7F08008F
-			public const int continuousVelocity = 2131230863;
+			public const int contiguous = 2131230863;
 			
 			// aapt resource value: 0x7F080090
-			public const int coordinator = 2131230864;
+			public const int continuousVelocity = 2131230864;
 			
 			// aapt resource value: 0x7F080091
-			public const int cos = 2131230865;
+			public const int coordinator = 2131230865;
 			
 			// aapt resource value: 0x7F080092
-			public const int counterclockwise = 2131230866;
+			public const int cos = 2131230866;
+			
+			// aapt resource value: 0x7F080093
+			public const int counterclockwise = 2131230867;
 			
 			// aapt resource value: 0x7F080004
 			public const int CTRL = 2131230724;
 			
-			// aapt resource value: 0x7F080093
-			public const int currentState = 2131230867;
+			// aapt resource value: 0x7F080094
+			public const int currentState = 2131230868;
+			
+			// aapt resource value: 0x7F080095
+			public const int custom = 2131230869;
 			
 			// aapt resource value: 0x7F080006
 			public const int Custom = 2131230726;
 			
-			// aapt resource value: 0x7F080094
-			public const int custom = 2131230868;
-			
-			// aapt resource value: 0x7F080095
-			public const int customPanel = 2131230869;
-			
 			// aapt resource value: 0x7F080096
-			public const int cut = 2131230870;
+			public const int customPanel = 2131230870;
 			
 			// aapt resource value: 0x7F080097
-			public const int date_picker_actions = 2131230871;
+			public const int cut = 2131230871;
 			
 			// aapt resource value: 0x7F080098
-			public const int decelerate = 2131230872;
+			public const int date_picker_actions = 2131230872;
 			
 			// aapt resource value: 0x7F080099
-			public const int decelerateAndComplete = 2131230873;
+			public const int decelerate = 2131230873;
 			
 			// aapt resource value: 0x7F08009A
-			public const int decor_content_parent = 2131230874;
+			public const int decelerateAndComplete = 2131230874;
+			
+			// aapt resource value: 0x7F08009B
+			public const int decor_content_parent = 2131230875;
 			
 			// aapt resource value: 0x7F080007
 			public const int Default = 2131230727;
 			
-			// aapt resource value: 0x7F08009B
-			public const int default_activity_button = 2131230875;
-			
 			// aapt resource value: 0x7F08009C
-			public const int deltaRelative = 2131230876;
+			public const int default_activity_button = 2131230876;
 			
 			// aapt resource value: 0x7F08009D
-			public const int dependency_ordering = 2131230877;
+			public const int deltaRelative = 2131230877;
 			
 			// aapt resource value: 0x7F08009E
-			public const int design_bottom_sheet = 2131230878;
+			public const int dependency_ordering = 2131230878;
 			
 			// aapt resource value: 0x7F08009F
-			public const int design_menu_item_action_area = 2131230879;
+			public const int design_bottom_sheet = 2131230879;
 			
 			// aapt resource value: 0x7F0800A0
-			public const int design_menu_item_action_area_stub = 2131230880;
+			public const int design_menu_item_action_area = 2131230880;
 			
 			// aapt resource value: 0x7F0800A1
-			public const int design_menu_item_text = 2131230881;
+			public const int design_menu_item_action_area_stub = 2131230881;
 			
 			// aapt resource value: 0x7F0800A2
-			public const int design_navigation_view = 2131230882;
+			public const int design_menu_item_text = 2131230882;
 			
 			// aapt resource value: 0x7F0800A3
-			public const int dialog_button = 2131230883;
+			public const int design_navigation_view = 2131230883;
 			
 			// aapt resource value: 0x7F0800A4
-			public const int dimensions = 2131230884;
+			public const int dialog_button = 2131230884;
 			
 			// aapt resource value: 0x7F0800A5
-			public const int direct = 2131230885;
+			public const int dimensions = 2131230885;
 			
 			// aapt resource value: 0x7F0800A6
-			public const int disableHome = 2131230886;
+			public const int direct = 2131230886;
 			
 			// aapt resource value: 0x7F0800A7
-			public const int disableIntraAutoTransition = 2131230887;
+			public const int disableHome = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int disablePostScroll = 2131230888;
+			public const int disableIntraAutoTransition = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
-			public const int disableScroll = 2131230889;
+			public const int disablePostScroll = 2131230889;
 			
 			// aapt resource value: 0x7F0800AA
-			public const int disjoint = 2131230890;
+			public const int disableScroll = 2131230890;
 			
 			// aapt resource value: 0x7F0800AB
-			public const int dragAnticlockwise = 2131230891;
+			public const int disjoint = 2131230891;
 			
 			// aapt resource value: 0x7F0800AC
-			public const int dragClockwise = 2131230892;
+			public const int dragAnticlockwise = 2131230892;
 			
 			// aapt resource value: 0x7F0800AD
-			public const int dragDown = 2131230893;
+			public const int dragClockwise = 2131230893;
 			
 			// aapt resource value: 0x7F0800AE
-			public const int dragEnd = 2131230894;
+			public const int dragDown = 2131230894;
 			
 			// aapt resource value: 0x7F0800AF
-			public const int dragLeft = 2131230895;
+			public const int dragEnd = 2131230895;
 			
 			// aapt resource value: 0x7F0800B0
-			public const int dragRight = 2131230896;
+			public const int dragLeft = 2131230896;
 			
 			// aapt resource value: 0x7F0800B1
-			public const int dragStart = 2131230897;
+			public const int dragRight = 2131230897;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int dragUp = 2131230898;
+			public const int dragStart = 2131230898;
 			
 			// aapt resource value: 0x7F0800B3
-			public const int dropdown_menu = 2131230899;
+			public const int dragUp = 2131230899;
 			
 			// aapt resource value: 0x7F0800B4
-			public const int easeIn = 2131230900;
+			public const int dropdown_menu = 2131230900;
 			
 			// aapt resource value: 0x7F0800B5
-			public const int easeInOut = 2131230901;
+			public const int easeIn = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int easeOut = 2131230902;
+			public const int easeInOut = 2131230902;
 			
 			// aapt resource value: 0x7F0800B7
-			public const int east = 2131230903;
+			public const int easeOut = 2131230903;
 			
 			// aapt resource value: 0x7F0800B8
-			public const int edit_query = 2131230904;
+			public const int east = 2131230904;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int elastic = 2131230905;
+			public const int edit_query = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int end = 2131230906;
+			public const int elastic = 2131230906;
 			
 			// aapt resource value: 0x7F0800BB
-			public const int endToStart = 2131230907;
+			public const int end = 2131230907;
 			
 			// aapt resource value: 0x7F0800BC
-			public const int end_padder = 2131230908;
+			public const int endToStart = 2131230908;
 			
 			// aapt resource value: 0x7F0800BD
-			public const int enterAlways = 2131230909;
+			public const int end_padder = 2131230909;
 			
 			// aapt resource value: 0x7F0800BE
-			public const int enterAlwaysCollapsed = 2131230910;
+			public const int enterAlways = 2131230910;
 			
 			// aapt resource value: 0x7F0800BF
-			public const int exitUntilCollapsed = 2131230911;
-			
-			// aapt resource value: 0x7F0800C1
-			public const int expanded_menu = 2131230913;
+			public const int enterAlwaysCollapsed = 2131230911;
 			
 			// aapt resource value: 0x7F0800C0
-			public const int expand_activities_button = 2131230912;
+			public const int exitUntilCollapsed = 2131230912;
 			
 			// aapt resource value: 0x7F0800C2
-			public const int fade = 2131230914;
+			public const int expanded_menu = 2131230914;
+			
+			// aapt resource value: 0x7F0800C1
+			public const int expand_activities_button = 2131230913;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int fill = 2131230915;
-			
-			// aapt resource value: 0x7F0800C6
-			public const int filled = 2131230918;
+			public const int fade = 2131230915;
 			
 			// aapt resource value: 0x7F0800C4
-			public const int fill_horizontal = 2131230916;
-			
-			// aapt resource value: 0x7F0800C5
-			public const int fill_vertical = 2131230917;
+			public const int fill = 2131230916;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int fitToContents = 2131230919;
+			public const int filled = 2131230919;
+			
+			// aapt resource value: 0x7F0800C5
+			public const int fill_horizontal = 2131230917;
+			
+			// aapt resource value: 0x7F0800C6
+			public const int fill_vertical = 2131230918;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int @fixed = 2131230920;
+			public const int fitToContents = 2131230920;
 			
 			// aapt resource value: 0x7F0800C9
-			public const int flip = 2131230921;
+			public const int @fixed = 2131230921;
 			
 			// aapt resource value: 0x7F0800CA
-			public const int floating = 2131230922;
+			public const int flip = 2131230922;
 			
 			// aapt resource value: 0x7F0800CB
-			public const int flyoutcontent_appbar = 2131230923;
+			public const int floating = 2131230923;
 			
 			// aapt resource value: 0x7F0800CC
-			public const int forever = 2131230924;
+			public const int flyoutcontent_appbar = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int fragment_container_view_tag = 2131230925;
+			public const int forever = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int frost = 2131230926;
+			public const int fragment_container_view_tag = 2131230926;
+			
+			// aapt resource value: 0x7F0800CF
+			public const int frost = 2131230927;
 			
 			// aapt resource value: 0x7F080008
 			public const int FUNCTION = 2131230728;
 			
-			// aapt resource value: 0x7F0800CF
-			public const int ghost_view = 2131230927;
-			
 			// aapt resource value: 0x7F0800D0
-			public const int ghost_view_holder = 2131230928;
+			public const int ghost_view = 2131230928;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int gone = 2131230929;
+			public const int ghost_view_holder = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int graph = 2131230930;
+			public const int gone = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int graph_wrap = 2131230931;
-			
-			// aapt resource value: 0x7F0800D5
-			public const int grouping = 2131230933;
-			
-			// aapt resource value: 0x7F0800D6
-			public const int groups = 2131230934;
+			public const int graph = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int group_divider = 2131230932;
+			public const int graph_wrap = 2131230932;
+			
+			// aapt resource value: 0x7F0800D6
+			public const int grouping = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int guideline = 2131230935;
+			public const int groups = 2131230935;
+			
+			// aapt resource value: 0x7F0800D5
+			public const int group_divider = 2131230933;
 			
 			// aapt resource value: 0x7F0800D8
-			public const int header_title = 2131230936;
+			public const int guideline = 2131230936;
 			
 			// aapt resource value: 0x7F0800D9
-			public const int hideable = 2131230937;
+			public const int header_title = 2131230937;
 			
 			// aapt resource value: 0x7F0800DA
-			public const int home = 2131230938;
+			public const int hideable = 2131230938;
 			
 			// aapt resource value: 0x7F0800DB
-			public const int homeAsUp = 2131230939;
+			public const int home = 2131230939;
 			
 			// aapt resource value: 0x7F0800DC
-			public const int honorRequest = 2131230940;
+			public const int homeAsUp = 2131230940;
 			
 			// aapt resource value: 0x7F0800DD
-			public const int horizontal_only = 2131230941;
+			public const int honorRequest = 2131230941;
 			
 			// aapt resource value: 0x7F0800DE
-			public const int icon = 2131230942;
+			public const int horizontal = 2131230942;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int icon_frame = 2131230943;
+			public const int horizontal_only = 2131230943;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int icon_group = 2131230944;
+			public const int icon = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int ifRoom = 2131230945;
+			public const int icon_frame = 2131230945;
 			
 			// aapt resource value: 0x7F0800E2
-			public const int ignore = 2131230946;
+			public const int icon_group = 2131230946;
 			
 			// aapt resource value: 0x7F0800E3
-			public const int ignoreRequest = 2131230947;
+			public const int ifRoom = 2131230947;
 			
 			// aapt resource value: 0x7F0800E4
-			public const int image = 2131230948;
+			public const int ignore = 2131230948;
 			
 			// aapt resource value: 0x7F0800E5
-			public const int immediateStop = 2131230949;
+			public const int ignoreRequest = 2131230949;
 			
 			// aapt resource value: 0x7F0800E6
-			public const int included = 2131230950;
+			public const int image = 2131230950;
 			
 			// aapt resource value: 0x7F0800E7
-			public const int info = 2131230951;
+			public const int immediateStop = 2131230951;
 			
 			// aapt resource value: 0x7F0800E8
-			public const int invisible = 2131230952;
+			public const int included = 2131230952;
 			
 			// aapt resource value: 0x7F0800E9
-			public const int inward = 2131230953;
+			public const int info = 2131230953;
 			
 			// aapt resource value: 0x7F0800EA
-			public const int italic = 2131230954;
+			public const int inline = 2131230954;
 			
 			// aapt resource value: 0x7F0800EB
-			public const int item_touch_helper_previous_elevation = 2131230955;
+			public const int invisible = 2131230955;
 			
 			// aapt resource value: 0x7F0800EC
-			public const int jumpToEnd = 2131230956;
+			public const int inward = 2131230956;
 			
 			// aapt resource value: 0x7F0800ED
-			public const int jumpToStart = 2131230957;
+			public const int italic = 2131230957;
 			
 			// aapt resource value: 0x7F0800EE
-			public const int labeled = 2131230958;
+			public const int item_touch_helper_previous_elevation = 2131230958;
 			
 			// aapt resource value: 0x7F0800EF
-			public const int layout = 2131230959;
+			public const int jumpToEnd = 2131230959;
 			
 			// aapt resource value: 0x7F0800F0
-			public const int left = 2131230960;
+			public const int jumpToStart = 2131230960;
 			
 			// aapt resource value: 0x7F0800F1
-			public const int leftToRight = 2131230961;
+			public const int labeled = 2131230961;
 			
 			// aapt resource value: 0x7F0800F2
-			public const int legacy = 2131230962;
+			public const int layout = 2131230962;
 			
 			// aapt resource value: 0x7F0800F3
-			public const int line1 = 2131230963;
+			public const int left = 2131230963;
 			
 			// aapt resource value: 0x7F0800F4
-			public const int line3 = 2131230964;
+			public const int leftToRight = 2131230964;
 			
 			// aapt resource value: 0x7F0800F5
-			public const int linear = 2131230965;
+			public const int legacy = 2131230965;
 			
 			// aapt resource value: 0x7F0800F6
-			public const int listMode = 2131230966;
+			public const int line1 = 2131230966;
 			
 			// aapt resource value: 0x7F0800F7
-			public const int list_item = 2131230967;
+			public const int line3 = 2131230967;
 			
 			// aapt resource value: 0x7F0800F8
-			public const int main_appbar = 2131230968;
+			public const int linear = 2131230968;
 			
 			// aapt resource value: 0x7F0800F9
-			public const int main_tablayout = 2131230969;
+			public const int listMode = 2131230969;
 			
 			// aapt resource value: 0x7F0800FA
-			public const int main_toolbar = 2131230970;
+			public const int list_item = 2131230970;
 			
 			// aapt resource value: 0x7F0800FB
-			public const int main_viewpager = 2131230971;
+			public const int main_appbar = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int masked = 2131230972;
+			public const int main_tablayout = 2131230972;
 			
 			// aapt resource value: 0x7F0800FD
-			public const int match_constraint = 2131230973;
+			public const int main_toolbar = 2131230973;
 			
 			// aapt resource value: 0x7F0800FE
-			public const int match_parent = 2131230974;
+			public const int main_viewpager = 2131230974;
 			
 			// aapt resource value: 0x7F0800FF
-			public const int material_clock_display = 2131230975;
+			public const int masked = 2131230975;
 			
 			// aapt resource value: 0x7F080100
-			public const int material_clock_face = 2131230976;
+			public const int match_constraint = 2131230976;
 			
 			// aapt resource value: 0x7F080101
-			public const int material_clock_hand = 2131230977;
+			public const int match_parent = 2131230977;
 			
 			// aapt resource value: 0x7F080102
-			public const int material_clock_period_am_button = 2131230978;
+			public const int material_clock_display = 2131230978;
 			
 			// aapt resource value: 0x7F080103
-			public const int material_clock_period_pm_button = 2131230979;
+			public const int material_clock_face = 2131230979;
 			
 			// aapt resource value: 0x7F080104
-			public const int material_clock_period_toggle = 2131230980;
+			public const int material_clock_hand = 2131230980;
 			
 			// aapt resource value: 0x7F080105
-			public const int material_hour_text_input = 2131230981;
+			public const int material_clock_period_am_button = 2131230981;
 			
 			// aapt resource value: 0x7F080106
-			public const int material_hour_tv = 2131230982;
+			public const int material_clock_period_pm_button = 2131230982;
 			
 			// aapt resource value: 0x7F080107
-			public const int material_label = 2131230983;
+			public const int material_clock_period_toggle = 2131230983;
 			
 			// aapt resource value: 0x7F080108
-			public const int material_minute_text_input = 2131230984;
+			public const int material_hour_text_input = 2131230984;
 			
 			// aapt resource value: 0x7F080109
-			public const int material_minute_tv = 2131230985;
+			public const int material_hour_tv = 2131230985;
 			
 			// aapt resource value: 0x7F08010A
-			public const int material_textinput_timepicker = 2131230986;
+			public const int material_label = 2131230986;
 			
 			// aapt resource value: 0x7F08010B
-			public const int material_timepicker_cancel_button = 2131230987;
+			public const int material_minute_text_input = 2131230987;
 			
 			// aapt resource value: 0x7F08010C
-			public const int material_timepicker_container = 2131230988;
+			public const int material_minute_tv = 2131230988;
 			
 			// aapt resource value: 0x7F08010D
-			public const int material_timepicker_edit_text = 2131230989;
+			public const int material_textinput_timepicker = 2131230989;
 			
 			// aapt resource value: 0x7F08010E
-			public const int material_timepicker_mode_button = 2131230990;
+			public const int material_timepicker_cancel_button = 2131230990;
 			
 			// aapt resource value: 0x7F08010F
-			public const int material_timepicker_ok_button = 2131230991;
+			public const int material_timepicker_container = 2131230991;
 			
 			// aapt resource value: 0x7F080110
-			public const int material_timepicker_view = 2131230992;
+			public const int material_timepicker_edit_text = 2131230992;
 			
 			// aapt resource value: 0x7F080111
-			public const int material_value_index = 2131230993;
+			public const int material_timepicker_mode_button = 2131230993;
 			
 			// aapt resource value: 0x7F080112
-			public const int media_actions = 2131230994;
+			public const int material_timepicker_ok_button = 2131230994;
 			
 			// aapt resource value: 0x7F080113
-			public const int media_controller_compat_view_tag = 2131230995;
+			public const int material_timepicker_view = 2131230995;
 			
 			// aapt resource value: 0x7F080114
-			public const int message = 2131230996;
+			public const int material_value_index = 2131230996;
+			
+			// aapt resource value: 0x7F080115
+			public const int media_actions = 2131230997;
+			
+			// aapt resource value: 0x7F080116
+			public const int media_controller_compat_view_tag = 2131230998;
+			
+			// aapt resource value: 0x7F080117
+			public const int message = 2131230999;
 			
 			// aapt resource value: 0x7F080009
 			public const int META = 2131230729;
 			
-			// aapt resource value: 0x7F080115
-			public const int middle = 2131230997;
-			
-			// aapt resource value: 0x7F080116
-			public const int mini = 2131230998;
-			
-			// aapt resource value: 0x7F080117
-			public const int month_grid = 2131230999;
-			
 			// aapt resource value: 0x7F080118
-			public const int month_navigation_bar = 2131231000;
+			public const int middle = 2131231000;
 			
 			// aapt resource value: 0x7F080119
-			public const int month_navigation_fragment_toggle = 2131231001;
+			public const int mini = 2131231001;
 			
 			// aapt resource value: 0x7F08011A
-			public const int month_navigation_next = 2131231002;
+			public const int month_grid = 2131231002;
 			
 			// aapt resource value: 0x7F08011B
-			public const int month_navigation_previous = 2131231003;
+			public const int month_navigation_bar = 2131231003;
 			
 			// aapt resource value: 0x7F08011C
-			public const int month_title = 2131231004;
+			public const int month_navigation_fragment_toggle = 2131231004;
 			
 			// aapt resource value: 0x7F08011D
-			public const int motion_base = 2131231005;
+			public const int month_navigation_next = 2131231005;
 			
 			// aapt resource value: 0x7F08011E
-			public const int mtrl_anchor_parent = 2131231006;
-			
-			// aapt resource value: 0x7F080120
-			public const int mtrl_calendar_days_of_week = 2131231008;
+			public const int month_navigation_previous = 2131231006;
 			
 			// aapt resource value: 0x7F08011F
-			public const int mtrl_calendar_day_selector_frame = 2131231007;
+			public const int month_title = 2131231007;
+			
+			// aapt resource value: 0x7F080120
+			public const int motion_base = 2131231008;
 			
 			// aapt resource value: 0x7F080121
-			public const int mtrl_calendar_frame = 2131231009;
-			
-			// aapt resource value: 0x7F080122
-			public const int mtrl_calendar_main_pane = 2131231010;
+			public const int mtrl_anchor_parent = 2131231009;
 			
 			// aapt resource value: 0x7F080123
-			public const int mtrl_calendar_months = 2131231011;
+			public const int mtrl_calendar_days_of_week = 2131231011;
+			
+			// aapt resource value: 0x7F080122
+			public const int mtrl_calendar_day_selector_frame = 2131231010;
 			
 			// aapt resource value: 0x7F080124
-			public const int mtrl_calendar_selection_frame = 2131231012;
+			public const int mtrl_calendar_frame = 2131231012;
 			
 			// aapt resource value: 0x7F080125
-			public const int mtrl_calendar_text_input_frame = 2131231013;
+			public const int mtrl_calendar_main_pane = 2131231013;
 			
 			// aapt resource value: 0x7F080126
-			public const int mtrl_calendar_year_selector_frame = 2131231014;
+			public const int mtrl_calendar_months = 2131231014;
 			
 			// aapt resource value: 0x7F080127
-			public const int mtrl_card_checked_layer_id = 2131231015;
+			public const int mtrl_calendar_selection_frame = 2131231015;
 			
 			// aapt resource value: 0x7F080128
-			public const int mtrl_child_content_container = 2131231016;
+			public const int mtrl_calendar_text_input_frame = 2131231016;
 			
 			// aapt resource value: 0x7F080129
-			public const int mtrl_internal_children_alpha_tag = 2131231017;
+			public const int mtrl_calendar_year_selector_frame = 2131231017;
 			
 			// aapt resource value: 0x7F08012A
-			public const int mtrl_motion_snapshot_view = 2131231018;
+			public const int mtrl_card_checked_layer_id = 2131231018;
 			
 			// aapt resource value: 0x7F08012B
-			public const int mtrl_picker_fullscreen = 2131231019;
+			public const int mtrl_child_content_container = 2131231019;
 			
 			// aapt resource value: 0x7F08012C
-			public const int mtrl_picker_header = 2131231020;
+			public const int mtrl_internal_children_alpha_tag = 2131231020;
 			
 			// aapt resource value: 0x7F08012D
-			public const int mtrl_picker_header_selection_text = 2131231021;
+			public const int mtrl_motion_snapshot_view = 2131231021;
 			
 			// aapt resource value: 0x7F08012E
-			public const int mtrl_picker_header_title_and_selection = 2131231022;
+			public const int mtrl_picker_fullscreen = 2131231022;
 			
 			// aapt resource value: 0x7F08012F
-			public const int mtrl_picker_header_toggle = 2131231023;
+			public const int mtrl_picker_header = 2131231023;
 			
 			// aapt resource value: 0x7F080130
-			public const int mtrl_picker_text_input_date = 2131231024;
+			public const int mtrl_picker_header_selection_text = 2131231024;
 			
 			// aapt resource value: 0x7F080131
-			public const int mtrl_picker_text_input_range_end = 2131231025;
+			public const int mtrl_picker_header_title_and_selection = 2131231025;
 			
 			// aapt resource value: 0x7F080132
-			public const int mtrl_picker_text_input_range_start = 2131231026;
+			public const int mtrl_picker_header_toggle = 2131231026;
 			
 			// aapt resource value: 0x7F080133
-			public const int mtrl_picker_title_text = 2131231027;
+			public const int mtrl_picker_text_input_date = 2131231027;
 			
 			// aapt resource value: 0x7F080134
-			public const int mtrl_view_tag_bottom_padding = 2131231028;
+			public const int mtrl_picker_text_input_range_end = 2131231028;
 			
 			// aapt resource value: 0x7F080135
-			public const int multiply = 2131231029;
-			
-			// aapt resource value: 0x7F080137
-			public const int navigation_bar_item_icon_view = 2131231031;
-			
-			// aapt resource value: 0x7F080138
-			public const int navigation_bar_item_labels_group = 2131231032;
-			
-			// aapt resource value: 0x7F080139
-			public const int navigation_bar_item_large_label_view = 2131231033;
-			
-			// aapt resource value: 0x7F08013A
-			public const int navigation_bar_item_small_label_view = 2131231034;
-			
-			// aapt resource value: 0x7F08013B
-			public const int navigation_header_container = 2131231035;
+			public const int mtrl_picker_text_input_range_start = 2131231029;
 			
 			// aapt resource value: 0x7F080136
-			public const int nav_controller_view_tag = 2131231030;
+			public const int mtrl_picker_title_text = 2131231030;
+			
+			// aapt resource value: 0x7F080137
+			public const int mtrl_view_tag_bottom_padding = 2131231031;
+			
+			// aapt resource value: 0x7F080138
+			public const int multiply = 2131231032;
+			
+			// aapt resource value: 0x7F08013A
+			public const int navigation_bar_item_icon_view = 2131231034;
+			
+			// aapt resource value: 0x7F08013B
+			public const int navigation_bar_item_labels_group = 2131231035;
 			
 			// aapt resource value: 0x7F08013C
-			public const int never = 2131231036;
+			public const int navigation_bar_item_large_label_view = 2131231036;
 			
 			// aapt resource value: 0x7F08013D
-			public const int neverCompleteToEnd = 2131231037;
+			public const int navigation_bar_item_small_label_view = 2131231037;
 			
 			// aapt resource value: 0x7F08013E
-			public const int neverCompleteToStart = 2131231038;
+			public const int navigation_header_container = 2131231038;
 			
-			// aapt resource value: 0x7F080141
-			public const int none = 2131231041;
-			
-			// aapt resource value: 0x7F080142
-			public const int normal = 2131231042;
-			
-			// aapt resource value: 0x7F080143
-			public const int north = 2131231043;
+			// aapt resource value: 0x7F080139
+			public const int nav_controller_view_tag = 2131231033;
 			
 			// aapt resource value: 0x7F08013F
-			public const int noScroll = 2131231039;
+			public const int never = 2131231039;
 			
 			// aapt resource value: 0x7F080140
-			public const int noState = 2131231040;
+			public const int neverCompleteToEnd = 2131231040;
+			
+			// aapt resource value: 0x7F080141
+			public const int neverCompleteToStart = 2131231041;
 			
 			// aapt resource value: 0x7F080144
-			public const int notification_background = 2131231044;
+			public const int none = 2131231044;
 			
 			// aapt resource value: 0x7F080145
-			public const int notification_main_column = 2131231045;
+			public const int normal = 2131231045;
 			
 			// aapt resource value: 0x7F080146
-			public const int notification_main_column_container = 2131231046;
+			public const int north = 2131231046;
+			
+			// aapt resource value: 0x7F080142
+			public const int noScroll = 2131231042;
+			
+			// aapt resource value: 0x7F080143
+			public const int noState = 2131231043;
+			
+			// aapt resource value: 0x7F080147
+			public const int notification_background = 2131231047;
+			
+			// aapt resource value: 0x7F080148
+			public const int notification_main_column = 2131231048;
+			
+			// aapt resource value: 0x7F080149
+			public const int notification_main_column_container = 2131231049;
 			
 			// aapt resource value: 0x7F08000A
 			public const int NO_DEBUG = 2131230730;
 			
-			// aapt resource value: 0x7F080147
-			public const int off = 2131231047;
-			
-			// aapt resource value: 0x7F080148
-			public const int on = 2131231048;
-			
-			// aapt resource value: 0x7F080149
-			public const int outline = 2131231049;
-			
 			// aapt resource value: 0x7F08014A
-			public const int outward = 2131231050;
+			public const int off = 2131231050;
 			
 			// aapt resource value: 0x7F08014B
-			public const int overshoot = 2131231051;
+			public const int on = 2131231051;
 			
 			// aapt resource value: 0x7F08014C
-			public const int packed = 2131231052;
+			public const int outline = 2131231052;
 			
 			// aapt resource value: 0x7F08014D
-			public const int parallax = 2131231053;
+			public const int outside = 2131231053;
 			
 			// aapt resource value: 0x7F08014E
-			public const int parent = 2131231054;
+			public const int outward = 2131231054;
 			
 			// aapt resource value: 0x7F08014F
-			public const int parentPanel = 2131231055;
+			public const int overshoot = 2131231055;
 			
 			// aapt resource value: 0x7F080150
-			public const int parentRelative = 2131231056;
+			public const int packed = 2131231056;
 			
 			// aapt resource value: 0x7F080151
-			public const int parent_matrix = 2131231057;
+			public const int parallax = 2131231057;
 			
 			// aapt resource value: 0x7F080152
-			public const int password_toggle = 2131231058;
+			public const int parent = 2131231058;
 			
 			// aapt resource value: 0x7F080153
-			public const int path = 2131231059;
+			public const int parentPanel = 2131231059;
 			
 			// aapt resource value: 0x7F080154
-			public const int pathRelative = 2131231060;
+			public const int parentRelative = 2131231060;
 			
 			// aapt resource value: 0x7F080155
-			public const int peekHeight = 2131231061;
+			public const int parent_matrix = 2131231061;
 			
 			// aapt resource value: 0x7F080156
-			public const int percent = 2131231062;
+			public const int password_toggle = 2131231062;
 			
 			// aapt resource value: 0x7F080157
-			public const int pin = 2131231063;
+			public const int path = 2131231063;
 			
 			// aapt resource value: 0x7F080158
-			public const int position = 2131231064;
+			public const int pathRelative = 2131231064;
 			
 			// aapt resource value: 0x7F080159
-			public const int postLayout = 2131231065;
+			public const int peekHeight = 2131231065;
 			
 			// aapt resource value: 0x7F08015A
-			public const int progress_circular = 2131231066;
+			public const int percent = 2131231066;
 			
 			// aapt resource value: 0x7F08015B
-			public const int progress_horizontal = 2131231067;
+			public const int pin = 2131231067;
 			
 			// aapt resource value: 0x7F08015C
-			public const int radio = 2131231068;
+			public const int position = 2131231068;
 			
 			// aapt resource value: 0x7F08015D
-			public const int ratio = 2131231069;
+			public const int postLayout = 2131231069;
 			
 			// aapt resource value: 0x7F08015E
-			public const int rectangles = 2131231070;
+			public const int progress_circular = 2131231070;
 			
 			// aapt resource value: 0x7F08015F
-			public const int recycler_view = 2131231071;
+			public const int progress_horizontal = 2131231071;
 			
 			// aapt resource value: 0x7F080160
-			public const int reverseSawtooth = 2131231072;
+			public const int radio = 2131231072;
 			
 			// aapt resource value: 0x7F080161
-			public const int right = 2131231073;
+			public const int ratio = 2131231073;
 			
 			// aapt resource value: 0x7F080162
-			public const int rightToLeft = 2131231074;
+			public const int rectangles = 2131231074;
 			
 			// aapt resource value: 0x7F080163
-			public const int right_icon = 2131231075;
+			public const int recycler_view = 2131231075;
 			
 			// aapt resource value: 0x7F080164
-			public const int right_side = 2131231076;
+			public const int reverseSawtooth = 2131231076;
 			
 			// aapt resource value: 0x7F080165
-			public const int rounded = 2131231077;
+			public const int right = 2131231077;
 			
 			// aapt resource value: 0x7F080166
-			public const int row_index_key = 2131231078;
+			public const int rightToLeft = 2131231078;
 			
 			// aapt resource value: 0x7F080167
-			public const int save_non_transition_alpha = 2131231079;
+			public const int right_icon = 2131231079;
 			
 			// aapt resource value: 0x7F080168
-			public const int save_overlay_view = 2131231080;
+			public const int right_side = 2131231080;
 			
 			// aapt resource value: 0x7F080169
-			public const int sawtooth = 2131231081;
+			public const int rounded = 2131231081;
 			
 			// aapt resource value: 0x7F08016A
-			public const int scale = 2131231082;
+			public const int row_index_key = 2131231082;
 			
 			// aapt resource value: 0x7F08016B
-			public const int screen = 2131231083;
+			public const int save_non_transition_alpha = 2131231083;
 			
 			// aapt resource value: 0x7F08016C
-			public const int scroll = 2131231084;
-			
-			// aapt resource value: 0x7F080170
-			public const int scrollable = 2131231088;
+			public const int save_overlay_view = 2131231084;
 			
 			// aapt resource value: 0x7F08016D
-			public const int scrollIndicatorDown = 2131231085;
+			public const int sawtooth = 2131231085;
 			
 			// aapt resource value: 0x7F08016E
-			public const int scrollIndicatorUp = 2131231086;
+			public const int scale = 2131231086;
 			
 			// aapt resource value: 0x7F08016F
-			public const int scrollView = 2131231087;
+			public const int screen = 2131231087;
 			
-			// aapt resource value: 0x7F080171
-			public const int search_badge = 2131231089;
-			
-			// aapt resource value: 0x7F080172
-			public const int search_bar = 2131231090;
-			
-			// aapt resource value: 0x7F080173
-			public const int search_button = 2131231091;
+			// aapt resource value: 0x7F080170
+			public const int scroll = 2131231088;
 			
 			// aapt resource value: 0x7F080174
-			public const int search_close_btn = 2131231092;
+			public const int scrollable = 2131231092;
+			
+			// aapt resource value: 0x7F080171
+			public const int scrollIndicatorDown = 2131231089;
+			
+			// aapt resource value: 0x7F080172
+			public const int scrollIndicatorUp = 2131231090;
+			
+			// aapt resource value: 0x7F080173
+			public const int scrollView = 2131231091;
 			
 			// aapt resource value: 0x7F080175
-			public const int search_edit_frame = 2131231093;
+			public const int search_badge = 2131231093;
 			
 			// aapt resource value: 0x7F080176
-			public const int search_go_btn = 2131231094;
+			public const int search_bar = 2131231094;
 			
 			// aapt resource value: 0x7F080177
-			public const int search_mag_icon = 2131231095;
+			public const int search_button = 2131231095;
 			
 			// aapt resource value: 0x7F080178
-			public const int search_plate = 2131231096;
+			public const int search_close_btn = 2131231096;
 			
 			// aapt resource value: 0x7F080179
-			public const int search_src_text = 2131231097;
+			public const int search_edit_frame = 2131231097;
 			
 			// aapt resource value: 0x7F08017A
-			public const int search_voice_btn = 2131231098;
+			public const int search_go_btn = 2131231098;
 			
 			// aapt resource value: 0x7F08017B
-			public const int seekbar = 2131231099;
+			public const int search_mag_icon = 2131231099;
 			
 			// aapt resource value: 0x7F08017C
-			public const int seekbar_value = 2131231100;
-			
-			// aapt resource value: 0x7F08017E
-			public const int selected = 2131231102;
-			
-			// aapt resource value: 0x7F08017F
-			public const int selection_type = 2131231103;
+			public const int search_plate = 2131231100;
 			
 			// aapt resource value: 0x7F08017D
-			public const int select_dialog_listview = 2131231101;
+			public const int search_src_text = 2131231101;
+			
+			// aapt resource value: 0x7F08017E
+			public const int search_voice_btn = 2131231102;
+			
+			// aapt resource value: 0x7F08017F
+			public const int seekbar = 2131231103;
 			
 			// aapt resource value: 0x7F080180
-			public const int sharedValueSet = 2131231104;
-			
-			// aapt resource value: 0x7F080181
-			public const int sharedValueUnset = 2131231105;
+			public const int seekbar_value = 2131231104;
 			
 			// aapt resource value: 0x7F080182
-			public const int shellcontent_appbar = 2131231106;
+			public const int selected = 2131231106;
 			
 			// aapt resource value: 0x7F080183
-			public const int shellcontent_toolbar = 2131231107;
+			public const int selection_type = 2131231107;
+			
+			// aapt resource value: 0x7F080181
+			public const int select_dialog_listview = 2131231105;
+			
+			// aapt resource value: 0x7F080184
+			public const int sharedValueSet = 2131231108;
+			
+			// aapt resource value: 0x7F080185
+			public const int sharedValueUnset = 2131231109;
+			
+			// aapt resource value: 0x7F080186
+			public const int shellcontent_appbar = 2131231110;
+			
+			// aapt resource value: 0x7F080187
+			public const int shellcontent_toolbar = 2131231111;
 			
 			// aapt resource value: 0x7F08000B
 			public const int SHIFT = 2131230731;
 			
-			// aapt resource value: 0x7F080184
-			public const int shortcut = 2131231108;
+			// aapt resource value: 0x7F080188
+			public const int shortcut = 2131231112;
 			
-			// aapt resource value: 0x7F080185
-			public const int showCustom = 2131231109;
+			// aapt resource value: 0x7F080189
+			public const int showCustom = 2131231113;
 			
-			// aapt resource value: 0x7F080186
-			public const int showHome = 2131231110;
+			// aapt resource value: 0x7F08018A
+			public const int showHome = 2131231114;
 			
-			// aapt resource value: 0x7F080187
-			public const int showTitle = 2131231111;
+			// aapt resource value: 0x7F08018B
+			public const int showTitle = 2131231115;
 			
 			// aapt resource value: 0x7F08000C
 			public const int SHOW_ALL = 2131230732;
@@ -28872,245 +30005,248 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0x7F08000E
 			public const int SHOW_PROGRESS = 2131230734;
 			
-			// aapt resource value: 0x7F080188
-			public const int sin = 2131231112;
-			
-			// aapt resource value: 0x7F080189
-			public const int skipCollapsed = 2131231113;
-			
-			// aapt resource value: 0x7F08018A
-			public const int skipped = 2131231114;
-			
-			// aapt resource value: 0x7F08018B
-			public const int slide = 2131231115;
-			
 			// aapt resource value: 0x7F08018C
-			public const int sliding_tabs = 2131231116;
+			public const int sin = 2131231116;
 			
 			// aapt resource value: 0x7F08018D
-			public const int snackbar_action = 2131231117;
+			public const int skipCollapsed = 2131231117;
 			
 			// aapt resource value: 0x7F08018E
-			public const int snackbar_text = 2131231118;
+			public const int skipped = 2131231118;
 			
 			// aapt resource value: 0x7F08018F
-			public const int snap = 2131231119;
+			public const int slide = 2131231119;
 			
 			// aapt resource value: 0x7F080190
-			public const int snapMargins = 2131231120;
+			public const int sliding_tabs = 2131231120;
 			
 			// aapt resource value: 0x7F080191
-			public const int south = 2131231121;
+			public const int snackbar_action = 2131231121;
 			
 			// aapt resource value: 0x7F080192
-			public const int spacer = 2131231122;
+			public const int snackbar_text = 2131231122;
 			
 			// aapt resource value: 0x7F080193
-			public const int special_effects_controller_view_tag = 2131231123;
+			public const int snap = 2131231123;
 			
 			// aapt resource value: 0x7F080194
-			public const int spinner = 2131231124;
+			public const int snapMargins = 2131231124;
 			
 			// aapt resource value: 0x7F080195
-			public const int spline = 2131231125;
+			public const int south = 2131231125;
 			
 			// aapt resource value: 0x7F080196
-			public const int split_action_bar = 2131231126;
+			public const int spacer = 2131231126;
 			
 			// aapt resource value: 0x7F080197
-			public const int spread = 2131231127;
+			public const int special_effects_controller_view_tag = 2131231127;
 			
 			// aapt resource value: 0x7F080198
-			public const int spread_inside = 2131231128;
+			public const int spinner = 2131231128;
 			
 			// aapt resource value: 0x7F080199
-			public const int spring = 2131231129;
+			public const int spline = 2131231129;
 			
 			// aapt resource value: 0x7F08019A
-			public const int square = 2131231130;
+			public const int split_action_bar = 2131231130;
 			
 			// aapt resource value: 0x7F08019B
-			public const int src_atop = 2131231131;
+			public const int spread = 2131231131;
 			
 			// aapt resource value: 0x7F08019C
-			public const int src_in = 2131231132;
+			public const int spread_inside = 2131231132;
 			
 			// aapt resource value: 0x7F08019D
-			public const int src_over = 2131231133;
+			public const int spring = 2131231133;
 			
 			// aapt resource value: 0x7F08019E
-			public const int standard = 2131231134;
+			public const int square = 2131231134;
 			
 			// aapt resource value: 0x7F08019F
-			public const int start = 2131231135;
+			public const int src_atop = 2131231135;
 			
 			// aapt resource value: 0x7F0801A0
-			public const int startHorizontal = 2131231136;
+			public const int src_in = 2131231136;
 			
 			// aapt resource value: 0x7F0801A1
-			public const int startToEnd = 2131231137;
+			public const int src_over = 2131231137;
 			
 			// aapt resource value: 0x7F0801A2
-			public const int startVertical = 2131231138;
+			public const int standard = 2131231138;
 			
 			// aapt resource value: 0x7F0801A3
-			public const int staticLayout = 2131231139;
+			public const int start = 2131231139;
 			
 			// aapt resource value: 0x7F0801A4
-			public const int staticPostLayout = 2131231140;
+			public const int startHorizontal = 2131231140;
 			
 			// aapt resource value: 0x7F0801A5
-			public const int status_bar_latest_event_content = 2131231141;
+			public const int startToEnd = 2131231141;
 			
 			// aapt resource value: 0x7F0801A6
-			public const int stop = 2131231142;
+			public const int startVertical = 2131231142;
 			
 			// aapt resource value: 0x7F0801A7
-			public const int stretch = 2131231143;
+			public const int staticLayout = 2131231143;
 			
 			// aapt resource value: 0x7F0801A8
-			public const int submenuarrow = 2131231144;
+			public const int staticPostLayout = 2131231144;
 			
 			// aapt resource value: 0x7F0801A9
-			public const int submit_area = 2131231145;
+			public const int status_bar_latest_event_content = 2131231145;
 			
 			// aapt resource value: 0x7F0801AA
-			public const int supportScrollUp = 2131231146;
+			public const int stop = 2131231146;
 			
 			// aapt resource value: 0x7F0801AB
-			public const int switchWidget = 2131231147;
+			public const int stretch = 2131231147;
+			
+			// aapt resource value: 0x7F0801AC
+			public const int submenuarrow = 2131231148;
+			
+			// aapt resource value: 0x7F0801AD
+			public const int submit_area = 2131231149;
+			
+			// aapt resource value: 0x7F0801AE
+			public const int supportScrollUp = 2131231150;
+			
+			// aapt resource value: 0x7F0801AF
+			public const int switchWidget = 2131231151;
 			
 			// aapt resource value: 0x7F08000F
 			public const int SYM = 2131230735;
 			
-			// aapt resource value: 0x7F0801AC
-			public const int tabMode = 2131231148;
-			
-			// aapt resource value: 0x7F0801AD
-			public const int tag_accessibility_actions = 2131231149;
-			
-			// aapt resource value: 0x7F0801AE
-			public const int tag_accessibility_clickable_spans = 2131231150;
-			
-			// aapt resource value: 0x7F0801AF
-			public const int tag_accessibility_heading = 2131231151;
-			
 			// aapt resource value: 0x7F0801B0
-			public const int tag_accessibility_pane_title = 2131231152;
+			public const int tabMode = 2131231152;
 			
 			// aapt resource value: 0x7F0801B1
-			public const int tag_on_apply_window_listener = 2131231153;
+			public const int tag_accessibility_actions = 2131231153;
 			
 			// aapt resource value: 0x7F0801B2
-			public const int tag_on_receive_content_listener = 2131231154;
+			public const int tag_accessibility_clickable_spans = 2131231154;
 			
 			// aapt resource value: 0x7F0801B3
-			public const int tag_on_receive_content_mime_types = 2131231155;
+			public const int tag_accessibility_heading = 2131231155;
 			
 			// aapt resource value: 0x7F0801B4
-			public const int tag_screen_reader_focusable = 2131231156;
+			public const int tag_accessibility_pane_title = 2131231156;
 			
 			// aapt resource value: 0x7F0801B5
-			public const int tag_state_description = 2131231157;
+			public const int tag_on_apply_window_listener = 2131231157;
 			
 			// aapt resource value: 0x7F0801B6
-			public const int tag_transition_group = 2131231158;
+			public const int tag_on_receive_content_listener = 2131231158;
 			
 			// aapt resource value: 0x7F0801B7
-			public const int tag_unhandled_key_event_manager = 2131231159;
+			public const int tag_on_receive_content_mime_types = 2131231159;
 			
 			// aapt resource value: 0x7F0801B8
-			public const int tag_unhandled_key_listeners = 2131231160;
+			public const int tag_screen_reader_focusable = 2131231160;
 			
 			// aapt resource value: 0x7F0801B9
-			public const int tag_window_insets_animation_callback = 2131231161;
+			public const int tag_state_description = 2131231161;
 			
 			// aapt resource value: 0x7F0801BA
-			public const int test_checkbox_android_button_tint = 2131231162;
+			public const int tag_transition_group = 2131231162;
 			
 			// aapt resource value: 0x7F0801BB
-			public const int test_checkbox_app_button_tint = 2131231163;
+			public const int tag_unhandled_key_event_manager = 2131231163;
 			
 			// aapt resource value: 0x7F0801BC
-			public const int test_radiobutton_android_button_tint = 2131231164;
+			public const int tag_unhandled_key_listeners = 2131231164;
 			
 			// aapt resource value: 0x7F0801BD
-			public const int test_radiobutton_app_button_tint = 2131231165;
+			public const int tag_window_insets_animation_callback = 2131231165;
 			
 			// aapt resource value: 0x7F0801BE
-			public const int text = 2131231166;
+			public const int test_checkbox_android_button_tint = 2131231166;
 			
 			// aapt resource value: 0x7F0801BF
-			public const int text2 = 2131231167;
+			public const int test_checkbox_app_button_tint = 2131231167;
 			
 			// aapt resource value: 0x7F0801C0
-			public const int textEnd = 2131231168;
-			
-			// aapt resource value: 0x7F0801C8
-			public const int textinput_counter = 2131231176;
-			
-			// aapt resource value: 0x7F0801C9
-			public const int textinput_error = 2131231177;
-			
-			// aapt resource value: 0x7F0801CA
-			public const int textinput_helper_text = 2131231178;
-			
-			// aapt resource value: 0x7F0801CB
-			public const int textinput_placeholder = 2131231179;
-			
-			// aapt resource value: 0x7F0801CC
-			public const int textinput_prefix_text = 2131231180;
-			
-			// aapt resource value: 0x7F0801CD
-			public const int textinput_suffix_text = 2131231181;
+			public const int test_radiobutton_android_button_tint = 2131231168;
 			
 			// aapt resource value: 0x7F0801C1
-			public const int textSpacerNoButtons = 2131231169;
+			public const int test_radiobutton_app_button_tint = 2131231169;
 			
 			// aapt resource value: 0x7F0801C2
-			public const int textSpacerNoTitle = 2131231170;
+			public const int text = 2131231170;
 			
 			// aapt resource value: 0x7F0801C3
-			public const int textStart = 2131231171;
+			public const int text2 = 2131231171;
 			
 			// aapt resource value: 0x7F0801C4
-			public const int textTop = 2131231172;
+			public const int textEnd = 2131231172;
 			
-			// aapt resource value: 0x7F0801C5
-			public const int text_input_end_icon = 2131231173;
+			// aapt resource value: 0x7F0801CC
+			public const int textinput_counter = 2131231180;
 			
-			// aapt resource value: 0x7F0801C6
-			public const int text_input_error_icon = 2131231174;
-			
-			// aapt resource value: 0x7F0801C7
-			public const int text_input_start_icon = 2131231175;
+			// aapt resource value: 0x7F0801CD
+			public const int textinput_error = 2131231181;
 			
 			// aapt resource value: 0x7F0801CE
-			public const int time = 2131231182;
+			public const int textinput_helper_text = 2131231182;
 			
 			// aapt resource value: 0x7F0801CF
-			public const int title = 2131231183;
+			public const int textinput_placeholder = 2131231183;
 			
 			// aapt resource value: 0x7F0801D0
-			public const int titleDividerNoCustom = 2131231184;
+			public const int textinput_prefix_text = 2131231184;
 			
 			// aapt resource value: 0x7F0801D1
-			public const int title_template = 2131231185;
+			public const int textinput_suffix_text = 2131231185;
+			
+			// aapt resource value: 0x7F0801C5
+			public const int textSpacerNoButtons = 2131231173;
+			
+			// aapt resource value: 0x7F0801C6
+			public const int textSpacerNoTitle = 2131231174;
+			
+			// aapt resource value: 0x7F0801C7
+			public const int textStart = 2131231175;
+			
+			// aapt resource value: 0x7F0801C8
+			public const int textTop = 2131231176;
+			
+			// aapt resource value: 0x7F0801C9
+			public const int text_input_end_icon = 2131231177;
+			
+			// aapt resource value: 0x7F0801CA
+			public const int text_input_error_icon = 2131231178;
+			
+			// aapt resource value: 0x7F0801CB
+			public const int text_input_start_icon = 2131231179;
 			
 			// aapt resource value: 0x7F0801D2
-			public const int toggle = 2131231186;
+			public const int time = 2131231186;
 			
 			// aapt resource value: 0x7F0801D3
-			public const int toolbar = 2131231187;
+			public const int title = 2131231187;
 			
 			// aapt resource value: 0x7F0801D4
-			public const int top = 2131231188;
+			public const int titleDividerNoCustom = 2131231188;
+			
+			// aapt resource value: 0x7F0801D5
+			public const int title_template = 2131231189;
+			
+			// aapt resource value: 0x7F0801D6
+			public const int toggle = 2131231190;
+			
+			// aapt resource value: 0x7F0801D7
+			public const int toolbar = 2131231191;
+			
+			// aapt resource value: 0x7F0801D8
+			public const int top = 2131231192;
+			
+			// aapt resource value: 0x7F0801D9
+			public const int topLeft = 2131231193;
 			
 			// aapt resource value: 0x7F080012
 			public const int TopLeft = 2131230738;
 			
-			// aapt resource value: 0x7F0801D5
-			public const int topPanel = 2131231189;
+			// aapt resource value: 0x7F0801DA
+			public const int topPanel = 2131231194;
 			
 			// aapt resource value: 0x7F080010
 			public const int TOP_END = 2131230736;
@@ -29118,98 +30254,101 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0x7F080011
 			public const int TOP_START = 2131230737;
 			
-			// aapt resource value: 0x7F0801D6
-			public const int touch_outside = 2131231190;
-			
-			// aapt resource value: 0x7F0801D7
-			public const int transitionToEnd = 2131231191;
-			
-			// aapt resource value: 0x7F0801D8
-			public const int transitionToStart = 2131231192;
-			
-			// aapt resource value: 0x7F0801D9
-			public const int transition_current_scene = 2131231193;
-			
-			// aapt resource value: 0x7F0801DA
-			public const int transition_layout_save = 2131231194;
-			
 			// aapt resource value: 0x7F0801DB
-			public const int transition_position = 2131231195;
+			public const int touch_outside = 2131231195;
 			
 			// aapt resource value: 0x7F0801DC
-			public const int transition_scene_layoutid_cache = 2131231196;
+			public const int transitionToEnd = 2131231196;
 			
 			// aapt resource value: 0x7F0801DD
-			public const int transition_transform = 2131231197;
+			public const int transitionToStart = 2131231197;
 			
 			// aapt resource value: 0x7F0801DE
-			public const int triangle = 2131231198;
+			public const int transition_current_scene = 2131231198;
 			
 			// aapt resource value: 0x7F0801DF
-			public const int @unchecked = 2131231199;
+			public const int transition_layout_save = 2131231199;
 			
 			// aapt resource value: 0x7F0801E0
-			public const int uniform = 2131231200;
+			public const int transition_position = 2131231200;
 			
 			// aapt resource value: 0x7F0801E1
-			public const int unlabeled = 2131231201;
+			public const int transition_scene_layoutid_cache = 2131231201;
 			
 			// aapt resource value: 0x7F0801E2
-			public const int up = 2131231202;
+			public const int transition_transform = 2131231202;
 			
 			// aapt resource value: 0x7F0801E3
-			public const int useLogo = 2131231203;
+			public const int triangle = 2131231203;
 			
 			// aapt resource value: 0x7F0801E4
-			public const int vertical_only = 2131231204;
+			public const int @unchecked = 2131231204;
 			
 			// aapt resource value: 0x7F0801E5
-			public const int view_offset_helper = 2131231205;
+			public const int uniform = 2131231205;
 			
 			// aapt resource value: 0x7F0801E6
-			public const int view_transition = 2131231206;
+			public const int unlabeled = 2131231206;
 			
 			// aapt resource value: 0x7F0801E7
-			public const int view_tree_lifecycle_owner = 2131231207;
+			public const int up = 2131231207;
 			
 			// aapt resource value: 0x7F0801E8
-			public const int view_tree_saved_state_registry_owner = 2131231208;
+			public const int useLogo = 2131231208;
 			
 			// aapt resource value: 0x7F0801E9
-			public const int view_tree_view_model_store_owner = 2131231209;
+			public const int vertical = 2131231209;
 			
 			// aapt resource value: 0x7F0801EA
-			public const int visible = 2131231210;
+			public const int vertical_only = 2131231210;
 			
 			// aapt resource value: 0x7F0801EB
-			public const int visible_removing_fragment_view_tag = 2131231211;
+			public const int view_offset_helper = 2131231211;
 			
 			// aapt resource value: 0x7F0801EC
-			public const int west = 2131231212;
-			
-			// aapt resource value: 0x7F0801EE
-			public const int withinBounds = 2131231214;
+			public const int view_transition = 2131231212;
 			
 			// aapt resource value: 0x7F0801ED
-			public const int withText = 2131231213;
+			public const int view_tree_lifecycle_owner = 2131231213;
+			
+			// aapt resource value: 0x7F0801EE
+			public const int view_tree_saved_state_registry_owner = 2131231214;
 			
 			// aapt resource value: 0x7F0801EF
-			public const int wrap = 2131231215;
+			public const int view_tree_view_model_store_owner = 2131231215;
 			
 			// aapt resource value: 0x7F0801F0
-			public const int wrap_content = 2131231216;
+			public const int visible = 2131231216;
 			
 			// aapt resource value: 0x7F0801F1
-			public const int wrap_content_constrained = 2131231217;
+			public const int visible_removing_fragment_view_tag = 2131231217;
 			
 			// aapt resource value: 0x7F0801F2
-			public const int x_left = 2131231218;
-			
-			// aapt resource value: 0x7F0801F3
-			public const int x_right = 2131231219;
+			public const int west = 2131231218;
 			
 			// aapt resource value: 0x7F0801F4
-			public const int zero_corner_chip = 2131231220;
+			public const int withinBounds = 2131231220;
+			
+			// aapt resource value: 0x7F0801F3
+			public const int withText = 2131231219;
+			
+			// aapt resource value: 0x7F0801F5
+			public const int wrap = 2131231221;
+			
+			// aapt resource value: 0x7F0801F6
+			public const int wrap_content = 2131231222;
+			
+			// aapt resource value: 0x7F0801F7
+			public const int wrap_content_constrained = 2131231223;
+			
+			// aapt resource value: 0x7F0801F8
+			public const int x_left = 2131231224;
+			
+			// aapt resource value: 0x7F0801F9
+			public const int x_right = 2131231225;
+			
+			// aapt resource value: 0x7F0801FA
+			public const int zero_corner_chip = 2131231226;
 			
 			static Id()
 			{
@@ -32564,7 +33703,7 @@ namespace EcoCareApp.Droid
 		public partial class Styleable
 		{
 			
-			// aapt resource value: { 0x7F030047,0x7F03004E,0x7F03004F,0x7F0300F3,0x7F0300F4,0x7F0300F5,0x7F0300F6,0x7F0300F7,0x7F0300F8,0x7F03011E,0x7F03013A,0x7F03013B,0x7F030156,0x7F0301B5,0x7F0301BC,0x7F0301C2,0x7F0301C3,0x7F0301C6,0x7F0301D8,0x7F0301EC,0x7F030262,0x7F0302BC,0x7F0302F5,0x7F030306,0x7F030307,0x7F030387,0x7F03038B,0x7F0303FC,0x7F030408 }
+			// aapt resource value: { 0x7F030047,0x7F03004E,0x7F03004F,0x7F0300F3,0x7F0300F4,0x7F0300F5,0x7F0300F6,0x7F0300F7,0x7F0300F8,0x7F03011E,0x7F03013A,0x7F03013B,0x7F030156,0x7F0301B5,0x7F0301BC,0x7F0301C2,0x7F0301C3,0x7F0301C6,0x7F0301D8,0x7F0301EC,0x7F030262,0x7F0302BC,0x7F0302F5,0x7F030306,0x7F030307,0x7F030396,0x7F03039A,0x7F03040B,0x7F030417 }
 			public static int[] ActionBar = new int[] {
 					2130903111,
 					2130903118,
@@ -32591,10 +33730,10 @@ namespace EcoCareApp.Droid
 					2130903797,
 					2130903814,
 					2130903815,
-					2130903943,
-					2130903947,
-					2130904060,
-					2130904072};
+					2130903958,
+					2130903962,
+					2130904075,
+					2130904087};
 			
 			// aapt resource value: { 0x10100B3 }
 			public static int[] ActionBarLayout = new int[] {
@@ -32701,14 +33840,14 @@ namespace EcoCareApp.Droid
 			public static int[] ActionMenuView = new int[] {
 					-1};
 			
-			// aapt resource value: { 0x7F030047,0x7F03004E,0x7F0300CC,0x7F0301B5,0x7F03038B,0x7F030408 }
+			// aapt resource value: { 0x7F030047,0x7F03004E,0x7F0300CC,0x7F0301B5,0x7F03039A,0x7F030417 }
 			public static int[] ActionMode = new int[] {
 					2130903111,
 					2130903118,
 					2130903244,
 					2130903477,
-					2130903947,
-					2130904072};
+					2130903962,
+					2130904087};
 			
 			// aapt resource value: 0
 			public const int ActionMode_background = 0;
@@ -32739,13 +33878,13 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int ActivityChooserView_initialActivityCount = 1;
 			
-			// aapt resource value: { 0x1010003,0x7F030003,0x7F030122,0x7F030123,0x7F0303B8 }
+			// aapt resource value: { 0x1010003,0x7F030003,0x7F030122,0x7F030123,0x7F0303C7 }
 			public static int[] ActivityNavigator = new int[] {
 					16842755,
 					2130903043,
 					2130903330,
 					2130903331,
-					2130903992};
+					2130904007};
 			
 			// aapt resource value: 1
 			public const int ActivityNavigator_action = 1;
@@ -32762,7 +33901,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 4
 			public const int ActivityNavigator_targetPackage = 4;
 			
-			// aapt resource value: { 0x10100F2,0x7F030080,0x7F030081,0x7F030257,0x7F030258,0x7F0302B7,0x7F03035C,0x7F03035E }
+			// aapt resource value: { 0x10100F2,0x7F030080,0x7F030081,0x7F030257,0x7F030258,0x7F0302B7,0x7F03036B,0x7F03036D }
 			public static int[] AlertDialog = new int[] {
 					16842994,
 					2130903168,
@@ -32770,8 +33909,8 @@ namespace EcoCareApp.Droid
 					2130903639,
 					2130903640,
 					2130903735,
-					2130903900,
-					2130903902};
+					2130903915,
+					2130903917};
 			
 			// aapt resource value: 0
 			public const int AlertDialog_android_layout = 0;
@@ -32854,7 +33993,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int AnimatedStateListDrawableTransition_android_toId = 1;
 			
-			// aapt resource value: { 0x10100D4,0x101048F,0x1010540,0x7F030156,0x7F030171,0x7F03024D,0x7F03024E,0x7F030381 }
+			// aapt resource value: { 0x10100D4,0x101048F,0x1010540,0x7F030156,0x7F030171,0x7F03024D,0x7F03024E,0x7F030390 }
 			public static int[] AppBarLayout = new int[] {
 					16842964,
 					16843919,
@@ -32863,14 +34002,14 @@ namespace EcoCareApp.Droid
 					2130903409,
 					2130903629,
 					2130903630,
-					2130903937};
+					2130903952};
 			
-			// aapt resource value: { 0x7F03037B,0x7F03037C,0x7F03037E,0x7F03037F }
+			// aapt resource value: { 0x7F03038A,0x7F03038B,0x7F03038D,0x7F03038E }
 			public static int[] AppBarLayoutStates = new int[] {
-					2130903931,
-					2130903932,
-					2130903934,
-					2130903935};
+					2130903946,
+					2130903947,
+					2130903949,
+					2130903950};
 			
 			// aapt resource value: 0
 			public const int AppBarLayoutStates_state_collapsed = 0;
@@ -32919,12 +34058,12 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 7
 			public const int AppBarLayout_statusBarForeground = 7;
 			
-			// aapt resource value: { 0x1010119,0x7F030371,0x7F0303FA,0x7F0303FB }
+			// aapt resource value: { 0x1010119,0x7F030380,0x7F030409,0x7F03040A }
 			public static int[] AppCompatImageView = new int[] {
 					16843033,
-					2130903921,
-					2130904058,
-					2130904059};
+					2130903936,
+					2130904073,
+					2130904074};
 			
 			// aapt resource value: 0
 			public const int AppCompatImageView_android_src = 0;
@@ -32938,12 +34077,12 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 3
 			public const int AppCompatImageView_tintMode = 3;
 			
-			// aapt resource value: { 0x1010142,0x7F0303F6,0x7F0303F7,0x7F0303F8 }
+			// aapt resource value: { 0x1010142,0x7F030405,0x7F030406,0x7F030407 }
 			public static int[] AppCompatSeekBar = new int[] {
 					16843074,
-					2130904054,
-					2130904055,
-					2130904056};
+					2130904069,
+					2130904070,
+					2130904071};
 			
 			// aapt resource value: 0
 			public const int AppCompatSeekBar_android_thumb = 0;
@@ -32988,7 +34127,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0
 			public const int AppCompatTextHelper_android_textAppearance = 0;
 			
-			// aapt resource value: { 0x1010034,0x7F030041,0x7F030042,0x7F030043,0x7F030044,0x7F030045,0x7F030143,0x7F030144,0x7F030145,0x7F030146,0x7F030148,0x7F030149,0x7F03014A,0x7F03014B,0x7F030189,0x7F03019F,0x7F0301A8,0x7F030203,0x7F030250,0x7F0303BC,0x7F0303DE }
+			// aapt resource value: { 0x1010034,0x7F030041,0x7F030042,0x7F030043,0x7F030044,0x7F030045,0x7F030143,0x7F030144,0x7F030145,0x7F030146,0x7F030148,0x7F030149,0x7F03014A,0x7F03014B,0x7F030189,0x7F03019F,0x7F0301A8,0x7F030203,0x7F030250,0x7F0303CB,0x7F0303ED }
 			public static int[] AppCompatTextView = new int[] {
 					16842804,
 					2130903105,
@@ -33009,8 +34148,8 @@ namespace EcoCareApp.Droid
 					2130903464,
 					2130903555,
 					2130903632,
-					2130903996,
-					2130904030};
+					2130904011,
+					2130904045};
 			
 			// aapt resource value: 0
 			public const int AppCompatTextView_android_textAppearance = 0;
@@ -33075,7 +34214,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 20
 			public const int AppCompatTextView_textLocale = 20;
 			
-			// aapt resource value: { 0x1010057,0x10100AE,0x7F030004,0x7F030005,0x7F030006,0x7F030007,0x7F030008,0x7F030009,0x7F03000A,0x7F03000B,0x7F03000C,0x7F03000D,0x7F03000E,0x7F03000F,0x7F030010,0x7F030012,0x7F030013,0x7F030014,0x7F030015,0x7F030016,0x7F030017,0x7F030018,0x7F030019,0x7F03001A,0x7F03001B,0x7F03001C,0x7F03001D,0x7F03001E,0x7F03001F,0x7F030020,0x7F030021,0x7F030022,0x7F030023,0x7F030024,0x7F030028,0x7F03002A,0x7F03002B,0x7F03002C,0x7F03002D,0x7F030040,0x7F030068,0x7F030079,0x7F03007A,0x7F03007B,0x7F03007C,0x7F03007D,0x7F030082,0x7F030083,0x7F03009A,0x7F0300A3,0x7F0300D5,0x7F0300D6,0x7F0300D7,0x7F0300D8,0x7F0300D9,0x7F0300DA,0x7F0300DB,0x7F0300E2,0x7F0300E3,0x7F0300E9,0x7F030102,0x7F030131,0x7F030136,0x7F030137,0x7F03013C,0x7F03013E,0x7F03014E,0x7F03014F,0x7F030152,0x7F030153,0x7F030155,0x7F0301C2,0x7F0301D2,0x7F030253,0x7F030254,0x7F030255,0x7F030256,0x7F030259,0x7F03025A,0x7F03025B,0x7F03025C,0x7F03025D,0x7F03025E,0x7F03025F,0x7F030260,0x7F030261,0x7F0302D9,0x7F0302DA,0x7F0302DB,0x7F0302F4,0x7F0302F6,0x7F030328,0x7F03032A,0x7F03032B,0x7F03032C,0x7F030343,0x7F030346,0x7F030348,0x7F030349,0x7F030369,0x7F03036A,0x7F030398,0x7F0303C7,0x7F0303C9,0x7F0303CA,0x7F0303CB,0x7F0303CD,0x7F0303CE,0x7F0303CF,0x7F0303D0,0x7F0303D8,0x7F0303D9,0x7F03040A,0x7F03040B,0x7F03040C,0x7F03040D,0x7F03042E,0x7F03043D,0x7F03043E,0x7F03043F,0x7F030440,0x7F030441,0x7F030442,0x7F030443,0x7F030444,0x7F030445,0x7F030446 }
+			// aapt resource value: { 0x1010057,0x10100AE,0x7F030004,0x7F030005,0x7F030006,0x7F030007,0x7F030008,0x7F030009,0x7F03000A,0x7F03000B,0x7F03000C,0x7F03000D,0x7F03000E,0x7F03000F,0x7F030010,0x7F030012,0x7F030013,0x7F030014,0x7F030015,0x7F030016,0x7F030017,0x7F030018,0x7F030019,0x7F03001A,0x7F03001B,0x7F03001C,0x7F03001D,0x7F03001E,0x7F03001F,0x7F030020,0x7F030021,0x7F030022,0x7F030023,0x7F030024,0x7F030028,0x7F03002A,0x7F03002B,0x7F03002C,0x7F03002D,0x7F030040,0x7F030068,0x7F030079,0x7F03007A,0x7F03007B,0x7F03007C,0x7F03007D,0x7F030082,0x7F030083,0x7F03009A,0x7F0300A3,0x7F0300D5,0x7F0300D6,0x7F0300D7,0x7F0300D8,0x7F0300D9,0x7F0300DA,0x7F0300DB,0x7F0300E2,0x7F0300E3,0x7F0300E9,0x7F030102,0x7F030131,0x7F030136,0x7F030137,0x7F03013C,0x7F03013E,0x7F03014E,0x7F03014F,0x7F030152,0x7F030153,0x7F030155,0x7F0301C2,0x7F0301D2,0x7F030253,0x7F030254,0x7F030255,0x7F030256,0x7F030259,0x7F03025A,0x7F03025B,0x7F03025C,0x7F03025D,0x7F03025E,0x7F03025F,0x7F030260,0x7F030261,0x7F0302D9,0x7F0302DA,0x7F0302DB,0x7F0302F4,0x7F0302F6,0x7F030328,0x7F030339,0x7F03033A,0x7F03033B,0x7F030352,0x7F030355,0x7F030357,0x7F030358,0x7F030378,0x7F030379,0x7F0303A7,0x7F0303D6,0x7F0303D8,0x7F0303D9,0x7F0303DA,0x7F0303DC,0x7F0303DD,0x7F0303DE,0x7F0303DF,0x7F0303E7,0x7F0303E8,0x7F030419,0x7F03041A,0x7F03041B,0x7F03041C,0x7F03043D,0x7F03044C,0x7F03044D,0x7F03044E,0x7F03044F,0x7F030450,0x7F030451,0x7F030452,0x7F030453,0x7F030454,0x7F030455 }
 			public static int[] AppCompatTheme = new int[] {
 					16842839,
 					16842926,
@@ -33169,41 +34308,41 @@ namespace EcoCareApp.Droid
 					2130903796,
 					2130903798,
 					2130903848,
-					2130903850,
-					2130903851,
-					2130903852,
-					2130903875,
-					2130903878,
-					2130903880,
-					2130903881,
-					2130903913,
-					2130903914,
-					2130903960,
-					2130904007,
-					2130904009,
-					2130904010,
-					2130904011,
-					2130904013,
-					2130904014,
-					2130904015,
-					2130904016,
+					2130903865,
+					2130903866,
+					2130903867,
+					2130903890,
+					2130903893,
+					2130903895,
+					2130903896,
+					2130903928,
+					2130903929,
+					2130903975,
+					2130904022,
 					2130904024,
 					2130904025,
-					2130904074,
-					2130904075,
-					2130904076,
-					2130904077,
-					2130904110,
+					2130904026,
+					2130904028,
+					2130904029,
+					2130904030,
+					2130904031,
+					2130904039,
+					2130904040,
+					2130904089,
+					2130904090,
+					2130904091,
+					2130904092,
 					2130904125,
-					2130904126,
-					2130904127,
-					2130904128,
-					2130904129,
-					2130904130,
-					2130904131,
-					2130904132,
-					2130904133,
-					2130904134};
+					2130904140,
+					2130904141,
+					2130904142,
+					2130904143,
+					2130904144,
+					2130904145,
+					2130904146,
+					2130904147,
+					2130904148,
+					2130904149};
 			
 			// aapt resource value: 2
 			public const int AppCompatTheme_actionBarDivider = 2;
@@ -33586,10 +34725,10 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 126
 			public const int AppCompatTheme_windowNoTitle = 126;
 			
-			// aapt resource value: { 0x101030E,0x7F030348 }
+			// aapt resource value: { 0x101030E,0x7F030357 }
 			public static int[] BackgroundStyle = new int[] {
 					16843534,
-					2130903880};
+					2130903895};
 			
 			// aapt resource value: 0
 			public const int BackgroundStyle_android_selectableItemBackground = 0;
@@ -33597,7 +34736,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int BackgroundStyle_selectableItemBackground = 1;
 			
-			// aapt resource value: { 0x7F030048,0x7F030052,0x7F030054,0x7F0301C4,0x7F030283,0x7F0302C4,0x7F03042D }
+			// aapt resource value: { 0x7F030048,0x7F030052,0x7F030054,0x7F0301C4,0x7F030283,0x7F0302C4,0x7F03043C }
 			public static int[] Badge = new int[] {
 					2130903112,
 					2130903122,
@@ -33605,7 +34744,7 @@ namespace EcoCareApp.Droid
 					2130903492,
 					2130903683,
 					2130903748,
-					2130904109};
+					2130904124};
 			
 			// aapt resource value: 0
 			public const int Badge_backgroundColor = 0;
@@ -33628,17 +34767,17 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 6
 			public const int Badge_verticalOffset = 6;
 			
-			// aapt resource value: { 0x1010139,0x7F0301BA,0x7F0301D9,0x7F030290,0x7F030354,0x7F030356,0x7F030414,0x7F030417,0x7F030419 }
+			// aapt resource value: { 0x1010139,0x7F0301BA,0x7F0301D9,0x7F030290,0x7F030363,0x7F030365,0x7F030423,0x7F030426,0x7F030428 }
 			public static int[] BaseProgressIndicator = new int[] {
 					16843065,
 					2130903482,
 					2130903513,
 					2130903696,
-					2130903892,
-					2130903894,
-					2130904084,
-					2130904087,
-					2130904089};
+					2130903907,
+					2130903909,
+					2130904099,
+					2130904102,
+					2130904104};
 			
 			// aapt resource value: 0
 			public const int BaseProgressIndicator_android_indeterminate = 0;
@@ -33721,7 +34860,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0
 			public const int BottomNavigationView_itemHorizontalTranslationEnabled = 0;
 			
-			// aapt resource value: { 0x101011F,0x1010440,0x7F030050,0x7F03005B,0x7F03005C,0x7F03005D,0x7F03005E,0x7F03005F,0x7F030061,0x7F030062,0x7F030063,0x7F0301AF,0x7F0302D2,0x7F0302D4,0x7F0302D5,0x7F0302D8,0x7F03034D,0x7F030350 }
+			// aapt resource value: { 0x101011F,0x1010440,0x7F030050,0x7F03005B,0x7F03005C,0x7F03005D,0x7F03005E,0x7F03005F,0x7F030061,0x7F030062,0x7F030063,0x7F0301AF,0x7F0302D2,0x7F0302D4,0x7F0302D5,0x7F0302D8,0x7F03035C,0x7F03035F }
 			public static int[] BottomSheetBehavior_Layout = new int[] {
 					16843039,
 					16843840,
@@ -33739,8 +34878,8 @@ namespace EcoCareApp.Droid
 					2130903764,
 					2130903765,
 					2130903768,
-					2130903885,
-					2130903888};
+					2130903900,
+					2130903903};
 			
 			// aapt resource value: 1
 			public const int BottomSheetBehavior_Layout_android_elevation = 1;
@@ -33803,10 +34942,10 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0
 			public const int ButtonBarLayout_allowStacking = 0;
 			
-			// aapt resource value: { 0x7F03030D,0x7F030352 }
+			// aapt resource value: { 0x7F03030D,0x7F030361 }
 			public static int[] Capability = new int[] {
 					2130903821,
-					2130903890};
+					2130903905};
 			
 			// aapt resource value: 0
 			public const int Capability_queryPatterns = 0;
@@ -33912,14 +35051,14 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 9
 			public const int Carousel_carousel_touchUp_velocityThreshold = 9;
 			
-			// aapt resource value: { 0x10101EF,0x10101F0,0x10101F1,0x7F030139,0x7F030391,0x7F030392 }
+			// aapt resource value: { 0x10101EF,0x10101F0,0x10101F1,0x7F030139,0x7F0303A0,0x7F0303A1 }
 			public static int[] CheckBoxPreference = new int[] {
 					16843247,
 					16843248,
 					16843249,
 					2130903353,
-					2130903953,
-					2130903954};
+					2130903968,
+					2130903969};
 			
 			// aapt resource value: 2
 			public const int CheckBoxPreference_android_disableDependentsState = 2;
@@ -33939,7 +35078,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 5
 			public const int CheckBoxPreference_summaryOn = 5;
 			
-			// aapt resource value: { 0x1010034,0x1010095,0x1010098,0x10100AB,0x101011F,0x101014F,0x10101E5,0x7F03009D,0x7F03009E,0x7F0300A1,0x7F0300A2,0x7F0300A4,0x7F0300A5,0x7F0300A6,0x7F0300A8,0x7F0300A9,0x7F0300AA,0x7F0300AB,0x7F0300AC,0x7F0300AD,0x7F0300AE,0x7F0300B3,0x7F0300B4,0x7F0300B5,0x7F0300B7,0x7F0300C5,0x7F0300C6,0x7F0300C7,0x7F0300C8,0x7F0300C9,0x7F0300CA,0x7F0300CB,0x7F030164,0x7F0301BB,0x7F0301C7,0x7F0301CC,0x7F030337,0x7F03034D,0x7F030350,0x7F030358,0x7F0303DA,0x7F0303E3 }
+			// aapt resource value: { 0x1010034,0x1010095,0x1010098,0x10100AB,0x101011F,0x101014F,0x10101E5,0x7F03009D,0x7F03009E,0x7F0300A1,0x7F0300A2,0x7F0300A4,0x7F0300A5,0x7F0300A6,0x7F0300A8,0x7F0300A9,0x7F0300AA,0x7F0300AB,0x7F0300AC,0x7F0300AD,0x7F0300AE,0x7F0300B3,0x7F0300B4,0x7F0300B5,0x7F0300B7,0x7F0300C5,0x7F0300C6,0x7F0300C7,0x7F0300C8,0x7F0300C9,0x7F0300CA,0x7F0300CB,0x7F030164,0x7F0301BB,0x7F0301C7,0x7F0301CC,0x7F030346,0x7F03035C,0x7F03035F,0x7F030367,0x7F0303E9,0x7F0303F2 }
 			public static int[] Chip = new int[] {
 					16842804,
 					16842901,
@@ -33977,22 +35116,22 @@ namespace EcoCareApp.Droid
 					2130903483,
 					2130903495,
 					2130903500,
-					2130903863,
-					2130903885,
-					2130903888,
-					2130903896,
-					2130904026,
-					2130904035};
+					2130903878,
+					2130903900,
+					2130903903,
+					2130903911,
+					2130904041,
+					2130904050};
 			
-			// aapt resource value: { 0x7F03009C,0x7F0300AF,0x7F0300B0,0x7F0300B1,0x7F03034A,0x7F03035F,0x7F030361 }
+			// aapt resource value: { 0x7F03009C,0x7F0300AF,0x7F0300B0,0x7F0300B1,0x7F030359,0x7F03036E,0x7F030370 }
 			public static int[] ChipGroup = new int[] {
 					2130903196,
 					2130903215,
 					2130903216,
 					2130903217,
-					2130903882,
-					2130903903,
-					2130903905};
+					2130903897,
+					2130903918,
+					2130903920};
 			
 			// aapt resource value: 0
 			public const int ChipGroup_checkedChip = 0;
@@ -34167,11 +35306,11 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int ClockFaceView_clockNumberTextColor = 1;
 			
-			// aapt resource value: { 0x7F0300C2,0x7F03027B,0x7F03034B }
+			// aapt resource value: { 0x7F0300C2,0x7F03027B,0x7F03035A }
 			public static int[] ClockHandView = new int[] {
 					2130903234,
 					2130903675,
-					2130903883};
+					2130903898};
 			
 			// aapt resource value: 0
 			public const int ClockHandView_clockHandColor = 0;
@@ -34182,7 +35321,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 2
 			public const int ClockHandView_selectorSize = 2;
 			
-			// aapt resource value: { 0x7F0300D0,0x7F0300D1,0x7F030100,0x7F030173,0x7F030174,0x7F030175,0x7F030176,0x7F030177,0x7F030178,0x7F030179,0x7F03017C,0x7F0301AA,0x7F030286,0x7F03033D,0x7F03033F,0x7F030382,0x7F0303FC,0x7F0303FE,0x7F0303FF,0x7F030409 }
+			// aapt resource value: { 0x7F0300D0,0x7F0300D1,0x7F030100,0x7F030173,0x7F030174,0x7F030175,0x7F030176,0x7F030177,0x7F030178,0x7F030179,0x7F03017C,0x7F0301AA,0x7F030286,0x7F03034C,0x7F03034E,0x7F030391,0x7F03040B,0x7F03040D,0x7F03040E,0x7F030418 }
 			public static int[] CollapsingToolbarLayout = new int[] {
 					2130903248,
 					2130903249,
@@ -34197,13 +35336,13 @@ namespace EcoCareApp.Droid
 					2130903420,
 					2130903466,
 					2130903686,
-					2130903869,
-					2130903871,
-					2130903938,
-					2130904060,
-					2130904062,
-					2130904063,
-					2130904073};
+					2130903884,
+					2130903886,
+					2130903953,
+					2130904075,
+					2130904077,
+					2130904078,
+					2130904088};
 			
 			// aapt resource value: 0
 			public const int CollapsingToolbarLayout_collapsedTitleGravity = 0;
@@ -34310,7 +35449,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 3
 			public const int CompoundButton_buttonTintMode = 3;
 			
-			// aapt resource value: { 0x10100C4,0x10100D0,0x10100DC,0x10100F4,0x10100F5,0x10100F7,0x10100F8,0x10100F9,0x10100FA,0x101011F,0x1010120,0x101013F,0x1010140,0x101031F,0x1010320,0x1010321,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103B5,0x10103B6,0x10103FA,0x1010440,0x7F030035,0x7F030036,0x7F030056,0x7F030057,0x7F030058,0x7F030098,0x7F0300EE,0x7F0300EF,0x7F030142,0x7F03018B,0x7F03018C,0x7F03018D,0x7F03018E,0x7F03018F,0x7F030190,0x7F030191,0x7F030192,0x7F030193,0x7F030194,0x7F030195,0x7F030196,0x7F030197,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03020E,0x7F03020F,0x7F030210,0x7F030211,0x7F030212,0x7F030213,0x7F030214,0x7F030215,0x7F030216,0x7F030217,0x7F030218,0x7F030219,0x7F03021A,0x7F03021B,0x7F03021C,0x7F03021D,0x7F03021E,0x7F03021F,0x7F030220,0x7F030221,0x7F030222,0x7F030223,0x7F030224,0x7F030225,0x7F030226,0x7F030227,0x7F030228,0x7F030229,0x7F03022A,0x7F03022B,0x7F03022C,0x7F03022D,0x7F03022E,0x7F03022F,0x7F030230,0x7F030231,0x7F030232,0x7F030233,0x7F030234,0x7F030235,0x7F030236,0x7F030237,0x7F030238,0x7F030239,0x7F03023A,0x7F03023B,0x7F03023D,0x7F03023E,0x7F03023F,0x7F030240,0x7F030241,0x7F030242,0x7F030243,0x7F030244,0x7F030245,0x7F030248,0x7F03024C,0x7F0302B1,0x7F0302B2,0x7F0302E1,0x7F0302E9,0x7F0302EE,0x7F030308,0x7F030309,0x7F03030A,0x7F03041C,0x7F03041E,0x7F030420,0x7F030433 }
+			// aapt resource value: { 0x10100C4,0x10100D0,0x10100DC,0x10100F4,0x10100F5,0x10100F7,0x10100F8,0x10100F9,0x10100FA,0x101011F,0x1010120,0x101013F,0x1010140,0x101031F,0x1010320,0x1010321,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103B5,0x10103B6,0x10103FA,0x1010440,0x7F030035,0x7F030036,0x7F030056,0x7F030057,0x7F030058,0x7F030098,0x7F0300EE,0x7F0300EF,0x7F030142,0x7F03018B,0x7F03018C,0x7F03018D,0x7F03018E,0x7F03018F,0x7F030190,0x7F030191,0x7F030192,0x7F030193,0x7F030194,0x7F030195,0x7F030196,0x7F030197,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03020E,0x7F03020F,0x7F030210,0x7F030211,0x7F030212,0x7F030213,0x7F030214,0x7F030215,0x7F030216,0x7F030217,0x7F030218,0x7F030219,0x7F03021A,0x7F03021B,0x7F03021C,0x7F03021D,0x7F03021E,0x7F03021F,0x7F030220,0x7F030221,0x7F030222,0x7F030223,0x7F030224,0x7F030225,0x7F030226,0x7F030227,0x7F030228,0x7F030229,0x7F03022A,0x7F03022B,0x7F03022C,0x7F03022D,0x7F03022E,0x7F03022F,0x7F030230,0x7F030231,0x7F030232,0x7F030233,0x7F030234,0x7F030235,0x7F030236,0x7F030237,0x7F030238,0x7F030239,0x7F03023A,0x7F03023B,0x7F03023D,0x7F03023E,0x7F03023F,0x7F030240,0x7F030241,0x7F030242,0x7F030243,0x7F030244,0x7F030245,0x7F030248,0x7F03024C,0x7F0302B1,0x7F0302B2,0x7F0302E1,0x7F0302E9,0x7F0302EE,0x7F030308,0x7F030309,0x7F03030A,0x7F03042B,0x7F03042D,0x7F03042F,0x7F030442 }
 			public static int[] Constraint = new int[] {
 					16842948,
 					16842960,
@@ -34431,10 +35570,10 @@ namespace EcoCareApp.Droid
 					2130903816,
 					2130903817,
 					2130903818,
-					2130904092,
-					2130904094,
-					2130904096,
-					2130904115};
+					2130904107,
+					2130904109,
+					2130904111,
+					2130904130};
 			
 			// aapt resource value: { 0x10100C4,0x10100D5,0x10100D6,0x10100D7,0x10100D8,0x10100D9,0x10100DC,0x10100F4,0x10100F5,0x10100F6,0x10100F7,0x10100F8,0x10100F9,0x10100FA,0x101011F,0x1010120,0x101013F,0x1010140,0x10103B3,0x10103B4,0x10103B5,0x10103B6,0x1010440,0x101053B,0x101053C,0x7F030056,0x7F030057,0x7F030058,0x7F030098,0x7F0300BA,0x7F0300BB,0x7F0300BC,0x7F0300BD,0x7F0300BE,0x7F0300EB,0x7F0300EE,0x7F0300EF,0x7F03018B,0x7F03018C,0x7F03018D,0x7F03018E,0x7F03018F,0x7F030190,0x7F030191,0x7F030192,0x7F030193,0x7F030194,0x7F030195,0x7F030196,0x7F030197,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F030206,0x7F03020E,0x7F03020F,0x7F030210,0x7F030211,0x7F030212,0x7F030213,0x7F030214,0x7F030215,0x7F030216,0x7F030217,0x7F030218,0x7F030219,0x7F03021A,0x7F03021B,0x7F03021C,0x7F03021D,0x7F03021E,0x7F03021F,0x7F030220,0x7F030221,0x7F030222,0x7F030223,0x7F030224,0x7F030225,0x7F030226,0x7F030227,0x7F030228,0x7F030229,0x7F03022A,0x7F03022B,0x7F03022C,0x7F03022D,0x7F03022E,0x7F03022F,0x7F030230,0x7F030231,0x7F030232,0x7F030233,0x7F030234,0x7F030235,0x7F030236,0x7F030237,0x7F030238,0x7F030239,0x7F03023A,0x7F03023B,0x7F03023D,0x7F03023E,0x7F03023F,0x7F030240,0x7F030241,0x7F030242,0x7F030243,0x7F030244,0x7F030245,0x7F030248,0x7F030249,0x7F03024C }
 			public static int[] ConstraintLayout_Layout = new int[] {
@@ -34906,12 +36045,12 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int ConstraintLayout_placeholder_placeholder_emptyVisibility = 1;
 			
-			// aapt resource value: { 0x7F03032D,0x7F03032E,0x7F03032F,0x7F030330 }
+			// aapt resource value: { 0x7F03033C,0x7F03033D,0x7F03033E,0x7F03033F }
 			public static int[] ConstraintLayout_ReactiveGuide = new int[] {
-					2130903853,
-					2130903854,
-					2130903855,
-					2130903856};
+					2130903868,
+					2130903869,
+					2130903870,
+					2130903871};
 			
 			// aapt resource value: 0
 			public const int ConstraintLayout_ReactiveGuide_reactiveGuide_animateChange = 0;
@@ -34925,7 +36064,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 3
 			public const int ConstraintLayout_ReactiveGuide_reactiveGuide_valueId = 3;
 			
-			// aapt resource value: { 0x10100C4,0x10100D0,0x10100DC,0x10100F4,0x10100F5,0x10100F7,0x10100F8,0x10100F9,0x10100FA,0x101011F,0x1010120,0x101013F,0x1010140,0x101031F,0x1010320,0x1010321,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103B5,0x10103B6,0x10103FA,0x1010440,0x7F030035,0x7F030036,0x7F030056,0x7F030057,0x7F030058,0x7F030098,0x7F0300EE,0x7F030142,0x7F03018B,0x7F03018C,0x7F03018D,0x7F03018E,0x7F03018F,0x7F030190,0x7F030191,0x7F030192,0x7F030193,0x7F030194,0x7F030195,0x7F030196,0x7F030197,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03020E,0x7F03020F,0x7F030210,0x7F030214,0x7F030218,0x7F030219,0x7F03021A,0x7F03021D,0x7F03021E,0x7F03021F,0x7F030220,0x7F030221,0x7F030222,0x7F030223,0x7F030224,0x7F030225,0x7F030226,0x7F030227,0x7F030228,0x7F03022B,0x7F030230,0x7F030231,0x7F030234,0x7F030235,0x7F030236,0x7F030237,0x7F030238,0x7F030239,0x7F03023A,0x7F03023B,0x7F03023D,0x7F03023E,0x7F03023F,0x7F030240,0x7F030241,0x7F030242,0x7F030243,0x7F030244,0x7F030245,0x7F030248,0x7F03024C,0x7F0302B1,0x7F0302B2,0x7F0302B3,0x7F0302E1,0x7F0302E9,0x7F0302EE,0x7F030308,0x7F030309,0x7F03030A,0x7F03041C,0x7F03041E,0x7F030420,0x7F030433 }
+			// aapt resource value: { 0x10100C4,0x10100D0,0x10100DC,0x10100F4,0x10100F5,0x10100F7,0x10100F8,0x10100F9,0x10100FA,0x101011F,0x1010120,0x101013F,0x1010140,0x101031F,0x1010320,0x1010321,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103B5,0x10103B6,0x10103FA,0x1010440,0x7F030035,0x7F030036,0x7F030056,0x7F030057,0x7F030058,0x7F030098,0x7F0300EE,0x7F030142,0x7F03018B,0x7F03018C,0x7F03018D,0x7F03018E,0x7F03018F,0x7F030190,0x7F030191,0x7F030192,0x7F030193,0x7F030194,0x7F030195,0x7F030196,0x7F030197,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03020E,0x7F03020F,0x7F030210,0x7F030214,0x7F030218,0x7F030219,0x7F03021A,0x7F03021D,0x7F03021E,0x7F03021F,0x7F030220,0x7F030221,0x7F030222,0x7F030223,0x7F030224,0x7F030225,0x7F030226,0x7F030227,0x7F030228,0x7F03022B,0x7F030230,0x7F030231,0x7F030234,0x7F030235,0x7F030236,0x7F030237,0x7F030238,0x7F030239,0x7F03023A,0x7F03023B,0x7F03023D,0x7F03023E,0x7F03023F,0x7F030240,0x7F030241,0x7F030242,0x7F030243,0x7F030244,0x7F030245,0x7F030248,0x7F03024C,0x7F0302B1,0x7F0302B2,0x7F0302B3,0x7F0302E1,0x7F0302E9,0x7F0302EE,0x7F030308,0x7F030309,0x7F03030A,0x7F03042B,0x7F03042D,0x7F03042F,0x7F030442 }
 			public static int[] ConstraintOverride = new int[] {
 					16842948,
 					16842960,
@@ -35030,10 +36169,10 @@ namespace EcoCareApp.Droid
 					2130903816,
 					2130903817,
 					2130903818,
-					2130904092,
-					2130904094,
-					2130904096,
-					2130904115};
+					2130904107,
+					2130904109,
+					2130904111,
+					2130904130};
 			
 			// aapt resource value: 13
 			public const int ConstraintOverride_android_alpha = 13;
@@ -35356,7 +36495,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 106
 			public const int ConstraintOverride_visibilityMode = 106;
 			
-			// aapt resource value: { 0x10100C4,0x10100D0,0x10100DC,0x10100F4,0x10100F5,0x10100F7,0x10100F8,0x10100F9,0x10100FA,0x101011F,0x1010120,0x101013F,0x1010140,0x10101B5,0x10101B6,0x101031F,0x1010320,0x1010321,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103B5,0x10103B6,0x10103FA,0x1010440,0x7F030000,0x7F030035,0x7F030036,0x7F030056,0x7F030057,0x7F030058,0x7F030098,0x7F0300EE,0x7F0300EF,0x7F03012F,0x7F030142,0x7F03018B,0x7F03018C,0x7F03018D,0x7F03018E,0x7F03018F,0x7F030190,0x7F030191,0x7F030192,0x7F030193,0x7F030194,0x7F030195,0x7F030196,0x7F030197,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03020E,0x7F03020F,0x7F030210,0x7F030211,0x7F030212,0x7F030213,0x7F030214,0x7F030215,0x7F030216,0x7F030217,0x7F030218,0x7F030219,0x7F03021A,0x7F03021B,0x7F03021C,0x7F03021D,0x7F03021E,0x7F03021F,0x7F030221,0x7F030222,0x7F030223,0x7F030224,0x7F030225,0x7F030226,0x7F030227,0x7F030228,0x7F030229,0x7F03022A,0x7F03022B,0x7F03022C,0x7F03022D,0x7F03022E,0x7F03022F,0x7F030230,0x7F030231,0x7F030232,0x7F030233,0x7F030234,0x7F030235,0x7F030236,0x7F030238,0x7F030239,0x7F03023A,0x7F03023B,0x7F03023D,0x7F03023E,0x7F03023F,0x7F030240,0x7F030241,0x7F030242,0x7F030243,0x7F030244,0x7F030245,0x7F030248,0x7F03024C,0x7F0302B1,0x7F0302B2,0x7F0302E1,0x7F0302E9,0x7F0302EE,0x7F03030A,0x7F03041E,0x7F030420 }
+			// aapt resource value: { 0x10100C4,0x10100D0,0x10100DC,0x10100F4,0x10100F5,0x10100F7,0x10100F8,0x10100F9,0x10100FA,0x101011F,0x1010120,0x101013F,0x1010140,0x10101B5,0x10101B6,0x101031F,0x1010320,0x1010321,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103B5,0x10103B6,0x10103FA,0x1010440,0x7F030000,0x7F030035,0x7F030036,0x7F030056,0x7F030057,0x7F030058,0x7F030098,0x7F0300EE,0x7F0300EF,0x7F03012F,0x7F030142,0x7F03018B,0x7F03018C,0x7F03018D,0x7F03018E,0x7F03018F,0x7F030190,0x7F030191,0x7F030192,0x7F030193,0x7F030194,0x7F030195,0x7F030196,0x7F030197,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03020E,0x7F03020F,0x7F030210,0x7F030211,0x7F030212,0x7F030213,0x7F030214,0x7F030215,0x7F030216,0x7F030217,0x7F030218,0x7F030219,0x7F03021A,0x7F03021B,0x7F03021C,0x7F03021D,0x7F03021E,0x7F03021F,0x7F030221,0x7F030222,0x7F030223,0x7F030224,0x7F030225,0x7F030226,0x7F030227,0x7F030228,0x7F030229,0x7F03022A,0x7F03022B,0x7F03022C,0x7F03022D,0x7F03022E,0x7F03022F,0x7F030230,0x7F030231,0x7F030232,0x7F030233,0x7F030234,0x7F030235,0x7F030236,0x7F030238,0x7F030239,0x7F03023A,0x7F03023B,0x7F03023D,0x7F03023E,0x7F03023F,0x7F030240,0x7F030241,0x7F030242,0x7F030243,0x7F030244,0x7F030245,0x7F030248,0x7F03024C,0x7F0302B1,0x7F0302B2,0x7F0302E1,0x7F0302E9,0x7F0302EE,0x7F03030A,0x7F03042D,0x7F03042F }
 			public static int[] ConstraintSet = new int[] {
 					16842948,
 					16842960,
@@ -35477,8 +36616,8 @@ namespace EcoCareApp.Droid
 					2130903785,
 					2130903790,
 					2130903818,
-					2130904094,
-					2130904096};
+					2130904109,
+					2130904111};
 			
 			// aapt resource value: 15
 			public const int ConstraintSet_android_alpha = 15;
@@ -36212,10 +37351,10 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 122
 			public const int Constraint_visibilityMode = 122;
 			
-			// aapt resource value: { 0x7F0301FF,0x7F030380 }
+			// aapt resource value: { 0x7F0301FF,0x7F03038F }
 			public static int[] CoordinatorLayout = new int[] {
 					2130903551,
-					2130903936};
+					2130903951};
 			
 			// aapt resource value: 0
 			public const int CoordinatorLayout_keylines = 0;
@@ -36352,7 +37491,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 11
 			public const int DialogPreference_positiveButtonText = 11;
 			
-			// aapt resource value: { 0x7F03003C,0x7F03003D,0x7F030055,0x7F0300D4,0x7F030147,0x7F0301AE,0x7F030368,0x7F0303EA }
+			// aapt resource value: { 0x7F03003C,0x7F03003D,0x7F030055,0x7F0300D4,0x7F030147,0x7F0301AE,0x7F030377,0x7F0303F9 }
 			public static int[] DrawerArrowToggle = new int[] {
 					2130903100,
 					2130903101,
@@ -36360,8 +37499,8 @@ namespace EcoCareApp.Droid
 					2130903252,
 					2130903367,
 					2130903470,
-					2130903912,
-					2130904042};
+					2130903927,
+					2130904057};
 			
 			// aapt resource value: 0
 			public const int DrawerArrowToggle_arrowHeadLength = 0;
@@ -36394,21 +37533,21 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0
 			public const int DrawerLayout_elevation = 0;
 			
-			// aapt resource value: { 0x7F03042B }
+			// aapt resource value: { 0x7F03043A }
 			public static int[] EditTextPreference = new int[] {
-					2130904107};
+					2130904122};
 			
 			// aapt resource value: 0
 			public const int EditTextPreference_useSimpleSummaryProvider = 0;
 			
-			// aapt resource value: { 0x7F0300CF,0x7F030156,0x7F03017A,0x7F0301BB,0x7F030358,0x7F03035D }
+			// aapt resource value: { 0x7F0300CF,0x7F030156,0x7F03017A,0x7F0301BB,0x7F030367,0x7F03036C }
 			public static int[] ExtendedFloatingActionButton = new int[] {
 					2130903247,
 					2130903382,
 					2130903418,
 					2130903483,
-					2130903896,
-					2130903901};
+					2130903911,
+					2130903916};
 			
 			// aapt resource value: { 0x7F030059,0x7F03005A }
 			public static int[] ExtendedFloatingActionButton_Behavior_Layout = new int[] {
@@ -36439,7 +37578,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 5
 			public const int ExtendedFloatingActionButton_shrinkMotionSpec = 5;
 			
-			// aapt resource value: { 0x101000E,0x7F030050,0x7F030051,0x7F030067,0x7F030156,0x7F030164,0x7F030182,0x7F030183,0x7F0301BB,0x7F0301C5,0x7F030285,0x7F030305,0x7F030337,0x7F03034D,0x7F030350,0x7F030358,0x7F030429 }
+			// aapt resource value: { 0x101000E,0x7F030050,0x7F030051,0x7F030067,0x7F030156,0x7F030164,0x7F030182,0x7F030183,0x7F0301BB,0x7F0301C5,0x7F030285,0x7F030305,0x7F030346,0x7F03035C,0x7F03035F,0x7F030367,0x7F030438 }
 			public static int[] FloatingActionButton = new int[] {
 					16842766,
 					2130903120,
@@ -36453,11 +37592,11 @@ namespace EcoCareApp.Droid
 					2130903493,
 					2130903685,
 					2130903813,
-					2130903863,
-					2130903885,
-					2130903888,
-					2130903896,
-					2130904105};
+					2130903878,
+					2130903900,
+					2130903903,
+					2130903911,
+					2130904120};
 			
 			// aapt resource value: 0
 			public const int FloatingActionButton_android_enabled = 0;
@@ -36538,7 +37677,7 @@ namespace EcoCareApp.Droid
 					2130903461,
 					2130903462};
 			
-			// aapt resource value: { 0x1010532,0x1010533,0x101053F,0x101056F,0x1010570,0x7F03019E,0x7F0301A7,0x7F0301A8,0x7F0301A9,0x7F030425 }
+			// aapt resource value: { 0x1010532,0x1010533,0x101053F,0x101056F,0x1010570,0x7F03019E,0x7F0301A7,0x7F0301A8,0x7F0301A9,0x7F030434 }
 			public static int[] FontFamilyFont = new int[] {
 					16844082,
 					16844083,
@@ -36549,7 +37688,7 @@ namespace EcoCareApp.Droid
 					2130903463,
 					2130903464,
 					2130903465,
-					2130904101};
+					2130904116};
 			
 			// aapt resource value: 0
 			public const int FontFamilyFont_android_font = 0;
@@ -36705,7 +37844,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 2
 			public const int GradientColor_android_type = 2;
 			
-			// aapt resource value: { 0x7F030034,0x7F030064,0x7F030078,0x7F030101,0x7F030115,0x7F0301D3,0x7F0301D4,0x7F0301D5,0x7F0301D6,0x7F0302D0,0x7F030339,0x7F03033A,0x7F03033B,0x7F030435 }
+			// aapt resource value: { 0x7F030034,0x7F030064,0x7F030078,0x7F030101,0x7F030115,0x7F0301D3,0x7F0301D4,0x7F0301D5,0x7F0301D6,0x7F0302D0,0x7F030348,0x7F030349,0x7F03034A,0x7F030444 }
 			public static int[] ImageFilterView = new int[] {
 					2130903092,
 					2130903140,
@@ -36717,10 +37856,10 @@ namespace EcoCareApp.Droid
 					2130903509,
 					2130903510,
 					2130903760,
-					2130903865,
-					2130903866,
-					2130903867,
-					2130904117};
+					2130903880,
+					2130903881,
+					2130903882,
+					2130904132};
 			
 			// aapt resource value: 0
 			public const int ImageFilterView_altSrc = 0;
@@ -36797,7 +37936,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0
 			public const int ItemsViewRendererTheme_collectionViewStyle = 0;
 			
-			// aapt resource value: { 0x101031F,0x1010320,0x1010321,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103FA,0x1010440,0x7F030117,0x7F0301AD,0x7F0302B1,0x7F0302B3,0x7F03041C,0x7F03041E,0x7F030420 }
+			// aapt resource value: { 0x101031F,0x1010320,0x1010321,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103FA,0x1010440,0x7F030117,0x7F0301AD,0x7F0302B1,0x7F0302B3,0x7F03042B,0x7F03042D,0x7F03042F }
 			public static int[] KeyAttribute = new int[] {
 					16843551,
 					16843552,
@@ -36815,9 +37954,9 @@ namespace EcoCareApp.Droid
 					2130903469,
 					2130903729,
 					2130903731,
-					2130904092,
-					2130904094,
-					2130904096};
+					2130904107,
+					2130904109,
+					2130904111};
 			
 			// aapt resource value: 0
 			public const int KeyAttribute_android_alpha = 0;
@@ -36876,7 +38015,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 18
 			public const int KeyAttribute_transitionPathRotate = 18;
 			
-			// aapt resource value: { 0x101031F,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103FA,0x1010440,0x7F030117,0x7F0301AD,0x7F0302B1,0x7F0302B3,0x7F03041E,0x7F030420,0x7F030437,0x7F030438,0x7F030439,0x7F03043A,0x7F03043B }
+			// aapt resource value: { 0x101031F,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103FA,0x1010440,0x7F030117,0x7F0301AD,0x7F0302B1,0x7F0302B3,0x7F03042D,0x7F03042F,0x7F030446,0x7F030447,0x7F030448,0x7F030449,0x7F03044A }
 			public static int[] KeyCycle = new int[] {
 					16843551,
 					16843554,
@@ -36892,13 +38031,13 @@ namespace EcoCareApp.Droid
 					2130903469,
 					2130903729,
 					2130903731,
-					2130904094,
-					2130904096,
-					2130904119,
-					2130904120,
-					2130904121,
-					2130904122,
-					2130904123};
+					2130904109,
+					2130904111,
+					2130904134,
+					2130904135,
+					2130904136,
+					2130904137,
+					2130904138};
 			
 			// aapt resource value: 0
 			public const int KeyCycle_android_alpha = 0;
@@ -36975,7 +38114,7 @@ namespace EcoCareApp.Droid
 			public static int[] KeyFramesVelocity = new int[] {
 					-1};
 			
-			// aapt resource value: { 0x7F030117,0x7F030142,0x7F0301AD,0x7F0301FD,0x7F0302B3,0x7F0302E1,0x7F0302E3,0x7F0302E4,0x7F0302E5,0x7F0302E6,0x7F030362,0x7F03041E }
+			// aapt resource value: { 0x7F030117,0x7F030142,0x7F0301AD,0x7F0301FD,0x7F0302B3,0x7F0302E1,0x7F0302E3,0x7F0302E4,0x7F0302E5,0x7F0302E6,0x7F030371,0x7F03042D }
 			public static int[] KeyPosition = new int[] {
 					2130903319,
 					2130903362,
@@ -36987,8 +38126,8 @@ namespace EcoCareApp.Droid
 					2130903780,
 					2130903781,
 					2130903782,
-					2130903906,
-					2130904094};
+					2130903921,
+					2130904109};
 			
 			// aapt resource value: 0
 			public const int KeyPosition_curveFit = 0;
@@ -37026,7 +38165,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 11
 			public const int KeyPosition_transitionEasing = 11;
 			
-			// aapt resource value: { 0x101031F,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103FA,0x1010440,0x7F030117,0x7F0301AD,0x7F0302B1,0x7F0302B3,0x7F03041E,0x7F030420,0x7F030436,0x7F030437,0x7F030438,0x7F030439,0x7F03043A }
+			// aapt resource value: { 0x101031F,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103FA,0x1010440,0x7F030117,0x7F0301AD,0x7F0302B1,0x7F0302B3,0x7F03042D,0x7F03042F,0x7F030445,0x7F030446,0x7F030447,0x7F030448,0x7F030449 }
 			public static int[] KeyTimeCycle = new int[] {
 					16843551,
 					16843554,
@@ -37042,13 +38181,13 @@ namespace EcoCareApp.Droid
 					2130903469,
 					2130903729,
 					2130903731,
-					2130904094,
-					2130904096,
-					2130904118,
-					2130904119,
-					2130904120,
-					2130904121,
-					2130904122};
+					2130904109,
+					2130904111,
+					2130904133,
+					2130904134,
+					2130904135,
+					2130904136,
+					2130904137};
 			
 			// aapt resource value: 0
 			public const int KeyTimeCycle_android_alpha = 0;
@@ -37113,7 +38252,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 20
 			public const int KeyTimeCycle_waveShape = 20;
 			
-			// aapt resource value: { 0x7F0301AD,0x7F0302B3,0x7F0302B4,0x7F0302B5,0x7F0302C6,0x7F0302C8,0x7F0302C9,0x7F030422,0x7F030423,0x7F030424,0x7F030430,0x7F030431,0x7F030432 }
+			// aapt resource value: { 0x7F0301AD,0x7F0302B3,0x7F0302B4,0x7F0302B5,0x7F0302C6,0x7F0302C8,0x7F0302C9,0x7F030431,0x7F030432,0x7F030433,0x7F03043F,0x7F030440,0x7F030441 }
 			public static int[] KeyTrigger = new int[] {
 					2130903469,
 					2130903731,
@@ -37122,12 +38261,12 @@ namespace EcoCareApp.Droid
 					2130903750,
 					2130903752,
 					2130903753,
-					2130904098,
-					2130904099,
-					2130904100,
-					2130904112,
 					2130904113,
-					2130904114};
+					2130904114,
+					2130904115,
+					2130904127,
+					2130904128,
+					2130904129};
 			
 			// aapt resource value: 0
 			public const int KeyTrigger_framePosition = 0;
@@ -37471,7 +38610,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 74
 			public const int Layout_minWidth = 74;
 			
-			// aapt resource value: { 0x10100AF,0x10100C4,0x1010126,0x1010127,0x1010128,0x7F03013B,0x7F03013D,0x7F030289,0x7F030357 }
+			// aapt resource value: { 0x10100AF,0x10100C4,0x1010126,0x1010127,0x1010128,0x7F03013B,0x7F03013D,0x7F030289,0x7F030366 }
 			public static int[] LinearLayoutCompat = new int[] {
 					16842927,
 					16842948,
@@ -37481,7 +38620,7 @@ namespace EcoCareApp.Droid
 					2130903355,
 					2130903357,
 					2130903689,
-					2130903895};
+					2130903910};
 			
 			// aapt resource value: 2
 			public const int LinearLayoutCompat_android_baselineAligned = 2;
@@ -37551,13 +38690,13 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int ListPopupWindow_android_dropDownVerticalOffset = 1;
 			
-			// aapt resource value: { 0x10100B2,0x10101F8,0x7F030166,0x7F030167,0x7F03042B }
+			// aapt resource value: { 0x10100B2,0x10101F8,0x7F030166,0x7F030167,0x7F03043A }
 			public static int[] ListPreference = new int[] {
 					16842930,
 					16843256,
 					2130903398,
 					2130903399,
-					2130904107};
+					2130904122};
 			
 			// aapt resource value: 0
 			public const int ListPreference_android_entries = 0;
@@ -37623,7 +38762,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0
 			public const int MaterialAutoCompleteTextView_android_inputType = 0;
 			
-			// aapt resource value: { 0x10100D4,0x10101B7,0x10101B8,0x10101B9,0x10101BA,0x10101E5,0x7F030050,0x7F030051,0x7F030109,0x7F030156,0x7F0301C6,0x7F0301C8,0x7F0301C9,0x7F0301CA,0x7F0301CD,0x7F0301CE,0x7F030337,0x7F03034D,0x7F030350,0x7F030383,0x7F030384 }
+			// aapt resource value: { 0x10100D4,0x10101B7,0x10101B8,0x10101B9,0x10101BA,0x10101E5,0x7F030050,0x7F030051,0x7F030109,0x7F030156,0x7F0301C6,0x7F0301C8,0x7F0301C9,0x7F0301CA,0x7F0301CD,0x7F0301CE,0x7F030346,0x7F03035C,0x7F03035F,0x7F030392,0x7F030393 }
 			public static int[] MaterialButton = new int[] {
 					16842964,
 					16843191,
@@ -37641,17 +38780,17 @@ namespace EcoCareApp.Droid
 					2130903498,
 					2130903501,
 					2130903502,
-					2130903863,
-					2130903885,
-					2130903888,
-					2130903939,
-					2130903940};
+					2130903878,
+					2130903900,
+					2130903903,
+					2130903954,
+					2130903955};
 			
-			// aapt resource value: { 0x7F03009B,0x7F03034A,0x7F030361 }
+			// aapt resource value: { 0x7F03009B,0x7F030359,0x7F030370 }
 			public static int[] MaterialButtonToggleGroup = new int[] {
 					2130903195,
-					2130903882,
-					2130903905};
+					2130903897,
+					2130903920};
 			
 			// aapt resource value: 0
 			public const int MaterialButtonToggleGroup_checkedButton = 0;
@@ -37725,7 +38864,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 20
 			public const int MaterialButton_strokeWidth = 20;
 			
-			// aapt resource value: { 0x101020D,0x7F030124,0x7F030125,0x7F030126,0x7F030127,0x7F0302C2,0x7F030329,0x7F030447,0x7F030448,0x7F030449 }
+			// aapt resource value: { 0x101020D,0x7F030124,0x7F030125,0x7F030126,0x7F030127,0x7F0302C2,0x7F030329,0x7F030456,0x7F030457,0x7F030458 }
 			public static int[] MaterialCalendar = new int[] {
 					16843277,
 					2130903332,
@@ -37734,9 +38873,9 @@ namespace EcoCareApp.Droid
 					2130903335,
 					2130903746,
 					2130903849,
-					2130904135,
-					2130904136,
-					2130904137};
+					2130904150,
+					2130904151,
+					2130904152};
 			
 			// aapt resource value: { 0x10101B7,0x10101B8,0x10101B9,0x10101BA,0x7F0301E5,0x7F0301EE,0x7F0301EF,0x7F0301F6,0x7F0301F7,0x7F0301FB }
 			public static int[] MaterialCalendarItem = new int[] {
@@ -37811,7 +38950,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 9
 			public const int MaterialCalendar_yearTodayStyle = 9;
 			
-			// aapt resource value: { 0x10101E5,0x7F030089,0x7F03009D,0x7F03009F,0x7F0300A0,0x7F0300A1,0x7F030337,0x7F03034D,0x7F030350,0x7F03037D,0x7F030383,0x7F030384 }
+			// aapt resource value: { 0x10101E5,0x7F030089,0x7F03009D,0x7F03009F,0x7F0300A0,0x7F0300A1,0x7F030346,0x7F03035C,0x7F03035F,0x7F03038C,0x7F030392,0x7F030393 }
 			public static int[] MaterialCardView = new int[] {
 					16843237,
 					2130903177,
@@ -37819,12 +38958,12 @@ namespace EcoCareApp.Droid
 					2130903199,
 					2130903200,
 					2130903201,
-					2130903863,
-					2130903885,
-					2130903888,
-					2130903933,
-					2130903939,
-					2130903940};
+					2130903878,
+					2130903900,
+					2130903903,
+					2130903948,
+					2130903954,
+					2130903955};
 			
 			// aapt resource value: 0
 			public const int MaterialCardView_android_checkable = 0;
@@ -37862,10 +39001,10 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 11
 			public const int MaterialCardView_strokeWidth = 11;
 			
-			// aapt resource value: { 0x7F030084,0x7F03042A }
+			// aapt resource value: { 0x7F030084,0x7F030439 }
 			public static int[] MaterialCheckBox = new int[] {
 					2130903172,
-					2130904106};
+					2130904121};
 			
 			// aapt resource value: 0
 			public const int MaterialCheckBox_buttonTint = 0;
@@ -37873,10 +39012,10 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int MaterialCheckBox_useMaterialThemeColors = 1;
 			
-			// aapt resource value: { 0x7F030084,0x7F03042A }
+			// aapt resource value: { 0x7F030084,0x7F030439 }
 			public static int[] MaterialRadioButton = new int[] {
 					2130903172,
-					2130904106};
+					2130904121};
 			
 			// aapt resource value: 0
 			public const int MaterialRadioButton_buttonTint = 0;
@@ -37884,10 +39023,10 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int MaterialRadioButton_useMaterialThemeColors = 1;
 			
-			// aapt resource value: { 0x7F03034D,0x7F030350 }
+			// aapt resource value: { 0x7F03035C,0x7F03035F }
 			public static int[] MaterialShape = new int[] {
-					2130903885,
-					2130903888};
+					2130903900,
+					2130903903};
 			
 			// aapt resource value: 0
 			public const int MaterialShape_shapeAppearance = 0;
@@ -37936,11 +39075,11 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int MaterialTimePicker_keyboardIcon = 1;
 			
-			// aapt resource value: { 0x7F0302BB,0x7F030388,0x7F0303FD }
+			// aapt resource value: { 0x7F0302BB,0x7F030397,0x7F03040C }
 			public static int[] MaterialToolbar = new int[] {
 					2130903739,
-					2130903944,
-					2130904061};
+					2130903959,
+					2130904076};
 			
 			// aapt resource value: 0
 			public const int MaterialToolbar_navigationIconTint = 0;
@@ -37978,7 +39117,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 2
 			public const int MenuGroup_android_visible = 2;
 			
-			// aapt resource value: { 0x1010002,0x101000E,0x10100D0,0x1010106,0x1010194,0x10101DE,0x10101DF,0x10101E1,0x10101E2,0x10101E3,0x10101E4,0x10101E5,0x101026F,0x7F030011,0x7F030025,0x7F030027,0x7F030033,0x7F0300F2,0x7F0301CD,0x7F0301CE,0x7F0302C5,0x7F030355,0x7F03040F }
+			// aapt resource value: { 0x1010002,0x101000E,0x10100D0,0x1010106,0x1010194,0x10101DE,0x10101DF,0x10101E1,0x10101E2,0x10101E3,0x10101E4,0x10101E5,0x101026F,0x7F030011,0x7F030025,0x7F030027,0x7F030033,0x7F0300F2,0x7F0301CD,0x7F0301CE,0x7F0302C5,0x7F030364,0x7F03041E }
 			public static int[] MenuItem = new int[] {
 					16842754,
 					16842766,
@@ -38001,8 +39140,8 @@ namespace EcoCareApp.Droid
 					2130903501,
 					2130903502,
 					2130903749,
-					2130903893,
-					2130904079};
+					2130903908,
+					2130904094};
 			
 			// aapt resource value: 13
 			public const int MenuItem_actionLayout = 13;
@@ -38073,7 +39212,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 22
 			public const int MenuItem_tooltipText = 22;
 			
-			// aapt resource value: { 0x10100AE,0x101012C,0x101012D,0x101012E,0x101012F,0x1010130,0x1010131,0x7F030304,0x7F030385 }
+			// aapt resource value: { 0x10100AE,0x101012C,0x101012D,0x101012E,0x101012F,0x1010130,0x1010131,0x7F030304,0x7F030394 }
 			public static int[] MenuView = new int[] {
 					16842926,
 					16843052,
@@ -38083,7 +39222,7 @@ namespace EcoCareApp.Droid
 					16843056,
 					16843057,
 					2130903812,
-					2130903941};
+					2130903956};
 			
 			// aapt resource value: 4
 			public const int MenuView_android_headerBackground = 4;
@@ -38139,7 +39278,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 5
 			public const int MockView_mock_showLabel = 5;
 			
-			// aapt resource value: { 0x7F030035,0x7F030036,0x7F030142,0x7F0302B0,0x7F0302B2,0x7F0302E1,0x7F030308,0x7F030309,0x7F03030A,0x7F03041E }
+			// aapt resource value: { 0x7F030035,0x7F030036,0x7F030142,0x7F0302B0,0x7F0302B2,0x7F0302E1,0x7F030308,0x7F030309,0x7F03030A,0x7F03042D }
 			public static int[] Motion = new int[] {
 					2130903093,
 					2130903094,
@@ -38150,7 +39289,7 @@ namespace EcoCareApp.Droid
 					2130903816,
 					2130903817,
 					2130903818,
-					2130904094};
+					2130904109};
 			
 			// aapt resource value: { 0x7F0302A6,0x7F0302A7,0x7F0302A8,0x7F0302A9,0x7F0302AA,0x7F0302AB,0x7F0302AC,0x7F0302AD }
 			public static int[] MotionEffect = new int[] {
@@ -38198,7 +39337,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int MotionHelper_onShow = 1;
 			
-			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x1010098,0x10100AF,0x101014F,0x1010164,0x10103AC,0x1010535,0x7F030065,0x7F030066,0x7F03033C,0x7F0303D3,0x7F0303D4,0x7F0303D5,0x7F0303D6,0x7F0303D7,0x7F0303DF,0x7F0303E0,0x7F0303E1,0x7F0303E2,0x7F0303E4,0x7F0303E5,0x7F0303E6,0x7F0303E7 }
+			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x1010098,0x10100AF,0x101014F,0x1010164,0x10103AC,0x1010535,0x7F030065,0x7F030066,0x7F03034B,0x7F0303E2,0x7F0303E3,0x7F0303E4,0x7F0303E5,0x7F0303E6,0x7F0303EE,0x7F0303EF,0x7F0303F0,0x7F0303F1,0x7F0303F3,0x7F0303F4,0x7F0303F5,0x7F0303F6 }
 			public static int[] MotionLabel = new int[] {
 					16842901,
 					16842902,
@@ -38211,20 +39350,20 @@ namespace EcoCareApp.Droid
 					16844085,
 					2130903141,
 					2130903142,
-					2130903868,
-					2130904019,
-					2130904020,
-					2130904021,
-					2130904022,
-					2130904023,
-					2130904031,
-					2130904032,
-					2130904033,
+					2130903883,
 					2130904034,
+					2130904035,
 					2130904036,
 					2130904037,
 					2130904038,
-					2130904039};
+					2130904046,
+					2130904047,
+					2130904048,
+					2130904049,
+					2130904051,
+					2130904052,
+					2130904053,
+					2130904054};
 			
 			// aapt resource value: 8
 			public const int MotionLabel_android_autoSizeTextType = 8;
@@ -38301,14 +39440,14 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 24
 			public const int MotionLabel_textureWidth = 24;
 			
-			// aapt resource value: { 0x7F030039,0x7F030116,0x7F030206,0x7F03029A,0x7F0302B1,0x7F030359 }
+			// aapt resource value: { 0x7F030039,0x7F030116,0x7F030206,0x7F03029A,0x7F0302B1,0x7F030368 }
 			public static int[] MotionLayout = new int[] {
 					2130903097,
 					2130903318,
 					2130903558,
 					2130903706,
 					2130903729,
-					2130903897};
+					2130903912};
 			
 			// aapt resource value: 0
 			public const int MotionLayout_applyMotionScene = 0;
@@ -38339,11 +39478,11 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int MotionScene_layoutDuringTransition = 1;
 			
-			// aapt resource value: { 0x7F0303B9,0x7F0303BA,0x7F0303BB }
+			// aapt resource value: { 0x7F0303C8,0x7F0303C9,0x7F0303CA }
 			public static int[] MotionTelltales = new int[] {
-					2130903993,
-					2130903994,
-					2130903995};
+					2130904008,
+					2130904009,
+					2130904010};
 			
 			// aapt resource value: 0
 			public const int MotionTelltales_telltales_tailColor = 0;
@@ -38461,12 +39600,12 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 3
 			public const int NavArgument_nullable = 3;
 			
-			// aapt resource value: { 0x10104EE,0x7F030003,0x7F03028D,0x7F030428 }
+			// aapt resource value: { 0x10104EE,0x7F030003,0x7F03028D,0x7F030437 }
 			public static int[] NavDeepLink = new int[] {
 					16844014,
 					2130903043,
 					2130903693,
-					2130904104};
+					2130904119};
 			
 			// aapt resource value: 1
 			public const int NavDeepLink_action = 1;
@@ -38480,9 +39619,9 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 3
 			public const int NavDeepLink_uri = 3;
 			
-			// aapt resource value: { 0x7F030374 }
+			// aapt resource value: { 0x7F030383 }
 			public static int[] NavGraphNavigator = new int[] {
-					2130903924};
+					2130903939};
 			
 			// aapt resource value: 0
 			public const int NavGraphNavigator_startDestination = 0;
@@ -38552,7 +39691,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int NavigationRailView_menuGravity = 1;
 			
-			// aapt resource value: { 0x10100D4,0x10100DD,0x101011F,0x7F030156,0x7F0301B4,0x7F0301E4,0x7F0301E6,0x7F0301E8,0x7F0301E9,0x7F0301EA,0x7F0301EB,0x7F0301EE,0x7F0301EF,0x7F0301F0,0x7F0301F1,0x7F0301F2,0x7F0301F3,0x7F0301F4,0x7F0301F8,0x7F0301FB,0x7F03028A,0x7F03034D,0x7F030350 }
+			// aapt resource value: { 0x10100D4,0x10100DD,0x101011F,0x7F030156,0x7F0301B4,0x7F0301E4,0x7F0301E6,0x7F0301E8,0x7F0301E9,0x7F0301EA,0x7F0301EB,0x7F0301EE,0x7F0301EF,0x7F0301F0,0x7F0301F1,0x7F0301F2,0x7F0301F3,0x7F0301F4,0x7F0301F8,0x7F0301FB,0x7F03028A,0x7F03035C,0x7F03035F }
 			public static int[] NavigationView = new int[] {
 					16842964,
 					16842973,
@@ -38575,8 +39714,8 @@ namespace EcoCareApp.Droid
 					2130903544,
 					2130903547,
 					2130903690,
-					2130903885,
-					2130903888};
+					2130903900,
+					2130903903};
 			
 			// aapt resource value: 0
 			public const int NavigationView_android_background = 0;
@@ -38665,10 +39804,10 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0
 			public const int NavInclude_graph = 0;
 			
-			// aapt resource value: { 0x7F0300C0,0x7F0303B7 }
+			// aapt resource value: { 0x7F0300C0,0x7F0303C6 }
 			public static int[] OnClick = new int[] {
 					2130903232,
-					2130903991};
+					2130904006};
 			
 			// aapt resource value: 0
 			public const int OnClick_clickAction = 0;
@@ -38676,7 +39815,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int OnClick_targetId = 1;
 			
-			// aapt resource value: { 0x7F03003F,0x7F03013F,0x7F030140,0x7F030141,0x7F03024F,0x7F030280,0x7F030287,0x7F0302B6,0x7F0302C0,0x7F0302CC,0x7F030338,0x7F03036C,0x7F03036D,0x7F03036E,0x7F03036F,0x7F030370,0x7F030410,0x7F030411,0x7F030412 }
+			// aapt resource value: { 0x7F03003F,0x7F03013F,0x7F030140,0x7F030141,0x7F03024F,0x7F030280,0x7F030287,0x7F0302B6,0x7F0302C0,0x7F0302CC,0x7F030347,0x7F03037B,0x7F03037C,0x7F03037D,0x7F03037E,0x7F03037F,0x7F03041F,0x7F030420,0x7F030421 }
 			public static int[] OnSwipe = new int[] {
 					2130903103,
 					2130903359,
@@ -38688,15 +39827,15 @@ namespace EcoCareApp.Droid
 					2130903734,
 					2130903744,
 					2130903756,
-					2130903864,
-					2130903916,
-					2130903917,
-					2130903918,
-					2130903919,
-					2130903920,
-					2130904080,
-					2130904081,
-					2130904082};
+					2130903879,
+					2130903931,
+					2130903932,
+					2130903933,
+					2130903934,
+					2130903935,
+					2130904095,
+					2130904096,
+					2130904097};
 			
 			// aapt resource value: 0
 			public const int OnSwipe_autoCompleteMode = 0;
@@ -38761,9 +39900,9 @@ namespace EcoCareApp.Droid
 					16843465,
 					2130903759};
 			
-			// aapt resource value: { 0x7F03037A }
+			// aapt resource value: { 0x7F030389 }
 			public static int[] PopupWindowBackgroundState = new int[] {
-					2130903930};
+					2130903945};
 			
 			// aapt resource value: 0
 			public const int PopupWindowBackgroundState_state_above_anchor = 0;
@@ -38777,7 +39916,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 2
 			public const int PopupWindow_overlapAnchor = 2;
 			
-			// aapt resource value: { 0x1010002,0x101000D,0x101000E,0x10100F2,0x10101E1,0x10101E6,0x10101E8,0x10101E9,0x10101EA,0x10101EB,0x10101EC,0x10101ED,0x10101EE,0x10102E3,0x101055C,0x1010561,0x7F03002E,0x7F030030,0x7F03012B,0x7F03012E,0x7F030159,0x7F03015B,0x7F0301AC,0x7F0301C6,0x7F0301CB,0x7F0301E3,0x7F0301FC,0x7F030205,0x7F0302CD,0x7F0302E8,0x7F030347,0x7F030353,0x7F030360,0x7F030390,0x7F0303FC,0x7F03043C }
+			// aapt resource value: { 0x1010002,0x101000D,0x101000E,0x10100F2,0x10101E1,0x10101E6,0x10101E8,0x10101E9,0x10101EA,0x10101EB,0x10101EC,0x10101ED,0x10101EE,0x10102E3,0x101055C,0x1010561,0x7F03002E,0x7F030030,0x7F03012B,0x7F03012E,0x7F030159,0x7F03015B,0x7F0301AC,0x7F0301C6,0x7F0301CB,0x7F0301E3,0x7F0301FC,0x7F030205,0x7F0302CD,0x7F0302E8,0x7F030356,0x7F030362,0x7F03036F,0x7F03039F,0x7F03040B,0x7F03044B }
 			public static int[] Preference = new int[] {
 					16842754,
 					16842765,
@@ -38809,12 +39948,12 @@ namespace EcoCareApp.Droid
 					2130903557,
 					2130903757,
 					2130903784,
-					2130903879,
-					2130903891,
-					2130903904,
-					2130903952,
-					2130904060,
-					2130904124};
+					2130903894,
+					2130903906,
+					2130903919,
+					2130903967,
+					2130904075,
+					2130904139};
 			
 			// aapt resource value: { 0x10100F2,0x1010129,0x101012A,0x7F03002F }
 			public static int[] PreferenceFragment = new int[] {
@@ -38888,7 +40027,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 3
 			public const int PreferenceImageView_maxWidth = 3;
 			
-			// aapt resource value: { 0x7F030099,0x7F030135,0x7F030150,0x7F030154,0x7F0302F8,0x7F0302F9,0x7F0302FA,0x7F0302FB,0x7F0302FC,0x7F0302FD,0x7F0302FE,0x7F0302FF,0x7F030300,0x7F030345,0x7F030396,0x7F030397 }
+			// aapt resource value: { 0x7F030099,0x7F030135,0x7F030150,0x7F030154,0x7F0302F8,0x7F0302F9,0x7F0302FA,0x7F0302FB,0x7F0302FC,0x7F0302FD,0x7F0302FE,0x7F0302FF,0x7F030300,0x7F030354,0x7F0303A5,0x7F0303A6 }
 			public static int[] PreferenceTheme = new int[] {
 					2130903193,
 					2130903349,
@@ -38903,9 +40042,9 @@ namespace EcoCareApp.Droid
 					2130903806,
 					2130903807,
 					2130903808,
-					2130903877,
-					2130903958,
-					2130903959};
+					2130903892,
+					2130903973,
+					2130903974};
 			
 			// aapt resource value: 0
 			public const int PreferenceTheme_checkBoxPreferenceStyle = 0;
@@ -39063,13 +40202,13 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 35
 			public const int Preference_widgetLayout = 35;
 			
-			// aapt resource value: { 0x10100DC,0x101031F,0x7F030230,0x7F0302B1,0x7F030433 }
+			// aapt resource value: { 0x10100DC,0x101031F,0x7F030230,0x7F0302B1,0x7F030442 }
 			public static int[] PropertySet = new int[] {
 					16842972,
 					16843551,
 					2130903600,
 					2130903729,
-					2130904115};
+					2130904130};
 			
 			// aapt resource value: 1
 			public const int PropertySet_android_alpha = 1;
@@ -39093,10 +40232,10 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0
 			public const int RadialViewGroup_materialCircleRadius = 0;
 			
-			// aapt resource value: { 0x7F030291,0x7F03042C }
+			// aapt resource value: { 0x7F030291,0x7F03043B }
 			public static int[] RangeSlider = new int[] {
 					2130903697,
-					2130904108};
+					2130904123};
 			
 			// aapt resource value: 0
 			public const int RangeSlider_minSeparation = 0;
@@ -39115,7 +40254,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int RecycleListView_paddingTopNoTitle = 1;
 			
-			// aapt resource value: { 0x10100C4,0x10100EB,0x10100F1,0x7F030184,0x7F030185,0x7F030186,0x7F030187,0x7F030188,0x7F030208,0x7F030336,0x7F030367,0x7F030372 }
+			// aapt resource value: { 0x10100C4,0x10100EB,0x10100F1,0x7F030184,0x7F030185,0x7F030186,0x7F030187,0x7F030188,0x7F030208,0x7F030345,0x7F030376,0x7F030381 }
 			public static int[] RecyclerView = new int[] {
 					16842948,
 					16842987,
@@ -39126,9 +40265,9 @@ namespace EcoCareApp.Droid
 					2130903431,
 					2130903432,
 					2130903560,
-					2130903862,
-					2130903911,
-					2130903922};
+					2130903877,
+					2130903926,
+					2130903937};
 			
 			// aapt resource value: 1
 			public const int RecyclerView_android_clipToPadding = 1;
@@ -39180,14 +40319,14 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 0
 			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 0;
 			
-			// aapt resource value: { 0x7F030340 }
+			// aapt resource value: { 0x7F03034F }
 			public static int[] ScrollViewRendererTheme = new int[] {
-					2130903872};
+					2130903887};
 			
 			// aapt resource value: 0
 			public const int ScrollViewRendererTheme_scrollViewStyle = 0;
 			
-			// aapt resource value: { 0x10100DA,0x101011F,0x1010220,0x1010264,0x7F0300C5,0x7F0300EA,0x7F030129,0x7F0301B0,0x7F0301CF,0x7F030205,0x7F03030B,0x7F03030C,0x7F030341,0x7F030342,0x7F030386,0x7F03038F,0x7F030434 }
+			// aapt resource value: { 0x10100DA,0x101011F,0x1010220,0x1010264,0x7F0300C5,0x7F0300EA,0x7F030129,0x7F0301B0,0x7F0301CF,0x7F030205,0x7F03030B,0x7F03030C,0x7F030350,0x7F030351,0x7F030395,0x7F03039E,0x7F030443 }
 			public static int[] SearchView = new int[] {
 					16842970,
 					16843039,
@@ -39201,11 +40340,11 @@ namespace EcoCareApp.Droid
 					2130903557,
 					2130903819,
 					2130903820,
-					2130903873,
-					2130903874,
-					2130903942,
-					2130903951,
-					2130904116};
+					2130903888,
+					2130903889,
+					2130903957,
+					2130903966,
+					2130904131};
 			
 			// aapt resource value: 0
 			public const int SearchView_android_focusable = 0;
@@ -39258,15 +40397,15 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 16
 			public const int SearchView_voiceIcon = 16;
 			
-			// aapt resource value: { 0x10100F2,0x1010136,0x7F030029,0x7F03028E,0x7F030344,0x7F03035A,0x7F030427 }
+			// aapt resource value: { 0x10100F2,0x1010136,0x7F030029,0x7F03028E,0x7F030353,0x7F030369,0x7F030436 }
 			public static int[] SeekBarPreference = new int[] {
 					16842994,
 					16843062,
 					2130903081,
 					2130903694,
-					2130903876,
-					2130903898,
-					2130904103};
+					2130903891,
+					2130903913,
+					2130904118};
 			
 			// aapt resource value: 2
 			public const int SeekBarPreference_adjustable = 2;
@@ -39396,7 +40535,70 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 25
 			public const int SfRadialMenu_radialVisibleSegmentsCount = 25;
 			
-			// aapt resource value: { 0x7F0300F9,0x7F0300FA,0x7F0300FB,0x7F0300FC,0x7F0300FD,0x7F0300FE,0x7F0300FF,0x7F03034D,0x7F030350,0x7F030383,0x7F030384 }
+			// aapt resource value: { 0x7F03032A,0x7F03032B,0x7F03032C,0x7F03032D,0x7F03032E,0x7F03032F,0x7F030330,0x7F030331,0x7F030332,0x7F030333,0x7F030334,0x7F030335,0x7F030336,0x7F030337,0x7F030338 }
+			public static int[] SfRangeSlider = new int[] {
+					2130903850,
+					2130903851,
+					2130903852,
+					2130903853,
+					2130903854,
+					2130903855,
+					2130903856,
+					2130903857,
+					2130903858,
+					2130903859,
+					2130903860,
+					2130903861,
+					2130903862,
+					2130903863,
+					2130903864};
+			
+			// aapt resource value: 0
+			public const int SfRangeSlider_rangeSliderDirectionReversed = 0;
+			
+			// aapt resource value: 1
+			public const int SfRangeSlider_rangeSliderEndValue = 1;
+			
+			// aapt resource value: 2
+			public const int SfRangeSlider_rangeSliderKnobColor = 2;
+			
+			// aapt resource value: 3
+			public const int SfRangeSlider_rangeSliderMaximum = 3;
+			
+			// aapt resource value: 4
+			public const int SfRangeSlider_rangeSliderMinimum = 4;
+			
+			// aapt resource value: 5
+			public const int SfRangeSlider_rangeSliderOrientation = 5;
+			
+			// aapt resource value: 6
+			public const int SfRangeSlider_rangeSliderShowRange = 6;
+			
+			// aapt resource value: 7
+			public const int SfRangeSlider_rangeSliderShowValueLabel = 7;
+			
+			// aapt resource value: 8
+			public const int SfRangeSlider_rangeSliderStartValue = 8;
+			
+			// aapt resource value: 9
+			public const int SfRangeSlider_rangeSliderThumbSize = 9;
+			
+			// aapt resource value: 10
+			public const int SfRangeSlider_rangeSliderTickPlacement = 10;
+			
+			// aapt resource value: 11
+			public const int SfRangeSlider_rangeSliderTrackColor = 11;
+			
+			// aapt resource value: 12
+			public const int SfRangeSlider_rangeSliderTrackSelectionColor = 12;
+			
+			// aapt resource value: 13
+			public const int SfRangeSlider_rangeSliderValue = 13;
+			
+			// aapt resource value: 14
+			public const int SfRangeSlider_rangeSliderValuePlacement = 14;
+			
+			// aapt resource value: { 0x7F0300F9,0x7F0300FA,0x7F0300FB,0x7F0300FC,0x7F0300FD,0x7F0300FE,0x7F0300FF,0x7F03035C,0x7F03035F,0x7F030392,0x7F030393 }
 			public static int[] ShapeableImageView = new int[] {
 					2130903289,
 					2130903290,
@@ -39405,10 +40607,10 @@ namespace EcoCareApp.Droid
 					2130903293,
 					2130903294,
 					2130903295,
-					2130903885,
-					2130903888,
-					2130903939,
-					2130903940};
+					2130903900,
+					2130903903,
+					2130903954,
+					2130903955};
 			
 			// aapt resource value: 0
 			public const int ShapeableImageView_contentPadding = 0;
@@ -39486,7 +40688,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 9
 			public const int ShapeAppearance_cornerSizeTopRight = 9;
 			
-			// aapt resource value: { 0x101000E,0x1010024,0x1010146,0x10102DE,0x10102DF,0x7F0301B2,0x7F0301B3,0x7F030200,0x7F030201,0x7F0303EB,0x7F0303EC,0x7F0303ED,0x7F0303EE,0x7F0303EF,0x7F0303F3,0x7F0303F4,0x7F0303F5,0x7F0303F9,0x7F030414,0x7F030415,0x7F030416,0x7F030418 }
+			// aapt resource value: { 0x101000E,0x1010024,0x1010146,0x10102DE,0x10102DF,0x7F0301B2,0x7F0301B3,0x7F030200,0x7F030201,0x7F0303FA,0x7F0303FB,0x7F0303FC,0x7F0303FD,0x7F0303FE,0x7F030402,0x7F030403,0x7F030404,0x7F030408,0x7F030423,0x7F030424,0x7F030425,0x7F030427 }
 			public static int[] Slider = new int[] {
 					16842766,
 					16842788,
@@ -39497,19 +40699,19 @@ namespace EcoCareApp.Droid
 					2130903475,
 					2130903552,
 					2130903553,
-					2130904043,
-					2130904044,
-					2130904045,
-					2130904046,
-					2130904047,
-					2130904051,
-					2130904052,
-					2130904053,
-					2130904057,
-					2130904084,
-					2130904085,
-					2130904086,
-					2130904088};
+					2130904058,
+					2130904059,
+					2130904060,
+					2130904061,
+					2130904062,
+					2130904066,
+					2130904067,
+					2130904068,
+					2130904072,
+					2130904099,
+					2130904100,
+					2130904101,
+					2130904103};
 			
 			// aapt resource value: 0
 			public const int Slider_android_enabled = 0;
@@ -39577,11 +40779,11 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 21
 			public const int Slider_trackHeight = 21;
 			
-			// aapt resource value: { 0x7F030364,0x7F030365,0x7F030366 }
+			// aapt resource value: { 0x7F030373,0x7F030374,0x7F030375 }
 			public static int[] Snackbar = new int[] {
-					2130903908,
-					2130903909,
-					2130903910};
+					2130903923,
+					2130903924,
+					2130903925};
 			
 			// aapt resource value: { 0x101011F,0x7F030026,0x7F030037,0x7F03004D,0x7F030050,0x7F030051,0x7F030156,0x7F030281 }
 			public static int[] SnackbarLayout = new int[] {
@@ -39702,29 +40904,29 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int State_constraints = 1;
 			
-			// aapt resource value: { 0x7F030393 }
+			// aapt resource value: { 0x7F0303A2 }
 			public static int[] SwipeRefreshLayout = new int[] {
-					2130903955};
+					2130903970};
 			
 			// aapt resource value: 0
 			public const int SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor = 0;
 			
-			// aapt resource value: { 0x1010124,0x1010125,0x1010142,0x7F03035B,0x7F03036B,0x7F030394,0x7F030395,0x7F030399,0x7F0303F0,0x7F0303F1,0x7F0303F2,0x7F030413,0x7F03041A,0x7F03041B }
+			// aapt resource value: { 0x1010124,0x1010125,0x1010142,0x7F03036A,0x7F03037A,0x7F0303A3,0x7F0303A4,0x7F0303A8,0x7F0303FF,0x7F030400,0x7F030401,0x7F030422,0x7F030429,0x7F03042A }
 			public static int[] SwitchCompat = new int[] {
 					16843044,
 					16843045,
 					16843074,
-					2130903899,
-					2130903915,
-					2130903956,
-					2130903957,
-					2130903961,
-					2130904048,
-					2130904049,
-					2130904050,
-					2130904083,
-					2130904090,
-					2130904091};
+					2130903914,
+					2130903930,
+					2130903971,
+					2130903972,
+					2130903976,
+					2130904063,
+					2130904064,
+					2130904065,
+					2130904098,
+					2130904105,
+					2130904106};
 			
 			// aapt resource value: 1
 			public const int SwitchCompat_android_textOff = 1;
@@ -39768,14 +40970,14 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 13
 			public const int SwitchCompat_trackTintMode = 13;
 			
-			// aapt resource value: { 0x7F03042A }
+			// aapt resource value: { 0x7F030439 }
 			public static int[] SwitchMaterial = new int[] {
-					2130904106};
+					2130904121};
 			
 			// aapt resource value: 0
 			public const int SwitchMaterial_useMaterialThemeColors = 0;
 			
-			// aapt resource value: { 0x10101EF,0x10101F0,0x10101F1,0x101036B,0x101036C,0x7F030139,0x7F030391,0x7F030392,0x7F03039A,0x7F03039B }
+			// aapt resource value: { 0x10101EF,0x10101F0,0x10101F1,0x101036B,0x101036C,0x7F030139,0x7F0303A0,0x7F0303A1,0x7F0303A9,0x7F0303AA }
 			public static int[] SwitchPreference = new int[] {
 					16843247,
 					16843248,
@@ -39783,12 +40985,12 @@ namespace EcoCareApp.Droid
 					16843627,
 					16843628,
 					2130903353,
-					2130903953,
-					2130903954,
-					2130903962,
-					2130903963};
+					2130903968,
+					2130903969,
+					2130903977,
+					2130903978};
 			
-			// aapt resource value: { 0x10101EF,0x10101F0,0x10101F1,0x101036B,0x101036C,0x7F030139,0x7F030391,0x7F030392,0x7F03039A,0x7F03039B }
+			// aapt resource value: { 0x10101EF,0x10101F0,0x10101F1,0x101036B,0x101036C,0x7F030139,0x7F0303A0,0x7F0303A1,0x7F0303A9,0x7F0303AA }
 			public static int[] SwitchPreferenceCompat = new int[] {
 					16843247,
 					16843248,
@@ -39796,10 +40998,10 @@ namespace EcoCareApp.Droid
 					16843627,
 					16843628,
 					2130903353,
-					2130903953,
-					2130903954,
-					2130903962,
-					2130903963};
+					2130903968,
+					2130903969,
+					2130903977,
+					2130903978};
 			
 			// aapt resource value: 2
 			public const int SwitchPreferenceCompat_android_disableDependentsState = 2;
@@ -39876,23 +41078,8 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 2
 			public const int TabItem_android_text = 2;
 			
-			// aapt resource value: { 0x7F03039C,0x7F03039D,0x7F03039E,0x7F03039F,0x7F0303A0,0x7F0303A1,0x7F0303A2,0x7F0303A3,0x7F0303A4,0x7F0303A5,0x7F0303A6,0x7F0303A7,0x7F0303A8,0x7F0303A9,0x7F0303AA,0x7F0303AB,0x7F0303AC,0x7F0303AD,0x7F0303AE,0x7F0303AF,0x7F0303B0,0x7F0303B1,0x7F0303B2,0x7F0303B4,0x7F0303B5,0x7F0303B6 }
+			// aapt resource value: { 0x7F0303AB,0x7F0303AC,0x7F0303AD,0x7F0303AE,0x7F0303AF,0x7F0303B0,0x7F0303B1,0x7F0303B2,0x7F0303B3,0x7F0303B4,0x7F0303B5,0x7F0303B6,0x7F0303B7,0x7F0303B8,0x7F0303B9,0x7F0303BA,0x7F0303BB,0x7F0303BC,0x7F0303BD,0x7F0303BE,0x7F0303BF,0x7F0303C0,0x7F0303C1,0x7F0303C3,0x7F0303C4,0x7F0303C5 }
 			public static int[] TabLayout = new int[] {
-					2130903964,
-					2130903965,
-					2130903966,
-					2130903967,
-					2130903968,
-					2130903969,
-					2130903970,
-					2130903971,
-					2130903972,
-					2130903973,
-					2130903974,
-					2130903975,
-					2130903976,
-					2130903977,
-					2130903978,
 					2130903979,
 					2130903980,
 					2130903981,
@@ -39901,9 +41088,24 @@ namespace EcoCareApp.Droid
 					2130903984,
 					2130903985,
 					2130903986,
+					2130903987,
 					2130903988,
 					2130903989,
-					2130903990};
+					2130903990,
+					2130903991,
+					2130903992,
+					2130903993,
+					2130903994,
+					2130903995,
+					2130903996,
+					2130903997,
+					2130903998,
+					2130903999,
+					2130904000,
+					2130904001,
+					2130904003,
+					2130904004,
+					2130904005};
 			
 			// aapt resource value: 0
 			public const int TabLayout_tabBackground = 0;
@@ -39983,7 +41185,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 25
 			public const int TabLayout_tabUnboundedRipple = 25;
 			
-			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x1010098,0x101009A,0x101009B,0x1010161,0x1010162,0x1010163,0x1010164,0x10103AC,0x1010585,0x7F03019F,0x7F0301A8,0x7F0303BC,0x7F0303DE }
+			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x1010098,0x101009A,0x101009B,0x1010161,0x1010162,0x1010163,0x1010164,0x10103AC,0x1010585,0x7F03019F,0x7F0301A8,0x7F0303CB,0x7F0303ED }
 			public static int[] TextAppearance = new int[] {
 					16842901,
 					16842902,
@@ -39999,8 +41201,8 @@ namespace EcoCareApp.Droid
 					16844165,
 					2130903455,
 					2130903464,
-					2130903996,
-					2130904030};
+					2130904011,
+					2130904045};
 			
 			// aapt resource value: 10
 			public const int TextAppearance_android_fontFamily = 10;
@@ -40050,7 +41252,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 15
 			public const int TextAppearance_textLocale = 15;
 			
-			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x101014F,0x1010161,0x1010162,0x1010163,0x1010164,0x10103AC,0x7F030065,0x7F030066,0x7F0303DB,0x7F0303DF,0x7F0303E0 }
+			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x101014F,0x1010161,0x1010162,0x1010163,0x1010164,0x10103AC,0x7F030065,0x7F030066,0x7F0303EA,0x7F0303EE,0x7F0303EF }
 			public static int[] TextEffects = new int[] {
 					16842901,
 					16842902,
@@ -40063,9 +41265,9 @@ namespace EcoCareApp.Droid
 					16843692,
 					2130903141,
 					2130903142,
-					2130904027,
-					2130904031,
-					2130904032};
+					2130904042,
+					2130904046,
+					2130904047};
 			
 			// aapt resource value: 8
 			public const int TextEffects_android_fontFamily = 8;
@@ -40109,14 +41311,14 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 13
 			public const int TextEffects_textOutlineThickness = 13;
 			
-			// aapt resource value: { 0x7F0303DC }
+			// aapt resource value: { 0x7F0303EB }
 			public static int[] TextInputEditText = new int[] {
-					2130904028};
+					2130904043};
 			
 			// aapt resource value: 0
 			public const int TextInputEditText_textInputLayoutFocusedRectEnabled = 0;
 			
-			// aapt resource value: { 0x101000E,0x101009A,0x101011F,0x101013F,0x1010150,0x7F03006D,0x7F03006E,0x7F03006F,0x7F030070,0x7F030071,0x7F030072,0x7F030073,0x7F030074,0x7F030075,0x7F030076,0x7F030077,0x7F03010F,0x7F030110,0x7F030111,0x7F030112,0x7F030113,0x7F030114,0x7F03015C,0x7F03015D,0x7F03015E,0x7F03015F,0x7F030160,0x7F030161,0x7F030168,0x7F030169,0x7F03016A,0x7F03016B,0x7F03016C,0x7F03016D,0x7F03016E,0x7F030172,0x7F0301B6,0x7F0301B7,0x7F0301B8,0x7F0301B9,0x7F0301BE,0x7F0301BF,0x7F0301C0,0x7F0301C1,0x7F0302DC,0x7F0302DD,0x7F0302DE,0x7F0302DF,0x7F0302E0,0x7F0302EA,0x7F0302EB,0x7F0302EC,0x7F030301,0x7F030302,0x7F030303,0x7F03034D,0x7F030350,0x7F030375,0x7F030376,0x7F030377,0x7F030378,0x7F030379,0x7F03038C,0x7F03038D,0x7F03038E }
+			// aapt resource value: { 0x101000E,0x101009A,0x101011F,0x101013F,0x1010150,0x7F03006D,0x7F03006E,0x7F03006F,0x7F030070,0x7F030071,0x7F030072,0x7F030073,0x7F030074,0x7F030075,0x7F030076,0x7F030077,0x7F03010F,0x7F030110,0x7F030111,0x7F030112,0x7F030113,0x7F030114,0x7F03015C,0x7F03015D,0x7F03015E,0x7F03015F,0x7F030160,0x7F030161,0x7F030168,0x7F030169,0x7F03016A,0x7F03016B,0x7F03016C,0x7F03016D,0x7F03016E,0x7F030172,0x7F0301B6,0x7F0301B7,0x7F0301B8,0x7F0301B9,0x7F0301BE,0x7F0301BF,0x7F0301C0,0x7F0301C1,0x7F0302DC,0x7F0302DD,0x7F0302DE,0x7F0302DF,0x7F0302E0,0x7F0302EA,0x7F0302EB,0x7F0302EC,0x7F030301,0x7F030302,0x7F030303,0x7F03035C,0x7F03035F,0x7F030384,0x7F030385,0x7F030386,0x7F030387,0x7F030388,0x7F03039B,0x7F03039C,0x7F03039D }
 			public static int[] TextInputLayout = new int[] {
 					16842766,
 					16842906,
@@ -40173,16 +41375,16 @@ namespace EcoCareApp.Droid
 					2130903809,
 					2130903810,
 					2130903811,
-					2130903885,
-					2130903888,
-					2130903925,
-					2130903926,
-					2130903927,
-					2130903928,
-					2130903929,
-					2130903948,
-					2130903949,
-					2130903950};
+					2130903900,
+					2130903903,
+					2130903940,
+					2130903941,
+					2130903942,
+					2130903943,
+					2130903944,
+					2130903963,
+					2130903964,
+					2130903965};
 			
 			// aapt resource value: 0
 			public const int TextInputLayout_android_enabled = 0;
@@ -40394,7 +41596,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 2
 			public const int ThemeEnforcement_enforceTextAppearance = 2;
 			
-			// aapt resource value: { 0x10100AF,0x1010140,0x7F03007F,0x7F0300CD,0x7F0300CE,0x7F0300F3,0x7F0300F4,0x7F0300F5,0x7F0300F6,0x7F0300F7,0x7F0300F8,0x7F030262,0x7F030263,0x7F030282,0x7F03028A,0x7F0302B9,0x7F0302BA,0x7F0302F5,0x7F030387,0x7F030389,0x7F03038A,0x7F0303FC,0x7F030400,0x7F030401,0x7F030402,0x7F030403,0x7F030404,0x7F030405,0x7F030406,0x7F030407 }
+			// aapt resource value: { 0x10100AF,0x1010140,0x7F03007F,0x7F0300CD,0x7F0300CE,0x7F0300F3,0x7F0300F4,0x7F0300F5,0x7F0300F6,0x7F0300F7,0x7F0300F8,0x7F030262,0x7F030263,0x7F030282,0x7F03028A,0x7F0302B9,0x7F0302BA,0x7F0302F5,0x7F030396,0x7F030398,0x7F030399,0x7F03040B,0x7F03040F,0x7F030410,0x7F030411,0x7F030412,0x7F030413,0x7F030414,0x7F030415,0x7F030416 }
 			public static int[] Toolbar = new int[] {
 					16842927,
 					16843072,
@@ -40414,18 +41616,18 @@ namespace EcoCareApp.Droid
 					2130903737,
 					2130903738,
 					2130903797,
-					2130903943,
-					2130903945,
-					2130903946,
-					2130904060,
-					2130904064,
-					2130904065,
-					2130904066,
-					2130904067,
-					2130904068,
-					2130904069,
-					2130904070,
-					2130904071};
+					2130903958,
+					2130903960,
+					2130903961,
+					2130904075,
+					2130904079,
+					2130904080,
+					2130904081,
+					2130904082,
+					2130904083,
+					2130904084,
+					2130904085,
+					2130904086};
 			
 			// aapt resource value: 0
 			public const int Toolbar_android_gravity = 0;
@@ -40548,7 +41750,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 6
 			public const int Tooltip_backgroundTint = 6;
 			
-			// aapt resource value: { 0x1010320,0x1010321,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103FA,0x1010440,0x7F03041C }
+			// aapt resource value: { 0x1010320,0x1010321,0x1010322,0x1010323,0x1010324,0x1010325,0x1010326,0x1010327,0x1010328,0x10103FA,0x1010440,0x7F03042B }
 			public static int[] Transform = new int[] {
 					16843552,
 					16843553,
@@ -40561,7 +41763,7 @@ namespace EcoCareApp.Droid
 					16843560,
 					16843770,
 					16843840,
-					2130904092};
+					2130904107};
 			
 			// aapt resource value: 10
 			public const int Transform_android_elevation = 10;
@@ -40599,7 +41801,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 11
 			public const int Transform_transformPivotTarget = 11;
 			
-			// aapt resource value: { 0x10100D0,0x7F030046,0x7F0300EC,0x7F0300ED,0x7F030151,0x7F030207,0x7F0302AE,0x7F0302E1,0x7F030373,0x7F03041D,0x7F03041F }
+			// aapt resource value: { 0x10100D0,0x7F030046,0x7F0300EC,0x7F0300ED,0x7F030151,0x7F030207,0x7F0302AE,0x7F0302E1,0x7F030382,0x7F03042C,0x7F03042E }
 			public static int[] Transition = new int[] {
 					16842960,
 					2130903110,
@@ -40609,9 +41811,9 @@ namespace EcoCareApp.Droid
 					2130903559,
 					2130903726,
 					2130903777,
-					2130903923,
-					2130904093,
-					2130904095};
+					2130903938,
+					2130904108,
+					2130904110};
 			
 			// aapt resource value: 0
 			public const int Transition_android_id = 0;
@@ -40646,13 +41848,13 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 10
 			public const int Transition_transitionFlags = 10;
 			
-			// aapt resource value: { 0x7F0300F0,0x7F030332,0x7F030333,0x7F030334,0x7F030335 }
+			// aapt resource value: { 0x7F0300F0,0x7F030341,0x7F030342,0x7F030343,0x7F030344 }
 			public static int[] Variant = new int[] {
 					2130903280,
-					2130903858,
-					2130903859,
-					2130903860,
-					2130903861};
+					2130903873,
+					2130903874,
+					2130903875,
+					2130903876};
 			
 			// aapt resource value: 0
 			public const int Variant_constraints = 0;
@@ -40669,13 +41871,13 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 4
 			public const int Variant_region_widthMoreThan = 4;
 			
-			// aapt resource value: { 0x1010000,0x10100DA,0x7F0302D3,0x7F0302D6,0x7F0303E8 }
+			// aapt resource value: { 0x1010000,0x10100DA,0x7F0302D3,0x7F0302D6,0x7F0303F7 }
 			public static int[] View = new int[] {
 					16842752,
 					16842970,
 					2130903763,
 					2130903766,
-					2130904040};
+					2130904055};
 			
 			// aapt resource value: { 0x10100D4,0x7F030050,0x7F030051 }
 			public static int[] ViewBackgroundHelper = new int[] {
@@ -40714,7 +41916,7 @@ namespace EcoCareApp.Droid
 			// aapt resource value: 1
 			public const int ViewStubCompat_android_layout = 1;
 			
-			// aapt resource value: { 0x10100D0,0x7F030001,0x7F030002,0x7F0300BF,0x7F030151,0x7F0301D0,0x7F0301D1,0x7F0302AE,0x7F0302B3,0x7F0302CB,0x7F0302E1,0x7F03034C,0x7F03041D,0x7F030426,0x7F03042F }
+			// aapt resource value: { 0x10100D0,0x7F030001,0x7F030002,0x7F0300BF,0x7F030151,0x7F0301D0,0x7F0301D1,0x7F0302AE,0x7F0302B3,0x7F0302CB,0x7F0302E1,0x7F03035B,0x7F03042C,0x7F030435,0x7F03043E }
 			public static int[] ViewTransition = new int[] {
 					16842960,
 					2130903041,
@@ -40727,10 +41929,10 @@ namespace EcoCareApp.Droid
 					2130903731,
 					2130903755,
 					2130903777,
-					2130903884,
-					2130904093,
-					2130904102,
-					2130904111};
+					2130903899,
+					2130904108,
+					2130904117,
+					2130904126};
 			
 			// aapt resource value: 0
 			public const int ViewTransition_android_id = 0;
