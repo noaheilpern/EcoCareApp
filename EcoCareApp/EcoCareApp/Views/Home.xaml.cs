@@ -18,5 +18,6 @@ namespace EcoCareApp.Views
             this.BindingContext = new HomeViewModel();
             InitializeComponent();
         }
+
     }
 }
