@@ -6,10 +6,10 @@ namespace EcoCareApp.Models
 {
     public class UserData
     {
-        public double DistanceToWork { get; set; }
-        public double ElecticityUsagePerWeek { get; set; }
-        public int MeatsMeals { get; set; }
-        public int DateT { get; set; }
+        public int CategoryId { get; set; }
+        public double CategoryValue { get; set; }
+        public DateTime DateT { get; set; }
+      
         public string UserName { get; set; }
 
         public virtual RegularUser UserNameNavigation { get; set; }

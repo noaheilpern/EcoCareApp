@@ -421,19 +421,59 @@ namespace EcoCareApp.Services
                 return false;
             }
         }
-        public async Task<bool> AddData(double value, string category)
+
+        public async Task<int> GetCategory(string category)
         {
             try
             {
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetCategory?category={category}");
+
                 JsonSerializerOptions options = new JsonSerializerOptions
                 {
                     ReferenceHandler = ReferenceHandler.Preserve,
                     PropertyNameCaseInsensitive = true
                 };
+                string content = await response.Content.ReadAsStringAsync();
+                int id = JsonSerializer.Deserialize<int>(content, options);
 
-                string json = JsonSerializer.Serialize(value, options);
+                if (response.IsSuccessStatusCode)
+                {
+                    return id;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return 0;
+            }
+        }
+        public async Task<bool> AddData(double value, string category)
+        {
+            try
+            {
+                int id = await GetCategory(category);
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    PropertyNameCaseInsensitive = true
+                };
+                App a = (App)App.Current;
+                User u = a.CurrentUser;
+                UserData data = new UserData
+                {
+                    CategoryId = id,
+                    CategoryValue = value,
+                    DateT = DateTime.Today,
+                    UserName = u.UserName,
+                };
+
+                string json = JsonSerializer.Serialize(data, options);
                 StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/AddData", content);
+                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/AddData",content);
                 if (response.IsSuccessStatusCode)
                 {
 

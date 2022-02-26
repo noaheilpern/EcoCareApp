@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:EcoCareApp.Views"
              xmlns:slider="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
 
-             xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms"
-             BackgroundColor="White">
+             xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:HomeViewModel"
+              BackgroundColor="White">
 
     <!--  <div>Icons made by
                            <a href="https://www.flaticon.com/authors/ilham-fitrotul-hayat" title="Ilham Fitrotul Hayat">Ilham Fitrotul Hayat</a> from
@@ -85,12 +85,12 @@
                                 <ContentView VerticalOptions="Fill">
                                     <ScrollView x:Name="scrollView" IsClippedToBounds="true">
                                         <StackLayout x:Name="eventLogLayout" Margin="5">
-                                            <Label Text="Meat meals per week:" IsVisible="{Binding MeatTaped}"></Label>
-                                            <Entry x:Name="addMeat" IsVisible="{Binding MeatTaped}" Text="{Binding MeatText}"/>
-                                            <Label Text="Electricity usage this week(in kWh):" IsVisible="{Binding ElecTaped}"></Label>
-                                            <Entry x:Name="addElec" IsVisible="{Binding ElecTaped}" />
-                                            <Label Text="Km driven this week:" IsVisible="{Binding CarTaped}"></Label>
-                                            <Entry x:Name="addCar" IsVisible="{Binding CarTaped}" />
+                                            <Label Text="Meat meals per week:" IsVisible="{Binding MeatTapped}"></Label>
+                                            <Entry x:Name="addMeat" IsVisible="{Binding MeatTapped}" Text="{Binding MeatText}"/>
+                                            <Label Text="Electricity usage this week(in kWh):" IsVisible="{Binding ElecTapped}"></Label>
+                                            <Entry x:Name="addElec" IsVisible="{Binding ElecTapped}" />
+                                            <Label Text="Km driven this week:" IsVisible="{Binding CarTapped}"></Label>
+                                            <Entry x:Name="addCar" IsVisible="{Binding CarTapped}" />
 
                                         </StackLayout>
                                     </ScrollView>
