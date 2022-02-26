@@ -17,7 +17,30 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-        
+
+        private bool meatFilled;
+        public bool MeatFilled
+        {
+            get
+            { return meatFilled; }
+            set
+            {
+                meatFilled = value;
+                OnPropertyChanged("MeatFilled");
+            }
+        }
+
+        private bool carFilled;
+        public bool CarFilled
+        {
+            get
+            { return carFilled; }
+            set
+            {
+                carFilled = value;
+                OnPropertyChanged("CarFilled");
+            }
+        }
 
         private bool meatTapped;
         public bool MeatTapped
@@ -28,6 +51,18 @@ namespace EcoCareApp.ViewModels
             {
                 meatTapped = value;
                 OnPropertyChanged("MeatTapped");
+            }
+        }
+
+        private bool elecFilled;
+        public bool ElecFilled
+        {
+            get
+            { return elecFilled; }
+            set
+            {
+                elecFilled = value;
+                OnPropertyChanged("ElecFilled");
             }
         }
         private bool carTapped;
@@ -54,11 +89,67 @@ namespace EcoCareApp.ViewModels
             }
         }
 
+
+      
+        public double meatEntry;
+        public double MeatEntry
+        {
+            get
+            { return meatEntry; }
+            set
+            {
+                meatEntry = value;
+                OnPropertyChanged("MeatEntry");
+            }
+        }
+
+        public double elecEntry;
+        public double ElecEntry
+        {
+            get
+            { return elecEntry; }
+            set
+            {
+                elecEntry = value;
+                OnPropertyChanged("ElecEntry");
+            }
+        }
+
+        public double carEntry;
+        public double CarEntry
+        {
+            get
+            { return carEntry; }
+            set
+            {
+                carEntry = value;
+                OnPropertyChanged("CarEntry");
+            }
+        }
+
+        public bool visible;
+        public bool Visible
+        {
+            get
+            { return visible; }
+            set
+            {
+                visible = value;
+                OnPropertyChanged("Visible");
+            }
+        }
+
+        public ICommand SomethingPressed => new Command(CirclePressed);
+        void CirclePressed()
+        {
+            Visible = true;
+        }
+
         public ICommand ElecCommand => new Command(ElecPressed);
         void ElecPressed()
         {
             carTapped = false;
-            meatTapped = false; 
+            meatTapped = false;
             elecTapped = true;
 
         }
@@ -81,7 +172,6 @@ namespace EcoCareApp.ViewModels
 
         }
 
-        public double MeatText { get; set; }
         public ICommand Save => new Command(SaveData);
 
         async void SaveData()
@@ -92,20 +182,25 @@ namespace EcoCareApp.ViewModels
 
                 if (ElecTapped)
                 {
-                    await proxy.AddData(6,"Electricity");
+                    await proxy.AddData(ElecEntry, "Electricity_Usage");
+                    ElecTapped = false;
                 }
                 else if (CarTapped)
                 {
-
+                    await proxy.AddData(CarEntry, "Distance");
+                    CarTapped = false;
                 }
                 else
                 {
-                    await proxy.AddData(MeatText, "Meat_Meals");
+                    await proxy.AddData(MeatEntry, "Meat_Meals");
+                    MeatTapped = false;
+                    MeatFilled = true; 
                 }
 
             }
             catch(Exception e)
             {
+
             }
 
 

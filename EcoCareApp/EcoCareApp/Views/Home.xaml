@@ -45,7 +45,8 @@
                                              RimRadius="150"
                               RimColor="#b5e48c" SeparatorThickness="5" 
                               SeparatorColor="Black" >
-                                <radialMenu:SfRadialMenu.CenterButtonView >
+                                
+                                <radialMenu:SfRadialMenu.CenterButtonView>
                                     <Grid>
                                         <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
                                             <Image Source="static_plus.png"/>
@@ -61,9 +62,9 @@
                                 </radialMenu:SfRadialMenu.CenterButtonBackView>
 
                                 <radialMenu:SfRadialMenu.Items>
-                                    <radialMenu:SfRadialMenuItem Image="distance.png" Command="{Binding CarCommand}"/>
-                                    <radialMenu:SfRadialMenuItem Image="electricity.png" Command="{Binding ElecCommand}"/>
-                                    <radialMenu:SfRadialMenuItem Image="meat.png" Command="{Binding MeatCommand}"/>
+                                    <radialMenu:SfRadialMenuItem Image="distance.png" x:Name="Car" Command="{Binding CarCommand}" ItemTapped="Car_ItemTapped"/>
+                                    <radialMenu:SfRadialMenuItem Image="electricity.png" x:Name="Elec" ItemTapped="Elec_ItemTapped" Command="{Binding ElecCommand}"/>
+                                    <radialMenu:SfRadialMenuItem Image="meat.png" x:Name="Meat" ItemTapped="Meat_ItemTapped" Command="{Binding MeatCommand}"/>
                                 </radialMenu:SfRadialMenu.Items>
                             </radialMenu:SfRadialMenu>
 
@@ -86,11 +87,11 @@
                                     <ScrollView x:Name="scrollView" IsClippedToBounds="true">
                                         <StackLayout x:Name="eventLogLayout" Margin="5">
                                             <Label Text="Meat meals per week:" IsVisible="{Binding MeatTapped}"></Label>
-                                            <Entry x:Name="addMeat" IsVisible="{Binding MeatTapped}" Text="{Binding MeatText}"/>
+                                            <Entry x:Name="addMeat" IsVisible="{Binding MeatTapped}" Text="{Binding MeatEntry}"/>
                                             <Label Text="Electricity usage this week(in kWh):" IsVisible="{Binding ElecTapped}"></Label>
-                                            <Entry x:Name="addElec" IsVisible="{Binding ElecTapped}" />
+                                            <Entry x:Name="addElec" IsVisible="{Binding ElecTapped}" Text="{Binding ElecEntry}" />
                                             <Label Text="Km driven this week:" IsVisible="{Binding CarTapped}"></Label>
-                                            <Entry x:Name="addCar" IsVisible="{Binding CarTapped}" />
+                                            <Entry x:Name="addCar" IsVisible="{Binding CarTapped}" Text="{Binding CarEntry}"/>
 
                                         </StackLayout>
                                     </ScrollView>
