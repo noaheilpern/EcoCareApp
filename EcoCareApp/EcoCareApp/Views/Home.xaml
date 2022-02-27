@@ -131,11 +131,7 @@
 
             <xtools:TabViewItem Icon="images/chart_bw.png" IconSelected="images/chart.png">
                 <xtools:TabViewItem.Content>
-                    <StackLayout>
-                        <Label Text="CHARTS!!!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-                    </StackLayout>
+                    <local:Graphs/>
                 </xtools:TabViewItem.Content>
             </xtools:TabViewItem>
 

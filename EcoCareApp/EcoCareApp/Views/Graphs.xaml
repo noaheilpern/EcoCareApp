@@ -24,7 +24,7 @@
             <chart:NumericalAxis/>
         </chart:SfChart.SecondaryAxis>
 
-        <chart:ColumnSeries ItemsSource="{Binding GraphsData}" XBindingPath="Date" YBindingPath="Value"/>
+        <chart:ColumnSeries ItemsSource="{Binding UserData}" XBindingPath="Date" YBindingPath="Value"/>
         
         
 

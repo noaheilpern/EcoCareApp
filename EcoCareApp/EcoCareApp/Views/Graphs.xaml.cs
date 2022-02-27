@@ -15,8 +15,7 @@ namespace EcoCareApp.Views
     {
         public Graphs()
         {
-            GraphsViewModel context = new GraphsViewModel();
-
+            this.BindingContext = new GraphsViewModel();
             InitializeComponent();
         }
     }
