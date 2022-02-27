@@ -139,6 +139,29 @@ namespace EcoCareApp.ViewModels
             }
         }
 
+        public bool visibleLine;
+        public bool VisibleLine
+        {
+            get
+            { return visibleLine; }
+            set
+            {
+                visibleLine = value;
+                OnPropertyChanged("VisibleLine");
+            }
+        }
+
+        public bool dataFilled;
+        public bool DataFilled
+        {
+            get
+            { return dataFilled; }
+            set
+            {
+                dataFilled = value;
+                OnPropertyChanged("DataFilled");
+            }
+        }
         public ICommand SomethingPressed => new Command(CirclePressed);
         void CirclePressed()
         {
@@ -146,29 +169,64 @@ namespace EcoCareApp.ViewModels
         }
 
         public ICommand ElecCommand => new Command(ElecPressed);
-        void ElecPressed()
+        async void ElecPressed()
         {
-            carTapped = false;
-            meatTapped = false;
-            elecTapped = true;
-
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+            if(await proxy.IsDataExist("Electricity_Usage"))
+            {
+                DataFilled = true;
+                Visible = false;
+            }
+            else
+            {
+                ElecTapped = true;
+                Visible = true;
+                DataFilled = false; 
+            }
+            CarTapped = false;
+            MeatTapped = false;
+            VisibleLine = true; 
         }
 
         public ICommand CarCommand => new Command(CarPressed);
-        void CarPressed()
+        async void CarPressed()
         {
-            carTapped = true;
-            meatTapped = false;
-            elecTapped = false;
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+            if (await proxy.IsDataExist("Distance"))
+            {
+                DataFilled = true;
+                Visible = false;
+            }
+            else
+            {
+                DataFilled = false; 
+                CarTapped = true;
+                Visible = true;
+            }
+            ElecTapped = false;
+            MeatTapped = false;
+            VisibleLine = true;
 
         }
 
         public ICommand MeatCommand => new Command(MeatPressed);
-        void MeatPressed()
+        async void MeatPressed()
         {
-            carTapped = false;
-            meatTapped = true;
-            elecTapped = false;
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+            if (await proxy.IsDataExist("Meat_Meals"))
+            {
+                DataFilled = true;
+                Visible = false; 
+            }
+            else
+            {
+                DataFilled = false; 
+                MeatTapped = true;
+                Visible = true;
+            }
+            CarTapped = false;
+            ElecTapped = false;
+            VisibleLine = true;
 
         }
 

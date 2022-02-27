@@ -422,11 +422,43 @@ namespace EcoCareApp.Services
             }
         }
 
+        public async Task<bool> IsDataExist(string category)
+        {
+            int id = await GetCategory(category);
+            App app = (App)App.Current;
+            string userName = app.CurrentUser.UserName;
+            try
+            {
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/IsDataExist?categoryId={id}&&userName={userName}");
+
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    PropertyNameCaseInsensitive = true
+                };
+                string content = await response.Content.ReadAsStringAsync();
+                bool exist = JsonSerializer.Deserialize<bool>(content, options);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return exist;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return false;
+            }
+        }
         public async Task<int> GetCategory(string category)
         {
             try
             {
-                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetCategory?category={category}");
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetCategoryId?category={category}");
 
                 JsonSerializerOptions options = new JsonSerializerOptions
                 {

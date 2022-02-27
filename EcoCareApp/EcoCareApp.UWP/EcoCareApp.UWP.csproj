@@ -135,9 +135,11 @@
     <Content Include="images\bussiness_owner_register.jpg" />
     <Content Include="images\chart.png" />
     <Content Include="images\chart_bw.png" />
+    <Content Include="images\data_filled.png" />
     <Content Include="images\distance.png" />
     <Content Include="images\electricity.png" />
     <Content Include="images\meat.png" />
+    <Content Include="images\plus.png" />
     <Content Include="images\plus_icon.gif" />
     <Content Include="images\profile.jpg" />
     <Content Include="images\home.png" />
@@ -154,7 +156,6 @@
     <Content Include="images\shopping_cart_bw.png" />
     <Content Include="images\sign_up.jpg" />
     <Content Include="images\start_page.jpg" />
-    <Content Include="images\static_plus.png" />
     <Content Include="images\user_bw.png" />
     <Content Include="images\user.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -192,6 +193,9 @@
       <Version>19.4.0.53</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Core">
+      <Version>19.4.0.53</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfChart">
       <Version>19.4.0.53</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfListView">

@@ -150,6 +150,9 @@
     <PackageReference Include="Syncfusion.Xamarin.Core">
       <Version>19.4.0.53</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfChart">
+      <Version>19.4.0.53</Version>
+    </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfListView">
       <Version>19.4.0.53</Version>
     </PackageReference>

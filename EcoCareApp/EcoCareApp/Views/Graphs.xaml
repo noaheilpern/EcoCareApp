@@ -2,9 +2,33 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoCareApp.Views.Graphs"
-              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" >
+              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+            >
 
-    <microcharts:ChartView Grid.Row="1" Grid.ColumnSpan="6" x:Name="chartView" BackgroundColor="Transparent" Chart="{Binding ExampleChart}" />
+    <chart:SfChart>
+        <chart:SfChart.Title>
+            <chart:ChartTitle Text="{Binding CategoryName}"/>
+        </chart:SfChart.Title>
+        
+        <chart:SfChart.PrimaryAxis>
+            <chart:CategoryAxis>
+                <chart:CategoryAxis.Title>
+                    <chart:ChartAxisTitle Text="Week">
+                    </chart:ChartAxisTitle>
+                </chart:CategoryAxis.Title>
+            </chart:CategoryAxis>
+        </chart:SfChart.PrimaryAxis>
+        
+        <chart:SfChart.SecondaryAxis>
+            <chart:NumericalAxis/>
+        </chart:SfChart.SecondaryAxis>
 
-    
+        <chart:ColumnSeries ItemsSource="{Binding GraphsData}" XBindingPath="Date" YBindingPath="Value"/>
+        
+        
+
+
+    </chart:SfChart>
+
 </ContentView>

@@ -19,21 +19,6 @@ namespace EcoCareApp.Views
             InitializeComponent();
         }
 
-        private void Car_ItemTapped(object sender, Syncfusion.SfRadialMenu.XForms.ItemTappedEventArgs e)
-        {
-            ((HomeViewModel)this.BindingContext).CarTapped = true;
-        }
-
-        private void Elec_ItemTapped(object sender, Syncfusion.SfRadialMenu.XForms.ItemTappedEventArgs e)
-        {
-            ((HomeViewModel)this.BindingContext).ElecTapped = true;
-
-        }
-
-        private void Meat_ItemTapped(object sender, Syncfusion.SfRadialMenu.XForms.ItemTappedEventArgs e)
-        {
-            ((HomeViewModel)this.BindingContext).MeatTapped = true;
-
-        }
+       
     }
 }
