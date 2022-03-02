@@ -237,27 +237,39 @@ namespace EcoCareApp.ViewModels
             try
             {
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                bool succssed;
 
                 if (ElecTapped)
                 {
-                    await proxy.AddData(ElecEntry, "Electricity_Usage");
+                    succssed = await proxy.AddData(ElecEntry, "Electricity_Usage");
                     ElecTapped = false;
                 }
                 else if (CarTapped)
                 {
-                    await proxy.AddData(CarEntry, "Distance");
+                    succssed = await proxy.AddData(CarEntry, "Distance");
                     CarTapped = false;
                 }
                 else
                 {
-                    await proxy.AddData(MeatEntry, "Meat_Meals");
+                    succssed = await proxy.AddData(MeatEntry, "Meat_Meals");
                     MeatTapped = false;
                     MeatFilled = true; 
                 }
+                if(succssed)
+                {
+                    await App.Current.MainPage.DisplayAlert("GREAT", "Data inserted successfully", "Yay!");
+
+                    DataFilled = true;
+                    Visible = false;
+
+                }
+                else
+                    await App.Current.MainPage.DisplayAlert("Error", "Inserting data failed. Please check data is filled as needed", "OK");
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
+                await App.Current.MainPage.DisplayAlert("Error", "Inserting data failed. Please check data is filled as needed", "OK");
 
             }
 

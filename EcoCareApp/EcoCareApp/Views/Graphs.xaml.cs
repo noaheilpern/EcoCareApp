@@ -17,6 +17,11 @@ namespace EcoCareApp.Views
         {
             this.BindingContext = new GraphsViewModel();
             InitializeComponent();
+            if (Device.RuntimePlatform == Device.UWP)
+            {
+                //axisLabelStyle.FontSize = 14;
+            }
+
         }
     }
 }
