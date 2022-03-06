@@ -14,21 +14,19 @@ namespace EcoCareApp.Models
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-        public CardsItem()
-        {
-            //to write
-
-        }
+      
         public string Category { get; set; }
+
+        private string categoryValue;
         public string CategoryValue {
             get
             {
-                return CategoryValue;
+                return categoryValue;
             }
 
             set
             {
-                this.CategoryValue = value;
+                this.categoryValue = value;
                 OnPropertyChanged("CategoryValue");
             }
         }

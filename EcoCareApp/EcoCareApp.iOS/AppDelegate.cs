@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.ListView.XForms.iOS;
 using Syncfusion.SfRadialMenu.XForms.iOS;
+using Syncfusion.XForms.iOS.EffectsView;
 using UIKit;
 
 namespace EcoCareApp.iOS
@@ -25,6 +27,8 @@ namespace EcoCareApp.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             SfRadialMenuRenderer.Init();
+            SfListViewRenderer.Init();
+            SfEffectsViewRenderer.Init();
             Syncfusion.SfChart.XForms.iOS.Renderers.SfChartRenderer.Init();
 
             Syncfusion.XForms.iOS.PopupLayout.SfPopupLayoutRenderer.Init();
