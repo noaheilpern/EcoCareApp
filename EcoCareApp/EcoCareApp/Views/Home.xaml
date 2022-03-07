@@ -22,15 +22,15 @@
     -->
     
     <ContentPage.Content>
-        <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand" TabStripBackgroundColor="White" TabStripBorderColor="Gray">
-            <xtools:TabViewItem Icon="images/user_bw.png" IconSelected="images/user.png">
+        <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand" TabStripBackgroundColor="White" TabStripBorderColor="Gray" TabIndex="2">
+            <xtools:TabViewItem Icon="user_bw.png" IconSelected="user.png">
                 <local:UserProfile>
                    
                 </local:UserProfile>
             </xtools:TabViewItem>
 
 
-            <xtools:TabViewItem Icon="images/home_bw.png" IconSelected="images/home.png" VerticalOptions="FillAndExpand">
+            <xtools:TabViewItem Icon="home_bw.png" IconSelected="home.png" VerticalOptions="FillAndExpand">
                 <xtools:TabViewItem.Content>
                     <Grid BackgroundColor="White">
                         <Grid.RowDefinitions>
@@ -45,7 +45,7 @@
                              CenterButtonFontSize="15" EnableCenterButtonAnimation="True" CenterButtonPlacement="Center" 
                                              RimRadius="150"
                               RimColor="#b5e48c" SeparatorThickness="5" 
-                              SeparatorColor="Black" >
+                              SeparatorColor="Black" IsOpen="True" >
                                 
                                 <radialMenu:SfRadialMenu.CenterButtonView>
                                     <Grid>
@@ -117,17 +117,21 @@
 
 
 
-            <xtools:TabViewItem Icon="images/shopping_cart_bw.png" IconSelected="images/shopping_cart.png">
+            <xtools:TabViewItem Icon="shopping_cart_bw.png" IconSelected="shopping_cart.png">
                 <xtools:TabViewItem.Content>
                    <!-- <local:Products>
                         
                     </local:Products> -->
+                    <StackLayout>
+                        
+                    </StackLayout>
+                        
                 </xtools:TabViewItem.Content>
             </xtools:TabViewItem>
 
 
 
-            <xtools:TabViewItem Icon="images/chart_bw.png" IconSelected="images/chart.png">
+            <xtools:TabViewItem Icon="chart_bw.png" IconSelected="chart.png">
                 <xtools:TabViewItem.Content>
                     <local:Graphs/>
                 </xtools:TabViewItem.Content>

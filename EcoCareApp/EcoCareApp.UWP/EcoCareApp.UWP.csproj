@@ -138,6 +138,7 @@
     <Content Include="images\data_filled.png" />
     <Content Include="images\distance.png" />
     <Content Include="images\electricity.png" />
+    <Content Include="images\loading_animation.gif" />
     <Content Include="images\meat.png" />
     <Content Include="images\plus.png" />
     <Content Include="images\plus_icon.gif" />
@@ -190,28 +191,28 @@
       <Version>2.80.3</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Licensing">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
       <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Core">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfChart">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfListView">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRadialMenu">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="WpfAnimatedGif">
       <Version>2.0.2</Version>

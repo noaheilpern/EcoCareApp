@@ -77,28 +77,28 @@
       <Version>2.80.3</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Licensing">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
       <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Core">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfChart">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfListView">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRadialMenu">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider">
-      <Version>19.4.0.53</Version>
+      <Version>19.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="System.Text.Json">
       <Version>6.0.2</Version>
@@ -221,6 +221,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\loading_animation.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

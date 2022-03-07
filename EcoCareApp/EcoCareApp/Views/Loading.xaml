@@ -5,9 +5,8 @@
              >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Loading"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Loading..." HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+            <!-- <Image Source="loading_animation.gif" IsAnimationPlaying="True"></Image> -->
             <!--<Image x:Name="LoadingImg"  gif:AnimationBehavior.SourceUri="Resources/LoadingGif.gif"/>-->
             <!--<Image x:Name="LoadingGif" Source="loading_gif.gif" IsAnimationPlaying="True"/>-->
         </StackLayout>

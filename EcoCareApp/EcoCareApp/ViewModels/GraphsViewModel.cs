@@ -32,7 +32,6 @@ namespace EcoCareApp.ViewModels
             {
                 new Color(82,182,154),
                 new Color(82,182,154),
-                new Color(218,219,189),
 
             };
 

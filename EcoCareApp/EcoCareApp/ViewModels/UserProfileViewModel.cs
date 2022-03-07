@@ -924,14 +924,14 @@ private void InitCountries()
                 User appUser = a.CurrentUser;
                 User u = new User
                 {
-                    Email = this.Email,
-                    FirstName = this.FirstName,
-                    LastName = this.LastName,
-                    Pass = this.Password,
+                    Email = cardItems.Where(c => c.Category.Equals("Email")).FirstOrDefault().CategoryValue,
+                    FirstName = cardItems.Where(c => c.Category.Equals("FirstName")).FirstOrDefault().CategoryValue,
+                    LastName = cardItems.Where(c => c.Category.Equals("LastName")).FirstOrDefault().CategoryValue,
+                    Pass = cardItems.Where(c => c.Category.Equals("Password")).FirstOrDefault().CategoryValue,
                     Country = this.SelectedCountry.CountryName,
                     IsAdmin = false,
                     UserName = appUser.UserName,
-
+                    
                 };
                 App app = (App)App.Current;
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
@@ -959,6 +959,7 @@ private void InitCountries()
                         isRefreshing = true;
                         worked = await proxy.UpdateUserAsync(ru);
                         isRefreshing = false;
+
                     }
                 }
                 else

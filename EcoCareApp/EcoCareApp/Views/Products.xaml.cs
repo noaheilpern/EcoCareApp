@@ -14,8 +14,8 @@ namespace EcoCareApp.Views
     {
         public Products()
         {
-            this.BindingContext = new ProductsViewModel(); 
-            InitializeComponent();
+            //this.BindingContext = new ProductsViewModel(); 
+            //InitializeComponent();
         }
     }
 }

@@ -368,15 +368,23 @@ namespace EcoCareApp.Services
                     PropertyNameCaseInsensitive = true
                 };
 
-                string json = JsonSerializer.Serialize<RegularUser>(ru, options);
+                string json = JsonSerializer.Serialize(ru, options);
                 StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/UpdateUser", content);
                 if (response.IsSuccessStatusCode)
                 {
 
                     string jsonContent = await response.Content.ReadAsStringAsync();
-                    RegularUser b = JsonSerializer.Deserialize<RegularUser>(jsonContent, options);
-                    return true;
+                    bool succeed = JsonSerializer.Deserialize<bool>(jsonContent, options);
+                    if (succeed)
+                    {
+                        App a = (App)App.Current;
+                        a.CurrentRegularUser = ru;
+                        a.CurrentUser = ru.UserNameNavigation;
+                        return true;
+                    }
+                    else
+                        return false;
                 }
                 else
                 {
@@ -407,8 +415,17 @@ namespace EcoCareApp.Services
                 {
 
                     string jsonContent = await response.Content.ReadAsStringAsync();
-                    Seller seller = JsonSerializer.Deserialize<Seller>(jsonContent, options);
-                    return true;
+                    bool succeed = JsonSerializer.Deserialize<bool>(jsonContent, options);
+                    if (succeed)
+                    {
+                        App a = (App)App.Current;
+                        a.CurrentSeller = s;
+                        a.CurrentUser = s.UserNameNavigation;
+                        return true;
+                    }
+                    else
+                        return false;
+                 
                 }
                 else
                 {
