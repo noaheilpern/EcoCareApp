@@ -119,11 +119,9 @@
 
             <xtools:TabViewItem Icon="images/shopping_cart_bw.png" IconSelected="images/shopping_cart.png">
                 <xtools:TabViewItem.Content>
-                    <StackLayout>
-                        <Label Text="SHOP SHOP SHOP"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-                    </StackLayout>
+                   <!-- <local:Products>
+                        
+                    </local:Products> -->
                 </xtools:TabViewItem.Content>
             </xtools:TabViewItem>
 

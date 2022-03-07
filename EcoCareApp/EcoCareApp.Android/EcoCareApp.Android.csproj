@@ -79,6 +79,9 @@
     <PackageReference Include="Syncfusion.Licensing">
       <Version>19.4.0.53</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Buttons">
+      <Version>19.4.0.54</Version>
+    </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Core">
       <Version>19.4.0.53</Version>
     </PackageReference>

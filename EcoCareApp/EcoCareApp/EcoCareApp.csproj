@@ -17,13 +17,14 @@
     <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.3" />
-    <PackageReference Include="Syncfusion.Licensing" Version="19.4.0.53" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.4.0.53" />
-    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="19.4.0.53" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="19.4.0.53" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="19.4.0.53" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRadialMenu" Version="19.4.0.53" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="19.4.0.53" />
+    <PackageReference Include="Syncfusion.Licensing" Version="19.4.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.4.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.4.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="19.4.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="19.4.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="19.4.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRadialMenu" Version="19.4.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="19.4.0.54" />
     <PackageReference Include="System.Text.Json" Version="6.0.2" />
     <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
@@ -47,6 +48,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\LogIn.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Products.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\RegisterOwner.xaml">
