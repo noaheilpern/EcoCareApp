@@ -20,6 +20,7 @@ namespace EcoCareApp.UWP
         public MainPage()
         {
             this.InitializeComponent();
+            SfListViewRenderer.Init();
 
             LoadApplication(new EcoCareApp.App());
         }

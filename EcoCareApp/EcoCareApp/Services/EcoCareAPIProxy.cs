@@ -112,7 +112,34 @@ namespace EcoCareApp.Services
                 return null;
             }
         }
+        public async Task<List<Product>> GetProductsAsync()
+        {
+            try
+            {
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetProducts");
+                if (response.IsSuccessStatusCode)
+                {
+                    JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve,
+                        PropertyNameCaseInsensitive = true
+                    };
+                    string content = await response.Content.ReadAsStringAsync();
+                    List<Product> Products = JsonSerializer.Deserialize<List<Product>>(content, options);
 
+                    return Products;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return null;
+            }
+        }
         public async Task<List<Country>> GetCountriesAsync()
         {
             try
