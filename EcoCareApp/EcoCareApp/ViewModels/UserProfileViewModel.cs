@@ -196,7 +196,7 @@ private void InitCountries()
                 if (this.filteredCountries != value)
                 {
                     this.filteredCountries = value;
-                    OnPropertyChanged("FilteredCountries");
+                    OnPropertyChanged("FilteredProducts");
                 }
             }
         }

@@ -119,12 +119,9 @@
 
             <xtools:TabViewItem Icon="shopping_cart_bw.png" IconSelected="shopping_cart.png">
                 <xtools:TabViewItem.Content>
-                   <!-- <local:Products>
+                    <local:Products>
                         
-                    </local:Products> -->
-                    <StackLayout>
-                        
-                    </StackLayout>
+                    </local:Products> 
                         
                 </xtools:TabViewItem.Content>
             </xtools:TabViewItem>

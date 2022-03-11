@@ -5,18 +5,22 @@
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable">
   <ContentView.Content>
         <StackLayout>
+            
         <Grid>
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <SearchBar x:Name="filterText" HeightRequest="40"
-           Placeholder="Search here to filter"
-           TextChanged="OnFilterTextChanged" Grid.Row="0"/>
-            <syncfusion:SfListView x:Name="listView" Grid.Row="1" ItemsSource="{Binding BookInfo}"/>
+           Placeholder="Search here to filter" Text="{Binding SearchTerm}" Grid.Row="0"/>
         </Grid>
         <Grid>
-            <syncfusion:SfListView x:Name="listView" 
+                <pullToRefresh:SfPullToRefresh x:Name="pullToRefresh"
+                               ProgressBackgroundColor="#428BCA" RefreshContentHeight="50" 
+                               RefreshContentWidth="50" TransitionMode="Push" IsRefreshing="False">
+                    <pullToRefresh:SfPullToRefresh.PullableContent>
+                        <syncfusion:SfListView x:Name="listView" 
                                 ItemsSource="{Binding ProductsList.DisplayItems}"
                                    ItemSize="100" 
                  SelectionMode="Single"

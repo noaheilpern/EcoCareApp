@@ -560,7 +560,7 @@ namespace EcoCareApp.ViewModels
                 if (this.filteredCountries != value)
                 {
                     this.filteredCountries = value;
-                    OnPropertyChanged("FilteredCountries");
+                    OnPropertyChanged("FilteredProducts");
                 }
             }
         }
