@@ -2,7 +2,7 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoCareApp.Views.Products"
-             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable">
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductsViewModel">
   <ContentView.Content>
         <StackLayout>
             
@@ -16,12 +16,9 @@
            Placeholder="Search here to filter" Text="{Binding SearchTerm}" Grid.Row="0"/>
         </Grid>
         <Grid>
-                <pullToRefresh:SfPullToRefresh x:Name="pullToRefresh"
-                               ProgressBackgroundColor="#428BCA" RefreshContentHeight="50" 
-                               RefreshContentWidth="50" TransitionMode="Push" IsRefreshing="False">
-                    <pullToRefresh:SfPullToRefresh.PullableContent>
+                
                         <syncfusion:SfListView x:Name="listView" 
-                                ItemsSource="{Binding ProductsList.DisplayItems}"
+                                ItemsSource="{Binding FilteredProducts}" 
                                    ItemSize="100" 
                  SelectionMode="Single"
                  SelectionGesture="Tap"
@@ -33,7 +30,8 @@
                                 <RowDefinition Height="0.4*" />
                                 <RowDefinition Height="0.6*" />
                             </Grid.RowDefinitions>
-                            <Label Text="{Binding BookName}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
+                            
+                            <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
                             <Label Grid.Row="1" Text="{Binding BookDescription}" TextColor="Teal" FontSize="15"/>
                         </Grid>
                     </DataTemplate>
