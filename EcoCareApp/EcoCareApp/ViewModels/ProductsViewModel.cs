@@ -8,7 +8,6 @@ using EcoCareApp.Models;
 using EcoCareApp.Services;
 using Xamarin.Forms;
 
-
 namespace EcoCareApp.ViewModels
 {
     class ProductsViewModel: INotifyPropertyChanged
@@ -26,14 +25,9 @@ namespace EcoCareApp.ViewModels
 
         }
         
-        public List<Product> ProductsList
+        public ObservableCollection<Product> ProductsList
         {
-            get
-            {
-                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                //return await proxy.GetProductsAsync();
-                return null;
-            }
+            get;set;
         }
 
 
@@ -45,10 +39,16 @@ namespace EcoCareApp.ViewModels
             isRefreshing = true;
             App theApp = (App)App.Current;
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-            this.allProductsList = await proxy.GetProductsAsync();
+            List<Product> products = await proxy.GetProductsAsync();
+
+            this.allProductsList = new ObservableCollection<Product>(); 
+            foreach (Product p in products)
+            {
+                this.allProductsList.Add(p);
+            }
 
 
-            this.FilteredProducts = new ObservableCollection<Product>();
+            this.FilteredProducts = this.allProductsList;
             SearchTerm = string.Empty;
             IsRefreshing = false;
 
@@ -67,8 +67,8 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("SelectedProduct");
             }
         }
-        private List<Product> allProductsList;
-        public List<Product> AllProductsList
+        private ObservableCollection<Product> allProductsList;
+        public ObservableCollection<Product> AllProductsList
         {
             get
             {

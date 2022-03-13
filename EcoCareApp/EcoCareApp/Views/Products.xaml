@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoCareApp.Views.Products"
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductsViewModel">
-  <ContentView.Content>
+    <ContentView.Content>
         <StackLayout>
             
         <Grid>
@@ -32,7 +32,7 @@
                             </Grid.RowDefinitions>
                             
                             <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
-                            <Label Grid.Row="1" Text="{Binding BookDescription}" TextColor="Teal" FontSize="15"/>
+                            <Label Grid.Row="1" Text="{Binding Description}" TextColor="Teal" FontSize="15"/>
                         </Grid>
                     </DataTemplate>
 
