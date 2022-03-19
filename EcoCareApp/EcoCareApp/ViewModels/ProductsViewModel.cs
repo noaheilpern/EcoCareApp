@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Windows.Input;
 using EcoCareApp.Models;
@@ -19,11 +20,6 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-        public ProductsViewModel()
-        {
-            this.SearchTerm = string.Empty;
-
-        }
         
         public ObservableCollection<Product> ProductsList
         {
@@ -180,7 +176,6 @@ namespace EcoCareApp.ViewModels
 
         #region Fields
 
-        private ObservableCollection<Category> filterOptions;
 
         private ObservableCollection<string> sortOptions;
 
@@ -205,98 +200,10 @@ namespace EcoCareApp.ViewModels
         /// <summary>
         /// Initializes a new instance for the <see cref="CatalogPageViewModel" /> class.
         /// </summary>
-        public CatalogPageViewModel()
+        public ProductsViewModel()
         {
-            this.FilterOptions = new ObservableCollection<Category>
-            {
-                new Category
-                {
-                    Name = "Gender",
-                    SubCategories = new List<string>
-                    {
-                        "Men",
-                        "Women",
-                    },
-                },
-                new Category
-                {
-                    Name = "Brand",
-                    SubCategories = new List<string>
-                    {
-                        "Brand A",
-                        "Brand B",
-                    },
-                },
-                new Category
-                {
-                    Name = "Categories",
-                    SubCategories = new List<string>
-                    {
-                        "Category A",
-                        "Category B",
-                    },
-                },
-                new Category
-                {
-                    Name = "Color",
-                    SubCategories = new List<string>
-                    {
-                        "Maroon",
-                        "Pink",
-                    },
-                },
-                new Category
-                {
-                    Name = "Price",
-                    SubCategories = new List<string>
-                    {
-                        "Above 3000",
-                        "1000 to 3000",
-                        "Below 1000",
-                    },
-                },
-                new Category
-                {
-                    Name = "Size",
-                    SubCategories = new List<string>
-                    {
-                        "S", "M", "L", "XL", "XXL",
-                    },
-                },
-                new Category
-                {
-                    Name = "Patterns",
-                    SubCategories = new List<string>
-                    {
-                        "Pattern 1", "Pattern 2",
-                    },
-                },
-                new Category
-                {
-                    Name = "Offers",
-                    SubCategories = new List<string>
-                    {
-                        "Buy 1 Get 1", "Buy 1 Get 2",
-                    },
-                },
-                new Category
-                {
-                    Name = "Coupons",
-                    SubCategories = new List<string>
-                    {
-                        "Coupon 1", "Coupon 2",
-                    },
-                },
-            };
+            this.SearchTerm = string.Empty;
 
-            this.SortOptions = new ObservableCollection<string>
-            {
-                "New Arrivals",
-                "Price - high to low",
-                "Price - Low to High",
-                "Popularity",
-                "Discount",
-            };
         }
 
         #endregion
@@ -312,26 +219,6 @@ namespace EcoCareApp.ViewModels
             get; set;
         }
 
-        /// <summary>
-        /// Gets or sets the property that has been bound with a list view, which displays the filter options.
-        /// </summary>
-        public ObservableCollection<Category> FilterOptions
-        {
-            get
-            {
-                return this.filterOptions;
-            }
-
-            private set
-            {
-                if (this.filterOptions == value)
-                {
-                    return;
-                }
-
-                this.SetProperty(ref this.filterOptions, value);
-            }
-        }
 
         /// <summary>
         /// Gets or sets the property has been bound with a list view, which displays the sort details.
@@ -462,10 +349,7 @@ namespace EcoCareApp.ViewModels
         /// <param name="obj">The Object</param>
         private void AddFavouriteClicked(object obj)
         {
-            if (obj is Product product)
-            {
-                product.IsFavourite = !product.IsFavourite;
-            }
+            
         }
 
         /// <summary>
@@ -490,4 +374,4 @@ namespace EcoCareApp.ViewModels
     }
 
 }
-}
+
