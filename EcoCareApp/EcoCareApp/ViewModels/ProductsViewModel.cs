@@ -208,56 +208,6 @@ namespace EcoCareApp.ViewModels
 
         #endregion
 
-        #region Public properties
-
-        /// <summary>
-        /// Gets or sets the property that has been bound with a list view, which displays the item details in tile.
-        /// </summary>
-        [DataMember(Name = "products")]
-        public ObservableCollection<Product> Products
-        {
-            get; set;
-        }
-
-
-        /// <summary>
-        /// Gets or sets the property has been bound with a list view, which displays the sort details.
-        /// </summary>
-        public ObservableCollection<string> SortOptions
-        {
-            get
-            {
-                return this.sortOptions;
-            }
-
-            private set
-            {
-                if (this.sortOptions == value)
-                {
-                    return;
-                }
-
-                this.SetProperty(ref this.sortOptions, value);
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the property that has been bound with view, which displays the cart items count.
-        /// </summary>
-        public string CartItemCount
-        {
-            get
-            {
-                return this.cartItemCount;
-            }
-
-            set
-            {
-                this.SetProperty(ref this.cartItemCount, value);
-            }
-        }
-
-        #endregion
 
         #region Command
 

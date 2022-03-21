@@ -28,6 +28,7 @@ namespace EcoCareApp.iOS
             global::Xamarin.Forms.Forms.Init();
             SfRadialMenuRenderer.Init();
             SfListViewRenderer.Init();
+            Syncfusion.XForms.iOS.Cards.SfCardViewRenderer.Init();
             Syncfusion.XForms.iOS.BadgeView.SfBadgeViewRenderer.Init();
 
             SfEffectsViewRenderer.Init();

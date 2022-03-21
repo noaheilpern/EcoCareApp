@@ -17,30 +17,25 @@
     <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.3" />
-    <PackageReference Include="Syncfusion.Licensing" Version="19.4.0.55" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.4.0.55" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.4.0.55" />
-    <PackageReference Include="Syncfusion.Xamarin.SfBadgeView" Version="19.4.0.55" />
-    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="19.4.0.55" />
-    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="19.4.0.55" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="19.4.0.55" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="19.4.0.55" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRadialMenu" Version="19.4.0.55" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="19.4.0.55" />
+    <PackageReference Include="Syncfusion.Licensing" Version="19.4.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.4.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="19.4.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.4.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBadgeView" Version="19.4.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="19.4.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="19.4.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="19.4.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="19.4.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRadialMenu" Version="19.4.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="19.4.0.56" />
     <PackageReference Include="System.Text.Json" Version="6.0.2" />
-    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.0" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Styles\CartItemListTemplate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Styles\Colors.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Styles\ProductListTemplate.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\FootPrintCalc.xaml">
@@ -76,5 +71,9 @@
     <EmbeddedResource Update="Views\UserProfile.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Behaviors\" />
   </ItemGroup>
 </Project>

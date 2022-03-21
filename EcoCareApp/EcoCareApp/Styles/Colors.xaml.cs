@@ -14,7 +14,7 @@ namespace EcoCareApp.Style
     {
         public Colors()
         {
-            //InitializeComponent();
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Colors));
         }
     }
 }

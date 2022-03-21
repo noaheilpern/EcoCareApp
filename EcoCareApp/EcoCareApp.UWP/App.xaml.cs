@@ -62,6 +62,8 @@ namespace EcoCareApp.UWP
                 List<Assembly> assembliesToInclude = new List<Assembly>();
                 assembliesToInclude.Add(typeof(SfRadialMenuRenderer).GetTypeInfo().Assembly);
                 assembliesToInclude.Add(typeof(Syncfusion.SfChart.XForms.UWP.SfChartRenderer).GetTypeInfo().Assembly);
+                assembliesToInclude.Add(typeof(Syncfusion.XForms.UWP.Cards.SfCardViewRenderer).GetTypeInfo().Assembly);
+
 
                 Xamarin.Forms.Forms.Init(e, assembliesToInclude);
                 Syncfusion.XForms.UWP.PopupLayout.SfPopupLayoutRenderer.Init();

@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace EcoCareApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Tryouts : ContentPage
+    public partial class Tryouts : ContentView
     {
         public Tryouts()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }
