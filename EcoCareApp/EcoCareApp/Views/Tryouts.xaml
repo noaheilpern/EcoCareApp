@@ -2,9 +2,9 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:EcoCareApp.Models"
-             x:Class="EcoCareApp.Views.Products"
+             x:Class="EcoCareApp.Views.Tryouts"
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductsViewModel">
     <ContentView.Content>
-   
+        <StackLayout></StackLayout>
     </ContentView.Content>
 </ContentView>
