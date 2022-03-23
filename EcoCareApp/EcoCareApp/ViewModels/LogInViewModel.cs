@@ -88,12 +88,14 @@ namespace EcoCareApp.ViewModels
             if (u != null)
             {
               
-                //Application.Current.Properties["IsLoggedIn"] = Boolean.TrueString;
+                Application.Current.Properties["IsLoggedIn"] = Boolean.TrueString;
                 App a = (App)App.Current;
                 a.CurrentUser = u;
                 if (await proxy.IsRegularUserAsync(u.UserName))
                 {
                     a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(u.UserName);
+                    //why current regular user returns null? משהו שקשור להרשאו ולזה שהיוזר לא יכול להישלח 
+                    // מקודם זה עבד, ממש מוזר
                 }
                 else
                 {
