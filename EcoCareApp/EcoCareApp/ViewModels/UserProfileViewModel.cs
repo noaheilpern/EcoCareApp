@@ -333,7 +333,7 @@ private void InitCountries()
             {
                 Birthday = a.CurrentRegularUser.Birthday;
                 PeopleAtTheSameHouseHold = a.CurrentRegularUser.PeopleAtTheHousehold;
-                Stars = a.CurrentRegularUser.Stars;
+                Stars = (int)a.CurrentRegularUser.Stars;
                 
             }
             else

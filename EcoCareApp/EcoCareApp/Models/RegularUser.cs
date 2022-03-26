@@ -23,7 +23,7 @@ namespace EcoCareApp.Models
         public double LastElectricityBill { get; set; }
         public int PeopleAtTheHousehold { get; set; }
 
-        public int Stars { get; set; }
+        public int? Stars { get; set; }
 
         public virtual List<int> Goals { get; set; }
         public virtual List<Sale> Sales { get; set; }
