@@ -17,6 +17,7 @@ using Rg.Plugins.Popup;
 using Windows.UI.Xaml.Navigation;
 using System.Reflection;
 using Syncfusion.SfRadialMenu.XForms.UWP;
+using Syncfusion.XForms.UWP.PopupLayout;
 
 namespace EcoCareApp.UWP
 {
@@ -63,6 +64,7 @@ namespace EcoCareApp.UWP
                 assembliesToInclude.Add(typeof(SfRadialMenuRenderer).GetTypeInfo().Assembly);
                 assembliesToInclude.Add(typeof(Syncfusion.SfChart.XForms.UWP.SfChartRenderer).GetTypeInfo().Assembly);
                 assembliesToInclude.Add(typeof(Syncfusion.XForms.UWP.Cards.SfCardViewRenderer).GetTypeInfo().Assembly);
+                assembliesToInclude.Add(typeof(SfPopupLayoutRenderer).GetTypeInfo().Assembly);
 
 
                 Xamarin.Forms.Forms.Init(e, assembliesToInclude);

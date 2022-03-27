@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Input;
 using EcoCareApp.Models;
 using EcoCareApp.Services;
+using EcoCareApp.Views;
 using Xamarin.Forms;
 
 namespace EcoCareApp.ViewModels
@@ -169,6 +170,36 @@ namespace EcoCareApp.ViewModels
         {
             InitProducts();
         }
+
+        public ICommand ProductSelected => new Command(ToProductPage);
+
+        public async void ToProductPage(Object obj)
+        {
+            if (obj is Product)
+            {
+                Product chosenProduct = (Product)obj;
+                Page showProduct = new ProductPage();
+                ProductPageViewModel ProductContext = new ProductPageViewModel
+                {
+                    Title = chosenProduct.Title,
+                    Active = chosenProduct.Active,
+                    Description = chosenProduct.Description,
+                    Price = chosenProduct.Price,
+                    ImageSource = chosenProduct.ImageSource,
+                    SellersUsername = chosenProduct.SellersUsername,
+                    ProductId = chosenProduct.ProductId,
+
+                };
+
+                showProduct.BindingContext = ProductContext;
+                showProduct.Title = ProductContext.Title;
+                App a = (App)App.Current;
+               
+                await App.Current.MainPage.Navigation.PushAsync(showProduct);
+
+            }
+        }
+        
         #endregion
 
 
@@ -203,7 +234,7 @@ namespace EcoCareApp.ViewModels
         public ProductsViewModel()
         {
             this.SearchTerm = string.Empty;
-
+            InitProducts(); 
         }
 
         #endregion
@@ -320,6 +351,12 @@ namespace EcoCareApp.ViewModels
             // Do something
         }
 
+        #endregion
+
+        #region Events
+        //Events
+        //This event is used to navigate to the monkey page
+        public Action<Page> NavigateToPageEvent;
         #endregion
     }
 

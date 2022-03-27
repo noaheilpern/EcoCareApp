@@ -16,7 +16,19 @@ namespace EcoCareApp.Views
         public Products()
         {
             InitializeComponent();
-            this.BindingContext = new ProductsViewModel(); 
+
+            ProductsViewModel context = new ProductsViewModel();
+            //Register to the event so the view model will be able to navigate to the monkeypage
+            context.NavigateToPageEvent += NavigateToAsync;
+            this.BindingContext = context;
+
         }
+        //Allow ViewModel to call this function if needed to navigate to another page!
+        public async void NavigateToAsync(Page p)
+        {
+            await Navigation.PushAsync(p);
+        }
+
+
     }
 }

@@ -9,33 +9,45 @@
 
         <StackLayout>
 
-        <Grid>
+            <Grid>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <SearchBar x:Name="filterText" HeightRequest="40"
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <SearchBar x:Name="filterText" HeightRequest="40"
            Placeholder="Search here to filter" Text="{Binding SearchTerm}" Grid.Row="0"/>
-        </Grid>
+            </Grid>
+            <ScrollView>
             <Grid>
 
                 <syncfusion:SfListView x:Name="listView" 
                                 ItemsSource="{Binding FilteredProducts}" 
-                                   ItemSize="100" 
+                                    ItemSize="200"
                  SelectionMode="Single"
                  SelectionGesture="Tap"
+                                       Orientation="Vertical"
+                                       SelectionChangedCommand="{Binding ProductSelected}"
+                                       SelectionChangedCommandParameter="{Binding Source={x:Reference listView}, Path=SelectedItem}"
                  SelectionBackgroundColor="#E4E4E4">
                     <syncfusion:SfListView.ItemTemplate>
                         <DataTemplate x:DataType="models:Product">
                             <Grid Padding="10">
                                 <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.2*" />
                                     <RowDefinition Height="0.4*" />
                                     <RowDefinition Height="0.6*" />
+                                    <RowDefinition Height="0.2*" />
                                 </Grid.RowDefinitions>
-
-                                <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
-                                <Label Grid.Row="1" Text="{Binding Description}" TextColor="Teal" FontSize="15"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="4*" />
+                                </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding ImageSource}" Grid.Column="0" Grid.RowSpan="4" /> 
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Price, StringFormat='{0:f0}★'}" HorizontalOptions="End" />
+                                <Label Text="{Binding Title}" Grid.Row="1" FontAttributes="Bold" TextColor="Teal" FontSize="21" Grid.Column="1"/>
+                                <Label Grid.Row="2" Text="{Binding Description}" TextColor="Teal" FontSize="15" Grid.Column="1"/>
+                                <Label Grid.Row="3" Grid.Column="1" Text="{Binding SellersUsername}"/>
                             </Grid>
                         </DataTemplate>
 
@@ -48,10 +60,11 @@
                         </data:DataSource>
                     </syncfusion:SfListView.DataSource>
                     <syncfusion:SfListView.LayoutManager>
-                        <syncfusion:GridLayout SpanCount="3" />
+                        <syncfusion:GridLayout SpanCount="1" />
                     </syncfusion:SfListView.LayoutManager>
                 </syncfusion:SfListView>
             </Grid>
+            </ScrollView>
         </StackLayout>
     </ContentView.Content>
 </ContentView>

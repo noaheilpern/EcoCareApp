@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCareApp.Views.ProductPage" Padding="0,40,0,0"
+             xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <sfPopup:SfPopupLayout x:Name="popupLayout">
+                <sfPopup:SfPopupLayout.PopupView>
+                    <sfPopup:PopupView ShowCloseButton="True">
+
+                            <sfPopup:PopupView.HeaderTemplate>
+                                <DataTemplate>
+                                    <Label Text="Customized Header" 
+                               FontAttributes="Bold"
+                               BackgroundColor="Blue"
+                               FontSize="16"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               />
+                                </DataTemplate>
+                            </sfPopup:PopupView.HeaderTemplate>
+                            <sfPopup:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <Label Text="This is SfPopupLayout" BackgroundColor="SkyBlue"
+                           HorizontalTextAlignment="Center"/>
+                            </DataTemplate>
+                                
+                        </sfPopup:PopupView.ContentTemplate>
+                        <sfPopup:PopupView.FooterTemplate>
+                            <DataTemplate>
+                                <Label Text="Customized Footer" 
+                               FontAttributes="Bold"
+                               BackgroundColor="Blue"
+                               FontSize="16"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               />
+                            </DataTemplate>
+                        </sfPopup:PopupView.FooterTemplate>
+                    </sfPopup:PopupView>
+                </sfPopup:SfPopupLayout.PopupView>
+                <sfPopup:SfPopupLayout.Content>
+                    <StackLayout>
+                        <Label Text="{Binding Title}" HorizontalTextAlignment="Center" FontSize="Large"/>
+                        <Image Source="{Binding ImageSource}" WidthRequest="400" HeightRequest="400"/>
+                        <Label Text="{Binding Price}" HorizontalTextAlignment="Center" FontSize="Caption"/>
+                        <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Body"/>
+                        <Label Text="{Binding SellersUsername}" HorizontalTextAlignment="Center" FontSize="Caption"/>
+
+                        <Button x:Name="showBarode" Text="Get Barcode for the benefit!" 
+               VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                Command="{Binding ShowBarcodeClicked}"/>
+                    </StackLayout>
+                </sfPopup:SfPopupLayout.Content>
+            </sfPopup:SfPopupLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
