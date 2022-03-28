@@ -103,7 +103,7 @@ namespace EcoCareApp.ViewModels
                 }
                 Home h = new Home();
                 h.Title = "Home";
-                App.Current.MainPage=h;
+                await App.Current.MainPage.Navigation.PushAsync(h);
             }
             else
             {

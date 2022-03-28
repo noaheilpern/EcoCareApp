@@ -13,10 +13,10 @@ namespace EcoCareApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProductPage : ContentPage
     {
-        public ProductPage()
+        public ProductPage(ProductPageViewModel vm)
         {
             InitializeComponent();
-            this.BindingContext = new ProductPageViewModel(); 
+            this.BindingContext = vm; 
         }
     }
 }

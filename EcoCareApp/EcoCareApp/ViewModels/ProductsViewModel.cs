@@ -178,7 +178,6 @@ namespace EcoCareApp.ViewModels
             if (obj is Product)
             {
                 Product chosenProduct = (Product)obj;
-                Page showProduct = new ProductPage();
                 ProductPageViewModel ProductContext = new ProductPageViewModel
                 {
                     Title = chosenProduct.Title,
@@ -190,6 +189,8 @@ namespace EcoCareApp.ViewModels
                     ProductId = chosenProduct.ProductId,
 
                 };
+                Page showProduct = new ProductPage(ProductContext);
+
 
                 showProduct.BindingContext = ProductContext;
                 showProduct.Title = ProductContext.Title;

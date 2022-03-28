@@ -6,7 +6,7 @@ using System.Text;
 
 namespace EcoCareApp.ViewModels
 {
-    class ProductPageViewModel:INotifyPropertyChanged
+    public class ProductPageViewModel:INotifyPropertyChanged
     {
 
 
