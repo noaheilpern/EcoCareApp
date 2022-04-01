@@ -29,8 +29,52 @@
                                        Orientation="Vertical"
                                        SelectionChangedCommand="{Binding ProductSelected}"
                                        SelectionChangedCommandParameter="{Binding Source={x:Reference listView}, Path=SelectedItem}"
-                 SelectionBackgroundColor="#E4E4E4">
-                    <syncfusion:SfListView.ItemTemplate>
+                 SelectionBackgroundColor="#E4E4E4"
+                                       SwipeOffset="360" SwipeThreshold="30"
+                                       AllowSwiping="True"
+                                       SwipeStarted="listView_SwipeStarted"
+                                       SwipeEnded="listView_SwipeEnded">
+                        <syncfusion:SfListView.RightSwipeTemplate>
+                            <DataTemplate x:Name="RightSwipeTemplate">
+
+                                <Grid>
+                                    <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0">
+                                        <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                            <Image Grid.Column="0"
+                    Grid.Row="0"
+                    BackgroundColor="Transparent"
+                    HeightRequest="35"
+                    WidthRequest="35"
+                                                   
+                    BindingContextChanged="EditImage_BindingContextChanged"                               
+                    Source="edit.png" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+
+                        </syncfusion:SfListView.RightSwipeTemplate>
+                        <syncfusion:SfListView.LeftSwipeTemplate>
+                            <DataTemplate x:Name="LeftSwipeTemplate">
+                                <Grid>
+                                    <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0">
+                                        <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                            <Image Grid.Column="0"
+                    Grid.Row="0"
+                    BackgroundColor="Transparent"
+                    HeightRequest="35"
+                    WidthRequest="35"
+                    BindingContextChanged="DeleteImage_BindingContextChanged"                               
+                    Source="delete.png" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                                
+                                
+                                
+                            </DataTemplate>
+                        </syncfusion:SfListView.LeftSwipeTemplate>
+                        <syncfusion:SfListView.ItemTemplate>
                         <DataTemplate x:DataType="models:Product">
                             <Grid Padding="10">
                                 <Grid.RowDefinitions>

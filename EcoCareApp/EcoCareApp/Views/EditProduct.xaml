@@ -4,9 +4,41 @@
              x:Class="EcoCareApp.Views.EditProduct">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Title:" Grid.Row="0" Grid.Column="0" Style="{StaticResource labelNameStyle}"/>
+                    <Entry Text="{Binding Title}" HorizontalTextAlignment="Center" FontSize="Large"
+                           Grid.Column="1" Grid.Row="0"/>
+                    
+                    <Label Text="Image Source:" Grid.Row="1" Grid.Column="0" />
+
+                    <Entry Text="{Binding ImageSource}" WidthRequest="400" HeightRequest="400"
+                           Grid.Row="1" Grid.Column="1"/>
+
+                    <Label Text="Item Description:" Grid.Row="2" Grid.Column="0" />
+
+                    <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Body"
+                           Grid.Row="2" Grid.Column="1"/>
+
+                    <Button x:Name="save" Text="Get Barcode for the benefit!" 
+               VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                Command="{Binding SaveChanges}" Grid.Row="3" Grid.ColumnSpan="2"/>
+                </Grid>
+
+            </ScrollView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using EcoCareApp.ViewModels;
 
 namespace EcoCareApp.Views
 {
@@ -15,6 +16,7 @@ namespace EcoCareApp.Views
         public EditProduct()
         {
             InitializeComponent();
+            this.BindingContext = new EditProductViewModel();
         }
     }
 }

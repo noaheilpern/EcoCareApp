@@ -136,7 +136,9 @@
     <Content Include="images\chart.png" />
     <Content Include="images\chart_bw.png" />
     <Content Include="images\data_filled.png" />
+    <Content Include="images\delete.png" />
     <Content Include="images\distance.png" />
+    <Content Include="images\edit.png" />
     <Content Include="images\electricity.png" />
     <Content Include="images\loading_animation.gif" />
     <Content Include="images\meat.png" />

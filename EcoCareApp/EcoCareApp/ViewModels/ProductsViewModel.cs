@@ -170,7 +170,42 @@ namespace EcoCareApp.ViewModels
         {
             InitProducts();
         }
+        public ICommand EditItem => new Command(ToEditPage);
+        public async void ToEditPage(Object obj)
+        {
+            if(obj is Product)
+            {
 
+                Product chosenProduct = (Product)obj;
+                EditProductViewModel ProductContext = new EditProductViewModel
+                {
+                    Title = chosenProduct.Title,
+                    Active = chosenProduct.Active,
+                    Description = chosenProduct.Description,
+                    ImageSource = chosenProduct.ImageSource,
+                    Price = chosenProduct.Price,
+                    SellersUsername = chosenProduct.SellersUsername,
+                    ProductId = chosenProduct.ProductId,
+
+
+                };
+                Page showProduct = new EditProduct();
+
+
+                showProduct.BindingContext = ProductContext;
+                showProduct.Title = ProductContext.Title;
+                App a = (App)App.Current;
+
+                await App.Current.MainPage.Navigation.PushAsync(showProduct);
+
+            }
+        }
+        
+        public ICommand SwipeStartedCommand => new Command(SwipeStarted);
+        public void SwipeStarted()
+        {
+
+        }
         public ICommand ProductSelected => new Command(ToProductPage);
 
         public async void ToProductPage(Object obj)
