@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCareApp.Views.BarcodePopUp"
+             xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
+    
+    <ContentPage.Content>
+
+        <sfPopup:SfPopupLayout x:Name="popupLayout">
+            <sfPopup:PopupView  AppearanceMode="OneButton" ShowCloseButton="True">
+                <sfPopup:PopupView.HeaderTemplate>
+                    <DataTemplate>
+                        <Label Text="Customized Header" 
+                               FontAttributes="Bold"
+                               BackgroundColor="Blue"
+                               FontSize="16"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               />
+                    </DataTemplate>
+                </sfPopup:PopupView.HeaderTemplate>
+                <sfPopup:PopupView.FooterTemplate>
+                    <DataTemplate>
+                        <Label Text="Customized Footer" 
+                               FontAttributes="Bold"
+                               BackgroundColor="Blue"
+                               FontSize="16"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               />
+                    </DataTemplate>
+                </sfPopup:PopupView.FooterTemplate>
+                <sfPopup:PopupView.ContentTemplate>
+                    <DataTemplate>
+                        <Label Text="This sould be barcode" BackgroundColor="SkyBlue"
+                           HorizontalTextAlignment="Center"/>
+                    </DataTemplate>
+                </sfPopup:PopupView.ContentTemplate>
+            </sfPopup:PopupView>
+            
+        </sfPopup:SfPopupLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,8 +1,12 @@
 ﻿using EcoCareApp.Models;
+using EcoCareApp.Views;
+using Syncfusion.XForms.PopupLayout;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace EcoCareApp.ViewModels
 {
@@ -26,6 +30,17 @@ namespace EcoCareApp.ViewModels
         public string SellersUsername { get; set; }
         public int ProductId { get; set; }
 
+
         public virtual List<Sale> Sales { get; set; }
+       
+        public ICommand OpenPopUpPage => new Command(ToBarcode);
+
+        public void ToBarcode()
+        {
+            App app = (App)App.Current;
+            app.MainPage.Navigation.PushModalAsync(new BarcodePopUp());
+            
+
+        }
     }
 }

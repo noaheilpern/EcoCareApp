@@ -5,22 +5,26 @@
              xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
     <ContentPage.Content>
         
-       
-            <ScrollView>
-            <StackLayout>
-                <Label Text="{Binding Price, StringFormat='{0:f0}★'}" HorizontalTextAlignment="Center" FontSize="Caption" HorizontalOptions="End"/>
+        
+                    <ScrollView>
+                        <StackLayout>
+                            <Label Text="{Binding Price, StringFormat='{0:f0}★'}" HorizontalTextAlignment="Center" FontSize="Caption" HorizontalOptions="End"/>
 
-                <Label Text="{Binding Title}" HorizontalTextAlignment="Center" FontSize="Large"/>
-                        <Image Source="{Binding ImageSource}" WidthRequest="400" HeightRequest="400"/>
-                        <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Body"/>
-                        <Label Text="{Binding SellersUsername}" HorizontalTextAlignment="Center" FontSize="Caption"/>
+                            <Label Text="{Binding Title}" HorizontalTextAlignment="Center" FontSize="Large"/>
+                            <Image Source="{Binding ImageSource}" WidthRequest="400" HeightRequest="400"/>
+                            <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Body"/>
+                            <Label Text="{Binding SellersUsername}" HorizontalTextAlignment="Center" FontSize="Caption"/>
 
-                        <Button x:Name="showBarode" Text="Get Barcode for the benefit!" 
-               VerticalOptions="Start" HorizontalOptions="FillAndExpand"
-                Command="{Binding ShowBarcodeClicked}"/>
-            </StackLayout>
+                            <Button x:Name="showBarode" Text="Get Barcode for the benefit!"
+                                    VerticalOptions="Start" HorizontalOptions="FillAndExpand" 
+                                    Command="{Binding OpenPopUpPage}"
+                                />
+                        </StackLayout>
 
-        </ScrollView>
+                    </ScrollView>
+              
+
+      
                 
     </ContentPage.Content>
 </ContentPage>
