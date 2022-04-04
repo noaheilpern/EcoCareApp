@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:EcoCareApp.Models"
              x:Class="EcoCareApp.Views.Products"
+              x:Name="main"
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductsViewModel">
 
     <ContentView.Content>
@@ -34,19 +35,21 @@
                                        AllowSwiping="True"
                                        SwipeStarted="listView_SwipeStarted"
                                        SwipeEnded="listView_SwipeEnded">
+                    
                         <syncfusion:SfListView.RightSwipeTemplate>
                             <DataTemplate x:Name="RightSwipeTemplate">
 
                                 <Grid>
                                     <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0">
                                         <Grid VerticalOptions="Center" HorizontalOptions="Center">
-                                            <Image Grid.Column="0"
+                                            <ImageButton Grid.Column="0"
                     Grid.Row="0"
-                    BackgroundColor="Transparent"
+                    BackgroundColor="Black"
                     HeightRequest="35"
                     WidthRequest="35"
-                                                   
-                    BindingContextChanged="EditImage_BindingContextChanged"                               
+                    Command="{Binding Source={x:Reference listView}, Path=EditItem}"   
+                    
+                    Clicked="ImageButton_Clicked"
                     Source="edit.png" />
                                         </Grid>
                                     </Grid>
@@ -59,13 +62,15 @@
                                 <Grid>
                                     <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0">
                                         <Grid VerticalOptions="Center" HorizontalOptions="Center">
-                                            <Image Grid.Column="0"
+                                            <ImageButton Grid.Column="0"
                     Grid.Row="0"
                     BackgroundColor="Transparent"
                     HeightRequest="35"
                     WidthRequest="35"
-                    BindingContextChanged="DeleteImage_BindingContextChanged"                               
-                    Source="delete.png" />
+                    Source="delete.png"
+                    Command="{Binding DeleteItem}"   
+                    CommandParameter="{Binding Source={x:Reference main}, Path=SelectedItem}" 
+                                                   />
                                         </Grid>
                                     </Grid>
                                 </Grid>

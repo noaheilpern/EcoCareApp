@@ -384,6 +384,45 @@ namespace EcoCareApp.Services
             }
         }
 
+        public async Task<bool> DeleteItemAsync(Product p)
+        {
+            try
+            {
+
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    PropertyNameCaseInsensitive = true
+                };
+
+                string json = JsonSerializer.Serialize(p, options);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/DeleteItem", content);
+                if (response.IsSuccessStatusCode)
+                {
+
+                    string jsonContent = await response.Content.ReadAsStringAsync();
+                    bool succeed = JsonSerializer.Deserialize<bool>(jsonContent, options);
+                    if (succeed)
+                    {
+                        return true;
+                    }
+                    else
+                        return false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        
+        }
+
         public async Task<bool> UpdateProductAsync(Product p)
         {
 

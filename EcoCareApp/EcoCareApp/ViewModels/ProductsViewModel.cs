@@ -4,10 +4,12 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using EcoCareApp.Models;
 using EcoCareApp.Services;
 using EcoCareApp.Views;
+using Syncfusion.ListView.XForms;
 using Xamarin.Forms;
 
 namespace EcoCareApp.ViewModels
@@ -22,14 +24,30 @@ namespace EcoCareApp.ViewModels
         }
         #endregion
         
+
+
+       
         public ObservableCollection<Product> ProductsList
         {
             get;set;
         }
 
+        public Command<ItemSelectionChangedEventArgs> selectionChangedCommand;
+
+        public Command<ItemSelectionChangedEventArgs> SelectionChangedCommand
+        {
+            get { return selectionChangedCommand; }
+            set { selectionChangedCommand = value; }
+        }
+
+
+        private void OnSelectionChanged(ItemSelectionChangedEventArgs obj)
+        {
+            App.Current.MainPage.DisplayAlert("Alert", (obj.AddedItems[0] as Product).Title + " is selected", "OK");
+        }
 
         #region Product 
-        
+
 
         private async void InitProducts()
         {
@@ -165,15 +183,21 @@ namespace EcoCareApp.ViewModels
                 }
             }
         }
+        public ICommand DeleteItem  => new Command<Product>(Delete);
+        public async void Delete(Product p)
+        {
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+            await proxy.DeleteItemAsync(p);
+        }
         public ICommand RefreshCommand => new Command(OnRefresh);
         public void OnRefresh()
         {
             InitProducts();
         }
-        public ICommand EditItem => new Command(ToEditPage);
-        public async void ToEditPage(Object obj)
+        public ICommand EditItem => new Command<Product>(ToEditPage);
+        public async void ToEditPage(Product obj)
         {
-            if(obj is Product)
+            if (obj is Product)
             {
 
                 Product chosenProduct = (Product)obj;
@@ -270,7 +294,8 @@ namespace EcoCareApp.ViewModels
         public ProductsViewModel()
         {
             this.SearchTerm = string.Empty;
-            InitProducts(); 
+            InitProducts();
+
         }
 
         #endregion

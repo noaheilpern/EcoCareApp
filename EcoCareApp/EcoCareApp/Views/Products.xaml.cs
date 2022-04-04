@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using EcoCareApp.ViewModels;
+using EcoCareApp.Models;
 
 namespace EcoCareApp.Views
 {
@@ -15,12 +16,13 @@ namespace EcoCareApp.Views
     {
         public Products()
         {
-            InitializeComponent();
+            
 
             ProductsViewModel context = new ProductsViewModel();
             //Register to the event so the view model will be able to navigate to the monkeypage
             context.NavigateToPageEvent += NavigateToAsync;
             this.BindingContext = context;
+            InitializeComponent();
 
         }
         //Allow ViewModel to call this function if needed to navigate to another page!
@@ -114,6 +116,14 @@ namespace EcoCareApp.Views
         private void listView_SwipeEnded(object sender, Syncfusion.ListView.XForms.SwipeEndedEventArgs e)
         {
 
+        }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            //לקרוא לפעולה לשלוח את המוצר
+            ProductsViewModel vm = (ProductsViewModel)this.BindingContext;
+            Product p = (Product)(((ImageButton)sender).BindingContext);
+            vm.ToEditPage(p);
         }
     }
 }
