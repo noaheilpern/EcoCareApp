@@ -3,17 +3,14 @@ using EcoCareApp.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Runtime.Serialization;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace EcoCareApp.ViewModels
 {
-    class EditProductViewModel : INotifyPropertyChanged
+    class AddProductViewModel : INotifyPropertyChanged
     {
-
-
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
@@ -21,36 +18,6 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-
-        public EditProductViewModel()
-        {
-            OriginalProduct = new Product
-            {
-                Title = this.Title,
-                Description = this.Description,
-                Active = this.active,
-                ImageSource = this.ImageSource,
-                Price = this.Price,
-                SellersUsername = this.SellersUsername,
-                ProductId = this.ProductId,
-            };
-
-        }
-        public int ProductId { get; set; }
-        public string SellersUsername { get; set; }
-        public int Price { get; set; }
-        public Product OriginalProduct { get; set; }
-        private bool active;
-        public bool Active { get
-            {
-                return this.active;
-            }
-            set
-            {
-                this.active = value;
-                OnPropertyChanged("Active");
-            }
-        }
 
         #region Description
         private bool showDescriptionError;
@@ -102,7 +69,7 @@ namespace EcoCareApp.ViewModels
                 if (ShowDescriptionError)
                 {
                     this.DescriptionTyped = false;
-                    if(string.IsNullOrEmpty(Description))
+                    if (string.IsNullOrEmpty(Description))
                     {
                         this.DescriptionError = ERROR_MESSAGES.REQUIRED_FIELD;
 
@@ -125,7 +92,6 @@ namespace EcoCareApp.ViewModels
 
 
         #endregion
-
         #region Title
         private bool showTitleError;
 
@@ -172,7 +138,7 @@ namespace EcoCareApp.ViewModels
             {
                 title = value;
 
-                this.ShowTitleError = string.IsNullOrEmpty(Title)|| this.Title.Length>250;
+                this.ShowTitleError = string.IsNullOrEmpty(Title) || this.Title.Length > 250;
                 if (ShowTitleError)
                 {
                     this.TitleTyped = false;
@@ -185,7 +151,7 @@ namespace EcoCareApp.ViewModels
                     {
                         this.TitleError = "Field must be less than 255 charecters";
                     }
-                   
+
                     OnPropertyChanged("Title");
                 }
                 else
@@ -291,57 +257,51 @@ namespace EcoCareApp.ViewModels
             }
         }
         #endregion
+
+
+       
         #region Commands
 
-        public ICommand Update => new Command(UpdateProductAsync);
+        public ICommand AddCommand => new Command(AddProduct);
 
 
 
-        private async void UpdateProductAsync()
+        private async void AddProduct()
         {
-            bool worked = true;
             App a = (App)App.Current;
-            Product product = OriginalProduct;
-            Product EditedProduct = new Product
+            bool worked = true;
+            App app = (App)App.Current;
+            Product p = new Product
             {
 
                 Title = this.Title,
                 Description = this.Description,
-                Active = this.active,
+                Active = true,
                 ImageSource = this.ImageSource,
-                Price = this.Price,
-                SellersUsername = this.SellersUsername,
-                ProductId = this.ProductId,
+                //Price = this.Price,
+                SellersUsername = a.CurrentSeller.UserName,
 
             };
-            App app = (App)App.Current;
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
 
-
-                    
-            if (!OriginalProduct.Equals(EditedProduct))
-            {
-                isRefreshing = true; 
-                worked = await proxy.UpdateProductAsync(EditedProduct);
+                isRefreshing = true;
+                //worked = await proxy.AddProductAsync(p);
                 isRefreshing = false;
-                
 
-            }
+            
             if (!worked)
             {
-              await App.Current.MainPage.DisplayAlert("Error", "Updating product data failed. Please check fields are filled as needed", "OK");
+                await App.Current.MainPage.DisplayAlert("Error", "Updating product data failed. Please check fields are filled as needed", "OK");
 
             }
-                else
-                {
-                    await App.Current.MainPage.DisplayAlert("Succeed", "detail(s) updated successfully", "great:)");
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Succeed", "detail(s) updated successfully", "great:)");
 
-                }
+            }
         }
-   
+
         #endregion
+
     }
 }
-
-    
-

@@ -4,11 +4,15 @@
              xmlns:models="clr-namespace:EcoCareApp.Models"
              x:Class="EcoCareApp.Views.Products"
               x:Name="main"
+    xmlns:pulltoRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"
+             
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductsViewModel">
-
     <ContentView.Content>
-
-        <StackLayout>
+        <pullToRefresh:SfPullToRefresh x:Name="pullToRefresh"
+                               ProgressBackgroundColor="#428BCA" RefreshContentHeight="50" 
+                               RefreshContentWidth="50" TransitionMode="Push" IsRefreshing="False">
+            <pullToRefresh:SfPullToRefresh.PullableContent>
+                <StackLayout>
 
             <Grid>
 
@@ -39,27 +43,25 @@
                         <syncfusion:SfListView.RightSwipeTemplate>
                             <DataTemplate x:Name="RightSwipeTemplate">
 
-                                <Grid>
+                                    
                                     <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0">
-                                        <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                            
                                             <ImageButton Grid.Column="0"
                     Grid.Row="0"
-                    BackgroundColor="Black"
+                    BackgroundColor="Transparent"
                     HeightRequest="35"
                     WidthRequest="35"
-                    Command="{Binding Source={x:Reference listView}, Path=EditItem}"   
-                    
+                    VerticalOptions="Center"
                     Clicked="ImageButton_Clicked"
                     Source="edit.png" />
                                         </Grid>
-                                    </Grid>
-                                </Grid>
+                                    
+                                
                             </DataTemplate>
 
                         </syncfusion:SfListView.RightSwipeTemplate>
                         <syncfusion:SfListView.LeftSwipeTemplate>
                             <DataTemplate x:Name="LeftSwipeTemplate">
-                                <Grid>
                                     <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0">
                                         <Grid VerticalOptions="Center" HorizontalOptions="Center">
                                             <ImageButton Grid.Column="0"
@@ -68,12 +70,12 @@
                     HeightRequest="35"
                     WidthRequest="35"
                     Source="delete.png"
+                    Clicked="Delete_Clicked"                                     
                     Command="{Binding DeleteItem}"   
                     CommandParameter="{Binding Source={x:Reference main}, Path=SelectedItem}" 
                                                    />
                                         </Grid>
                                     </Grid>
-                                </Grid>
                                 
                                 
                                 

@@ -59,7 +59,8 @@ namespace EcoCareApp.ViewModels
             this.allProductsList = new ObservableCollection<Product>(); 
             foreach (Product p in products)
             {
-                this.allProductsList.Add(p);
+                if(p.Active==true)
+                    this.allProductsList.Add(p);
             }
 
 
@@ -188,6 +189,9 @@ namespace EcoCareApp.ViewModels
         {
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
             await proxy.DeleteItemAsync(p);
+            allProductsList.Remove(p);
+            filteredProducts.Remove(p); 
+            
         }
         public ICommand RefreshCommand => new Command(OnRefresh);
         public void OnRefresh()

@@ -125,5 +125,14 @@ namespace EcoCareApp.Views
             Product p = (Product)(((ImageButton)sender).BindingContext);
             vm.ToEditPage(p);
         }
+
+      
+
+        private void Delete_Clicked(object sender, EventArgs e)
+        {
+            ProductsViewModel vm = (ProductsViewModel)this.BindingContext;
+            Product p = (Product)(((ImageButton)sender).BindingContext);
+            vm.Delete(p);
+        }
     }
 }
