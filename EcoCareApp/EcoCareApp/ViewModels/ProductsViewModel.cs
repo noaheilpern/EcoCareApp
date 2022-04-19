@@ -59,8 +59,19 @@ namespace EcoCareApp.ViewModels
             this.allProductsList = new ObservableCollection<Product>(); 
             foreach (Product p in products)
             {
-                if(p.Active==true)
-                    this.allProductsList.Add(p);
+                if(theApp.CurrentSeller!=null)
+                {
+                    if(p.SellersUsername.Equals(theApp.CurrentSeller.UserName))
+                    {
+                        if (p.Active == true)
+                            this.allProductsList.Add(p);
+                    }
+                }
+                else
+                {
+                    if (p.Active == true)
+                        this.allProductsList.Add(p);
+                }
             }
 
 

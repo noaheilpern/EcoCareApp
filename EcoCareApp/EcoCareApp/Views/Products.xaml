@@ -4,14 +4,13 @@
              xmlns:models="clr-namespace:EcoCareApp.Models"
              x:Class="EcoCareApp.Views.Products"
               x:Name="main"
-    xmlns:pulltoRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"
              
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductsViewModel">
     <ContentView.Content>
-        <pullToRefresh:SfPullToRefresh x:Name="pullToRefresh"
+       <!-- <pullToRefresh:SfPullToRefresh x:Name="pullToRefresh"
                                ProgressBackgroundColor="#428BCA" RefreshContentHeight="50" 
                                RefreshContentWidth="50" TransitionMode="Push" IsRefreshing="False">
-            <pullToRefresh:SfPullToRefresh.PullableContent>
+            <pullToRefresh:SfPullToRefresh.PullableContent> -->
                 <StackLayout>
 
             <Grid>
