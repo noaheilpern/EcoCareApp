@@ -4,6 +4,7 @@
              x:Class="EcoCareApp.Views.Home"
              xmlns:xtools="http://xamarin.com/schemas/2020/toolkit"
              xmlns:local="clr-namespace:EcoCareApp.Views"
+             xmlns:barcodeScanner="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
              xmlns:slider="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
 
              xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:HomeViewModel"
@@ -32,7 +33,8 @@
 
             <xtools:TabViewItem Icon="home_bw.png" IconSelected="home.png" VerticalOptions="FillAndExpand">
                 <xtools:TabViewItem.Content>
-                    <Grid BackgroundColor="White">
+                    <StackLayout>
+                    <Grid BackgroundColor="White" IsVisible="{Binding RegularUser}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="3*"/>
                             <RowDefinition Height="0.5"/>
@@ -109,7 +111,14 @@
 
                         </Grid>
                     </Grid>
+                    <Grid IsVisible="{Binding Seller}">
+                    <StackLayout>
+                                <Label x:Name="ScanResultText"/>
+                                <barcodeScanner:ZXingScannerView IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult"/>
 
+                            </StackLayout>
+                    </Grid>
+                    </StackLayout>
                 </xtools:TabViewItem.Content>
             </xtools:TabViewItem>
             

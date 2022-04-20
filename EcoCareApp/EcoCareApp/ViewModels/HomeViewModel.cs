@@ -10,6 +10,20 @@ namespace EcoCareApp.ViewModels
 {
     class HomeViewModel: INotifyPropertyChanged
     {
+        public HomeViewModel()
+        {
+            App app = (App)App.Current;
+            if (app.CurrentSeller != null)
+            {
+                Seller = true;
+                RegularUser = false; 
+            }
+            else
+            {
+                Seller = false;
+                RegularUser = true; 
+            }
+        }
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
@@ -17,7 +31,8 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-
+        public bool Seller { get; set; }
+        public bool RegularUser { get; set; }
         private bool meatFilled;
         public bool MeatFilled
         {

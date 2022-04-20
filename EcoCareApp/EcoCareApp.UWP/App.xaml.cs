@@ -65,6 +65,12 @@ namespace EcoCareApp.UWP
                 assembliesToInclude.Add(typeof(Syncfusion.SfChart.XForms.UWP.SfChartRenderer).GetTypeInfo().Assembly);
                 assembliesToInclude.Add(typeof(Syncfusion.XForms.UWP.Cards.SfCardViewRenderer).GetTypeInfo().Assembly);
                 assembliesToInclude.Add(typeof(SfPopupLayoutRenderer).GetTypeInfo().Assembly);
+                assembliesToInclude.Add(typeof(ZXing.Net.Mobile.Forms.WindowsUniversal.ZXingScannerViewRenderer).GetTypeInfo().Assembly);
+                assembliesToInclude.Add(typeof(ZXing.Net.Mobile.Forms.WindowsUniversal.ZXingScannerViewRenderer).GetTypeInfo().Assembly);
+                assembliesToInclude.Add(typeof(ZXing.Net.Mobile.Forms.WindowsUniversal.ZXingBarcodeImageViewRenderer).GetTypeInfo().Assembly);
+
+                //יש מצב שזה לא נכון 
+
 
 
                 Xamarin.Forms.Forms.Init(e, assembliesToInclude);

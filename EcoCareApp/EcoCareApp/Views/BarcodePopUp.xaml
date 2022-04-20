@@ -6,7 +6,7 @@
     
     <ContentPage.Content>
 
-        <sfPopup:SfPopupLayout x:Name="barcodePopup">
+        <sfPopup:SfPopupLayout x:Name="xxx">
             <sfPopup:PopupView  AppearanceMode="OneButton" ShowCloseButton="True">
                 <sfPopup:PopupView.HeaderTemplate>
                     <DataTemplate>

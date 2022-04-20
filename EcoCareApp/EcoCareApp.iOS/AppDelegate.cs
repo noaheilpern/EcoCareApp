@@ -34,7 +34,7 @@ namespace EcoCareApp.iOS
             SfEffectsViewRenderer.Init();
             Syncfusion.SfChart.XForms.iOS.Renderers.SfChartRenderer.Init();
             Syncfusion.XForms.iOS.PopupLayout.SfPopupLayoutRenderer.Init();
-
+            ZXing.Net.Mobile.Forms.iOS.Platform.Init(); 
             //Syncfusion.SfGauge.XForms.iOS.SfDigitalGaugeRenderer.Init();
             LoadApplication(new App());
 

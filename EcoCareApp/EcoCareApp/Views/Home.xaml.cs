@@ -19,6 +19,12 @@ namespace EcoCareApp.Views
             InitializeComponent();
         }
 
-       
+        private void ZXingScannerView_OnScanResult(ZXing.Result result)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+                {
+                    ScanResultText.Text = result.Text + "(Type:" + result.BarcodeFormat + ")"; 
+                });
+        }
     }
 }

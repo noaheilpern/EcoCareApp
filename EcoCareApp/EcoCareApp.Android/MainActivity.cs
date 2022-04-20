@@ -17,7 +17,10 @@ namespace EcoCareApp.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-
+            //ZXing.Net.Mobile.Forms.Android.Platform.Init();
+ 
+            ZXing.Net.Mobile.Forms.Android.ZXingScannerViewRenderer.Init();
+            ZXing.Net.Mobile.Forms.Android.ZXingBarcodeImageViewRenderer.Init();
             Syncfusion.XForms.Android.PopupLayout.SfPopupLayoutRenderer.Init();
 
             LoadApplication(new App());
@@ -26,7 +29,13 @@ namespace EcoCareApp.Droid
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
+
+            global:: ZXing.Net.Mobile.Forms.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+
         }
         public override void OnBackPressed()
         {
