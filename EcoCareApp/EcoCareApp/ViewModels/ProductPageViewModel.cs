@@ -33,12 +33,14 @@ namespace EcoCareApp.ViewModels
 
         public virtual List<Sale> Sales { get; set; }
        
-        public ICommand OpenPopUpPage => new Command(ToBarcode);
+        public ICommand OpenPopUp => new Command(ToBarcode);
 
         public void ToBarcode()
         {
+            /**
             App app = (App)App.Current;
             app.MainPage.Navigation.PushModalAsync(new BarcodePopUp());
+            **/
             
 
         }

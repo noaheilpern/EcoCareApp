@@ -15,7 +15,6 @@ namespace EcoCareApp.Views
         public BarcodePopUp()
         {
             InitializeComponent();
-            popupLayout.Show(); 
         }
     }
 }
