@@ -3,8 +3,79 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:EcoCareApp.Models"
              x:Class="EcoCareApp.Views.Tryouts"
-             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductsViewModel">
-    <ContentView.Content>
-        <StackLayout></StackLayout>
-    </ContentView.Content>
+             
+             xmlns:barcode="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:common="clr-namespace:ZXing.Common;assembly=zxing.portable"
+             xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductPageViewModel">
+
+        <sfPopup:SfPopupLayout x:Name="barcodePopup">
+
+            <sfPopup:SfPopupLayout.Content>
+                <StackLayout x:Name="mainLayout">
+
+                    <ScrollView>
+                        <StackLayout>
+                            <Label Text="{Binding Price, StringFormat='{0:f0}★'}" HorizontalTextAlignment="Center" FontSize="Caption" HorizontalOptions="End"/>
+
+                            <Label Text="{Binding Title}" HorizontalTextAlignment="Center" FontSize="Large"/>
+                            <Image Source="{Binding ImageSource}" WidthRequest="400" HeightRequest="400"/>
+                            <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Body"/>
+                            <Label Text="{Binding SellersUsername}" HorizontalTextAlignment="Center" FontSize="Caption"/>
+
+                            <Button x:Name="showBarode" Text="Get Barcode for the benefit!"
+                                    VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                                Clicked="showBarode_Clicked" Command="{Binding ToBarcodePopUp}"
+                                />
+                        </StackLayout>
+
+                    </ScrollView>
+
+
+                </StackLayout>
+            </sfPopup:SfPopupLayout.Content>
+
+
+            <sfPopup:PopupView AppearanceMode="OneButton" ShowCloseButton="True" x:Name="PopUpItself">
+                <sfPopup:PopupView.HeaderTemplate>
+                    <DataTemplate>
+                        <Label Text="Customized Header" 
+                               FontAttributes="Bold"
+                               BackgroundColor="Blue"
+                               FontSize="16"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               />
+                    </DataTemplate>
+                </sfPopup:PopupView.HeaderTemplate>
+                <sfPopup:PopupView.FooterTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="Customized Footer" 
+                               FontAttributes="Bold"
+                               BackgroundColor="Blue"
+                               FontSize="16"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               />
+                            <barcode:ZXingBarcodeImageView BarcodeValue="{Binding BarcodeValue}" HeightRequest="500"
+                                                       WidthRequest="500">
+                                <barcode:ZXingBarcodeImageView.BarcodeOptions>
+                                    <common:EncodingOptions Height="500" Width="500"/>
+                                </barcode:ZXingBarcodeImageView.BarcodeOptions>
+                            </barcode:ZXingBarcodeImageView>
+                        </StackLayout>
+
+                    </DataTemplate>
+                </sfPopup:PopupView.FooterTemplate>
+                <sfPopup:PopupView.ContentTemplate>
+                    <DataTemplate>
+                        <Label Text="This sould be barcode" BackgroundColor="SkyBlue"
+                           HorizontalTextAlignment="Center"/>
+                    </DataTemplate>
+                </sfPopup:PopupView.ContentTemplate>
+            </sfPopup:PopupView>
+
+        </sfPopup:SfPopupLayout>
+
+
 </ContentView>

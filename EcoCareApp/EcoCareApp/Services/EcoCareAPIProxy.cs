@@ -231,7 +231,36 @@ namespace EcoCareApp.Services
             }
         }
 
+        public async Task<bool> DecreaseStarsAfterBuying(string userName, int productId)
+        {
 
+            try
+            {
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/DecreaseStars?userName={userName}&productId={productId}");
+                if (response.IsSuccessStatusCode)
+                {
+                    JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve,
+                        PropertyNameCaseInsensitive = true
+                    };
+                    string content = await response.Content.ReadAsStringAsync();
+                    bool success = JsonSerializer.Deserialize<bool>(content, options);
+
+
+                    return success;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return false;
+            }
+        }
         public async Task<User> GetUserDataAsync(string userName)
         {
             try

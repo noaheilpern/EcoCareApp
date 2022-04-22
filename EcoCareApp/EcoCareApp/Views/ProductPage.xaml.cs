@@ -26,7 +26,9 @@ namespace EcoCareApp.Views
 
         private void showBarode_Clicked(object sender, EventArgs e)
         {
-            PopUpItself.IsVisible = true; 
+            PopUpItself.IsVisible = true;
+            ProductPageViewModel vm = (ProductPageViewModel)this.BindingContext;
+            vm.GenerateBarcode(); 
             barcodePopup.Show(); 
         }
 

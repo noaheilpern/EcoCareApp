@@ -68,7 +68,7 @@ namespace EcoCareApp.UWP
                 assembliesToInclude.Add(typeof(ZXing.Net.Mobile.Forms.WindowsUniversal.ZXingScannerViewRenderer).GetTypeInfo().Assembly);
                 assembliesToInclude.Add(typeof(ZXing.Net.Mobile.Forms.WindowsUniversal.ZXingScannerViewRenderer).GetTypeInfo().Assembly);
                 assembliesToInclude.Add(typeof(ZXing.Net.Mobile.Forms.WindowsUniversal.ZXingBarcodeImageViewRenderer).GetTypeInfo().Assembly);
-
+                assembliesToInclude.Add(typeof(Rg.Plugins.Popup.Pages.PopupPage).GetTypeInfo().Assembly);
                 //יש מצב שזה לא נכון 
 
 

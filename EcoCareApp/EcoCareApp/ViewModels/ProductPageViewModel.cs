@@ -1,5 +1,6 @@
 ﻿using EcoCareApp.Models;
 using EcoCareApp.Views;
+using Rg.Plugins.Popup.Services;
 using Syncfusion.XForms.PopupLayout;
 using System;
 using System.Collections.Generic;
@@ -29,20 +30,21 @@ namespace EcoCareApp.ViewModels
         public bool Active { get; set; }
         public string SellersUsername { get; set; }
         public int ProductId { get; set; }
-
+        public string BarcodeValue { get; set; }
 
         public virtual List<Sale> Sales { get; set; }
+        
+        public ICommand ToBarcodePopUp => new Command(PopUp);
        
-        public ICommand OpenPopUp => new Command(ToBarcode);
-
-        public void ToBarcode()
+        public void PopUp()
         {
-            /**
+            PopupNavigation.Instance.PushAsync(new BarcodePopUp());
+        }
+        public void GenerateBarcode()
+        {
             App app = (App)App.Current;
-            app.MainPage.Navigation.PushModalAsync(new BarcodePopUp());
-            **/
-            
-
+            string str = ProductId + app.CurrentRegularUser.UserName;
+            BarcodeValue = str;
         }
     }
 }
