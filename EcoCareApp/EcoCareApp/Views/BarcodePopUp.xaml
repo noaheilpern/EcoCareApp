@@ -5,25 +5,17 @@
             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
                  
              xmlns:barcode="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
-             xmlns:common="clr-namespace:ZXing.Common;assembly=zxing.portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductPageViewModel">
+             xmlns:common="clr-namespace:ZXing.Common;assembly=zxing.portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:BarcodePopUpViewModel">
     <StackLayout>
 
-        <Grid>
+        <Grid HeightRequest="600">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="20*"/>
-                <RowDefinition Height="2*" />
+                <RowDefinition Height="500"/>
+                <RowDefinition Height="50" />
             </Grid.RowDefinitions>
-            <Label Text="Customized Header" 
-                               FontAttributes="Bold"
-                               BackgroundColor="Blue"
-                               FontSize="16"
-                               HorizontalTextAlignment="Center"
-                               VerticalTextAlignment="Center"
-                   Grid.Row="0"
-                               />
+           
 
-                <barcode:ZXingBarcodeImageView BarcodeValue="{Binding BarcodeValue}" Grid.Row="1" WidthRequest="500"
+                <barcode:ZXingBarcodeImageView BarcodeValue="{Binding BarcodeValue}" Grid.Row="0" WidthRequest="500"
                                                HeightRequest="500">
 
                     <barcode:ZXingBarcodeImageView.BarcodeOptions>
@@ -31,7 +23,7 @@
                     </barcode:ZXingBarcodeImageView.BarcodeOptions>
 
                 </barcode:ZXingBarcodeImageView>
-            <Button Text="Close" Command="{Binding PopUpClosed}" Grid.Row="2"/>
+            <Button Text="Close" Command="{Binding PopUpClosed}" Grid.Row="1"/>
         </Grid>
     </StackLayout>
 

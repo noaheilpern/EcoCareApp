@@ -1,12 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:AddProductViewModel"
              x:Class="EcoCareApp.Views.AddProduct">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid Style="{StaticResource SignUpG}" >
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <!--Image-->
+                <RowDefinition></RowDefinition>
+                <!--Div-->
+            </Grid.RowDefinitions>
+            <Grid Padding="0">
+                <Image Source="images/sign_up.jpg" Aspect="AspectFill"/>
+                <!--Image-->
+            </Grid>
+            <Grid Style="{StaticResource logInSignUpDivG}" >
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="2" Style="{StaticResource logInSignUp}" >
+                    <!--Div/Box-->
+
+                    <ScrollView>
+
+                        <Grid Padding="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                              
+
+                            </Grid.RowDefinitions>
+
+
+
+                            <Label Text="Product Title" Grid.Row="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding TitleTyped}"/>
+                            <Label Text="{Binding TitleError}" Grid.Row="0" IsVisible="{Binding ShowTitleError}" Style="{StaticResource labelErrorStyle}"/>
+
+                            <Entry Grid.Row="1"  Placeholder="Enter your new product title" Text="{Binding Title}" Style="{StaticResource entry}"/>
+
+                            <Label Text="Product Description" Grid.Row="2" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding DescriptionTyped}"/>
+                            <Label Text="{Binding DescriptionError}" Grid.Row="2" IsVisible="{Binding ShowDescriptionError}" Style="{StaticResource labelErrorStyle}"/>
+
+                            <Entry Grid.Row="3"  Placeholder="Enter your product description" Text="{Binding Description}" Style="{StaticResource entry}"/>
+
+
+                            <Label Text="Product Image Source" Grid.Row="4" Style="{StaticResource labelNameStyle}"
+                       IsVisible="{Binding ImageSourceTyped}"/>
+                            <Label Text="{Binding ImageSourceError}" Grid.Row="4" IsVisible="{Binding ShowImageSourceError}" Style="{StaticResource labelErrorStyle}"/>
+
+                            <Entry Grid.Row="5"  Placeholder="Type your product's imag source" Text="{Binding ImageSource}" Style="{StaticResource entry}"/>
+
+                            <Label Text="Price" Grid.Row="6" Style="{StaticResource labelNameStyle}"
+                            IsVisible="{Binding PriceTyped}"/>
+                            <Label Text="{Binding PriceError}" Grid.Row="6" IsVisible="{Binding ShowPriceError}" Style="{StaticResource labelErrorStyle}"/>
+
+                            <Entry Grid.Row="7"  Placeholder="Type the price of the product (in stars)" Text="{Binding Price}" Style="{StaticResource entry}"/>
+
+
+                        </Grid>
+                    </ScrollView>
+                </Frame>
+            </Grid>
+        </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

@@ -28,8 +28,8 @@ namespace EcoCareApp.Views
             {
                 ScanResultText.Text = result.Text + "(Type:" + result.BarcodeFormat + ")";
                 string str = result.Text;
-                int id = 0;  
-                while(str[0] >= '0' && str[0] <='9')
+                int id = 0;
+                while (str[0] >= '0' && str[0] <= '9')
                 {
                     id *= 10;
                     id = id + Convert.ToInt32(str[0]) - 48;
@@ -37,9 +37,20 @@ namespace EcoCareApp.Views
                 }
                 string username = str;
                 //now we will decrease stars to the user who bought the gift
-                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy(); 
+                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                bool success = proxy.DecreaseStarsAfterBuying(username, id).Result;
+                if (success)
+                {
+                    App.Current.MainPage.DisplayAlert("Succeesed", "You purched the product successfully", "Amazing");
 
+                }
+                else
+                {
+                    App.Current.MainPage.DisplayAlert("Error", "Something went worng:/ Please ensure you have enough stars to buy this product", "OK");
+
+                }
             });
         }
     }
+    
 }

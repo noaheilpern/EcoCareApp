@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EcoCareApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace EcoCareApp.Views
     {
         public AddProduct()
         {
+            this.BindingContext = new AddProductViewModel();
             InitializeComponent();
         }
     }

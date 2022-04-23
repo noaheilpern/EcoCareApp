@@ -8,6 +8,7 @@ namespace EcoCareApp.Models
     {
         public string UserName { get; set; }
         public string PhoneNum { get; set; }
+        public virtual ICollection<Sale> Sales { get; set; }
 
 
         public virtual User UserNameNavigation { get; set; }

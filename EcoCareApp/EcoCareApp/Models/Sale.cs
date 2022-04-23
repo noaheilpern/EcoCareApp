@@ -11,6 +11,9 @@ namespace EcoCareApp.Models
         public int DateBought { get; set; }
         public int PriceBought { get; set; }
         public int SaleId { get; set; }
+        public string SellerUserName { get; set; }
+        public virtual Seller SellerUserNameNavigation { get; set; }
+
 
         public virtual RegularUser BuyerUserNameNavigation { get; set; }
         public virtual Product Product { get; set; }

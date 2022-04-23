@@ -209,6 +209,13 @@ namespace EcoCareApp.ViewModels
         {
             InitProducts();
         }
+        public ICommand AddProductPage => new Command(ToAdd);
+        public async void ToAdd()
+        {
+            App a = (App)App.Current;
+
+            await App.Current.MainPage.Navigation.PushAsync(new AddProduct());
+        }
         public ICommand EditItem => new Command<Product>(ToEditPage);
         public async void ToEditPage(Product obj)
         {
@@ -225,9 +232,10 @@ namespace EcoCareApp.ViewModels
                     Price = chosenProduct.Price,
                     SellersUsername = chosenProduct.SellersUsername,
                     ProductId = chosenProduct.ProductId,
-
+                    
 
                 };
+                
                 Page showProduct = new EditProduct();
 
 

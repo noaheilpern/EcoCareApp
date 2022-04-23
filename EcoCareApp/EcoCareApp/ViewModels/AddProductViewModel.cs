@@ -242,6 +242,72 @@ namespace EcoCareApp.ViewModels
 
         #endregion
 
+        #region Price
+        private bool showPriceError;
+
+        public bool ShowPriceError
+        {
+            get => showPriceError;
+            set
+            {
+                showPriceError = value;
+                OnPropertyChanged("ShowPriceError");
+            }
+        }
+
+        public bool priceTyped;
+        public bool PriceTyped
+        {
+            get => priceTyped;
+            set
+            {
+                priceTyped = value;
+                OnPropertyChanged("PriceTyped");
+            }
+        }
+        private string priceError;
+
+        public string PriceError
+        {
+
+            get => priceError;
+            set
+            {
+                priceError = value;
+                OnPropertyChanged("PriceError");
+            }
+
+        }
+
+
+        private string price;
+        public string Price
+        {
+            get => price;
+            set
+            {
+                price = value;
+
+                this.ShowPriceError = string.IsNullOrEmpty(Price);
+                if (ShowPriceError)
+                {
+                    this.PriceTyped = false;
+                    this.PriceError = ERROR_MESSAGES.REQUIRED_FIELD;
+                    OnPropertyChanged("Price");
+                }
+                else
+                {
+                    this.PriceTyped = true;
+                    this.ShowPriceError = false;
+                }
+
+            }
+        }
+
+
+
+        #endregion
+
         #region Refresh
         private bool isRefreshing;
         public bool IsRefreshing
@@ -259,8 +325,9 @@ namespace EcoCareApp.ViewModels
         #endregion
 
 
-       
+
         #region Commands
+        
 
         public ICommand AddCommand => new Command(AddProduct);
 

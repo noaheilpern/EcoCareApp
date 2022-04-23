@@ -25,7 +25,7 @@
             <ScrollView>
             <Grid>
 
-                <syncfusion:SfListView x:Name="listView" 
+                <syncfusion:SfListView x:Name="listView" StickyFooterPosition="Body" IsStickyFooter="True"
                                 ItemsSource="{Binding FilteredProducts}" 
                                     ItemSize="200"
                  SelectionMode="Single"
@@ -38,7 +38,11 @@
                                        AllowSwiping="True"
                                        SwipeStarted="listView_SwipeStarted"
                                        SwipeEnded="listView_SwipeEnded">
-                    
+                        <syncfusion:SfListView.FooterTemplate>
+                            <DataTemplate>
+                                <ImageButton Source="add.png" Command="{Binding AddProductPage}"/>
+                            </DataTemplate>
+                        </syncfusion:SfListView.FooterTemplate>
                         <syncfusion:SfListView.RightSwipeTemplate>
                             <DataTemplate x:Name="RightSwipeTemplate">
 
