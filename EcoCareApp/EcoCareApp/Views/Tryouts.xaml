@@ -24,7 +24,7 @@
 
                             <Button x:Name="showBarode" Text="Get Barcode for the benefit!"
                                     VerticalOptions="Start" HorizontalOptions="FillAndExpand"
-                                Clicked="showBarode_Clicked" Command="{Binding ToBarcodePopUp}"
+                                 Command="{Binding ToBarcodePopUp}"
                                 />
                         </StackLayout>
 

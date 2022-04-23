@@ -18,18 +18,20 @@ namespace EcoCareApp.Views
         public ProductPage(ProductPageViewModel vm)
         {
             InitializeComponent();
-            mainLayout.IsVisible = true; 
             this.BindingContext = vm;
+            /**
             PopUpItself.IsVisible = false; 
             barcodePopup.Show();
+                        mainLayout.IsVisible = true; 
+            **/
         }
 
         private void showBarode_Clicked(object sender, EventArgs e)
         {
-            PopUpItself.IsVisible = true;
+            //PopUpItself.IsVisible = true;
             ProductPageViewModel vm = (ProductPageViewModel)this.BindingContext;
             vm.GenerateBarcode(); 
-            barcodePopup.Show(); 
+            //barcodePopup.Show(); 
         }
 
         //private void showBarcode_Clicked(object sender, EventArgs e)

@@ -17,12 +17,16 @@
                         <Image Source="{Binding ImageSource}" WidthRequest="400" HeightRequest="400"/>
                         <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Body"/>
                         <Label Text="{Binding SellersUsername}" HorizontalTextAlignment="Center" FontSize="Caption"/>
+                
 
-                        <Button x:Name="showBarode" Text="Get Barcode for the benefit!"
+                <Button x:Name="showBarode" Text="Get Barcode for the benefit!"
                                     VerticalOptions="Start" HorizontalOptions="FillAndExpand"
                                  Command="{Binding ToBarcodePopUp}"
                                 />
                     </StackLayout>
+                    
+            
+                    
 
                 </ScrollView>
 

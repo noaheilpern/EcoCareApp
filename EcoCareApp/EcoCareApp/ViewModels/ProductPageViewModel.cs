@@ -14,7 +14,10 @@ namespace EcoCareApp.ViewModels
     public class ProductPageViewModel:INotifyPropertyChanged
     {
 
-
+        public ProductPageViewModel()
+        {
+            GenerateBarcode();
+        }
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
@@ -33,7 +36,12 @@ namespace EcoCareApp.ViewModels
         public string BarcodeValue { get; set; }
 
         public virtual List<Sale> Sales { get; set; }
-        
+        public ICommand PopUpClosed => new Command(ClosePopUp);
+
+        public void ClosePopUp()
+        {
+            PopupNavigation.Instance.PopAsync();
+        }
         public ICommand ToBarcodePopUp => new Command(PopUp);
        
         public void PopUp()
