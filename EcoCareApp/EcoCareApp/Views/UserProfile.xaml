@@ -20,6 +20,7 @@
     <ContentView.Content>
             <ScrollView>
                 <Grid RowDefinitions="0.5*,Auto, *, 0.5*">
+                    
                 <Button Grid.Row="0" Text="Log Out" HorizontalOptions="End" Style="{StaticResource Button}" Command="{Binding LogOut}" />
                 <Grid Grid.Row="1"
                     HeightRequest="260"
@@ -74,7 +75,7 @@
                 </Grid>
 
                     <border:SfBorder
-                    Grid.Row="1"
+                    Grid.Row="2"
                     Margin="0,-69,0,0"
                     Padding="0,61,0,0"
                     BackgroundColor="{DynamicResource GrayShadowBackgroundColor}"

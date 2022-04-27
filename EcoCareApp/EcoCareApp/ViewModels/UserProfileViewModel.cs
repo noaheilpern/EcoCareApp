@@ -907,6 +907,7 @@ private void InitCountries()
             a.CurrentUser = null;
 
             StartPage sp = new StartPage();
+            NavigationPage.SetHasBackButton(sp,false);
             await App.Current.MainPage.Navigation.PushAsync(sp);
         }
         public ICommand Update => new Command(UpdateUserAsync);
