@@ -898,6 +898,17 @@ private void InitCountries()
         }
         #endregion
 
+        public ICommand LogOut => new Command(LogOutUser);
+        private async void LogOutUser()
+        {
+            App a = (App)App.Current;
+            a.CurrentRegularUser = null;
+            a.CurrentSeller = null;
+            a.CurrentUser = null;
+
+            StartPage sp = new StartPage();
+            await App.Current.MainPage.Navigation.PushAsync(sp);
+        }
         public ICommand Update => new Command(UpdateUserAsync);
 
 

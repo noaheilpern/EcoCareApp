@@ -350,7 +350,7 @@ namespace EcoCareApp.ViewModels
                 Active = true,
                 ImageSource = this.ImageSource,
                 Price = this.Price,
-                SellersUsername = a.CurrentSeller.UserName,7uuuy
+                SellersUsername = a.CurrentSeller.UserName,
 
             };
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
