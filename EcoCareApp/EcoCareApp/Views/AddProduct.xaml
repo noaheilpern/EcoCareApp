@@ -32,7 +32,8 @@
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
-                              
+                                <RowDefinition Height="60"></RowDefinition>
+
 
                             </Grid.RowDefinitions>
 
@@ -62,7 +63,7 @@
 
                             <Entry Grid.Row="7"  Placeholder="Type the price of the product (in stars)" Text="{Binding Price}" Style="{StaticResource entry}"/>
 
-
+                            <Button Text="Add Product" Command="{Binding AddCommand}" Grid.Row="8"/>
                         </Grid>
                     </ScrollView>
                 </Frame>

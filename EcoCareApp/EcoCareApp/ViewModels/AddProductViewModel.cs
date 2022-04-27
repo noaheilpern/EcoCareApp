@@ -1,5 +1,6 @@
 ﻿using EcoCareApp.Models;
 using EcoCareApp.Services;
+using EcoCareApp.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -280,19 +281,19 @@ namespace EcoCareApp.ViewModels
         }
 
 
-        private string price;
-        public string Price
+        private int price;
+        public int Price
         {
             get => price;
             set
             {
                 price = value;
 
-                this.ShowPriceError = string.IsNullOrEmpty(Price);
-                if (ShowPriceError)
+                if(Price <=0)
                 {
-                    this.PriceTyped = false;
-                    this.PriceError = ERROR_MESSAGES.REQUIRED_FIELD;
+                    this.ShowPriceError = true;             
+                    this.PriceTyped = true;
+                    this.PriceError = "Price must be more than 0";
                     OnPropertyChanged("Price");
                 }
                 else
@@ -335,8 +336,11 @@ namespace EcoCareApp.ViewModels
 
         private async void AddProduct()
         {
+            
             App a = (App)App.Current;
-            bool worked = true;
+            if (a.CurrentSeller == null)
+                return; 
+            Product returnedProduct = null; 
             App app = (App)App.Current;
             Product p = new Product
             {
@@ -345,18 +349,18 @@ namespace EcoCareApp.ViewModels
                 Description = this.Description,
                 Active = true,
                 ImageSource = this.ImageSource,
-                //Price = this.Price,
-                SellersUsername = a.CurrentSeller.UserName,
+                Price = this.Price,
+                SellersUsername = a.CurrentSeller.UserName,7uuuy
 
             };
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
 
                 isRefreshing = true;
-                //worked = await proxy.AddProductAsync(p);
+            returnedProduct = await proxy.AddProductAsync(p);
                 isRefreshing = false;
 
             
-            if (!worked)
+            if (returnedProduct == null)
             {
                 await App.Current.MainPage.DisplayAlert("Error", "Updating product data failed. Please check fields are filled as needed", "OK");
 
@@ -364,9 +368,28 @@ namespace EcoCareApp.ViewModels
             else
             {
                 await App.Current.MainPage.DisplayAlert("Succeed", "detail(s) updated successfully", "great:)");
+                
+                    ProductPageViewModel ProductContext = new ProductPageViewModel
+                    {
+                        Title = returnedProduct.Title,
+                        Active = returnedProduct.Active,
+                        Description = returnedProduct.Description,
+                        Price = returnedProduct.Price,
+                        ImageSource = returnedProduct.ImageSource,
+                        SellersUsername = returnedProduct.SellersUsername,
+                        ProductId = returnedProduct.ProductId,
 
+                    };
+                    Page showProduct = new ProductPage(ProductContext);
+
+
+                    showProduct.BindingContext = ProductContext;
+                    showProduct.Title = ProductContext.Title;
+
+                    await App.Current.MainPage.Navigation.PushAsync(showProduct);
+
+                }
             }
-        }
 
         #endregion
 

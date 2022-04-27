@@ -675,7 +675,41 @@ namespace EcoCareApp.Services
             }
 
         }
+
+        public async Task<Product> AddProductAsync(Product p)
+        {
+
+            try
+            {
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    PropertyNameCaseInsensitive = true
+                };
+
+                string json = JsonSerializer.Serialize<Product>(p, options);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/AddProduct", content);
+                if (response.IsSuccessStatusCode)
+                {
+
+                    string jsonContent = await response.Content.ReadAsStringAsync();
+                    Product productReturned = JsonSerializer.Deserialize<Product>(jsonContent, options);
+                    return productReturned;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
         //This method register a new user into the server database. A previous login is NOT required! The nick name and email must be uniqe!
+        //it returns true is succeeded or false otherwise
         //it returns true is succeeded or false otherwise
         //questions are ignored upon registering a user and shoul dbe added seperatly.
         //if succeeded - the user is automatically logged in on the server
