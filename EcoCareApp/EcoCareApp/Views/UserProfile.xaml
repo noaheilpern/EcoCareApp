@@ -18,27 +18,27 @@
     NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
     <ContentView.Content>
-            <ScrollView>
-                <Grid RowDefinitions="0.5*,Auto, *, 0.5*">
-                    
-                <Button Grid.Row="0" Text="Log Out" HorizontalOptions="End" Style="{StaticResource Button}" Command="{Binding LogOut}" />
-                <Grid Grid.Row="1"
-                    HeightRequest="260"
-                    RowDefinitions="Auto, Auto, *"
-                    RowSpacing="0">
-                        <gradient:SfGradientView Grid.RowSpan="3">
-                            <gradient:SfGradientView.BackgroundBrush>
-                                <gradient:SfLinearGradientBrush>
-                                    <gradient:SfLinearGradientBrush.GradientStops>
-                                        <gradient:SfGradientStop Offset="0.0" Color="{StaticResource Dull-Red}" />
-                                        <gradient:SfGradientStop Offset="1.0" Color="{StaticResource Deep-Purple}" />
-                                    </gradient:SfLinearGradientBrush.GradientStops>
-                                </gradient:SfLinearGradientBrush>
-                            </gradient:SfGradientView.BackgroundBrush>
-                        </gradient:SfGradientView>
+        <ScrollView>
+            <Grid RowDefinitions="Auto, *, 0.5*">
 
-                        <!--  Profile Image  -->
-                        <border:SfBorder
+                <Grid Grid.Row="0"
+                    HeightRequest="300"
+                    RowDefinitions="* ,Auto, Auto, *"
+                    RowSpacing="0">
+                    <gradient:SfGradientView Grid.RowSpan="4">
+                        <gradient:SfGradientView.BackgroundBrush>
+                            <gradient:SfLinearGradientBrush>
+                                <gradient:SfLinearGradientBrush.GradientStops>
+                                    <gradient:SfGradientStop Offset="0.0" Color="{StaticResource Dull-Red}" />
+                                    <gradient:SfGradientStop Offset="1.0" Color="{StaticResource Deep-Purple}" />
+                                </gradient:SfLinearGradientBrush.GradientStops>
+                            </gradient:SfLinearGradientBrush>
+                        </gradient:SfGradientView.BackgroundBrush>
+                    </gradient:SfGradientView>
+                    <Button Text="Log Out" VerticalOptions="Center" HeightRequest="50" Grid.Row="0" HorizontalOptions="End" Command="{Binding LogOut}" Style="{StaticResource Button}"/>
+
+                    <!--  Profile Image  -->
+                    <border:SfBorder
                         Margin="0,56,0,8"
                         BackgroundColor="{DynamicResource GrayShadowBackgroundColor}"
                         BorderColor="{DynamicResource Gray-White}"
@@ -47,16 +47,17 @@
                         HeightRequest="120"
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="StartAndExpand"
-                        WidthRequest="120">
+                        WidthRequest="120"
+                        Grid.Row="1">
 
-                            <Image Aspect="AspectFill" Source="images/profileImg.png" BackgroundColor="{DynamicResource GrayShadowBackgroundColor}">
-                                
-                            </Image>
+                        <Image Aspect="AspectFill" Source="images/profileImg.png" BackgroundColor="{DynamicResource GrayShadowBackgroundColor}">
 
-                        </border:SfBorder>
+                        </Image>
 
-                        <!--  Profile Name  -->
-                        <Label
+                    </border:SfBorder>
+
+                    <!--  Profile Name  -->
+                    <Label
                         Grid.Row="2"
                         Margin="0,0,0,2"
                         FontSize="20"
@@ -64,7 +65,7 @@
                         Text="{Binding UserName, StringFormat='Hi {0:F0}!'}"
                         TextColor="{DynamicResource Gray-White}" />
 
-                        <!--  Stars  -->
+                    <!--  Stars  -->
                     <Label
                         Grid.Row="3"
                         FontSize="12"
@@ -74,24 +75,24 @@
 
                 </Grid>
 
-                    <border:SfBorder
-                    Grid.Row="2"
+                <border:SfBorder
+                    Grid.Row="1"
                     Margin="0,-69,0,0"
                     Padding="0,61,0,0"
                     BackgroundColor="{DynamicResource GrayShadowBackgroundColor}"
                     BorderWidth="0"
                     CornerRadius="14,14,0,0"
                     VerticalOptions="Start">
-                        <listView:SfListView
+                    <listView:SfListView
                         AutoFitMode="Height"
                         IsScrollingEnabled="False"
                         ItemSize="74"
                         ItemsSource="{Binding CardItems}"
                         SelectionMode="None"
                         >
-                            <listView:SfListView.ItemTemplate>
-                                <DataTemplate x:DataType="models:CardsItem">
-                                    <svg:CustomShadowFrame
+                        <listView:SfListView.ItemTemplate>
+                            <DataTemplate x:DataType="models:CardsItem">
+                                <svg:CustomShadowFrame
                                     Margin="16,8"
                                     Padding="0"
                                     BackgroundColor="{DynamicResource GrayShadowColor}"
@@ -104,23 +105,23 @@
                                     WidthRequest="{OnIdiom Phone=343,
                                                            Default=736}">
 
-                                        <Grid
+                                    <Grid
                                         Padding="16"
                                         RowDefinitions="*, Auto, *"
                                         RowSpacing="0">
 
-                                            <!--  Category  -->
+                                        <!--  Category  -->
                                         <Label Text="{Binding CategoryError}" 
                                                    Style="{StaticResource labelErrorStyle}"
                                                    Grid.Row="0"></Label>
-                                            
-                                            <Entry
+
+                                        <Entry
                                             HeightRequest="50"
                                             HorizontalOptions="Start"
                                             Text="{Binding CategoryValue}" Grid.Row="1"/>
 
-                                            <!--  Category Value  -->
-                                            <Label
+                                        <!--  Category Value  -->
+                                        <Label
                                             Grid.Row="2"
                                             FontSize="12"
                                             HeightRequest="18"
@@ -128,22 +129,22 @@
                                             Style="{StaticResource DescriptionLabelStyle}"
                                             Text="{Binding Category}" />
 
-                                           
-                                        </Grid>
 
-                                    </svg:CustomShadowFrame>
-                                </DataTemplate>
-                            </listView:SfListView.ItemTemplate>
-                        </listView:SfListView>
-                        
-                    </border:SfBorder>
+                                    </Grid>
+
+                                </svg:CustomShadowFrame>
+                            </DataTemplate>
+                        </listView:SfListView.ItemTemplate>
+                    </listView:SfListView>
+
+                </border:SfBorder>
                 <Grid Grid.Row="2" VerticalOptions="CenterAndExpand">
                     <Button Text="Save" Command="{Binding Update}"  Margin="0,0,0,2"
                         Style="{StaticResource UserPageButton}"/>
                 </Grid>
-                </Grid>
+            </Grid>
 
         </ScrollView>
-        
+
     </ContentView.Content>
 </ContentView>
