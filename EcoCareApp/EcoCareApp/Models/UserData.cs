@@ -9,7 +9,9 @@ namespace EcoCareApp.Models
         public int CategoryId { get; set; }
         public double CategoryValue { get; set; }
         public DateTime DateT { get; set; }
-      
+
+        public double? CarbonFootprint { get; set; }
+
         public string UserName { get; set; }
 
         public virtual RegularUser UserNameNavigation { get; set; }
