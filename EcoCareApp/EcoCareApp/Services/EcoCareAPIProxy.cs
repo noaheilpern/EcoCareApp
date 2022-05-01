@@ -113,6 +113,112 @@ namespace EcoCareApp.Services
                 return null;
             }
         }
+
+        public async Task<List<GraphItem>> GetSellerGraphsDataAsync()
+        {
+            try
+            {
+                App a = (App)App.Current;
+                Seller s = a.CurrentSeller; 
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    PropertyNameCaseInsensitive = true
+                };
+
+                string json = JsonSerializer.Serialize<List<Sale>(s.Sales, options);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/GetSellerGraphsData", content);
+                if (response.IsSuccessStatusCode)
+                {
+                    JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve,
+                        PropertyNameCaseInsensitive = true
+                    };
+                    string content = await response.Content.ReadAsStringAsync();
+                    List<GraphItem> items = JsonSerializer.Deserialize<List<GraphItem>>(content, options);
+
+                    return items;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return null;
+            }
+
+
+        }
+
+
+        public async Task<List<GraphItem>> GetUserGraphsDataAsync()
+        {
+            try
+            {
+                App app = (App)App.Current;
+                string userName = app.CurrentUser.UserName;
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetUserGraphsData?userName={userName}");
+                if (response.IsSuccessStatusCode)
+                {
+                    JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve,
+                        PropertyNameCaseInsensitive = true
+                    };
+                    string content = await response.Content.ReadAsStringAsync();
+                    List<GraphItem> items = JsonSerializer.Deserialize<List<GraphItem>>(content, options);
+
+                    return items;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return null;
+            }
+        
+    
+        }
+
+        public async Task<double> GetCountryEFAsync()
+        {
+            try
+            {
+                App a = (App)App.Current;
+                string country = a.CurrentUser.Country; 
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetCountryEF?country={country}");
+                if (response.IsSuccessStatusCode)
+                {
+                    JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve,
+                        PropertyNameCaseInsensitive = true
+                    };
+                    string content = await response.Content.ReadAsStringAsync();
+                    double ef = JsonSerializer.Deserialize<double>(content, options);
+
+                    return ef;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return -1;
+            }
+        }
         public async Task<List<Product>> GetProductsAsync()
         {
             try
@@ -633,6 +739,8 @@ namespace EcoCareApp.Services
                 return 0;
             }
         }
+
+        //to check
         public async Task<bool> AddData(double value, string category)
         {
             try
@@ -655,7 +763,9 @@ namespace EcoCareApp.Services
 
                 string json = JsonSerializer.Serialize(data, options);
                 StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/AddData",content);
+
+                double ef = await GetCountryEFAsync();
+                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/AddData?ef={ef}",content);
                 if (response.IsSuccessStatusCode)
                 {
 

@@ -8,13 +8,15 @@ using System;
 using System.Linq;
 using EcoCareApp.Models;
 using Syncfusion.SfChart.XForms;
+using EcoCareApp.Services;
+using System.Threading.Tasks;
 
 namespace EcoCareApp.ViewModels
 {
     class GraphsViewModel
     {
         //users graphs
-        public List<DataItem> UserData { get; set; }
+        public List<GraphItem> UserData { get; set; }
         public List<Color> Colors { get; set; }
 
 
@@ -22,12 +24,13 @@ namespace EcoCareApp.ViewModels
         public GraphsViewModel()
         {
             //user data - פעולה בשרת
-            UserData = new List<DataItem>()
-            {
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
 
-                new DataItem {Value = 30, Date = DateTime.MinValue},
-                new DataItem { Value = 70, Date = DateTime.Today},
-            };
+            
+            List<GraphItem> items = proxy.GetUserGraphsDataAsync().Result; 
+           
+            UserData = items; 
+            
             Colors = new List<Color>()
             {
                 new Color(82,182,154),
