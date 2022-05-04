@@ -126,18 +126,13 @@ namespace EcoCareApp.Services
                     PropertyNameCaseInsensitive = true
                 };
 
-                string json = JsonSerializer.Serialize<List<Sale>(s.Sales, options);
+                string json = JsonSerializer.Serialize(s.Sales, options);
                 StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/GetSellerGraphsData", content);
                 if (response.IsSuccessStatusCode)
                 {
-                    JsonSerializerOptions options = new JsonSerializerOptions
-                    {
-                        ReferenceHandler = ReferenceHandler.Preserve,
-                        PropertyNameCaseInsensitive = true
-                    };
-                    string content = await response.Content.ReadAsStringAsync();
-                    List<GraphItem> items = JsonSerializer.Deserialize<List<GraphItem>>(content, options);
+                    string resultContent = await response.Content.ReadAsStringAsync();
+                    List<GraphItem> items = JsonSerializer.Deserialize<List<GraphItem>>(resultContent, options);
 
                     return items;
                 }

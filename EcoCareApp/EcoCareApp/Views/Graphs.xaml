@@ -63,7 +63,7 @@
                 </chart:NumericalAxis>
             </chart:SfChart.SecondaryAxis>
             <chart:SfChart.Series>
-                <chart:ColumnSeries x:Name="Series1" ItemsSource="{Binding UserData}" XBindingPath="Date" YBindingPath="Value" EnableTooltip="true" TooltipTemplate="{StaticResource toolTipTemplate1}">
+                <chart:ColumnSeries x:Name="Series1" ItemsSource="{Binding UserData}" XBindingPath="DateGraph" YBindingPath="ValueFootPrint" EnableTooltip="true" TooltipTemplate="{StaticResource toolTipTemplate1}">
                     <chart:ColumnSeries.DataMarker>
                         <chart:ChartDataMarker >
                             <chart:ChartDataMarker.LabelStyle>

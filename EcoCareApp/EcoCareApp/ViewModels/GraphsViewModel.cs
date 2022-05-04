@@ -20,17 +20,19 @@ namespace EcoCareApp.ViewModels
         public List<Color> Colors { get; set; }
 
 
+        public async void GetItems()
+        {
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+            UserData = await proxy.GetUserGraphsDataAsync();
 
+
+        }
         public GraphsViewModel()
         {
-            //user data - פעולה בשרת
-            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
 
-            
-            List<GraphItem> items = proxy.GetUserGraphsDataAsync().Result; 
-           
-            UserData = items; 
-            
+
+
+            GetItems(); 
             Colors = new List<Color>()
             {
                 new Color(82,182,154),
