@@ -41,7 +41,7 @@ namespace EcoCareApp
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
            
             CountriesList = await proxy.GetCountriesAsync();
-            
+             
             CurrentUser = await proxy.LoginAsync("noa@gmail.com", "123456");
             CurrentRegularUser = await proxy.GetRegularUserDataAsync(CurrentUser.UserName);
             Home h = new Home();

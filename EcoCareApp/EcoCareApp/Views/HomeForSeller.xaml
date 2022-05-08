@@ -10,7 +10,7 @@
             <Grid IsVisible="{Binding Seller}">
                 <StackLayout>
                     <Label x:Name="ScanResultText"/>
-                    <barcodeScanner:ZXingScannerView IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult" ScanResultCommand="{Binding }}"/>
+                    <barcodeScanner:ZXingScannerView IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult" ScanResultCommand="{Binding}"/>
 
                 </StackLayout>
             </Grid>

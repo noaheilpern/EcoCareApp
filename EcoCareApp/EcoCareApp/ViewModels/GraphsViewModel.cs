@@ -10,29 +10,61 @@ using EcoCareApp.Models;
 using Syncfusion.SfChart.XForms;
 using EcoCareApp.Services;
 using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Windows.Input;
+using EcoCareApp.Views;
 
 namespace EcoCareApp.ViewModels
 {
-    class GraphsViewModel
+    class GraphsViewModel : INotifyPropertyChanged
     {
+
+        #region INotifyPropertyChanged
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        #endregion
+    
         //users graphs
         public List<GraphItem> UserData { get; set; }
         public List<Color> Colors { get; set; }
 
 
-        public async void GetItems()
+        public Task<List<GraphItem>> GetItems()
         {
+
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-            UserData = await proxy.GetUserGraphsDataAsync();
-
-
+            return proxy.GetUserGraphsDataAsync();
         }
+        #region Refresh
+        private bool isRefreshing;
+        public bool IsRefreshing
+        {
+            get => isRefreshing;
+            set
+            {
+                if (this.isRefreshing != value)
+                {
+                    this.isRefreshing = value;
+                    OnPropertyChanged(nameof(IsRefreshing));
+                }
+            }
+        }
+
+        public ICommand RefreshCommand => new Command(OnRefresh);
+        public void OnRefresh()
+        {
+            GetItems();
+        }
+        #endregion
         public GraphsViewModel()
         {
 
-
-
-            GetItems(); 
+            //Page p = new Loading();
+            
+            //UserData = GetItems().Result;
             Colors = new List<Color>()
             {
                 new Color(82,182,154),

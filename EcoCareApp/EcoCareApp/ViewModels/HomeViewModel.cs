@@ -24,6 +24,8 @@ namespace EcoCareApp.ViewModels
                 RegularUser = true; 
             }
         }
+        public event Action<ZXing.Result> BarcodeEvent;
+
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
