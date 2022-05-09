@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Windows.Input;
 using EcoCareApp.Views;
+using System.Collections.ObjectModel;
 
 namespace EcoCareApp.ViewModels
 {
@@ -26,12 +27,28 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-    
+
         //users graphs
-        public List<GraphItem> UserData { get; set; }
+        private ObservableCollection<GraphItem> userData;
+        public ObservableCollection<GraphItem> UserData {
+            get
+            {
+                return this.userData;
+            }
+            set
+            {
+                this.userData = value;
+                OnPropertyChanged("UserData");
+            }
+        }
         public List<Color> Colors { get; set; }
 
+        public async void LoadGraphs()
+        {
+            List<GraphItem> UserData = await GetItems();
 
+            
+        }
         public Task<List<GraphItem>> GetItems()
         {
 
@@ -61,17 +78,15 @@ namespace EcoCareApp.ViewModels
         #endregion
         public GraphsViewModel()
         {
-
-            //Page p = new Loading();
-            
-            //UserData = GetItems().Result;
+            UserData = new ObservableCollection<GraphItem>();
+            Page p = new Loading();
             Colors = new List<Color>()
             {
                 new Color(82,182,154),
                 new Color(82,182,154),
 
             };
-
+            LoadGraphs();
             //        public Chart ExampleChart
             //        {
             //            get

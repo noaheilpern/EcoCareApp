@@ -40,7 +40,7 @@
                                        SwipeEnded="listView_SwipeEnded">
                         <syncfusion:SfListView.FooterTemplate>
                             <DataTemplate>
-                                <ImageButton Source="add.png" Command="{Binding AddProductPage}"/>
+                                <ImageButton Source="add.png" Command="{Binding AddProductPage}" IsVisible="{Binding }"/>
                             </DataTemplate>
                         </syncfusion:SfListView.FooterTemplate>
                         <syncfusion:SfListView.RightSwipeTemplate>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ using System.Windows.Input;
 using EcoCareApp.Models;
 using EcoCareApp.Services;
 using EcoCareApp.Views;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
 namespace EcoCareApp.ViewModels
@@ -532,6 +534,18 @@ namespace EcoCareApp.ViewModels
             set
             {
                 this.selectedCountry = value;
+
+                if (string.IsNullOrEmpty(userName))
+                {
+                    this.CountrySelected = false;
+                }
+
+                else
+                {
+                    CountrySelected = true;
+                    OnPropertyChanged("CountrySelected");
+                }
+
                 OnPropertyChanged("SelectedCountry");
             }
         }
@@ -647,8 +661,8 @@ namespace EcoCareApp.ViewModels
         #endregion
 
 
-        
 
+       
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }
         private async Task<bool> ValidateEmailAndUserNameAsync()
@@ -734,9 +748,58 @@ namespace EcoCareApp.ViewModels
 
         }
 
+        public ICommand ToCountries => new Command(Countries);
+        public void Countries()
+        {
+            CountriesPopUp cpu = new CountriesPopUp
+            {
+                BindingContext = this,
+            };
+            PopupNavigation.Instance.PushAsync(cpu);
+
+        }
+        public ICommand MoveToLogIn => new Command(ToLogin);
+
+        public async void ToLogin()
+        {
+            LogIn l = new LogIn();
+            
+            l.Title = "Calculate your foot print";
+            await App.Current.MainPage.Navigation.PushAsync(l) ;
+
+        }
 
 
+        public ICommand SelctionChanged => new Command(CountryChanged);
 
+        public void CountryChanged(Object obj)
+        {
+            if (obj is Country)
+            {
+                SelectedCountry = (Country)obj;
+
+            }
+        }
+
+     
+
+        private bool countrySelected;
+
+        public bool CountrySelected
+        {
+            get
+            {
+                return this.countrySelected;
+            }
+            set
+
+            {
+                countrySelected = value;
+
+
+                OnPropertyChanged("CountrySelected");
+            }
+        }
 
     }
 }

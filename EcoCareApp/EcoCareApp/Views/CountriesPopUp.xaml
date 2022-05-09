@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCareApp.Views.CountriesPopUp"
+               xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 
+             xmlns:barcode="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:common="clr-namespace:ZXing.Common;assembly=zxing.portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" >
+    
+    <StackLayout>
+        <SearchBar x:Name="searchBar" 
+                       Placeholder="Type your country" 
+                       Text="{Binding SearchTerm}"
+                       />
+
+
+
+        <RefreshView x:Name="refreshView"
+             Command="{Binding RefreshCommand}"
+             IsRefreshing="{Binding IsRefreshing}">
+            <CollectionView HeightRequest="40" EmptyView="No Countries found" x:Name="collectionName" 
+                                ItemsSource="{Binding FilteredCountries}" SelectionMode="Single"
+                                                BackgroundColor="#B9C6CB" 
+                                                SelectionChangedCommand="{Binding SelctionChanged}"
+                        SelectionChangedCommandParameter="{Binding Source={x:Reference collectionName}, Path=SelectedItem}"
+                                SelectedItem="{Binding SelectedCountry}">
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Span="1" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Path=CountryName, StringFormat='{0}'}"  HorizontalTextAlignment="Start"
+                                                   />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+        
+    </StackLayout>
+</pages:PopupPage>

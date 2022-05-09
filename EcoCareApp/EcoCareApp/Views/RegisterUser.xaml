@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:EcoCareApp.ViewModels"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:EcoCareApp.ViewModels" x:DataType="local:RegisterUserViewModel"
              x:Class="EcoCareApp.Views.RegisterUser">
     <ContentPage.Resources>
        
@@ -143,38 +143,10 @@
 
 
                             <Label Text="Country" Grid.Row="15" Style="{StaticResource labelNameStyle}"
-                       IsVisible="{Binding CountryTyped}"/>
-
-
-                            <SearchBar Grid.Row="16" x:Name="searchBar" 
-                       Placeholder="Type your country" 
-                       Text="{Binding SearchTerm}"
                        />
-                            <ScrollView Grid.Row="17">
-
-
-                                <RefreshView x:Name="refreshView"
-             Command="{Binding RefreshCommand}"
-             IsRefreshing="{Binding IsRefreshing}">
-                                    <CollectionView HeightRequest="40" EmptyView="No Countries found" x:Name="collectionName" 
-                                ItemsSource="{Binding FilteredCountries}" SelectionMode="Single"
-                                                BackgroundColor="#B9C6CB" 
-                                                SelectionChangedCommand="{Binding SelctionChanged}"
-                        SelectionChangedCommandParameter="{Binding Source={x:Reference collectionName}, Path=SelectedItem}"
-                                SelectedItem="{Binding SelectedCountry}">
-
-                                        <CollectionView.ItemsLayout>
-                                            <GridItemsLayout Span="1" Orientation="Vertical" />
-                                        </CollectionView.ItemsLayout>
-                                        <CollectionView.ItemTemplate>
-                                            <DataTemplate>
-                                                <Label Text="{Binding Path=CountryName, StringFormat='{0}'}"  HorizontalTextAlignment="Start"
-                                                   />
-                                            </DataTemplate>
-                                        </CollectionView.ItemTemplate>
-                                    </CollectionView>
-                                </RefreshView>
-                            </ScrollView>
+                            <Label Text = "{Binding SelectedCountry.CountryName, StringFormat='Country chosed: {0:F0} '}" IsVisible="{Binding CountrySelected}" Grid.Row="16"/>
+                            <Button Text="Choose Country" Grid.Row="17" Command="{Binding ToCountries}"/>
+                            
                             <Button Grid.Row="18" Grid.RowSpan="2"  Text="Sign Up" Command="{Binding ResigterUser}"></Button>
                                 
                             </Grid>
