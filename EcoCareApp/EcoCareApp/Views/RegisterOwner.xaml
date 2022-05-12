@@ -111,6 +111,8 @@
                             <Label Text="Country" Grid.Row="13" Style="{StaticResource labelNameStyle}"
                        />
                             <Label Text = "{Binding SelectedCountry.CountryName, StringFormat='Country chosed: {0:F0} '}" IsVisible="{Binding CountrySelected}" Grid.Row="14"/>
+                            <Label Text= "Please choose country" Grid.Row="14" IsVisible="{Binding CountryNotSelected}" />
+
                             <Button Text="Choose Country" Grid.Row="15" Command="{Binding ToCountries}" />
 
                             

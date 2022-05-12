@@ -5,8 +5,17 @@
               xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:views="clr-namespace:EcoCareApp.Views" xmlns:ViewModels="clr-namespace:EcoCareApp.ViewModels"
              x:DataType="ViewModels:GraphsViewModel" xmlns:models="EcoCareApp.Models.DataItem">
-    <ContentView.Resources>
-            <ResourceDictionary>
+    <ContentView.Content>
+        <StackLayout>
+            <Label Text="{Binding Title}" FontSize="Large" HorizontalOptions="Center"></Label>
+            <Label Text="   " FontSize="Large"></Label>
+            <microcharts:ChartView Chart="{Binding MainChart}" HeightRequest="250"/>
+            <Label Text="   " FontSize="Large"></Label>
+            <Button Text="Next Chart" Command="{Binding NextChart}"></Button>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
+<!--<ResourceDictionary>
             <chart:ChartColorCollection x:Key="Colors">
                 <Color>Yellow</Color>
                 <Color>Gray</Color>
@@ -83,5 +92,4 @@
                 </chart:SfChart.ColorModel>
             </chart:SfChart>
         </StackLayout>
-    </RefreshView>
-</ContentView>
+    </RefreshView>-->

@@ -282,11 +282,13 @@ namespace EcoCareApp.ViewModels
 
             }
         }
-        
+
         #endregion
 
 
         #endregion
+
+        public bool IsSeller { get; set; }
 
         #region Fields
 
@@ -314,11 +316,16 @@ namespace EcoCareApp.ViewModels
         /// <summary>
         /// Initializes a new instance for the <see cref="CatalogPageViewModel" /> class.
         /// </summary>
+        /// 
         public ProductsViewModel()
         {
             this.SearchTerm = string.Empty;
             InitProducts();
-
+            App a = (App)App.Current;
+            if (a.CurrentSeller != null)
+                IsSeller = true;
+            else
+                IsSeller = false;
         }
 
         #endregion

@@ -24,6 +24,9 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+
+        
+
         #region UserName
         private bool showUserNameError;
 
@@ -465,6 +468,7 @@ namespace EcoCareApp.ViewModels
         public RegisterOwnerViewModel()
         {
             this.SearchTerm = string.Empty;
+            CountryNotSelected = true;
 
             InitCountries();
         }
@@ -826,6 +830,26 @@ namespace EcoCareApp.ViewModels
 
             }
         }
+
+
+        private bool countryNotSelected;
+
+        public bool CountryNotSelected
+        {
+            get
+            {
+                return this.countryNotSelected;
+            }
+            set
+
+            {
+                countryNotSelected = value;
+
+
+                OnPropertyChanged("CountryNotSelected");
+            }
+        }
+
         private bool countrySelected;
 
         public bool CountrySelected
@@ -843,7 +867,12 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("CountrySelected");
             }
         }
+        public ICommand PopUpClosed => new Command(ClosePopUp);
 
+        public void ClosePopUp()
+        {
+            PopupNavigation.Instance.PopAsync();
+        }
 
 
 

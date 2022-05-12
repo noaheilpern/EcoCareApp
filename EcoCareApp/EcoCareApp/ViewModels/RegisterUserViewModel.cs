@@ -508,6 +508,7 @@ namespace EcoCareApp.ViewModels
         public RegisterUserViewModel()
         {
             this.SearchTerm = string.Empty;
+            CountryNotSelected = true;
 
             InitCountries();
         }
@@ -780,9 +781,30 @@ namespace EcoCareApp.ViewModels
 
             }
         }
+        public ICommand PopUpClosed => new Command(ClosePopUp);
 
-     
+        public void ClosePopUp()
+        {
+            PopupNavigation.Instance.PopAsync();
+        }
 
+        private bool countryNotSelected; 
+
+        public bool CountryNotSelected
+        {
+            get
+            {
+                return this.countryNotSelected;
+            }
+            set
+
+            {
+                countryNotSelected = value;
+
+
+                OnPropertyChanged("CountryNotSelected");
+            }
+        }
         private bool countrySelected;
 
         public bool CountrySelected
@@ -795,7 +817,7 @@ namespace EcoCareApp.ViewModels
 
             {
                 countrySelected = value;
-
+                CountryNotSelected = !value;
 
                 OnPropertyChanged("CountrySelected");
             }

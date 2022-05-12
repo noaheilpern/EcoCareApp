@@ -4,38 +4,47 @@
              x:Class="EcoCareApp.Views.CountriesPopUp"
                xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
                  
-             xmlns:barcode="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
-             xmlns:common="clr-namespace:ZXing.Common;assembly=zxing.portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" >
+              xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels">
     
     <StackLayout>
-        <SearchBar x:Name="searchBar" 
+        <Grid HeightRequest="600">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="500" />
+                <RowDefinition Height="50" />
+
+            </Grid.RowDefinitions>
+
+            <SearchBar x:Name="searchBar" 
                        Placeholder="Type your country" 
                        Text="{Binding SearchTerm}"
+                   Grid.Row="0"
                        />
 
 
 
-        <RefreshView x:Name="refreshView"
+            <RefreshView x:Name="refreshView" Grid.Row="1"
              Command="{Binding RefreshCommand}"
              IsRefreshing="{Binding IsRefreshing}">
-            <CollectionView HeightRequest="40" EmptyView="No Countries found" x:Name="collectionName" 
+                <CollectionView EmptyView="No Countries found" x:Name="collectionName" 
                                 ItemsSource="{Binding FilteredCountries}" SelectionMode="Single"
                                                 BackgroundColor="#B9C6CB" 
                                                 SelectionChangedCommand="{Binding SelctionChanged}"
                         SelectionChangedCommandParameter="{Binding Source={x:Reference collectionName}, Path=SelectedItem}"
                                 SelectedItem="{Binding SelectedCountry}">
 
-                <CollectionView.ItemsLayout>
-                    <GridItemsLayout Span="1" Orientation="Vertical" />
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Label Text="{Binding Path=CountryName, StringFormat='{0}'}"  HorizontalTextAlignment="Start"
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Span="1" Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding Path=CountryName, StringFormat='{0}'}"  HorizontalTextAlignment="Start"
                                                    />
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </RefreshView>
-        
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+            <Button Text="Close" Command="{Binding PopUpClosed}" Grid.Row="2"/>
+        </Grid>
     </StackLayout>
 </pages:PopupPage>

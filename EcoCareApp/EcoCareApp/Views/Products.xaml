@@ -11,7 +11,8 @@
                                ProgressBackgroundColor="#428BCA" RefreshContentHeight="50" 
                                RefreshContentWidth="50" TransitionMode="Push" IsRefreshing="False">
             <pullToRefresh:SfPullToRefresh.PullableContent> -->
-                <StackLayout>
+        <ScrollView>        
+        <StackLayout>
 
             <Grid>
 
@@ -25,9 +26,10 @@
             <ScrollView>
             <Grid>
 
-                <syncfusion:SfListView x:Name="listView" StickyFooterPosition="Body" IsStickyFooter="True"
+                        <syncfusion:SfListView x:Name="listView" StickyFooterPosition="Body"  FooterSize="90" IsStickyFooter="True"
                                 ItemsSource="{Binding FilteredProducts}" 
                                     ItemSize="200"
+                                       AllowSwiping="{Binding IsSeller}"
                  SelectionMode="Single"
                  SelectionGesture="Tap"
                                        Orientation="Vertical"
@@ -35,19 +37,20 @@
                                        SelectionChangedCommandParameter="{Binding Source={x:Reference listView}, Path=SelectedItem}"
                  SelectionBackgroundColor="#E4E4E4"
                                        SwipeOffset="360" SwipeThreshold="30"
-                                       AllowSwiping="True"
                                        SwipeStarted="listView_SwipeStarted"
+                                               
                                        SwipeEnded="listView_SwipeEnded">
+                    
                         <syncfusion:SfListView.FooterTemplate>
                             <DataTemplate>
-                                <ImageButton Source="add.png" Command="{Binding AddProductPage}" IsVisible="{Binding }"/>
+                                    <ImageButton Source="add.png" Command="{Binding AddProductPage}" HeightRequest="50"  IsVisible="{Binding IsSeller}" BackgroundColor="Transparent"  HorizontalOptions="End"/>
                             </DataTemplate>
                         </syncfusion:SfListView.FooterTemplate>
                         <syncfusion:SfListView.RightSwipeTemplate>
                             <DataTemplate x:Name="RightSwipeTemplate">
 
                                     
-                                    <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0">
+                                    <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0" IsVisible="{Binding IsSeller}">
                                             
                                             <ImageButton Grid.Column="0"
                     Grid.Row="0"
@@ -63,9 +66,9 @@
                             </DataTemplate>
 
                         </syncfusion:SfListView.RightSwipeTemplate>
-                        <syncfusion:SfListView.LeftSwipeTemplate>
+                        <syncfusion:SfListView.LeftSwipeTemplate >
                             <DataTemplate x:Name="LeftSwipeTemplate">
-                                    <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0">
+                                <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0" IsVisible="{Binding IsSeller}">
                                         <Grid VerticalOptions="Center" HorizontalOptions="Center">
                                             <ImageButton Grid.Column="0"
                     Grid.Row="0"
@@ -120,5 +123,6 @@
             </Grid>
             </ScrollView>
         </StackLayout>
+        </ScrollView>
     </ContentView.Content>
 </ContentView>
