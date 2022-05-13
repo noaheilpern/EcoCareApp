@@ -499,11 +499,13 @@ namespace EcoCareApp.ViewModels
                 if (string.IsNullOrEmpty(userName))
                 {
                     this.CountrySelected = false;
+                    OnPropertyChanged("CountrySelected");
+
                 }
 
                 else
                 {
-                    CountrySelected = true;
+                    this.CountrySelected = true;
                     OnPropertyChanged("CountrySelected");
                 }
 

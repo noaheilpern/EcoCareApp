@@ -46,6 +46,8 @@ namespace EcoCareApp.ViewModels
             App.Current.MainPage.DisplayAlert("Alert", (obj.AddedItems[0] as Product).Title + " is selected", "OK");
         }
 
+        public int Stars { get; set; }
+
         #region Product 
 
 
@@ -190,7 +192,7 @@ namespace EcoCareApp.ViewModels
             {
                 if (this.isRefreshing != value)
                 {
-                    this.isRefreshing = value;
+                    this.isRefreshing = value;                
                     OnPropertyChanged(nameof(IsRefreshing));
                 }
             }
@@ -202,7 +204,7 @@ namespace EcoCareApp.ViewModels
             await proxy.DeleteItemAsync(p);
             allProductsList.Remove(p);
             filteredProducts.Remove(p); 
-                showProduct.Title = ProductContext.Title;
+            //showProduct.Title = ProductContext.Title;
             
         }
         public ICommand RefreshCommand => new Command(OnRefresh);
@@ -325,7 +327,10 @@ namespace EcoCareApp.ViewModels
             if (a.CurrentSeller != null)
                 IsSeller = true;
             else
+            {
                 IsSeller = false;
+                Stars = (int)a.CurrentRegularUser.Stars;
+            }
         }
 
         #endregion

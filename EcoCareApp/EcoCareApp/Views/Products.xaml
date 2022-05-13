@@ -6,6 +6,11 @@
               x:Name="main"
              
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductsViewModel">
+    <NavigationPage.TitleView>
+
+        <Label Text="{Binding Stars, StringFormat='You have {0:F0} stars'}" HorizontalOptions="End"/>
+    </NavigationPage.TitleView>
+
     <ContentView.Content>
        <!-- <pullToRefresh:SfPullToRefresh x:Name="pullToRefresh"
                                ProgressBackgroundColor="#428BCA" RefreshContentHeight="50" 
