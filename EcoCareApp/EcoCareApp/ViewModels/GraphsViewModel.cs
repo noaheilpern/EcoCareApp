@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
-using System;
 using System.Linq;
 using EcoCareApp.Models;
 using Syncfusion.SfChart.XForms;
@@ -112,16 +111,30 @@ namespace EcoCareApp.ViewModels
             switch (this.chartType % 7)
             {
                 case 1:
-                    chart = new LineChart();
+                    chart = new LineChart
+                    {
+                        LabelOrientation = Orientation.Horizontal,
+                        ValueLabelOrientation = Orientation.Horizontal,
+                    };
                     break;
                 case 2:
                     chart = new PieChart();
                     break;
                 case 3:
-                    chart = new BarChart();
+                    chart = new BarChart
+                    {
+
+                        LabelOrientation = Orientation.Horizontal,
+                        ValueLabelOrientation = Orientation.Horizontal,
+                    };
                     break;
                 case 4:
-                    chart = new PointChart();
+                    chart = new PointChart
+                    {
+
+                        LabelOrientation = Orientation.Horizontal,
+                        ValueLabelOrientation = Orientation.Horizontal,
+                    };
                     break;
                 case 5:
                     chart = new RadarChart();
@@ -147,9 +160,10 @@ namespace EcoCareApp.ViewModels
                 };
                 chartEntries.Add(entry);
             }
+            
             chart.Entries = chartEntries;
             chart.LabelTextSize += 10;
-
+            
             MainChart = chart;
         }
 

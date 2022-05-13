@@ -26,11 +26,11 @@
             <RefreshView x:Name="refreshView" Grid.Row="1"
              Command="{Binding RefreshCommand}"
              IsRefreshing="{Binding IsRefreshing}">
-                <CollectionView EmptyView="No Countries found" x:Name="collectionName" 
+                <CollectionView EmptyView="No Countries found" x:Name="coutriesCollection" 
                                 ItemsSource="{Binding FilteredCountries}" SelectionMode="Single"
                                                 BackgroundColor="#B9C6CB" 
-                                                SelectionChangedCommand="{Binding SelctionChanged}"
-                        SelectionChangedCommandParameter="{Binding Source={x:Reference collectionName}, Path=SelectedItem}"
+                                  SelectionChangedCommand="{Binding CountrySelectedCommand}"
+                                       SelectionChangedCommandParameter="{Binding Source={x:Reference coutriesCollection} , Path=SelectedItem}"
                                 SelectedItem="{Binding SelectedCountry}">
 
                     <CollectionView.ItemsLayout>

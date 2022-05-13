@@ -202,6 +202,7 @@ namespace EcoCareApp.ViewModels
             await proxy.DeleteItemAsync(p);
             allProductsList.Remove(p);
             filteredProducts.Remove(p); 
+                showProduct.Title = ProductContext.Title;
             
         }
         public ICommand RefreshCommand => new Command(OnRefresh);
@@ -240,7 +241,6 @@ namespace EcoCareApp.ViewModels
 
 
                 showProduct.BindingContext = ProductContext;
-                showProduct.Title = ProductContext.Title;
                 App a = (App)App.Current;
 
                 await App.Current.MainPage.Navigation.PushAsync(showProduct);
@@ -277,7 +277,7 @@ namespace EcoCareApp.ViewModels
                 showProduct.BindingContext = ProductContext;
                 showProduct.Title = ProductContext.Title;
                 App a = (App)App.Current;
-               
+
                 await App.Current.MainPage.Navigation.PushAsync(showProduct);
 
             }

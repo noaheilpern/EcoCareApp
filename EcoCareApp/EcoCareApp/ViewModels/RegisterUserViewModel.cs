@@ -513,6 +513,20 @@ namespace EcoCareApp.ViewModels
             InitCountries();
         }
 
+        public ICommand CountrySelectedCommand => new Command(Selected);
+
+        public async void Selected(Object obj)
+        {
+            if (obj is Country)
+            {
+                SelectedCountry = (Country)obj;
+                await PopupNavigation.Instance.PopAsync();
+
+            }
+
+
+        }
+
         private void InitCountries()
         {
             isRefreshing = true;

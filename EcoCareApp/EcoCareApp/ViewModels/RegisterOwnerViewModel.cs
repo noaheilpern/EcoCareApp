@@ -690,6 +690,20 @@ namespace EcoCareApp.ViewModels
                 this.PhoneNumError = ERROR_MESSAGES.REQUIRED_FIELD;
         }
         #endregion
+
+        public ICommand CountrySelectedCommand => new Command(Selected);
+
+        public async void Selected(Object obj)
+        {
+            if (obj is Country)
+            {
+                SelectedCountry = (Country)obj;
+                await PopupNavigation.Instance.PopAsync();
+
+            }
+
+
+        }
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }
         private async Task<bool> ValidateEmailAndUserNameAsync()
