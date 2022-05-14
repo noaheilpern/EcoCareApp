@@ -57,7 +57,7 @@ namespace EcoCareApp.ViewModels
         public string GenerateBarcode()
         {
             App app = (App)App.Current;
-            string str = ProductId + app.CurrentRegularUser.UserName;
+            string str = ProductId + "/" + app.CurrentRegularUser.UserName;
             BarcodeValue = str;
             return str;
         }

@@ -31,12 +31,13 @@ namespace EcoCareApp.Views
                 ScanResultText.Text = result.Text + "(Type:" + result.BarcodeFormat + ")";
                 string str = result.Text;
                 int id = 0;
-                while (str[0] >= '0' && str[0] <= '9')
+                while (str[0] != '/')
                 {
                     id *= 10;
                     id = id + Convert.ToInt32(str[0]) - 48;
                     str = str.Substring(1);
                 }
+                str = str.Substring(1);
                 string username = str;
                 //now we will decrease stars to the user who bought the gift
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
