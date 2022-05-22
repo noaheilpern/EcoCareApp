@@ -12,7 +12,7 @@ using Xamarin.Forms.Xaml;
 namespace EcoCareApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomeForSeller : ContentPage
+    public partial class HomeForSeller : ContentView
     {
         public HomeForSeller()
         {

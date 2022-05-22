@@ -1,19 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoCareApp.Views.HomeForSeller"
              xmlns:barcodeScanner="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
 >
-    <ContentPage.Content>
+    <ContentView.Content>
         <StackLayout>
 
-            <Grid IsVisible="{Binding Seller}">
-                <StackLayout>
-                    <Label x:Name="ScanResultText"/>
-                    <barcodeScanner:ZXingScannerView IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult" ScanResultCommand="{Binding}"/>
+                    <Label x:Name="ScanResultText" Text="kuku"/>
+                    <barcodeScanner:ZXingScannerView IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult" />
 
-                </StackLayout>
-            </Grid>
+     
+            
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentView.Content>
+</ContentView>

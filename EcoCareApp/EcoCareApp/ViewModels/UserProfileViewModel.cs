@@ -908,7 +908,8 @@ private void InitCountries()
 
             StartPage sp = new StartPage();
             NavigationPage.SetHasBackButton(sp,false);
-            await App.Current.MainPage.Navigation.PushAsync(sp);
+            App.Current.MainPage = new NavigationPage(sp) { BarBackgroundColor = Color.FromHex("#81cfe0") };
+            //await App.Current.MainPage.Navigation.PushAsync(sp);
         }
         public ICommand Update => new Command(UpdateUserAsync);
 

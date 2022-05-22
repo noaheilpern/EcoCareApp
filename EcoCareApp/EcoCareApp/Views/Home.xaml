@@ -23,14 +23,14 @@
     
     <ContentPage.Content>
         <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand" TabStripBackgroundColor="White" TabStripBorderColor="Gray" TabIndex="2">
-            <xtools:TabViewItem Icon="user_bw.png" IconSelected="user.png">
+            <xtools:TabViewItem  Icon="user_bw.png" IconSelected="user.png">
                 <local:UserProfile>
                    
                 </local:UserProfile>
             </xtools:TabViewItem>
 
-
-            <xtools:TabViewItem Icon="home_bw.png" IconSelected="home.png" VerticalOptions="FillAndExpand">
+            
+            <xtools:TabViewItem x:Name="userHome" Icon="home_bw.png" IconSelected="home.png" VerticalOptions="FillAndExpand">
                 <xtools:TabViewItem.Content>
                     <StackLayout>
                     <Grid BackgroundColor="White" IsVisible="{Binding RegularUser}">

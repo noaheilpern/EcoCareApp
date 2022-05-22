@@ -17,6 +17,14 @@ namespace EcoCareApp.Views
         {
             this.BindingContext = new HomeViewModel();
             InitializeComponent();
+            App app = (App)App.Current;
+            if (app.CurrentSeller != null)
+            {
+                userHome.Content = new HomeForSeller();
+            }
+
+            mainTabs.SelectedIndex = 1;
+            
         }
 
     }

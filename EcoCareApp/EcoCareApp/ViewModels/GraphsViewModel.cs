@@ -64,12 +64,7 @@ namespace EcoCareApp.ViewModels
             this.chartType = 1;
             userData = new List<GraphItem>();
             Page p = new Loading();
-            Colors = new List<Color>()
-            {
-                new Color(82,182,154),
-                new Color(82,182,154),
-
-            };
+            
             InitChart();
              
 
