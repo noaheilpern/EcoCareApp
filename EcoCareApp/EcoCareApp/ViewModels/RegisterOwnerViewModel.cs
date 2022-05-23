@@ -485,8 +485,8 @@ namespace EcoCareApp.ViewModels
 
         }
 
-        private Country selectedCountry;
-        public Country SelectedCountry
+        private string selectedCountry;
+        public string SelectedCountry
         {
             get
             {
@@ -699,7 +699,7 @@ namespace EcoCareApp.ViewModels
         {
             if (obj is Country)
             {
-                SelectedCountry = (Country)obj;
+                SelectedCountry = ((Country)obj).CountryName;
                 await PopupNavigation.Instance.PopAsync();
 
             }
@@ -765,7 +765,7 @@ namespace EcoCareApp.ViewModels
                     FirstName = this.FirstName,
                     LastName = this.LastName,
                     Pass = this.Password,
-                    Country = this.SelectedCountry.CountryName,
+                    Country = this.SelectedCountry,
                     UserName = this.UserName,
                     IsAdmin = false,
 
@@ -838,11 +838,12 @@ namespace EcoCareApp.ViewModels
         }
         public ICommand SelctionChanged => new Command(CountryChanged);
 
-        public void CountryChanged(Object obj)
+        public async void CountryChanged(Object obj)
         {
             if (obj is Country)
             {
-                SelectedCountry = (Country)obj;
+                SelectedCountry = ((Country)obj).CountryName;
+                await PopupNavigation.Instance.PopAsync();
 
             }
         }

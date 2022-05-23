@@ -144,7 +144,7 @@
 
                             <Label Text="Country" Grid.Row="15" Style="{StaticResource labelNameStyle}"
                        />
-                            <Label Text = "{Binding SelectedCountry.CountryName, StringFormat='You Selected {0:F0} As Your Country'}" IsVisible="{Binding CountrySelected}" Grid.Row="16"/>
+                            <Label Text = "{Binding SelectedCountry, StringFormat='You Selected {0:F0} As Your Country'}" IsVisible="{Binding CountrySelected}" Grid.Row="16"/>
                             <Button Text="Choose Country" Grid.Row="17" Command="{Binding ToCountries}"/>
                             
                             <Button Grid.Row="18" Grid.RowSpan="2"  Text="Sign Up" Command="{Binding ResigterUser}"></Button>

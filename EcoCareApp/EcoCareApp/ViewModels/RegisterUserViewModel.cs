@@ -519,7 +519,7 @@ namespace EcoCareApp.ViewModels
         {
             if (obj is Country)
             {
-                SelectedCountry = (Country)obj;
+                SelectedCountry = ((Country)obj).CountryName;
                 await PopupNavigation.Instance.PopAsync();
 
             }
@@ -539,8 +539,8 @@ namespace EcoCareApp.ViewModels
 
         }
 
-        private Country selectedCountry;
-        public Country SelectedCountry
+        private string selectedCountry;
+        public string SelectedCountry
         {
             get
             {
@@ -550,9 +550,11 @@ namespace EcoCareApp.ViewModels
             {
                 this.selectedCountry = value;
 
-                if (string.IsNullOrEmpty(userName))
+                if (string.IsNullOrEmpty(selectedCountry))
                 {
                     this.CountrySelected = false;
+                    OnPropertyChanged("CountrySelected");
+
                 }
 
                 else
@@ -739,7 +741,7 @@ namespace EcoCareApp.ViewModels
                     LastName = this.LastName,
                     Pass = this.Password,
                     UserName = this.UserName,
-                    Country = this.SelectedCountry.CountryName,
+                    Country = this.SelectedCountry,
                     IsAdmin = false,
 
                 };
@@ -791,7 +793,7 @@ namespace EcoCareApp.ViewModels
         {
             if (obj is Country)
             {
-                SelectedCountry = (Country)obj;
+                SelectedCountry = ((Country)obj).CountryName;
 
             }
         }
