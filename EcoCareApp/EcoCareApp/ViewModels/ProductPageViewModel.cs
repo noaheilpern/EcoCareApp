@@ -31,10 +31,18 @@ namespace EcoCareApp.ViewModels
         public int ProductId { get; set; }
         public string BarcodeValue { get; set; }
 
+        public bool HasEnoughStars { get; set; }
+        
+        public bool HasNotEnoughStars { get; set; }
+
         public virtual List<Sale> Sales { get; set; }
        
         public ICommand ToBarcodePopUp => new Command(PopUp);
-       
+        
+        public ProductPageViewModel()
+        {
+            HasNotEnoughStars = !HasEnoughStars; 
+        }
         public void PopUp()
         {
             GenerateBarcode();

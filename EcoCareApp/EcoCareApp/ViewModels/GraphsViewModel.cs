@@ -6,7 +6,6 @@ using System.Text;
 using Xamarin.Forms;
 using System.Linq;
 using EcoCareApp.Models;
-using Syncfusion.SfChart.XForms;
 using EcoCareApp.Services;
 using System.Threading.Tasks;
 using System.ComponentModel;
@@ -110,6 +109,7 @@ namespace EcoCareApp.ViewModels
                     {
                         LabelOrientation = Orientation.Horizontal,
                         ValueLabelOrientation = Orientation.Horizontal,
+                        
                     };
                     break;
                 case 2:

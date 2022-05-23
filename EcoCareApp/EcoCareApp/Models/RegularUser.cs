@@ -25,6 +25,8 @@ namespace EcoCareApp.Models
 
         public int? Stars { get; set; }
 
+        public double? UserCarbonFootPrint { get; set; }
+
         public virtual List<int> Goals { get; set; }
         public virtual List<Sale> Sales { get; set; }
         public virtual List<UserData> UsersData { get; set; }

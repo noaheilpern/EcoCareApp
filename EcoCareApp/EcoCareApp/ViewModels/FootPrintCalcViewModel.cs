@@ -1,6 +1,8 @@
 ﻿using EcoCareApp.Models;
 using EcoCareApp.Services;
 using EcoCareApp.Views;
+using Rg.Plugins.Popup.Pages;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -464,6 +466,10 @@ namespace EcoCareApp.ViewModels
                     {
                         a.CurrentRegularUser = registeredUser;
                         a.CurrentUser = registeredUser.UserNameNavigation;
+                        PopupPage popUp = new CarbonFootprintPopUp(); 
+
+                        PopupNavigation.Instance.PushAsync(popUp);
+
                         Home h = new Home();
                         h.Title = "Home";
                         await App.Current.MainPage.Navigation.PushAsync(h);

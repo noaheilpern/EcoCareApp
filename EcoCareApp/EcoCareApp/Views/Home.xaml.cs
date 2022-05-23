@@ -16,7 +16,9 @@ namespace EcoCareApp.Views
         public Home()
         {
             this.BindingContext = new HomeViewModel();
+
             InitializeComponent();
+
             App app = (App)App.Current;
             if (app.CurrentSeller != null)
             {
@@ -24,6 +26,7 @@ namespace EcoCareApp.Views
             }
 
             mainTabs.SelectedIndex = 1;
+
             
         }
 

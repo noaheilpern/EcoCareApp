@@ -21,9 +21,11 @@
 
                 <Button x:Name="showBarode" Text="Get Barcode for the benefit!"
                                     VerticalOptions="Start" HorizontalOptions="FillAndExpand"
-                                 Command="{Binding ToBarcodePopUp}"
+                                 Command="{Binding ToBarcodePopUp}" IsEnabled="{Binding HasEnoughStars}"
                                 />
-                    </StackLayout>
+                <Label Text="You have not enough stars to buy this item. Please earn some more and come back later"
+                        Style="{StaticResource ErrorIconLabelStyle}" IsVisible="{Binding HasNotEnoughStars}"/>
+            </StackLayout>
                     
             
                     
