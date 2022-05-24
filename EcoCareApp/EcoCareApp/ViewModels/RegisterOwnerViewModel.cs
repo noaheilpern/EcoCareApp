@@ -494,22 +494,24 @@ namespace EcoCareApp.ViewModels
             }
             set
             {
-                this.selectedCountry = value;
-
-                if (string.IsNullOrEmpty(userName))
                 {
-                    this.CountrySelected = false;
-                    OnPropertyChanged("CountrySelected");
+                    this.selectedCountry = value;
 
+                    if (string.IsNullOrEmpty(selectedCountry))
+                    {
+                        this.CountrySelected = false;
+                        OnPropertyChanged("CountrySelected");
+
+                    }
+
+                    else
+                    {
+                        CountrySelected = true;
+                        OnPropertyChanged("CountrySelected");
+                    }
+
+                    OnPropertyChanged("SelectedCountry");
                 }
-
-                else
-                {
-                    this.CountrySelected = true;
-                    OnPropertyChanged("CountrySelected");
-                }
-
-                OnPropertyChanged("SelectedCountry");
             }
         }
         private List<Country> allCountriesList;
@@ -537,7 +539,7 @@ namespace EcoCareApp.ViewModels
                 if (this.filteredCountries != value)
                 {
                     this.filteredCountries = value;
-                    OnPropertyChanged("FilteredProducts");
+                    OnPropertyChanged("FilteredCountries");
                 }
             }
         }
@@ -838,12 +840,11 @@ namespace EcoCareApp.ViewModels
         }
         public ICommand SelctionChanged => new Command(CountryChanged);
 
-        public async void CountryChanged(Object obj)
+        public void CountryChanged(Object obj)
         {
             if (obj is Country)
             {
                 SelectedCountry = ((Country)obj).CountryName;
-                await PopupNavigation.Instance.PopAsync();
 
             }
         }
@@ -879,7 +880,7 @@ namespace EcoCareApp.ViewModels
 
             {
                 countrySelected = value;
-
+                CountryNotSelected = !value; 
 
                 OnPropertyChanged("CountrySelected");
             }

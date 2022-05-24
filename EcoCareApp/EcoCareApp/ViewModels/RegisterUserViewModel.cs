@@ -591,7 +591,7 @@ namespace EcoCareApp.ViewModels
                 if (this.filteredCountries != value)
                 {
                     this.filteredCountries = value;
-                    OnPropertyChanged("FilteredProducts");
+                    OnPropertyChanged("FilteredCountries");
                 }
             }
         }
@@ -649,7 +649,8 @@ namespace EcoCareApp.ViewModels
                 }
             }
 
-            this.FilteredCountries = new ObservableCollection<Country>(this.FilteredCountries.OrderBy(c => c.CountryName));
+            FilteredCountries = new ObservableCollection<Country>(this.FilteredCountries.OrderBy(c => c.CountryName));
+            
         }
         #endregion
 

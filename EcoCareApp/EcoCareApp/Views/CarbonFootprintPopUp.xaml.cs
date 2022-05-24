@@ -1,4 +1,5 @@
-﻿using Rg.Plugins.Popup.Pages;
+﻿using EcoCareApp.ViewModels;
+using Rg.Plugins.Popup.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace EcoCareApp.Views
     {
         public CarbonFootprintPopUp()
         {
+            this.BindingContext = new CarbonFootPrintViewModel(); 
             InitializeComponent();
         }
     }

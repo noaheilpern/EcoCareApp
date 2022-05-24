@@ -7,10 +7,10 @@
               xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels">
     
     <StackLayout>
-        <Grid HeightRequest="600">
+        <Grid HeightRequest="400">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="500" />
+                <RowDefinition Height="300" />
                 <RowDefinition Height="50" />
 
             </Grid.RowDefinitions>
@@ -19,6 +19,7 @@
                        Placeholder="Type your country" 
                        Text="{Binding SearchTerm}"
                    Grid.Row="0"
+                       BackgroundColor="#B9C6CB"
                        />
 
 
@@ -38,7 +39,7 @@
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Label Text="{Binding Path=CountryName, StringFormat='{0}'}"  HorizontalTextAlignment="Start"
+                            <Label Text="{Binding Path=CountryName, StringFormat='{0}'}"  HorizontalTextAlignment="Start" FontSize="Medium"
                                                    />
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

@@ -35,7 +35,16 @@ namespace EcoCareApp.ViewModels
         {
 
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-            return proxy.GetUserGraphsDataAsync();
+            App a = (App)App.Current;
+            if (a.CurrentRegularUser != null)
+            {
+                return proxy.GetUserGraphsDataAsync();
+            }
+            else if (a.CurrentSeller != null)
+                return proxy.GetSellerGraphsDataAsync();
+            else
+                //manager option
+                return null; 
         }
         #region Refresh
         private bool isRefreshing;
@@ -108,6 +117,7 @@ namespace EcoCareApp.ViewModels
                     chart = new LineChart
                     {
                         LabelOrientation = Orientation.Horizontal,
+                        
                         ValueLabelOrientation = Orientation.Horizontal,
                         
                     };

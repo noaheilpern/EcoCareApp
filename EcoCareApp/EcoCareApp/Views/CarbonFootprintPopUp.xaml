@@ -2,10 +2,21 @@
 <pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoCareApp.Views.CarbonFootprintPopUp"
-        xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:FootPrintCalcViewModel">
+        xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels">
     <StackLayout>
-        <Label Text="Your carbon foot print is {}"
-                VerticalOptions="CenterAndExpand" 
+        <Grid HeightRequest="350">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Label Text="{Binding CarbonFootPrint, StringFormat='your carbon footprint is {0:F0} CO2'}"
+
+        VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+        <Image Source="footprint_popup.png" />
+        <Button Text="Close" Command="{Binding PopUpClosed}" Grid.Row="1"/>
+
     </StackLayout>
 </pages:PopupPage>

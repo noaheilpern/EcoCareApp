@@ -467,12 +467,9 @@ namespace EcoCareApp.ViewModels
                         a.CurrentRegularUser = registeredUser;
                         a.CurrentUser = registeredUser.UserNameNavigation;
                         PopupPage popUp = new CarbonFootprintPopUp(); 
+                        
+                        await PopupNavigation.Instance.PushAsync(popUp);
 
-                        PopupNavigation.Instance.PushAsync(popUp);
-
-                        Home h = new Home();
-                        h.Title = "Home";
-                        await App.Current.MainPage.Navigation.PushAsync(h);
                     }
                     
 
