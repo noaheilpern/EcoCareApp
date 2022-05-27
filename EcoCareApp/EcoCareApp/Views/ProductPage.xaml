@@ -11,12 +11,12 @@
 
                 <ScrollView>
                     <StackLayout>
-                        <Label Text="{Binding Price, StringFormat='{0:f0}★'}" HorizontalTextAlignment="Center" FontSize="Caption" HorizontalOptions="End"/>
+                        <Label Text="{Binding Price, StringFormat='{0:f0}★'}" HorizontalTextAlignment="Center" FontSize="16"  HorizontalOptions="End"/>
 
-                        <Label Text="{Binding Title}" HorizontalTextAlignment="Center" FontSize="Large"/>
-                        <Image Source="{Binding ImageSource}" WidthRequest="400" HeightRequest="400"/>
-                        <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Body"/>
-                        <Label Text="{Binding SellersUsername}" HorizontalTextAlignment="Center" FontSize="Caption"/>
+                        <Label Text="{Binding Title}" HorizontalTextAlignment="Center" FontSize="30"/>
+                        <Image Source="{Binding ImageSource}" WidthRequest="300" HeightRequest="300"/>
+                        <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="20"/>
+                        <Label Text="{Binding SellersUsername}" HorizontalTextAlignment="Center" FontSize="18"/>
                 
 
                 <Button x:Name="showBarode" Text="Get Barcode for the benefit!"

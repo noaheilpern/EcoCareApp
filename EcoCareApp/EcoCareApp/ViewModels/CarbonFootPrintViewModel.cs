@@ -1,4 +1,5 @@
 ﻿using EcoCareApp.Views;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +10,6 @@ namespace EcoCareApp.ViewModels
 {
     class CarbonFootPrintViewModel
     {
-        private double carbonFootPrint; 
         public double CarbonFootPrint { get; set; }
 
         public CarbonFootPrintViewModel()
@@ -22,6 +22,7 @@ namespace EcoCareApp.ViewModels
         {
             Home h = new Home();
             h.Title = "Home";
+            await PopupNavigation.Instance.PopAsync();
             await App.Current.MainPage.Navigation.PushAsync(h);
         }
 

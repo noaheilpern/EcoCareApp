@@ -47,13 +47,12 @@ namespace EcoCareApp
            Home h = new Home();
            h.Title = "Home";
            await App.Current.MainPage.Navigation.PushAsync(h);
-
-           **/
-           Page p = new Views.StartPage();
+            
+             **/          
+            Page p = new Views.StartPage();
           
            p.Title = "Start Page";
            MainPage = new NavigationPage(p) { BarBackgroundColor = Color.FromHex("#81cfe0") };
-           
         }
 
         protected override void OnSleep()
