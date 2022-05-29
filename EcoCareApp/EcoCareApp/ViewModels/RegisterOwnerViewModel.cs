@@ -722,6 +722,8 @@ namespace EcoCareApp.ViewModels
                 {
                     this.ShowEmailError = true;
                     this.EmailError = ERROR_MESSAGES.EMAIL_EXIST;
+                    OnPropertyChanged("EmailError");
+                    c = false; 
                 }
 
             }
@@ -729,6 +731,7 @@ namespace EcoCareApp.ViewModels
             {
                 this.ShowEmailError = true;
                 this.EmailError = ERROR_MESSAGES.GENERAL_ERROR;
+                OnPropertyChanged("OnPropertyChanged");
                 c = false;
             }
             try
@@ -739,6 +742,8 @@ namespace EcoCareApp.ViewModels
                 {
                     this.ShowUserNameError = true;
                     this.UserNameError = ERROR_MESSAGES.BAD_USERNAME;
+                    OnPropertyChanged("OnPropertyChanged");
+                    c = false; 
                 }
 
             }
@@ -746,6 +751,7 @@ namespace EcoCareApp.ViewModels
             {
                 this.ShowUserNameError = true;
                 this.UserNameError = ERROR_MESSAGES.GENERAL_ERROR;
+                OnPropertyChanged("OnPropertyChanged");
                 c = false;
             }
             return c;

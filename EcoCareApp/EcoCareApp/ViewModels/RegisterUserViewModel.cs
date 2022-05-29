@@ -694,6 +694,8 @@ namespace EcoCareApp.ViewModels
                 {
                     this.ShowEmailError = true;
                     this.EmailError = ERROR_MESSAGES.EMAIL_EXIST;
+                    OnPropertyChanged("Email");
+                    c = false; 
                 }
                 
 
@@ -702,16 +704,20 @@ namespace EcoCareApp.ViewModels
             {
                 this.ShowEmailError = true;
                 this.EmailError = ERROR_MESSAGES.GENERAL_ERROR;
+                OnPropertyChanged("Email");
                 c = false;
             }
+
             try
             {
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
                 bool t = await proxy.IsUserNameExistAsync(UserName);
                 if (t)
                 {
-                    this.ShowUserNameError = true;
                     this.UserNameError = ERROR_MESSAGES.BAD_USERNAME;
+                    OnPropertyChanged("UserNameError");
+                    this.ShowUserNameError = true;
+                    c = false; 
                 }
 
             }
@@ -719,6 +725,7 @@ namespace EcoCareApp.ViewModels
             {
                 this.ShowUserNameError = true;
                 this.UserNameError = ERROR_MESSAGES.GENERAL_ERROR;
+                OnPropertyChanged("UserNameError");
                 c = false;
             }
             Valid = c;
