@@ -91,10 +91,7 @@ namespace EcoCareApp.ViewModels
             this.ShowUserNameError = string.IsNullOrEmpty(UserName);
             if (!this.ShowUserNameError)
             {
-
-                this.ShowUserNameError = false;
                 return true;
-
             }
             else
             {
@@ -742,7 +739,7 @@ namespace EcoCareApp.ViewModels
                 {
                     this.ShowUserNameError = true;
                     this.UserNameError = ERROR_MESSAGES.BAD_USERNAME;
-                    OnPropertyChanged("OnPropertyChanged");
+                    OnPropertyChanged("ShowUserNameError");
                     c = false; 
                 }
 
@@ -764,58 +761,62 @@ namespace EcoCareApp.ViewModels
 
         private async void RegiUserAsync()
         {
-            bool success = await ValidateEmailAndUserNameAsync();
-            if (Validate() && success)
+            if(Validate())
             {
-                User u = new User
+                bool success = await ValidateEmailAndUserNameAsync();
+                if (success)
                 {
-                    Email = this.Email,
-                    FirstName = this.FirstName,
-                    LastName = this.LastName,
-                    Pass = this.Password,
-                    Country = this.SelectedCountry,
-                    UserName = this.UserName,
-                    IsAdmin = false,
+                    User u = new User
+                    {
+                        Email = this.Email,
+                        FirstName = this.FirstName,
+                        LastName = this.LastName,
+                        Pass = this.Password,
+                        Country = this.SelectedCountry,
+                        UserName = this.UserName,
+                        IsAdmin = false,
 
-                };
-                Seller s = new Seller
-                {
-                    UserName = this.UserName,
-                    UserNameNavigation = u,
-                    PhoneNum = this.phoneNum,
+                    };
+                    Seller s = new Seller
+                    {
+                        UserName = this.UserName,
+                        UserNameNavigation = u,
+                        PhoneNum = this.phoneNum,
 
-                };
-                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                App a = (App)App.Current;
-                //Loading l = new Loading();
-                //l.Title = "Loading";
-                //await App.Current.MainPage.Navigation.PushAsync(l);
-                try
-                {
-                    Seller registeredUser = await proxy.RegisterBusinessOwner(s);
-                    if(registeredUser == null)
+                    };
+                    EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                    App a = (App)App.Current;
+                    //Loading l = new Loading();
+                    //l.Title = "Loading";
+                    //await App.Current.MainPage.Navigation.PushAsync(l);
+                    try
+                    {
+                        Seller registeredUser = await proxy.RegisterBusinessOwner(s);
+                        if (registeredUser == null)
+                        {
+                            await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
+
+                        }
+                        else
+                        {
+                            App app = (App)App.Current;
+                            app.CurrentSeller = registeredUser;
+                            app.CurrentUser = registeredUser.UserNameNavigation;
+                            Home h = new Home();
+                            h.Title = "Home";
+                            await App.Current.MainPage.Navigation.PushAsync(h);
+                        }
+
+                    }
+                    catch (Exception e)
                     {
                         await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
 
+
                     }
-                    else
-                    {
-                        App app = (App)App.Current;
-                        app.CurrentSeller = registeredUser;
-                        app.CurrentUser = registeredUser.UserNameNavigation;
-                        Home h = new Home();
-                        h.Title = "Home";
-                        await App.Current.MainPage.Navigation.PushAsync(h);
-                    }
-
-                }
-                catch(Exception e)
-                {
-                    await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
-
-
                 }
             }
+            
             else
             {
                 await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");

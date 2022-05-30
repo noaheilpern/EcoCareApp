@@ -8,7 +8,7 @@
         <StackLayout>
 
                     <Label x:Name="ScanResultText" Text="kuku"/>
-                    <barcodeScanner:ZXingScannerView IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult" />
+                    <barcodeScanner:ZXingScannerView IsScanning="False" OnScanResult="ZXingScannerView_OnScanResult" />
 
      
             

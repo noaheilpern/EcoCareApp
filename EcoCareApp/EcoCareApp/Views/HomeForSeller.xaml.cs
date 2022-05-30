@@ -18,7 +18,7 @@ namespace EcoCareApp.Views
         {
             HomeViewModel h = new HomeViewModel();
             h.BarcodeEvent += ZXingScannerView_OnScanResult;
-            this.BindingContext = new HomeViewModel();
+            this.BindingContext = h;
             InitializeComponent();
         }
 
