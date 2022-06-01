@@ -19,11 +19,11 @@
     mc:Ignorable="d">
     <ContentView.Content>
         <ScrollView>
-            <Grid RowDefinitions="Auto, *, 0.5*">
+            <Grid RowDefinitions="200, *, 100, 50">
 
                 <Grid Grid.Row="0"
                     HeightRequest="300"
-                    RowDefinitions="* ,Auto, Auto, *"
+                    RowDefinitions="* ,Auto, Auto,*"
                     RowSpacing="0">
                     <gradient:SfGradientView Grid.RowSpan="4">
                         <gradient:SfGradientView.BackgroundBrush>
@@ -37,40 +37,24 @@
                     </gradient:SfGradientView>
                     <Button Text="Log Out" VerticalOptions="Center" HeightRequest="50" Grid.Row="0" HorizontalOptions="End" Command="{Binding LogOut}" Style="{StaticResource Button}"/>
 
-                    <!--  Profile Image  -->
-                    <border:SfBorder
-                        Margin="0,56,0,8"
-                        BackgroundColor="{DynamicResource GrayShadowBackgroundColor}"
-                        BorderColor="{DynamicResource Gray-White}"
-                        BorderWidth="2"
-                        CornerRadius="60"
-                        HeightRequest="120"
-                        HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="StartAndExpand"
-                        WidthRequest="120"
-                        Grid.Row="1">
-
-                        <Image Aspect="AspectFill" Source="images/profileImg.png" BackgroundColor="{DynamicResource GrayShadowBackgroundColor}">
-
-                        </Image>
-
-                    </border:SfBorder>
+                   
 
                     <!--  Profile Name  -->
                     <Label
                         Grid.Row="2"
                         Margin="0,0,0,2"
-                        FontSize="20"
+                        FontSize="30"
                         Style="{StaticResource TitleLabelStyle}"
                         Text="{Binding UserName, StringFormat='Hi {0:F0}!'}"
-                        TextColor="{DynamicResource Gray-White}" />
+                        TextColor="White" />
 
                     <!--  Stars  -->
                     <Label
                         Grid.Row="3"
-                        FontSize="12"
+                        FontSize="20"
                         Style="{StaticResource DescriptionLabelStyle}"
-                        TextColor="{DynamicResource Gray-White}" Text="{Binding Stars, StringFormat='You have {0:F0} stars'}"/>
+                        TextColor="White" Text="{Binding Stars, StringFormat='You have {0:F0} stars'}"
+                        IsVisible="{Binding IsRegular}"/>
 
 
                 </Grid>
@@ -138,7 +122,14 @@
                     </listView:SfListView>
 
                 </border:SfBorder>
-                <Grid Grid.Row="2" VerticalOptions="CenterAndExpand">
+                <StackLayout Grid.Row="2">
+                    <Button Text="Change Country" Command="{Binding ChangeCountry}"/>
+                    <Label Text = "{Binding SelectedCountry, StringFormat='You Selected {0:F0} As Your Country'}"
+                           IsVisible="{Binding CountrySelected}" />
+                    <Label Text= "Please choose country"  IsVisible="{Binding CountryNotSelected}" />
+
+                </StackLayout>
+                <Grid Grid.Row="3" VerticalOptions="CenterAndExpand">
                     <Button Text="Save" Command="{Binding Update}"  Margin="0,0,0,2"
                         Style="{StaticResource UserPageButton}"/>
                 </Grid>

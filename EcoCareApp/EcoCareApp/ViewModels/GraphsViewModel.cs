@@ -115,7 +115,8 @@ namespace EcoCareApp.ViewModels
                     chart = new LineChart
                     {
                         LabelOrientation = Orientation.Horizontal,
-                                              
+                        ValueLabelOrientation = Orientation.Horizontal,
+
                     };
                     break;
                 case 2:
@@ -156,7 +157,7 @@ namespace EcoCareApp.ViewModels
                     TextColor = SKColor.Parse("#3498db"),
                     ValueLabelColor = SKColor.FromHsv((float)g.ValueFootPrint % 100, (float)g.ValueFootPrint % 100 / 2, (float)g.ValueFootPrint % 100 / 4),
                     Color = SKColor.FromHsv((float)g.ValueFootPrint, (float)g.ValueFootPrint / 2, (float)g.ValueFootPrint / 4),
-                    Label = $"{g.DateGraph}",
+                    Label = String.Format("{0:dd/MM/yy}", g.DateGraph),
                     ValueLabel = $"{g.ValueFootPrint:N0}"
                 };
                 chartEntries.Add(entry);

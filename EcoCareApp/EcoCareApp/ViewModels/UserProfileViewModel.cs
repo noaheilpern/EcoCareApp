@@ -14,6 +14,7 @@ using EcoCareApp.Views;
 using System.Runtime.Serialization;
 using System.Reflection;
 using System.Runtime.Serialization.Json;
+using Rg.Plugins.Popup.Services;
 
 namespace EcoCareApp.ViewModels
 {
@@ -143,150 +144,15 @@ namespace EcoCareApp.ViewModels
 
 
 
-        #region country 
-
-
-private void InitCountries()
-        {
-            isRefreshing = true;
-            App theApp = (App)App.Current;
-            this.allCountriesList = theApp.CountriesList;
-
-            this.FilteredCountries = new ObservableCollection<Country>(this.AllCountriesList.OrderBy(c => c.CountryName));
-            SearchTerm = string.Empty;
-            IsRefreshing = false;
-
-        }
-
-        private Country selectedCountry;
-        public Country SelectedCountry
-        {
-            get
-            {
-                return this.selectedCountry;
-            }
-            set
-            {
-                this.selectedCountry = value;
-                OnPropertyChanged("SelectedCountry");
-            }
-        }
-        private List<Country> allCountriesList;
-        public List<Country> AllCountriesList
-        {
-            get
-            {
-                return allCountriesList;
-            }
-            set
-            {
-                allCountriesList = value;
-                OnPropertyChanged("AllCountriesList");
-            }
-        }
-        private ObservableCollection<Country> filteredCountries;
-        public ObservableCollection<Country> FilteredCountries
-        {
-            get
-            {
-                return this.filteredCountries;
-            }
-            set
-            {
-                if (this.filteredCountries != value)
-                {
-                    this.filteredCountries = value;
-                    OnPropertyChanged("FilteredProducts");
-                }
-            }
-        }
-
-        private string searchTerm;
-        public string SearchTerm
-        {
-            get
-            {
-                return this.searchTerm;
-            }
-            set
-            {
-                if (this.searchTerm != value)
-                {
-                    this.searchTerm = value;
-                    OnTextChanged(value);
-                    OnPropertyChanged("SearchTerm");
-
-                }
-            }
-        }
-
-        #region Search
-        public void OnTextChanged(string search)
-        {
-            //Filter the list of countries based on the search term
-            if (this.AllCountriesList == null)
-                return;
-            if (String.IsNullOrWhiteSpace(search) || String.IsNullOrEmpty(search))
-            {
-                foreach (Country c in this.AllCountriesList)
-                {
-                    if (!this.FilteredCountries.Contains(c))
-                        this.FilteredCountries.Add(c);
-
-
-                }
-            }
-            else
-            {
-                search = search.ToLower();
-                foreach (Country c in this.AllCountriesList)
-                {
-                    string countryNameString = $"{c.CountryName.ToLower()}";
-
-
-
-                    if (!this.FilteredCountries.Contains(c) &&
-                       countryNameString.Contains(search))
-                        this.FilteredCountries.Add(c);
-                    else if (this.FilteredCountries.Contains(c) &&
-                        !countryNameString.Contains(search))
-                        this.FilteredCountries.Remove(c);
-                }
-            }
-
-            this.FilteredCountries = new ObservableCollection<Country>(this.FilteredCountries.OrderBy(c => c.CountryName));
-        }
-        #endregion
-
-        #region Refresh
-        private bool isRefreshing;
-        public bool IsRefreshing
-        {
-            get => isRefreshing;
-            set
-            {
-                if (this.isRefreshing != value)
-                {
-                    this.isRefreshing = value;
-                    OnPropertyChanged(nameof(IsRefreshing));
-                }
-            }
-        }
-        public ICommand RefreshCommand => new Command(OnRefresh);
-        public void OnRefresh()
-        {
-            InitCountries();
-        }
-        #endregion
-
-
-        #endregion
-
 
         public UserProfileViewModel()
         {
 
+
+
+            InitCountries();
             this.SearchTerm = string.Empty;
+            CountryNotSelected = false;
 
             InitCountries();
 
@@ -296,7 +162,7 @@ private void InitCountries()
             FirstName = u.FirstName;
             LastName = u.LastName;
             Email = u.Email;
-            SelectedCountry = allCountriesList.FirstOrDefault(c => c.CountryName == u.Country);
+            SelectedCountry = u.Country;
             UserName = u.UserName;
             cardItems = new ObservableCollection<CardsItem>();
             cardItems.Add(new CardsItem
@@ -339,6 +205,12 @@ private void InitCountries()
             else
             {
                 PhoneNum = a.CurrentSeller.PhoneNum;
+                cardItems.Add(new CardsItem
+                {
+                    Category = "PhoneNum",
+                    CategoryValue = PhoneNum,
+                    CategoryError = phoneNumError,
+                });
             }
         }
 
@@ -525,6 +397,234 @@ private void InitCountries()
 
         }
 
+
+        #endregion
+
+        #region country 
+        
+
+        private void InitCountries()
+        {
+            isRefreshing = true;
+            App theApp = (App)App.Current;
+            this.allCountriesList = theApp.CountriesList;
+
+            this.FilteredCountries = new ObservableCollection<Country>(this.AllCountriesList.OrderBy(c => c.CountryName));
+            SearchTerm = string.Empty;
+            IsRefreshing = false;
+
+        }
+
+        private string selectedCountry;
+        public string SelectedCountry
+        {
+            get
+            {
+                return this.selectedCountry;
+            }
+            set
+            {
+                {
+                    this.selectedCountry = value;
+
+                    if (string.IsNullOrEmpty(selectedCountry))
+                    {
+                        this.CountrySelected = false;
+                        OnPropertyChanged("CountrySelected");
+
+                    }
+
+                    else
+                    {
+                        CountrySelected = true;
+                        OnPropertyChanged("CountrySelected");
+                    }
+
+                    OnPropertyChanged("SelectedCountry");
+                }
+            }
+        }
+
+
+        public ICommand CountrySelectedCommand => new Command(Selected);
+
+        public async void Selected(Object obj)
+        {
+            if (obj is Country)
+            {
+                SelectedCountry = ((Country)obj).CountryName;
+                await PopupNavigation.Instance.PopAsync();
+
+            }
+
+
+        }
+
+
+        private List<Country> allCountriesList;
+        public List<Country> AllCountriesList
+        {
+            get
+            {
+                return allCountriesList;
+            }
+            set
+            {
+                allCountriesList = value;
+                OnPropertyChanged("AllCountriesList");
+            }
+        }
+        private ObservableCollection<Country> filteredCountries;
+        public ObservableCollection<Country> FilteredCountries
+        {
+            get
+            {
+                return this.filteredCountries;
+            }
+            set
+            {
+                if (this.filteredCountries != value)
+                {
+                    this.filteredCountries = value;
+                    OnPropertyChanged("FilteredCountries");
+                }
+            }
+        }
+
+        private string searchTerm;
+        public string SearchTerm
+        {
+            get
+            {
+                return this.searchTerm;
+            }
+            set
+            {
+                if (this.searchTerm != value)
+                {
+                    this.searchTerm = value;
+                    OnTextChanged(value);
+                    OnPropertyChanged("SearchTerm");
+
+                }
+            }
+        }
+
+        #region Search
+        public void OnTextChanged(string search)
+        {
+            //Filter the list of countries based on the search term
+            if (this.AllCountriesList == null)
+                return;
+            if (String.IsNullOrWhiteSpace(search) || String.IsNullOrEmpty(search))
+            {
+                foreach (Country c in this.AllCountriesList)
+                {
+                    if (!this.FilteredCountries.Contains(c))
+                        this.FilteredCountries.Add(c);
+
+
+                }
+            }
+            else
+            {
+                search = search.ToLower();
+                foreach (Country c in this.AllCountriesList)
+                {
+                    string countryNameString = $"{c.CountryName.ToLower()}";
+
+
+
+                    if (!this.FilteredCountries.Contains(c) &&
+                       countryNameString.Contains(search))
+                        this.FilteredCountries.Add(c);
+                    else if (this.FilteredCountries.Contains(c) &&
+                        !countryNameString.Contains(search))
+                        this.FilteredCountries.Remove(c);
+                }
+            }
+
+            this.FilteredCountries = new ObservableCollection<Country>(this.FilteredCountries.OrderBy(c => c.CountryName));
+        }
+        #endregion
+
+        #region Refresh
+        private bool isRefreshing;
+        public bool IsRefreshing
+        {
+            get => isRefreshing;
+            set
+            {
+                if (this.isRefreshing != value)
+                {
+                    this.isRefreshing = value;
+                    OnPropertyChanged(nameof(IsRefreshing));
+                }
+            }
+        }
+        public ICommand RefreshCommand => new Command(OnRefresh);
+        public void OnRefresh()
+        {
+            InitCountries();
+        }
+        #endregion
+
+
+
+        
+        public ICommand SelctionChanged => new Command(CountryChanged);
+
+        public void CountryChanged(Object obj)
+        {
+            if (obj is Country)
+            {
+                SelectedCountry = ((Country)obj).CountryName;
+
+            }
+        }
+
+
+        private bool countryNotSelected;
+
+        public bool CountryNotSelected
+        {
+            get
+            {
+                return this.countryNotSelected;
+            }
+            set
+
+            {
+                countryNotSelected = value;
+
+
+                OnPropertyChanged("CountryNotSelected");
+            }
+        }
+
+        private bool countrySelected;
+
+        public bool CountrySelected
+        {
+            get
+            {
+                return this.countrySelected;
+            }
+            set
+
+            {
+                countrySelected = value;
+                CountryNotSelected = !value;
+
+                OnPropertyChanged("CountrySelected");
+            }
+        }
+        public ICommand PopUpClosed => new Command(ClosePopUp);
+
+        public void ClosePopUp()
+        {
+            PopupNavigation.Instance.PopAsync();
+        }
 
         #endregion
 
@@ -739,6 +839,8 @@ private void InitCountries()
         }
         #endregion
 
+
+
         public int stars;
         public int Stars {
             get => stars;
@@ -898,8 +1000,22 @@ private void InitCountries()
         }
         #endregion
 
+        #region Country
+        public ICommand ChangeCountry => new Command(Countries);
+        public void Countries()
+        {
+            CountriesPopUp cpu = new CountriesPopUp
+            {
+                BindingContext = this,
+            };
+            PopupNavigation.Instance.PushAsync(cpu);
+
+        }
+
+        #endregion
+
         public ICommand LogOut => new Command(LogOutUser);
-        private async void LogOutUser()
+        private void LogOutUser()
         {
             App a = (App)App.Current;
             a.CurrentRegularUser = null;
@@ -909,7 +1025,6 @@ private void InitCountries()
             StartPage sp = new StartPage();
             NavigationPage.SetHasBackButton(sp,false);
             App.Current.MainPage = new NavigationPage(sp) { BarBackgroundColor = Color.FromHex("#81cfe0") };
-            //await App.Current.MainPage.Navigation.PushAsync(sp);
         }
         public ICommand Update => new Command(UpdateUserAsync);
 
@@ -941,7 +1056,7 @@ private void InitCountries()
                     FirstName = cardItems.Where(c => c.Category.Equals("FirstName")).FirstOrDefault().CategoryValue,
                     LastName = cardItems.Where(c => c.Category.Equals("LastName")).FirstOrDefault().CategoryValue,
                     Pass = cardItems.Where(c => c.Category.Equals("Password")).FirstOrDefault().CategoryValue,
-                    Country = this.SelectedCountry.CountryName,
+                    Country = this.SelectedCountry,
                     IsAdmin = false,
                     UserName = appUser.UserName,
                     

@@ -11,7 +11,7 @@
                 <!--Div-->
             </Grid.RowDefinitions>
             <Grid Padding="0">
-                <Image Source="images/sign_up.jpg" Aspect="AspectFill"/>
+                <Image Source="images/add_product.jpg" Aspect="AspectFill"/>
                 <!--Image-->
             </Grid>
             <Grid Style="{StaticResource logInSignUpDivG}" >

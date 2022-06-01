@@ -511,6 +511,23 @@ namespace EcoCareApp.ViewModels
                 }
             }
         }
+
+
+        public ICommand CountrySelectedCommand => new Command(Selected);
+
+        public async void Selected(Object obj)
+        {
+            if (obj is Country)
+            {
+                SelectedCountry = ((Country)obj).CountryName;
+                await PopupNavigation.Instance.PopAsync();
+
+            }
+
+
+        }
+
+
         private List<Country> allCountriesList;
         public List<Country> AllCountriesList
         {
@@ -620,6 +637,71 @@ namespace EcoCareApp.ViewModels
         #endregion
 
 
+
+        public ICommand ToCountries => new Command(Countries);
+        public void Countries()
+        {
+            CountriesPopUp cpu = new CountriesPopUp
+            {
+                BindingContext = this,
+            };
+            PopupNavigation.Instance.PushAsync(cpu);
+
+        }
+        public ICommand SelctionChanged => new Command(CountryChanged);
+
+        public void CountryChanged(Object obj)
+        {
+            if (obj is Country)
+            {
+                SelectedCountry = ((Country)obj).CountryName;
+
+            }
+        }
+
+
+        private bool countryNotSelected;
+
+        public bool CountryNotSelected
+        {
+            get
+            {
+                return this.countryNotSelected;
+            }
+            set
+
+            {
+                countryNotSelected = value;
+
+
+                OnPropertyChanged("CountryNotSelected");
+            }
+        }
+
+        private bool countrySelected;
+
+        public bool CountrySelected
+        {
+            get
+            {
+                return this.countrySelected;
+            }
+            set
+
+            {
+                countrySelected = value;
+                CountryNotSelected = !value;
+
+                OnPropertyChanged("CountrySelected");
+            }
+        }
+        public ICommand PopUpClosed => new Command(ClosePopUp);
+
+        public void ClosePopUp()
+        {
+            PopupNavigation.Instance.PopAsync();
+        }
+
         #endregion
 
 
@@ -691,20 +773,7 @@ namespace EcoCareApp.ViewModels
                 this.PhoneNumError = ERROR_MESSAGES.REQUIRED_FIELD;
         }
         #endregion
-
-        public ICommand CountrySelectedCommand => new Command(Selected);
-
-        public async void Selected(Object obj)
-        {
-            if (obj is Country)
-            {
-                SelectedCountry = ((Country)obj).CountryName;
-                await PopupNavigation.Instance.PopAsync();
-
-            }
-
-
-        }
+        
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }
         private async Task<bool> ValidateEmailAndUserNameAsync()
@@ -835,69 +904,7 @@ namespace EcoCareApp.ViewModels
 
         }
 
-        public ICommand ToCountries => new Command(Countries);
-        public void Countries()
-        {
-            CountriesPopUp cpu = new CountriesPopUp
-            {
-                BindingContext = this,
-            };
-            PopupNavigation.Instance.PushAsync(cpu);
-
-        }
-        public ICommand SelctionChanged => new Command(CountryChanged);
-
-        public void CountryChanged(Object obj)
-        {
-            if (obj is Country)
-            {
-                SelectedCountry = ((Country)obj).CountryName;
-
-            }
-        }
-
-
-        private bool countryNotSelected;
-
-        public bool CountryNotSelected
-        {
-            get
-            {
-                return this.countryNotSelected;
-            }
-            set
-
-            {
-                countryNotSelected = value;
-
-
-                OnPropertyChanged("CountryNotSelected");
-            }
-        }
-
-        private bool countrySelected;
-
-        public bool CountrySelected
-        {
-            get
-            {
-                return this.countrySelected;
-            }
-            set
-
-            {
-                countrySelected = value;
-                CountryNotSelected = !value; 
-
-                OnPropertyChanged("CountrySelected");
-            }
-        }
-        public ICommand PopUpClosed => new Command(ClosePopUp);
-
-        public void ClosePopUp()
-        {
-            PopupNavigation.Instance.PopAsync();
-        }
+        
 
 
 
