@@ -7,11 +7,10 @@
     <ContentView.Content>
         <StackLayout>
 
-                    <Label x:Name="ScanResultText" Text="kuku"/>
-                    <barcodeScanner:ZXingScannerView IsScanning="False" OnScanResult="ZXingScannerView_OnScanResult" />
+            <Button Text="Scan Barcode" Command="{Binding ToScanner}"></Button>
 
-     
-            
+
+
         </StackLayout>
     </ContentView.Content>
 </ContentView>

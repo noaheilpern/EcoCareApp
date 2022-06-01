@@ -1,8 +1,10 @@
 ﻿using EcoCareApp.Services;
+using EcoCareApp.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -226,6 +228,13 @@ namespace EcoCareApp.ViewModels
 
         }
 
+        public ICommand ToScanner => new Command(ScanAsync);
+        async void ScanAsync()
+        {
+            ScannerPage s = new ScannerPage();
+            s.BindingContext = this;
+            await App.Current.MainPage.Navigation.PushModalAsync(s);
+        }
         public ICommand MeatCommand => new Command(MeatPressed);
         async void MeatPressed()
         {
