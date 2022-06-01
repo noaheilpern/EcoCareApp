@@ -276,11 +276,13 @@ namespace EcoCareApp.ViewModels
                 App a = (App)App.Current; 
                 if(a.CurrentRegularUser.Stars < ProductContext.Price)
                 {
-                    ProductContext.HasEnoughStars = false; 
+                    ProductContext.HasEnoughStars = false;
+                    ProductContext.HasNotEnoughStars = true;
                 }
                 else
                 {
-                    ProductContext.HasEnoughStars = true; 
+                    ProductContext.HasEnoughStars = true;
+                    ProductContext.HasNotEnoughStars = false; 
                 }
                 Page showProduct = new ProductPage(ProductContext);
 

@@ -734,37 +734,47 @@ namespace EcoCareApp.ViewModels
         private bool Validate()
         {
             
-            return ValidateBirthday() && ValidateEmail() && ValidatePassword() && ValidateUserName() && Valid; 
+            return ValidateBirthday() && ValidateEmail() && ValidatePassword() && ValidateUserName(); 
         }
 
         private async void RegiUserAsync()
         {
-            bool success = await ValidateEmailAndUserNameAsync();
-            if(Validate() && success)
+            if (Validate())
             {
-                User u = new User
-                {
-                    Email = this.Email,
-                    FirstName = this.FirstName,
-                    LastName = this.LastName,
-                    Pass = this.Password,
-                    UserName = this.UserName,
-                    Country = this.SelectedCountry,
-                    IsAdmin = false,
 
-                };
-                RegularUser ru = new RegularUser
+
+                bool success = await ValidateEmailAndUserNameAsync();
+                if (success)
                 {
-                    UserName = this.UserName,
-                    UserNameNavigation = u,
-                    Birthday = this.Birthday,
-                    Stars = 0,
-                };
-                App a = (App)App.Current;
-                FootPrintCalc fp = new FootPrintCalc(ru);
-                fp.Title = "Calculate your foot print";
-                await App.Current.MainPage.Navigation.PushAsync(fp);
+                    User u = new User
+                    {
+                        Email = this.Email,
+                        FirstName = this.FirstName,
+                        LastName = this.LastName,
+                        Pass = this.Password,
+                        UserName = this.UserName,
+                        Country = this.SelectedCountry,
+                        IsAdmin = false,
+
+                    };
+                    RegularUser ru = new RegularUser
+                    {
+                        UserName = this.UserName,
+                        UserNameNavigation = u,
+                        Birthday = this.Birthday,
+                        Stars = 0,
+                    };
+                    App a = (App)App.Current;
+                    FootPrintCalc fp = new FootPrintCalc(ru);
+                    fp.Title = "Calculate your foot print";
+                    await App.Current.MainPage.Navigation.PushAsync(fp);
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
+                }
             }
+        
             else
             {
                 await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");

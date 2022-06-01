@@ -85,7 +85,9 @@
 
                             <Label Text="User Name" Grid.Row="7" Style="{StaticResource labelNameStyle}"
                        IsVisible="{Binding UserNameTyped}"/>
-                            <Label Text="{Binding UserNameError}" Grid.Row="7" IsVisible="{Binding ShowUserNameError}" Style="{StaticResource labelErrorStyle}"/>
+                            <Label Text="{Binding UserNameError}" Grid.Row="7" IsVisible="{Binding ShowUserNameError}" FontSize="14" HorizontalOptions="End"
+                                   VerticalOptions="End" TextColor="#e63946"/>
+                            
                                 
                                 <Entry Grid.Row="8"  Placeholder="Type a usrname" Text="{Binding UserName}" Style="{StaticResource entry}"/>
 

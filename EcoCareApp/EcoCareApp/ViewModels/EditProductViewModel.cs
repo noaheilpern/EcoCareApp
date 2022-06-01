@@ -24,7 +24,7 @@ namespace EcoCareApp.ViewModels
 
         public EditProductViewModel()
         {
-            OriginalProduct = new Product
+            Product = new Product
             {
                 Title = this.Title,
                 Description = this.Description,
@@ -39,7 +39,7 @@ namespace EcoCareApp.ViewModels
         public int ProductId { get; set; }
         public string SellersUsername { get; set; }
         public int Price { get; set; }
-        public Product OriginalProduct { get; set; }
+        public Product Product { get; set; }
         private bool active;
         public bool Active { get
             {
@@ -301,32 +301,22 @@ namespace EcoCareApp.ViewModels
         {
             bool worked = true;
             App a = (App)App.Current;
-            Product product = OriginalProduct;
-            Product EditedProduct = new Product
-            {
+            Product product = Product;
 
-                Title = this.Title,
-                Description = this.Description,
-                Active = this.active,
-                ImageSource = this.ImageSource,
-                Price = this.Price,
-                SellersUsername = this.SellersUsername,
-                ProductId = this.ProductId,
+            
+            Product.Title = this.Title;
+            Product.Description = this.Description;
+            Product.ImageSource = this.ImageSource;
 
-            };
             App app = (App)App.Current;
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
 
-
-                    
-            if (!OriginalProduct.Equals(EditedProduct))
-            {
-                isRefreshing = true; 
-                worked = await proxy.UpdateProductAsync(EditedProduct);
-                isRefreshing = false;
+            isRefreshing = true; 
+            worked = await proxy.UpdateProductAsync(Product);
+            isRefreshing = false;
                 
 
-            }
+            
             if (!worked)
             {
               await App.Current.MainPage.DisplayAlert("Error", "Updating product data failed. Please check fields are filled as needed", "OK");

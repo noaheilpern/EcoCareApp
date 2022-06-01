@@ -337,7 +337,7 @@ namespace EcoCareApp.Services
 
             try
             {
-                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/DecreaseStars?userName={userName}&productId={productId}");
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/DecreaseStars?productId={productId}&&userName={userName}");
                 if (response.IsSuccessStatusCode)
                 {
                     JsonSerializerOptions options = new JsonSerializerOptions

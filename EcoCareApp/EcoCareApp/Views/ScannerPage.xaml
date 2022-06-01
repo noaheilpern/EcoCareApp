@@ -6,7 +6,7 @@
 >
     <ContentPage.Content>
         <StackLayout>
-            <barcodeScanner:ZXingScannerView IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult" />
+            
 
         </StackLayout>
     </ContentPage.Content>

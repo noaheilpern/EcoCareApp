@@ -31,9 +31,30 @@ namespace EcoCareApp.ViewModels
         public int ProductId { get; set; }
         public string BarcodeValue { get; set; }
 
-        public bool HasEnoughStars { get; set; }
+        bool hasEnoughStars; 
+        public bool HasEnoughStars
+        {
+            get => hasEnoughStars; 
+            
+            set
+            {
+                hasEnoughStars = value;
+                OnPropertyChanged("HasEnoughStars");
+            }
+        }
+
+        bool hasNotEnoughStars; 
         
-        public bool HasNotEnoughStars { get; set; }
+        public bool HasNotEnoughStars
+        {
+            get => hasNotEnoughStars;
+            
+            set
+            {
+                hasNotEnoughStars = value;
+                OnPropertyChanged("HasNotEnoughStars");
+            }
+        }
 
         public virtual List<Sale> Sales { get; set; }
        
@@ -41,7 +62,7 @@ namespace EcoCareApp.ViewModels
         
         public ProductPageViewModel()
         {
-            HasNotEnoughStars = !HasEnoughStars; 
+           
         }
         public void PopUp()
         {

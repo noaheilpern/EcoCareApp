@@ -10,7 +10,7 @@ using Xamarin.Forms;
 
 namespace EcoCareApp.ViewModels
 {
-    class HomeViewModel: INotifyPropertyChanged
+    public class HomeViewModel: INotifyPropertyChanged
     {
         public HomeViewModel()
         {
@@ -228,13 +228,7 @@ namespace EcoCareApp.ViewModels
 
         }
 
-        public ICommand ToScanner => new Command(ScanAsync);
-        async void ScanAsync()
-        {
-            ScannerPage s = new ScannerPage();
-            s.BindingContext = this;
-            await App.Current.MainPage.Navigation.PushModalAsync(s);
-        }
+        
         public ICommand MeatCommand => new Command(MeatPressed);
         async void MeatPressed()
         {

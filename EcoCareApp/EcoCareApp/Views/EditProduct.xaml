@@ -8,28 +8,28 @@
             <ScrollView>
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="120"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
                     <Label Text="Title:" Grid.Row="0" Grid.Column="0" Style="{StaticResource labelNameStyle}"/>
-                    <Entry Text="{Binding Title}" HorizontalTextAlignment="Center" FontSize="Large"
+                    <Entry Text="{Binding Title}" HorizontalTextAlignment="Center" FontSize="Medium"
                            Grid.Column="1" Grid.Row="0"/>
                     
                     <Label Text="Image Source:" Grid.Row="1" Grid.Column="0" />
 
-                    <Entry Text="{Binding ImageSource}" WidthRequest="400" HeightRequest="400"
+                    <Editor Text="{Binding ImageSource}" WidthRequest="400" HeightRequest="400"
                            Grid.Row="1" Grid.Column="1"/>
 
                     <Label Text="Item Description:" Grid.Row="2" Grid.Column="0" />
 
-                    <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Body"
+                    <Editor Text="{Binding Description}" FontSize="Body"
                            Grid.Row="2" Grid.Column="1"/>
 
                     <Button x:Name="save" Text="Save Changes!" 

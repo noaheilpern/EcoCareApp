@@ -4,14 +4,14 @@
              x:Class="EcoCareApp.Views.CarbonFootprintPopUp"
         xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:CarbonFootPrintViewModel">
     <StackLayout>
-        <Grid HeightRequest="300" BackgroundColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <Grid HeightRequest="310" BackgroundColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="60"/>
                 <RowDefinition Height="200"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <Label Text="{Binding CarbonFootPrint, StringFormat='Your carbon footprint is {0:N0} CO2'}" FontFamily="Amatic"
-                   FontSize="25" HorizontalOptions="StartAndExpand" Grid.Row="0"/>
+                   FontSize="25" HorizontalOptions="CenterAndExpand" Grid.Row="0"/>
         <Image Source="footprint_popup.png" Grid.Row="1"/>
         <Button Text="Close" Command="{Binding PopUpClosed}" Grid.Row="2"/>
         </Grid>

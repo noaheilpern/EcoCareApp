@@ -7,8 +7,7 @@
     <ContentView.Content>
         <StackLayout>
 
-            <Button Text="Scan Barcode" Command="{Binding ToScanner}"></Button>
-
+            <barcodeScanner:ZXingScannerView IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult" />
 
 
         </StackLayout>

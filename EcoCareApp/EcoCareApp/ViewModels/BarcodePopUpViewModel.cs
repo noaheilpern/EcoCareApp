@@ -15,6 +15,7 @@ namespace EcoCareApp.ViewModels
         public void ClosePopUp()
         {
             PopupNavigation.Instance.PopAsync();
+            //refresh star number
         }
     }
 }

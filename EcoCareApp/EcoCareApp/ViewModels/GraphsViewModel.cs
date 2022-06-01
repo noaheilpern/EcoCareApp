@@ -69,11 +69,9 @@ namespace EcoCareApp.ViewModels
         #endregion
         public GraphsViewModel()
         {
-            this.chartType = 1;
+             this.chartType = 1;
             userData = new List<GraphItem>();
-            Page p = new Loading();
             
-            InitChart();
              
 
         }
@@ -104,7 +102,7 @@ namespace EcoCareApp.ViewModels
         private int chartType;
         
 
-        private async void InitChart()
+        public async Task InitChart()
         {
             //get data
             List<GraphItem> userData = await GetItems();
@@ -117,9 +115,7 @@ namespace EcoCareApp.ViewModels
                     chart = new LineChart
                     {
                         LabelOrientation = Orientation.Horizontal,
-                        
-                        ValueLabelOrientation = Orientation.Horizontal,
-                        
+                                              
                     };
                     break;
                 case 2:
