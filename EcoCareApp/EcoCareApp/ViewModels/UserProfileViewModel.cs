@@ -1056,11 +1056,11 @@ namespace EcoCareApp.ViewModels
                     FirstName = cardItems.Where(c => c.Category.Equals("FirstName")).FirstOrDefault().CategoryValue,
                     LastName = cardItems.Where(c => c.Category.Equals("LastName")).FirstOrDefault().CategoryValue,
                     Pass = cardItems.Where(c => c.Category.Equals("Password")).FirstOrDefault().CategoryValue,
-                    Country = this.SelectedCountry,
                     IsAdmin = false,
                     UserName = appUser.UserName,
-                    
+                    Country = SelectedCountry,
                 };
+
                 App app = (App)App.Current;
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
                 
@@ -1080,7 +1080,8 @@ namespace EcoCareApp.ViewModels
                         UserName = appRegularUser.UserName,
                         VeganRareMeat = appRegularUser.VeganRareMeat,
                         Vegetarian = appRegularUser.Vegetarian,
-                        
+                        UserCarbonFootPrint = appRegularUser.UserCarbonFootPrint, 
+                        Stars = appRegularUser.Stars,
                     };
                     if(!u.Equals(app.CurrentUser)|| !ru.Equals(app.CurrentRegularUser))
                     {

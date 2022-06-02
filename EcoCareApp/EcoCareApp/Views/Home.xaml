@@ -7,7 +7,8 @@
              xmlns:slider="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
 
              xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:HomeViewModel"
-              BackgroundColor="White" NavigationPage.HasBackButton="False" >
+              BackgroundColor="White" NavigationPage.HasBackButton="False"
+              NavigationPage.HasNavigationBar="False">
 
     <!--  <div>Icons made by
                            <a href="https://www.flaticon.com/authors/ilham-fitrotul-hayat" title="Ilham Fitrotul Hayat">Ilham Fitrotul Hayat</a> from
