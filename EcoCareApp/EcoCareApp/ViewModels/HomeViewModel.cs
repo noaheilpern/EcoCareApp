@@ -169,7 +169,17 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("VisibleLine");
             }
         }
+        public int stars; 
+        public int Stars
+        {
+            get => stars; 
+            set
+            {
+                stars = value;
+                OnPropertyChanged("Stars");
+            }
 
+        }
         public bool dataFilled;
         public bool DataFilled
         {
@@ -278,7 +288,9 @@ namespace EcoCareApp.ViewModels
                 if(succssed)
                 {
                     await App.Current.MainPage.DisplayAlert("GREAT", "Data inserted successfully", "Yay!");
-
+                    App a = (App)App.Current;
+                    a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
+                    Stars = (int)a.CurrentRegularUser.Stars; 
                     DataFilled = true;
                     Visible = false;
 

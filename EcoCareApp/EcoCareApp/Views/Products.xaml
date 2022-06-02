@@ -18,7 +18,19 @@
             <pullToRefresh:SfPullToRefresh.PullableContent> -->
         <ScrollView>        
         <StackLayout>
+                <Grid IsVisible="{Binding NoProductsToUser}">
+                    <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                           Text="No products are avaible currently:/ Please come back to check it soon" />
+                </Grid>
+                <Grid IsVisible="{Binding NoProductsToSeller}">
+                    <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                           Text="You have'nt added any products yet. Please, press the button to add one:)" />
+                    <ImageButton Source="add.png" Command="{Binding AddProductPage}" HeightRequest="50"
+                                 IsVisible="{Binding IsSeller}" BackgroundColor="Transparent"
+                                 HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
 
+
+                </Grid>
             <Grid>
 
                 <Grid.RowDefinitions>
@@ -41,7 +53,7 @@
                                        SelectionChangedCommand="{Binding ProductSelected}"
                                        SelectionChangedCommandParameter="{Binding Source={x:Reference listView}, Path=SelectedItem}"
                  SelectionBackgroundColor="#E4E4E4"
-                                       SwipeOffset="360" SwipeThreshold="30"
+                                       SwipeOffset="240" SwipeThreshold="30"
                                        SwipeStarted="listView_SwipeStarted"
                                                
                                        SwipeEnded="listView_SwipeEnded">

@@ -79,6 +79,26 @@ namespace EcoCareApp.ViewModels
 
             this.FilteredProducts = this.allProductsList;
             SearchTerm = string.Empty;
+            if (allProductsList == null)
+            {
+                App a = (App)App.Current;
+                if(a.CurrentSeller== null)
+                {
+                    NoProductsToSeller = false;
+                    NoProductsToUser = true; 
+                }
+                else
+                {
+                    NoProductsToSeller = true;
+                    NoProductsToUser = false;
+                }
+                    
+            }
+            else
+            {
+                NoProductsToSeller = false;
+                NoProductsToUser = false;
+            }
             IsRefreshing = false;
 
         }
@@ -345,11 +365,29 @@ namespace EcoCareApp.ViewModels
 
         #endregion
 
+        #region EmptyCases 
+        bool noProductsToUser;
 
+        public bool NoProductsToUser {
+            get=> noProductsToUser; 
+            set
+            {
+                noProductsToUser = value; 
+                OnPropertyChanged("NoProductsToUser");
+            } 
+        }
+        bool noProductsToSeller;
+        public bool NoProductsToSeller
+        {
+            get => noProductsToSeller;
+            set
+            {
+                noProductsToSeller = value;
+                OnPropertyChanged("NoProductsToSeller");
+            }
+        }
+        #endregion
 
-      
-
-      
 
         #region Events
         //Events

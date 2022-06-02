@@ -220,7 +220,7 @@
                 <Setter Property="FontSize" Value="14" />
             </Style>
 
-
+            
 
             <Style TargetType="StackLayout" x:Key="Stack">
                 <Setter Property="Orientation" Value="Vertical"/>

@@ -23,6 +23,7 @@ namespace EcoCareApp.Views
             if (app.CurrentSeller != null)
             {
                 userHome.Content = new HomeForSeller();
+                
             }
 
             mainTabs.SelectedIndex = 1;
@@ -32,10 +33,8 @@ namespace EcoCareApp.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            if(mainTabs.TabItems[3].IsSelected)
-            {
-                await ((GraphsViewModel)(mainTabs.TabItems[3].Content.BindingContext)).InitChart(); 
-            }
+            await ((GraphsViewModel)(mainTabs.TabItems[3].Content.BindingContext)).InitChart(); 
+            
         }
     }
 }

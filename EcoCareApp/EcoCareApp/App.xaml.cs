@@ -41,19 +41,20 @@ namespace EcoCareApp
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
            
             CountriesList = await proxy.GetCountriesAsync();
-            /**
-             CurrentUser = await proxy.LoginAsync("g@g.com", "123456");
-             CurrentSeller = await proxy.GetSellerDataAsync(CurrentUser.UserName);
+            
+             CurrentUser = await proxy.LoginAsync("r@c.com", "123456");
+            CurrentSeller = await proxy.GetSellerDataAsync(CurrentUser.UserName);
+             //CurrentSeller = await proxy.GetSellerDataAsync(CurrentUser.UserName);
              Home h = new Home();
              h.Title = "Home";
              await App.Current.MainPage.Navigation.PushAsync(h);
-              **/
-           Page p = new Views.StartPage();
-         
-          p.Title = "Start Page";
-          
-          MainPage = new NavigationPage(p) { BarBackgroundColor = Color.FromHex("#81cfe0") };
-         
+            /**
+         Page p = new Views.StartPage();
+       
+        p.Title = "Start Page";
+        
+        MainPage = new NavigationPage(p) { BarBackgroundColor = Color.FromHex("#81cfe0") };
+            **/
         }
 
         protected override void OnSleep()

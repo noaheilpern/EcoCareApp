@@ -37,17 +37,26 @@
                     <StackLayout>
                         <Grid BackgroundColor="White" IsVisible="{Binding RegularUser}">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="3*"/>
-                                <RowDefinition Height="0.5"/>
-                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="300"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="0.1*"/>
+                                <RowDefinition Height="5*"/>
                             </Grid.RowDefinitions>
-                            <Grid Grid.Row="0"  x:Name="firstRow">
+
+                            <!--  Stars  -->
+                            <Label
+                        FontSize="20"
+                        Style="{StaticResource DescriptionLabelStyle}"
+                        TextColor="White" Text="{Binding Stars, StringFormat='You have {0:F0} stars'}"
+                        IsVisible="{Binding RegularUser}" Grid.Row="0"/>
+                            <Grid Grid.Row="1"  x:Name="firstRow">
 
 
                                 <radialMenu:SfRadialMenu x:Name="radialMenu" AnimationDuration="1000"  SelectionColor="White" 
                              CenterButtonFontSize="15" EnableCenterButtonAnimation="True" CenterButtonPlacement="Center" 
                                              RimRadius="150"
-                              RimColor="#b5e48c" SeparatorThickness="5" 
+                              RimColor="#bbefa9" SeparatorThickness="5" 
                               SeparatorColor="Black" IsOpen="True" >
 
                                     <radialMenu:SfRadialMenu.CenterButtonView>
@@ -74,17 +83,17 @@
 
                             </Grid>
 
-                            <Grid Grid.Row="1" Padding="10,0,10,0" IsVisible="{Binding VisibleLine}">
+                            <Grid Grid.Row="3" Padding="10,0,10,0" IsVisible="{Binding VisibleLine}">
                                 <BoxView BackgroundColor="#e5e0e0" />
                             </Grid>
-                            <StackLayout Grid.Row="2"  Padding="10,10,10,10" IsVisible="{Binding DataFilled}">
+                            <StackLayout Grid.Row="4"  Padding="10,10,10,10" IsVisible="{Binding DataFilled}">
                                 <Image Source="data_filled.png" HorizontalOptions="FillAndExpand" VerticalOptions="Start"/>
                             </StackLayout>
-                            <Grid Grid.Row="2" Padding="10,10,10,10" IsVisible="{Binding Visible}" >
+                            <Grid Grid.Row="4" Padding="10,10,10,10" IsVisible="{Binding Visible}" >
                                 <Grid.RowDefinitions>
                                     <RowDefinition x:Name="logRow" Height="30" />
                                     <RowDefinition Height="*" />
-                                    <RowDefinition Height="0.75*" />
+                                    <RowDefinition Height="0.5*" />
                                     <RowDefinition Height="10" />
 
 
@@ -107,8 +116,8 @@
                                         </ScrollView>
                                     </ContentView>
                                 </ContentView>
-                                <Button Text="Save" Command="{Binding Save}" x:Name="SaveData" Style="{StaticResource Button}" 
-                                    Grid.Row="2" IsVisible="{Binding Visible}"/>
+                                <Button Text="Save" Command="{Binding Save}" x:Name="SaveData" CornerRadius="7" Margin="60,0,60,-15"
+                                    Grid.Row="2" IsVisible="{Binding Visible}" BackgroundColor="#99d98c"/>
 
                             </Grid>
                         </Grid>

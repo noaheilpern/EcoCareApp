@@ -563,9 +563,13 @@ namespace EcoCareApp.ViewModels
             }
         }
         public ICommand RefreshCommand => new Command(OnRefresh);
-        public void OnRefresh()
+        public async void OnRefresh()
         {
             InitCountries();
+            App a = (App)App.Current;
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy(); 
+            a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
+            Stars = (int)a.CurrentRegularUser.Stars;
         }
         #endregion
 
