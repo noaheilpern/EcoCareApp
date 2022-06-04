@@ -28,7 +28,8 @@ namespace EcoCareApp.Views
         private void ZXingScannerView_OnScanResult(ZXing.Result result)
         {
             //לבדוק את הפעולה הזו היא נראית לי שגויה
-
+            Device.BeginInvokeOnMainThread(async () =>
+            {
                 string str = result.Text;
                 int id = 0;
                 while (str[0] != '/')
@@ -44,14 +45,15 @@ namespace EcoCareApp.Views
                 bool success = proxy.DecreaseStarsAfterBuying(username, id).Result;
                 if (success)
                 {
-                    App.Current.MainPage.DisplayAlert("Succeesed", "You purched the product successfully", "Amazing");
+                    await App.Current.MainPage.DisplayAlert("Succeesed", "You purched the product successfully", "Amazing");
 
                 }
                 else
                 {
-                    App.Current.MainPage.DisplayAlert("Error", "Something went worng:/ Please ensure you have enough stars to buy this product", "OK");
+                    await App.Current.MainPage.DisplayAlert("Error", "Something went worng:/ Please ensure you have enough stars to buy this product", "OK");
 
                 }
+            });
             
         }
 

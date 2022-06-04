@@ -79,7 +79,7 @@ namespace EcoCareApp.ViewModels
 
             this.FilteredProducts = this.allProductsList;
             SearchTerm = string.Empty;
-            if (allProductsList == null)
+            if (allProductsList.Count == 0)
             {
                 App a = (App)App.Current;
                 if(a.CurrentSeller== null)
@@ -228,9 +228,18 @@ namespace EcoCareApp.ViewModels
             
         }
         public ICommand RefreshCommand => new Command(OnRefresh);
-        public void OnRefresh()
+        public async void OnRefresh()
         {
             InitProducts();
+            if (IsRegular)
+            {
+                App a = (App)App.Current;
+                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                
+                a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
+                Stars = (int)a.CurrentRegularUser.Stars; 
+            }
+
         }
         public ICommand AddProductPage => new Command(ToAdd);
         public async void ToAdd()
@@ -292,18 +301,28 @@ namespace EcoCareApp.ViewModels
                     SellersUsername = chosenProduct.SellersUsername,
                     ProductId = chosenProduct.ProductId,
 
+
                 };
                 App a = (App)App.Current; 
-                if(a.CurrentRegularUser.Stars < ProductContext.Price)
+                
+                if(a.CurrentRegularUser != null)
                 {
-                    ProductContext.HasEnoughStars = false;
-                    ProductContext.HasNotEnoughStars = true;
+                    ProductContext.Stars = Stars = (int)a.CurrentRegularUser.Stars;
+
+                    if (a.CurrentRegularUser.Stars < ProductContext.Price)
+                    {
+                        ProductContext.HasEnoughStars = false;
+                        ProductContext.HasNotEnoughStars = true;
+                    }
+                    else
+                    {
+                        ProductContext.HasEnoughStars = true;
+                        ProductContext.HasNotEnoughStars = false;
+                    }
+
+
                 }
-                else
-                {
-                    ProductContext.HasEnoughStars = true;
-                    ProductContext.HasNotEnoughStars = false; 
-                }
+
                 Page showProduct = new ProductPage(ProductContext);
 
 
@@ -319,6 +338,8 @@ namespace EcoCareApp.ViewModels
 
 
         #endregion
+
+        public bool IsRegular { get; set; }
 
         public bool IsSeller { get; set; }
 
@@ -353,11 +374,17 @@ namespace EcoCareApp.ViewModels
         {
             this.SearchTerm = string.Empty;
             InitProducts();
+            
             App a = (App)App.Current;
             if (a.CurrentSeller != null)
+            {
+                IsRegular = false;
                 IsSeller = true;
+
+            }
             else
             {
+                IsRegular = true; 
                 IsSeller = false;
                 Stars = (int)a.CurrentRegularUser.Stars;
             }

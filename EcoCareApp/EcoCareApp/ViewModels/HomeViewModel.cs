@@ -35,6 +35,36 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+
+        #region Refresh
+        private bool isRefreshing;
+        public bool IsRefreshing
+        {
+            get => isRefreshing;
+            set
+            {
+                if (this.isRefreshing != value)
+                {
+                    this.isRefreshing = value;
+                    OnPropertyChanged(nameof(IsRefreshing));
+                }
+            }
+        }
+        public ICommand RefreshCommand => new Command(OnRefresh);
+        public async void OnRefresh()
+        {
+            App a = (App)App.Current;
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+            if(a.CurrentRegularUser!=null)
+            {
+                a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
+                Stars = (int)a.CurrentRegularUser.Stars;
+
+            }
+
+
+        }
+        #endregion
         public bool Seller { get; set; }
         public bool RegularUser { get; set; }
         private bool meatFilled;
@@ -288,11 +318,13 @@ namespace EcoCareApp.ViewModels
                 if(succssed)
                 {
                     await App.Current.MainPage.DisplayAlert("GREAT", "Data inserted successfully", "Yay!");
+                    isRefreshing = true; 
                     App a = (App)App.Current;
                     a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
                     Stars = (int)a.CurrentRegularUser.Stars; 
                     DataFilled = true;
                     Visible = false;
+                    isRefreshing = false; 
 
                 }
                 else

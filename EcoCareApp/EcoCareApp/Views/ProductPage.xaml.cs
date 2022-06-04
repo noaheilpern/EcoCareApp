@@ -1,4 +1,5 @@
-﻿using EcoCareApp.ViewModels;
+﻿using EcoCareApp.Services;
+using EcoCareApp.ViewModels;
 using Syncfusion.XForms.PopupLayout;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,9 @@ namespace EcoCareApp.Views
             **/
         }
 
-        private void showBarode_Clicked(object sender, EventArgs e)
+        
+
+            private void showBarode_Clicked(object sender, EventArgs e)
         {
             //PopUpItself.IsVisible = true;
             ProductPageViewModel vm = (ProductPageViewModel)this.BindingContext;
@@ -34,10 +37,6 @@ namespace EcoCareApp.Views
             //barcodePopup.Show(); 
         }
 
-        //private void showBarcode_Clicked(object sender, EventArgs e)
-        //{
-        //    popupLayout.Show(); 
-        //}
-
+        
     }
 }

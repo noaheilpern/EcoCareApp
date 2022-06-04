@@ -62,17 +62,40 @@ namespace EcoCareApp.ViewModels
         }
 
         public ICommand RefreshCommand => new Command(OnRefresh);
-        public void OnRefresh()
+        public async void OnRefresh()
         {
             GetItems();
+            if(IsRegular)
+            {
+                App a = (App)App.Current;
+                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+
+                a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
+                Stars = (int)a.CurrentRegularUser.Stars;
+            }
+            
         }
         #endregion
+
+        public bool IsRegular { get; set; }
+        public int Stars { get; set; }
         public GraphsViewModel()
         {
              this.chartType = 1;
             userData = new List<GraphItem>();
-            
-             
+
+            App a = (App)App.Current;
+            if (a.CurrentSeller != null)
+            {
+                IsRegular = false;
+
+            }
+            else
+            {
+                IsRegular = true;
+                Stars = (int)a.CurrentRegularUser.Stars;
+            }
+
 
         }
 

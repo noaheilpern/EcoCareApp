@@ -18,7 +18,7 @@
     NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
     <ContentView.Content>
-        <RefreshView x:Name="refreshView" Grid.Row="1"
+        <RefreshView x:Name="refreshView" 
              Command="{Binding RefreshCommand}"
              IsRefreshing="{Binding IsRefreshing}">
             <ScrollView>

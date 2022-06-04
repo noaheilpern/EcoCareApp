@@ -4,46 +4,59 @@
              xmlns:models="clr-namespace:EcoCareApp.Models"
              x:Class="EcoCareApp.Views.Products"
               x:Name="main"
-             
+             NavigationPage.HasNavigationBar="True"
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductsViewModel">
-    <NavigationPage.TitleView>
-
-        <Label Text="{Binding Stars, StringFormat='You have {0:F0} stars'}" HorizontalOptions="End"/>
-    </NavigationPage.TitleView>
 
     <ContentView.Content>
-       <!-- <pullToRefresh:SfPullToRefresh x:Name="pullToRefresh"
-                               ProgressBackgroundColor="#428BCA" RefreshContentHeight="50" 
-                               RefreshContentWidth="50" TransitionMode="Push" IsRefreshing="False">
-            <pullToRefresh:SfPullToRefresh.PullableContent> -->
-        <ScrollView>        
-        <StackLayout>
-                <Grid IsVisible="{Binding NoProductsToUser}">
-                    <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                           Text="No products are avaible currently:/ Please come back to check it soon" />
-                </Grid>
-                <Grid IsVisible="{Binding NoProductsToSeller}">
-                    <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                           Text="You have'nt added any products yet. Please, press the button to add one:)" />
-                    <ImageButton Source="add.png" Command="{Binding AddProductPage}" HeightRequest="50"
+
+        <RefreshView x:Name="refreshView" 
+             Command="{Binding RefreshCommand}"
+             IsRefreshing="{Binding IsRefreshing}">
+            <ScrollView>
+                <StackLayout>
+                    <Grid BackgroundColor="#FFF0F8FF" IsVisible="{Binding IsRegular}">
+                        <Label
+                        FontSize="20"
+                        Style="{StaticResource DescriptionLabelStyle}"
+                        TextColor="#184e77" Text="{Binding Stars, StringFormat='{0:F0}★'}"
+                        HorizontalTextAlignment="End" HorizontalOptions="End" />
+
+                    </Grid>
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <SearchBar x:Name="filterText" HeightRequest="40"
+           Placeholder="Search here to filter" Text="{Binding SearchTerm}" Grid.Row="0"/>
+                    </Grid>
+                    <Grid IsVisible="{Binding NoProductsToUser}">
+                        <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                           Text="No products are avaible currently:/ Please come back to check it soon"
+                           VerticalTextAlignment="Center"/>
+                    </Grid>
+                    <Grid IsVisible="{Binding NoProductsToSeller}" VerticalOptions="CenterAndExpand" HeightRequest="200" 
+                      HorizontalOptions="CenterAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" HorizontalOptions="Center" VerticalOptions="FillAndExpand"
+                           Text="You have'nt added any products yet. Please, press the button to add one:)"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <ImageButton Grid.Row="1" Source="add.png" Command="{Binding AddProductPage}" HeightRequest="50"
                                  IsVisible="{Binding IsSeller}" BackgroundColor="Transparent"
                                  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
 
 
-                </Grid>
-            <Grid>
+                    </Grid>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <SearchBar x:Name="filterText" HeightRequest="40"
-           Placeholder="Search here to filter" Text="{Binding SearchTerm}" Grid.Row="0"/>
-            </Grid>
-            <ScrollView>
-            <Grid>
+                    <ScrollView>
 
-                        <syncfusion:SfListView x:Name="listView" StickyFooterPosition="Body"  FooterSize="90" IsStickyFooter="True"
+                        <Grid>
+
+                            <syncfusion:SfListView x:Name="listView" StickyFooterPosition="Body"  FooterSize="90" IsStickyFooter="True"
                                 ItemsSource="{Binding FilteredProducts}" 
                                     ItemSize="200"
                                        AllowSwiping="{Binding IsSeller}"
@@ -57,18 +70,18 @@
                                        SwipeStarted="listView_SwipeStarted"
                                                
                                        SwipeEnded="listView_SwipeEnded">
-                    
-                        <syncfusion:SfListView.FooterTemplate>
-                            <DataTemplate>
-                                    <ImageButton Source="add.png" Command="{Binding AddProductPage}" HeightRequest="50"  IsVisible="{Binding IsSeller}" BackgroundColor="Transparent"  HorizontalOptions="End"/>
-                            </DataTemplate>
-                        </syncfusion:SfListView.FooterTemplate>
-                        <syncfusion:SfListView.RightSwipeTemplate>
-                            <DataTemplate x:Name="RightSwipeTemplate">
 
-                                    
-                                    <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0" IsVisible="{Binding IsSeller}">
-                                            
+                                <syncfusion:SfListView.FooterTemplate>
+                                    <DataTemplate>
+                                        <ImageButton Source="add.png" Command="{Binding AddProductPage}" HeightRequest="50"  IsVisible="{Binding IsSeller}" BackgroundColor="Transparent"  HorizontalOptions="End"/>
+                                    </DataTemplate>
+                                </syncfusion:SfListView.FooterTemplate>
+                                <syncfusion:SfListView.RightSwipeTemplate>
+                                    <DataTemplate x:Name="RightSwipeTemplate">
+
+
+                                        <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0" IsVisible="{Binding IsSeller}">
+
                                             <ImageButton Grid.Column="0"
                     Grid.Row="0"
                     BackgroundColor="Transparent"
@@ -78,16 +91,16 @@
                     Clicked="ImageButton_Clicked"
                     Source="edit.png" />
                                         </Grid>
-                                    
-                                
-                            </DataTemplate>
 
-                        </syncfusion:SfListView.RightSwipeTemplate>
-                        <syncfusion:SfListView.LeftSwipeTemplate >
-                            <DataTemplate x:Name="LeftSwipeTemplate">
-                                <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0" IsVisible="{Binding IsSeller}">
-                                        <Grid VerticalOptions="Center" HorizontalOptions="Center">
-                                            <ImageButton Grid.Column="0"
+
+                                    </DataTemplate>
+
+                                </syncfusion:SfListView.RightSwipeTemplate>
+                                <syncfusion:SfListView.LeftSwipeTemplate >
+                                    <DataTemplate x:Name="LeftSwipeTemplate">
+                                        <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0" IsVisible="{Binding IsSeller}">
+                                            <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                                <ImageButton Grid.Column="0"
                     Grid.Row="0"
                     BackgroundColor="Transparent"
                     HeightRequest="35"
@@ -97,49 +110,50 @@
                     Command="{Binding DeleteItem}"   
                     CommandParameter="{Binding Source={x:Reference main}, Path=SelectedItem}" 
                                                    />
+                                            </Grid>
                                         </Grid>
-                                    </Grid>
-                                
-                                
-                                
-                            </DataTemplate>
-                        </syncfusion:SfListView.LeftSwipeTemplate>
-                        <syncfusion:SfListView.ItemTemplate>
-                        <DataTemplate x:DataType="models:Product">
-                            <Grid Padding="10">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="0.2*" />
-                                    <RowDefinition Height="0.4*" />
-                                    <RowDefinition Height="0.6*" />
-                                    <RowDefinition Height="0.2*" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="4*" />
-                                </Grid.ColumnDefinitions>
-                                    <Image Source="{Binding ImageSource}" Grid.Column="0" Grid.RowSpan="4" /> 
-                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Price, StringFormat='{0:f0}★'}" HorizontalOptions="End" />
-                                <Label Text="{Binding Title}" Grid.Row="1" FontAttributes="Bold" TextColor="Teal" FontSize="21" Grid.Column="1"/>
-                                <Label Grid.Row="2" Text="{Binding Description}" TextColor="Teal" FontSize="15" Grid.Column="1"/>
-                                <Label Grid.Row="3" Grid.Column="1" Text="{Binding SellersUsername}"/>
-                            </Grid>
-                        </DataTemplate>
 
-                    </syncfusion:SfListView.ItemTemplate>
-                    <syncfusion:SfListView.DataSource>
-                        <data:DataSource>
-                            <data:DataSource.SortDescriptors>
-                                <data:SortDescriptor PropertyName="Title" Direction="Ascending"/>
-                            </data:DataSource.SortDescriptors>
-                        </data:DataSource>
-                    </syncfusion:SfListView.DataSource>
-                    <syncfusion:SfListView.LayoutManager>
-                        <syncfusion:GridLayout SpanCount="1" />
-                    </syncfusion:SfListView.LayoutManager>
-                </syncfusion:SfListView>
-            </Grid>
+
+
+                                    </DataTemplate>
+                                </syncfusion:SfListView.LeftSwipeTemplate>
+                                <syncfusion:SfListView.ItemTemplate>
+                                    <DataTemplate x:DataType="models:Product">
+                                        <Grid Padding="10">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="0.2*" />
+                                                <RowDefinition Height="0.4*" />
+                                                <RowDefinition Height="0.6*" />
+                                                <RowDefinition Height="0.2*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="4*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Image Source="{Binding ImageSource}" Grid.Column="0" Grid.RowSpan="4" />
+                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Price, StringFormat='{0:f0}★'}" HorizontalOptions="End" />
+                                            <Label Text="{Binding Title}" Grid.Row="1" FontAttributes="Bold" TextColor="Teal" FontSize="21" Grid.Column="1"/>
+                                            <Label Grid.Row="2" Text="{Binding Description}" TextColor="Teal" FontSize="15" Grid.Column="1"/>
+                                            <Label Grid.Row="3" Grid.Column="1" Text="{Binding SellersUsername}"/>
+                                        </Grid>
+                                    </DataTemplate>
+
+                                </syncfusion:SfListView.ItemTemplate>
+                                <syncfusion:SfListView.DataSource>
+                                    <data:DataSource>
+                                        <data:DataSource.SortDescriptors>
+                                            <data:SortDescriptor PropertyName="Title" Direction="Ascending"/>
+                                        </data:DataSource.SortDescriptors>
+                                    </data:DataSource>
+                                </syncfusion:SfListView.DataSource>
+                                <syncfusion:SfListView.LayoutManager>
+                                    <syncfusion:GridLayout SpanCount="1" />
+                                </syncfusion:SfListView.LayoutManager>
+                            </syncfusion:SfListView>
+                        </Grid>
+                    </ScrollView>
+                </StackLayout>
             </ScrollView>
-        </StackLayout>
-        </ScrollView>
+        </RefreshView>
     </ContentView.Content>
 </ContentView>

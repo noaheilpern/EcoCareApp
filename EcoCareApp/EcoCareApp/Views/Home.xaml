@@ -32,96 +32,103 @@
 
 
 
-            <xtools:TabViewItem x:Name="userHome" Icon="home_bw.png" IconSelected="home.png" VerticalOptions="FillAndExpand">
+            <xtools:TabViewItem x:Name="userHome" Icon="home_bw.png" IconSelected="home.png" VerticalOptions="FillAndExpand"
+                                >
                 <xtools:TabViewItem.Content>
-                    <StackLayout>
-                        <Grid BackgroundColor="White" IsVisible="{Binding RegularUser}">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="20"/>
-                                <RowDefinition Height="300"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="0.1*"/>
-                                <RowDefinition Height="5*"/>
-                            </Grid.RowDefinitions>
 
-                            <!--  Stars  -->
-                            <Label
+                    <RefreshView x:Name="refreshView" 
+             Command="{Binding RefreshCommand}"
+             IsRefreshing="{Binding IsRefreshing}">
+                        <StackLayout>
+                            <Grid BackgroundColor="White" IsVisible="{Binding RegularUser}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="22"/>
+                                    <RowDefinition Height="300"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="0.1*"/>
+                                    <RowDefinition Height="5*"/>
+                                </Grid.RowDefinitions>
+
+                                <!--  Stars  -->
+                                <Label
                         FontSize="20"
                         Style="{StaticResource DescriptionLabelStyle}"
-                        TextColor="White" Text="{Binding Stars, StringFormat='You have {0:F0} stars'}"
-                        IsVisible="{Binding RegularUser}" Grid.Row="0"/>
-                            <Grid Grid.Row="1"  x:Name="firstRow">
+                        TextColor="#184e77" Text="{Binding Stars, StringFormat='{0:F0}★'}"
+                        HorizontalTextAlignment="End" HorizontalOptions="End" 
+                            Grid.Row="0"/>
+                                <Grid Grid.Row="1"  x:Name="firstRow">
 
 
-                                <radialMenu:SfRadialMenu x:Name="radialMenu" AnimationDuration="1000"  SelectionColor="White" 
+                                    <radialMenu:SfRadialMenu x:Name="radialMenu" AnimationDuration="1000"  SelectionColor="White" 
                              CenterButtonFontSize="15" EnableCenterButtonAnimation="True" CenterButtonPlacement="Center" 
                                              RimRadius="150"
                               RimColor="#bbefa9" SeparatorThickness="5" 
                               SeparatorColor="Black" IsOpen="True" >
 
-                                    <radialMenu:SfRadialMenu.CenterButtonView>
-                                        <Grid>
-                                            <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
-                                                <Image Source="plus.png"/>
-                                            </StackLayout>
-                                        </Grid>
-                                    </radialMenu:SfRadialMenu.CenterButtonView>
-                                    <radialMenu:SfRadialMenu.CenterButtonBackView>
-                                        <Grid>
-                                            <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
-                                                <Image Source="plus.png"/>
-                                            </StackLayout>
-                                        </Grid>
-                                    </radialMenu:SfRadialMenu.CenterButtonBackView>
+                                        <radialMenu:SfRadialMenu.CenterButtonView>
+                                            <Grid>
+                                                <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
+                                                    <Image Source="plus.png"/>
+                                                </StackLayout>
+                                            </Grid>
+                                        </radialMenu:SfRadialMenu.CenterButtonView>
+                                        <radialMenu:SfRadialMenu.CenterButtonBackView>
+                                            <Grid>
+                                                <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
+                                                    <Image Source="plus.png"/>
+                                                </StackLayout>
+                                            </Grid>
+                                        </radialMenu:SfRadialMenu.CenterButtonBackView>
 
-                                    <radialMenu:SfRadialMenu.Items>
-                                        <radialMenu:SfRadialMenuItem Image="distance.png" x:Name="Car" Command="{Binding CarCommand}" />
-                                        <radialMenu:SfRadialMenuItem Image="electricity.png" x:Name="Elec" Command="{Binding ElecCommand}"/>
-                                        <radialMenu:SfRadialMenuItem Image="meat.png" x:Name="Meat" Command="{Binding MeatCommand}"/>
-                                    </radialMenu:SfRadialMenu.Items>
-                                </radialMenu:SfRadialMenu>
+                                        <radialMenu:SfRadialMenu.Items>
+                                            <radialMenu:SfRadialMenuItem Image="distance.png" x:Name="Car" Command="{Binding CarCommand}" />
+                                            <radialMenu:SfRadialMenuItem Image="electricity.png" x:Name="Elec" Command="{Binding ElecCommand}"/>
+                                            <radialMenu:SfRadialMenuItem Image="meat.png" x:Name="Meat" Command="{Binding MeatCommand}"/>
+                                        </radialMenu:SfRadialMenu.Items>
+                                    </radialMenu:SfRadialMenu>
 
-                            </Grid>
+                                </Grid>
 
-                            <Grid Grid.Row="3" Padding="10,0,10,0" IsVisible="{Binding VisibleLine}">
-                                <BoxView BackgroundColor="#e5e0e0" />
-                            </Grid>
-                            <StackLayout Grid.Row="4"  Padding="10,10,10,10" IsVisible="{Binding DataFilled}">
-                                <Image Source="data_filled.png" HorizontalOptions="FillAndExpand" VerticalOptions="Start"/>
-                            </StackLayout>
-                            <Grid Grid.Row="4" Padding="10,10,10,10" IsVisible="{Binding Visible}" >
-                                <Grid.RowDefinitions>
-                                    <RowDefinition x:Name="logRow" Height="30" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="0.5*" />
-                                    <RowDefinition Height="10" />
+                                <Grid Grid.Row="3" Padding="10,0,10,0" IsVisible="{Binding VisibleLine}">
+                                    <BoxView BackgroundColor="#e5e0e0" />
+                                </Grid>
+                                <StackLayout Grid.Row="4"  Padding="10,10,10,10" IsVisible="{Binding DataFilled}">
+                                    <Image Source="data_filled.png" HorizontalOptions="FillAndExpand" VerticalOptions="Start"/>
+                                </StackLayout>
+                                <Grid Grid.Row="4" Padding="10,10,10,10" IsVisible="{Binding Visible}" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition x:Name="logRow" Height="30" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="0.5*" />
+                                        <RowDefinition Height="10" />
 
 
 
-                                </Grid.RowDefinitions>
-                                <Label Text="Add an activity" Style="{StaticResource FormTitle}"
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Add an activity" Style="{StaticResource FormTitle}"
                                    HorizontalOptions="Start" FontAttributes="Bold" IsVisible="{Binding Visible}" />
-                                <ContentView Grid.Row="1" Padding="3,1,1,3">
-                                    <ContentView VerticalOptions="Fill">
-                                        <ScrollView x:Name="scrollView" IsClippedToBounds="true">
-                                            <StackLayout x:Name="eventLogLayout" Margin="5">
-                                                <Label Text="Meat meals per week:" IsVisible="{Binding MeatTapped}"></Label>
-                                                <Entry x:Name="addMeat" IsVisible="{Binding MeatTapped}" Text="{Binding MeatEntry}"/>
-                                                <Label Text="Electricity usage this week(in kWh):" IsVisible="{Binding ElecTapped}"></Label>
-                                                <Entry x:Name="addElec" IsVisible="{Binding ElecTapped}" Text="{Binding ElecEntry}" />
-                                                <Label Text="Km driven this week:" IsVisible="{Binding CarTapped}"></Label>
-                                                <Entry x:Name="addCar" IsVisible="{Binding CarTapped}" Text="{Binding CarEntry}"/>
+                                    <ContentView Grid.Row="1" Padding="3,1,1,3">
+                                        <ContentView VerticalOptions="Fill">
+                                            <ScrollView x:Name="scrollView" IsClippedToBounds="true">
+                                                <StackLayout x:Name="eventLogLayout" Margin="5">
+                                                    <Label Text="Meat meals per week:" IsVisible="{Binding MeatTapped}"></Label>
+                                                    <Entry x:Name="addMeat" IsVisible="{Binding MeatTapped}" Text="{Binding MeatEntry}"/>
+                                                    <Label Text="Electricity usage this week(in kWh):" IsVisible="{Binding ElecTapped}"></Label>
+                                                    <Entry x:Name="addElec" IsVisible="{Binding ElecTapped}" Text="{Binding ElecEntry}" />
+                                                    <Label Text="Km driven this week:" IsVisible="{Binding CarTapped}"></Label>
+                                                    <Entry x:Name="addCar" IsVisible="{Binding CarTapped}" Text="{Binding CarEntry}"/>
 
-                                            </StackLayout>
-                                        </ScrollView>
+                                                </StackLayout>
+                                            </ScrollView>
+                                        </ContentView>
                                     </ContentView>
-                                </ContentView>
-                                <Button Text="Save" Command="{Binding Save}" x:Name="SaveData" CornerRadius="7" Margin="60,0,60,-15"
+                                    <Button Text="Save" Command="{Binding Save}" x:Name="SaveData" CornerRadius="7" Margin="60,0,60,-15"
                                     Grid.Row="2" IsVisible="{Binding Visible}" BackgroundColor="#99d98c"/>
 
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </StackLayout>
+                        </StackLayout>
+                    </RefreshView>
                 </xtools:TabViewItem.Content>
             </xtools:TabViewItem>
 

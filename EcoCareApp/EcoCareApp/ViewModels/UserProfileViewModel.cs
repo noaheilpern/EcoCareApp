@@ -568,14 +568,20 @@ namespace EcoCareApp.ViewModels
             InitCountries();
             App a = (App)App.Current;
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy(); 
-            a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
-            Stars = (int)a.CurrentRegularUser.Stars;
+            if(a.CurrentRegularUser != null)
+            {
+                a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
+                Stars = (int)a.CurrentRegularUser.Stars;
+
+            }
+
+
         }
         #endregion
 
 
 
-        
+
         public ICommand SelctionChanged => new Command(CountryChanged);
 
         public void CountryChanged(Object obj)

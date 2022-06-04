@@ -448,7 +448,7 @@ namespace EcoCareApp.ViewModels
                 RegularUser.Transportation = this.Transportation;
                 RegularUser.Vegetarian = this.Vegetarian;
                 RegularUser.VeganRareMeat = this.Vegan;
-
+                
                
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
                 App a = (App)App.Current;

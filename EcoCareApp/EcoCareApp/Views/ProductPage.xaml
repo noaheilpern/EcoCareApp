@@ -6,11 +6,15 @@
              xmlns:common="clr-namespace:ZXing.Common;assembly=zxing.portable"
              xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductPageViewModel">
 
-        
-            <StackLayout x:Name="mainLayout">
+    <NavigationPage.TitleView>
+
+        <Label Text="{Binding Stars, StringFormat='{0:F0}★'}" TextColor="White" HorizontalOptions="End" FontSize="Subtitle"/>
+    </NavigationPage.TitleView>
+    <StackLayout x:Name="mainLayout">
 
                 <ScrollView>
                     <StackLayout>
+                        
                         <Label Text="{Binding Price, StringFormat='{0:f0}★'}" HorizontalTextAlignment="Center" FontSize="16"  HorizontalOptions="End"/>
 
                         <Label Text="{Binding Title}" HorizontalTextAlignment="Center" FontSize="30"/>
@@ -23,7 +27,7 @@
                                     VerticalOptions="Start" HorizontalOptions="FillAndExpand"
                                  Command="{Binding ToBarcodePopUp}" IsEnabled="{Binding HasEnoughStars}"
                                 />
-                <Label Text="You have not enough stars to buy this item. Please earn some more and come back later"
+                <Label Text="You don't have enough stars to buy this item. Please earn some more and come back later"
                         Style="{StaticResource ErrorIconLabelStyle}" IsVisible="{Binding HasNotEnoughStars}"/>
             </StackLayout>
                     

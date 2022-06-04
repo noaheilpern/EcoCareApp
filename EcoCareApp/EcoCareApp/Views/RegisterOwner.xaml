@@ -61,12 +61,13 @@
                         
                                 <Label Grid.Row="5" Text="User Name"  Style="{StaticResource labelNameStyle}"
                        IsVisible="{Binding UserNameTyped}"/>
-                                <Label Grid.Row="5" Text="{Binding UserNameError}" IsVisible="{Binding ShowUserNameError}"  Style="{StaticResource labelErrorStyle}"/>
+                                <Label Grid.Row="5" Text="{Binding UserNameError}" HorizontalTextAlignment="End"
+                                       IsVisible="{Binding ShowUserNameError}"  Style="{StaticResource labelErrorStyle}"/>
                          <Entry Grid.Row="6" Placeholder="Type a username" Text="{Binding UserName}" Style="{StaticResource entry}"/>
 
                             <Label Text="Email" Grid.Row="7" Style="{StaticResource labelNameStyle}"
                        IsVisible="{Binding EmailTyped}"/>
-                            <Label Text="{Binding EmailError}" Grid.Row="7" IsVisible="{Binding ShowEmailError}"  Style="{StaticResource labelErrorStyle}"/>
+                            <Label Text="{Binding EmailError}" HorizontalTextAlignment="End" Grid.Row="7" IsVisible="{Binding ShowEmailError}"  Style="{StaticResource labelErrorStyle}"/>
                         
                         <Entry Grid.Row="8" Placeholder="Type an email" Text="{Binding Email}" Style="{StaticResource entry}"/>
 

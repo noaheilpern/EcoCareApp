@@ -5,7 +5,7 @@
             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
                  
              xmlns:barcode="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
-             xmlns:common="clr-namespace:ZXing.Common;assembly=zxing.portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:BarcodePopUpViewModel">
+             xmlns:common="clr-namespace:ZXing.Common;assembly=zxing.portable" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:ProductPageViewModel">
     <StackLayout>
 
         <Grid HeightRequest="600">

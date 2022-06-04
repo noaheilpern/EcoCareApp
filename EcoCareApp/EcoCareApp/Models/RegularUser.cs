@@ -8,7 +8,6 @@ namespace EcoCareApp.Models
     {
         public RegularUser()
         {
-            Goals = new List<int>();
             Sales = new List<Sale>();
             UsersData = new List<UserData>();
         }
@@ -27,7 +26,6 @@ namespace EcoCareApp.Models
 
         public double? UserCarbonFootPrint { get; set; }
 
-        public virtual List<int> Goals { get; set; }
         public virtual List<Sale> Sales { get; set; }
         public virtual List<UserData> UsersData { get; set; }
         public virtual User UserNameNavigation { get; set; }

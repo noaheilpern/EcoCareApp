@@ -16,6 +16,8 @@ namespace EcoCareApp.Views
     {
         public BarcodePopUp()
         {
+            if (this.BindingContext == null)
+                this.BindingContext = new ProductPageViewModel();
             InitializeComponent();
 
         }

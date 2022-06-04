@@ -1,4 +1,5 @@
 ﻿using EcoCareApp.Models;
+using EcoCareApp.Services;
 using EcoCareApp.Views;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
@@ -21,6 +22,8 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+
+        public int Stars { get; set; }
 
         public string Title { get; set; }
         public int Price { get; set; }
@@ -70,13 +73,10 @@ namespace EcoCareApp.ViewModels
             PopupPage p = new BarcodePopUp();
 
 
-            BarcodePopUpViewModel BarcodeContext = new BarcodePopUpViewModel
-            {
-                BarcodeValue = GenerateBarcode(),
-            };
+            BarcodeValue = GenerateBarcode();
 
+            p.BindingContext = this; 
 
-            p.BindingContext = BarcodeContext;
 
 
 
@@ -90,5 +90,21 @@ namespace EcoCareApp.ViewModels
             BarcodeValue = str;
             return str;
         }
+
+        public ICommand PopUpClosed => new Command(ClosePopUp);
+
+        public async void ClosePopUp()
+        {
+            await PopupNavigation.Instance.PopAsync();
+            //refresh star number
+            App a = (App)App.Current;
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+
+            a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
+            Stars = (int)a.CurrentRegularUser.Stars;
+
+        }
+
+
     }
 }
