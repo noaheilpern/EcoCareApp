@@ -42,8 +42,8 @@ namespace EcoCareApp
            
             CountriesList = await proxy.GetCountriesAsync();
             
-             CurrentUser = await proxy.LoginAsync("r@c.com", "123456");
-            CurrentSeller = await proxy.GetSellerDataAsync(CurrentUser.UserName);
+             CurrentUser = await proxy.LoginAsync("noa@gmail.com", "123456");
+            CurrentRegularUser = await proxy.GetRegularUserDataAsync(CurrentUser.UserName);
              //CurrentSeller = await proxy.GetSellerDataAsync(CurrentUser.UserName);
              Home h = new Home();
              h.Title = "Home";

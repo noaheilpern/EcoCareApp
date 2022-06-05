@@ -64,7 +64,7 @@ namespace EcoCareApp.ViewModels
         public ICommand RefreshCommand => new Command(OnRefresh);
         public async void OnRefresh()
         {
-            GetItems();
+            await InitChart();
             if(IsRegular)
             {
                 App a = (App)App.Current;

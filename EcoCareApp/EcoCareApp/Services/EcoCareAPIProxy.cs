@@ -23,10 +23,10 @@ namespace EcoCareApp.Services
         private const string CLOUD_URL = "TBD"; //API url when going on the cloud
         private const string CLOUD_PHOTOS_URL = "TBD";
         private const string DEV_ANDROID_EMULATOR_URL = "http://10.0.2.2:60653/EcoCareAPI"; //API url when using emulator on android
-        private const string DEV_ANDROID_PHYSICAL_URL = "http://192.168.20.110:60653/EcoCareAPI"; //API url when using physucal device on android
+        private const string DEV_ANDROID_PHYSICAL_URL = "http://192.168.68.108:60653/EcoCareAPI"; //API url when using physucal device on android
         private const string DEV_WINDOWS_URL = "http://localhost:60653/EcoCareAPI"; //API url when using windoes on development
         private const string DEV_ANDROID_EMULATOR_PHOTOS_URL = "http://10.0.2.2:5000/Images/"; //API url when using emulator on android
-        private const string DEV_ANDROID_PHYSICAL_PHOTOS_URL = "http://192.168.20.110:60653/Images/"; //API url when using physucal device on android
+        private const string DEV_ANDROID_PHYSICAL_PHOTOS_URL = "http://192.168.68.108:60653/Images/"; //API url when using physucal device on android
         private const string DEV_WINDOWS_PHOTOS_URL = "https://localhost:5001/Images/"; //API url when using windoes on development
 
         private HttpClient client;
@@ -734,7 +734,7 @@ namespace EcoCareApp.Services
         }
 
         //to check
-        public async Task<bool> AddData(double value, string category)
+        public async Task<int> AddData(double value, string category)
         {
             try
             {
@@ -763,18 +763,18 @@ namespace EcoCareApp.Services
                 {
 
                     string jsonContent = await response.Content.ReadAsStringAsync();
-                    bool b = JsonSerializer.Deserialize<bool>(jsonContent, options);
-                    return b;
+                    int stars = JsonSerializer.Deserialize<int>(jsonContent, options);
+                    return stars;
                 }
                 else
                 {
-                    return false;
+                    return -1;
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                return false;
+                return -1;
             }
 
         }

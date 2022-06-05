@@ -23,7 +23,9 @@
     -->
     
     <ContentPage.Content>
-        <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" IsSwipeEnabled="False" TabStripHeight="70" VerticalOptions="FillAndExpand" TabStripBackgroundColor="White" TabStripBorderColor="Gray" TabIndex="2">
+        <xtools:TabView x:Name="mainTabs" TabStripPlacement="Bottom" TabStripHeight="70"
+                        VerticalOptions="FillAndExpand" TabStripBackgroundColor="White"
+                        TabStripBorderColor="Gray" TabIndex="2" IsSwipeEnabled="True">
             <xtools:TabViewItem  Icon="user_bw.png" IconSelected="user.png">
                 <local:UserProfile>
 

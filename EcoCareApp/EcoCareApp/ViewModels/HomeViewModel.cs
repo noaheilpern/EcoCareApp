@@ -24,6 +24,7 @@ namespace EcoCareApp.ViewModels
             {
                 Seller = false;
                 RegularUser = true; 
+                
             }
         }
         public event Action<ZXing.Result> BarcodeEvent;
@@ -297,27 +298,27 @@ namespace EcoCareApp.ViewModels
             try
             {
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                bool succssed;
-
+                int stars; 
                 if (ElecTapped)
                 {
-                    succssed = await proxy.AddData(ElecEntry, "Electricity_Usage");
+                    stars = await proxy.AddData(ElecEntry, "Electricity_Usage");
                     ElecTapped = false;
                 }
                 else if (CarTapped)
                 {
-                    succssed = await proxy.AddData(CarEntry, "Distance");
+                    stars = await proxy.AddData(CarEntry, "Distance");
                     CarTapped = false;
                 }
                 else
                 {
-                    succssed = await proxy.AddData(MeatEntry, "Meat_Meals");
+                    stars = await proxy.AddData(MeatEntry, "Meat_Meals");
                     MeatTapped = false;
                     MeatFilled = true; 
                 }
-                if(succssed)
+                if(stars > 0)
                 {
-                    await App.Current.MainPage.DisplayAlert("GREAT", "Data inserted successfully", "Yay!");
+                    await App.Current.MainPage.DisplayAlert("GREAT", String.Format("Data inserted successfully" +
+                        "\n You earned {0:F0} stars!",stars), "Yay!");
                     isRefreshing = true; 
                     App a = (App)App.Current;
                     a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
@@ -327,9 +328,13 @@ namespace EcoCareApp.ViewModels
                     isRefreshing = false; 
 
                 }
-                else
+                else if(stars<0)
                     await App.Current.MainPage.DisplayAlert("Error", "Inserting data failed. Please check data is filled as needed", "OK");
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Ok", "You didn't earn any points:/", "I'll do better next time");
 
+                }
             }
             catch (Exception e)
             {

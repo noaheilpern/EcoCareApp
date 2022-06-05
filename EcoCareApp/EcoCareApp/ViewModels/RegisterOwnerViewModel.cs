@@ -884,6 +884,10 @@ namespace EcoCareApp.ViewModels
 
                     }
                 }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Registeration failed. Please check fields are filled as needed", "OK");
+                }
             }
             
             else
