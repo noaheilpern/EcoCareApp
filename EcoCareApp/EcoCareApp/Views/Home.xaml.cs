@@ -33,8 +33,10 @@ namespace EcoCareApp.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+            
             await ((GraphsViewModel)(mainTabs.TabItems[3].Content.BindingContext)).InitChart(); 
             
         }
+        
     }
 }

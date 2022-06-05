@@ -56,7 +56,7 @@
                         Grid.Row="3"
                         FontSize="20"
                         Style="{StaticResource DescriptionLabelStyle}"
-                        TextColor="White" Text="{Binding Stars, StringFormat='You have {0:F0} stars'}"
+                        TextColor="White" Text="{Binding app.Stars, StringFormat='You have {0:F0} stars'}"
                         IsVisible="{Binding IsRegular}"/>
 
 

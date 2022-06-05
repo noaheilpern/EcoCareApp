@@ -71,14 +71,15 @@ namespace EcoCareApp.ViewModels
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
 
                 a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
-                Stars = (int)a.CurrentRegularUser.Stars;
+                app.Stars = (int)a.CurrentRegularUser.Stars;
             }
             
         }
         #endregion
+        public App app { get; } = Application.Current as App;
 
         public bool IsRegular { get; set; }
-        public int Stars { get; set; }
+        
         public GraphsViewModel()
         {
              this.chartType = 1;
@@ -93,7 +94,8 @@ namespace EcoCareApp.ViewModels
             else
             {
                 IsRegular = true;
-                Stars = (int)a.CurrentRegularUser.Stars;
+
+                app.Stars = a.Stars;
             }
 
 

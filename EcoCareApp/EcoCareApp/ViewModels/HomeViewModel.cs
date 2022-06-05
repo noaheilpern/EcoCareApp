@@ -23,8 +23,9 @@ namespace EcoCareApp.ViewModels
             else
             {
                 Seller = false;
-                RegularUser = true; 
-                
+                RegularUser = true;
+
+
             }
         }
         public event Action<ZXing.Result> BarcodeEvent;
@@ -59,7 +60,7 @@ namespace EcoCareApp.ViewModels
             if(a.CurrentRegularUser!=null)
             {
                 a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
-                Stars = (int)a.CurrentRegularUser.Stars;
+                app.Stars = (int)a.CurrentRegularUser.Stars;
 
             }
 
@@ -200,17 +201,8 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("VisibleLine");
             }
         }
-        public int stars; 
-        public int Stars
-        {
-            get => stars; 
-            set
-            {
-                stars = value;
-                OnPropertyChanged("Stars");
-            }
+        public App app { get; } = Application.Current as App;
 
-        }
         public bool dataFilled;
         public bool DataFilled
         {
@@ -298,37 +290,37 @@ namespace EcoCareApp.ViewModels
             try
             {
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                int stars; 
+                int newStars; 
                 if (ElecTapped)
                 {
-                    stars = await proxy.AddData(ElecEntry, "Electricity_Usage");
+                    newStars = await proxy.AddData(ElecEntry, "Electricity_Usage");
                     ElecTapped = false;
                 }
                 else if (CarTapped)
                 {
-                    stars = await proxy.AddData(CarEntry, "Distance");
+                    newStars = await proxy.AddData(CarEntry, "Distance");
                     CarTapped = false;
                 }
                 else
                 {
-                    stars = await proxy.AddData(MeatEntry, "Meat_Meals");
+                    newStars = await proxy.AddData(MeatEntry, "Meat_Meals");
                     MeatTapped = false;
                     MeatFilled = true; 
                 }
-                if(stars > 0)
+                if(newStars > 0)
                 {
                     await App.Current.MainPage.DisplayAlert("GREAT", String.Format("Data inserted successfully" +
-                        "\n You earned {0:F0} stars!",stars), "Yay!");
+                        "\n You earned {0:F0} stars!", newStars), "Yay!");
                     isRefreshing = true; 
                     App a = (App)App.Current;
                     a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
-                    Stars = (int)a.CurrentRegularUser.Stars; 
+                    app.Stars = (int)a.CurrentRegularUser.Stars; 
                     DataFilled = true;
                     Visible = false;
                     isRefreshing = false; 
 
                 }
-                else if(stars<0)
+                else if(newStars < 0)
                     await App.Current.MainPage.DisplayAlert("Error", "Inserting data failed. Please check data is filled as needed", "OK");
                 else
                 {

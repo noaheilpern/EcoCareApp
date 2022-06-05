@@ -39,28 +39,7 @@ namespace EcoCareApp.ViewModels
 
         #endregion
 
-        #region Property
-
-        /// <summary>
-        /// Gets or sets the property that has been displays the category.
-        /// </summary>
-        [DataMember(Name = "category")]
-        public string Category { get; set; }
-
-        /// <summary>
-        /// Gets or sets the property that has been displays the category value.
-        /// </summary>
-        [DataMember(Name = "categoryValue")]
-        public string CategoryValue { get; set; }
-
-        /// <summary>
-        /// Gets or sets the property that has been displays the category error.
-        /// </summary>
-        [DataMember(Name = "categoryError")]
-        public string CategoryErorr { get; set; }
-
-        #endregion
-
+        
         #region Fields
 
         private static UserProfileViewModel userProfileViewModel;
@@ -98,12 +77,13 @@ namespace EcoCareApp.ViewModels
         /// <summary>
         /// Gets or sets the health profile items collection.
         /// </summary>
-   
 
 
-        
-        
+
+
+
         #endregion
+        public App app { get;} = Application.Current as App;
 
         #region Methods
 
@@ -199,8 +179,7 @@ namespace EcoCareApp.ViewModels
             {
                 Birthday = a.CurrentRegularUser.Birthday;
                 PeopleAtTheSameHouseHold = a.CurrentRegularUser.PeopleAtTheHousehold;
-                Stars = (int)a.CurrentRegularUser.Stars;
-                
+                app.Stars = (int)a.CurrentRegularUser.Stars; 
             }
             else
             {
@@ -571,7 +550,7 @@ namespace EcoCareApp.ViewModels
             if(a.CurrentRegularUser != null)
             {
                 a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
-                Stars = (int)a.CurrentRegularUser.Stars;
+                app.Stars = (int)a.CurrentRegularUser.Stars;
 
             }
 
@@ -850,17 +829,6 @@ namespace EcoCareApp.ViewModels
         #endregion
 
 
-
-        public int stars;
-        public int Stars {
-            get => stars;
-            set
-            {
-                stars = value;
-                OnPropertyChanged("Stars");
-            }
-
-        }
 
 
         //if user is business owner

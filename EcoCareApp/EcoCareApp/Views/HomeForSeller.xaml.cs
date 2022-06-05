@@ -25,11 +25,11 @@ namespace EcoCareApp.Views
             InitializeComponent();
         }
 
-        private void ZXingScannerView_OnScanResult(ZXing.Result result)
+        private async void ZXingScannerView_OnScanResult(ZXing.Result result)
         {
             //לבדוק את הפעולה הזו היא נראית לי שגויה
-            Device.BeginInvokeOnMainThread(async () =>
-            {
+            //Device.BeginInvokeOnMainThread(async () =>
+            //{
                 string str = result.Text;
                 int id = 0;
                 while (str[0] != '/')
@@ -53,7 +53,7 @@ namespace EcoCareApp.Views
                     await App.Current.MainPage.DisplayAlert("Error", "Something went worng:/ Please ensure you have enough stars to buy this product", "OK");
 
                 }
-            });
+            //});
             
         }
 

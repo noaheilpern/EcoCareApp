@@ -22,8 +22,15 @@ namespace EcoCareApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-
-        public int Stars { get; set; }
+        private int stars;
+        public int Stars {
+            get=> stars;
+            set
+            {
+                stars = value;
+                OnPropertyChanged("Stars");
+            } 
+        }
 
         public string Title { get; set; }
         public int Price { get; set; }
@@ -60,12 +67,15 @@ namespace EcoCareApp.ViewModels
         }
 
         public virtual List<Sale> Sales { get; set; }
-       
+        public App app { get; } = Application.Current as App;
+
+
         public ICommand ToBarcodePopUp => new Command(PopUp);
         
         public ProductPageViewModel()
         {
-           
+            App a = (App)App.Current;
+            Stars = a.Stars; 
         }
         public void PopUp()
         {
@@ -101,7 +111,7 @@ namespace EcoCareApp.ViewModels
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
 
             a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
-            Stars = (int)a.CurrentRegularUser.Stars;
+            a.Stars = (int)a.CurrentRegularUser.Stars;
 
         }
 

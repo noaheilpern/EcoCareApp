@@ -94,6 +94,7 @@ namespace EcoCareApp.ViewModels
                 if (await proxy.IsRegularUserAsync(u.UserName))
                 {
                     a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(u.UserName);
+                    a.Stars = (int)a.CurrentRegularUser.Stars; 
                     //why current regular user returns null? משהו שקשור להרשאו ולזה שהיוזר לא יכול להישלח 
                     // מקודם זה עבד, ממש מוזר
                 }

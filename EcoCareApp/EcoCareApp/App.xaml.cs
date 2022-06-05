@@ -22,6 +22,15 @@ namespace EcoCareApp
         public User CurrentUser { get; set; }
         public Seller CurrentSeller { get; set; }
         public RegularUser CurrentRegularUser { get; set; }
+        private int stars; 
+        public int Stars { get=> stars; 
+            
+            set
+            {
+                stars = value; 
+                OnPropertyChanged("Stars");
+            }
+        }
 
         public List<Country> CountriesList
         {

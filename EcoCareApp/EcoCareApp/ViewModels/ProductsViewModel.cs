@@ -46,8 +46,6 @@ namespace EcoCareApp.ViewModels
             App.Current.MainPage.DisplayAlert("Alert", (obj.AddedItems[0] as Product).Title + " is selected", "OK");
         }
 
-        public int Stars { get; set; }
-
         #region Product 
 
 
@@ -237,7 +235,7 @@ namespace EcoCareApp.ViewModels
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
                 
                 a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
-                Stars = (int)a.CurrentRegularUser.Stars; 
+                app.Stars = (int)a.CurrentRegularUser.Stars; 
             }
 
         }
@@ -307,7 +305,7 @@ namespace EcoCareApp.ViewModels
                 
                 if(a.CurrentRegularUser != null)
                 {
-                    ProductContext.Stars = Stars = (int)a.CurrentRegularUser.Stars;
+                    ProductContext.Stars = (int)a.CurrentRegularUser.Stars;
 
                     if (a.CurrentRegularUser.Stars < ProductContext.Price)
                     {
@@ -338,6 +336,8 @@ namespace EcoCareApp.ViewModels
 
 
         #endregion
+
+        public App app { get; } = Application.Current as App;
 
         public bool IsRegular { get; set; }
 
@@ -386,7 +386,7 @@ namespace EcoCareApp.ViewModels
             {
                 IsRegular = true; 
                 IsSeller = false;
-                Stars = (int)a.CurrentRegularUser.Stars;
+                app.Stars = a.Stars;
             }
         }
 
