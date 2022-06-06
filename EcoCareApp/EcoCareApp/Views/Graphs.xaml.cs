@@ -13,9 +13,13 @@ namespace EcoCareApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Graphs : ContentView
     {
+        public Action refreshGraphs;
+
         public Graphs()
         {
+            
             this.BindingContext = new GraphsViewModel();
+            refreshGraphs += ((GraphsViewModel)(this.BindingContext)).OnRefresh; 
             InitializeComponent();
             if (Device.RuntimePlatform == Device.UWP)
             {

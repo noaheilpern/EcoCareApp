@@ -61,6 +61,7 @@ namespace EcoCareApp.ViewModels
             }
         }
 
+        public Action graphs; 
         public ICommand RefreshCommand => new Command(OnRefresh);
         public async void OnRefresh()
         {
