@@ -23,10 +23,10 @@ namespace EcoCareApp.Services
         private const string CLOUD_URL = "TBD"; //API url when going on the cloud
         private const string CLOUD_PHOTOS_URL = "TBD";
         private const string DEV_ANDROID_EMULATOR_URL = "http://10.0.2.2:60653/EcoCareAPI"; //API url when using emulator on android
-        private const string DEV_ANDROID_PHYSICAL_URL = "http://192.168.68.108:60653/EcoCareAPI"; //API url when using physucal device on android
+        private const string DEV_ANDROID_PHYSICAL_URL = "http://192.168.1.21:60653/EcoCareAPI"; //API url when using physucal device on android
         private const string DEV_WINDOWS_URL = "http://localhost:60653/EcoCareAPI"; //API url when using windoes on development
         private const string DEV_ANDROID_EMULATOR_PHOTOS_URL = "http://10.0.2.2:5000/Images/"; //API url when using emulator on android
-        private const string DEV_ANDROID_PHYSICAL_PHOTOS_URL = "http://192.168.68.108:60653/Images/"; //API url when using physucal device on android
+        private const string DEV_ANDROID_PHYSICAL_PHOTOS_URL = "http://192.168.1.21:60653/Images/"; //API url when using physucal device on android
         private const string DEV_WINDOWS_PHOTOS_URL = "https://localhost:5001/Images/"; //API url when using windoes on development
 
         private HttpClient client;
@@ -113,7 +113,37 @@ namespace EcoCareApp.Services
                 return null;
             }
         }
+        public async Task<string> GetSellerUserName(int productId)
+        {
+            try
+            {
+                App a = (App)App.Current;
+                Seller s = a.CurrentSeller;
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetSellerUserName?productId={productId}");
+                if (response.IsSuccessStatusCode)
+                {
+                    JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve,
+                        PropertyNameCaseInsensitive = true
+                    };
+                    string content = await response.Content.ReadAsStringAsync();
+                    string userName = JsonSerializer.Deserialize<string>(content, options);
 
+                    return userName;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                return null;
+            }
+
+        }
         public async Task<List<GraphItem>> GetSellerGraphsDataAsync()
         {
             try

@@ -69,6 +69,8 @@ namespace EcoCareApp.ViewModels
         #endregion
         public bool Seller { get; set; }
         public bool RegularUser { get; set; }
+
+        #region Filled
         private bool meatFilled;
         public bool MeatFilled
         {
@@ -116,6 +118,10 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("ElecFilled");
             }
         }
+
+        #endregion
+
+        #region tapped
         private bool carTapped;
         public bool CarTapped
         {
@@ -140,8 +146,9 @@ namespace EcoCareApp.ViewModels
             }
         }
 
+        #endregion
 
-      
+        #region Entry
         public double meatEntry;
         public double MeatEntry
         {
@@ -177,7 +184,7 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("CarEntry");
             }
         }
-
+        #endregion
         public bool visible;
         public bool Visible
         {

@@ -14,7 +14,7 @@
                 <Label
                         FontSize="20"
                         Style="{StaticResource DescriptionLabelStyle}"
-                        TextColor="#184e77" Text="{Binding Stars, StringFormat='{0:F0}★'}"
+                        TextColor="#184e77" Text="{Binding app.Stars, StringFormat='{0:F0}★'}"
                         HorizontalTextAlignment="End" HorizontalOptions="End" 
                              IsVisible="{Binding IsRegular}"/>
                 <Label Text="{Binding Title}" FontSize="Large" HorizontalOptions="Center"></Label>

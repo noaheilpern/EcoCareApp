@@ -7,7 +7,7 @@
     <ContentView.Content>
         <StackLayout>
 
-            <barcodeScanner:ZXingScannerView IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult" />
+            <barcodeScanner:ZXingScannerView IsScanning="True" x:Name="Scanner" OnScanResult="ZXingScannerView_OnScanResult" />
 
 
         </StackLayout>

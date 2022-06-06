@@ -773,7 +773,8 @@ namespace EcoCareApp.ViewModels
                 this.PhoneNumError = ERROR_MESSAGES.REQUIRED_FIELD;
         }
         #endregion
-        
+
+
         public ICommand ResigterUser => new Command(RegiUserAsync);
         public bool Valid { get; set; }
         private async Task<bool> ValidateEmailAndUserNameAsync()

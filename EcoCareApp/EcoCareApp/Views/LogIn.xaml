@@ -17,12 +17,12 @@ NavigationPage.HasNavigationBar="False"
             <!--Image-->
             
 
-                <Frame Grid.Row="1" Style="{StaticResource logInSignUp}" HorizontalOptions="FillAndExpand">
+                <Frame Grid.Row="1" Style="{StaticResource logInSignUp}" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                 <!--Div/Box-->
 
                     <Grid Padding="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
                         <RowDefinition Height="30"></RowDefinition>
 
                         <RowDefinition Height="20"></RowDefinition>
@@ -38,7 +38,7 @@ NavigationPage.HasNavigationBar="False"
 
                     </Grid.RowDefinitions>
                     <Label Text="Welcome To Eco Care"  Style="{StaticResource title}" HorizontalOptions="CenterAndExpand" Grid.Row="0"/>
-                    <Label Text="Let's start save the world!" HorizontalOptions="CenterAndExpand" FontSize="20" Grid.Row="1"/>
+                    <Label Text="Let's start to save the world!" HorizontalOptions="CenterAndExpand" FontSize="20" Grid.Row="1"/>
                     <!--Title-->
 
                     <Label Text="email:" Grid.Row="2" ></Label>

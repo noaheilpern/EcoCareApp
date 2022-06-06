@@ -127,9 +127,6 @@ namespace EcoCareApp.ViewModels
 
         public UserProfileViewModel()
         {
-
-
-
             InitCountries();
             this.SearchTerm = string.Empty;
             CountryNotSelected = false;
@@ -832,7 +829,7 @@ namespace EcoCareApp.ViewModels
 
 
         //if user is business owner
-
+        
         #region PhoneNum
         private bool showPhoneNumError;
 
@@ -935,7 +932,7 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("ShowBirthdayError");
             }
         }
-        private DateTime birthday = DateTime.Today;
+        private DateTime birthday;
         public DateTime Birthday
         {
 

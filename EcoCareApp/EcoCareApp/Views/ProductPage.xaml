@@ -8,7 +8,7 @@
 
     <NavigationPage.TitleView>
 
-        <Label Text="{Binding Stars, StringFormat='{0:F0}★'}" TextColor="White" HorizontalOptions="End" FontSize="Subtitle"/>
+        <Label Text="{Binding app.Stars, StringFormat='{0:F0}★'}" TextColor="White" HorizontalOptions="End" FontSize="Subtitle"/>
     </NavigationPage.TitleView>
     <StackLayout x:Name="mainLayout">
 
