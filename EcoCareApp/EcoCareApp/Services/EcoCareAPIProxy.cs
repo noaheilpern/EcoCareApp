@@ -218,7 +218,7 @@ namespace EcoCareApp.Services
             {
                 App a = (App)App.Current;
                 string country = a.CurrentUser.Country; 
-                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetCountryEF?country={country}");
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetEF?country={country}");
                 if (response.IsSuccessStatusCode)
                 {
                     JsonSerializerOptions options = new JsonSerializerOptions
@@ -513,6 +513,38 @@ namespace EcoCareApp.Services
 
         public string GetBasePhotoUri() { return this.basePhotosUri; }
 
+        public async Task<bool> LogOut(User u)
+        {
+            try
+            {
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    Encoder = JavaScriptEncoder.Create(UnicodeRanges.Hebrew, UnicodeRanges.BasicLatin),
+                    PropertyNameCaseInsensitive = true
+                };
+
+                string jsonUser = JsonSerializer.Serialize<User>(u, options);
+                StringContent content = new StringContent(jsonUser, Encoding.UTF8, "application/json");
+
+
+                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/Logout", content);
+
+                if (response.IsSuccessStatusCode) //If user sucessfully logged out up.
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            catch
+            {
+                return false;
+            }
+        }
         //Login!
         public async Task<User> LoginAsync(string email, string pass)
         {

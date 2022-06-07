@@ -24,6 +24,7 @@ namespace EcoCareApp.Views
             {
                 userHome.Content = new HomeForSeller();
                 
+                
             }
 
             mainTabs.SelectedIndex = 1;
@@ -38,5 +39,6 @@ namespace EcoCareApp.Views
             
         }
         
+
     }
 }

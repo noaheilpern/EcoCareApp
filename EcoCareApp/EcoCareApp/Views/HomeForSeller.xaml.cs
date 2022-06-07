@@ -17,14 +17,15 @@ namespace EcoCareApp.Views
     {
         public HomeForSeller()
         {
-
             HomeViewModel h = new HomeViewModel();
+            this.BindingContext = h;
             h.BarcodeEvent += ZXingScannerView_OnScanResult;
 
-            this.BindingContext = h;
-            Scanner.AutoFocus(); 
             InitializeComponent();
+            Scanner.AutoFocus();
+
         }
+       
 
         private async void ZXingScannerView_OnScanResult(ZXing.Result result)
         {

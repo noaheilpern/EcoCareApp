@@ -15,7 +15,6 @@
     xmlns:svg="clr-namespace:EcoCareApp.Controls" x:DataType="local:UserProfileViewModel"
     xmlns:models="clr-namespace:EcoCareApp.Models"
              BackgroundColor="{DynamicResource GrayShadowBackgroundColor}"
-    NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
     <ContentView.Content>
         <RefreshView x:Name="refreshView" 

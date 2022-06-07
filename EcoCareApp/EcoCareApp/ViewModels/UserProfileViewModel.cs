@@ -990,13 +990,15 @@ namespace EcoCareApp.ViewModels
         #endregion
 
         public ICommand LogOut => new Command(LogOutUser);
-        private void LogOutUser()
+        private async void LogOutUser()
         {
             App a = (App)App.Current;
+            
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+            await proxy.LogOut(a.CurrentUser);
             a.CurrentRegularUser = null;
             a.CurrentSeller = null;
             a.CurrentUser = null;
-
             StartPage sp = new StartPage();
             NavigationPage.SetHasBackButton(sp,false);
             App.Current.MainPage = new NavigationPage(sp) { BarBackgroundColor = Color.FromHex("#81cfe0") };

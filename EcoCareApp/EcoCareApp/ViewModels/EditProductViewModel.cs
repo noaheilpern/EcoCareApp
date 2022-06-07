@@ -24,16 +24,7 @@ namespace EcoCareApp.ViewModels
 
         public EditProductViewModel()
         {
-            Product = new Product
-            {
-                Title = this.Title,
-                Description = this.Description,
-                Active = this.active,
-                ImageSource = this.ImageSource,
-                Price = this.Price,
-                SellersUsername = this.SellersUsername,
-                ProductId = this.ProductId,
-            };
+           
 
         }
         public int ProductId { get; set; }
@@ -299,20 +290,30 @@ namespace EcoCareApp.ViewModels
 
         private async void UpdateProductAsync()
         {
+            Product = new Product
+            {
+                Title = this.Title,
+                Description = this.Description,
+                Active = this.active,
+                ImageSource = this.ImageSource,
+                Price = this.Price,
+                SellersUsername = this.SellersUsername,
+                ProductId = this.ProductId,
+            };
             bool worked = true;
             App a = (App)App.Current;
             Product product = Product;
 
             
-            Product.Title = this.Title;
-            Product.Description = this.Description;
-            Product.ImageSource = this.ImageSource;
+            product.Title = this.Title;
+            product.Description = this.Description;
+            product.ImageSource = this.ImageSource;
 
             App app = (App)App.Current;
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
 
             isRefreshing = true; 
-            worked = await proxy.UpdateProductAsync(Product);
+            worked = await proxy.UpdateProductAsync(product);
             isRefreshing = false;
                 
 

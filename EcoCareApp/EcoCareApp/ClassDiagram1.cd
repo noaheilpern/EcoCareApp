@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="EcoCareApp.Models.CardsItem" BaseTypeListCollapsed="true">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAKAAAAgAAgAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Models\CardsItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EcoCareApp.Models.Country">
+    <Position X="14.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EcoCareApp.Models.DataItem">
+    <Position X="13" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAgAAAAAAA=</HashCode>
+      <FileName>Models\DataItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EcoCareApp.Models.DatasCategory">
+    <Position X="15.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatasCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EcoCareApp.Models.GraphItem">
+    <Position X="14.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Models\GraphItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EcoCareApp.Models.Product">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAQAgAEAAAAEABAAAAAAAAAAhAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Sales" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EcoCareApp.Models.RegularUser">
+    <Position X="12.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMAgQAAAAACAAQAAgAAABAAAAAAIAAAAgQAAACAgAAQ=</HashCode>
+      <FileName>Models\RegularUser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="UsersData" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EcoCareApp.Models.Sale">
+    <Position X="19.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAQAAAIAAAAAAAAAAAAAAAAAAAEEAAAAAAAACEAE=</HashCode>
+      <FileName>Models\Sale.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="EcoCareApp.Models.Seller">
+    <Position X="8.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAACAAAAAgAAABAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\Seller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UserNameNavigation" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Sales" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EcoCareApp.Models.User">
+    <Position X="10.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACQAAAAAgAAAAAAACAIAAAAAAQAAAAAAAAg=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EcoCareApp.Models.UserData">
+    <Position X="19.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAgAACAAAAAAAAAAAABCAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\UserData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

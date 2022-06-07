@@ -14,7 +14,7 @@
              IsRefreshing="{Binding IsRefreshing}">
             <ScrollView>
                 <StackLayout>
-                    <Grid BackgroundColor="#FFF0F8FF" IsVisible="{Binding IsRegular}">
+                    <Grid IsVisible="{Binding IsRegular}">
                         <Label
                         FontSize="20"
                         Style="{StaticResource DescriptionLabelStyle}"
