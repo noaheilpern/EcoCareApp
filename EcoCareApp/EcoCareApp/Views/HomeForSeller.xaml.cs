@@ -26,7 +26,7 @@ namespace EcoCareApp.Views
             InitializeComponent();
         }
 
-        private void ZXingScannerView_OnScanResult(ZXing.Result result)
+        private async void ZXingScannerView_OnScanResult(ZXing.Result result)
         {
 
             try
@@ -78,6 +78,8 @@ namespace EcoCareApp.Views
 
                         }
                     });
+                Home h = new Home();
+                await App.Current.MainPage.Navigation.PushAsync(h); 
                 Scanner.IsScanning = true; 
                 }
 
