@@ -81,38 +81,7 @@ namespace EcoCareApp.Services
             this.baseUri = baseUri;
             this.basePhotosUri = basePhotosUri;
         }
-        public async Task<string> TestAsync()
-        {
-            try
-            {
-                string s = $"{this.baseUri}/Test";
-                //System.Net.ServicePointManager.SecurityProtocol =
-                //    System.Net.SecurityProtocolType.Tls12 |
-                //    System.Net.SecurityProtocolType.Tls11 |
-                //    System.Net.SecurityProtocolType.Tls;
-                HttpResponseMessage response = await this.client.GetAsync(s);
-                if (response.IsSuccessStatusCode)
-                {
-                    //JsonSerializerOptions options = new JsonSerializerOptions
-                    //{
-                    //    ReferenceHandler = ReferenceHandler.Preserve,
-                    //    PropertyNameCaseInsensitive = true
-                    //};
-                    string content = await response.Content.ReadAsStringAsync();
-                    //string eString = JsonSerializer.Deserialize<string>(content, options);
-                    return content;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return null;
-            }
-        }
+
         public async Task<string> GetSellerUserName(int productId)
         {
             try

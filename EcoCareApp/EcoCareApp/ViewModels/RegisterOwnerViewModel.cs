@@ -180,71 +180,7 @@ namespace EcoCareApp.ViewModels
         }
         #endregion
 
-        #region Birthday
-        private bool birthdayTyped;
-        public bool BirthdayTyped
-        {
-            get => birthdayTyped;
-            set
-            {
-                birthdayTyped = value;
-                OnPropertyChanged("BirthdayTyped");
-            }
-        }
-
-        private bool showBirthdayError;
-
-        public bool ShowBirthdayError
-        {
-            get => showBirthdayError;
-            set
-            {
-                showBirthdayError = value;
-                OnPropertyChanged("ShowBirthdayError");
-            }
-        }
-        private DateTime birthday = DateTime.Today;
-        public DateTime Birthday
-        {
-
-            get => birthday;
-            set
-            {
-                birthday = value;
-                ValidateBirthday();
-                OnPropertyChanged("Birthday");
-
-            }
-        }
-        private string birthdayError;
-        public string BirthdayError
-        {
-            get => birthdayError;
-            set
-            {
-                birthdayError = value;
-
-                OnPropertyChanged("BirthdayError");
-
-            }
-        }
-        private bool ValidateBirthday()
-        {
-
-            if (Birthday.CompareTo(DateTime.Today) >= 0)
-            {
-                this.ShowBirthdayError = true;
-                this.BirthdayError = ERROR_MESSAGES.BAD_DATE;
-                return false;
-            }
-            else
-            {
-                this.ShowBirthdayError = false;
-            }
-            return true;
-
-        }
-        #endregion
+        
 
         #region Password 
         private const int MIN_PASS_CHARS = 6;
@@ -512,7 +448,7 @@ namespace EcoCareApp.ViewModels
             }
         }
 
-
+        
         public ICommand CountrySelectedCommand => new Command(Selected);
 
         public async void Selected(Object obj)

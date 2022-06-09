@@ -124,10 +124,9 @@ namespace EcoCareApp.ViewModels
         */
 
         public ICommand GetString => new Command(GetS);
-        public async void GetS()
+        public void GetS()
         {
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-            this.Email = await proxy.TestAsync();
         }
     }
 }

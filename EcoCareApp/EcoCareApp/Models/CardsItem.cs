@@ -23,7 +23,7 @@ namespace EcoCareApp.Models
             {
                 return categoryValue;
             }
-
+            
             set
             {
                 this.categoryValue = value;
@@ -32,5 +32,6 @@ namespace EcoCareApp.Models
         }
 
         public string CategoryError { get; set; }
+
     }
 }

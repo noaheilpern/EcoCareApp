@@ -48,7 +48,7 @@ namespace EcoCareApp.Views
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
                 bool success = true;
                 bool accessable = true; 
-                if (a.CurrentSeller.Equals(proxy.GetSellerUserName(id)))
+                if (a.CurrentSeller.UserName.Equals(proxy.GetSellerUserName(id)))
                 {
                     //now we will decrease stars to the user who bought the gift
                     success = proxy.DecreaseStarsAfterBuying(username, id).Result;

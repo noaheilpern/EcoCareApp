@@ -40,7 +40,7 @@ namespace EcoCareApp
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTc4MTI2QDMxMzkyZTM0MmUzMElEYjUvdHlTLzVYNzlUekZiOXRpYjBvd3F1MHc4dnEwbjdkdWMrTkwrblk9");
             InitializeComponent();
-            NavigationPage p = new NavigationPage(new Views.Loading());
+            ContentPage p = new Views.Loading();
             MainPage = p;
 
         }
@@ -50,20 +50,28 @@ namespace EcoCareApp
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
            
             CountriesList = await proxy.GetCountriesAsync();
+            if (CountriesList == null)
+            {
+                Views.Loading thePage = (Views.Loading)this.MainPage;
+                LoadingViewModel vm = (LoadingViewModel)thePage.BindingContext;
+                //vm.Message = "The server is down, try again later";
+            }
+            else
+            {
+                //CurrentUser = await proxy.LoginAsync("r@c.com", "123456");
+                //CurrentRegularUser = await proxy.GetRegularUserDataAsync(CurrentUser.UserName);
+                //CurrentSeller = await proxy.GetSellerDataAsync(CurrentUser.UserName);
+                StartPage h = new StartPage();
+                App.Current.MainPage = new NavigationPage(h);
+                /**
+             Page p = new Views.StartPage();
+           
+            p.Title = "Start Page";
             
-             CurrentUser = await proxy.LoginAsync("r@c.com", "123456");
-            //CurrentRegularUser = await proxy.GetRegularUserDataAsync(CurrentUser.UserName);
-            CurrentSeller = await proxy.GetSellerDataAsync(CurrentUser.UserName);
-            Home h = new Home();
-            h.Title = "Home";
-            await App.Current.MainPage.Navigation.PushAsync(h);
-            /**
-         Page p = new Views.StartPage();
-       
-        p.Title = "Start Page";
-        
-        MainPage = new NavigationPage(p) { BarBackgroundColor = Color.FromHex("#81cfe0") };
-            **/
+            MainPage = new NavigationPage(p) { BarBackgroundColor = Color.FromHex("#81cfe0") };
+                **/
+            }
+
         }
 
         protected override void OnSleep()

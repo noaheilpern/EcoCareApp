@@ -16,10 +16,6 @@ namespace EcoCareApp
             InitializeComponent();
         }
 
-        private async void btn_Clicked(object sender, EventArgs e)
-        {
-            EcoCareAPIProxy api = EcoCareAPIProxy.CreateProxy();
-            lbl.Text = await api.TestAsync();
-        }
+        
     }
 }

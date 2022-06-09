@@ -18,5 +18,10 @@ namespace EcoCareApp.Views
             this.BindingContext = new UserProfileViewModel();
             InitializeComponent();
         }
+
+        private void Entry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

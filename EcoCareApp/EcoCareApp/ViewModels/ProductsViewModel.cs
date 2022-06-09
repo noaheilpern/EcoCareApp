@@ -182,7 +182,10 @@ namespace EcoCareApp.ViewModels
             else
             {
                 search = search.ToLower();
-                foreach (Product c in this.AllProductsList)
+                List<Product> products = new List<Product>();
+                foreach (Product p in this.allProductsList)
+                    products.Add(p);
+                foreach (Product c in products)
                 {
                     string ProductNameString = $"{c.Title.ToLower()}";
 
