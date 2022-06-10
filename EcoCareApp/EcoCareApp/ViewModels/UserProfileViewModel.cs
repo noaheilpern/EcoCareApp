@@ -154,14 +154,14 @@ namespace EcoCareApp.ViewModels
             {
                 Category = "FirstName",
                 CategoryValue = FirstName,
-                CategoryError = firstNameError,
+                CategoryError = FirstNameError,
 
             });
             cardItems.Add(new CardsItem
             {
                 Category = "LastName",
                 CategoryValue = LastName,
-                CategoryError = lastNameError,
+                CategoryError = LastNameError,
 
 
             });
@@ -169,7 +169,7 @@ namespace EcoCareApp.ViewModels
             {
                 Category = "Email",
                 CategoryValue = Email,
-                CategoryError = emailError,
+                CategoryError = EmailError,
             });
 
             if (a.CurrentRegularUser != null)
@@ -185,7 +185,7 @@ namespace EcoCareApp.ViewModels
                 {
                     Category = "PhoneNum",
                     CategoryValue = PhoneNum,
-                    CategoryError = phoneNumError,
+                    CategoryError = PhoneNumError,
                 });
             }
         }
