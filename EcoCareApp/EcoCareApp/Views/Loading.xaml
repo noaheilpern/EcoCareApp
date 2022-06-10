@@ -5,7 +5,7 @@
              >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Loading..." HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+            <Label Text="{Binding ServerStatus}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
             <!-- <Image Source="loading_animation.gif" IsAnimationPlaying="True"></Image> -->
             <!--<Image x:Name="LoadingImg"  gif:AnimationBehavior.SourceUri="Resources/LoadingGif.gif"/>-->
             <!--<Image x:Name="LoadingGif" Source="loading_gif.gif" IsAnimationPlaying="True"/>-->

@@ -15,7 +15,12 @@ namespace EcoCareApp.Views
     {
         public Loading()
         {
-            this.BindingContext = new LoadingViewModel(); 
+            this.BindingContext = new LoadingViewModel();
+            InitializeComponent(); 
+        }
+        public Loading(Object bindingContext)
+        {
+            this.BindingContext = bindingContext; 
             InitializeComponent();
         }
     }

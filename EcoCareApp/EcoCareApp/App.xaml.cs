@@ -36,6 +36,8 @@ namespace EcoCareApp
         {
             get;
             set; }
+        private string serverStatus;
+       
         public App()
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTc4MTI2QDMxMzkyZTM0MmUzMElEYjUvdHlTLzVYNzlUekZiOXRpYjBvd3F1MHc4dnEwbjdkdWMrTkwrblk9");
@@ -52,9 +54,9 @@ namespace EcoCareApp
             CountriesList = await proxy.GetCountriesAsync();
             if (CountriesList == null)
             {
-                Views.Loading thePage = (Views.Loading)this.MainPage;
+                Views.Loading thePage = (Views.Loading)this.MainPage; 
                 LoadingViewModel vm = (LoadingViewModel)thePage.BindingContext;
-                //vm.Message = "The server is down, try again later";
+                vm.ServerStatus = "The server is down, try again later";
             }
             else
             {
