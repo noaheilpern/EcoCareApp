@@ -65,7 +65,7 @@ namespace EcoCareApp.ViewModels
                 OnPropertyChanged("HasNotEnoughStars");
             }
         }
-
+        public bool IsRegular => app.CurrentUser != null; 
         public virtual List<Sale> Sales { get; set; }
         public App app { get; } = Application.Current as App;
 

@@ -66,7 +66,7 @@
                                        SelectionChangedCommand="{Binding ProductSelected}"
                                        SelectionChangedCommandParameter="{Binding Source={x:Reference listView}, Path=SelectedItem}"
                  SelectionBackgroundColor="#E4E4E4"
-                                       SwipeOffset="240" SwipeThreshold="30"
+                                       SwipeOffset="100" SwipeThreshold="30"
                                        SwipeStarted="listView_SwipeStarted"
                                                
                                        SwipeEnded="listView_SwipeEnded">

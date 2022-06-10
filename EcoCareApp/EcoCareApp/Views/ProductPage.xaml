@@ -8,7 +8,8 @@
 
     <NavigationPage.TitleView>
 
-        <Label Text="{Binding app.Stars, StringFormat='{0:F0}★'}" TextColor="White" HorizontalOptions="End" FontSize="Subtitle"/>
+        <Label Text="{Binding app.Stars, StringFormat='{0:F0}★'}" TextColor="White"
+               HorizontalOptions="End" FontSize="Subtitle" IsVisible="{Binding IsRegular}"/>
     </NavigationPage.TitleView>
     <StackLayout x:Name="mainLayout">
 
@@ -24,8 +25,8 @@
                 
 
                 <Button x:Name="showBarode" Text="Get Barcode for the benefit!"
-                                    VerticalOptions="Start" HorizontalOptions="FillAndExpand"
-                                 Command="{Binding ToBarcodePopUp}" IsEnabled="{Binding HasEnoughStars}"
+                                    VerticalOptions="Start" HorizontalOptions="FillAndExpand" IsVisible="{Binding IsRegular}"
+                                 Command="{Binding ToBarcodePopUp}" IsEnabled="{Binding HasEnoughStars}" 
                                 />
                 <Label Text="You don't have enough stars to buy this item. Please earn some more and come back later"
                         Style="{StaticResource ErrorIconLabelStyle}" IsVisible="{Binding HasNotEnoughStars}"/>
