@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:EcoCareApp.ViewModels" x:DataType="viewmodels:FootPrintCalcViewModel"
              x:Class="EcoCareApp.Views.FootPrintCalc">
     <!-- Photo by Luis del Río from Pexels -->
     <ContentPage.Content>
@@ -25,7 +25,7 @@
                     <ScrollView>
                         <Grid Padding="0">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="70"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
@@ -34,7 +34,7 @@
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
-                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="50"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>

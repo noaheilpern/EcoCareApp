@@ -694,7 +694,7 @@ namespace EcoCareApp.ViewModels
             }
         }
 
-        private void ValidatePhoneNum()
+        private bool ValidatePhoneNum()
         {
             this.ShowPhoneNumError = string.IsNullOrEmpty(PhoneNum);
             if (!this.ShowPhoneNumError)
@@ -703,10 +703,15 @@ namespace EcoCareApp.ViewModels
                 {
                     this.ShowPhoneNumError = true;
                     this.PhoneNumError = ERROR_MESSAGES.BAD_PHONE;
+                    return false; 
                 }
+                return true; 
             }
             else
+            {
                 this.PhoneNumError = ERROR_MESSAGES.REQUIRED_FIELD;
+                return false; 
+            }
         }
         #endregion
 
@@ -761,8 +766,19 @@ namespace EcoCareApp.ViewModels
         }
         private bool Validate()
         {
-
-            return ValidateEmail() && ValidatePassword() && ValidateUserName();
+            if (string.IsNullOrEmpty(FirstName))
+            {
+                FirstNameError = ERROR_MESSAGES.REQUIRED_FIELD;
+                ShowFirstNameError = true;
+                return false;
+            }
+            if (string.IsNullOrEmpty(LastName))
+            {
+                LastNameError = ERROR_MESSAGES.REQUIRED_FIELD;
+                ShowLastNameError = true;
+                return false;
+            }
+            return ValidateEmail() && ValidatePassword() && ValidateUserName() && ValidatePhoneNum(); 
         }
 
         private async void RegiUserAsync()

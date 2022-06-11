@@ -75,9 +75,10 @@
                         ItemSize="74"
                         ItemsSource="{Binding CardItems}"
                         SelectionMode="None"
+                        
                         >
                             <listView:SfListView.ItemTemplate>
-                                <DataTemplate x:DataType="models:CardsItem">
+                                <DataTemplate x:DataType="models:CardsItem" >
                                     <svg:CustomShadowFrame
                                     Margin="16,8"
                                     Padding="0"
@@ -87,7 +88,7 @@
                                     HasShadow="True"
                                     HorizontalOptions="CenterAndExpand"
                                     Radius="4"
-                                       
+                                      
                                     WidthRequest="{OnIdiom Phone=343,
                                                            Default=736}">
 
@@ -99,12 +100,15 @@
                                             <!--  Category  -->
                                             <Label Text="{Binding CategoryError}" 
                                                    Style="{StaticResource labelErrorStyle}"
+                                                   
                                                    Grid.Row="0"></Label>
 
                                             <Entry
                                             HeightRequest="50"
                                             HorizontalOptions="Start"
-                                            Text="{Binding CategoryValue}" Grid.Row="1"/>
+                                            Text="{Binding CategoryValue}" Grid.Row="1"
+                                                TextChanged="Entry_TextChanged"
+                                                />
 
                                             <!--  Category Value  -->
                                             <Label
@@ -112,6 +116,7 @@
                                             FontSize="12"
                                             HeightRequest="18"
                                             HorizontalOptions="Start"
+                                                x:Name="Category"
                                             Style="{StaticResource DescriptionLabelStyle}"
                                             Text="{Binding Category}" />
 

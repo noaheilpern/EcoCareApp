@@ -421,7 +421,25 @@ namespace EcoCareApp.ViewModels
             }
         }
 
+        public void Changed(string category,string value)
+        {
+            if (category.Equals("Password"))
+                Password = value;
+            else if (category.Equals("FristName"))
+                FirstName = value;
+            else if (category.Equals("LastName"))
+                LastName = value;
+            else if (category.Equals("Email"))
+                Email = value;
+            else if (category.Equals("PhoneNum"))
+                PhoneNum = value;
 
+        }
+        public ICommand TextChangedCommand => new Command(TextChanged);  
+        public void TextChanged()
+        {
+
+        }
         public ICommand CountrySelectedCommand => new Command(Selected);
 
         public async void Selected(Object obj)

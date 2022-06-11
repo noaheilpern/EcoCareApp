@@ -25,7 +25,7 @@ namespace EcoCareApp.ViewModels
         public const string BAD_USERNAME = "This username is already exist. \n Please try another one:)";
         public const string GENERAL_ERROR = "Something went bad. Please try again";
         public const string BAD_PASSWORD = "Password has to be 6 charechters minimum";
-        public const string BAD_DATE = "You must be older than today years old to use this app!";
+        public const string BAD_DATE = "You must be older than today \n years old to use this app!";
     }
     public class ShowPasswordTriggerAction : TriggerAction<ImageButton>, INotifyPropertyChanged
     {
@@ -475,6 +475,7 @@ namespace EcoCareApp.ViewModels
                 {
                     this.LastNameTyped = false;
                     this.LastNameError = ERROR_MESSAGES.REQUIRED_FIELD;
+                    this.ShowLastNameError = true; 
                     OnPropertyChanged("LastName");
                 }
                 else
@@ -733,16 +734,26 @@ namespace EcoCareApp.ViewModels
         }
         private bool Validate()
         {
-            
-            return ValidateBirthday() && ValidateEmail() && ValidatePassword() && ValidateUserName(); 
+            if (string.IsNullOrEmpty(FirstName))
+            {
+                FirstNameError = ERROR_MESSAGES.REQUIRED_FIELD;
+                ShowFirstNameError = true;
+                return false; 
+            }
+            if(string.IsNullOrEmpty(LastName))
+            {
+                LastNameError = ERROR_MESSAGES.REQUIRED_FIELD;
+                ShowLastNameError = true;
+                return false; 
+            }
+            return ValidateBirthday() && ValidateEmail() && ValidatePassword() && ValidateUserName() &&
+                
         }
 
         private async void RegiUserAsync()
         {
             if (Validate())
             {
-
-
                 bool success = await ValidateEmailAndUserNameAsync();
                 if (success)
                 {

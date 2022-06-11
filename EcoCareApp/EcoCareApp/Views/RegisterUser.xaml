@@ -41,8 +41,8 @@
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
-                                <RowDefinition Height="60"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
@@ -133,7 +133,7 @@
 
                             <Label Text="Date of Birth" Grid.Row="13" Style="{StaticResource labelNameStyle}"/>
                             <Label Text="{Binding BirthdayError}" Grid.Row="13" IsVisible="{Binding ShowBirthdayError}"
-                        Style="{StaticResource labelErrorStyle}"/>
+                        Style="{StaticResource labelErrorStyle}" HorizontalOptions="End" HorizontalTextAlignment="End"/>
                             
 
                             <DatePicker Grid.Row="14"  x:Name="startDatePicker"

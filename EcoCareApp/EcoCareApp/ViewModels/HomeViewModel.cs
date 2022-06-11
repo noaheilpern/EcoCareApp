@@ -296,23 +296,35 @@ namespace EcoCareApp.ViewModels
         {
             try
             {
+                
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                int newStars; 
+                
+                int newStars = -1; 
                 if (ElecTapped)
                 {
-                    newStars = await proxy.AddData(ElecEntry, "Electricity_Usage");
-                    ElecTapped = false;
+                    if (!(await proxy.IsDataExist("Electricity_Usage")))
+                    {
+                        newStars = await proxy.AddData(ElecEntry, "Electricity_Usage");
+                        ElecTapped = false;
+                    }
                 }
                 else if (CarTapped)
                 {
-                    newStars = await proxy.AddData(CarEntry, "Distance");
-                    CarTapped = false;
+                    if (!(await proxy.IsDataExist("Distance")))
+                    {
+                        newStars = await proxy.AddData(CarEntry, "Distance");
+                        CarTapped = false;
+                    }
                 }
                 else
                 {
-                    newStars = await proxy.AddData(MeatEntry, "Meat_Meals");
-                    MeatTapped = false;
-                    MeatFilled = true; 
+                    if(!(await proxy.IsDataExist("Meat_Meals")))
+                    {
+                        newStars = await proxy.AddData(MeatEntry, "Meat_Meals");
+                        MeatTapped = false;
+                        MeatFilled = true;
+                    }
+                   
                 }
                 if(newStars > 0)
                 {
