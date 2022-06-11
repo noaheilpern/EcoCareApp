@@ -220,8 +220,17 @@
                 <Setter Property="FontSize" Value="14" />
             </Style>
 
-            
+            <Style x:Key="SaveDataButton" TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="#99d98c"/>
+                <Setter Property="CornerRadius" Value="10"></Setter>
+                <Setter Property="Margin" Value="0,0,0,2"></Setter>
 
+            </Style>
+            
             <Style TargetType="StackLayout" x:Key="Stack">
                 <Setter Property="Orientation" Value="Vertical"/>
                 <Setter Property="Padding" Value="30"/>

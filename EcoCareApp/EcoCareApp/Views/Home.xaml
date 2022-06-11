@@ -101,8 +101,9 @@
                                     <Grid.RowDefinitions>
                                         <RowDefinition x:Name="logRow" Height="30" />
                                         <RowDefinition Height="*" />
-                                        <RowDefinition Height="0.5*" />
-                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="2"/>
+                                        <RowDefinition Height="50" />
+                                        <RowDefinition Height="50" />
 
 
 
@@ -124,8 +125,8 @@
                                             </ScrollView>
                                         </ContentView>
                                     </ContentView>
-                                    <Button Text="Save" Command="{Binding Save}" x:Name="SaveData" CornerRadius="7" Margin="60,0,60,-15"
-                                    Grid.Row="2" IsVisible="{Binding Visible}" BackgroundColor="#99d98c"/>
+                                    <Button Text="Save" Command="{Binding Save}" x:Name="SaveData"
+                                    Grid.Row="3" IsVisible="{Binding Visible}" Style="{StaticResource SaveDataButton}"/>
 
                                 </Grid>
                             </Grid>

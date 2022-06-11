@@ -433,7 +433,7 @@ namespace EcoCareApp.ViewModels
         private bool Validate()
         {
 
-            return ValidateMeatMeals() && ValidateElectricityAmount() && ValidateWorkDistance() && ValidatePeopleAtTheSameHouseHold();
+            return ValidateMeatMeals() && ValidateElectricityAmount() && ValidateWorkDistance() && Transportation!=null  && ValidatePeopleAtTheSameHouseHold();
         }
         public ICommand CalcFp => new Command(CalcFpAsync);
         private async void CalcFpAsync()

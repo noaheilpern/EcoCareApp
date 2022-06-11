@@ -27,7 +27,7 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="70"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
-                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="50"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
@@ -36,7 +36,7 @@
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="50"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
-                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="50"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
                                 <RowDefinition Height="40"></RowDefinition>
@@ -45,7 +45,7 @@
 
                             </Grid.RowDefinitions>
 
-                            <Label Grid.Row="0" Text="Calculate your current foot print" Style="{StaticResource smallerTitle}"/>
+                            <Label Grid.Row="0" Text="Calculate your current Footprint" Style="{StaticResource smallerTitle}" HorizontalTextAlignment="Center"/>
 
                             <Label Text="Meat Meals" Grid.Row="1" Style="{StaticResource labelNameStyle}" IsVisible="{Binding MeatMealsTyped}"/>
                             <Label Text="{Binding MeatMealsError}" Grid.Row="1" IsVisible="{Binding ShowMeatMealsError}" Style="{StaticResource labelErrorStyle}"/>

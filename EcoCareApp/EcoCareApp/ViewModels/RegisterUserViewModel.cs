@@ -746,8 +746,9 @@ namespace EcoCareApp.ViewModels
                 ShowLastNameError = true;
                 return false; 
             }
-            return ValidateBirthday() && ValidateEmail() && ValidatePassword() && ValidateUserName() &&
-                
+            return  ValidateUserName() && ValidateEmail() && ValidatePassword() && ValidateBirthday() && CountrySelected;
+
+
         }
 
         private async void RegiUserAsync()

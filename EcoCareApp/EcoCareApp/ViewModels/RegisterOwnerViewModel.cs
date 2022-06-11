@@ -778,7 +778,7 @@ namespace EcoCareApp.ViewModels
                 ShowLastNameError = true;
                 return false;
             }
-            return ValidateEmail() && ValidatePassword() && ValidateUserName() && ValidatePhoneNum(); 
+            return ValidateUserName() && ValidateEmail() && ValidatePassword() &&  ValidatePhoneNum(); 
         }
 
         private async void RegiUserAsync()
@@ -826,6 +826,7 @@ namespace EcoCareApp.ViewModels
                             app.CurrentUser = registeredUser.UserNameNavigation;
                             Home h = new Home();
                             h.Title = "Home";
+                            NavigationPage.SetHasBackButton(h, false);
                             await App.Current.MainPage.Navigation.PushAsync(h);
                         }
 

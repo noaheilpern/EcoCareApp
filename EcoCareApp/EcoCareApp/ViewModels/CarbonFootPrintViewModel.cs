@@ -22,6 +22,8 @@ namespace EcoCareApp.ViewModels
         {
             Home h = new Home();
             h.Title = "Home";
+
+            NavigationPage.SetHasBackButton(h, false);
             await PopupNavigation.Instance.PopAsync();
             await App.Current.MainPage.Navigation.PushAsync(h);
         }

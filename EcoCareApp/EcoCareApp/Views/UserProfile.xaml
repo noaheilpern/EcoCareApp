@@ -21,7 +21,7 @@
              Command="{Binding RefreshCommand}"
              IsRefreshing="{Binding IsRefreshing}">
             <ScrollView>
-                <Grid RowDefinitions="200, *, 100, 50">
+                <Grid RowDefinitions="200, *, 100, 100">
 
                     <Grid Grid.Row="0"
                     HeightRequest="300"

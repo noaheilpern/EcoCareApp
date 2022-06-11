@@ -57,7 +57,31 @@ namespace EcoCareApp.ViewModels
 
         }
 
+        private bool ValidateDescription()
+        {
+            this.ShowDescriptionError = string.IsNullOrEmpty(Description) || this.Description.Length > 8000;
+            if (ShowDescriptionError)
+            {
+                this.DescriptionTyped = false;
+                if (string.IsNullOrEmpty(Description))
+                {
+                    this.DescriptionError = ERROR_MESSAGES.REQUIRED_FIELD;
 
+                }
+                else
+                {
+                    this.DescriptionError = "Field must be less than 8,000 charecters";
+                }
+                OnPropertyChanged("Description");
+                return false; 
+            }
+            else
+            {
+                this.DescriptionTyped = true;
+                this.ShowDescriptionError = false;
+                return true; 
+            }
+        }
         private string description;
         public string Description
         {
@@ -66,26 +90,7 @@ namespace EcoCareApp.ViewModels
             {
                 description = value;
 
-                this.ShowDescriptionError = string.IsNullOrEmpty(Description) || this.Description.Length > 8000;
-                if (ShowDescriptionError)
-                {
-                    this.DescriptionTyped = false;
-                    if (string.IsNullOrEmpty(Description))
-                    {
-                        this.DescriptionError = ERROR_MESSAGES.REQUIRED_FIELD;
-
-                    }
-                    else
-                    {
-                        this.DescriptionError = "Field must be less than 8,000 charecters";
-                    }
-                    OnPropertyChanged("Description");
-                }
-                else
-                {
-                    this.DescriptionTyped = true;
-                    this.ShowDescriptionError = false;
-                }
+                
 
             }
         }
@@ -325,7 +330,29 @@ namespace EcoCareApp.ViewModels
         }
         #endregion
 
-
+        public bool Validate()
+        {
+            if (string.IsNullOrEmpty(Title))
+            {
+                TitleError = ERROR_MESSAGES.REQUIRED_FIELD;
+                ShowTitleError = true;
+                return false;
+            }
+            bool valid = ValidateDescription();
+            if (string.IsNullOrEmpty(ImageSource))
+            {
+                ImageSourceError = ERROR_MESSAGES.REQUIRED_FIELD;
+                ShowImageSourceError = true;
+                return false;
+            }
+            if (Price == 0)
+            {
+                PriceError = ERROR_MESSAGES.REQUIRED_FIELD;
+                ShowPriceError = true;
+                return false;
+            }
+            return true; 
+        }
 
         #region Commands
         
@@ -336,39 +363,40 @@ namespace EcoCareApp.ViewModels
 
         private async void AddProduct()
         {
-            
-            App a = (App)App.Current;
-            if (a.CurrentSeller == null)
-                return; 
-            Product returnedProduct = null; 
-            App app = (App)App.Current;
-            Product p = new Product
+            if(Validate())
             {
+                App a = (App)App.Current;
+                if (a.CurrentSeller == null)
+                    return;
+                Product returnedProduct = null;
+                App app = (App)App.Current;
+                Product p = new Product
+                {
 
-                Title = this.Title,
-                Description = this.Description,
-                Active = true,
-                ImageSource = this.ImageSource,
-                Price = this.Price,
-                SellersUsername = a.CurrentSeller.UserName,
+                    Title = this.Title,
+                    Description = this.Description,
+                    Active = true,
+                    ImageSource = this.ImageSource,
+                    Price = this.Price,
+                    SellersUsername = a.CurrentSeller.UserName,
 
-            };
-            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+                };
+                EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
 
                 isRefreshing = true;
-            returnedProduct = await proxy.AddProductAsync(p);
+                returnedProduct = await proxy.AddProductAsync(p);
                 isRefreshing = false;
 
-            
-            if (returnedProduct == null)
-            {
-                await App.Current.MainPage.DisplayAlert("Error", "Updating product data failed. Please check fields are filled as needed", "OK");
 
-            }
-            else
-            {
-                await App.Current.MainPage.DisplayAlert("Succeed", "detail(s) updated successfully", "great:)");
-                
+                if (returnedProduct == null)
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Updating product data failed. Please check fields are filled as needed", "OK");
+
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Succeed", "detail(s) updated successfully", "great:)");
+
                     ProductPageViewModel ProductContext = new ProductPageViewModel
                     {
                         Title = returnedProduct.Title,
@@ -389,6 +417,8 @@ namespace EcoCareApp.ViewModels
                     await App.Current.MainPage.Navigation.PushAsync(showProduct);
 
                 }
+            }
+            
             }
 
         #endregion

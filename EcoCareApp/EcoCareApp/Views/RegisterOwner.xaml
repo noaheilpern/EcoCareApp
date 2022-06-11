@@ -125,7 +125,8 @@
                        />
                             <Label Text = "{Binding SelectedCountry, StringFormat='You Selected {0:F0} As Your Country'}" 
                                    IsVisible="{Binding CountrySelected}" Grid.Row="15"/>
-                            <Label Text= "Please choose country" Grid.Row="15" IsVisible="{Binding CountryNotSelected}" />
+                            <Label Text= "Please choose country" Grid.Row="15" TextColor="Red"
+                                   IsVisible="{Binding CountryNotSelected}" />
 
                             <Button Text="Choose Country" Grid.Row="16" Command="{Binding ToCountries}" />
 

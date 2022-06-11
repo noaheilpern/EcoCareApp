@@ -336,6 +336,9 @@ namespace EcoCareApp.ViewModels
                     app.Stars = (int)a.CurrentRegularUser.Stars; 
                     DataFilled = true;
                     Visible = false;
+                    Home h = new Home();
+                    await App.Current.MainPage.Navigation.PushAsync(h);
+                    //לבדוק שזה לא עושה באגים
                     isRefreshing = false; 
 
                 }

@@ -166,41 +166,45 @@ namespace EcoCareApp.ViewModels
         #region Search
         public void OnTextChanged(string search)
         {
-            //Filter the list of countries based on the search term
-            if (this.AllProductsList == null)
-                return;
-            if (String.IsNullOrWhiteSpace(search) || String.IsNullOrEmpty(search))
+            if(!isRefreshing)
             {
-                foreach (Product c in this.AllProductsList)
+                //Filter the list of countries based on the search term
+                if (this.AllProductsList == null)
+                    return;
+                if (String.IsNullOrWhiteSpace(search) || String.IsNullOrEmpty(search))
                 {
-                    if (!this.FilteredProducts.Contains(c))
-                        this.FilteredProducts.Add(c);
+                    foreach (Product c in this.AllProductsList)
+                    {
+                        if (!this.FilteredProducts.Contains(c))
+                            this.FilteredProducts.Add(c);
 
 
+                    }
                 }
-            }
-            else
-            {
-                search = search.ToLower();
-                List<Product> products = new List<Product>();
-                foreach (Product p in this.allProductsList)
-                    products.Add(p);
-                foreach (Product c in products)
+                else
                 {
-                    string ProductNameString = $"{c.Title.ToLower()}";
+                    search = search.ToLower();
+                    List<Product> products = new List<Product>();
+                    foreach (Product p in this.allProductsList)
+                        products.Add(p);
+                    foreach (Product c in products)
+                    {
+                        string ProductNameString = $"{c.Title.ToLower()}";
 
 
 
-                    if (!this.FilteredProducts.Contains(c) &&
-                       ProductNameString.Contains(search))
-                        this.FilteredProducts.Add(c);
-                    else if (this.FilteredProducts.Contains(c) &&
-                        !ProductNameString.Contains(search))
-                        this.FilteredProducts.Remove(c);
+                        if (!this.FilteredProducts.Contains(c) &&
+                           ProductNameString.Contains(search))
+                            this.FilteredProducts.Add(c);
+                        else if (this.FilteredProducts.Contains(c) &&
+                            !ProductNameString.Contains(search))
+                            this.FilteredProducts.Remove(c);
+                    }
                 }
-            }
 
-            this.FilteredProducts = new ObservableCollection<Product>(this.FilteredProducts);
+                this.FilteredProducts = new ObservableCollection<Product>(this.FilteredProducts);
+
+            }
         }
         #endregion
 

@@ -43,7 +43,7 @@
                             <Label Text="Product Title" Grid.Row="0" Style="{StaticResource labelNameStyle}" IsVisible="{Binding TitleTyped}"/>
                             <Label Text="{Binding TitleError}" Grid.Row="0" IsVisible="{Binding ShowTitleError}" Style="{StaticResource labelErrorStyle}"/>
 
-                            <Entry Grid.Row="1"  Placeholder="Enter your new product title" Text="{Binding Title}" Style="{StaticResource entry}"/>
+                            <Entry Grid.Row="1" Placeholder="Enter your new product title" Text="{Binding Title}" Style="{StaticResource entry}"/>
 
                             <Label Text="Product Description" Grid.Row="2" Style="{StaticResource labelNameStyle}"
                        IsVisible="{Binding DescriptionTyped}"/>
