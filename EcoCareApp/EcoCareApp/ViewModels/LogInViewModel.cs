@@ -104,6 +104,7 @@ namespace EcoCareApp.ViewModels
                 }
                 Home h = new Home();
                 h.Title = "Home";
+                NavigationPage.SetHasBackButton(h, false);
                 App.Current.MainPage = new NavigationPage(h); 
             }
             else

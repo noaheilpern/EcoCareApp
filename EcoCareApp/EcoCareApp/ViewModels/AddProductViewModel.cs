@@ -413,7 +413,8 @@ namespace EcoCareApp.ViewModels
 
                     showProduct.BindingContext = ProductContext;
                     showProduct.Title = ProductContext.Title;
-
+                    NavigationPage n = new NavigationPage(showProduct);
+                    
                     await App.Current.MainPage.Navigation.PushAsync(showProduct);
 
                 }

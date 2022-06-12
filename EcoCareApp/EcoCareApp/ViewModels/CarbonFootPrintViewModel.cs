@@ -21,6 +21,7 @@ namespace EcoCareApp.ViewModels
         public async void Close()
         {
             Home h = new Home();
+            NavigationPage.SetHasBackButton(h, false);
             h.Title = "Home";
 
             NavigationPage.SetHasBackButton(h, false);

@@ -196,10 +196,10 @@ namespace EcoCareApp.ViewModels
         }
 
         public ICommand NextChart => new Command(OnNextChart);
-        public void OnNextChart()
+        public async void OnNextChart()
         {
             this.chartType++;
-            InitChart();
+            await InitChart();
         }
 
     }

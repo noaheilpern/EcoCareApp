@@ -23,7 +23,7 @@ namespace EcoCareApp.Views
 
             InitializeComponent();
             Scanner.AutoFocus();
-
+            Scanner.IsScanning = true; 
         }
        
 
@@ -47,8 +47,9 @@ namespace EcoCareApp.Views
                 App a = (App)App.Current;
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
                 bool success = true;
-                bool accessable = true; 
-                if (a.CurrentSeller.UserName.Equals(proxy.GetSellerUserName(id)))
+                bool accessable = true;
+                string sellerOfProductUserName = await proxy.GetSellerUserName(id);
+                if (a.CurrentSeller.UserName.Equals(sellerOfProductUserName))
                 {
                     //now we will decrease stars to the user who bought the gift
                     success = proxy.DecreaseStarsAfterBuying(username, id).Result;
@@ -65,7 +66,7 @@ namespace EcoCareApp.Views
                         Navigation.PopModalAsync();
                         if (success && accessable)
                         {
-                             App.Current.MainPage.DisplayAlert("Succeesed", "Sale done succefully", "Amazing");
+                             App.Current.MainPage.DisplayAlert("Succeed", "Sale done succefully", "Amazing");
 
                         }
                         else if(!accessable)
@@ -80,11 +81,12 @@ namespace EcoCareApp.Views
                         }
                     });
                 Home h = new Home();
-                await App.Current.MainPage.Navigation.PushAsync(h); 
-                Scanner.IsScanning = true; 
-                }
+                await App.Current.MainPage.Navigation.PushAsync(h);
+                Scanner.IsScanning = true;
 
-            
+            }
+
+
             catch (Exception ee)
             {
                 Console.WriteLine(ee);

@@ -28,8 +28,8 @@
                                     VerticalOptions="Start" HorizontalOptions="FillAndExpand" IsVisible="{Binding IsRegular}"
                                  Command="{Binding ToBarcodePopUp}" IsEnabled="{Binding HasEnoughStars}" 
                                 />
-                <Label Text="You don't have enough stars to buy this item. Please earn some more and come back later"
-                        Style="{StaticResource ErrorIconLabelStyle}" IsVisible="{Binding HasNotEnoughStars}"/>
+                <Label Text="You don't have enough stars to buy this item. Earn some more and come back later"
+                        Style="{StaticResource ErrorIconLabelStyle}" IsVisible="{Binding HasNotEnoughStars}" HorizontalTextAlignment="Center"/>
             </StackLayout>
                     
             

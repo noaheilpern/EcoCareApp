@@ -31,6 +31,7 @@ namespace EcoCareApp.Views
 
             
         }
+        
         protected override async void OnAppearing()
         {
             base.OnAppearing();

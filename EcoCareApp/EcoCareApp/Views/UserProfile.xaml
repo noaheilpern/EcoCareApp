@@ -99,15 +99,14 @@
 
                                             <!--  Category  -->
                                             <Label Text="{Binding CategoryError}" 
+                                                   IsVisible="{Binding IsError}"
                                                    Style="{StaticResource labelErrorStyle}"
-                                                   
-                                                   Grid.Row="0"></Label>
+                                                   Grid.Row="0" />
 
                                             <Entry
                                             HeightRequest="50"
                                             HorizontalOptions="Start"
                                             Text="{Binding CategoryValue}" Grid.Row="1"
-                                                TextChanged="Entry_TextChanged"
                                                 />
 
                                             <!--  Category Value  -->

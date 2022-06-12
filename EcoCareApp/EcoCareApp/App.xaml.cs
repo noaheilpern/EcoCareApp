@@ -60,10 +60,10 @@ namespace EcoCareApp
             }
             else
             {
-                //CurrentUser = await proxy.LoginAsync("r@c.com", "123456");
+                CurrentUser = await proxy.LoginAsync("g@g.com", "123456");
                 //CurrentRegularUser = await proxy.GetRegularUserDataAsync(CurrentUser.UserName);
-                //CurrentSeller = await proxy.GetSellerDataAsync(CurrentUser.UserName);
-                StartPage h = new StartPage();
+                CurrentSeller = await proxy.GetSellerDataAsync(CurrentUser.UserName);
+                Home h = new Home();
                 App.Current.MainPage = new NavigationPage(h);
                 /**
              Page p = new Views.StartPage();

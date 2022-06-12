@@ -21,7 +21,6 @@ namespace EcoCareApp.ViewModels
     class UserProfileViewModel : INotifyPropertyChanged
     {
 
-
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
@@ -39,28 +38,22 @@ namespace EcoCareApp.ViewModels
 
         #endregion
 
-        
+
         #region Fields
 
         private static UserProfileViewModel userProfileViewModel;
 
+        private readonly CardsItem passwordItem;
+        private readonly CardsItem fnameItem;
+        private readonly CardsItem lnameItem;
+        private readonly CardsItem emailItem;
+        private readonly CardsItem phoneItem;
+
         /// <summary>
-        /// To store the user profile data collection.
+        /// To store the user profile data collection. This property is readonly.
         /// </summary>
+        public ObservableCollection<CardsItem> CardItems { get; }
 
-        private ObservableCollection<CardsItem> cardItems;
-        public ObservableCollection<CardsItem> CardItems
-        {
-            get => cardItems;
-            set
-            {
-                cardItems = value;
-                OnPropertyChanged("CardItems");
-            }
-
-           
-        }
-       
 
 
         #endregion
@@ -83,7 +76,7 @@ namespace EcoCareApp.ViewModels
 
 
         #endregion
-        public App app { get;} = Application.Current as App;
+        public App app { get; } = Application.Current as App;
 
         #region Methods
 
@@ -120,7 +113,7 @@ namespace EcoCareApp.ViewModels
         }
 
         #endregion
-    
+
 
 
 
@@ -131,7 +124,6 @@ namespace EcoCareApp.ViewModels
             this.SearchTerm = string.Empty;
             CountryNotSelected = false;
 
-            InitCountries();
 
             App a = (App)App.Current;
             User u = a.CurrentUser;
@@ -141,52 +133,61 @@ namespace EcoCareApp.ViewModels
             Email = u.Email;
             SelectedCountry = u.Country;
             UserName = u.UserName;
-            cardItems = new ObservableCollection<CardsItem>();
-            cardItems.Add(new CardsItem
+
+
+            passwordItem = new CardsItem
             {
                 Category = "Password",
                 CategoryValue = Password,
                 CategoryError = PasswordError,
-
-            });
-            
-            cardItems.Add(new CardsItem
+                ValidateCmd = new Command(() => ValidatePassword())
+            };
+            fnameItem = new CardsItem
             {
                 Category = "FirstName",
                 CategoryValue = FirstName,
                 CategoryError = FirstNameError,
-
-            });
-            cardItems.Add(new CardsItem
+                ValidateCmd = new Command(() => ValidateFname())
+            };
+            lnameItem = new CardsItem
             {
                 Category = "LastName",
                 CategoryValue = LastName,
                 CategoryError = LastNameError,
-
-
-            });
-            cardItems.Add(new CardsItem
+                ValidateCmd = new Command(() => ValidateLname())
+            };
+            emailItem = new CardsItem
             {
                 Category = "Email",
                 CategoryValue = Email,
                 CategoryError = EmailError,
-            });
+                ValidateCmd = new Command(() => ValidateEmail())
+            };
+            CardItems = new ObservableCollection<CardsItem>()
+            {
+                passwordItem,
+                fnameItem,
+                lnameItem,
+                emailItem
+            };
 
             if (a.CurrentRegularUser != null)
             {
                 Birthday = a.CurrentRegularUser.Birthday;
                 PeopleAtTheSameHouseHold = a.CurrentRegularUser.PeopleAtTheHousehold;
-                app.Stars = (int)a.CurrentRegularUser.Stars; 
+                app.Stars = (int)a.CurrentRegularUser.Stars;
             }
             else
             {
                 PhoneNum = a.CurrentSeller.PhoneNum;
-                cardItems.Add(new CardsItem
+                phoneItem = new CardsItem
                 {
                     Category = "PhoneNum",
                     CategoryValue = PhoneNum,
                     CategoryError = PhoneNumError,
-                });
+                    ValidateCmd = new Command(() => ValidatePhoneNum())
+                };
+                CardItems.Add(phoneItem);
             }
         }
 
@@ -295,28 +296,6 @@ namespace EcoCareApp.ViewModels
         #region Password 
         private const int MIN_PASS_CHARS = 6;
 
-        private bool showPasswordError;
-
-        public bool ShowPasswordError
-        {
-            get => showPasswordError;
-            set
-            {
-                showPasswordError = value;
-                OnPropertyChanged("ShowPasswordError");
-            }
-        }
-        private bool passwordTyped;
-        public bool PasswordTyped
-        {
-            get => passwordTyped;
-            set
-            {
-                passwordTyped = value;
-                OnPropertyChanged("PasswordTyped");
-            }
-        }
-
         private string password;
         public string Password
         {
@@ -324,11 +303,6 @@ namespace EcoCareApp.ViewModels
             set
             {
                 password = value;
-                if (string.IsNullOrEmpty(Password))
-                    this.PasswordTyped = false;
-                else
-                    this.PasswordTyped = true;
-                ValidatePassword();
                 OnPropertyChanged("Password");
             }
         }
@@ -340,34 +314,33 @@ namespace EcoCareApp.ViewModels
             {
                 passwordError = value;
                 OnPropertyChanged("PasswordError");
-
+                passwordItem.CategoryError = value;
             }
         }
 
-        
+
         private bool ValidatePassword()
         {
-            this.ShowPasswordError = string.IsNullOrEmpty(Password);
-            if (!this.ShowPasswordError)
-            {
-                this.PasswordTyped = true;
+            string password = passwordItem.CategoryValue;
+            bool missing = string.IsNullOrEmpty(password);
 
-                if (Password.Length < MIN_PASS_CHARS)
+            if (!missing)
+            {
+                if (password.Length < MIN_PASS_CHARS)
                 {
-                    this.ShowPasswordError = true;
-                    this.PasswordError = ERROR_MESSAGES.BAD_PASSWORD;
+                    PasswordError = ERROR_MESSAGES.BAD_PASSWORD;
                     return false;
                 }
                 else
                 {
-                    this.ShowPasswordError = false;
+                    // no error
+                    PasswordError = null;
                     return true;
                 }
             }
             else
             {
-                this.PasswordError = ERROR_MESSAGES.REQUIRED_FIELD;
-                PasswordTyped = false;
+                PasswordError = ERROR_MESSAGES.REQUIRED_FIELD;
                 return false;
             }
 
@@ -377,7 +350,7 @@ namespace EcoCareApp.ViewModels
         #endregion
 
         #region country 
-        
+
 
         private void InitCountries()
         {
@@ -421,7 +394,7 @@ namespace EcoCareApp.ViewModels
             }
         }
 
-        public void Changed(string category,string value)
+        public void Changed(string category, string value)
         {
             if (category.Equals("Password"))
                 Password = value;
@@ -435,7 +408,7 @@ namespace EcoCareApp.ViewModels
                 PhoneNum = value;
 
         }
-        public ICommand TextChangedCommand => new Command(TextChanged);  
+        public ICommand TextChangedCommand => new Command(TextChanged);
         public void TextChanged()
         {
 
@@ -561,8 +534,8 @@ namespace EcoCareApp.ViewModels
         {
             InitCountries();
             App a = (App)App.Current;
-            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy(); 
-            if(a.CurrentRegularUser != null)
+            EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
+            if (a.CurrentRegularUser != null)
             {
                 a.CurrentRegularUser = await proxy.GetRegularUserDataAsync(a.CurrentUser.UserName);
                 app.Stars = (int)a.CurrentRegularUser.Stars;
@@ -633,38 +606,19 @@ namespace EcoCareApp.ViewModels
         #endregion
 
         #region FirstName
-        private bool showFirstNameError;
 
-        public bool ShowFirstNameError
-        {
-            get => showFirstNameError;
-            set
-            {
-                showFirstNameError = value;
-                OnPropertyChanged("ShowFirstNameError");
-            }
-        }
-
-        public bool firstNameTyped;
-        public bool FirstNameTyped
-        {
-            get => firstNameTyped;
-            set
-            {
-                firstNameTyped = value;
-                OnPropertyChanged("FirstNameTyped");
-            }
-        }
         private string firstNameError;
 
         public string FirstNameError
         {
 
             get => firstNameError;
+
             set
             {
                 firstNameError = value;
                 OnPropertyChanged("FirstNameError");
+                fnameItem.CategoryError = value;
             }
 
         }
@@ -677,50 +631,32 @@ namespace EcoCareApp.ViewModels
             set
             {
                 firstName = value;
-
-                this.ShowFirstNameError = string.IsNullOrEmpty(FirstName);
-                if (ShowFirstNameError)
-                {
-                    this.FirstNameTyped = false;
-                    this.FirstNameError = ERROR_MESSAGES.REQUIRED_FIELD;
-                    OnPropertyChanged("FirstName");
-                }
-                else
-                {
-                    this.FirstNameTyped = true;
-                    this.ShowFirstNameError = false;
-                }
-
+                OnPropertyChanged("FirstName");
             }
         }
 
+        private bool ValidateFname()
+        {
+            string firstName = fnameItem.CategoryValue;
+            bool missing = string.IsNullOrEmpty(firstName);
+
+            if (missing)
+            {
+                FirstNameError = ERROR_MESSAGES.REQUIRED_FIELD;
+                return false;
+            }
+            else
+            {
+                // no error
+                FirstNameError = null;
+                return true;
+            }
+        }
 
 
         #endregion
 
         #region LastName
-        private bool showLastNameError;
-
-        public bool ShowLastNameError
-        {
-            get => showLastNameError;
-            set
-            {
-                showLastNameError = value;
-                OnPropertyChanged("ShowLastNameError");
-            }
-        }
-
-        public bool lastNameTyped;
-        public bool LastNameTyped
-        {
-            get => lastNameTyped;
-            set
-            {
-                lastNameTyped = value;
-                OnPropertyChanged("LastNameTyped");
-            }
-        }
 
         private string lastName;
         public string LastName
@@ -729,21 +665,7 @@ namespace EcoCareApp.ViewModels
             set
             {
                 lastName = value;
-
-                this.ShowLastNameError = string.IsNullOrEmpty(LastName);
-                if (ShowLastNameError)
-                {
-                    this.LastNameTyped = false;
-                    this.LastNameError = ERROR_MESSAGES.REQUIRED_FIELD;
-                    OnPropertyChanged("LastName");
-                }
-                else
-                {
-                    this.LastNameTyped = true;
-                    this.ShowLastNameError = false;
-                    OnPropertyChanged("LastName");
-
-                }
+                OnPropertyChanged("LastName");
             }
         }
         private string lastNameError;
@@ -752,41 +674,36 @@ namespace EcoCareApp.ViewModels
         {
 
             get => lastNameError;
+
             set
             {
                 lastNameError = value;
                 OnPropertyChanged("LastNameError");
+                lnameItem.CategoryError = value;
             }
-
-
         }
 
+        private bool ValidateLname()
+        {
+            string lastName = lnameItem.CategoryValue;
+            bool missing = string.IsNullOrEmpty(lastName);
+
+            if (missing)
+            {
+                LastNameError = ERROR_MESSAGES.REQUIRED_FIELD;
+                return false;
+            }
+            else
+            {
+                // no error
+                LastNameError = null;
+                return true;
+            }
+        }
 
         #endregion
 
         #region Email
-        private bool showEmailError;
-
-        public bool ShowEmailError
-        {
-            get => showEmailError;
-            set
-            {
-                showEmailError = value;
-                OnPropertyChanged("ShowEmailError");
-            }
-        }
-
-        private bool emailTyped;
-        public bool EmailTyped
-        {
-            get => emailTyped;
-            set
-            {
-                emailTyped = value;
-                OnPropertyChanged("EmailTyped");
-            }
-        }
 
         private string email;
 
@@ -796,11 +713,6 @@ namespace EcoCareApp.ViewModels
             set
             {
                 email = value;
-                if (string.IsNullOrEmpty(email))
-                    EmailTyped = false;
-                else
-                    EmailTyped = true;
-                ValidateEmail();
                 OnPropertyChanged("Email");
             }
         }
@@ -814,30 +726,31 @@ namespace EcoCareApp.ViewModels
             {
                 emailError = value;
                 OnPropertyChanged("EmailError");
+                emailItem.CategoryError = value;
             }
         }
 
         private bool ValidateEmail()
         {
-
-            this.ShowEmailError = string.IsNullOrEmpty(Email);
-            if (!this.ShowEmailError)
+            string email = emailItem.CategoryValue;
+            bool missing = string.IsNullOrEmpty(email);
+            if (!missing)
             {
-                if (!Regex.IsMatch(this.Email, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
+                if (!Regex.IsMatch(email, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
                 {
-                    this.ShowEmailError = true;
-                    this.EmailError = ERROR_MESSAGES.BAD_EMAIL;
+                    EmailError = ERROR_MESSAGES.BAD_EMAIL;
                     return false;
                 }
                 else
                 {
-                    this.ShowEmailError = false;
+                    // no error
+                    EmailError = null;
                     return true;
                 }
             }
             else
             {
-                this.EmailError = ERROR_MESSAGES.REQUIRED_FIELD;
+                EmailError = ERROR_MESSAGES.REQUIRED_FIELD;
                 return false;
             }
         }
@@ -847,35 +760,19 @@ namespace EcoCareApp.ViewModels
 
 
         //if user is business owner
-        
-        #region PhoneNum
-        private bool showPhoneNumError;
 
-        public bool ShowPhoneNumError
-        {
-            get => showPhoneNumError;
-            set
-            {
-                showPhoneNumError = value;
-                OnPropertyChanged("ShowPhoneNumError");
-            }
-        }
+        #region PhoneNum
 
         private string phoneNum;
 
         public string PhoneNum
         {
-            
+
             get => phoneNum;
             set
             {
 
                 phoneNum = value;
-                if (string.IsNullOrEmpty(PhoneNum))
-                    this.PhoneNumTyped = false;
-                else if(!IsRegular)
-                    this.PhoneNumTyped = true;
-                ValidatePhoneNum();
                 OnPropertyChanged("PhoneNum");
             }
         }
@@ -889,16 +786,7 @@ namespace EcoCareApp.ViewModels
             {
                 phoneNumError = value;
                 OnPropertyChanged("PhoneNumError");
-            }
-        }
-        public bool phoneNumTyped;
-        public bool PhoneNumTyped
-        {
-            get => phoneNumTyped;
-            set
-            {
-                phoneNumTyped = value;
-                OnPropertyChanged("PhoneNumTyped");
+                phoneItem.CategoryError = value;
             }
         }
 
@@ -906,28 +794,38 @@ namespace EcoCareApp.ViewModels
         {
             if (!IsRegular)
             {
+                string phoneNum = phoneItem?.CategoryValue;
+                bool missing = string.IsNullOrEmpty(phoneNum);
 
-                this.ShowPhoneNumError = string.IsNullOrEmpty(PhoneNum);
-                if (!this.ShowPhoneNumError)
+                if (!missing)
                 {
-                    if (!Regex.IsMatch(this.PhoneNum, @"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"))
+                    if (!Regex.IsMatch(phoneNum, @"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"))
                     {
-                        this.ShowPhoneNumError = true;
-                        this.PhoneNumError = ERROR_MESSAGES.BAD_PHONE;
+                        PhoneNumError = ERROR_MESSAGES.BAD_PHONE;
                         return false;
                     }
-                    return true;
+                    else
+                    {
+                        // no error
+                        PhoneNumError = null;
+                        return true;
+                    }
                 }
                 else
-                    this.PhoneNumError = ERROR_MESSAGES.REQUIRED_FIELD;
-                return false;
+                {
+                    PhoneNumError = ERROR_MESSAGES.REQUIRED_FIELD;
+                    return false;
+                }
+
             }
+
             return false;
         }
         #endregion
 
         //else 
         #region Birthday
+
         private bool birthdayTyped;
         public bool BirthdayTyped
         {
@@ -1011,14 +909,14 @@ namespace EcoCareApp.ViewModels
         private async void LogOutUser()
         {
             App a = (App)App.Current;
-            
+
             EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
             await proxy.LogOut(a.CurrentUser);
             a.CurrentRegularUser = null;
             a.CurrentSeller = null;
             a.CurrentUser = null;
             StartPage sp = new StartPage();
-            NavigationPage.SetHasBackButton(sp,false);
+            NavigationPage.SetHasBackButton(sp, false);
             App.Current.MainPage = new NavigationPage(sp) { BarBackgroundColor = Color.FromHex("#81cfe0") };
         }
         public ICommand Update => new Command(UpdateUserAsync);
@@ -1026,11 +924,12 @@ namespace EcoCareApp.ViewModels
 
         private bool Validate()
         {
-            bool b = ValidateEmail() && ValidatePassword();
+            bool b = ValidateEmail() & ValidatePassword() & ValidateFname() & ValidateLname();
+
             if (IsRegular)
                 return b && ValidateBirthday() && ValidatePeopleAtTheSameHouseHold();
             else
-                return b && ValidatePhoneNum();
+                return b & ValidatePhoneNum();
         }
 
         private async void UpdateUserAsync()
@@ -1038,7 +937,8 @@ namespace EcoCareApp.ViewModels
             bool worked = true;
             App a = (App)App.Current;
             bool success = true;
-            if(a.CurrentUser.Email != email) {
+            if (a.CurrentUser.Email != email)
+            {
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
                 success = await proxy.IsEmailExistAsync(email);
             }
@@ -1047,10 +947,10 @@ namespace EcoCareApp.ViewModels
                 User appUser = a.CurrentUser;
                 User u = new User
                 {
-                    Email = cardItems.Where(c => c.Category.Equals("Email")).FirstOrDefault().CategoryValue,
-                    FirstName = cardItems.Where(c => c.Category.Equals("FirstName")).FirstOrDefault().CategoryValue,
-                    LastName = cardItems.Where(c => c.Category.Equals("LastName")).FirstOrDefault().CategoryValue,
-                    Pass = cardItems.Where(c => c.Category.Equals("Password")).FirstOrDefault().CategoryValue,
+                    Email = emailItem.CategoryValue,
+                    FirstName = fnameItem.CategoryValue,
+                    LastName = lnameItem.CategoryValue,
+                    Pass = passwordItem.CategoryValue,
                     IsAdmin = false,
                     UserName = appUser.UserName,
                     Country = SelectedCountry,
@@ -1058,9 +958,9 @@ namespace EcoCareApp.ViewModels
 
                 App app = (App)App.Current;
                 EcoCareAPIProxy proxy = EcoCareAPIProxy.CreateProxy();
-                
 
-                if (app.CurrentRegularUser!=null)
+
+                if (app.CurrentRegularUser != null)
                 {
                     RegularUser appRegularUser = app.CurrentRegularUser;
                     RegularUser ru = new RegularUser
@@ -1075,10 +975,10 @@ namespace EcoCareApp.ViewModels
                         UserName = appRegularUser.UserName,
                         VeganRareMeat = appRegularUser.VeganRareMeat,
                         Vegetarian = appRegularUser.Vegetarian,
-                        UserCarbonFootPrint = appRegularUser.UserCarbonFootPrint, 
+                        UserCarbonFootPrint = appRegularUser.UserCarbonFootPrint,
                         Stars = appRegularUser.Stars,
                     };
-                    if(!u.Equals(app.CurrentUser)|| !ru.Equals(app.CurrentRegularUser))
+                    if (!u.Equals(app.CurrentUser) || !ru.Equals(app.CurrentRegularUser))
                     {
                         isRefreshing = true;
                         worked = await proxy.UpdateUserAsync(ru);
@@ -1092,12 +992,12 @@ namespace EcoCareApp.ViewModels
                     Seller s = new Seller
                     {
                         UserNameNavigation = u,
-                        PhoneNum = this.PhoneNum,
+                        PhoneNum = phoneItem.CategoryValue,
                         UserName = u.UserName,
-                        
+
 
                     };
-                    if(!u.Equals(app.CurrentUser)|| !s.Equals(app.CurrentSeller))
+                    if (!u.Equals(app.CurrentUser) || !s.Equals(app.CurrentSeller))
                     {
                         isRefreshing = true;
                         worked = await proxy.UpdateSellerAsync(s);
@@ -1119,7 +1019,7 @@ namespace EcoCareApp.ViewModels
 
                 }
             }
-            
+
             else
             {
                 await App.Current.MainPage.DisplayAlert("Error", "Updating user data failed. Please check fields are filled as needed", "OK");
